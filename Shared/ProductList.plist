@@ -2,11 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LargeTip</key>
-	<string>CronicaTipJarLarge</string>
-	<key>MediumTip</key>
-	<string>CronicaTipJarMedium</string>
-	<key>SmallTip</key>
-	<string>CronicaTipJarSmall</string>
+	<key>AdFreeUpgrade</key>
+	<string>AdFreeUpgrade</string>
 </dict>
 </plist>

@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+#if os(iOS)
+import AdmobSwiftUI
+#endif
 
 /// Renders the Settings UI for each OS, support iOS, macOS, and tvOS.
 struct SettingsView: View {
@@ -13,6 +16,9 @@ struct SettingsView: View {
     static let tag: Screens? = .settings
     @State private var showPolicy = false
     @State private var showWhatsNew = false
+    
+    @StateObject private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
+        
 #elseif os(tvOS)
     @StateObject private var store = SettingsStore.shared
 #endif
@@ -25,21 +31,25 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section {
+                    NavigationLink(destination: RegionContentSettings()) {
+                        settingsLabel(title: "settingsRegionContentTitle", icon: "globe", color: .purple)
+                    }
+                }
+                
+                Section {
                     NavigationLink(value: SettingsScreens.behavior) {
                         settingsLabel(title: "settingsBehaviorTitle", icon: "hand.tap", color: .gray)
                     }
-                    NavigationLink(value: SettingsScreens.appearance) {
-                        settingsLabel(title: "settingsAppearanceTitle", icon: "paintbrush", color: .blue)
-                    }
+//                    NavigationLink(value: SettingsScreens.appearance) {
+//                        settingsLabel(title: "settingsAppearanceTitle", icon: "paintbrush", color: .blue)
+//                    }
                     NavigationLink(value: SettingsScreens.sync) {
                         settingsLabel(title: "settingsSyncTitle", icon: "arrow.triangle.2.circlepath", color: .green)
                     }
                     NavigationLink(value: SettingsScreens.notifications) {
                         settingsLabel(title: "settingsNotificationTitle", icon: "bell", color: .red)
                     }
-                    NavigationLink(destination: RegionContentSettings()) {
-                        settingsLabel(title: "settingsRegionContentTitle", icon: "globe", color: .purple)
-                    }
+                    
                 }
                 
                 Section {
@@ -50,7 +60,7 @@ struct SettingsView: View {
                     }
                     .buttonStyle(.plain)
                     .sheet(isPresented: $showPolicy) {
-                        if let url = URL(string: "https://alexandremadeira.dev/cronica/privacy") {
+                        if let url = URL(string: "https://streamingnowapp.com/privacy") {
                             SFSafariViewWrapper(url: url)
                                 .appTint()
                                 .appTheme()
@@ -70,14 +80,20 @@ struct SettingsView: View {
                             .appTint()
                             .appTheme()
                     }
-                    NavigationLink(destination: TipJarSetting()) {
-                        settingsLabel(title: "tipJarTitle", icon: "heart", color: .red)
-                    }
+//                    NavigationLink(destination: TipJarSetting()) {
+//                        settingsLabel(title: "tipJarTitle", icon: "heart", color: .red)
+//                    }
                     
-                    NavigationLink(value: SettingsScreens.about) {
-                        settingsLabel(title: "aboutTitle", icon: "info.circle", color: .black)
-                    }
+//                    NavigationLink(value: SettingsScreens.about) {
+//                        settingsLabel(title: "aboutTitle", icon: "info.circle", color: .black)
+//                    }
                 }
+                
+#if os(iOS)
+                NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
+                                        .frame(height: 80)
+                                        .background(Color(UIColor.secondarySystemBackground))
+#endif
             }
             .navigationTitle("Settings")
             .navigationDestination(for: SettingsScreens.self) { settings in
@@ -91,6 +107,11 @@ struct SettingsView: View {
                 case .tipJar: TipJarSetting()
                 default: BehaviorSetting()
                 }
+            }
+            .onAppear {
+#if os(iOS)
+                nativeViewModel.refreshAd()
+#endif
             }
         }
 #elseif os(macOS)

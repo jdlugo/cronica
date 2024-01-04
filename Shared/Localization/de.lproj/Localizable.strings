@@ -297,7 +297,7 @@
 "Privacy" = "Datenschutz";
 "Disable Telemetry" = "Crash-Report deaktivieren";
 "privacyfooter" = "Cronica sammelt minimale Daten, um App-Abstürze zu minimieren. Diese Daten sind anonym. Weitere Details finden Sie in der Datenschutzrichtlinie.";
-"privacyFooterTV" = "Cronica sammelt minimale Daten, um App-Abstürze zu minimieren. Diese Daten sind anonym. Weitere Details finden Sie in der Datenschutzrichtlinie unter https://alexandremadeira.dev/cronica/privacy.";
+"privacyFooterTV" = "Cronica sammelt minimale Daten, um App-Abstürze zu minimieren. Diese Daten sind anonym. Weitere Details finden Sie in der Datenschutzrichtlinie unter https://streamingnowapp.com/privacy.";
 "Open Trailers in YouTube App" = "Trailer in YouTube-App öffnen";
 
 //MARK: HomeView.swift
@@ -506,7 +506,7 @@
 "addToCustomList" = "Zur Liste hinzufügen...";
 "behaviorMarkPreviouslyEpisodes" = "Alle vorherigen Episoden markieren, wenn eine neuere als gesehen markiert wird";
 "changeLanguage" = "Sprache der App ändern";
-"sendEmailFooterBackup" = "Sie können auch eine E-Mail an contact@alexandremadeira.dev mit Ihrem E-Mail-Client senden.";
+"sendEmailFooterBackup" = "Sie können auch eine E-Mail an contact@streamingnowapp.com mit Ihrem E-Mail-Client senden.";
 "addedToWatchlist" = "Zur Watchlist hinzugefügt";
 "upNext" = "Als Nächstes";
 "markAsWatched" = "Als gesehen markieren";

@@ -6,9 +6,20 @@
 //
 
 import SwiftUI
+
+#if os(iOS)
+import AdmobSwiftUI
+#endif
+
 #if os(iOS) || os(tvOS)
 /// A TabBar for switching views, only used on iPhone.
 struct TabBarView: View {
+#if os(iOS)
+    @StateObject private var nativeViewModel = NativeAdViewModel()
+    private let adViewControllerRepresentable = AdViewControllerRepresentable()
+    private let adCoordinator = InterstitialAdCoordinator()
+    private let rewardCoordinator = RewardedAdCoordinator()
+#endif
     @AppStorage("selectedView") var selectedView: Screens?
     var persistence = PersistenceController.shared
     var body: some View {
@@ -19,6 +30,7 @@ struct TabBarView: View {
                 if settings.isPreferredLaunchScreenEnabled {
                     selectedView = settings.preferredLaunchScreen
                 }
+
             }
             .appTint()
             .appTheme()

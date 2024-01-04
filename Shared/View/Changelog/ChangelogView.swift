@@ -123,7 +123,7 @@ struct ChangelogView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(SettingsStore.shared.appTheme.color.gradient)
                 .padding(.horizontal)
-                
+                /*
                 Button {
                     withAnimation {
                         showTipJar.toggle()
@@ -131,7 +131,7 @@ struct ChangelogView: View {
                 } label: {
                     Text("tipJar")
                         .frame(minWidth: 100)
-                }
+                }*/
 #if os(iOS) || os(macOS)
                 .controlSize(.large)
 #endif
@@ -139,13 +139,6 @@ struct ChangelogView: View {
                 .fixedSize()
                 .padding(.trailing)
             }
-            
-            Text("tipJarDescription")
-                .frame(minWidth: 100)
-                .font(.callout)
-                .foregroundColor(.secondary)
-                .padding(.top, 4)
-                .padding(.horizontal)
         }
     }
 }

@@ -7,6 +7,11 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+
+#if os(iOS)
+import AdmobSwiftUI
+#endif
+
 #if !os(tvOS)
 /// The Details view for ItemContent for iPadOS and macOS, built with larger screen in mind.
 struct ItemContentPadView: View {
@@ -24,6 +29,9 @@ struct ItemContentPadView: View {
     @Binding var popupType: ActionPopupItems?
     @StateObject private var store = SettingsStore.shared
     @Binding var showPopup: Bool
+#if os(iOS)
+    @StateObject private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
+#endif
     var body: some View {
         VStack {
             header.padding(.leading)
@@ -55,6 +63,9 @@ struct ItemContentPadView: View {
         }
 #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+                   nativeViewModel.refreshAd()
+        }
 #elseif os(macOS)
         .navigationTitle(title)
 #endif
@@ -102,7 +113,6 @@ struct ItemContentPadView: View {
     private var header: some View {
         HStack {
             poster
-            
             
             VStack(alignment: .leading) {
                 Text(title)
@@ -179,10 +189,18 @@ struct ItemContentPadView: View {
             }
             .frame(width: 360)
             
+            
+#if os(iOS)
+//            NativeAdView(nativeViewModel: nativeViewModel, style: .card)
+//                                    .frame(height: 320)
+//                                    .background(Color(UIColor.secondarySystemBackground))                    .padding(.leading)
+
+#endif
+            
             ViewThatFits {
                 QuickInformationView(item: viewModel.content, showReleaseDateInfo: $showReleaseDateInfo)
-                    .frame(width: 280)
-                    .padding(.horizontal)
+                    .frame(width: 260)
+                    .padding(.leading)
                     .onAppear {
                         showInfoBox = false
                         isSideInfoPanelShowed = true

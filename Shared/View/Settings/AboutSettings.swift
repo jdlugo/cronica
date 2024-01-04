@@ -154,7 +154,7 @@ struct AboutSettings: View {
     private var privacy: some View {
         Section {
             Button("settingsPrivacyPolicy") {
-                guard let url = URL(string: "https://alexandremadeira.dev/cronica/privacy") else { return }
+                guard let url = URL(string: "https://streamingnowapp.com/privacy") else { return }
                 NSWorkspace.shared.open(url)
             }
             .buttonStyle(.link)

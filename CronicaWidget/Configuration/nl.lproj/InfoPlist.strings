@@ -1,8 +1,8 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "CronicaWidget";
+"CFBundleDisplayName" = "StreamingNowWidget";
 
 /* Bundle name */
-"CFBundleName" = "CronicaWidgetUitbreiding";
+"CFBundleName" = "StreamingNowWidgetUitbreiding";
 
 /* Copyright (human-readable) */
 "NSHumanReadableCopyright" = "";

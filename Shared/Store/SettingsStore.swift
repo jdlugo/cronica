@@ -13,14 +13,14 @@ class SettingsStore: ObservableObject {
     @AppStorage("showOnboarding") var displayOnboard = true
     @AppStorage("displayDeveloperSettings") var displayDeveloperSettings = false
     @AppStorage("gesture") var gesture: UpdateItemProperties = .favorite
-    @AppStorage("appThemeColor") var appTheme: AppThemeColors = .blue
+    @AppStorage("appThemeColor") var appTheme: AppThemeColors = .red
 #if os(iOS)
     @AppStorage("watchlistStyle") var watchlistStyle: SectionDetailsPreferredStyle = UIDevice.isIPhone ? .list : .poster
 #else
     @AppStorage("watchlistStyle") var watchlistStyle: SectionDetailsPreferredStyle = .card
 #endif
     @AppStorage("disableTranslucentBackground") var disableTranslucent = false
-    @AppStorage("user_theme") var currentTheme: AppTheme = .system
+    @AppStorage("user_theme") var currentTheme: AppTheme = .dark
     @AppStorage("openInYouTube") var openInYouTube = false
     @AppStorage("markEpisodeWatchedTap") var markEpisodeWatchedOnTap = false
     @AppStorage("enableHapticFeedback") var hapticFeedback = true

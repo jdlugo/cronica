@@ -6,6 +6,11 @@
 //
 
 import SwiftUI
+
+#if os(iOS)
+import AdmobSwiftUI
+#endif
+
 #if !os(tvOS)
 /// Displays the overview of a movie, tv show, or episode.
 /// It can also display biography.
@@ -19,6 +24,10 @@ struct OverviewBoxView: View {
     @State private var showTextOptions = true
     @State private var isTruncated = false
     @StateObject private var settings = SettingsStore.shared
+#if os(iOS)
+    @StateObject private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
+#endif
+    
     var body: some View {
         if let overview {
             if !overview.isEmpty {
@@ -67,6 +76,14 @@ struct OverviewBoxView: View {
                                 .padding(.top, 4)
                             
                         }
+                        
+#if os(iOS)
+//                        NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
+//                                                .frame(height: 90)
+//                                                .background(Color(UIColor.secondarySystemBackground))
+#endif
+                        
+                        
 #endif
                     }
                 } label: {
@@ -101,6 +118,9 @@ struct OverviewBoxView: View {
                 }
 #if os(iOS)
                 .groupBoxStyle(TransparentGroupBox())
+                .onAppear {
+                           nativeViewModel.refreshAd()
+                }
 #endif
             }
         }

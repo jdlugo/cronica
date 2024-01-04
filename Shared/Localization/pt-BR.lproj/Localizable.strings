@@ -139,7 +139,7 @@
 "Home" = "Início";
 "Watchlist" = "Lista";
 "Search" = "Pesquisar";
-"Cronica" = "Cronica";
+"Streaming Now" = "Streaming Now";
 
 //MARK: SettingsView.swift
 "Support" = "Suporte";
@@ -149,12 +149,12 @@
 "Double Tap Gesture" = "Gesto de Dois Toques";
 "The function is performed when double-tap the cover image." = "A função será executada quando tocar duas vezes na imagem da capa.";
 "Settings" = "Ajustes";
-"Review Cronica" = "Avalie Cronica";
+"Review Streaming Now" = "Avalie Streaming Now";
 "Send Feedback" = "Enviar Sugestão";
 "Feedback" = "Sugestão";
 "Send" = "Enviar";
 "Cancel" = "Cancelar";
-"Send your suggestions to help improve Cronica." = "Envie suas sugestões para ajudar a melhorar o Cronica.";
+"Send your suggestions to help improve Streaming Now." = "Envie suas sugestões para ajudar a melhorar o Streaming Now.";
 "Feedback sent" = "Obrigado pelo seu feedback.";
 "Sync" = "Sincronização";
 "Update Items" = "Atualizar Itens";
@@ -178,7 +178,7 @@
 
 //MARK: WelcomeView.swift
 "Welcome to" = "Bem-vindo a";
-" Cronica" = " Cronica";
+" Streaming Now" = " Streaming Now";
 "Continue" = "Continuar";
 "Find" = "Busque";
 "Search for upcoming movies and tv shows." = "Procure seus próximos filmes e programas de TV.";
@@ -359,13 +359,13 @@
 "acknowledgmentsContentProviderSubtitle" = "TMDb";
 "acknowledgmentsSDWebImage" = "SDWebImageSwiftUI";
 "settingsAcknowledgments" = "Agradecimentos";
-"settingsAcknowledgmentsFooter" = "Obrigado a todos que tornaram a Cronica possível.";
+"settingsAcknowledgmentsFooter" = "Obrigado a todos que tornaram a Streaming Now possível.";
 "acknowledgmentsTitle" = "Agradecimentos";
 "acknowledgmentsUserTitle" = "Obrigado pelo seu feedback e apoio!";
 
 // MARK: TipJarSetting
 "tipJarTitle" = "Contribuição";
-"tipJarFooter" = "Você pode optar por contribuir com uma quantidade pequena, média ou grande, e todos os lucros irão para melhorar e manter o aplicativo. O Cronica sempre permanecerá gratuito e sem anúncios, então esta é uma maneira puramente opcional para os usuários apoiarem o desenvolvimento do aplicativo.";
+"tipJarFooter" = "Você pode optar por contribuir com uma quantidade pequena, média ou grande, e todos os lucros irão para melhorar e manter o aplicativo. O Streaming Now sempre permanecerá gratuito e sem anúncios, então esta é uma maneira puramente opcional para os usuários apoiarem o desenvolvimento do aplicativo.";
 "restorePurchases" = "Restaurar Compras";
 
 // MARK: WatchlistButtonView
@@ -511,9 +511,9 @@
 "featureOneTitle" = "Próximo na Lista";
 "featureOneDescription" = "Confira o próximo episódio da sua série favorita e marque como assistido rapidamente.";
 "featureTwoTitle" = "Recomendações Personalizadas";
-"featureTwoDescription" = "Obtenha recomendações personalizadas de filmes e séries com base no que você assistiu no Cronica.";
+"featureTwoDescription" = "Obtenha recomendações personalizadas de filmes e séries com base no que você assistiu no Streaming Now.";
 "featureThreeTitle" = "Ajuste Fino da Experiência";
-"featureThreeDescription" = "Mais configurações e interface do usuário melhorada para personalizar o Cronica exatamente como você gosta.";
+"featureThreeDescription" = "Mais configurações e interface do usuário melhorada para personalizar o Streaming Now exatamente como você gosta.";
 "thankYouTipJarMessage" = "Obrigado pela sua contribuição! Seu apoio é muito apreciado. 😁";
 "notificationsSettingsFeedbackCall" = "Você tem alguma sugestão? Envie um Feedback";
 "openNotificationInSettings" = "Editar Notificações em Ajustes";
@@ -530,7 +530,7 @@
 "addToCustomList" = "Adicionar à Lista...";
 "behaviorMarkPreviouslyEpisodes" = "Marque todos os episódios anteriores quando um mais novo for marcado como assistido";
 "changeLanguage" = "Alterar o idioma do aplicativo";
-"sendEmailFooterBackup" = "Você também pode enviar um e-mail para contact@alexandremadeira.dev usando seu cliente de e-mail.";
+"sendEmailFooterBackup" = "Você também pode enviar um e-mail para contact@streamingnowapp.com usando seu cliente de e-mail.";
 "addedToWatchlist" = "Adicionado à Lista";
 "upNext" = "Seguintes";
 "markAsWatched" = "Marque como assistido";
@@ -560,7 +560,7 @@
 "appIconFeedbackTitle" = "Tem uma ideia para um ícone? Envie um feedback";
 "exploreDisplayTypePicker" = "Estilo de exibição";
 "watchlistDisplayTypePicker" = "Estilo de exibição";
-"cronicaGitHub" = "Cronica GitHub Repo";
+"cronicaGitHub" = "Streaming Now GitHub Repo";
 "appearanceCompactUI" = "UI compacta";
 "appearanceCompactUISubtitle" = "Reduz alguns elementos da interface do usuário para acomodar mais itens na tela.";
 "selectedWatchProvider" = "Serviços de Streaming";
@@ -690,7 +690,7 @@
 "removedEpisodeWatched" = "Episódio Removido dos Assistidos";
 "confirmAndDeleteItems" = "Confirmar e Deletar Itens";
 "tmdbSyncFeatures" = "Você poderá ver suas listas e gerenciar seu conteúdo.";
-"callToReviewTitle" = "Está gostando de Cronica?";
+"callToReviewTitle" = "Está gostando de Streaming Now?";
 "callToReviewSubtitle" = "Deixe um comentário na App Store!";
 "reviewInTheAppStore" = "Avaliar o App";
 "dismissReviewCall" = "Dispensar";
@@ -710,7 +710,7 @@
 "List" = "Lista";
 "noResultsFound" = "Nada encontrado com sua consulta.\nTente outra consulta ou verifique se o título não está no arquivo.";
 "shareLinkPreference" = "Escolha a forma preferida de compartilhar links";
-"shareLinkPreferenceSubtitle" = "Você pode optar por compartilhar usando um link da Cronica que permitirá abrir o aplicativo.\nObserve que nem todo conteúdo pode ser compartilhado com um link da Cronica, o aplicativo sempre usará links TMDB, se necessário.";
+"shareLinkPreferenceSubtitle" = "Você pode optar por compartilhar usando um link da Streaming Now que permitirá abrir o aplicativo.\nObserve que nem todo conteúdo pode ser compartilhado com um link da Streaming Now, o aplicativo sempre usará links TMDB, se necessário.";
 "Edit" = "Editar";
 "Delete" = "Excluir";
 "Swipe to Edit your list" = "Deslize para editar sua lista";

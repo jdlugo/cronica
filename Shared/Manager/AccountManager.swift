@@ -66,7 +66,7 @@ class AccountManager: ObservableObject {
                 "content-type": contentTypeHeader,
                 "authorization": authorizationHeader
             ]
-            let parameters = ["redirect_to": "cronica://"]
+            let parameters = ["redirect_to": "qscanlite://"]
             
             let postData = try JSONSerialization.data(withJSONObject: parameters)
             guard let url = URL(string: "https://api.themoviedb.org/4/auth/request_token") else { return nil }

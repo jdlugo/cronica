@@ -28,7 +28,7 @@ enum AppThemeColors: Int, Identifiable, CaseIterable {
     case lavender = 16
     var localizableName: String {
         switch self {
-        case .blue: return NSLocalizedString("appThemeColorsBlue", comment: "")
+        case .blue: return NSLocalizedString("appThemeColorsRed", comment: "")
         case .red: return NSLocalizedString("appThemeColorsRed", comment: "")
         case .green: return NSLocalizedString("appThemeColorsGreen", comment: "")
         case .brown: return NSLocalizedString("appThemeColorsBrown", comment: "")
@@ -49,7 +49,7 @@ enum AppThemeColors: Int, Identifiable, CaseIterable {
     }
     var color: Color {
         switch self {
-        case .blue: return .blue
+        case .blue: return .red
         case .red: return .red
         case .green: return .green
         case .brown: return .brown

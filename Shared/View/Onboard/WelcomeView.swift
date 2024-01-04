@@ -23,7 +23,7 @@ struct WelcomeView: View {
                         .shadow(radius: 5)
                         .padding(.leading)
                     VStack(alignment: .leading) {
-                        Text("Cronica")
+                        Text("Streaming Now")
                             .font(.title)
                             .fontWeight(.bold)
                             .fontDesign(.rounded)
@@ -59,7 +59,7 @@ struct WelcomeView: View {
                 .padding([.leading, .vertical])
                 Button {
 #if os(macOS)
-                    NSWorkspace.shared.open(URL(string: "https://alexandremadeira.dev/cronica/privacy")!)
+                    NSWorkspace.shared.open(URL(string: "https://streamingnowapp.com/privacy")!)
 #else
                     showPolicy.toggle()
 #endif
@@ -83,7 +83,7 @@ struct WelcomeView: View {
         .interactiveDismissDisabled(true)
 #if os(iOS)
         .fullScreenCover(isPresented: $showPolicy) {
-            SFSafariViewWrapper(url: URL(string: "https://alexandremadeira.dev/cronica/privacy")!)
+            SFSafariViewWrapper(url: URL(string: "https://streamingnowapp.com/privacy")!)
         }
 #endif
     }

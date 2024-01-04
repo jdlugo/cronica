@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B8110EDE279245D100844FEB"
-               BuildableName = "Cronica.app"
+               BuildableName = "StreamingNow.app"
                BlueprintName = "Story (iOS)"
                ReferencedContainer = "container:Story.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B88B88FA29DF194A00497058"
+               BlueprintIdentifier = "B8FCAE8E2AED9CE300F688FE"
                BuildableName = "CronicaTests.xctest"
                BlueprintName = "CronicaTests"
                ReferencedContainer = "container:Story.xcodeproj">
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B8110EDE279245D100844FEB"
-            BuildableName = "Cronica.app"
+            BuildableName = "StreamingNow.app"
             BlueprintName = "Story (iOS)"
             ReferencedContainer = "container:Story.xcodeproj">
          </BuildableReference>
@@ -93,7 +93,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B8110EDE279245D100844FEB"
-            BuildableName = "Cronica.app"
+            BuildableName = "StreamingNow.app"
             BlueprintName = "Story (iOS)"
             ReferencedContainer = "container:Story.xcodeproj">
          </BuildableReference>

@@ -3,12 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>aps-environment</key>
-	<string>development</string>
+	<string>production</string>
 	<key>com.apple.developer.aps-environment</key>
-	<string>development</string>
+	<string>production</string>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>streamingnowapp.com</string>
+	</array>
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array>
-		<string>iCloud.dev.alexandremadeira.Story</string>
+		<string>iCloud.com.dlugokecki.qscanlite</string>
 	</array>
 	<key>com.apple.developer.icloud-services</key>
 	<array>

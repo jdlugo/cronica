@@ -10,6 +10,7 @@ import SwiftUI
 struct AboutSectionView: View {
     let about: String?
 	@State private var showAbout = false
+
     var body: some View {
         if let about {
             if !about.isEmpty {
@@ -31,8 +32,11 @@ struct AboutSectionView: View {
                     }
 					.padding([.horizontal, .top])
                 }
+                
+                
 				.padding([.horizontal, .bottom])
             }
+      
         }
     }
 }

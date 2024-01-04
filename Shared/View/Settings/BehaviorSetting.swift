@@ -57,7 +57,7 @@ struct BehaviorSetting: View {
             }
             
 #if !os(tvOS)
-            shareOptions
+//            shareOptions
             
 #if os(macOS)
             Section {
@@ -65,12 +65,12 @@ struct BehaviorSetting: View {
             }
 #endif
             
-            Section {
-                Toggle(isOn: $store.disableSearchFilter) {
-                    Text("Disable Search Filter")
-                    Text("Search filter improve the search results, but has the downside of taking longer to load.")
-                }
-            }
+//            Section {
+//                Toggle(isOn: $store.disableSearchFilter) {
+//                    Text("Disable Search Filter")
+//                    Text("Search filter improve the search results, but has the downside of taking longer to load.")
+//                }
+//            }
 #endif
             
         }

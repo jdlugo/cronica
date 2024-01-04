@@ -39,6 +39,7 @@ private struct BehaviorSettings: View {
 				Toggle("removeFromPinOnWatchedTitle", isOn: $store.removeFromPinOnWatched)
 				Toggle("showConfirmationOnRemovingItem", isOn: $store.showRemoveConfirmation)
 			}
+            /*
 			Section {
 				Picker(selection: $store.shareLinkPreference) {
 					ForEach(ShareLinkPreference.allCases) { item in
@@ -55,6 +56,7 @@ private struct BehaviorSettings: View {
 					Spacer()
 				}
 			}
+            */
 		}
 	}
 }

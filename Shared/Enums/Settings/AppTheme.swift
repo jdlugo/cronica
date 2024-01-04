@@ -13,9 +13,11 @@ enum AppTheme: String, CaseIterable, Identifiable {
     var overrideTheme: ColorScheme? {
         switch self {
         case .system:
-            return nil
+            return .dark
+            //return nil
         case .light:
-            return .light
+            return .dark
+            //return .light
         case .dark:
             return .dark
         }
