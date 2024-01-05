@@ -13,8 +13,11 @@ import YouTubePlayerKit
 
 struct TrailerItemView: View {
     private let trailer: VideoItem
+    @State private var adDisplayedProvider:Bool? = false
+
 #if os(iOS)
     private let player: YouTubePlayer
+    private let adCoordinator = AdCoordinator()
 #endif
     @State private var isLoading = false
     @State private var showWebPlayer = false
@@ -97,23 +100,33 @@ struct TrailerItemView: View {
     
     private func openVideo() {
 #if os(iOS)
-        if UIDevice.isIPhone {
-            if openInYouTube {
-                if let url = trailer.url {
-                    UIApplication.shared.open(url)
+        
+        if adDisplayedProvider ?? false {
+            
+            if UIDevice.isIPhone {
+                if openInYouTube {
+                    if let url = trailer.url {
+                        adDisplayedProvider = false;
+                        UIApplication.shared.open(url)
+                    }
+                } else {
+                    self.isLoading = true
+                    player.play()
                 }
             } else {
-                self.isLoading = true
-                player.play()
-            }
-        } else {
-            if openInYouTube {
-                if let url = trailer.url {
-                    UIApplication.shared.open(url)
+                if openInYouTube {
+                    if let url = trailer.url {
+                        adDisplayedProvider = false;
+                        UIApplication.shared.open(url)
+                    }
+                } else {
+                    showWebPlayer = true
                 }
-            } else {
-                showWebPlayer = true
             }
+        }
+        else {
+            adCoordinator.presentAd()
+            adDisplayedProvider = true;
         }
 #elseif os(macOS)
         if let url = trailer.url {

@@ -22,20 +22,23 @@ class AdCoordinator: NSObject, GADFullScreenContentDelegate {
                             print("Failed to load interstitial ad with error: \(error.localizedDescription)")
                             return
                           }
+          
                           interstitial = ad
                           interstitial?.fullScreenContentDelegate = self
                         })
   }
 
-  func presentAd(from viewController: UIViewController) {
+  func presentAd() {
       print("\(#function) called")
-//    guard let fullScreenAd = ad else {
-//      return print("Ad wasn't ready")
-//    }
+      let scenes = UIApplication.shared.connectedScenes
+      let windowScene = scenes.first as? UIWindowScene
+      let window = windowScene?.windows.first
+      let root = window?.rootViewController
       
-      interstitial?.present(fromRootViewController: viewController)
+      interstitial?.present(fromRootViewController: root!)
   }
     
+
     func adDidRecordImpression(_ ad: GADFullScreenPresentingAd) {
       print("\(#function) called")
     }
@@ -59,6 +62,8 @@ class AdCoordinator: NSObject, GADFullScreenContentDelegate {
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
       print("\(#function) called")
     }
+    
+    
     
 
 }
