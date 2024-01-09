@@ -1,10 +1,3 @@
-//
-//  KeychainHelper.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 22/04/23.
-//
-
 import Foundation
 import Security
 

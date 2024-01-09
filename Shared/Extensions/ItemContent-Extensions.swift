@@ -1,10 +1,3 @@
-//
-//  Content-Helpers.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 06/03/22.
-//  swiftlint:disable trailing_whitespace
-
 import Foundation
 
 extension ItemContent {

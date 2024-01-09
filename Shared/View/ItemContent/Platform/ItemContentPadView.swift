@@ -1,10 +1,3 @@
-//
-//  ItemContentPadView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 18/05/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 
@@ -30,7 +23,7 @@ struct ItemContentPadView: View {
     @StateObject private var store = SettingsStore.shared
     @Binding var showPopup: Bool
 #if os(iOS)
-    @StateObject private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
+    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
 #endif
     var body: some View {
         VStack {
@@ -191,9 +184,9 @@ struct ItemContentPadView: View {
             
             
 #if os(iOS)
-//            NativeAdView(nativeViewModel: nativeViewModel, style: .card)
-//                                    .frame(height: 320)
-//                                    .background(Color(UIColor.secondarySystemBackground))                    .padding(.leading)
+            NativeAdView(nativeViewModel: nativeViewModel, style: .card)
+                                    .frame(height: 320)
+                                    .background(Color(UIColor.secondarySystemBackground))                    .padding(.leading)
 
 #endif
             

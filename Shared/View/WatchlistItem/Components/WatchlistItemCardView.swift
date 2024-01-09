@@ -1,10 +1,3 @@
-//
-//  WatchlistItemCardView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 20/12/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

@@ -1,10 +1,3 @@
-//
-//  AcknowledgementsSettings.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 20/12/22.
-//
-
 import SwiftUI
 
 struct AboutSettings: View {
@@ -25,7 +18,7 @@ struct AboutSettings: View {
                             .frame(width: 120, height: 120, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             .shadow(radius: 5)
-                        Text("Developed by Alexandre Madeira")
+                        Text("Streaming Now")
                             .fontWeight(.semibold)
                             .fontDesign(.monospaced)
                             .font(.caption2)
@@ -44,13 +37,6 @@ struct AboutSettings: View {
             }
 #endif
             
-#if !os(tvOS)
-            Section {
-                aboutButton(title: "X/Twitter", url: "https://x.com/CronicaApp")
-            }
-#endif
-            
-            
 #if os(iOS)
             if let appUrl = URL(string: "https://apple.co/3TV9SLP") {
                 ShareLink(item: appUrl).labelStyle(.titleOnly)
@@ -63,50 +49,10 @@ struct AboutSettings: View {
             FeedbackSettingsView()
             #endif
             
-            Section("Design") {
-                aboutButton(
-                    title: "acknowledgmentsAppIconTitle",
-                    subtitle: "acknowledgmentsAppIconSubtitle",
-                    url: "https://www.fiverr.com/akhmad437"
-                )
-            }
             
-            Section("Translation") {
-                aboutButton(title: "German", subtitle: "Simon Boer", url: "https://twitter.com/SimonBoer29")
-                aboutButton(title: "Spanish", subtitle: "Luis Felipe Lerma Alvarez",
-							url: "https://www.instagram.com/lerma_alvarez")
-            }
-            
-            Section("Libraries") {
-                aboutButton(
-                    title: "acknowledgmentsSDWebImage",
-                    url: "https://github.com/SDWebImage/SDWebImageSwiftUI"
-                )
-                aboutButton(
-                    title: "TelemetryDeck",
-                    url: "https://telemetrydeck.com/"
-                )
-                aboutButton(title: "YouTubePlayerKit", url: "https://github.com/SvenTiigi/YouTubePlayerKit")
-            }
-            
-            Section("acknowledgmentsContentProviderTitle") {
-                aboutButton(
-                    title: "acknowledgmentsContentProviderSubtitle",
-                    url: "https://www.themoviedb.org"
-                )
-            }
-            
-            Section("Source Code") {
-                aboutButton(
-                    title: "cronicaGitHub",
-                    url: "https://github.com/MadeiraAlexandre/Cronica"
-                )
-            }
             
             Section {
-                if settings.displayDeveloperSettings {
-                    NavigationLink("🛠️", value: SettingsScreens.developer)
-                }
+                
                 CenterHorizontalView {
                     Text("Version \(appVersion ?? "") • \(buildNumber)")
                         .foregroundColor(.secondary)

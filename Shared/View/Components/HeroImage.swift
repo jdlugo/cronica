@@ -1,10 +1,3 @@
-//
-//  HeroImage.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/04/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

@@ -1,10 +1,3 @@
-//
-//  EndpointDetails.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 26/11/22.
-//
-
 import SwiftUI
 
 struct EndpointDetails: View {

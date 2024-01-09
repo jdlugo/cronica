@@ -1,10 +1,3 @@
-//
-//  SectionDetailsPreferredStyle.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 07/04/23.
-//
-
 import Foundation
 
 enum SectionDetailsPreferredStyle: String, CaseIterable, Identifiable {

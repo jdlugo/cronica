@@ -1,10 +1,3 @@
-//
-//  UpNextMenuBar.swift
-//  Story (iOS)
-//
-//  Created by Alexandre Madeira on 22/11/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

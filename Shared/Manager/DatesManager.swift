@@ -1,10 +1,3 @@
-//
-//  DatesManager.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 05/02/23.
-//
-
 import Foundation
 
 /// Migrate to extension based formatters and functions to get release dates and format the result.

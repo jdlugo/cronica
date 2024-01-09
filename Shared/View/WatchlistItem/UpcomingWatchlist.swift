@@ -1,10 +1,3 @@
-//
-//  UpcomingWatchlist.swift
-//  CronicaMac
-//
-//  Created by Alexandre Madeira on 03/11/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

@@ -1,9 +1,3 @@
-//
-//  SideBarView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 28/04/22.
-//
 import SwiftUI
 
 #if os(macOS)

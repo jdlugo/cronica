@@ -1,10 +1,3 @@
-//
-//  TabBarView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 01/05/22.
-//
-
 import SwiftUI
 
 #if os(iOS)
@@ -15,7 +8,7 @@ import AdmobSwiftUI
 /// A TabBar for switching views, only used on iPhone.
 struct TabBarView: View {
 #if os(iOS)
-    @StateObject private var nativeViewModel = NativeAdViewModel()
+    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
     private let adViewControllerRepresentable = AdViewControllerRepresentable()
     private let adCoordinator = InterstitialAdCoordinator()
     private let rewardCoordinator = RewardedAdCoordinator()

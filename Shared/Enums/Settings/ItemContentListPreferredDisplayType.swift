@@ -1,10 +1,3 @@
-//
-//  ItemContentListPreferredDisplayType.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 07/04/23.
-//
-
 import Foundation
 
 enum ItemContentListPreferredDisplayType: String, CaseIterable, Identifiable {

@@ -1,10 +1,3 @@
-//
-//  NotificationsSettingsView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 12/03/23.
-//
-
 import SwiftUI
 
 struct NotificationsSettingsView: View {

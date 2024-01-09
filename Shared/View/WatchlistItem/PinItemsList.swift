@@ -1,10 +1,3 @@
-//
-//  PinItemsList.swift
-//  CronicaMac
-//
-//  Created by Alexandre Madeira on 03/11/22.
-//
-
 import SwiftUI
 
 struct PinItemsList: View {

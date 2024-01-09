@@ -1,10 +1,3 @@
-//
-//  Bundle-Decodable.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 17/01/22.
-//
-
 import Foundation
 
 extension Bundle {

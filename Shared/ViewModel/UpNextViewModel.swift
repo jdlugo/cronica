@@ -1,10 +1,3 @@
-//
-//  UpNextViewModel.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 17/07/23.
-//
-
 import SwiftUI
 
 @MainActor

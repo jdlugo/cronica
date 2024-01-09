@@ -1,10 +1,3 @@
-//
-//  TMDBAccountManager.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 21/04/23.
-//
-
 import Foundation
 
 /// This class has all functions required to manage sign-in and sign-out workflows for TMDB accounts.

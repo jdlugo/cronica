@@ -1,10 +1,3 @@
-//
-//  WatchlistItemRowView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 07/02/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

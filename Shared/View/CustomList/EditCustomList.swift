@@ -1,10 +1,3 @@
-//
-//  EditCustomList.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 18/02/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

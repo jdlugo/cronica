@@ -1,10 +1,3 @@
-//
-//  AddToListRow.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 07/05/23.
-//
-
 import SwiftUI
 
 struct AddToListRow: View {

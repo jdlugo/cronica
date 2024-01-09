@@ -1,10 +1,3 @@
-//
-//  SelectListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/02/23.
-//
-
 import SwiftUI
 
 /// This view is responsible for lettings users select which their want to see in WatchlistView.

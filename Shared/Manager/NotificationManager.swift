@@ -1,10 +1,3 @@
-//
-//  LocalNotificationManager.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 08/03/22.
-//
-
 import Foundation
 import UserNotifications
 

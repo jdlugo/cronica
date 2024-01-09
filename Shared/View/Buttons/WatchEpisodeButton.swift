@@ -1,10 +1,3 @@
-//
-//  WatchEpisodeButton.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 15/08/22.
-//
-
 import SwiftUI
 
 struct WatchEpisodeButton: View {

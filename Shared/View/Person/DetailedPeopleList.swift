@@ -1,10 +1,3 @@
-//
-//  DetailedPeopleList.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 21/01/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

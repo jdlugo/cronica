@@ -1,10 +1,3 @@
-//
-//  Videos.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 28/04/22.
-//  swiftlint:disable identifier_name
-
 import Foundation
 import SwiftUI
 

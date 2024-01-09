@@ -1,10 +1,3 @@
-//
-//  TMDBAccountView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 21/04/23.
-//
-
 import SwiftUI
 import AuthenticationServices
 

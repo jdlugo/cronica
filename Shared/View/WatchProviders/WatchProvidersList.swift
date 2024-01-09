@@ -1,10 +1,3 @@
-//
-//  WatchProvidersList.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 14/01/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

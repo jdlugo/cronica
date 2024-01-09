@@ -1,10 +1,3 @@
-//
-//  HomeViewModel.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 02/03/22.
-//
-
 import CoreData
 import SwiftUI
 

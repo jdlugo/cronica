@@ -1,10 +1,3 @@
-//
-//  Endpoints.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 28/01/22.
-//
-
 import Foundation
 
 /// Endpoints represents a default list that can be fetched from TMDb.

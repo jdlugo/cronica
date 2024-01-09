@@ -1,10 +1,3 @@
-//
-//  NetworkService.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 20/01/22.
-//  swiftlint:disable trailing_whitespace
-
 import Foundation
 import os
 

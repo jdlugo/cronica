@@ -1,10 +1,3 @@
-//
-//  PersonSearchImage.swift
-//  CronicaMac
-//
-//  Created by Alexandre Madeira on 20/11/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

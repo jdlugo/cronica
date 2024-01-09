@@ -1,10 +1,3 @@
-//
-//  EpisodeFrameView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/05/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

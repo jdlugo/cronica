@@ -1,10 +1,3 @@
-//
-//  OverviewBoxView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 25/04/22.
-//
-
 import SwiftUI
 
 #if os(iOS)
@@ -25,7 +18,7 @@ struct OverviewBoxView: View {
     @State private var isTruncated = false
     @StateObject private var settings = SettingsStore.shared
 #if os(iOS)
-    @StateObject private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
+    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
 #endif
     
     var body: some View {
@@ -78,9 +71,9 @@ struct OverviewBoxView: View {
                         }
                         
 #if os(iOS)
-//                        NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
-//                                                .frame(height: 90)
-//                                                .background(Color(UIColor.secondarySystemBackground))
+                        NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
+                                                .frame(height: 90)
+                                                .background(Color(UIColor.secondarySystemBackground))
 #endif
                         
                         

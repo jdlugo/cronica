@@ -1,10 +1,3 @@
-//
-//  NetworkError.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 09/05/22.
-//
-
 import Foundation
 import SwiftUI
 

@@ -1,9 +1,3 @@
-//
-//  TrailerItemView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 20/08/22.
-//
 #if os(iOS) || os(macOS)
 import SwiftUI
 import SDWebImageSwiftUI

@@ -1,10 +1,3 @@
-//
-//  TransparentGroupBox.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/05/23.
-//
-
 import SwiftUI
 #if os(iOS) || os(macOS)
 struct TransparentGroupBox: GroupBoxStyle {

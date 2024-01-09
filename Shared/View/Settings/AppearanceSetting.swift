@@ -1,10 +1,3 @@
-//
-//  AppearanceSetting.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 13/12/22.
-//
-
 import SwiftUI
 
 struct AppearanceSetting: View {

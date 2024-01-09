@@ -1,10 +1,3 @@
-//
-//  SearchItemView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 30/05/22.
-//
-
 import SwiftUI
 #if os(iOS) || os(macOS)
 struct SearchItemView: View {

@@ -1,10 +1,3 @@
-//
-//  ItemContentTVView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 19/05/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 #if os(tvOS)

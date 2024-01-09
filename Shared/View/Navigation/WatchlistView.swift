@@ -1,10 +1,3 @@
-//
-//  WatchListView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 15/01/22.
-//
-
 import SwiftUI
 
 struct WatchlistView: View {

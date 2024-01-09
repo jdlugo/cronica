@@ -1,10 +1,3 @@
-//
-//  UIDevice-Extension.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 24/03/22.
-//
-
 #if os(iOS)
 import UIKit
 

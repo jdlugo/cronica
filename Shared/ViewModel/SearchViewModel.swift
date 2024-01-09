@@ -1,10 +1,3 @@
-//
-//  SearchViewModel.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 06/03/22.
-//
-
 import Foundation
 import SwiftUI
 

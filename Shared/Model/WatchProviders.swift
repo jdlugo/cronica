@@ -1,10 +1,3 @@
-//
-//  WatchProviders.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 14/01/23.
-//
-
 import Foundation
 
 struct WatchProviders: Codable, Hashable {

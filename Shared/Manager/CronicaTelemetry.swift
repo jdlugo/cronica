@@ -1,10 +1,3 @@
-//
-//  CronicaTelemetry.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 03/10/22.
-//
-
 import Foundation
 import os
 #if !os(iOS)

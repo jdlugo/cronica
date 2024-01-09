@@ -1,10 +1,3 @@
-//
-//  TranslucentBackground.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 19/11/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

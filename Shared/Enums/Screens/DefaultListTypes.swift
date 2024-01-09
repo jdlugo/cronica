@@ -1,9 +1,3 @@
-//
-//  SmartFiltersTypes.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/08/22.
-//
 import Foundation
 
 /// The type of lists supported by WatchlistView.

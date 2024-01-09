@@ -1,10 +1,3 @@
-//
-//  Episode-Extension.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 06/04/22.
-//
-
 import Foundation
 
 extension Episode {

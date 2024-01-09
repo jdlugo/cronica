@@ -1,10 +1,3 @@
-//
-//  ExternalWatchlistManager.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 24/04/23.
-//
-
 import SwiftUI
 
 /// This class handles with fetching and sync of lists on external services.

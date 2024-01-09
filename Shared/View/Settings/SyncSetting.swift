@@ -1,10 +1,3 @@
-//
-//  SyncSetting.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 13/12/22.
-//
-
 import SwiftUI
 import CoreData
 

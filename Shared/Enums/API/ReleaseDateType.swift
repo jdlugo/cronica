@@ -1,10 +1,3 @@
-//
-//  ReleaseDateType.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 27/06/23.
-//
-
 import Foundation
 
 /// The release types and statuses used on TMDB

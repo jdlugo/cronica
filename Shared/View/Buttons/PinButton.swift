@@ -1,10 +1,3 @@
-//
-//  PinButton.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 04/05/23.
-//
-
 import SwiftUI
 
 struct PinButton: View {

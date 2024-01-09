@@ -65,8 +65,8 @@ struct CronicaWidgetEntryView : View {
 }
 
 @main
-struct CronicaWidget: Widget {
-    let kind: String = "CronicaWidget"
+struct StreamingNowWidget: Widget {
+    let kind: String = "StreamingNowWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -77,8 +77,3 @@ struct CronicaWidget: Widget {
         .supportedFamilies([.systemMedium])
     }
 }
-
-//#Preview {
-//    CronicaWidgetEntryView(entry: ItemContentEntry(date: Date(), item: [ItemContent.placeholder]))
-//        .previewContext(WidgetPreviewContext(family: .systemMedium))
-//}

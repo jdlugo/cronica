@@ -1,10 +1,3 @@
-//
-//  SearchItem.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 03/08/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

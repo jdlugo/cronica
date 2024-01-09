@@ -1,10 +1,3 @@
-//
-//  ItemContentSectionDetails.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 30/11/22.
-//
-
 import SwiftUI
 
 struct ItemContentSectionDetails: View {

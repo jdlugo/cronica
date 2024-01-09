@@ -1,10 +1,3 @@
-//
-//  CastListView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 29/01/22.
-//
-
 import SwiftUI
 
 /// A horizontal list that displays a limited number of

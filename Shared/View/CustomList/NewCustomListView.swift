@@ -1,10 +1,3 @@
-//
-//  NewCustomListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 08/02/23.
-//
-
 import SwiftUI
 
 struct NewCustomListView: View {

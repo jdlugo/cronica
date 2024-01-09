@@ -1,10 +1,3 @@
-//
-//  MediaType.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 28/04/22.
-//
-
 import Foundation
 
 enum MediaType: String, CaseIterable, Identifiable {

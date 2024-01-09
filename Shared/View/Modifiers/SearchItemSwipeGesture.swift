@@ -1,10 +1,3 @@
-//
-//  SearchItemSwipeGesture.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 03/10/22.
-//
-
 import SwiftUI
 #if os(iOS) || os(macOS)
 struct SearchItemSwipeGesture: ViewModifier {

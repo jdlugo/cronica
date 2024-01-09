@@ -1,10 +1,3 @@
-//
-//  SearchItem.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/08/23.
-//
-
 import Foundation
 
 struct SearchItemContent: Identifiable, Codable, Hashable {

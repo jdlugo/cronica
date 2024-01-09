@@ -1,10 +1,3 @@
-//
-//  PersonCardView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 13/07/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

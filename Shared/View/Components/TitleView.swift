@@ -1,10 +1,3 @@
-//
-//  TitleView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 03/04/22.
-//
-
 import SwiftUI
 
 struct TitleView: View {

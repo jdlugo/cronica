@@ -1,10 +1,3 @@
-//
-//  NotificationListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 25/09/22.
-//
-
 import SwiftUI
 
 #if !os(tvOS)

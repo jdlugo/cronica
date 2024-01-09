@@ -1,10 +1,3 @@
-//
-//  TipJarSetting.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 05/01/23.
-//
-
 import SwiftUI
 import StoreKit
 

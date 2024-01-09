@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  Story
-//
-//  Created by Alexandre Madeira on 10/02/22.
-//
-
 import SwiftUI
 import StoreKit
 
@@ -84,7 +77,7 @@ struct HomeView: View {
 #endif
         }
         .sheet(isPresented: $showWhatsNew) {
-#if os(iOS) || os(macOS)
+#if os(iOS)
             ChangelogView(showChangelog: $showWhatsNew)
                 .onDisappear {
                     showWhatsNew = false

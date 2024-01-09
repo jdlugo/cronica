@@ -1,10 +1,3 @@
-//
-//  ExploreView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 30/04/22.
-//
-
 import SwiftUI
 import CoreData
 

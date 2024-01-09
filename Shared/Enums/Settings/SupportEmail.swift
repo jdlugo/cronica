@@ -1,10 +1,3 @@
-//
-//  SupportEmail.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 22/01/23.
-//
-
 import SwiftUI
 
 struct SupportEmail {

@@ -1,10 +1,3 @@
-//
-//  ItemContentContextMenu.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 06/06/22.
-//
-
 import SwiftUI
 
 struct ItemContentContextMenu: ViewModifier {

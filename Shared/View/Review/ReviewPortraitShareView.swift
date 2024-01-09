@@ -1,10 +1,3 @@
-//
-//  ReviewPortraitShareView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 28/09/23.
-//
-
 import SwiftUI
 #if !os(tvOS) && !os(macOS)
 struct ReviewPortraitShareView: View {

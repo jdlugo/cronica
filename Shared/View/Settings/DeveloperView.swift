@@ -1,9 +1,3 @@
-//
-//  DeveloperView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 29/08/22.
-//
 #if os(iOS) || os(macOS)
 import SwiftUI
 import CoreData

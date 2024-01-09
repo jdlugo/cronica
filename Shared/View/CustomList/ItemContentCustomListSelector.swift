@@ -1,10 +1,3 @@
-//
-//  ItemContentCustomListSelector.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 21/03/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

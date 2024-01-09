@@ -1,10 +1,3 @@
-//
-//  WelcomeView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 18/03/22.
-//
-
 import SwiftUI
 
 /// Onboard experience.

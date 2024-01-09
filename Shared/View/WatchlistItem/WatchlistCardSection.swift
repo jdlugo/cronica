@@ -1,10 +1,3 @@
-//
-//  WatchlistCardSection.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 20/12/22.
-//
-
 import SwiftUI
 
 struct WatchlistCardSection: View {

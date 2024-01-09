@@ -1,10 +1,3 @@
-//
-//  SeasonListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 02/04/22.
-//
-
 import SwiftUI
 
 struct SeasonListView: View {

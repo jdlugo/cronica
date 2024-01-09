@@ -1,10 +1,3 @@
-//
-//  FeedbackSettingsView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 16/11/22.
-//
-
 import SwiftUI
 
 struct FeedbackSettingsView: View {

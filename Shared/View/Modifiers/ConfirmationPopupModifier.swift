@@ -1,10 +1,3 @@
-//
-//  ConfirmationPopupModifier.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/06/22.
-//
-
 import SwiftUI
 
 /// A dialog that displays a message inside a container of the top of the view.

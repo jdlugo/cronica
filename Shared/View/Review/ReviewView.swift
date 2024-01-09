@@ -1,10 +1,3 @@
-//
-//  WatchlistItemNoteView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 25/04/23.
-//
-
 import SwiftUI
 
 struct ReviewView: View {

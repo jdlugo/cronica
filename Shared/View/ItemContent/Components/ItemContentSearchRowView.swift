@@ -1,10 +1,3 @@
-//
-//  ItemContentSearchRowView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 11/08/23.
-//
-
 import SwiftUI
 
 struct ItemContentSearchRowView: View {

@@ -1,10 +1,3 @@
-//
-//  WatchProviderOption.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 14/01/23.
-//  swiftlint:disable identifier_name
-
 import Foundation
 
 enum AppContentRegion: String, CaseIterable, Identifiable {

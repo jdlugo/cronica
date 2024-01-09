@@ -1,10 +1,3 @@
-//
-//  WatchlistItemContextMenu.swift
-//  Shared
-//
-//  Created by Alexandre Madeira on 27/10/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

@@ -1,10 +1,3 @@
-//
-//  EpisodeHelper.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 08/05/23.
-//
-
 import Foundation
 
 class EpisodeHelper {

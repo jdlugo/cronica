@@ -1,10 +1,3 @@
-//
-//  DetailWatchlistButton.swift
-//  CronicaWatch Watch App
-//
-//  Created by Alexandre Madeira on 13/08/22.
-//
-
 import SwiftUI
 
 struct DetailWatchlistButton: View {

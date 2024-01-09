@@ -1,10 +1,3 @@
-//
-//  CustomList-Extensions.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 13/02/23.
-//
-
 import Foundation
 
 extension CustomList {

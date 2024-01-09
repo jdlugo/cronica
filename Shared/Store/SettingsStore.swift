@@ -1,10 +1,3 @@
-//
-//  SettingsStore.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 11/05/22.
-//
-
 import SwiftUI
 
 class SettingsStore: ObservableObject {

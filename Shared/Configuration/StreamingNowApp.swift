@@ -1,20 +1,13 @@
-//
-//  CronicaApp.swift
-//  Shared
-//
-//  Created by Alexandre Madeira on 14/01/22.
-//
 import SwiftUI
-import UIKit
 import BackgroundTasks
 import FirebaseCore
 import UserNotifications
 
 #if os(iOS)
+import UIKit
 import NotificationCenter
 import FirebaseMessaging
 import GoogleMobileAds
-#endif
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     var window: UIWindow?
@@ -23,7 +16,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
-#if os(iOS)
     GADMobileAds.sharedInstance().start(completionHandler: nil)
   
     Messaging.messaging().delegate = self
@@ -32,7 +24,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     // [START register_for_notifications]
 
     UNUserNotificationCenter.current().delegate = self
-#endif
 
     let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
     UNUserNotificationCenter.current().requestAuthorization(
@@ -48,7 +39,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       
     return true
   }
-    
+
     func application(_ application: UIApplication,
                        didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         // If you are receiving a notification message while your app is in the background,
@@ -106,14 +97,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         // With swizzling disabled you must set the APNs token here.
         // Messaging.messaging().apnsToken = deviceToken
       }
+    
 }
+#endif
+
 
 @main
-struct CronicaApp: App {
+struct StreamingNowApp: App {
+#if os(iOS)
+    @ObservedObject private var notificationDelegate = NotificationDelegate()
+    @State private var lastNotificationID = String()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+#endif
+
     var persistence = PersistenceController.shared
-    //private let backgroundIdentifier = "dev.alexandremadeira.cronica.refreshContent"
     private let backgroundIdentifier = "com.dlugokecki.qscanlite.refreshContent"
     @Environment(\.scenePhase) private var scene
     @State private var widgetItem: ItemContent?
@@ -124,10 +121,7 @@ struct CronicaApp: App {
     @State private var showNewListView = false
     @ObservedObject private var settings = SettingsStore.shared
     @AppStorage("showMenuBarApp") var showMenuBar = true
-#if os(iOS)
-    @ObservedObject private var notificationDelegate = NotificationDelegate()
-    @State private var lastNotificationID = String()
-#endif
+
     init() {
         CronicaTelemetry.shared.setup()
         registerRefreshBGTask()

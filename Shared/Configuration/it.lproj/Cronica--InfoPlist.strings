@@ -1,8 +1,8 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "Cronica";
+"CFBundleDisplayName" = "StreamingNow";
 
 /* Bundle name */
-"CFBundleName" = "Cronaca";
+"CFBundleName" = "StreamingNow";
 
 /* (No Comment) */
 "ItemContent" = "ItemContent";

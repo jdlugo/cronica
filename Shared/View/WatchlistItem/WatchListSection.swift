@@ -1,10 +1,3 @@
-//
-//  WatchListSection.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 24/04/22.
-//
-
 import SwiftUI
 
 struct WatchListSection: View {

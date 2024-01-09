@@ -1,10 +1,3 @@
-//
-//  TMDBSortBy.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 27/01/23.
-//
-
 import SwiftUI
 
 enum TMDBSortBy: String, Identifiable, CaseIterable {

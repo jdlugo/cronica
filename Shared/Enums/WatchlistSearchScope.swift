@@ -1,10 +1,3 @@
-//
-//  WatchlistSearchScope.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 16/08/22.
-//
-
 import SwiftUI
 
 enum WatchlistSearchScope: String, Identifiable, CaseIterable {

@@ -1,10 +1,3 @@
-//
-//  AppTheme.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 03/01/23.
-//
-
 import SwiftUI
 
 enum AppTheme: String, CaseIterable, Identifiable {
@@ -25,9 +18,9 @@ enum AppTheme: String, CaseIterable, Identifiable {
     var localizableName: String {
         switch self {
         case .system:
-            return NSLocalizedString("appThemeSystem", comment: "")
+            return NSLocalizedString("appThemeDark", comment: "")
         case .light:
-            return NSLocalizedString("appThemeLight", comment: "")
+            return NSLocalizedString("appThemeDark", comment: "")
         case .dark:
             return NSLocalizedString("appThemeDark", comment: "")
         }

@@ -1,10 +1,3 @@
-//
-//  WatchProviderSelectorSetting.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 16/04/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

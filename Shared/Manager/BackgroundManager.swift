@@ -1,10 +1,3 @@
-//
-//  BackgroundManager.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 12/04/22.
-//
-
 import Foundation
 import CoreData
 

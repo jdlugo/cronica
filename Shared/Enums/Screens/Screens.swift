@@ -1,10 +1,3 @@
-//
-//  Screens.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 28/04/22.
-//
-
 import Foundation
 #if !os(watchOS)
 enum Screens: String, Identifiable, CaseIterable {

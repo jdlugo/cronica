@@ -1,10 +1,3 @@
-//
-//  SettingsView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 22/03/22.
-//
-
 import SwiftUI
 #if os(iOS)
 import AdmobSwiftUI
@@ -17,8 +10,8 @@ struct SettingsView: View {
     @State private var showPolicy = false
     @State private var showWhatsNew = false
     
-    @StateObject private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
-        
+    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
+
 #elseif os(tvOS)
     @StateObject private var store = SettingsStore.shared
 #endif

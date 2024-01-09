@@ -1,10 +1,3 @@
-//
-//  CompanyDetails.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 05/02/23.
-//
-
 import SwiftUI
 
 struct CompanyDetails: View {

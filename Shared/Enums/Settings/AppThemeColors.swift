@@ -1,10 +1,3 @@
-//
-//  AppThemeColors.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 18/12/22.
-//
-
 import SwiftUI
 
 enum AppThemeColors: Int, Identifiable, CaseIterable {

@@ -1,10 +1,3 @@
-//
-//  PersonDetailsView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 29/01/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

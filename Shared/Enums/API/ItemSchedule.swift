@@ -1,10 +1,3 @@
-//
-//  ItemSchedule.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 28/04/22.
-//
-
 import Foundation
 
 /// The value for the types of schedule supported by ItemContent and WatchlistItem.

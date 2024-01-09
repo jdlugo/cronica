@@ -1,11 +1,3 @@
-//
-//  WatchlistItem+CoreDataProperties.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 11/03/23.
-//
-//
-
 import Foundation
 import CoreData
 

@@ -1,10 +1,3 @@
-//
-//  WatchlistTitle.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 16/02/23.
-//
-
 import SwiftUI
 
 struct WatchlistTitle: View {

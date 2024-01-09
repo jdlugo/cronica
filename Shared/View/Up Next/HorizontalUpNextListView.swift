@@ -1,10 +1,3 @@
-//
-//  HorizontalUpNextListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 19/03/23.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

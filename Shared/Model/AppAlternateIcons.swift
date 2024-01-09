@@ -1,9 +1,3 @@
-//
-//  AppAlternateIcons.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/04/23.
-//
 #if os(iOS)
 import Foundation
 import UIKit

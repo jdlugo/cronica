@@ -1,10 +1,3 @@
-//
-//  HorizontalItemContentListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 06/06/22.
-//
-
 import SwiftUI
 
 /// Display a list of ItemContent within PosterView, with a TitleView indicating

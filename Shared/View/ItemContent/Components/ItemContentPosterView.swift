@@ -1,10 +1,3 @@
-//
-//  ItemContentPosterView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 17/01/22.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

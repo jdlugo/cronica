@@ -1,10 +1,3 @@
-//
-//  SFSafariViewWrapper.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 04/04/22.
-//
-
 #if os(iOS)
 import SwiftUI
 import SafariServices
