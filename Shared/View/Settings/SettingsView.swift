@@ -53,6 +53,10 @@ struct SettingsView: View {
                     settingsLabel(title: NSLocalizedString("Watch Provider", comment: ""),
                                   icon: "globe", color: .purple)
                 }
+                NavigationLink(value: SettingsScreens.trakt) {
+                    settingsLabel(title: NSLocalizedString("Trakt.tv", comment: ""),
+                                  icon: "tv.badge.wifi", color: .green)
+                }
             }
             
             Section("About") {

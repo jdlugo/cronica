@@ -146,6 +146,7 @@ struct HomeView: View {
             case .settings: SettingsView()
             case .watchlist: WatchlistSettingsView()
             case .season: SeasonUpNextSettingsView()
+            case .trakt: TraktSettingsView()
             }
         }
         .redacted(reason: !viewModel.isLoaded ? .placeholder : [] )

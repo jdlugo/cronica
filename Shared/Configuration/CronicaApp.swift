@@ -30,6 +30,7 @@ struct CronicaApp: App {
     init() {
         CronicaTelemetry.shared.setup()
         registerRefreshBGTask()
+        setupTraktIntegration()
 #if os(iOS)
         UNUserNotificationCenter.current().delegate = notificationDelegate
 #endif
@@ -65,7 +66,12 @@ struct CronicaApp: App {
 #endif
                 .onOpenURL { url in
                     let urlString = url.absoluteString
-                    if urlString.hasPrefix("cronica://") {
+                    if urlString.hasPrefix("cronica://trakt-auth") {
+                        // Handle Trakt authentication callback
+                        Task {
+                            await handleTraktAuthCallback(url: url)
+                        }
+                    } else if urlString.hasPrefix("cronica://") {
                         let urlSubstring = urlString.dropFirst("cronica://".count)
                         Task {
                             await fetchContent(for: String(urlSubstring))
@@ -285,7 +291,33 @@ struct CronicaApp: App {
             BackgroundManager.shared.lastMaintenance = Date()
         }
     }
-#endif
+    
+    // MARK: - Trakt Integration
+    
+    private func setupTraktIntegration() {
+        // Initialize Trakt background sync
+        _ = TraktBackgroundSync.shared
+        
+        // Initialize lifecycle observer for app state changes
+        _ = TraktSyncLifecycleObserver()
+        
+        // Handle Trakt authentication callback URLs
+        handleTraktAuthCallback()
+    }
+    
+    private func handleTraktAuthCallback() {
+        // This will be handled by the URL handling in the ContentView
+        // The TraktService will process the callback when the app receives the auth URL
+    }
+    
+    private func handleTraktAuthCallback(url: URL) async {
+        // Let the TraktService handle the authentication callback
+        do {
+            try await TraktService.shared.handleAuthorizationCallback(url)
+        } catch {
+            print("Failed to handle Trakt auth callback: \(error)")
+        }
+    }
 }
 
 #if os(iOS)

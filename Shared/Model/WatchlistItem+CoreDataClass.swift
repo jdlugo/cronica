@@ -48,6 +48,10 @@ public class WatchlistItem: NSManagedObject, Codable {
 			backdropPath = try values.decode(String?.self, forKey: .backdropPath)
 			firstAirDate = try values.decode(Date?.self, forKey: .firstAirDate)
 			movieReleaseDate = try values.decode(Date?.self, forKey: .movieReleaseDate)
+			traktId = try values.decode(Int64?.self, forKey: .traktId)
+			traktSlug = try values.decode(String?.self, forKey: .traktSlug)
+			traktSyncedAt = try values.decode(Date?.self, forKey: .traktSyncedAt)
+			traktNeedsSync = try values.decode(Bool.self, forKey: .traktNeedsSync)
         } catch {
             print(error.localizedDescription)
         }
@@ -84,6 +88,10 @@ public class WatchlistItem: NSManagedObject, Codable {
 		try values.encode(backdropPath, forKey: .backdropPath)
 		try values.encode(firstAirDate, forKey: .firstAirDate)
 		try values.encode(movieReleaseDate, forKey: .movieReleaseDate)
+		try values.encode(traktId, forKey: .traktId)
+		try values.encode(traktSlug, forKey: .traktSlug)
+		try values.encode(traktSyncedAt, forKey: .traktSyncedAt)
+		try values.encode(traktNeedsSync, forKey: .traktNeedsSync)
     }
     
     enum CodingKeys: CodingKey {
@@ -91,7 +99,8 @@ public class WatchlistItem: NSManagedObject, Codable {
              schedule, largeCardImage, largePosterImage, mediumPosterImage, shouldNotify,
              isArchive, nextEpisodeNumber, nextSeasonNumber, nextEpisodeNumberUpNext,
              seasonNumberUpNext, displayOnUpNext, isPin, lastEpisodeNumber, lastSelectedSeason,
-             userNotes, userRating, isWatching, posterPath, backdropPath, firstAirDate, movieReleaseDate
+             userNotes, userRating, isWatching, posterPath, backdropPath, firstAirDate, movieReleaseDate,
+             traktId, traktSlug, traktSyncedAt, traktNeedsSync
     }
 }
 

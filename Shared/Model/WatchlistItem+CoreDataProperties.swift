@@ -56,6 +56,10 @@ extension WatchlistItem {
 	@NSManaged public var backdropPath: String?
 	@NSManaged public var firstAirDate: Date?
 	@NSManaged public var movieReleaseDate: Date?
+	@NSManaged public var traktId: Int64?
+	@NSManaged public var traktSlug: String?
+	@NSManaged public var traktSyncedAt: Date?
+	@NSManaged public var traktNeedsSync: Bool
 }
 
 // MARK: Generated accessors for list

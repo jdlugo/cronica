@@ -86,5 +86,13 @@ final class SettingsStore: ObservableObject {
     @AppStorage("notificationHour") var notificationHour = 7
     @AppStorage("notificationMinute") var notificationMinute = 0
     @AppStorage("askConfirmationWhenMarkingEpisodeWatched") var askConfirmationToMarkEpisodeWatched = true
+    @AppStorage("isUserConnectedWithTrakt") var isUserConnectedWithTrakt = false
+    @AppStorage("traktSyncEnabled") var isTraktSyncEnabled = false
+    @AppStorage("traktSyncWatchlist") var traktSyncWatchlist = false
+    @AppStorage("traktSyncWatched") var traktSyncWatched = false
+    @AppStorage("traktSyncRatings") var traktSyncRatings = false
+    @AppStorage("traktSyncCustomLists") var traktSyncCustomLists = false
+    @AppStorage("traktLastSync") var traktLastSync: Date?
+    @AppStorage("traktUsername") var traktUsername: String?
 }
 
