@@ -17,12 +17,7 @@
 		331B29042B3DE30800C20AEA /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B29032B3DE30800C20AEA /* FirebaseInstallations */; };
 		331B29062B3DE30800C20AEA /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B29052B3DE30800C20AEA /* FirebaseMessaging */; };
 		331B29082B3DE30800C20AEA /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B29072B3DE30800C20AEA /* FirebasePerformance */; };
-		331B290B2B3E0E7E00C20AEA /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 331B290A2B3E0E7E00C20AEA /* GoogleMobileAds */; };
-		331B29152B3F101300C20AEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331B29142B3F101200C20AEA /* GoogleService-Info.plist */; };
-		331B29162B3F101300C20AEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331B29142B3F101200C20AEA /* GoogleService-Info.plist */; };
-		331B29172B3F101300C20AEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331B29142B3F101200C20AEA /* GoogleService-Info.plist */; };
-		331B29192B3F803F00C20AEA /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 331B29182B3F803F00C20AEA /* AppIcon.appiconset */; };
-		331B291A2B3F803F00C20AEA /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 331B29182B3F803F00C20AEA /* AppIcon.appiconset */; };
+		AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */; };
 		331B291B2B3F803F00C20AEA /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 331B29182B3F803F00C20AEA /* AppIcon.appiconset */; };
 		332BB03C2B448CCB0095CAD8 /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */; platformFilter = ios; };
 		332BB03F2B44913A0095CAD8 /* AdmobSwiftUI in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 332BB03E2B44913A0095CAD8 /* AdmobSwiftUI */; };
@@ -36,8 +31,6 @@
 		B804E395284EDC2B00F59855 /* HorizontalItemContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804E394284EDC2B00F59855 /* HorizontalItemContentListView.swift */; };
 		B804E397284FCBCB00F59855 /* ItemContentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804E396284FCBCB00F59855 /* ItemContentCardView.swift */; };
 		B806C4E12899BE2800A5330E /* CronicaWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806C4E02899BE2800A5330E /* CronicaWatchApp.swift */; };
-		B806C4E52899BE2900A5330E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B806C4E42899BE2900A5330E /* Assets.xcassets */; };
-		B806C4E82899BE2900A5330E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B806C4E72899BE2900A5330E /* Preview Assets.xcassets */; };
 		B806C4EB2899BE2900A5330E /* StreamingNow.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B806C4DE2899BE2800A5330E /* StreamingNow.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B80B4DAA284537EF008BA43C /* SearchItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4DA9284537EF008BA43C /* SearchItemView.swift */; };
 		B80BBE582949665A00958876 /* AppearanceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80BBE572949665A00958876 /* AppearanceSetting.swift */; };
@@ -58,11 +51,9 @@
 		B8105265298F58E100723E94 /* CompanyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8105264298F58E100723E94 /* CompanyDetails.swift */; };
 		B8110EE8279245D100844FEB /* StreamingNowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110ED8279245D000844FEB /* StreamingNowApp.swift */; };
 		B8110EEA279245D100844FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110ED9279245D000844FEB /* ContentView.swift */; };
-		B8110EEC279245D100844FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8110EDA279245D100844FEB /* Assets.xcassets */; };
 		B812529828A407120062B0C9 /* DefaultListTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812529728A407120062B0C9 /* DefaultListTypes.swift */; };
 		B812C7B4299480620096E806 /* NewCustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812C7B3299480620096E806 /* NewCustomListView.swift */; };
 		B812C7B62996C2DB0096E806 /* SelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812C7B52996C2DB0096E806 /* SelectListView.swift */; };
-		B813917F289F4F8D003BEB2E /* Attribution.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87B5CD32799AF3600632648 /* Attribution.xcassets */; };
 		B815A15C27BEB7F20062F727 /* ItemContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815A15B27BEB7F20062F727 /* ItemContent.swift */; };
 		B818483729C286C300650763 /* UserDefaults-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818483629C286C300650763 /* UserDefaults-Extensions.swift */; };
 		B818483829C286C300650763 /* UserDefaults-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818483629C286C300650763 /* UserDefaults-Extensions.swift */; };
@@ -125,7 +116,6 @@
 		B82BE4E9299BFEF4005F9990 /* PersistenceController-CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82BE4E7299BFEF4005F9990 /* PersistenceController-CustomList.swift */; };
 		B82BE4F2299EB3F5005F9990 /* WatchlistTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82BE4F1299EB3F5005F9990 /* WatchlistTitle.swift */; };
 		B82BE4FB29A188D8005F9990 /* EditCustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82BE4FA29A188D8005F9990 /* EditCustomList.swift */; };
-		B82BE50029A18A55005F9990 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B82BE50329A18A55005F9990 /* Localizable.stringsdict */; };
 		B82C267A2795E33900259D98 /* ItemContentPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C26792795E33900259D98 /* ItemContentPosterView.swift */; };
 		B82C268F279644E000259D98 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C268E279644E000259D98 /* Bundle-Decodable.swift */; };
 		B8320BC2286115AC00BCDCC2 /* EpisodeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8320BC1286115AC00BCDCC2 /* EpisodeDetailsView.swift */; };
@@ -193,7 +183,6 @@
 		B85FD9AE29F3324F0088B5CC /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FD9AD29F3324F0088B5CC /* AccountManager.swift */; };
 		B85FD9B129F33A880088B5CC /* TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FD9B029F33A880088B5CC /* TMDB.swift */; };
 		B86AA7FC2A3A4C8C009847FE /* RegionContentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86AA7FB2A3A4C8C009847FE /* RegionContentSettings.swift */; };
-		B86AA7FD2A3A5D5A009847FE /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B82BE50329A18A55005F9990 /* Localizable.stringsdict */; };
 		B86AAD0A28BD1CDD00D135B1 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86AAD0928BD1CDD00D135B1 /* DeveloperView.swift */; };
 		B86AAD0D28BD2E2600D135B1 /* PlaceholderMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86AAD0B28BD2D6B00D135B1 /* PlaceholderMedia.xcassets */; };
 		B86DD41A28BAABCC002C8427 /* HeroImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B890C57827FC999F006BE5E1 /* HeroImage.swift */; };
@@ -216,8 +205,6 @@
 		B8779377281E319D00174F32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8779376281E319D00174F32 /* TabBarView.swift */; };
 		B878E83527BC85BC0021A981 /* WatchlistItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878E83427BC85BC0021A981 /* WatchlistItem-Extension.swift */; };
 		B879B70228B12201005EADCE /* TrailerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879B70128B12201005EADCE /* TrailerItemView.swift */; };
-		B87B5CCC27999C5700632648 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = B87B5CCB27999C5700632648 /* content.json */; };
-		B87B5CD42799AF3600632648 /* Attribution.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87B5CD32799AF3600632648 /* Attribution.xcassets */; };
 		B87D1B222A64971300EB6D14 /* ConfirmationPopupModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B886D231284D512F00FFE96A /* ConfirmationPopupModifier.swift */; };
 		B87D1B242A65CF6000EB6D14 /* UpNextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D1B232A65CF6000EB6D14 /* UpNextViewModel.swift */; };
 		B87D1B252A65D78900EB6D14 /* UpNextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D1B232A65CF6000EB6D14 /* UpNextViewModel.swift */; };
@@ -245,9 +232,7 @@
 		B890C57927FC999F006BE5E1 /* HeroImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B890C57827FC999F006BE5E1 /* HeroImage.swift */; };
 		B890C57B27FCB54D006BE5E1 /* TrailerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B890C57A27FCB54D006BE5E1 /* TrailerListView.swift */; };
 		B890C58527FE4442006BE5E1 /* Episode-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B890C58427FE4442006BE5E1 /* Episode-Extension.swift */; };
-		B892EB0A29675265002E028E /* Cronica.storekit in Resources */ = {isa = PBXBuildFile; fileRef = B892EB0929675265002E028E /* Cronica.storekit */; };
 		B892EB0C29675582002E028E /* TipJarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B892EB0B29675582002E028E /* TipJarSetting.swift */; };
-		B892EB10296755A3002E028E /* ProductList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B892EB0F296755A2002E028E /* ProductList.plist */; };
 		B892EB1429675B5E002E028E /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B892EB1329675B5E002E028E /* StoreKitManager.swift */; };
 		B89429C9297C94CD0029646F /* DetailedPeopleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89429C8297C94CD0029646F /* DetailedPeopleList.swift */; };
 		B89429CC297E076E0029646F /* SupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89429CB297E076E0029646F /* SupportEmail.swift */; };
@@ -326,7 +311,6 @@
 		B8CC952A27D02C5700B6757C /* ItemContentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC952927D02C5700B6757C /* ItemContentDetails.swift */; };
 		B8CC952D27D02D3900B6757C /* ItemContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC952C27D02D3900B6757C /* ItemContentViewModel.swift */; };
 		B8CC953327D05D1000B6757C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC953227D05D1000B6757C /* HomeViewModel.swift */; };
-		B8CC954A27D1310B00B6757C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8CC954D27D1310B00B6757C /* Localizable.strings */; };
 		B8D1A2F42A4A0DC5001BACDC /* HorizontalPinnedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D1A2F32A4A0DC5001BACDC /* HorizontalPinnedLists.swift */; };
 		B8D7AEA828B95F5E0053CE5A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD442F284AD42300778275 /* WidgetKit.framework */; };
 		B8D7AEA928B95F5E0053CE5A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD4431284AD42300778275 /* SwiftUI.framework */; };
@@ -362,7 +346,6 @@
 		B8E6EF672A044E5A000A3617 /* ContextMenuPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E6EF662A044E5A000A3617 /* ContextMenuPreviewImage.swift */; };
 		B8EC45E427D5A010009389FC /* ItemContent-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EC45E327D5A010009389FC /* ItemContent-Extensions.swift */; };
 		B8EC462F27D7AA99009389FC /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EC462E27D7AA99009389FC /* NotificationManager.swift */; };
-		B8EC6ABC28AC67CD0054DC76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8CC954D27D1310B00B6757C /* Localizable.strings */; };
 		B8ED4C3D27B4B9680045C68F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ED4C3C27B4B9680045C68F /* HomeView.swift */; };
 		B8EFB257281720E900F7CBD0 /* OverviewBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EFB256281720E900F7CBD0 /* OverviewBoxView.swift */; };
 		B8F367642AF5CAAA0027CAF9 /* Aptabase in Frameworks */ = {isa = PBXBuildFile; platformFilters = (macos, tvos, ); productRef = B8F367632AF5CAAA0027CAF9 /* Aptabase */; };
@@ -370,9 +353,7 @@
 		B8F6DE5829329AE8005D1A50 /* EndpointDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6DE5629329AE5005D1A50 /* EndpointDetails.swift */; };
 		B8F6DE6329379F70005D1A50 /* ItemContentSectionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6DE6129379F58005D1A50 /* ItemContentSectionDetails.swift */; };
 		B8F6DE652937A144005D1A50 /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876DE65281B4040005558DD /* Videos.swift */; };
-		B8F905C62A852D3F003A0CE1 /* CronicaWatch-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8F905C42A852D3F003A0CE1 /* CronicaWatch-InfoPlist.strings */; };
 		B8F905C92A852D3F003A0CE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8F905C72A852D3F003A0CE1 /* InfoPlist.strings */; };
-		B8F905CC2A852D3F003A0CE1 /* Cronica--InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8F905CA2A852D3F003A0CE1 /* Cronica--InfoPlist.strings */; };
 		B8FB2A7C29522DC3006DAC8E /* WatchlistItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C53FC27B1F1DD00425524 /* WatchlistItemRowView.swift */; };
 		B8FB2A7E29522E58006DAC8E /* WatchlistItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB2A7D29522E58006DAC8E /* WatchlistItemCardView.swift */; };
 		B8FB2A80295235E2006DAC8E /* WatchlistCardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB2A7F295235E2006DAC8E /* WatchlistCardSection.swift */; };
@@ -444,9 +425,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		331B29142B3F101200C20AEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		331B29182B3F803F00C20AEA /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
+		AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B801070C29F255F3008A4551 /* DefaultListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListView.swift; sourceTree = "<group>"; };
 		B801070E29F25615008A4551 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		B801071029F2562C008A4551 /* WatchlistSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistSectionView.swift; sourceTree = "<group>"; };
@@ -760,7 +741,6 @@
 				331B29002B3DE30800C20AEA /* FirebaseInAppMessaging-Beta in Frameworks */,
 				B854FA1F2A75B24000509C34 /* YouTubePlayerKit in Frameworks */,
 				331B28FE2B3DE30800C20AEA /* FirebaseCrashlytics in Frameworks */,
-				331B290B2B3E0E7E00C20AEA /* GoogleMobileAds in Frameworks */,
 				331B28FC2B3DE30800C20AEA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				331B29022B3DE30800C20AEA /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				B87F74642806592E00E94126 /* CloudKit.framework in Frameworks */,
@@ -1437,7 +1417,7 @@
 		B8E7651927B738D200D9B731 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				331B29142B3F101200C20AEA /* GoogleService-Info.plist */,
+				AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */,
 				B8110F162792764B00844FEB /* Story (iOS).entitlements */,
 				B8CC953527D05E4A00B6757C /* Cronica--Info.plist */,
 				B8F905CA2A852D3F003A0CE1 /* Cronica--InfoPlist.strings */,
@@ -1522,7 +1502,6 @@
 			buildPhases = (
 				B806C4DA2899BE2800A5330E /* Sources */,
 				B806C4DB2899BE2800A5330E /* Frameworks */,
-				B806C4DC2899BE2800A5330E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1544,9 +1523,10 @@
 			buildPhases = (
 				B8110EDB279245D100844FEB /* Sources */,
 				B8110EDC279245D100844FEB /* Frameworks */,
-				B8110EDD279245D100844FEB /* Resources */,
+				AF0972FA2F3C9585006A1BDE /* Resources */,
 				B8AD443D284AD42400778275 /* Embed Foundation Extensions */,
 				B806C4EC2899BE2900A5330E /* Embed Watch Content */,
+				AFE13FD02F3BB41F002CBB99 /* Fix GoogleMobileAds Info.plist */,
 			);
 			buildRules = (
 			);
@@ -1570,7 +1550,6 @@
 				331B29032B3DE30800C20AEA /* FirebaseInstallations */,
 				331B29052B3DE30800C20AEA /* FirebaseMessaging */,
 				331B29072B3DE30800C20AEA /* FirebasePerformance */,
-				331B290A2B3E0E7E00C20AEA /* GoogleMobileAds */,
 				332BB03E2B44913A0095CAD8 /* AdmobSwiftUI */,
 			);
 			productName = "Story (iOS)";
@@ -1670,7 +1649,6 @@
 				B854FA1D2A75B24000509C34 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
 				B8F367622AF5CA900027CAF9 /* XCRemoteSwiftPackageReference "aptabase-swift" */,
 				331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				331B29092B3E0E7E00C20AEA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				332BB03D2B44913A0095CAD8 /* XCRemoteSwiftPackageReference "AdmobSwiftUI" */,
 			);
 			productRefGroup = B8110EE0279245D100844FEB /* Products */;
@@ -1686,35 +1664,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B806C4DC2899BE2800A5330E /* Resources */ = {
+		AF0972FA2F3C9585006A1BDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				331B291A2B3F803F00C20AEA /* AppIcon.appiconset in Resources */,
-				B813917F289F4F8D003BEB2E /* Attribution.xcassets in Resources */,
-				331B29162B3F101300C20AEA /* GoogleService-Info.plist in Resources */,
-				B8EC6ABC28AC67CD0054DC76 /* Localizable.strings in Resources */,
-				B806C4E82899BE2900A5330E /* Preview Assets.xcassets in Resources */,
-				B8F905C62A852D3F003A0CE1 /* CronicaWatch-InfoPlist.strings in Resources */,
-				B86AA7FD2A3A5D5A009847FE /* Localizable.stringsdict in Resources */,
-				B806C4E52899BE2900A5330E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B8110EDD279245D100844FEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B892EB10296755A3002E028E /* ProductList.plist in Resources */,
-				B87B5CD42799AF3600632648 /* Attribution.xcassets in Resources */,
-				B892EB0A29675265002E028E /* Cronica.storekit in Resources */,
-				B8F905CC2A852D3F003A0CE1 /* Cronica--InfoPlist.strings in Resources */,
-				B8CC954A27D1310B00B6757C /* Localizable.strings in Resources */,
-				B87B5CCC27999C5700632648 /* content.json in Resources */,
-				331B29152B3F101300C20AEA /* GoogleService-Info.plist in Resources */,
-				B8110EEC279245D100844FEB /* Assets.xcassets in Resources */,
-				331B29192B3F803F00C20AEA /* AppIcon.appiconset in Resources */,
-				B82BE50029A18A55005F9990 /* Localizable.stringsdict in Resources */,
+				AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1728,7 +1682,6 @@
 				B8D7AEBC28B960420053CE5A /* Localizable.strings in Resources */,
 				331B291B2B3F803F00C20AEA /* AppIcon.appiconset in Resources */,
 				B8F905C92A852D3F003A0CE1 /* InfoPlist.strings in Resources */,
-				331B29172B3F101300C20AEA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1740,6 +1693,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFE13FD02F3BB41F002CBB99 /* Fix GoogleMobileAds Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Fix GoogleMobileAds Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleMobileAds.framework\"\nif [ -d \"$FRAMEWORK\" ]; then\n  PLIST=\"$FRAMEWORK/Info.plist\"\n  if [ ! -f \"$PLIST\" ]; then\n    /usr/libexec/PlistBuddy -c \"Add :CFBundleIdentifier string com.google.GoogleMobileAds\" -c \"Add :CFBundleName string GoogleMobileAds\" -c \"Add :CFBundleExecutable string GoogleMobileAds\" -c \"Add :CFBundleVersion string 1\" -c \"Add :CFBundleShortVersionString string 1.0\" -c \"Add :CFBundlePackageType string FMWK\" \"$PLIST\"\n  else\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleExecutable GoogleMobileAds\" \"$PLIST\" 2>/dev/null || /usr/libexec/PlistBuddy -c \"Add :CFBundleExecutable string GoogleMobileAds\" \"$PLIST\"\n  fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B806C4DA2899BE2800A5330E /* Sources */ = {
@@ -2228,7 +2202,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleWatch/Preview Content\"";
-				DEVELOPMENT_TEAM = LCU85X35W5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppleWatch/Configuration/CronicaWatch-Info.plist";
@@ -2261,7 +2235,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleWatch/Preview Content\"";
-				DEVELOPMENT_TEAM = LCU85X35W5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppleWatch/Configuration/CronicaWatch-Info.plist";
@@ -2325,7 +2299,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2394,7 +2368,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2521,7 +2495,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = CronicaWidget/Configuration/CronicaWidgetExtension.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LCU85X35W5;
@@ -2539,6 +2513,7 @@
 				MARKETING_VERSION = 4.25.25;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlugokecki.qscanlite.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -2557,7 +2532,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = CronicaWidget/Configuration/CronicaWidgetExtension.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LCU85X35W5;
@@ -2575,6 +2550,7 @@
 				MARKETING_VERSION = 4.25.25;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlugokecki.qscanlite.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -2692,14 +2668,6 @@
 				minimumVersion = 10.19.1;
 			};
 		};
-		331B29092B3E0E7E00C20AEA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.14.0;
-			};
-		};
 		332BB03D2B44913A0095CAD8 /* XCRemoteSwiftPackageReference "AdmobSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dearhui/AdmobSwiftUI.git";
@@ -2792,11 +2760,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebasePerformance;
-		};
-		331B290A2B3E0E7E00C20AEA /* GoogleMobileAds */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 331B29092B3E0E7E00C20AEA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
-			productName = GoogleMobileAds;
 		};
 		332BB03E2B44913A0095CAD8 /* AdmobSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

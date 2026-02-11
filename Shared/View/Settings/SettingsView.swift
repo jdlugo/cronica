@@ -97,7 +97,7 @@ struct SettingsView: View {
                 case .developer: DeveloperView()
                 case .notifications: NotificationsSettingsView()
                 case .sync: SyncSetting()
-                case .tipJar: TipJarSetting()
+                //case .tipJar: TipJarSetting()
                 default: BehaviorSetting()
                 }
             }
@@ -124,8 +124,8 @@ struct SettingsView: View {
             RegionContentSettings()
                 .tabItem { Label("settingsRegionContentTitle", systemImage: "globe")  }
             
-            TipJarSetting()
-                .tabItem { Label("tipJar", systemImage: "heart") }
+//            TipJarSetting()
+//                .tabItem { Label("tipJar", systemImage: "heart") }
         }
         .frame(minWidth: 420, idealWidth: 500, minHeight: 320, idealHeight: 320)
         .tabViewStyle(.automatic)
@@ -144,9 +144,9 @@ struct SettingsView: View {
 #endif
                 }
                 
-                Section {
-                    NavigationLink("tipJar", destination: TipJarSetting())
-                }
+//                Section {
+//                    NavigationLink("tipJar", destination: TipJarSetting())
+//                }
             }
             .navigationTitle("Settings")
         }
