@@ -393,10 +393,58 @@ extension ItemContent {
     
     // MARK: Preview
     static var examples: [ItemContent] {
-        let data: ItemContentResponse? = try? Bundle.main.decode(from: "content")
-        return data!.results
+        if let data: ItemContentResponse = try? Bundle.main.decode(from: "content") {
+            return data.results
+        }
+        // Fallback for previews when bundle resources aren't available
+        return [ItemContent.previewMock]
     }
     static var example: ItemContent {
         examples[0]
     }
+    
+    /// A hardcoded mock for SwiftUI previews when bundle loading fails
+    static let previewMock = ItemContent(
+        adult: false,
+        id: 791373,
+        title: "Zack Snyder's Justice League",
+        name: nil,
+        overview: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+        originalTitle: "Zack Snyder's Justice League",
+        posterPath: "/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+        backdropPath: "/pcDc2WJAYGJTTvRSEIpRZwM3Ola.jpg",
+        profilePath: nil,
+        releaseDate: "2021-03-18",
+        status: "Released",
+        imdbId: "tt12361974",
+        runtime: 242,
+        numberOfEpisodes: nil,
+        numberOfSeasons: nil,
+        voteCount: 8500,
+        popularity: 150.0,
+        voteAverage: 8.1,
+        productionCompanies: [
+            ProductionCompany(name: "Warner Bros. Pictures", id: 174, logoPath: "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png", originCountry: "US", description: nil),
+            ProductionCompany(name: "DC Films", id: 128064, logoPath: "/13F3Jf7EFAcREU0xzZqJnVnyGXu.png", originCountry: "US", description: nil)
+        ],
+        productionCountries: [ProductionCountry(iso31661: "US", name: "United States of America")],
+        seasons: nil,
+        genres: [
+            Genre(id: 28, name: "Action"),
+            Genre(id: 12, name: "Adventure"),
+            Genre(id: 14, name: "Fantasy"),
+            Genre(id: 878, name: "Science Fiction")
+        ],
+        credits: nil,
+        recommendations: nil,
+        releaseDates: nil,
+        mediaType: "movie",
+        videos: nil,
+        nextEpisodeToAir: nil,
+        lastEpisodeToAir: nil,
+        originalName: nil,
+        firstAirDate: nil,
+        homepage: "https://www.hbomax.com/zacksnydersjusticeleague",
+        episodeRunTime: nil
+    )
 }
