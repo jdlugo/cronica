@@ -1,7 +1,6 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-@available(watchOS 10.0, *)
 struct TranslucentBackground: View {
     var image: URL?
     @AppStorage("disableTranslucentBackground") private var disableTranslucent = false
