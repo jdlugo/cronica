@@ -5,7 +5,7 @@ struct HorizontalUpNextListView: View {
     @Binding var shouldReload: Bool
     @State private var selectedEpisode: UpNextEpisode?
     @StateObject private var settings = SettingsStore.shared
-    @StateObject private var viewModel = UpNextViewModel.shared
+    @State private var viewModel = UpNextViewModel.shared
     @FetchRequest(
         entity: WatchlistItem.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \WatchlistItem.title, ascending: true)],
@@ -41,7 +41,7 @@ struct HorizontalUpNextListView: View {
                                         .padding(.top, 8)
                                         .padding(.bottom)
                                         .buttonStyle(.card)
-                                        .environmentObject(viewModel)
+                                        .environment(viewModel)
 #else
                                     if !settings.isCompactUI {
                                         upNextCard(item)
@@ -152,7 +152,7 @@ struct HorizontalUpNextListView: View {
             }
             .redacted(reason: viewModel.isLoaded ? [] : .placeholder)
             .navigationDestination(for: [UpNextEpisode].self) { _ in
-                VerticalUpNextListView().environmentObject(viewModel)
+                VerticalUpNextListView().environment(viewModel)
             }
             .task(id: viewModel.isWatched) {
                 if viewModel.isWatched {
@@ -297,9 +297,10 @@ private struct UpNextCard: View {
     @FocusState var isFocused
     @Binding var selectedEpisode: UpNextEpisode?
     @StateObject private var settings = SettingsStore.shared
-    @EnvironmentObject var viewModel: UpNextViewModel
+    @Environment(UpNextViewModel.self) var viewModel
     @State private var showConfirmation = false
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
             Button {
                 showConfirmation.toggle()

@@ -8,7 +8,7 @@ struct HomeView: View {
 #else
     @AppStorage("showOnboarding") private var displayOnboard = true
 #endif
-    @StateObject private var viewModel = HomeViewModel()
+    @State private var viewModel = HomeViewModel()
     @State private var showNotifications = false
     @State private var showPopup = false
     @State private var reloadHome = false

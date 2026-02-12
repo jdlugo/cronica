@@ -2,25 +2,26 @@ import Foundation
 import SwiftUI
 
 @MainActor
-class ItemContentViewModel: ObservableObject {
+@Observable
+class ItemContentViewModel {
     private let service = NetworkService.shared
     private let notification = NotificationManager.shared
     private let persistence = PersistenceController.shared
-    @Published private(set) var content: ItemContent?
-    @Published private(set) var recommendations = [ItemContent]()
-    @Published private(set) var trailers = [VideoItem]()
-    @Published private(set) var credits = [Person]()
-    @Published private(set) var errorMessage = "Something went wrong, try again later."
-    @Published var showErrorAlert = false
-    @Published var isInWatchlist = false
-    @Published private(set) var isWatched = false
-    @Published private(set) var isFavorite = false
-    @Published private(set) var isArchive = false
-    @Published private(set) var isPin = false
-    @Published private(set) var isLoading = true
-    @Published private(set) var showMarkAsButton = false
-    @Published private(set) var isItemAddedToAnyList = false
-    @Published private(set) var showPoster = false
+    private(set) var content: ItemContent?
+    private(set) var recommendations = [ItemContent]()
+    private(set) var trailers = [VideoItem]()
+    private(set) var credits = [Person]()
+    private(set) var errorMessage = "Something went wrong, try again later."
+    var showErrorAlert = false
+    var isInWatchlist = false
+    private(set) var isWatched = false
+    private(set) var isFavorite = false
+    private(set) var isArchive = false
+    private(set) var isPin = false
+    private(set) var isLoading = true
+    private(set) var showMarkAsButton = false
+    private(set) var isItemAddedToAnyList = false
+    private(set) var showPoster = false
     private var isNotificationAvailable = false
     private var hasNotificationScheduled = false
     

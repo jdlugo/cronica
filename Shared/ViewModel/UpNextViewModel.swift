@@ -1,12 +1,13 @@
 import SwiftUI
 
 @MainActor
-class UpNextViewModel: ObservableObject {
+@Observable
+class UpNextViewModel {
     static let shared = UpNextViewModel()
-    @Published var isLoaded = false
-    @Published var episodes = [UpNextEpisode]()
-    @Published var isWatched = false
-    @Published var scrollToInitial = false
+    var isLoaded = false
+    var episodes = [UpNextEpisode]()
+    var isWatched = false
+    var scrollToInitial = false
     private let network = NetworkService.shared
     private let persistence = PersistenceController.shared
     

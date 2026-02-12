@@ -2,7 +2,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct UpNextMenuBar: View {
-    @StateObject private var viewModel: UpNextViewModel = .shared
+    @State private var viewModel: UpNextViewModel = .shared
     @FetchRequest(
         entity: WatchlistItem.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \WatchlistItem.title, ascending: true)],

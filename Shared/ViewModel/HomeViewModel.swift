@@ -2,17 +2,18 @@ import CoreData
 import SwiftUI
 
 @MainActor
-class HomeViewModel: ObservableObject {
+@Observable
+class HomeViewModel {
     private let service: NetworkService = NetworkService.shared
-    @Published var trending = [ItemContent]()
-    @Published var sections = [ItemContentSection]()
-    @Published var recommendations = [ItemContent]()
-    @Published var isLoaded = false
-    @Published var isLoadingRecommendations = true
+    var trending = [ItemContent]()
+    var sections = [ItemContentSection]()
+    var recommendations = [ItemContent]()
+    var isLoaded = false
+    var isLoadingRecommendations = true
     
     // new feature test
-    @Published var nextYearMovies: [[ItemContent]:YearEndpoint]?
-    @Published var yearMovies = [ItemContent]()
+    var nextYearMovies: [[ItemContent]:YearEndpoint]?
+    var yearMovies = [ItemContent]()
     
     func fetchYearMovies() async {
         let year = try? await service.fetchYearContent(year: "2024", type: .movie)

@@ -12,7 +12,7 @@ struct ItemContentPadView: View {
     let title: String
     let type: MediaType
     @Binding var showCustomList: Bool
-    @EnvironmentObject var viewModel: ItemContentViewModel
+    @Environment(ItemContentViewModel.self) var viewModel
     @State private var animationImage = ""
     @State private var animateGesture = false
     @State private var showOverview = false
@@ -26,6 +26,7 @@ struct ItemContentPadView: View {
     @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
 #endif
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
             header.padding(.leading)
             
@@ -139,7 +140,7 @@ struct ItemContentPadView: View {
                 // Actions
                 HStack {
                     DetailWatchlistButton(showCustomList: $showCustomList)
-                        .environmentObject(viewModel)
+                        .environment(viewModel)
                     
                     if viewModel.isInWatchlist {
                         if type == .movie {

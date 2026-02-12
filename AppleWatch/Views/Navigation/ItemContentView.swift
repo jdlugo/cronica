@@ -13,7 +13,7 @@ struct ItemContentView: View {
     let title: String
 	let type: MediaType
     let image: URL?
-    @StateObject private var viewModel = ItemContentViewModel()
+    @State private var viewModel = ItemContentViewModel()
     @State private var showCustomListSheet = false
     @State private var showMoreOptions = false
     @State private var isWatched = false
@@ -37,7 +37,7 @@ struct ItemContentView: View {
 				}
                 
                 DetailWatchlistButton(showCustomList: $showCustomListSheet)
-                    .environmentObject(viewModel)
+                    .environment(viewModel)
                     .padding()
                 
                 if let seasons = viewModel.content?.seasons {

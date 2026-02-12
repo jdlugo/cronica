@@ -7,7 +7,7 @@ struct SearchView: View {
 #else
     private let columns: [GridItem] = [GridItem(.adaptive(minimum: 160))]
 #endif
-    @StateObject private var viewModel = SearchViewModel()
+    @State private var viewModel = SearchViewModel()
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
     @State private var scope: SearchItemsScope = .noScope
@@ -108,7 +108,6 @@ struct SearchView: View {
             ScrollView {
                 VStack {
                     TrendingKeywordsListView()
-                        .environmentObject(viewModel)
                     Spacer()
                 }
             }

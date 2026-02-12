@@ -5,7 +5,7 @@ struct ItemContentDetails: View {
     var title: String
     var id: Int
     var type: MediaType
-    @StateObject private var viewModel = ItemContentViewModel()
+    @State private var viewModel = ItemContentViewModel()
     @StateObject private var store = SettingsStore.shared
     @State private var showPopup = false
     @State private var showSeasonConfirmation = false
@@ -21,7 +21,7 @@ struct ItemContentDetails: View {
                 ItemContentPadView(id: id, title: title, type: type,
                                    showCustomList: $showCustomList,
                                    popupType: $popupType, showPopup: $showPopup)
-                .environmentObject(viewModel)
+                .environment(viewModel)
                 .overlay { if viewModel.isLoading { ProgressView().padding().unredacted() } }
                 .toolbar {
                     if handleToolbar {
@@ -38,7 +38,7 @@ struct ItemContentDetails: View {
                                        showCustomList: $showCustomList,
                                        popupType: $popupType,
                                        showPopup: $showPopup)
-                    .environmentObject(viewModel)
+                    .environment(viewModel)
                     .toolbar {
                         ToolbarItem {
                             HStack {
@@ -62,7 +62,7 @@ struct ItemContentDetails: View {
                                          showCustomList: $showCustomList,
                                          popupType: $popupType,
                                          showReviewSheet: $showUserNotes)
-                    .environmentObject(viewModel)
+                    .environment(viewModel)
                     .toolbar {
                         ToolbarItem {
                             HStack {
@@ -76,7 +76,7 @@ struct ItemContentDetails: View {
                 }
 #elseif os(tvOS)
                 ItemContentTVView(title: title, type: type, id: id)
-                    .environmentObject(viewModel)
+                    .environment(viewModel)
 #endif
             }
             .background {

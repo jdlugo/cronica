@@ -7,7 +7,7 @@ struct ItemContentPhoneView: View {
     let type: MediaType
     let id: Int
     @Binding var showPopup: Bool
-    @EnvironmentObject var viewModel: ItemContentViewModel
+    @Environment(ItemContentViewModel.self) var viewModel
     @StateObject private var store = SettingsStore.shared
     @State private var animateGesture = false
     @State private var animationImage = ""
@@ -17,6 +17,7 @@ struct ItemContentPhoneView: View {
     @Binding var popupType: ActionPopupItems?
     @Binding var showReviewSheet: Bool
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
             cover
             
@@ -75,7 +76,7 @@ struct ItemContentPhoneView: View {
             }
             DetailWatchlistButton(showCustomList: $showCustomList)
                 .keyboardShortcut("l", modifiers: [.option])
-                .environmentObject(viewModel)
+                .environment(viewModel)
             listButton
         }
         .padding(.top)

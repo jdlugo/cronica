@@ -14,7 +14,7 @@ struct SearchView: View {
     @State private var isLoaded = false
     
     // search
-    @StateObject private var viewModel = SearchViewModel()
+    @State private var viewModel = SearchViewModel()
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \WatchlistItem.title, ascending: true)],
         animation: .default)

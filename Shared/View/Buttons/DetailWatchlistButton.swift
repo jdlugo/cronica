@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct DetailWatchlistButton: View {
-    @EnvironmentObject var viewModel: ItemContentViewModel
+    @Environment(ItemContentViewModel.self) var viewModel
     @Binding var showCustomList: Bool
     @State private var showConfirmationPopup = false
     @StateObject private var settings = SettingsStore.shared

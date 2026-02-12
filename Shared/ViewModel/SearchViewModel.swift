@@ -1,17 +1,19 @@
 import Foundation
 import SwiftUI
 
-@MainActor class SearchViewModel: ObservableObject { 
-    @Published var query: String = ""
+@MainActor
+@Observable
+class SearchViewModel {
+    var query: String = ""
     private var service: NetworkService = NetworkService.shared
     var trimmedQuery: String {
         query.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     private var page = 1
-    @Published var items = [SearchItemContent]()
-    @Published var startPagination: Bool = false
-    @Published var endPagination: Bool = false
-    @Published var stage: SearchStage = .none
+    var items = [SearchItemContent]()
+    var startPagination: Bool = false
+    var endPagination: Bool = false
+    var stage: SearchStage = .none
     
     func search(_ query: String) async {
         if Task.isCancelled { return }

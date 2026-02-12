@@ -3,7 +3,7 @@ import SwiftUI
 #if os(macOS)
 struct SideBarView: View {
     @SceneStorage("selectedView") private var selectedView: Screens = .home
-    @StateObject private var viewModel = SearchViewModel()
+    @State private var viewModel = SearchViewModel()
     @State private var selectedSearchItem: ItemContent?
 	@State private var showNotifications = false
     private let persistence = PersistenceController.shared

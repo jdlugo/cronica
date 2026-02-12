@@ -5,7 +5,7 @@ struct ItemContentTVView: View {
     let title: String
     let type: MediaType
     let id: Int
-    @EnvironmentObject var viewModel: ItemContentViewModel
+    @Environment(ItemContentViewModel.self) var viewModel
     @State private var showOverview = false
     @State private var showReleaseDateInfo = false
     @State private var showCustomList = false
@@ -19,6 +19,7 @@ struct ItemContentTVView: View {
     @FocusState var isFavoriteInFocus: Bool
     @FocusState var isMoreInFocus: Bool
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
             ScrollView {
                 header
@@ -127,7 +128,7 @@ struct ItemContentTVView: View {
             
             VStack {
                 DetailWatchlistButton(showCustomList: .constant(false))
-                    .environmentObject(viewModel)
+                    .environment(viewModel)
                     .buttonStyle(.borderedProminent)
                     .prefersDefaultFocus(in: tvOSActionNamespace)
                     .focused($isWatchlistButtonFocused)

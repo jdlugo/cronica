@@ -9,12 +9,13 @@ struct VerticalUpNextListView: View {
                                                                     NSPredicate(format: "isArchive == %d", false),
                                                                     NSPredicate(format: "watched == %d", false)])
     ) private var items: FetchedResults<WatchlistItem>
-    @EnvironmentObject var viewModel: UpNextViewModel
+    @Environment(UpNextViewModel.self) var viewModel
     @State private var selectedEpisode: UpNextEpisode?
     @State private var query = String()
     @State private var queryResult = [UpNextEpisode]()
 	@StateObject private var settings = SettingsStore.shared
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
 			if settings.upNextStyle == .card {
                 ScrollViewReader { proxy in
