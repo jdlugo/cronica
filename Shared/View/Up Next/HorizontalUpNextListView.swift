@@ -121,7 +121,7 @@ struct HorizontalUpNextListView: View {
 #endif
                                 }
                             }
-                            .onChange(of: viewModel.isWatched) { _ in
+                            .onChange(of: viewModel.isWatched) {
                                 guard let first = viewModel.episodes.first else { return }
                                 if viewModel.isWatched {
                                     withAnimation {
@@ -130,8 +130,8 @@ struct HorizontalUpNextListView: View {
                                 }
                             }
                         }
-                        .onChange(of: shouldReload) { reload in
-                            if reload {
+                        .onChange(of: shouldReload) {
+                            if shouldReload {
                                 if let firstItem = viewModel.episodes.first {
                                     withAnimation {
                                         proxy.scrollTo(firstItem.id, anchor: .topLeading)
@@ -211,20 +211,20 @@ struct HorizontalUpNextListView: View {
     
     private func upNextCard(_ item: UpNextEpisode) -> some View {
         ZStack {
-            WebImage(url: settings.preferCoverOnUpNext ? item.backupImage : item.episode.itemImageMedium ?? item.backupImage)
-                .resizable()
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "popcorn.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white.opacity(0.8))
-                            .frame(width: 40, height: 40, alignment: .center)
-							.unredacted()
-                    }
+            WebImage(url: settings.preferCoverOnUpNext ? item.backupImage : item.episode.itemImageMedium ?? item.backupImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "popcorn.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white.opacity(0.8))
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .unredacted()
                 }
-                .aspectRatio(contentMode: .fill)
+            }
+            .aspectRatio(contentMode: .fill)
                 .frame(width: settings.isCompactUI ? DrawingConstants.compactImageWidth : DrawingConstants.imageWidth,
                        height: settings.isCompactUI ? DrawingConstants.compactImageHeight : DrawingConstants.imageHeight)
                 .transition(.opacity)

@@ -5,7 +5,7 @@ struct TransparentGroupBox: GroupBoxStyle {
         VStack {
             HStack {
                 configuration.label
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                     .font(.headline)
                     .foregroundColor(.primary)
                 Spacer()

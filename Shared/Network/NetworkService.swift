@@ -3,7 +3,7 @@ import os
 
 class NetworkService {
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier!,
+        subsystem: Bundle.main.bundleIdentifier ?? "com.unknown.app",
         category: String(describing: NetworkService.self)
     )
     static let shared = NetworkService()

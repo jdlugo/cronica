@@ -29,15 +29,8 @@ struct WatchlistPosterSection: View {
                 }.padding(.all, settings.isCompactUI ? 10 : nil)
             }
         } else {
-            if #available(iOS 17, *) {
-                ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
-                    .padding()
-            } else {
-                Text("emptyList")
-                    .multilineTextAlignment(.center)
-                    .font(.callout)
-                    .foregroundColor(.secondary)
-            }
+            ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
+                .padding()
         }
     }
     

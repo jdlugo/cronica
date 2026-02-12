@@ -15,26 +15,26 @@ struct EditCustomListItemSelector: View {
                             HStack {
                                 Image(systemName: itemsToRemove.contains(item) ? "minus.circle.fill" : "circle")
                                     .foregroundColor(itemsToRemove.contains(item) ? .red : nil)
-                                WebImage(url: item.backCompatibleCardImage)
-                                    .resizable()
-                                    .placeholder {
+                                WebImage(url: item.backCompatibleCardImage) { image in
+                                    image.resizable()
+                                } placeholder: {
+                                    ZStack {
+                                        Rectangle().fill(.gray.gradient)
+                                        Image(systemName: "popcorn.fill")
+                                            .foregroundColor(.white.opacity(0.8))
+                                    }
+                                }
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 70, height: 50)
+                                .cornerRadius(8)
+                                .overlay {
+                                    if itemsToRemove.contains(item) {
                                         ZStack {
-                                            Rectangle().fill(.gray.gradient)
-                                            Image(systemName: "popcorn.fill")
-                                                .foregroundColor(.white.opacity(0.8))
+                                            Rectangle().fill(.black.opacity(0.4))
                                         }
+                                        .cornerRadius(8)
                                     }
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 70, height: 50)
-                                    .cornerRadius(8)
-                                    .overlay {
-                                        if itemsToRemove.contains(item) {
-                                            ZStack {
-                                                Rectangle().fill(.black.opacity(0.4))
-                                            }
-                                            .cornerRadius(8)
-                                        }
-                                    }
+                                }
                                 VStack(alignment: .leading) {
                                     Text(item.itemTitle)
                                         .lineLimit(1)
@@ -61,18 +61,18 @@ struct EditCustomListItemSelector: View {
                             HStack {
                                 Image(systemName: itemsToRemove.contains(item) ? "minus.circle.fill" : "circle")
                                     .foregroundColor(itemsToRemove.contains(item) ? .red : nil)
-                                WebImage(url: item.backCompatibleCardImage)
-                                    .resizable()
-                                    .placeholder {
-                                        ZStack {
-                                            Rectangle().fill(.gray.gradient)
-                                            Image(systemName: "popcorn.fill")
-                                                .font(.title)
-                                                .fontWidth(.expanded)
-                                                .foregroundColor(.white.opacity(0.8))
-                                        }
+                                WebImage(url: item.backCompatibleCardImage) { image in
+                                    image.resizable()
+                                } placeholder: {
+                                    ZStack {
+                                        Rectangle().fill(.gray.gradient)
+                                        Image(systemName: "popcorn.fill")
+                                            .font(.title)
+                                            .fontWidth(.expanded)
+                                            .foregroundColor(.white.opacity(0.8))
                                     }
-                                    .aspectRatio(contentMode: .fill)
+                                }
+                                .aspectRatio(contentMode: .fill)
                                     .frame(width: 70, height: 50)
                                     .cornerRadius(8)
                                     .overlay {

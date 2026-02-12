@@ -24,22 +24,22 @@ struct ItemContentCustomListSelector: View {
                 CenterHorizontalView { ProgressView("Loading").padding() }
             } else {
                 HStack {
-                    WebImage(url: image)
-                        .resizable()
-                        .placeholder {
-							ZStack {
-								Rectangle().fill(.gray.gradient)
-								Image(systemName: "popcorn.fill")
-									.foregroundColor(.white.opacity(0.9))
-							}
+                    WebImage(url: image) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ZStack {
+                            Rectangle().fill(.gray.gradient)
+                            Image(systemName: "popcorn.fill")
+                                .foregroundColor(.white.opacity(0.9))
                         }
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 70, height: 50, alignment: .center)
-                        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-                        .shadow(radius: 2)
+                    }
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 70, height: 50, alignment: .center)
+                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    .shadow(radius: 2)
                     Text(title)
                         .lineLimit(2)
-                        .fontDesign(.rounded)
+                        .fontDesign(.default)
                         .padding(.leading, 4)
                 }
                 Section {

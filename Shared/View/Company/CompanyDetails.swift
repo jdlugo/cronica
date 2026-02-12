@@ -103,14 +103,7 @@ struct CompanyDetails: View {
                         }
                     } else {
                         if isLoaded {
-                            if #available(iOS 17, *) {
-                                ContentUnavailableView("Try again later", systemImage: "popcorn")
-                            } else {
-                                Text("Try again later")
-                                    .multilineTextAlignment(.center)
-                                    .font(.callout)
-                                    .foregroundColor(.secondary)
-                            }
+                            ContentUnavailableView("Try again later", systemImage: "popcorn")
                         }
                     }
                 }
@@ -143,14 +136,7 @@ struct CompanyDetails: View {
                 }
             } else {
                 if isLoaded {
-                    if #available(iOS 17, *) {
-                        ContentUnavailableView("Try again later", systemImage: "popcorn")
-                    } else {
-                        Text("Try again later")
-                            .multilineTextAlignment(.center)
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                    }
+                    ContentUnavailableView("Try again later", systemImage: "popcorn")
                 }
             }
         }
@@ -181,14 +167,7 @@ struct CompanyDetails: View {
                 }
             } else {
                 if isLoaded {
-                    if #available(iOS 17, *) {
-                        ContentUnavailableView("Try again later", systemImage: "popcorn")
-                    } else {
-                        Text("Try again later")
-                            .multilineTextAlignment(.center)
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                    }
+                    ContentUnavailableView("Try again later", systemImage: "popcorn")
                 }
             }
         }.padding(.all, settings.isCompactUI ? 10 : nil)

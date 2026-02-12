@@ -13,24 +13,24 @@ struct PersonCardView: View {
 #if !os(tvOS)
         NavigationLink(value: person) {
             VStack {
-                WebImage(url: person.personImage)
-                    .resizable()
-                    .placeholder {
-                        ZStack {
-                            Rectangle().fill(.gray.gradient)
-                            Image(systemName: "person")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 50, height: 50, alignment: .center)
-                                .foregroundColor(.white)
-                            name
-                        }
-                        .frame(width: DrawingConstants.profileWidth,
-                               height: DrawingConstants.profileHeight)
-                        .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.profileRadius,
-                                                    style: .continuous))
+                WebImage(url: person.personImage) { image in
+                    image.resizable()
+                } placeholder: {
+                    ZStack {
+                        Rectangle().fill(.gray.gradient)
+                        Image(systemName: "person")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50, alignment: .center)
+                            .foregroundColor(.white)
+                        name
                     }
-                    .aspectRatio(contentMode: .fill)
+                    .frame(width: DrawingConstants.profileWidth,
+                           height: DrawingConstants.profileHeight)
+                    .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.profileRadius,
+                                                style: .continuous))
+                }
+                .aspectRatio(contentMode: .fill)
                     .frame(width: DrawingConstants.profileWidth,
                            height: DrawingConstants.profileHeight)
                     .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.profileRadius,
@@ -86,19 +86,19 @@ struct PersonCardView: View {
 #elseif os(tvOS)
         VStack(alignment: .leading) {
             NavigationLink(value: person) {
-                WebImage(url: person.personImage)
-                    .resizable()
-                    .placeholder {
-                        ZStack {
-                            Rectangle().fill(.gray.gradient)
-                            Image(systemName: "person")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 50, height: 50, alignment: .center)
-                                .foregroundColor(.white)
-                        }
+                WebImage(url: person.personImage) { image in
+                    image.resizable()
+                } placeholder: {
+                    ZStack {
+                        Rectangle().fill(.gray.gradient)
+                        Image(systemName: "person")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50, alignment: .center)
+                            .foregroundColor(.white)
                     }
-                    .aspectRatio(contentMode: .fill)
+                }
+                .aspectRatio(contentMode: .fill)
                     .frame(width: 200, height: 200, alignment: .center)
                     .clipShape(Circle())
                     .shadow(radius: 2.5)

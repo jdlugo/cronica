@@ -79,23 +79,23 @@ struct EditCustomList: View {
                 canPublish = true
             }
         }
-        .onChange(of: title) { newValue in
-            if newValue != list.itemTitle {
+        .onChange(of: title) {
+            if title != list.itemTitle {
                 disableSaveButton = false
             }
         }
-        .onChange(of: itemsToAdd) { _ in
+        .onChange(of: itemsToAdd) {
             disableSaveButton = false
         }
-        .onChange(of: note) { newValue in
-            if newValue != list.notes {
+        .onChange(of: note) {
+            if note != list.notes {
                 disableSaveButton = false
             }
         }
-        .onChange(of: pinOnHome) { newValue in
-            if newValue != list.isPin { disableSaveButton = false }
+        .onChange(of: pinOnHome) {
+            if pinOnHome != list.isPin { disableSaveButton = false }
         }
-        .onChange(of: itemsToRemove) { _ in
+        .onChange(of: itemsToRemove) {
             if !itemsToRemove.isEmpty {
                 if disableSaveButton != false { disableSaveButton = false }
             }

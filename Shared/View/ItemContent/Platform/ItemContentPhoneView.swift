@@ -88,13 +88,9 @@ struct ItemContentPhoneView: View {
             withAnimation { showPopup = true }
         } label: {
             VStack {
-                if #available(iOS 17, *) {
-                    Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                        .symbolEffect(viewModel.isWatched ? .bounce.down : .bounce.up,
-                                      value: viewModel.isWatched)
-                } else {
-                    Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                }
+                Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
+                    .symbolEffect(viewModel.isWatched ? .bounce.down : .bounce.up,
+                                  value: viewModel.isWatched)
                 Text("Watched")
                     .padding(.top, 2)
                     .font(.caption)
@@ -118,13 +114,9 @@ struct ItemContentPhoneView: View {
             withAnimation { showPopup = true }
         } label: {
             VStack {
-                if #available(iOS 17, *) {
-                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                        .symbolEffect(viewModel.isFavorite ? .bounce.down : .bounce.up,
-                                      value: viewModel.isFavorite)
-                } else {
-                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                }
+                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                    .symbolEffect(viewModel.isFavorite ? .bounce.down : .bounce.up,
+                                  value: viewModel.isFavorite)
                 Text("Favorite")
                     .padding(.top, 2)
                     .font(.caption)
@@ -197,7 +189,7 @@ struct ItemContentPhoneView: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
                 .font(.title2)
-                .fontDesign(.rounded)
+                .fontDesign(.default)
                 .fontWeight(.semibold)
                 .padding(.horizontal, 8)
                 .padding(.bottom, 4)
@@ -210,7 +202,7 @@ struct ItemContentPhoneView: View {
                     Text(genres)
                         .font(.caption)
                         .foregroundColor(.secondary)
-                        .fontDesign(.rounded)
+                        .fontDesign(.default)
                 }
             }
             if let info = viewModel.content?.itemQuickInfo {
@@ -218,31 +210,31 @@ struct ItemContentPhoneView: View {
                     Text(info)
                         .font(.caption)
                         .foregroundColor(.secondary)
-                        .fontDesign(.rounded)
+                        .fontDesign(.default)
                 }
             }
         }
     }
     
     private var posterCover: some View {
-        WebImage(url: viewModel.content?.posterImageMedium)
-            .resizable()
-            .placeholder {
-                ZStack {
-                    Rectangle().fill(.gray.gradient)
-                    VStack {
-                        Image(systemName: "popcorn.fill")
-                            .font(.title)
-                            .fontWidth(.expanded)
-                            .foregroundColor(.white.opacity(0.8))
-							.unredacted()
-                            .padding()
-                    }
-                    .frame(width: 220, height: 300)
-                    .padding()
+        WebImage(url: viewModel.content?.posterImageMedium) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Rectangle().fill(.gray.gradient)
+                VStack {
+                    Image(systemName: "popcorn.fill")
+                        .font(.title)
+                        .fontWidth(.expanded)
+                        .foregroundColor(.white.opacity(0.8))
+                        .unredacted()
+                        .padding()
                 }
+                .frame(width: 220, height: 300)
+                .padding()
             }
-            .overlay {
+        }
+        .overlay {
                 ZStack {
                     Rectangle().fill(.thinMaterial)
                     Image(systemName: animationImage)

@@ -43,15 +43,8 @@ struct UpcomingListView: View {
                     }
                 }
             } else {
-                if #available(watchOS 10, *) {
-                    ContentUnavailableView("Your upcoming items will appear here.",
-                                           systemImage: "popcorn")
-                } else {
-                    Text("Your upcoming items will appear here.")
-                        .multilineTextAlignment(.center)
-                        .font(.callout)
-                        .foregroundColor(.secondary)
-                }
+                ContentUnavailableView("Your upcoming items will appear here.",
+                                       systemImage: "popcorn")
             }
         }
         .navigationTitle("Upcoming")
@@ -66,25 +59,25 @@ struct UpcomingListView: View {
     
     private func itemRow(_ item: WatchlistItem) -> some View {
         HStack {
-            WebImage(url: item.backCompatibleCardImage)
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "popcorn.fill")
-                            .fontWidth(.expanded)
-                            .foregroundColor(.white.opacity(0.8))
-                            .padding([.horizontal, .bottom])
-                    }
-					.unredacted()
-                    .frame(width: DrawingConstants.imageWidth,
-                           height: DrawingConstants.imageHeight)
+            WebImage(url: item.backCompatibleCardImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "popcorn.fill")
+                        .fontWidth(.expanded)
+                        .foregroundColor(.white.opacity(0.8))
+                        .padding([.horizontal, .bottom])
                 }
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .transition(.opacity)
+                .unredacted()
                 .frame(width: DrawingConstants.imageWidth,
                        height: DrawingConstants.imageHeight)
-                .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+            }
+            .aspectRatio(contentMode: .fill)
+            .transition(.opacity)
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
             VStack(alignment: .leading) {
                 Text(item.itemTitle)
                     .font(.caption)

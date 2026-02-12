@@ -68,18 +68,18 @@ struct ItemContentPadView: View {
     }
     
     private var poster: some View {
-        WebImage(url: viewModel.content?.posterImageLarge)
-            .resizable()
-            .placeholder {
-                ZStack {
-                    Rectangle().fill(.gray.gradient)
-                    Image(systemName: "popcorn.fill")
-                        .font(.title)
-                        .foregroundColor(.white.opacity(0.8))
-                    .padding()
-                }
+        WebImage(url: viewModel.content?.posterImageLarge) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Rectangle().fill(.gray.gradient)
+                Image(systemName: "popcorn.fill")
+                    .font(.title)
+                    .foregroundColor(.white.opacity(0.8))
+                .padding()
             }
-            .overlay {
+        }
+        .overlay {
                 ZStack {
                     Rectangle().fill(.thinMaterial)
                     Image(systemName: animationImage)
@@ -217,28 +217,15 @@ struct ItemContentPadView: View {
             popupType = viewModel.isWatched ? .markedWatched : .removedWatched
             withAnimation { showPopup = true }
         } label: {
-#if os(macOS)
-            Label("Watched",
-                  systemImage: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                .symbolEffect(viewModel.isWatched ? .bounce.down : .bounce.up,
-                              value: viewModel.isWatched)
-#else
             VStack {
-                if #available(iOS 17, *) {
-                    Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                        .symbolEffect(viewModel.isWatched ? .bounce.down : .bounce.up,
-                                      value: viewModel.isWatched)
-                } else {
-                    Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                }
+                Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
+                    .symbolEffect(viewModel.isWatched ? .bounce.down : .bounce.up,
+                                  value: viewModel.isWatched)
                 Text("Watched")
                     .padding(.top, 2)
                     .font(.caption)
                     .lineLimit(1)
             }
-            .padding(.vertical, 4)
-            .frame(width: 60)
-#endif
         }
         .keyboardShortcut("w", modifiers: [.option])
 #if os(macOS)
@@ -261,28 +248,15 @@ struct ItemContentPadView: View {
             popupType = viewModel.isFavorite ? .markedFavorite : .removedFavorite
             withAnimation { showPopup = true }
         } label: {
-#if os(macOS)
-            Label("Favorite",
-                  systemImage: viewModel.isFavorite ? "heart.fill" : "heart")
-                .symbolEffect(viewModel.isFavorite ? .bounce.down : .bounce.up,
-                              value: viewModel.isFavorite)
-#else
             VStack {
-                if #available(iOS 17, *) {
-                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                        .symbolEffect(viewModel.isFavorite ? .bounce.down : .bounce.up,
-                                      value: viewModel.isFavorite)
-                } else {
-                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                }
+                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                    .symbolEffect(viewModel.isFavorite ? .bounce.down : .bounce.up,
+                                  value: viewModel.isFavorite)
                 Text("Favorite")
                     .padding(.top, 2)
                     .font(.caption)
                     .lineLimit(1)
             }
-            .padding(.vertical, 4)
-            .frame(width: 60)
-#endif
         }
         .keyboardShortcut("w", modifiers: [.option])
 #if os(macOS)

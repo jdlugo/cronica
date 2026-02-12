@@ -62,7 +62,7 @@ struct ItemContentTVView: View {
                     HStack {
                         Text(viewModel.content?.itemOverview ?? String())
                             .font(.callout)
-                            .fontDesign(.rounded)
+                            .fontDesign(.default)
                             .lineLimit(10)
                             .onTapGesture {
                                 showOverview.toggle()

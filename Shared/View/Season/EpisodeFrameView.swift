@@ -71,8 +71,8 @@ struct EpisodeFrameView: View {
                 isWatched = persistence.isEpisodeSaved(show: show, season: season, episode: episode.id)
             }
         }
-        .onChange(of: checkedIfWatched) { check in
-            if check {
+        .onChange(of: checkedIfWatched) {
+            if checkedIfWatched {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     withAnimation {
                         isWatched = persistence.isEpisodeSaved(show: show, season: season, episode: episode.id)
@@ -124,29 +124,29 @@ struct EpisodeFrameView: View {
     }
     
     private var image: some View {
-        WebImage(url: isWatched ? episode.itemImageMedium : settings.hideEpisodesThumbnails ? showCover : episode.itemImageMedium)
-            .placeholder {
-                ZStack {
-                    Rectangle().fill(.gray.gradient)
-                    VStack {
-                        Spacer()
-                        Text(episode.itemTitle)
-                            .foregroundColor(.white.opacity(0.8))
-                            .font(.body)
-                            .fontDesign(.rounded)
-                            .lineLimit(1)
-                            .padding()
-                        Spacer()
-                    }
-                    .padding()
+        WebImage(url: isWatched ? episode.itemImageMedium : settings.hideEpisodesThumbnails ? showCover : episode.itemImageMedium) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Rectangle().fill(.gray.gradient)
+                VStack {
+                    Spacer()
+                    Text(episode.itemTitle)
+                        .foregroundColor(.white.opacity(0.8))
+                        .font(.body)
+                        .fontDesign(.default)
+                        .lineLimit(1)
+                        .padding()
+                    Spacer()
                 }
-                .frame(width: DrawingConstants.imageWidth,
-                       height: DrawingConstants.imageHeight)
-                .accessibilityHidden(true)
+                .padding()
             }
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .transition(.opacity)
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .accessibilityHidden(true)
+        }
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
             .frame(width: DrawingConstants.imageWidth,
                    height: DrawingConstants.imageHeight)
             .clipShape(

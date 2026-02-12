@@ -19,19 +19,19 @@ struct ItemContentRowView: View {
 		NavigationLink(value: item) {
 			HStack {
 				ZStack {
-					WebImage(url: item.cardImageSmall)
-						.placeholder {
-							ZStack {
-								Rectangle().fill(.gray.gradient)
-								Image(systemName: "popcorn.fill")
-									.foregroundColor(.white.opacity(0.8))
-							}
-							.frame(width: DrawingConstants.imageWidth,
-								   height: DrawingConstants.imageHeight)
+					WebImage(url: item.cardImageSmall) { image in
+						image.resizable()
+					} placeholder: {
+						ZStack {
+							Rectangle().fill(.gray.gradient)
+							Image(systemName: "popcorn.fill")
+								.foregroundColor(.white.opacity(0.8))
 						}
-						.resizable()
-						.aspectRatio(contentMode: .fill)
-						.transition(.opacity)
+						.frame(width: DrawingConstants.imageWidth,
+							   height: DrawingConstants.imageHeight)
+					}
+					.aspectRatio(contentMode: .fill)
+					.transition(.opacity)
 						.frame(width: DrawingConstants.imageWidth,
 							   height: DrawingConstants.imageHeight)
 						.shadow(radius: 2.5)

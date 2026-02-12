@@ -92,7 +92,7 @@ struct ExploreView: View {
                         case .card: cardStyle
                         }
                     }
-                    .onChange(of: onChanging) { _ in
+                    .onChange(of: onChanging) {
                         guard let first = items.first else { return }
                         withAnimation {
                             proxy.scrollTo(first.id, anchor: .topLeading)
@@ -166,10 +166,10 @@ struct ExploreView: View {
 #endif
 #endif
         }
-        .onChange(of: selectedMedia) { value in
+        .onChange(of: selectedMedia) {
             onChanging = true
             var genre: Genre?
-            if value == .tvShow {
+            if selectedMedia == .tvShow {
                 genre = shows.first
             } else {
                 genre = movies.first
@@ -179,7 +179,7 @@ struct ExploreView: View {
             }
             Task { await load() }
         }
-        .onChange(of: selectedGenre) { _ in
+        .onChange(of: selectedGenre) {
             onChanging = true
             Task { await load() }
         }
@@ -219,8 +219,8 @@ struct ExploreView: View {
     
     private var hideItemsToggle: some View {
         Toggle("hideAddedItemsDiscoverFilter", isOn: $hideAddedItems)
-            .onChange(of: hideAddedItems) { value in
-                if value {
+            .onChange(of: hideAddedItems) {
+                if hideAddedItems {
                     hideItems()
                 } else {
                     onChanging = true
@@ -244,10 +244,9 @@ struct ExploreView: View {
                                 .progressViewStyle(.circular)
                                 .tint(settings.appTheme.color)
                                 .padding(.horizontal)
-                                .onAppear {
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                        loadMoreItems()
-                                    }
+                                .task {
+                                    try? await Task.sleep(for: .seconds(1.5))
+                                    loadMoreItems()
                                 }
                         }
                     }
@@ -272,10 +271,9 @@ struct ExploreView: View {
                 CenterHorizontalView {
                     ProgressView()
                         .padding()
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                loadMoreItems()
-                            }
+                        .task {
+                            try? await Task.sleep(for: .seconds(1.5))
+                            loadMoreItems()
                         }
                 }
             }
@@ -297,10 +295,9 @@ struct ExploreView: View {
                 CenterHorizontalView {
                     ProgressView()
                         .padding()
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                loadMoreItems()
-                            }
+                        .task {
+                            try? await Task.sleep(for: .seconds(1.5))
+                            loadMoreItems()
                         }
                 }
             }

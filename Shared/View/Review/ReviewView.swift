@@ -37,15 +37,15 @@ struct ReviewView: View {
         }
         .navigationTitle("reviewTitle")
         .onAppear { load() }
-        .onChange(of: rating) { newValue in
+        .onChange(of: rating) {
             guard let item else { return }
-            if newValue != Int(item.userRating) {
+            if rating != Int(item.userRating) {
                 if !canSave { canSave = true }
             }
         }
-        .onChange(of: note) { newValue in
+        .onChange(of: note) {
             guard let item else { return }
-            if newValue != item.userNotes {
+            if note != item.userNotes {
                 if !canSave { canSave = true }
             }
         }

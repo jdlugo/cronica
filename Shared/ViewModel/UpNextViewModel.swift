@@ -15,13 +15,12 @@ class UpNextViewModel: ObservableObject {
     func load(_ items: FetchedResults<WatchlistItem>) async {
         if !isLoaded {
             let sortedItems = items.sorted(by: { $0.itemLastUpdateDate > $1.itemLastUpdateDate}).filter { $0.firstAirDate != nil }
-			for item in sortedItems {
+            for item in sortedItems {
                 await fetchUpNextEpisode(for: item)
             }
-            await MainActor.run {
-                withAnimation(.easeInOut)  {
-                    self.isLoaded = true
-                }
+            // Already on MainActor - no need for MainActor.run
+            withAnimation(.easeInOut) {
+                self.isLoaded = true
             }
         }
     }
@@ -54,10 +53,9 @@ class UpNextViewModel: ObservableObject {
                                         episode: result,
                                         sortedDate: item.itemLastUpdateDate)
             if !self.episodes.contains(content) {
-                await MainActor.run {
-                    withAnimation(.easeInOut) {
-                        self.episodes.append(content)
-                    }
+                // Already on MainActor - no need for MainActor.run
+                withAnimation(.easeInOut) {
+                    self.episodes.append(content)
                 }
             }
         } else if isWatched {

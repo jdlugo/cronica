@@ -107,9 +107,7 @@ struct ItemContentView: View {
             }
         }
         .background {
-            if #available(watchOS 10, *) {
-                TranslucentBackground(image: image)
-            }
+            TranslucentBackground(image: image)
         }
     }
     
@@ -118,13 +116,8 @@ struct ItemContentView: View {
             viewModel.update(.watched)
         } label: {
             VStack {
-                if #available(watchOS 10, *) {
-                    Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                        .symbolEffect(viewModel.isWatched ? .bounce.down : .bounce.up,
-                                      value: viewModel.isWatched)
-                } else {
-                    Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                }
+                Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isWatched, value: viewModel.isWatched))
                 Text("Watched")
                     .padding(.top, 2)
                     .font(.caption)
@@ -148,13 +141,8 @@ struct ItemContentView: View {
             viewModel.update(.favorite)
         } label: {
             VStack {
-                if #available(watchOS 10, *) {
-                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                        .symbolEffect(viewModel.isFavorite ? .bounce.down : .bounce.up,
-                                      value: viewModel.isFavorite)
-                } else {
-                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                }
+                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isFavorite, value: viewModel.isFavorite))
                 Text("Favorite")
                     .padding(.top, 2)
                     .font(.caption)
@@ -170,13 +158,8 @@ struct ItemContentView: View {
             viewModel.update(.archive)
         } label: {
             VStack {
-                if #available(watchOS 10, *) {
-                    Image(systemName: viewModel.isArchive ? "archivebox.fill" : "archivebox")
-                        .symbolEffect(viewModel.isArchive ? .bounce.down : .bounce.up,
-                                      value: viewModel.isArchive)
-                } else {
-                    Image(systemName: viewModel.isArchive ? "archivebox.fill" : "archivebox")
-                }
+                Image(systemName: viewModel.isArchive ? "archivebox.fill" : "archivebox")
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isArchive, value: viewModel.isArchive))
                 Text("Archive")
                     .padding(.top, 2)
                     .font(.caption)
@@ -192,13 +175,8 @@ struct ItemContentView: View {
             viewModel.update(.pin)
         } label: {
             VStack {
-                if #available(watchOS 10, *) {
-                    Image(systemName: viewModel.isPin ? "pin.fill" : "pin")
-                        .symbolEffect(viewModel.isPin ? .bounce.down : .bounce.up,
-                                      value: viewModel.isPin)
-                } else {
-                    Image(systemName: viewModel.isPin ? "pin.fill" : "pin")
-                }
+                Image(systemName: viewModel.isPin ? "pin.fill" : "pin")
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isPin, value: viewModel.isPin))
                 Text("Pin")
                     .padding(.top, 2)
                     .font(.caption)
@@ -231,6 +209,16 @@ struct ItemContentView: View {
 	}
 }
 
+// MARK: - Symbol Effect Modifier for watchOS
+private struct WatchSymbolEffectModifier: ViewModifier {
+    let isActive: Bool
+    let value: Bool
+    
+    func body(content: Content) -> some View {
+        content.symbolEffect(isActive ? .bounce.down : .bounce.up, value: value)
+    }
+}
+
 private struct DrawingConstants {
     static let imageRadius: CGFloat = 8
     static let lineLimit: Int = 1
@@ -242,3 +230,4 @@ private struct DrawingConstants {
                     type: ItemContent.example.itemContentMedia,
                     image: ItemContent.example.cardImageMedium)
 }
+

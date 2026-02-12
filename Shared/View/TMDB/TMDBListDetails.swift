@@ -23,15 +23,8 @@ struct TMDBListDetails: View {
             if !isDeleted {
                 Section {
                     if items.isEmpty {
-                        if #available(iOS 17, *), #available(watchOS 10, *), #available(tvOS 17, *), #available(macOS 14, *) {
-                            ContentUnavailableView("Empty List",
-                                                   systemImage: "rectangle.on.rectangle")
-                        } else {
-                            Text("Empty List")
-                                .multilineTextAlignment(.center)
-                                .font(.callout)
-                                .foregroundColor(.secondary)
-                        }
+                        ContentUnavailableView("Empty List",
+                                               systemImage: "rectangle.on.rectangle")
                     } else {
                         ForEach(items) { item in
                             ItemContentRowView(item: item, showPopup: $showPopup, popupType: $popupType)
@@ -61,16 +54,7 @@ struct TMDBListDetails: View {
         .overlay { if isLoading { CenterHorizontalView { ProgressView("Loading") } }}
         .overlay {
             if isDeleted {
-                VStack {
-                    if #available(iOS 17, *), #available(watchOS 10, *), #available(tvOS 17, *), #available(macOS 14, *) {
-                        ContentUnavailableView("listDeleted", systemImage: "trash")
-                    } else {
-                        Text("listDeleted")
-                            .multilineTextAlignment(.center)
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                    }
-                }
+                ContentUnavailableView("listDeleted", systemImage: "trash")
             }
         }
         .alert("areYouSure", isPresented: $deleteConfirmation) {

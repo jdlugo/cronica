@@ -62,19 +62,19 @@ struct SearchItem: View {
     }
     
     private var image: some View {
-        WebImage(url: item.itemImage)
-            .resizable()
-            .placeholder {
-                ZStack {
-                    Rectangle().fill(.gray.gradient)
-                    Image(systemName: "popcorn.fill")
-                        .foregroundColor(.white.opacity(0.8))
-                }
-                .frame(width: DrawingConstants.imageWidth,
-                       height: DrawingConstants.imageHeight)
-                .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius))
+        WebImage(url: item.itemImage) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Rectangle().fill(.gray.gradient)
+                Image(systemName: "popcorn.fill")
+                    .foregroundColor(.white.opacity(0.8))
             }
-            .overlay {
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius))
+        }
+        .overlay {
                 if isInWatchlist {
                     ZStack {
                         Color.black.opacity(0.5)
@@ -98,22 +98,22 @@ struct SearchItem: View {
     }
     
     private var profile: some View {
-        WebImage(url: item.itemImage)
-            .resizable()
-            .placeholder {
-                ZStack {
-                    Color.secondary
-                    Image(systemName: "person")
-                }
-                .frame(width: DrawingConstants.personImageWidth,
-                       height: DrawingConstants.personImageHeight)
-                .clipShape(Circle())
+        WebImage(url: item.itemImage) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Color.secondary
+                Image(systemName: "person")
             }
-            .aspectRatio(contentMode: .fill)
-            .transition(.opacity)
             .frame(width: DrawingConstants.personImageWidth,
                    height: DrawingConstants.personImageHeight)
             .clipShape(Circle())
+        }
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
+        .frame(width: DrawingConstants.personImageWidth,
+               height: DrawingConstants.personImageHeight)
+        .clipShape(Circle())
     }
 }
 
@@ -171,19 +171,19 @@ struct ItemContentRow: View {
 	}
 	
 	private var image: some View {
-		WebImage(url: item.itemImage)
-			.resizable()
-			.placeholder {
-				ZStack {
-					Rectangle().fill(.gray.gradient)
-					Image(systemName: "popcorn.fill")
-						.foregroundColor(.white.opacity(0.8))
-				}
-				.frame(width: DrawingConstants.imageWidth,
-					   height: DrawingConstants.imageHeight)
-				.clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius))
+		WebImage(url: item.itemImage) { image in
+			image.resizable()
+		} placeholder: {
+			ZStack {
+				Rectangle().fill(.gray.gradient)
+				Image(systemName: "popcorn.fill")
+					.foregroundColor(.white.opacity(0.8))
 			}
-			.overlay {
+			.frame(width: DrawingConstants.imageWidth,
+				   height: DrawingConstants.imageHeight)
+			.clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius))
+		}
+		.overlay {
 				if isInWatchlist {
 					ZStack {
 						Color.black.opacity(0.5)
@@ -207,22 +207,22 @@ struct ItemContentRow: View {
 	}
 	
 	private var profile: some View {
-		WebImage(url: item.itemImage)
-			.resizable()
-			.placeholder {
-				ZStack {
-					Color.secondary
-					Image(systemName: "person")
-				}
-				.frame(width: DrawingConstants.personImageWidth,
-					   height: DrawingConstants.personImageHeight)
-				.clipShape(Circle())
+		WebImage(url: item.itemImage) { image in
+			image.resizable()
+		} placeholder: {
+			ZStack {
+				Color.secondary
+				Image(systemName: "person")
 			}
-			.aspectRatio(contentMode: .fill)
-			.transition(.opacity)
 			.frame(width: DrawingConstants.personImageWidth,
 				   height: DrawingConstants.personImageHeight)
 			.clipShape(Circle())
+		}
+		.aspectRatio(contentMode: .fill)
+		.transition(.opacity)
+		.frame(width: DrawingConstants.personImageWidth,
+			   height: DrawingConstants.personImageHeight)
+		.clipShape(Circle())
 	}
 }
 

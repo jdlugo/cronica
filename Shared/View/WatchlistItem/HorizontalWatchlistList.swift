@@ -78,7 +78,7 @@ struct HorizontalWatchlistList: View {
                     }
 #endif
                 }
-                .onChange(of: shouldReload) { _ in
+                .onChange(of: shouldReload) {
                     guard let firstItem = items.first else { return }
                     withAnimation {
                         proxy.scrollTo(firstItem.id, anchor: .topLeading)

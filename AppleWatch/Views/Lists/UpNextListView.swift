@@ -23,15 +23,8 @@ struct UpNextListView: View {
         NavigationStack {
             VStack {
                 if items.isEmpty {
-                    if #available(watchOS 10, *) {
-                        ContentUnavailableView("Your episodes will appear here.",
-                                               systemImage: "tv")
-                    } else {
-                        Text("Your episodes will appear here.")
-                            .multilineTextAlignment(.center)
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                    }
+                    ContentUnavailableView("Your episodes will appear here.",
+                                           systemImage: "tv")
                 } else {
                     List {
                         ForEach(viewModel.episodes) { episode in
@@ -87,23 +80,23 @@ struct UpNextListView: View {
     
     private func upNextRowItem(_ item: UpNextEpisode) -> some View {
         HStack {
-            WebImage(url: item.episode.itemImageMedium ?? item.backupImage)
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "sparkles.tv")
-                            .foregroundColor(.white.opacity(0.8))
-                    }
-					.unredacted()
-                    .frame(width: DrawingConstants.imageWidth,
-                           height: DrawingConstants.imageHeight)
+            WebImage(url: item.episode.itemImageMedium ?? item.backupImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "sparkles.tv")
+                        .foregroundColor(.white.opacity(0.8))
                 }
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .transition(.opacity)
+                .unredacted()
                 .frame(width: DrawingConstants.imageWidth,
                        height: DrawingConstants.imageHeight)
-                .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+            }
+            .aspectRatio(contentMode: .fill)
+            .transition(.opacity)
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
             VStack(alignment: .leading) {
                 Text(item.showTitle)
                     .font(.caption)

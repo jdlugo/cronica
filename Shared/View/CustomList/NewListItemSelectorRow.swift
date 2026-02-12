@@ -22,18 +22,18 @@ struct NewListItemSelectorRow: View {
                     .foregroundColor(isSelected ? SettingsStore.shared.appTheme.color : nil)
                     .imageScale(.medium)
                     .padding(.trailing, 4)
-                WebImage(url: item.backCompatibleCardImage)
-                    .resizable()
-                    .placeholder {
-                        ZStack {
-                            Rectangle().fill(.gray.gradient)
-                            Image(systemName: "popcorn.fill")
-                        }
+                WebImage(url: item.backCompatibleCardImage) { image in
+                    image.resizable()
+                } placeholder: {
+                    ZStack {
+                        Rectangle().fill(.gray.gradient)
+                        Image(systemName: "popcorn.fill")
                     }
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 70, height: 50)
-                    .cornerRadius(8)
-                    .overlay {
+                }
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 70, height: 50)
+                .cornerRadius(8)
+                .overlay {
                         if isSelected {
                             ZStack {
                                 Rectangle().fill(.black.opacity(0.4))

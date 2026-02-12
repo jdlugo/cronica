@@ -90,11 +90,13 @@ struct WatchlistItemCardView: View {
         }
     }
     private var image: some View {
-        WebImage(url: content.backCompatibleCardImage)
-            .resizable()
-            .placeholder { placeholder }
-            .aspectRatio(contentMode: .fill)
-            .transition(.opacity)
+        WebImage(url: content.backCompatibleCardImage) { image in
+            image.resizable()
+        } placeholder: {
+            placeholder
+        }
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
             .overlay {
                 VStack {
                     Spacer()

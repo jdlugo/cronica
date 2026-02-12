@@ -16,25 +16,25 @@ struct EpisodeRow: View {
     @State private var isWatched: Bool = false
     var body: some View {
         HStack {
-            WebImage(url: episode.itemImageMedium)
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.secondary)
-                        Image(systemName: "tv")
-                    }
-                    .frame(width: DrawingConstants.imageWidth,
-                           height: DrawingConstants.imageHeight)
+            WebImage(url: episode.itemImageMedium) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.secondary)
+                    Image(systemName: "tv")
                 }
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .transition(.opacity)
                 .frame(width: DrawingConstants.imageWidth,
                        height: DrawingConstants.imageHeight)
-                .clipShape(
-                    RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
-                                     style: .continuous)
-                )
-                .overlay {
+            }
+            .aspectRatio(contentMode: .fill)
+            .transition(.opacity)
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .clipShape(
+                RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
+                                 style: .continuous)
+            )
+            .overlay {
                     if isWatched {
                         ZStack {
                             Color.black.opacity(0.6)

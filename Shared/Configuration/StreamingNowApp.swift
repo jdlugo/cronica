@@ -16,7 +16,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
-    GADMobileAds.sharedInstance().start(completionHandler: nil)
+    MobileAds.shared.start()
   
     Messaging.messaging().delegate = self
     // Register for remote notifications. This shows a permission dialog on first run, to
@@ -35,28 +35,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     // [END register_for_notifications]
       
-      window?.tintColor = UIColor.red
+      if let window { window.tintColor = UIColor.red }
       
     return true
   }
-
-    func application(_ application: UIApplication,
-                       didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-        // If you are receiving a notification message while your app is in the background,
-        // this callback will not be fired till the user taps on the notification launching the application.
-        // TODO: Handle data of notification
-
-        // With swizzling disabled you must let Messaging know about the message, for Analytics
-        // Messaging.messaging().appDidReceiveMessage(userInfo)
-
-        // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-          print("Message ID: \(messageID)")
-        }
-
-        // Print full message.
-        print(userInfo)
-      }
 
       // [START receive_message]
       func application(_ application: UIApplication,
@@ -229,8 +211,8 @@ struct StreamingNowApp: App {
                 }
 #endif
         }
-        .onChange(of: scene) { phase in
-            if phase == .background {
+        .onChange(of: scene) {
+            if scene == .background {
                 scheduleAppRefresh()
             }
         }
@@ -325,11 +307,9 @@ struct StreamingNowApp: App {
             scheduleAppRefresh()
             let queue = OperationQueue()
             queue.maxConcurrentOperationCount = 1
-            task.expirationHandler = {
-                // After all operations are cancelled, the completion block below is called to set the task to complete.
-                queue.cancelAllOperations()
-            }
-            queue.addOperation {
+            
+            // Track completion properly
+            let operation = BlockOperation {
                 Task {
                     await BackgroundManager.shared.handleWatchingContentRefresh()
                     BackgroundManager.shared.lastWatchingRefresh = Date()
@@ -337,9 +317,19 @@ struct StreamingNowApp: App {
                     BackgroundManager.shared.lastUpcomingRefresh = Date()
                     await BackgroundManager.shared.handleAppRefreshMaintenance()
                     BackgroundManager.shared.lastMaintenance = Date()
+                    
+                    // Complete task after operations finish
+                    task.setTaskCompleted(success: true)
                 }
             }
-            task.setTaskCompleted(success: true)
+            
+            task.expirationHandler = {
+                // After all operations are cancelled, the completion block below is called to set the task to complete.
+                queue.cancelAllOperations()
+                task.setTaskCompleted(success: false)
+            }
+            
+            queue.addOperation(operation)
         }
     }
 #elseif os(macOS)
@@ -433,3 +423,4 @@ extension AppDelegate: MessagingDelegate {
   // [END refresh_token]
 }
 #endif
+

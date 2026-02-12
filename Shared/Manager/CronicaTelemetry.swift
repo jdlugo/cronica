@@ -3,28 +3,33 @@ import os
 #if !os(iOS)
 import Aptabase
 #else
-import TelemetryClient
+import TelemetryDeck
 #endif
 
 struct CronicaTelemetry {
     private let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier!,
+        subsystem: Bundle.main.bundleIdentifier ?? "com.unknown.app",
         category: String(describing: CronicaTelemetry.self)
     )
-    static let shared = CronicaTelemetry()
+    static var shared = CronicaTelemetry()
+    
+#if os(iOS)
+    private(set) var telemetryInitialized = false
+#endif
     
     private init() { }
     
     func setup() {
-#if !targetEnvironment(simulator) || !DEBUG
+#if !targetEnvironment(simulator) && !DEBUG
 #if !os(iOS)
         guard let aptabaseKey = Key.aptabaseClientKey else { return }
         Aptabase.shared.initialize(appKey: aptabaseKey)
         Aptabase.shared.trackEvent("app_started")
 #else
         guard let key = Key.telemetryClientKey else { return }
-        let configuration = TelemetryManagerConfiguration(appID: key)
-        TelemetryManager.initialize(with: configuration)
+        let configuration = TelemetryDeck.Config(appID: key)
+        TelemetryDeck.initialize(config: configuration)
+        CronicaTelemetry.shared.telemetryInitialized = true
 #endif
 #endif
     }
@@ -39,16 +44,14 @@ struct CronicaTelemetry {
 #if !os(iOS)
         Aptabase.shared.trackEvent(id, with: ["Message": message])
 #else
-        if TelemetryManager.isInitialized {
-            TelemetryManager.send("\(id)", with: ["Message":"\(message)"])
-        }
+        TelemetryDeck.signal(id, parameters: ["Message": message])
 #endif
 #endif
     }
     
 #if os(iOS)
     var isTelemetryDeckInitialized: String {
-        return TelemetryManager.isInitialized.description
+        return telemetryInitialized.description
     }
 #endif
 }

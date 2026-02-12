@@ -59,14 +59,14 @@ struct SearchContentPosterView: View {
     
     private var image: some View {
         NavigationLink(value: item) {
-            WebImage(url: item.posterImageMedium)
-                .resizable()
-                .placeholder {
-                    PosterPlaceholder(title: item.itemTitle, type: item.itemContentMedia)
-                }
-                .aspectRatio(contentMode: .fill)
-                .overlay{ overlay }
-                .transition(.opacity)
+            WebImage(url: item.posterImageMedium) { image in
+                image.resizable()
+            } placeholder: {
+                PosterPlaceholder(title: item.itemTitle, type: item.itemContentMedia)
+            }
+            .aspectRatio(contentMode: .fill)
+            .overlay{ overlay }
+            .transition(.opacity)
                 .frame(width: settings.isCompactUI ? DrawingConstants.compactPosterWidth : DrawingConstants.posterWidth,
                        height: settings.isCompactUI ? DrawingConstants.compactPosterHeight : DrawingConstants.posterHeight)
                 .clipShape(

@@ -8,18 +8,18 @@ struct TranslucentBackground: View {
     var body: some View {
         if !disableTranslucent && image != nil {
             ZStack {
-                WebImage(url: image)
-                    .resizable()
-                    .placeholder {
-                        Rectangle()
-                            .fill(.background)
-                            .ignoresSafeArea()
-                            .padding(.zero)
-                    }
-                    .aspectRatio(contentMode: .fill)
-                    .ignoresSafeArea()
-                    .padding(.zero)
-                    .transition(.opacity)
+                WebImage(url: image) { image in
+                    image.resizable()
+                } placeholder: {
+                    Rectangle()
+                        .fill(.background)
+                        .ignoresSafeArea()
+                        .padding(.zero)
+                }
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+                .padding(.zero)
+                .transition(.opacity)
 #if os(watchOS)
                 Rectangle()
                     .fill(.thickMaterial)

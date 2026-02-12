@@ -19,20 +19,20 @@ struct ItemContentCardView: View {
     var body: some View {
         VStack {
             NavigationLink(value: item) {
-                WebImage(url: item.cardImageMedium)
-                    .resizable()
-                    .placeholder {
-                        ZStack {
-                            Rectangle().fill(.gray.gradient)
-                            Image(systemName: "popcorn.fill")
-                                .foregroundColor(DrawingConstants.placeholderForegroundColor)
-                                .padding()
-                        }
-                        .frame(width: DrawingConstants.imageWidth,
-                               height: DrawingConstants.imageHeight)
-                        .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+                WebImage(url: item.cardImageMedium) { image in
+                    image.resizable()
+                } placeholder: {
+                    ZStack {
+                        Rectangle().fill(.gray.gradient)
+                        Image(systemName: "popcorn.fill")
+                            .foregroundColor(DrawingConstants.placeholderForegroundColor)
+                            .padding()
                     }
-                    .overlay {
+                    .frame(width: DrawingConstants.imageWidth,
+                           height: DrawingConstants.imageHeight)
+                    .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+                }
+                .overlay {
                         if isInWatchlist {
                             VStack {
                                 Spacer()

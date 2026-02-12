@@ -85,9 +85,7 @@ struct PersonDetailsView: View {
 #endif
         }
         .background {
-            if #available(iOS 17, *), #available(watchOS 10, *) {
-                TranslucentBackground(image: person?.personImage)
-            }
+            TranslucentBackground(image: person?.personImage)
         }
 #if os(iOS)
         .searchable(text: $query,
@@ -169,25 +167,25 @@ struct PersonDetailsView: View {
 #endif
     
     private var imageProfile: some View {
-        WebImage(url: person?.personImage)
-            .resizable()
-            .placeholder {
-                ZStack {
-                    Circle().fill(.gray.gradient)
-                    Image(systemName: "person.fill")
-                        .resizable()
-                        .foregroundColor(.white.opacity(0.8))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .unredacted()
-                }
-                .clipShape(Circle())
+        WebImage(url: person?.personImage) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Circle().fill(.gray.gradient)
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .foregroundColor(.white.opacity(0.8))
+                    .frame(width: 50, height: 50, alignment: .center)
+                    .unredacted()
             }
-            .aspectRatio(contentMode: .fill)
-            .transition(.opacity)
             .clipShape(Circle())
-            .frame(width: DrawingConstants.imageWidth, height: DrawingConstants.imageHeight)
-            .shadow(radius: DrawingConstants.imageShadow)
-            .accessibilityHidden(true)
+        }
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
+        .clipShape(Circle())
+        .frame(width: DrawingConstants.imageWidth, height: DrawingConstants.imageHeight)
+        .shadow(radius: DrawingConstants.imageShadow)
+        .accessibilityHidden(true)
             .onTapGesture {
 #if os(iOS)
                 showImageFullscreen.toggle()

@@ -54,18 +54,18 @@ struct UpNextMenuBar: View {
     
     private func upNextRowItem(_ item: UpNextEpisode) -> some View {
         HStack {
-            WebImage(url: item.episode.itemImageSmall ?? item.backupImage)
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "sparkles.tv")
-                            .foregroundColor(.white.opacity(0.8))
-                    }
-                    .frame(width: 95, height: 50)
+            WebImage(url: item.episode.itemImageSmall ?? item.backupImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "sparkles.tv")
+                        .foregroundColor(.white.opacity(0.8))
                 }
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .transition(.opacity)
+                .frame(width: 95, height: 50)
+            }
+            .aspectRatio(contentMode: .fill)
+            .transition(.opacity)
                 .frame(width: 95, height: 50)
                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             VStack(alignment: .leading) {

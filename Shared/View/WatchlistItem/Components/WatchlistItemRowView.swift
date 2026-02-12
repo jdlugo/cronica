@@ -21,29 +21,29 @@ struct WatchlistItemRowView: View {
 					HStack {
 						Text(content.itemTitle)
 							.lineLimit(DrawingConstants.textLimit)
-							.fontDesign(.rounded)
+							.fontDesign(.default)
 					}
 					HStack {
 #if os(watchOS)
 						Text("\(content.itemMedia.title)")
-							.fontDesign(.rounded)
+							.fontDesign(.default)
 							.font(.caption)
 							.foregroundColor(.secondary)
 #else
 						if content.itemReleaseDateQuickInfo.isEmpty {
 							Text("\(content.itemMedia.title)")
-								.fontDesign(.rounded)
+								.fontDesign(.default)
 								.font(.caption)
 								.foregroundColor(.secondary)
 						} else {
 							if settings.showDateOnWatchlist {
 								Text("\(content.itemMedia.title) • \(content.itemReleaseDateQuickInfo)")
-									.fontDesign(.rounded)
+									.fontDesign(.default)
 									.font(.caption)
 									.foregroundColor(.secondary)
 							} else {
 								Text("\(content.itemMedia.title)")
-									.fontDesign(.rounded)
+									.fontDesign(.default)
 									.font(.caption)
 									.foregroundColor(.secondary)
 							}
@@ -111,24 +111,24 @@ struct WatchlistItemRowView: View {
 	
 	private var image: some View {
 		ZStack {
-			WebImage(url: content.backCompatibleSmallCardImage)
-				.placeholder {
-					ZStack {
-						Rectangle().fill(.gray.gradient)
-						Image(systemName: "popcorn.fill")
-							.font(.title3)
-							.fontWidth(.expanded)
-							.foregroundColor(.white.opacity(0.8))
-							.padding()
-					}
-					.frame(width: DrawingConstants.imageWidth,
-						   height: DrawingConstants.imageHeight)
+			WebImage(url: content.backCompatibleSmallCardImage) { image in
+				image.resizable()
+			} placeholder: {
+				ZStack {
+					Rectangle().fill(.gray.gradient)
+					Image(systemName: "popcorn.fill")
+						.font(.title3)
+						.fontWidth(.expanded)
+						.foregroundColor(.white.opacity(0.8))
+						.padding()
 				}
-				.resizable()
-				.aspectRatio(contentMode: .fill)
-				.transition(.opacity)
 				.frame(width: DrawingConstants.imageWidth,
 					   height: DrawingConstants.imageHeight)
+			}
+			.aspectRatio(contentMode: .fill)
+			.transition(.opacity)
+			.frame(width: DrawingConstants.imageWidth,
+				   height: DrawingConstants.imageHeight)
 			if isWatched || content.watched {
 				Color.black.opacity(0.5)
 				Image(systemName: "rectangle.fill.badge.checkmark").foregroundColor(.white)

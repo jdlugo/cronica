@@ -62,7 +62,7 @@ struct OverviewBoxView: View {
 #if os(iOS)
                         if isTruncated {
                             Text(showFullText ? "Collapse" : "Show More")
-                                .fontDesign(.rounded)
+                                .fontDesign(.default)
                                 .textCase(.uppercase)
                                 .font(.caption)
                                 .foregroundStyle(settings.appTheme.color)

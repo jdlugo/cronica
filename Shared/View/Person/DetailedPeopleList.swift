@@ -17,14 +17,7 @@ struct DetailedPeopleList: View {
                 }
             } else {
                 if !query.isEmpty, filteredItems.isEmpty {
-                    if #available(iOS 17, *) {
-                        ContentUnavailableView.search(text: query)
-                    } else {
-                        Text("No results")
-                            .multilineTextAlignment(.center)
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                    }
+                    ContentUnavailableView.search(text: query)
                 } else {
                     Section {
                         List {
@@ -53,21 +46,21 @@ struct DetailedPeopleList: View {
     private func personItemRow(person: Person) -> some View {
         NavigationLink(value: person) {
             HStack {
-                WebImage(url: person.personImage)
-                    .resizable()
-                    .placeholder {
-                        ZStack {
-                            Rectangle().fill(.gray.gradient)
-                            Image(systemName: "person")
-                                .foregroundColor(.white.opacity(0.8))
-                        }
-                        .frame(width: 60, height: 60, alignment: .center)
+                WebImage(url: person.personImage) { image in
+                    image.resizable()
+                } placeholder: {
+                    ZStack {
+                        Rectangle().fill(.gray.gradient)
+                        Image(systemName: "person")
+                            .foregroundColor(.white.opacity(0.8))
                     }
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60)
-                    .clipShape(Circle())
-                    .shadow(radius: 2)
-                    .padding(.trailing)
+                    .frame(width: 60, height: 60, alignment: .center)
+                }
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 60)
+                .clipShape(Circle())
+                .shadow(radius: 2)
+                .padding(.trailing)
                 VStack(alignment: .leading) {
                     Text(person.name)
                         .lineLimit(1)

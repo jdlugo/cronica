@@ -261,28 +261,12 @@ struct CustomWatchlist: View {
         .buttonStyle(.bordered)
     }
     
-    @ViewBuilder
     private var noResults: some View {
-        if #available(iOS 17, *) {
-            ContentUnavailableView.search(text: query)
-        } else {
-            Text("No results")
-                .multilineTextAlignment(.center)
-                .font(.callout)
-                .foregroundColor(.secondary)
-        }
+        ContentUnavailableView.search(text: query)
     }
     
-    @ViewBuilder
     private var empty: some View {
-        if #available(iOS 17, *) {
-            ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
-                .padding()
-        } else {
-            Text("emptyList")
-                .multilineTextAlignment(.center)
-                .font(.callout)
-                .foregroundColor(.secondary)
-        }
+        ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
+            .padding()
     }
 }

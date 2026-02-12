@@ -45,8 +45,8 @@ struct TipJarSetting: View {
             }
         }
         .navigationTitle("tipJarTitle")
-        .onChange(of: viewModel.hasLoadedProducts) { hasLoaded in
-            if hasLoaded {
+        .onChange(of: viewModel.hasLoadedProducts) {
+            if viewModel.hasLoadedProducts {
                 withAnimation { productsLoaded = true }
             }
         }
@@ -78,7 +78,7 @@ private struct TipJarItem: View {
                     .fontWeight(.semibold)
             }
         }
-        .onChange(of: storeKit.purchasedTipJar) { _ in
+        .onChange(of: storeKit.purchasedTipJar) {
             Task {
                 isPurchased = (try? await storeKit.isPurchased(product)) ?? false
             }

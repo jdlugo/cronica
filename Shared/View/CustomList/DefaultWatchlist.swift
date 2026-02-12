@@ -292,29 +292,13 @@ struct DefaultWatchlist: View {
 #endif
     }
     
-    @ViewBuilder
     private var empty: some View {
-        if #available(iOS 17, *), #available(watchOS 10, *), #available(tvOS 17, *), #available(macOS 14, *) {
-            ContentUnavailableView("Your list is empty.", systemImage: "rectangle.on.rectangle")
-                .padding()
-        } else {
-            Text("Your list is empty")
-                .multilineTextAlignment(.center)
-                .font(.callout)
-                .foregroundColor(.secondary)
-        }
+        ContentUnavailableView("Your list is empty.", systemImage: "rectangle.on.rectangle")
+            .padding()
     }
     
-    @ViewBuilder
     private var noResults: some View {
-        if #available(iOS 17, *), #available(watchOS 10, *), #available(tvOS 17, *), #available(macOS 14, *) {
-            ContentUnavailableView.search(text: query)
-        } else {
-            Text("No results")
-                .multilineTextAlignment(.center)
-                .font(.callout)
-                .foregroundColor(.secondary)
-        }
+        ContentUnavailableView.search(text: query)
     }
 }
 

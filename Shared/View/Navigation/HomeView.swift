@@ -177,7 +177,7 @@ struct HomeView: View {
                         showSettings.toggle()
                     } label: {
                         Image(systemName: "gearshape")
-                            .fontDesign(.rounded)
+                            .fontDesign(.default)
                             .fontWeight(.semibold)
                             .imageScale(.medium)
                             .foregroundColor(.white.opacity(0.9))
@@ -196,7 +196,7 @@ struct HomeView: View {
                     showNotifications.toggle()
                 } label: {
                     Image(systemName: hasNotifications ? "bell.badge.fill" : "bell")
-                        .fontDesign(.rounded)
+                        .fontDesign(.default)
                         .fontWeight(.semibold)
                         .imageScale(.medium)
                         .foregroundColor(.white.opacity(0.9))
@@ -277,13 +277,13 @@ private struct ReviewAppBanner: View {
             VStack(alignment: .leading) {
                 Text("callToReviewTitle")
                     .font(.title3)
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                     .padding(.leading)
                     .fontWeight(.semibold)
                 Text("callToReviewSubtitle")
                     .font(.callout)
                     .foregroundColor(.secondary)
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                     .padding(.leading)
                     .padding(.bottom, 4)
                     .fontWeight(.regular)

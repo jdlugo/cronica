@@ -166,78 +166,48 @@ struct ItemContentDetails: View {
     
     @ViewBuilder
     private var watchButton: some View {
-        if #available(iOS 17, *), #available(tvOS 17, *), #available(macOS 14, *) {
-            Button(viewModel.isWatched ? "Remove from Watched" : "Mark as Watched",
-                   systemImage: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark") {
-                viewModel.update(.watched)
-                animate(for: viewModel.isWatched ? .markedWatched : .removedWatched)
-            }
-                   .symbolEffect(.bounce.down, value: viewModel.isWatched)
-    #if os(iOS) || os(macOS)
-                   .keyboardShortcut("w", modifiers: [.option])
-    #endif
-        } else {
-            Button(viewModel.isWatched ? "Remove from Watched" : "Mark as Watched",
-                   systemImage: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark") {
-                viewModel.update(.watched)
-                animate(for: viewModel.isWatched ? .markedWatched : .removedWatched)
-            }
+        Button(viewModel.isWatched ? "Remove from Watched" : "Mark as Watched",
+               systemImage: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark") {
+            viewModel.update(.watched)
+            animate(for: viewModel.isWatched ? .markedWatched : .removedWatched)
         }
+        .modifier(SymbolEffectModifier(value: viewModel.isWatched))
+#if os(iOS) || os(macOS)
+        .keyboardShortcut("w", modifiers: [.option])
+#endif
     }
     
     @ViewBuilder
     private var favoriteButton: some View {
-        if #available(iOS 17, *), #available(tvOS 17, *), #available(macOS 14, *) {
-            Button(viewModel.isFavorite ? "Remove from Favorites" : "Mark as Favorite",
-                   systemImage: viewModel.isFavorite ? "heart.fill" : "heart") {
-                viewModel.update(.favorite)
-                animate(for: viewModel.isFavorite ? .markedFavorite : .removedFavorite)
-            }
-                   .symbolEffect(.bounce.down, value: viewModel.isFavorite)
-    #if os(iOS) || os(macOS)
-                   .keyboardShortcut("f", modifiers: [.option])
-    #endif
-        } else {
-            Button(viewModel.isFavorite ? "Remove from Favorites" : "Mark as Favorite",
-                   systemImage: viewModel.isFavorite ? "heart.fill" : "heart") {
-                viewModel.update(.favorite)
-                animate(for: viewModel.isFavorite ? .markedFavorite : .removedFavorite)
-            }
+        Button(viewModel.isFavorite ? "Remove from Favorites" : "Mark as Favorite",
+               systemImage: viewModel.isFavorite ? "heart.fill" : "heart") {
+            viewModel.update(.favorite)
+            animate(for: viewModel.isFavorite ? .markedFavorite : .removedFavorite)
         }
+        .modifier(SymbolEffectModifier(value: viewModel.isFavorite))
+#if os(iOS) || os(macOS)
+        .keyboardShortcut("f", modifiers: [.option])
+#endif
     }
     
     @ViewBuilder
     private var archiveButton: some View {
-        if #available(iOS 17, *), #available(tvOS 17, *), #available(macOS 14, *) {
-            Button(viewModel.isArchive ? "Remove from Archive" : "Archive Item",
-                   systemImage: viewModel.isArchive ? "archivebox.fill" : "archivebox") {
-                viewModel.update(.archive)
-                animate(for: viewModel.isArchive ? .markedArchive : .removedArchive)
-            }.symbolEffect(.bounce.down, value: viewModel.isArchive)
-        } else {
-            Button(viewModel.isArchive ? "Remove from Archive" : "Archive Item",
-                   systemImage: viewModel.isArchive ? "archivebox.fill" : "archivebox") {
-                viewModel.update(.archive)
-                animate(for: viewModel.isArchive ? .markedArchive : .removedArchive)
-            }
+        Button(viewModel.isArchive ? "Remove from Archive" : "Archive Item",
+               systemImage: viewModel.isArchive ? "archivebox.fill" : "archivebox") {
+            viewModel.update(.archive)
+            animate(for: viewModel.isArchive ? .markedArchive : .removedArchive)
         }
+        .modifier(SymbolEffectModifier(value: viewModel.isArchive))
     }
     
     @ViewBuilder
     private var pinButton: some View {
-        if #available(iOS 17, *), #available(tvOS 17, *), #available(macOS 14, *) {
-            Button(viewModel.isPin ? "Unpin Item" : "Pin Item",
-                   systemImage: viewModel.isPin ? "pin.fill" : "pin") {
-                viewModel.update(.pin)
-                animate(for: viewModel.isPin ? .markedPin : .removedPin)
-            }.symbolEffect(.bounce.down, value: viewModel.isPin)
-        } else {
-            Button(viewModel.isPin ? "Unpin Item" : "Pin Item",
-                   systemImage: viewModel.isPin ? "pin.fill" : "pin") {
-                viewModel.update(.pin)
-                animate(for: viewModel.isPin ? .markedPin : .removedPin)
-            }
+        Button(viewModel.isPin ? "Unpin Item" : "Pin Item",
+               systemImage: viewModel.isPin ? "pin.fill" : "pin") {
+            viewModel.update(.pin)
+            animate(for: viewModel.isPin ? .markedPin : .removedPin)
         }
+        .modifier(SymbolEffectModifier(value: viewModel.isPin))
     }
     
 #if os(iOS) || os(macOS)
@@ -249,7 +219,9 @@ struct ItemContentDetails: View {
                 Button("Official Website") {
                     guard let url = URL(string: homepage) else { return }
 #if os(iOS)
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success { print("[ItemContentDetails] Failed to open URL: \(url)") }
+                    }
 #else
                     NSWorkspace.shared.open(url)
 #endif
@@ -259,7 +231,9 @@ struct ItemContentDetails: View {
                 Button("IMDb") {
                     guard let url = viewModel.content?.imdbUrl else { return }
 #if os(iOS)
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success { print("[ItemContentDetails] Failed to open URL: \(url)") }
+                    }
 #else
                     NSWorkspace.shared.open(url)
 #endif
@@ -268,7 +242,9 @@ struct ItemContentDetails: View {
             Button("TMDb") {
                 guard let url = viewModel.content?.itemURL else { return }
 #if os(iOS)
-                UIApplication.shared.open(url)
+                UIApplication.shared.open(url, options: [:]) { success in
+                    if !success { print("[ItemContentDetails] Failed to open URL: \(url)") }
+                }
 #else
                 NSWorkspace.shared.open(url)
 #endif
@@ -335,6 +311,15 @@ struct ItemContentDetails: View {
     }
 }
 
+// MARK: - Symbol Effect Modifier
+private struct SymbolEffectModifier: ViewModifier {
+    let value: Bool
+    
+    func body(content: Content) -> some View {
+        content.symbolEffect(.bounce.down, value: value)
+    }
+}
+
 #Preview {
     NavigationStack {
         ItemContentDetails(title: ItemContent.example.itemTitle,
@@ -342,3 +327,4 @@ struct ItemContentDetails: View {
                            type: .movie)
     }
 }
+

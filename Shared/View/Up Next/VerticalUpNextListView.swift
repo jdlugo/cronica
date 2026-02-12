@@ -94,7 +94,7 @@ struct VerticalUpNextListView: View {
                                 }
                             }
                         }
-                        .onChange(of: viewModel.isWatched) { _ in 
+                        .onChange(of: viewModel.isWatched) {
                             guard let first = viewModel.episodes.first else { return }
                             if viewModel.isWatched {
                                 withAnimation {
@@ -152,14 +152,7 @@ struct VerticalUpNextListView: View {
         }
         .overlay {
             if queryResult.isEmpty, !query.isEmpty {
-                if #available(iOS 17, *), #available(macOS 14, *) {
-                    ContentUnavailableView.search(text: query)
-                } else {
-                    Text("No results")
-                        .multilineTextAlignment(.center)
-                        .font(.callout)
-                        .foregroundColor(.secondary)
-                }
+                ContentUnavailableView.search(text: query)
             }
         }
 #if os(iOS)
@@ -235,19 +228,19 @@ struct VerticalUpNextListView: View {
     }
     
     private func upNextCard(item: UpNextEpisode) -> some View {
-        WebImage(url: item.episode.itemImageMedium ?? item.backupImage)
-            .resizable()
-            .placeholder {
-                ZStack {
-                    Rectangle().fill(.gray.gradient)
-                    Image(systemName: "sparkles.tv")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(.white.opacity(0.8))
-                        .frame(width: 40, height: 40, alignment: .center)
-                }
+        WebImage(url: item.episode.itemImageMedium ?? item.backupImage) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Rectangle().fill(.gray.gradient)
+                Image(systemName: "sparkles.tv")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white.opacity(0.8))
+                    .frame(width: 40, height: 40, alignment: .center)
             }
-            .aspectRatio(contentMode: .fill)
+        }
+        .aspectRatio(contentMode: .fill)
             .frame(width: DrawingConstants.imageWidth,
                    height: DrawingConstants.imageHeight)
             .transition(.opacity)
@@ -257,18 +250,18 @@ struct VerticalUpNextListView: View {
     
     private func upNextRowItem(_ item: UpNextEpisode) -> some View {
         HStack {
-            WebImage(url: settings.preferCoverOnUpNext ? item.backupImage : item.episode.itemImageLarge ?? item.backupImage)
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "sparkles.tv")
-                            .foregroundColor(.white.opacity(0.8))
-                    }
-                    .frame(width: 80, height: 50)
+            WebImage(url: settings.preferCoverOnUpNext ? item.backupImage : item.episode.itemImageLarge ?? item.backupImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "sparkles.tv")
+                        .foregroundColor(.white.opacity(0.8))
                 }
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .transition(.opacity)
+                .frame(width: 80, height: 50)
+            }
+            .aspectRatio(contentMode: .fill)
+            .transition(.opacity)
                 .frame(width: 80, height: 50)
                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             VStack(alignment: .leading) {

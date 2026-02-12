@@ -58,7 +58,6 @@ struct EpisodeDetailsView: View {
                 if let url = URL(string: "https://www.themoviedb.org/tv/\(show)/season/\(season)/episode/\(episode.itemEpisodeNumberDisplay)") {
                     ShareLink(item: url)
                         .labelStyle(.iconOnly)
-						.padding(.horizontal)
                         .padding([.bottom, .horizontal])
                 }
                 
@@ -68,9 +67,7 @@ struct EpisodeDetailsView: View {
             }
         }
         .background {
-            if #available(watchOS 10, *) {
-                TranslucentBackground(image: episode.itemImageMedium)
-            }
+            TranslucentBackground(image: episode.itemImageMedium)
         }
     }
     
@@ -87,3 +84,4 @@ private struct DrawingConstants {
     static let imageHeight: CGFloat = 163
     static let lineLimit: Int = 1
 }
+

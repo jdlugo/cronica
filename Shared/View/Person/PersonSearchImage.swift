@@ -41,11 +41,13 @@ struct PersonSearchImage: View {
     
     private var image: some View {
         NavigationLink(value: item) {
-            WebImage(url: item.itemImage, options: .highPriority)
-                .resizable()
-                .placeholder { placeholder }
-                .aspectRatio(contentMode: .fill)
-                .transition(.opacity)
+            WebImage(url: item.itemImage, options: .highPriority) { image in
+                image.resizable()
+            } placeholder: {
+                placeholder
+            }
+            .aspectRatio(contentMode: .fill)
+            .transition(.opacity)
                 .frame(width: DrawingConstants.posterWidth,
                        height: DrawingConstants.posterHeight)
                 .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.posterRadius,

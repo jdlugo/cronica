@@ -17,14 +17,7 @@ struct WatchProviderSelectorSetting: View {
             if settings.isSelectedWatchProviderEnabled {
                 Section {
                     if providers.isEmpty, !isLoading {
-                        if #available(iOS 17, *) {
-                            ContentUnavailableView("Try Again Later", systemImage: "tv")
-                        } else {
-                            Text("Try Again Later")
-                                .multilineTextAlignment(.center)
-                                .font(.callout)
-                                .foregroundColor(.secondary)
-                        }
+                        ContentUnavailableView("Try Again Later", systemImage: "tv")
                     } else if providers.isEmpty, isLoading {
                         ProgressView()
                     } else {
@@ -36,7 +29,7 @@ struct WatchProviderSelectorSetting: View {
             }
         }
         .navigationTitle("selectedWatchProvider")
-        .onChange(of: settings.isSelectedWatchProviderEnabled) { _ in
+        .onChange(of: settings.isSelectedWatchProviderEnabled) {
             checkStatus()
         }
         .onAppear(perform: load)
@@ -102,15 +95,15 @@ private struct WatchProviderItemSelector: View {
                 .foregroundColor(isSelected ? SettingsStore.shared.appTheme.color : nil)
                 .fontWeight(.semibold)
                 .padding(.trailing)
-            WebImage(url: item.providerImage)
-                .resizable()
-                .placeholder {
-                    Rectangle().fill(.gray.gradient)
-                }
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40, alignment: .center)
-                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-                .accessibilityHidden(true)
+            WebImage(url: item.providerImage) { image in
+                image.resizable()
+            } placeholder: {
+                Rectangle().fill(.gray.gradient)
+            }
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 40, height: 40, alignment: .center)
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .accessibilityHidden(true)
             Text(item.providerTitle)
         }
         .onTapGesture {

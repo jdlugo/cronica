@@ -66,13 +66,13 @@ struct WatchlistItemPosterView: View {
     }
     
     private var image: some View {
-        WebImage(url: content.backCompatiblePosterImage)
-            .resizable()
-            .placeholder {
-                PosterPlaceholder(title: content.itemTitle, type: content.itemMedia)
-            }
-            .aspectRatio(contentMode: .fill)
-            .transition(.opacity)
+        WebImage(url: content.backCompatiblePosterImage) { image in
+            image.resizable()
+        } placeholder: {
+            PosterPlaceholder(title: content.itemTitle, type: content.itemMedia)
+        }
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
             .overlay {
                 if isInWatchlist {
                     VStack {

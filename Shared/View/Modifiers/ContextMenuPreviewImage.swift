@@ -7,20 +7,20 @@ struct ContextMenuPreviewImage: View {
     let overview: String
     var body: some View {
         ZStack {
-            WebImage(url: image)
-                .resizable()
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.regularMaterial)
-                        Label(title, systemImage: "popcorn.fill")
-                            .font(.title3)
-                            .fontDesign(.rounded)
-                            .foregroundColor(.secondary)
-                            .padding()
-                    }
-                    .frame(width: 300, height: 180)
+            WebImage(url: image) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.regularMaterial)
+                    Label(title, systemImage: "popcorn.fill")
+                        .font(.title3)
+                        .fontDesign(.default)
+                        .foregroundColor(.secondary)
+                        .padding()
                 }
-                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 180)
+            }
+            .aspectRatio(contentMode: .fill)
                 .overlay {
                     if image != nil {
                         VStack(alignment: .leading) {

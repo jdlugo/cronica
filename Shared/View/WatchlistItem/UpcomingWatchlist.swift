@@ -74,7 +74,7 @@ struct UpcomingWatchlist: View {
                             }
                         }
                     }
-                    .onChange(of: shouldReload) { _ in 
+                    .onChange(of: shouldReload) {
                         guard let firstItem = items.first else { return }
                         withAnimation {
                             proxy.scrollTo(firstItem.id, anchor: .topLeading)
@@ -184,19 +184,19 @@ private struct UpNextCardView: View {
     
     private func image(for item: WatchlistItem) -> some View {
         NavigationLink(value: item) {
-            WebImage(url: item.backCompatibleCardImage, options: .highPriority)
-                .resizable()
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "popcorn.fill")
-                            .font(.title)
-                            .fontWidth(.expanded)
-                            .foregroundColor(.white.opacity(0.8))
-                            .padding()
-                    }
+            WebImage(url: item.backCompatibleCardImage, options: .highPriority) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "popcorn.fill")
+                        .font(.title)
+                        .fontWidth(.expanded)
+                        .foregroundColor(.white.opacity(0.8))
+                        .padding()
                 }
-                .aspectRatio(contentMode: .fill)
+            }
+            .aspectRatio(contentMode: .fill)
 #if !os(tvOS)
                 .overlay {
                     if !settings.isCompactUI {

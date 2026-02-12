@@ -21,16 +21,17 @@ struct TrailerItemView: View {
 #if os(iOS)
         self.player = YouTubePlayer(
             source: .video(id: trailer.videoID),
-            configuration: .init(
-                automaticallyAdjustsContentInsets: true,
-                allowsPictureInPictureMediaPlayback: false,
-                fullscreenMode: .system,
+            parameters: .init(
                 autoPlay: false,
+                loopEnabled: false,
                 showControls: true,
                 showFullscreenButton: true,
-                useModestBranding: true,
-                playInline: false,
-                showRelatedVideos: false
+                restrictRelatedVideosToSameChannel: true
+            ),
+            configuration: .init(
+                fullscreenMode: .system,
+                allowsPictureInPictureMediaPlayback: false,
+                automaticallyAdjustsContentInsets: true
             )
         )
 #endif
@@ -44,13 +45,13 @@ struct TrailerItemView: View {
                 .opacity(0)
 #endif
             VStack {
-                WebImage(url: trailer.thumbnail)
-                    .resizable()
-                    .placeholder {
-                        placeholder
-                    }
-                    .aspectRatio(contentMode: .fill)
-                    .transition(.opacity)
+                WebImage(url: trailer.thumbnail) { image in
+                    image.resizable()
+                } placeholder: {
+                    placeholder
+                }
+                .aspectRatio(contentMode: .fill)
+                .transition(.opacity)
                     .frame(width: DrawingConstants.imageWidth,
                            height: DrawingConstants.imageHeight)
                     .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
@@ -100,18 +101,29 @@ struct TrailerItemView: View {
             if UIDevice.isIPhone {
                 if openInYouTube {
                     if let url = trailer.url {
-                        adDisplayedProvider = false;
-                        UIApplication.shared.open(url)
+                        UIApplication.shared.open(url, options: [:]) { success in
+                            self.adDisplayedProvider = false
+                            if !success {
+                                print("[TrailerItemView] Failed to open URL: \(url)")
+                            }
+                        }
                     }
                 } else {
                     self.isLoading = true
-                    player.play()
+                    Task {
+                        try? await player.play()
+                    }
+                    self.adDisplayedProvider = false
                 }
             } else {
                 if openInYouTube {
                     if let url = trailer.url {
-                        adDisplayedProvider = false;
-                        UIApplication.shared.open(url)
+                        UIApplication.shared.open(url, options: [:]) { success in
+                            self.adDisplayedProvider = false
+                            if !success {
+                                print("[TrailerItemView] Failed to open URL: \(url)")
+                            }
+                        }
                     }
                 } else {
                     showWebPlayer = true
@@ -202,3 +214,4 @@ private struct DrawingConstants {
     static let lineLimits: Int = 1
 }
 #endif
+

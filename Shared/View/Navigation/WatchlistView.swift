@@ -26,9 +26,9 @@ struct WatchlistView: View {
 #if !os(tvOS)
         .navigationTitle(navigationTitle)
 #endif
-        .onChange(of: selectedList) { newValue in
-            if let newValue {
-                navigationTitle = newValue.itemTitle
+        .onChange(of: selectedList) {
+            if let selectedList {
+                navigationTitle = selectedList.itemTitle
             } else {
                 navigationTitle = NSLocalizedString("Watchlist", comment: "")
             }

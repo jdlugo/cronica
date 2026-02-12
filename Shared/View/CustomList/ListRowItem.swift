@@ -29,7 +29,7 @@ struct ListRowItem: View {
             .padding(.leading, 4)
             Spacer()
         }
-        .onChange(of: selectedList) { _ in
+        .onChange(of: selectedList) {
             checkSelection()
         }
         .onAppear(perform: checkSelection)

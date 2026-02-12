@@ -101,16 +101,16 @@ struct WatchProvidersList: View {
     
     private func providerItemView(_ item: WatchProviderContent) -> some View {
         VStack(alignment: .leading) {
-            WebImage(url: item.providerImage)
-                .resizable()
-                .placeholder {
-                    VStack {
-                        ProgressView()
-                            .frame(width: DrawingConstants.imageWidth,
-                                   height: DrawingConstants.imageHeight)
-                    }
+            WebImage(url: item.providerImage) { image in
+                image.resizable()
+            } placeholder: {
+                VStack {
+                    ProgressView()
+                        .frame(width: DrawingConstants.imageWidth,
+                               height: DrawingConstants.imageHeight)
                 }
-                .aspectRatio(contentMode: .fill)
+            }
+            .aspectRatio(contentMode: .fill)
                 .frame(width: DrawingConstants.imageWidth,
                        height: DrawingConstants.imageHeight)
                 .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))

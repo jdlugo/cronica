@@ -31,14 +31,9 @@ struct ConfirmationPopupModifier: ViewModifier {
                             Spacer()
 #if !os(tvOS)
                             HStack {
-                                if #available(iOS 17, *), #available(watchOS 10, *), #available(macOS 14, *), #available(tvOS 17, *) {
-                                    Label(item.localizedString, systemImage: item.toSfSymbol)
-                                        .symbolEffect(.bounce, value: isShowing)
-                                        .padding()
-                                } else {
-                                    Label(item.localizedString, systemImage: item.toSfSymbol)
-                                        .padding()
-                                }
+                                Label(item.localizedString, systemImage: item.toSfSymbol)
+                                    .symbolEffect(.bounce, value: isShowing)
+                                    .padding()
                             }
 #if !os(watchOS)
                             .background { Rectangle().fill(.regularMaterial) }

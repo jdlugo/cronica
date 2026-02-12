@@ -2,7 +2,7 @@ import Foundation
 import CoreData
 
 class BackgroundManager {
-	private let context = PersistenceController.shared.container.newBackgroundContext()
+	private let persistence = PersistenceController.shared
 	private let network = NetworkService.shared
 	private let notifications = NotificationManager.shared
 	private static let lastMaintenanceKey = "lastMaintenance"
@@ -59,6 +59,7 @@ class BackgroundManager {
 	}
 	
 	private func fetchWatchingItems() -> [WatchlistItem] {
+		let context = persistence.container.viewContext
 		let request: NSFetchRequest<WatchlistItem> = WatchlistItem.fetchRequest()
 		let watchingPredicate = NSPredicate(format: "isWatching == %d", true)
 		let archivePredicate = NSPredicate(format: "isArchive == %d", false)
@@ -79,6 +80,7 @@ class BackgroundManager {
 	}
 	
 	private func fetchUpcomingItems() -> [WatchlistItem] {
+		let context = persistence.container.viewContext
 		let request: NSFetchRequest<WatchlistItem> = WatchlistItem.fetchRequest()
 		let soonPredicate = NSPredicate(format: "schedule == %d", ItemSchedule.soon.toInt)
 		let renewedPredicate = NSPredicate(format: "schedule == %d", ItemSchedule.renewed.toInt)
@@ -97,6 +99,7 @@ class BackgroundManager {
 	}
 	
 	private func fetchReleasedItems() -> [WatchlistItem] {
+		let context = persistence.container.viewContext
 		let request: NSFetchRequest<WatchlistItem> = WatchlistItem.fetchRequest()
 		let endedPredicate = NSPredicate(format: "schedule == %d", ItemSchedule.ended.toInt)
 		let archivePredicate = NSPredicate(format: "isArchive == %d", true)
@@ -105,7 +108,7 @@ class BackgroundManager {
 			subpredicates: [endedPredicate,
 							archivePredicate]
 		)
-		guard let list = try? self.context.fetch(request) else { return [] }
+		guard let list = try? context.fetch(request) else { return [] }
 		return list
 	}
 	

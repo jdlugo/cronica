@@ -19,11 +19,11 @@ struct WelcomeView: View {
                         Text("Streaming Now")
                             .font(.title)
                             .fontWeight(.bold)
-                            .fontDesign(.rounded)
+                            .fontDesign(.default)
                         Text("Be reminded of upcoming Movies & TV Shows.")
                             .font(.callout)
                             .foregroundColor(.secondary)
-                            .fontDesign(.rounded)
+                            .fontDesign(.default)
                             .padding(.trailing)
                     }
                     .padding(.leading, 6)
@@ -134,12 +134,12 @@ private struct InformationContainerView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
                     .accessibility(addTraits: .isHeader)
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                 
                 Text(NSLocalizedString(subtitle, comment: ""))
                     .font(.callout)
                     .foregroundColor(.secondary)
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.leading, 6)

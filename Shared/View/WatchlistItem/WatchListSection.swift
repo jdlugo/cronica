@@ -44,17 +44,9 @@ struct WatchListSection: View {
         }
     }
     
-    @ViewBuilder
     private var empty: some View {
-        if #available(iOS 17, *) {
-            ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
-                .padding()
-        } else {
-            Text("emptyList")
-                .multilineTextAlignment(.center)
-                .font(.callout)
-                .foregroundColor(.secondary)
-        }
+        ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
+            .padding()
     }
     
     private func fetchDroppedItems(_ items: [ItemContent]) {

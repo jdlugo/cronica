@@ -20,13 +20,9 @@ struct DetailWatchlistButton: View {
         } label: {
 #if os(iOS) || os(watchOS)
             VStack {
-                if #available(iOS 17, *), #available(watchOS 10, *) {
-                    Image(systemName: viewModel.isInWatchlist ? "minus.circle.fill" : "plus.circle.fill")
-                        .symbolEffect(viewModel.isInWatchlist ? .bounce.down : .bounce.up,
-                                      value: viewModel.isInWatchlist)
-                } else {
-                    Image(systemName: viewModel.isInWatchlist ? "minus.circle.fill" : "plus.circle.fill")
-                }
+                Image(systemName: viewModel.isInWatchlist ? "minus.circle.fill" : "plus.circle.fill")
+                    .symbolEffect(viewModel.isInWatchlist ? .bounce.down : .bounce.up,
+                                  value: viewModel.isInWatchlist)
                 Text(viewModel.isInWatchlist ? "Remove" : "Add")
                     .lineLimit(1)
                     .padding(.top, 2)

@@ -57,14 +57,14 @@ struct TrendingKeywordsListView: View {
     
     private func trendingCard(_ keyword: CombinedKeywords) -> some View {
         NavigationLink(value: keyword) {
-            WebImage(url: keyword.image)
-                .resizable()
-                .placeholder {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                    }
+            WebImage(url: keyword.image) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
                 }
-                .aspectRatio(contentMode: .fill)
+            }
+            .aspectRatio(contentMode: .fill)
                 .overlay {
                     ZStack {
                         Rectangle().fill(.black.opacity(0.5))

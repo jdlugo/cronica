@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		331B28F62B3DE30800C20AEA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B28F52B3DE30800C20AEA /* FirebaseAnalytics */; };
-		331B28F82B3DE30800C20AEA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B28F72B3DE30800C20AEA /* FirebaseAnalyticsOnDeviceConversion */; };
-		331B28FA2B3DE30800C20AEA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 331B28F92B3DE30800C20AEA /* FirebaseAnalyticsSwift */; };
-		331B28FC2B3DE30800C20AEA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B28FB2B3DE30800C20AEA /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		331B28FE2B3DE30800C20AEA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B28FD2B3DE30800C20AEA /* FirebaseCrashlytics */; };
 		331B29002B3DE30800C20AEA /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 331B28FF2B3DE30800C20AEA /* FirebaseInAppMessaging-Beta */; };
-		331B29022B3DE30800C20AEA /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 331B29012B3DE30800C20AEA /* FirebaseInAppMessagingSwift-Beta */; };
 		331B29042B3DE30800C20AEA /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B29032B3DE30800C20AEA /* FirebaseInstallations */; };
 		331B29062B3DE30800C20AEA /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B29052B3DE30800C20AEA /* FirebaseMessaging */; };
 		331B29082B3DE30800C20AEA /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B29072B3DE30800C20AEA /* FirebasePerformance */; };
-		AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */; };
 		331B291B2B3F803F00C20AEA /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 331B29182B3F803F00C20AEA /* AppIcon.appiconset */; };
 		332BB03C2B448CCB0095CAD8 /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */; platformFilter = ios; };
 		332BB03F2B44913A0095CAD8 /* AdmobSwiftUI in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 332BB03E2B44913A0095CAD8 /* AdmobSwiftUI */; };
+		AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */; };
+		AFD7706C2F3E143F00AA704A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8CC954D27D1310B00B6757C /* Localizable.strings */; };
+		AFD7706D2F3E144900AA704A /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B82BE50329A18A55005F9990 /* Localizable.stringsdict */; };
+		AFD7706E2F3E144900AA704A /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B82BE50329A18A55005F9990 /* Localizable.stringsdict */; };
+		AFD770712F3E4B0200AA704A /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; productRef = AFD770702F3E4B0200AA704A /* TelemetryClient */; };
+		AFD770732F3E4B0200AA704A /* TelemetryDeck in Frameworks */ = {isa = PBXBuildFile; productRef = AFD770722F3E4B0200AA704A /* TelemetryDeck */; };
 		B801070829F24499008A4551 /* ItemContentCustomListSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2C88029CA6ED100FDBB33 /* ItemContentCustomListSelector.swift */; };
 		B801070929F244DE008A4551 /* NewCustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812C7B3299480620096E806 /* NewCustomListView.swift */; };
 		B801070D29F255F3008A4551 /* DefaultListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801070C29F255F3008A4551 /* DefaultListView.swift */; };
@@ -210,7 +211,6 @@
 		B87D1B252A65D78900EB6D14 /* UpNextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D1B232A65CF6000EB6D14 /* UpNextViewModel.swift */; };
 		B87D1B272A65E63700EB6D14 /* UpNextListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D1B262A65E63700EB6D14 /* UpNextListView.swift */; };
 		B87D1B292A66128000EB6D14 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D1B282A66128000EB6D14 /* SettingsView.swift */; };
-		B87F745E280605CE00E94126 /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B87F745D280605CE00E94126 /* TelemetryClient */; };
 		B87F746328064D3800E94126 /* BackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F746228064D3800E94126 /* BackgroundManager.swift */; };
 		B87F74642806592E00E94126 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B271A327A59EF400F6463F /* CloudKit.framework */; };
 		B883A1DE2AEEA49E00793EE2 /* EditCustomListItemSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883A1DD2AEEA49E00793EE2 /* EditCustomListItemSelector.swift */; };
@@ -301,7 +301,6 @@
 		B8C0215A29E0D527006E9D82 /* ItemContentListPreferredDisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0215929E0D527006E9D82 /* ItemContentListPreferredDisplayType.swift */; };
 		B8C0215B29E0D56C006E9D82 /* ItemContentListPreferredDisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0215929E0D527006E9D82 /* ItemContentListPreferredDisplayType.swift */; };
 		B8C0215D29E121C1006E9D82 /* SettingsScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0215C29E121C1006E9D82 /* SettingsScreens.swift */; };
-		B8C0C67F28A92FF0009F4593 /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; productRef = B8C0C67E28A92FF0009F4593 /* TelemetryClient */; };
 		B8C335472815ED140055389D /* WatchListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C335462815ED140055389D /* WatchListSection.swift */; };
 		B8C781EE287F001100B4C2C2 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B8C781ED287F001100B4C2C2 /* SDWebImageSwiftUI */; };
 		B8C781F0287F4A7500B4C2C2 /* PersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C781EF287F4A7500B4C2C2 /* PersonCardView.swift */; };
@@ -330,7 +329,6 @@
 		B8D7AEC928B961AD0053CE5A /* ReleaseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D7AEC728B961A20053CE5A /* ReleaseDate.swift */; };
 		B8D7AECA28B961AE0053CE5A /* ReleaseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D7AEC728B961A20053CE5A /* ReleaseDate.swift */; };
 		B8D7AECF28B962660053CE5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D7AECD28B962490053CE5A /* Person.swift */; };
-		B8D7AEDC28B967180053CE5A /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B8D7AEDB28B967180053CE5A /* TelemetryClient */; };
 		B8D7AEE328BA64DF0053CE5A /* DataPlaceholder.json in Resources */ = {isa = PBXBuildFile; fileRef = B8D7AEE228BA64DF0053CE5A /* DataPlaceholder.json */; };
 		B8D7AEE428BA64F40053CE5A /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C268E279644E000259D98 /* Bundle-Decodable.swift */; };
 		B8D8AF8F27D4D0550042AEB6 /* AttributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D8AF8E27D4D0550042AEB6 /* AttributionView.swift */; };
@@ -428,6 +426,8 @@
 		331B29182B3F803F00C20AEA /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
 		AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF7949B62F3CCB1200988E97 /* MODERNIZATION_PLAN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MODERNIZATION_PLAN.md; sourceTree = "<group>"; };
+		AF7949B72F3CCFBB00988E97 /* DEPENDENCY_AUDIT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEPENDENCY_AUDIT.md; sourceTree = "<group>"; };
 		B801070C29F255F3008A4551 /* DefaultListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListView.swift; sourceTree = "<group>"; };
 		B801070E29F25615008A4551 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		B801071029F2562C008A4551 /* WatchlistSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistSectionView.swift; sourceTree = "<group>"; };
@@ -720,7 +720,6 @@
 				B8E3ABF62955361C00CA0945 /* CloudKit.framework in Frameworks */,
 				B8DA5CC82B0E496600678592 /* Aptabase in Frameworks */,
 				B84043DD289B360B00D5CEBF /* SDWebImageSwiftUI in Frameworks */,
-				B8C0C67F28A92FF0009F4593 /* TelemetryClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,21 +728,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F367642AF5CAAA0027CAF9 /* Aptabase in Frameworks */,
+				AFD770712F3E4B0200AA704A /* TelemetryClient in Frameworks */,
 				B8C781EE287F001100B4C2C2 /* SDWebImageSwiftUI in Frameworks */,
 				331B29082B3DE30800C20AEA /* FirebasePerformance in Frameworks */,
 				331B29062B3DE30800C20AEA /* FirebaseMessaging in Frameworks */,
 				331B29042B3DE30800C20AEA /* FirebaseInstallations in Frameworks */,
 				331B28F62B3DE30800C20AEA /* FirebaseAnalytics in Frameworks */,
-				331B28F82B3DE30800C20AEA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				331B28FA2B3DE30800C20AEA /* FirebaseAnalyticsSwift in Frameworks */,
 				332BB03F2B44913A0095CAD8 /* AdmobSwiftUI in Frameworks */,
-				B87F745E280605CE00E94126 /* TelemetryClient in Frameworks */,
 				331B29002B3DE30800C20AEA /* FirebaseInAppMessaging-Beta in Frameworks */,
 				B854FA1F2A75B24000509C34 /* YouTubePlayerKit in Frameworks */,
 				331B28FE2B3DE30800C20AEA /* FirebaseCrashlytics in Frameworks */,
-				331B28FC2B3DE30800C20AEA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				331B29022B3DE30800C20AEA /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				B87F74642806592E00E94126 /* CloudKit.framework in Frameworks */,
+				AFD770732F3E4B0200AA704A /* TelemetryDeck in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,7 +747,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8D7AEDC28B967180053CE5A /* TelemetryClient in Frameworks */,
 				B8DA5CCA2B0E5DC800678592 /* Aptabase in Frameworks */,
 				B8D7AEA928B95F5E0053CE5A /* SwiftUI.framework in Frameworks */,
 				B8D7AEA828B95F5E0053CE5A /* WidgetKit.framework in Frameworks */,
@@ -811,6 +806,8 @@
 				B8B271A227A59EF400F6463F /* Frameworks */,
 				B8110EE0279245D100844FEB /* Products */,
 				B8110ED7279245D000844FEB /* Shared */,
+				AF7949B62F3CCB1200988E97 /* MODERNIZATION_PLAN.md */,
+				AF7949B72F3CCFBB00988E97 /* DEPENDENCY_AUDIT.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1510,7 +1507,6 @@
 			name = "Streaming Now Watch App";
 			packageProductDependencies = (
 				B84043DC289B360B00D5CEBF /* SDWebImageSwiftUI */,
-				B8C0C67E28A92FF0009F4593 /* TelemetryClient */,
 				B8DA5CC72B0E496600678592 /* Aptabase */,
 			);
 			productName = "CronicaWatch Watch App";
@@ -1536,21 +1532,18 @@
 			);
 			name = "Story (iOS)";
 			packageProductDependencies = (
-				B87F745D280605CE00E94126 /* TelemetryClient */,
 				B8C781ED287F001100B4C2C2 /* SDWebImageSwiftUI */,
 				B854FA1E2A75B24000509C34 /* YouTubePlayerKit */,
 				B8F367632AF5CAAA0027CAF9 /* Aptabase */,
 				331B28F52B3DE30800C20AEA /* FirebaseAnalytics */,
-				331B28F72B3DE30800C20AEA /* FirebaseAnalyticsOnDeviceConversion */,
-				331B28F92B3DE30800C20AEA /* FirebaseAnalyticsSwift */,
-				331B28FB2B3DE30800C20AEA /* FirebaseAnalyticsWithoutAdIdSupport */,
 				331B28FD2B3DE30800C20AEA /* FirebaseCrashlytics */,
 				331B28FF2B3DE30800C20AEA /* FirebaseInAppMessaging-Beta */,
-				331B29012B3DE30800C20AEA /* FirebaseInAppMessagingSwift-Beta */,
 				331B29032B3DE30800C20AEA /* FirebaseInstallations */,
 				331B29052B3DE30800C20AEA /* FirebaseMessaging */,
 				331B29072B3DE30800C20AEA /* FirebasePerformance */,
 				332BB03E2B44913A0095CAD8 /* AdmobSwiftUI */,
+				AFD770702F3E4B0200AA704A /* TelemetryClient */,
+				AFD770722F3E4B0200AA704A /* TelemetryDeck */,
 			);
 			productName = "Story (iOS)";
 			productReference = B8110EDF279245D100844FEB /* StreamingNow.app */;
@@ -1570,7 +1563,6 @@
 			);
 			name = StreamingNowWidgetExtension;
 			packageProductDependencies = (
-				B8D7AEDB28B967180053CE5A /* TelemetryClient */,
 				B8DA5CC92B0E5DC800678592 /* Aptabase */,
 			);
 			productName = CronicaWidgetExtension;
@@ -1644,12 +1636,12 @@
 			);
 			mainGroup = B8110ED2279245D000844FEB;
 			packageReferences = (
-				B87F745C280605CE00E94126 /* XCRemoteSwiftPackageReference "SwiftClient" */,
 				B8C781EC287F001100B4C2C2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				B854FA1D2A75B24000509C34 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
 				B8F367622AF5CA900027CAF9 /* XCRemoteSwiftPackageReference "aptabase-swift" */,
 				331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				332BB03D2B44913A0095CAD8 /* XCRemoteSwiftPackageReference "AdmobSwiftUI" */,
+				AFD7706F2F3E4B0200AA704A /* XCRemoteSwiftPackageReference "SwiftSDK" */,
 			);
 			productRefGroup = B8110EE0279245D100844FEB /* Products */;
 			projectDirPath = "";
@@ -1669,6 +1661,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */,
+				AFD7706C2F3E143F00AA704A /* Localizable.strings in Resources */,
+				AFD7706D2F3E144900AA704A /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1682,6 +1676,7 @@
 				B8D7AEBC28B960420053CE5A /* Localizable.strings in Resources */,
 				331B291B2B3F803F00C20AEA /* AppIcon.appiconset in Resources */,
 				B8F905C92A852D3F003A0CE1 /* InfoPlist.strings in Resources */,
+				AFD7706E2F3E144900AA704A /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2202,7 +2197,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleWatch/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LCU85X35W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppleWatch/Configuration/CronicaWatch-Info.plist";
@@ -2221,7 +2216,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -2235,7 +2230,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleWatch/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LCU85X35W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppleWatch/Configuration/CronicaWatch-Info.plist";
@@ -2255,7 +2250,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -2415,7 +2410,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2464,7 +2459,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2665,7 +2660,7 @@
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.19.1;
+				minimumVersion = 12.0.0;
 			};
 		};
 		332BB03D2B44913A0095CAD8 /* XCRemoteSwiftPackageReference "AdmobSwiftUI" */ = {
@@ -2673,7 +2668,15 @@
 			repositoryURL = "https://github.com/dearhui/AdmobSwiftUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.11;
+				minimumVersion = 2.0.0;
+			};
+		};
+		AFD7706F2F3E4B0200AA704A /* XCRemoteSwiftPackageReference "SwiftSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TelemetryDeck/SwiftSDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.11.0;
 			};
 		};
 		B854FA1D2A75B24000509C34 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
@@ -2681,15 +2684,7 @@
 			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		B87F745C280605CE00E94126 /* XCRemoteSwiftPackageReference "SwiftClient" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/TelemetryDeck/SwiftClient";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 		B8C781EC287F001100B4C2C2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
@@ -2697,7 +2692,7 @@
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 		B8F367622AF5CA900027CAF9 /* XCRemoteSwiftPackageReference "aptabase-swift" */ = {
@@ -2705,7 +2700,7 @@
 			repositoryURL = "https://github.com/aptabase/aptabase-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.4;
+				minimumVersion = 0.3.11;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -2716,21 +2711,6 @@
 			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		331B28F72B3DE30800C20AEA /* FirebaseAnalyticsOnDeviceConversion */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsOnDeviceConversion;
-		};
-		331B28F92B3DE30800C20AEA /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		331B28FB2B3DE30800C20AEA /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
 		331B28FD2B3DE30800C20AEA /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -2740,11 +2720,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseInAppMessaging-Beta";
-		};
-		331B29012B3DE30800C20AEA /* FirebaseInAppMessagingSwift-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseInAppMessagingSwift-Beta";
 		};
 		331B29032B3DE30800C20AEA /* FirebaseInstallations */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -2766,6 +2741,16 @@
 			package = 332BB03D2B44913A0095CAD8 /* XCRemoteSwiftPackageReference "AdmobSwiftUI" */;
 			productName = AdmobSwiftUI;
 		};
+		AFD770702F3E4B0200AA704A /* TelemetryClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFD7706F2F3E4B0200AA704A /* XCRemoteSwiftPackageReference "SwiftSDK" */;
+			productName = TelemetryClient;
+		};
+		AFD770722F3E4B0200AA704A /* TelemetryDeck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFD7706F2F3E4B0200AA704A /* XCRemoteSwiftPackageReference "SwiftSDK" */;
+			productName = TelemetryDeck;
+		};
 		B84043DC289B360B00D5CEBF /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B8C781EC287F001100B4C2C2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
@@ -2776,25 +2761,10 @@
 			package = B854FA1D2A75B24000509C34 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
 			productName = YouTubePlayerKit;
 		};
-		B87F745D280605CE00E94126 /* TelemetryClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B87F745C280605CE00E94126 /* XCRemoteSwiftPackageReference "SwiftClient" */;
-			productName = TelemetryClient;
-		};
-		B8C0C67E28A92FF0009F4593 /* TelemetryClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B87F745C280605CE00E94126 /* XCRemoteSwiftPackageReference "SwiftClient" */;
-			productName = TelemetryClient;
-		};
 		B8C781ED287F001100B4C2C2 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B8C781EC287F001100B4C2C2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
-		};
-		B8D7AEDB28B967180053CE5A /* TelemetryClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B87F745C280605CE00E94126 /* XCRemoteSwiftPackageReference "SwiftClient" */;
-			productName = TelemetryClient;
 		};
 		B8DA5CC72B0E496600678592 /* Aptabase */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,22 +6,22 @@ struct HeroImage: View {
 	let title: String
 	var type: MediaType = .movie
 	var body: some View {
-		WebImage(url: url, options: .highPriority)
-			.resizable()
-			.placeholder {
-				ZStack {
-					Rectangle().fill(.gray.gradient)
-					Image(systemName: "popcorn.fill")
-						.font(.title)
-						.fontWidth(.expanded)
-						.foregroundColor(.white.opacity(0.8))
-						.unredacted()
-						.padding()
-				}
-				.transition(.opacity)
+		WebImage(url: url, options: .highPriority) { image in
+			image.resizable()
+		} placeholder: {
+			ZStack {
+				Rectangle().fill(.gray.gradient)
+				Image(systemName: "popcorn.fill")
+					.font(.title)
+					.fontWidth(.expanded)
+					.foregroundColor(.white.opacity(0.8))
+					.unredacted()
+					.padding()
 			}
-			.aspectRatio(contentMode: .fill)
 			.transition(.opacity)
+		}
+		.aspectRatio(contentMode: .fill)
+		.transition(.opacity)
 #if os(watchOS)
 			.frame(height: 90)
 			.clipShape(
