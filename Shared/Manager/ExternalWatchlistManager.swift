@@ -3,7 +3,9 @@ import SwiftUI
 /// This class handles with fetching and sync of lists on external services.
 ///
 /// Only TMDb is accepted at the moment.
-class ExternalWatchlistManager: ObservableObject {
+@MainActor
+@Observable
+class ExternalWatchlistManager {
     static let shared = ExternalWatchlistManager()
     private let contentTypeHeader = "application/json;charset=utf-8"
     private let decoder = JSONDecoder()
@@ -16,7 +18,7 @@ class ExternalWatchlistManager: ObservableObject {
     private var userAccessId = String()
     private var userSessionId = String()
     
-    @Published var watchlist = [ItemContent]()
+    var watchlist = [ItemContent]()
     
     private init() {
         decoder.keyDecodingStrategy = .convertFromSnakeCase

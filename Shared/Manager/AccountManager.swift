@@ -1,7 +1,9 @@
 import Foundation
 
 /// This class has all functions required to manage sign-in and sign-out workflows for TMDB accounts.
-class AccountManager: ObservableObject {
+@MainActor
+@Observable
+class AccountManager {
     static let shared = AccountManager()
     private let contentTypeHeader = "application/json;charset=utf-8"
     private let decoder = JSONDecoder()

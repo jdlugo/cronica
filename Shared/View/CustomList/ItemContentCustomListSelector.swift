@@ -105,7 +105,7 @@ struct ItemContentCustomListSelector: View {
                 List {
                     ForEach(tmdbLists) { list in
                         TMDBAddToListRow(list: list, item: item, showView: $showView)
-                            .environmentObject(listManager)
+                            .environment(listManager)
                             .padding(.vertical, 4)
                     }
                 }

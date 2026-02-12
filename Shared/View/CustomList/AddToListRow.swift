@@ -39,7 +39,7 @@ struct TMDBAddToListRow: View {
     var list: TMDBListResult
     var item: WatchlistItem?
     @Binding var showView: Bool
-    @EnvironmentObject var viewModel: ExternalWatchlistManager
+    @Environment(ExternalWatchlistManager.self) private var viewModel
     var body: some View {
         HStack {
             Image(systemName: isItemAdded ? "checkmark.circle.fill" : "circle")
