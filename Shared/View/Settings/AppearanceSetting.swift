@@ -3,7 +3,7 @@ import SwiftUI
 struct AppearanceSetting: View {
     @StateObject private var store = SettingsStore.shared
 #if os(iOS)
-    @StateObject private var icons = IconModel()
+    @State private var icons = IconModel()
 #endif
     var body: some View {
         Form {

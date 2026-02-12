@@ -2,13 +2,14 @@ import StoreKit
 import SwiftUI
 
 @MainActor
-class StoreKitManager: ObservableObject {
-    @Published var storeProducts = [Product]()
-    @Published var purchasedTipJar = [Product]()
-    @Published var hasUserPurchased = false
+@Observable
+class StoreKitManager {
+    var storeProducts = [Product]()
+    var purchasedTipJar = [Product]()
+    var hasUserPurchased = false
     var hasLoadedProducts = false
     private let productDict: [String:String]
-    var updateListenerTask: Task<Void, Error>? = nil
+    nonisolated(unsafe) var updateListenerTask: Task<Void, Error>? = nil
     
     init() {
         if let plistPath = Bundle.main.path(forResource: "ProductList", ofType: "plist"),

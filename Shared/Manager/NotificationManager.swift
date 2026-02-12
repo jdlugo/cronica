@@ -1,9 +1,11 @@
 import Foundation
 import UserNotifications
 
-class NotificationManager: ObservableObject {
+@MainActor
+@Observable
+class NotificationManager {
     static let shared = NotificationManager()
-    @Published var settings: UNNotificationSettings?
+    var settings: UNNotificationSettings?
     private init() { }
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
@@ -85,7 +87,7 @@ class NotificationManager: ObservableObject {
 #endif
     }
     
-    func removeNotification(identifier: String) {
+    nonisolated func removeNotification(identifier: String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
     }
     

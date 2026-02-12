@@ -2,7 +2,7 @@ import SwiftUI
 import StoreKit
 
 struct TipJarSetting: View {
-    @StateObject private var viewModel = StoreKitManager()
+    @State private var viewModel = StoreKitManager()
     @State private var productsLoaded = false
     var body: some View {
         Form {
@@ -57,7 +57,7 @@ struct TipJarSetting: View {
 }
 
 private struct TipJarItem: View {
-    @ObservedObject var storeKit: StoreKitManager
+    var storeKit: StoreKitManager
     @State private var isPurchased = false
     var product: Product
     var body: some View {

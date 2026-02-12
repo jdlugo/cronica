@@ -151,7 +151,9 @@ class BackgroundManager {
 			// the app will only register when it's less than two months away
 			// from release date.
 			if content.itemFallbackDate.isLessThanTwoWeeksAway() {
-				notifications.schedule(content)
+				await MainActor.run {
+					notifications.schedule(content)
+				}
 			}
 		}
 		PersistenceController.shared.update(item: content)

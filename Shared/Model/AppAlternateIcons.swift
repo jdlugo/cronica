@@ -33,8 +33,10 @@ enum Icon: String, CaseIterable, Identifiable {
     }
 }
 
-class IconModel: ObservableObject {
-    @Published private(set) var selectedAppIcon: Icon = .primary
+@MainActor
+@Observable
+class IconModel {
+    private(set) var selectedAppIcon: Icon = .primary
     
     init() {
         if let iconName = UIApplication.shared.alternateIconName, let appIcon = Icon(rawValue: iconName) {
@@ -46,7 +48,7 @@ class IconModel: ObservableObject {
     
     func updateAppIcon(to icon: Icon) {
         selectedAppIcon = icon
-        Task { @MainActor in
+        Task {
             guard UIApplication.shared.alternateIconName != icon.iconName else { return }
             try? await UIApplication.shared.setAlternateIconName(icon.iconName)
         }
