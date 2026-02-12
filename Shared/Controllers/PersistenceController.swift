@@ -5,9 +5,10 @@ import CloudKit
 /// tracking watchlists, and dealing with sample data.
 struct PersistenceController {
     static let shared = PersistenceController()
-    // MARK: Preview sample
+    
+    // MARK: Preview sample - uses NSPersistentContainer (no CloudKit) for reliability
     static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
+        let result = PersistenceController(inMemory: true, useCloudKit: false)
         let viewContext = result.container.viewContext
         for item in ItemContent.examples {
             let newItem = WatchlistItem(context: viewContext)
@@ -20,39 +21,45 @@ struct PersistenceController {
         do {
             try viewContext.save()
         } catch {
-            fatalError("Fatal error creating preview: \(error.localizedDescription)")
+            print("Preview Core Data save error: \(error.localizedDescription)")
         }
         return result
     }()
     
-    let container: NSPersistentCloudKitContainer = {
-        let container = NSPersistentCloudKitContainer(name: "Watchlist")
+    let container: NSPersistentContainer
+    
+    init(inMemory: Bool = false, useCloudKit: Bool = true) {
+        if useCloudKit {
+            container = NSPersistentCloudKitContainer(name: "Watchlist")
+        } else {
+            container = NSPersistentContainer(name: "Watchlist")
+        }
+        
+        if inMemory {
+            let description = NSPersistentStoreDescription()
+            description.type = NSInMemoryStoreType
+            container.persistentStoreDescriptions = [description]
+        }
+        
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
-#if DEBUG
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-#endif
+                print("Core Data persistent store error: \(error), \(error.userInfo)")
             }
             storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
             storeDescription.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
-            
         }
+        
 #if DEBUG && os(iOS)
-        do {
-            try container.initializeCloudKitSchema()
-        } catch {
-            print("initializeCloudKitSchema: \(error.localizedDescription)")
+        if !inMemory, let cloudKitContainer = container as? NSPersistentCloudKitContainer {
+            do {
+                try cloudKitContainer.initializeCloudKitSchema()
+            } catch {
+                print("initializeCloudKitSchema: \(error.localizedDescription)")
+            }
         }
 #endif
-        return container
-    }()
-    
-    init(inMemory: Bool = false) {
-        if inMemory {
-            container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
-        }
     }
     
     func save() {

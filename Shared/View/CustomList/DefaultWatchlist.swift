@@ -304,4 +304,5 @@ struct DefaultWatchlist: View {
 
 #Preview {
     DefaultWatchlist(showPopup: .constant(false), popupType: .constant(nil))
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

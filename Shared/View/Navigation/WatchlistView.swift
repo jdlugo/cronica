@@ -100,6 +100,8 @@ struct WatchlistView: View {
 }
 
 #Preview {
-    WatchlistView()
-        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    NavigationStack {
+        WatchlistView()
+    }
+    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
