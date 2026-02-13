@@ -216,6 +216,43 @@ class ItemContentViewModel {
             }
         }
     }
+
+#if DEBUG
+    static func preview(with item: ItemContent, includeMockTrailers: Bool = false) -> ItemContentViewModel {
+        let vm = ItemContentViewModel()
+        vm.content = item
+        vm.isLoading = false
+        vm.showMarkAsButton = true
+        vm.recommendations = Array(ItemContent.examples.prefix(5))
+        vm.credits = item.credits?.cast ?? []
+        let itemTrailers = item.itemTrailers
+        if !itemTrailers.isEmpty {
+            vm.trailers = Array(itemTrailers.prefix(3))
+        } else if includeMockTrailers {
+            vm.trailers = [
+                VideoItem(
+                    url: URL(string: "https://www.youtube.com/watch?v=vM-Bja2Bbe0"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/vM-Bja2Bbe0/hqdefault.jpg"),
+                    title: "Official Trailer",
+                    videoID: "vM-Bja2Bbe0"
+                ),
+                VideoItem(
+                    url: URL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"),
+                    title: "Final Trailer",
+                    videoID: "dQw4w9WgXcQ"
+                ),
+                VideoItem(
+                    url: URL(string: "https://www.youtube.com/watch?v=9bZkp7q19f0"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg"),
+                    title: "Teaser Trailer",
+                    videoID: "9bZkp7q19f0"
+                )
+            ]
+        }
+        return vm
+    }
+#endif
 }
 
 enum UpdateItemProperties: String, Identifiable, CaseIterable {

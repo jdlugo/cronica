@@ -16,6 +16,7 @@
 		331B291B2B3F803F00C20AEA /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 331B29182B3F803F00C20AEA /* AppIcon.appiconset */; };
 		332BB03C2B448CCB0095CAD8 /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */; platformFilter = ios; };
 		AF1234572F5A0002009ADCF0 /* AdConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1234562F5A0001009ADCF0 /* AdConfiguration.swift */; platformFilter = ios; };
+		AF3000000000000000000001 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = B87B5CCB27999C5700632648 /* content.json */; };
 		AF1234592F5A0004009ADCF0 /* AdConsentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1234582F5A0003009ADCF0 /* AdConsentManager.swift */; platformFilter = ios; };
 		332BB03F2B44913A0095CAD8 /* AdmobSwiftUI in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 332BB03E2B44913A0095CAD8 /* AdmobSwiftUI */; };
 		AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */; };
@@ -375,6 +376,15 @@
 		AF2345010000000000000008 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2345010000000000000007 /* PersistenceTests.swift */; };
 		AF234501000000000000000A /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2345010000000000000009 /* ModelTests.swift */; };
 		AF234501000000000000000C /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF234501000000000000000B /* SettingsStoreTests.swift */; };
+		AF2000000000000000000011 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000001 /* ScreenshotTests.swift */; };
+		AF2000000000000000000012 /* ScreenshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000002 /* ScreenshotHelpers.swift */; };
+		AF2000000000000000000013 /* HomeScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000003 /* HomeScreenshotView.swift */; };
+		AF2000000000000000000014 /* ExploreScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000004 /* ExploreScreenshotView.swift */; };
+		AF2000000000000000000015 /* DetailScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000005 /* DetailScreenshotView.swift */; };
+		AF2000000000000000000016 /* WatchlistScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000006 /* WatchlistScreenshotView.swift */; };
+		AF2000000000000000000017 /* DetailCastScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000007 /* DetailCastScreenshotView.swift */; };
+		AF2000000000000000000018 /* DetailRecommendationsScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000008 /* DetailRecommendationsScreenshotView.swift */; };
+		AF2000000000000000000019 /* DetailTrailersScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000009 /* DetailTrailersScreenshotView.swift */; };
 		B8FCAE982AEDA38E00F688FE /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */; };
 		B8FF4DBB27F91A4900C7DE9F /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */; };
 		B8FF4DBF27FA511A00C7DE9F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBE27FA511A00C7DE9F /* TitleView.swift */; };
@@ -723,6 +733,15 @@
 		AF2345010000000000000007 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
 		AF2345010000000000000009 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		AF234501000000000000000B /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
+		AF2000000000000000000001 /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
+		AF2000000000000000000002 /* ScreenshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotHelpers.swift; sourceTree = "<group>"; };
+		AF2000000000000000000003 /* HomeScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenshotView.swift; sourceTree = "<group>"; };
+		AF2000000000000000000004 /* ExploreScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenshotView.swift; sourceTree = "<group>"; };
+		AF2000000000000000000005 /* DetailScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenshotView.swift; sourceTree = "<group>"; };
+		AF2000000000000000000006 /* WatchlistScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistScreenshotView.swift; sourceTree = "<group>"; };
+		AF2000000000000000000007 /* DetailCastScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCastScreenshotView.swift; sourceTree = "<group>"; };
+		AF2000000000000000000008 /* DetailRecommendationsScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecommendationsScreenshotView.swift; sourceTree = "<group>"; };
+		AF2000000000000000000009 /* DetailTrailersScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrailersScreenshotView.swift; sourceTree = "<group>"; };
 		B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListView.swift; sourceTree = "<group>"; };
 		B8FF4DBE27FA511A00C7DE9F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		B8FF4DC027FB56F500C7DE9F /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
@@ -1510,8 +1529,25 @@
 				AF2345010000000000000007 /* PersistenceTests.swift */,
 				AF2345010000000000000009 /* ModelTests.swift */,
 				AF234501000000000000000B /* SettingsStoreTests.swift */,
+				AF2000000000000000000020 /* Screenshots */,
 			);
 			path = CronicaTests;
+			sourceTree = "<group>";
+		};
+		AF2000000000000000000020 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				AF2000000000000000000001 /* ScreenshotTests.swift */,
+				AF2000000000000000000002 /* ScreenshotHelpers.swift */,
+				AF2000000000000000000003 /* HomeScreenshotView.swift */,
+				AF2000000000000000000004 /* ExploreScreenshotView.swift */,
+				AF2000000000000000000005 /* DetailScreenshotView.swift */,
+				AF2000000000000000000006 /* WatchlistScreenshotView.swift */,
+				AF2000000000000000000007 /* DetailCastScreenshotView.swift */,
+				AF2000000000000000000008 /* DetailRecommendationsScreenshotView.swift */,
+				AF2000000000000000000009 /* DetailTrailersScreenshotView.swift */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1607,6 +1643,9 @@
 				B8FCAE942AED9CE300F688FE /* PBXTargetDependency */,
 			);
 			name = CronicaTests;
+			packageProductDependencies = (
+				AF1B2C3E2F4E5A6700112233 /* SnapshotTesting */,
+			);
 			productName = CronicaTests;
 			productReference = B8FCAE8F2AED9CE300F688FE /* CronicaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1666,6 +1705,7 @@
 				331B28F02B3DE19400C20AEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				332BB03D2B44913A0095CAD8 /* XCRemoteSwiftPackageReference "AdmobSwiftUI" */,
 				AFD7706F2F3E4B0200AA704A /* XCRemoteSwiftPackageReference "SwiftSDK" */,
+				AF1B2C3D2F4E5A6700112233 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = B8110EE0279245D100844FEB /* Products */;
 			projectDirPath = "";
@@ -1687,6 +1727,7 @@
 				AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */,
 				AFD7706C2F3E143F00AA704A /* Localizable.strings in Resources */,
 				AFD7706D2F3E144900AA704A /* Localizable.stringsdict in Resources */,
+				AF3000000000000000000001 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2101,6 +2142,15 @@
 				AF2345010000000000000008 /* PersistenceTests.swift in Sources */,
 				AF234501000000000000000A /* ModelTests.swift in Sources */,
 				AF234501000000000000000C /* SettingsStoreTests.swift in Sources */,
+				AF2000000000000000000011 /* ScreenshotTests.swift in Sources */,
+				AF2000000000000000000012 /* ScreenshotHelpers.swift in Sources */,
+				AF2000000000000000000013 /* HomeScreenshotView.swift in Sources */,
+				AF2000000000000000000014 /* ExploreScreenshotView.swift in Sources */,
+				AF2000000000000000000015 /* DetailScreenshotView.swift in Sources */,
+				AF2000000000000000000016 /* WatchlistScreenshotView.swift in Sources */,
+				AF2000000000000000000017 /* DetailCastScreenshotView.swift in Sources */,
+				AF2000000000000000000018 /* DetailRecommendationsScreenshotView.swift in Sources */,
+				AF2000000000000000000019 /* DetailTrailersScreenshotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2737,6 +2787,14 @@
 				minimumVersion = 0.3.11;
 			};
 		};
+		AF1B2C3D2F4E5A6700112233 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2814,6 +2872,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B8F367622AF5CA900027CAF9 /* XCRemoteSwiftPackageReference "aptabase-swift" */;
 			productName = Aptabase;
+		};
+		AF1B2C3E2F4E5A6700112233 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF1B2C3D2F4E5A6700112233 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 
