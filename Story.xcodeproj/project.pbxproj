@@ -15,6 +15,8 @@
 		331B29082B3DE30800C20AEA /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, tvos, ); productRef = 331B29072B3DE30800C20AEA /* FirebasePerformance */; };
 		331B291B2B3F803F00C20AEA /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 331B29182B3F803F00C20AEA /* AppIcon.appiconset */; };
 		332BB03C2B448CCB0095CAD8 /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */; platformFilter = ios; };
+		AF1234572F5A0002009ADCF0 /* AdConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1234562F5A0001009ADCF0 /* AdConfiguration.swift */; platformFilter = ios; };
+		AF1234592F5A0004009ADCF0 /* AdConsentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1234582F5A0003009ADCF0 /* AdConsentManager.swift */; platformFilter = ios; };
 		332BB03F2B44913A0095CAD8 /* AdmobSwiftUI in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 332BB03E2B44913A0095CAD8 /* AdmobSwiftUI */; };
 		AF0972F92F3C9584006A1BDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */; };
 		AFD7706C2F3E143F00AA704A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8CC954D27D1310B00B6757C /* Localizable.strings */; };
@@ -367,6 +369,12 @@
 		B8FCAE892AED8C9300F688FE /* WatchlistSearchScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8389ED128AB46E3003025BC /* WatchlistSearchScope.swift */; };
 		B8FCAE8A2AED8CA200F688FE /* FilmographyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C781F1287F576100B4C2C2 /* FilmographyListView.swift */; };
 		B8FCAE922AED9CE300F688FE /* CronicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FCAE912AED9CE300F688FE /* CronicaTests.swift */; };
+		AF2345010000000000000002 /* AdConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2345010000000000000001 /* AdConfigurationTests.swift */; };
+		AF2345010000000000000004 /* AdCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2345010000000000000003 /* AdCoordinatorTests.swift */; };
+		AF2345010000000000000006 /* AdGatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2345010000000000000005 /* AdGatingTests.swift */; };
+		AF2345010000000000000008 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2345010000000000000007 /* PersistenceTests.swift */; };
+		AF234501000000000000000A /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2345010000000000000009 /* ModelTests.swift */; };
+		AF234501000000000000000C /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF234501000000000000000B /* SettingsStoreTests.swift */; };
 		B8FCAE982AEDA38E00F688FE /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */; };
 		B8FF4DBB27F91A4900C7DE9F /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */; };
 		B8FF4DBF27FA511A00C7DE9F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBE27FA511A00C7DE9F /* TitleView.swift */; };
@@ -425,6 +433,8 @@
 /* Begin PBXFileReference section */
 		331B29182B3F803F00C20AEA /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
+		AF1234562F5A0001009ADCF0 /* AdConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfiguration.swift; sourceTree = "<group>"; };
+		AF1234582F5A0003009ADCF0 /* AdConsentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConsentManager.swift; sourceTree = "<group>"; };
 		AF0972F82F3C9583006A1BDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF7949B62F3CCB1200988E97 /* MODERNIZATION_PLAN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MODERNIZATION_PLAN.md; sourceTree = "<group>"; };
 		AF7949B72F3CCFBB00988E97 /* DEPENDENCY_AUDIT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEPENDENCY_AUDIT.md; sourceTree = "<group>"; };
@@ -707,6 +717,12 @@
 		B8FB2A8F295263AB006DAC8E /* AboutSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettings.swift; sourceTree = "<group>"; };
 		B8FCAE8F2AED9CE300F688FE /* CronicaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CronicaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FCAE912AED9CE300F688FE /* CronicaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CronicaTests.swift; sourceTree = "<group>"; };
+		AF2345010000000000000001 /* AdConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfigurationTests.swift; sourceTree = "<group>"; };
+		AF2345010000000000000003 /* AdCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinatorTests.swift; sourceTree = "<group>"; };
+		AF2345010000000000000005 /* AdGatingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdGatingTests.swift; sourceTree = "<group>"; };
+		AF2345010000000000000007 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		AF2345010000000000000009 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		AF234501000000000000000B /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
 		B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListView.swift; sourceTree = "<group>"; };
 		B8FF4DBE27FA511A00C7DE9F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		B8FF4DC027FB56F500C7DE9F /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
@@ -1422,6 +1438,8 @@
 				B86E587827A48E5A005DBF38 /* Key.swift */,
 				B8E6D64027B6B106002E7A63 /* Watchlist.xcdatamodeld */,
 				332BB03B2B448CCB0095CAD8 /* AdCoordinator.swift */,
+				AF1234562F5A0001009ADCF0 /* AdConfiguration.swift */,
+				AF1234582F5A0003009ADCF0 /* AdConsentManager.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -1486,6 +1504,12 @@
 			isa = PBXGroup;
 			children = (
 				B8FCAE912AED9CE300F688FE /* CronicaTests.swift */,
+				AF2345010000000000000001 /* AdConfigurationTests.swift */,
+				AF2345010000000000000003 /* AdCoordinatorTests.swift */,
+				AF2345010000000000000005 /* AdGatingTests.swift */,
+				AF2345010000000000000007 /* PersistenceTests.swift */,
+				AF2345010000000000000009 /* ModelTests.swift */,
+				AF234501000000000000000B /* SettingsStoreTests.swift */,
 			);
 			path = CronicaTests;
 			sourceTree = "<group>";
@@ -1898,6 +1922,8 @@
 				B812C7B62996C2DB0096E806 /* SelectListView.swift in Sources */,
 				B8423E2C2793B4C10012259B /* WatchlistView.swift in Sources */,
 				332BB03C2B448CCB0095CAD8 /* AdCoordinator.swift in Sources */,
+				AF1234572F5A0002009ADCF0 /* AdConfiguration.swift in Sources */,
+				AF1234592F5A0004009ADCF0 /* AdConsentManager.swift in Sources */,
 				B81DD92C29BD149D009F73F3 /* WatchlistItem+CoreDataProperties.swift in Sources */,
 				B82C268F279644E000259D98 /* Bundle-Decodable.swift in Sources */,
 				B876DE64281B36A7005558DD /* Season.swift in Sources */,
@@ -2069,6 +2095,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8FCAE922AED9CE300F688FE /* CronicaTests.swift in Sources */,
+				AF2345010000000000000002 /* AdConfigurationTests.swift in Sources */,
+				AF2345010000000000000004 /* AdCoordinatorTests.swift in Sources */,
+				AF2345010000000000000006 /* AdGatingTests.swift in Sources */,
+				AF2345010000000000000008 /* PersistenceTests.swift in Sources */,
+				AF234501000000000000000A /* ModelTests.swift in Sources */,
+				AF234501000000000000000C /* SettingsStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2568,6 +2600,7 @@
 				DEVELOPMENT_TEAM = LCU85X35W5;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlugokecki.qscanlite.tests;
@@ -2577,7 +2610,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cronica.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cronica";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamingNow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StreamingNow";
 			};
 			name = Debug;
 		};
@@ -2591,6 +2624,7 @@
 				DEVELOPMENT_TEAM = LCU85X35W5;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlugokecki.qscanlite.tests;
@@ -2599,7 +2633,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cronica.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cronica";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamingNow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StreamingNow";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -7,7 +7,6 @@ import YouTubePlayerKit
 
 struct TrailerItemView: View {
     private let trailer: VideoItem
-    @State private var adDisplayedProvider:Bool? = false
 
 #if os(iOS)
     private let player: YouTubePlayer
@@ -95,44 +94,8 @@ struct TrailerItemView: View {
     
     private func openVideo() {
 #if os(iOS)
-        
-        if adDisplayedProvider ?? false {
-            
-            if UIDevice.isIPhone {
-                if openInYouTube {
-                    if let url = trailer.url {
-                        UIApplication.shared.open(url, options: [:]) { success in
-                            self.adDisplayedProvider = false
-                            if !success {
-                                print("[TrailerItemView] Failed to open URL: \(url)")
-                            }
-                        }
-                    }
-                } else {
-                    self.isLoading = true
-                    Task {
-                        try? await player.play()
-                    }
-                    self.adDisplayedProvider = false
-                }
-            } else {
-                if openInYouTube {
-                    if let url = trailer.url {
-                        UIApplication.shared.open(url, options: [:]) { success in
-                            self.adDisplayedProvider = false
-                            if !success {
-                                print("[TrailerItemView] Failed to open URL: \(url)")
-                            }
-                        }
-                    }
-                } else {
-                    showWebPlayer = true
-                }
-            }
-        }
-        else {
-            adCoordinator.presentAd()
-            adDisplayedProvider = true;
+        adCoordinator.presentAd { [self] in
+            playTrailer()
         }
 #elseif os(macOS)
         if let url = trailer.url {
@@ -140,6 +103,21 @@ struct TrailerItemView: View {
         }
 #endif
     }
+
+#if os(iOS)
+    private func playTrailer() {
+        if openInYouTube {
+            if let url = trailer.url {
+                UIApplication.shared.open(url)
+            }
+        } else if UIDevice.isIPhone {
+            isLoading = true
+            Task { try? await player.play() }
+        } else {
+            showWebPlayer = true
+        }
+    }
+#endif
     
     private var placeholder: some View {
         ZStack {

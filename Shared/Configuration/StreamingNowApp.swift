@@ -16,12 +16,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
-    MobileAds.shared.start()
-  
+
     Messaging.messaging().delegate = self
-    // Register for remote notifications. This shows a permission dialog on first run, to
-    // show the dialog at a more appropriate time move this registration accordingly.
-    // [START register_for_notifications]
 
     UNUserNotificationCenter.current().delegate = self
 
@@ -33,10 +29,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     application.registerForRemoteNotifications()
 
-    // [END register_for_notifications]
-      
-      if let window { window.tintColor = UIColor.red }
-      
+    if let window { window.tintColor = UIColor.red }
+
+    // Gather consent then start ads SDK
+    Task { @MainActor in
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let root = windowScene.windows.first?.rootViewController {
+            await AdConsentManager.gatherConsent(from: root)
+        }
+        await MobileAds.shared.start()
+    }
+
     return true
   }
 

@@ -10,7 +10,8 @@ struct SettingsView: View {
     @State private var showPolicy = false
     @State private var showWhatsNew = false
     
-    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
+    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: AdConfiguration.AdUnitID.native, requestInterval: AdConfiguration.nativeRefreshInterval)
+    @StateObject private var store = SettingsStore.shared
 
 #elseif os(tvOS)
     @StateObject private var store = SettingsStore.shared
@@ -83,9 +84,11 @@ struct SettingsView: View {
                 }
                 
 #if os(iOS)
-                NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
-                                        .frame(height: 80)
-                                        .background(Color(UIColor.secondarySystemBackground))
+                if !store.hasPurchasedTipJar {
+                    NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
+                        .frame(height: 80)
+                        .background(Color(UIColor.secondarySystemBackground))
+                }
 #endif
             }
             .navigationTitle("Settings")
@@ -103,7 +106,9 @@ struct SettingsView: View {
             }
             .onAppear {
 #if os(iOS)
-                nativeViewModel.refreshAd()
+                if !store.hasPurchasedTipJar {
+                    nativeViewModel.refreshAd()
+                }
 #endif
             }
         }

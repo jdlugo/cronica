@@ -1,18 +1,8 @@
 import SwiftUI
 
-#if os(iOS)
-import AdmobSwiftUI
-#endif
-
 #if os(iOS) || os(tvOS)
 /// A TabBar for switching views, only used on iPhone.
 struct TabBarView: View {
-#if os(iOS)
-    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
-    private let adViewControllerRepresentable = AdViewControllerRepresentable()
-    private let adCoordinator = InterstitialAdCoordinator()
-    private let rewardCoordinator = RewardedAdCoordinator()
-#endif
     @AppStorage("selectedView") var selectedView: Screens?
     var persistence = PersistenceController.shared
     var body: some View {

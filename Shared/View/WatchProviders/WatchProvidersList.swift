@@ -1,10 +1,6 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-#if os(iOS)
-import GoogleMobileAds
-import AdmobSwiftUI
-#endif
 
 struct WatchProvidersList: View {
 
@@ -14,14 +10,12 @@ struct WatchProvidersList: View {
     @State private var items = [WatchProviderContent]()
     @State private var link: URL?
     @State private var isLoaded = false
-    @State private var adDisplayedProvider = false
     @AppStorage("firstLocaleCheck") private var firstCheck = false
     @State private var showConfirmation = false
     @StateObject private var settings = SettingsStore.shared
     @AppStorage("alwaysShowConfirmationWatchProvider") private var isConfirmationEnabled = true
-    
+
 #if os(iOS)
-    private let adViewControllerRepresentable = AdViewControllerRepresentable()
     private let adCoordinator = AdCoordinator()
 #endif
     
@@ -36,17 +30,13 @@ struct WatchProvidersList: View {
                     LazyHStack {
                         ForEach(items, id: \.self) { item in
                             Button {
-                                print("trying to open item with adDisplayed=" + String(adDisplayedProvider))
 #if os(iOS)
-                                if adDisplayedProvider {
+                                adCoordinator.presentAd {
                                     openLink()
                                 }
-                                else {
-                                    adCoordinator.presentAd()
-                                    adDisplayedProvider = true;
-                                }
+#else
+                                openLink()
 #endif
-                    
                             } label: {
                                 providerItemView(item)
                             }
@@ -58,21 +48,6 @@ struct WatchProvidersList: View {
                             .applyHoverEffect()
                         }
                         .padding(.bottom)
-                        .background {
-#if os(iOS)
-
-                                // Add the adViewControllerRepresentable to the background so it
-                                // doesn't influence the placement of other views in the view hierarchy.
-                                adViewControllerRepresentable
-                                  .frame(width: .zero, height: .zero)
-#endif
-                        }
-                        .onAppear {
-                            print("watchproviderslist onAppear!!!")
-#if os(iOS)
-                            adCoordinator.loadAd()
-#endif
-                        }
                     }
                 }
             }
@@ -89,11 +64,10 @@ struct WatchProvidersList: View {
     }
     
     private func openLink() {
-        if let link = link {
+        if let link {
 #if os(macOS)
             NSWorkspace.shared.open(link)
 #else
-            adDisplayedProvider = false;
             UIApplication.shared.open(link)
 #endif
         }

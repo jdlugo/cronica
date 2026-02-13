@@ -18,7 +18,7 @@ struct OverviewBoxView: View {
     @State private var isTruncated = false
     @StateObject private var settings = SettingsStore.shared
 #if os(iOS)
-    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
+    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: AdConfiguration.AdUnitID.native, requestInterval: AdConfiguration.nativeRefreshInterval)
 #endif
     
     var body: some View {
@@ -71,9 +71,11 @@ struct OverviewBoxView: View {
                         }
                         
 #if os(iOS)
-                        NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
-                                                .frame(height: 90)
-                                                .background(Color(UIColor.secondarySystemBackground))
+                        if !settings.hasPurchasedTipJar {
+                            NativeAdView(nativeViewModel: nativeViewModel, style: .banner)
+                                .frame(height: 90)
+                                .background(Color(UIColor.secondarySystemBackground))
+                        }
 #endif
                         
                         
@@ -112,7 +114,9 @@ struct OverviewBoxView: View {
 #if os(iOS)
                 .groupBoxStyle(TransparentGroupBox())
                 .onAppear {
-                           nativeViewModel.refreshAd()
+                    if !settings.hasPurchasedTipJar {
+                        nativeViewModel.refreshAd()
+                    }
                 }
 #endif
             }

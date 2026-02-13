@@ -23,7 +23,7 @@ struct ItemContentPadView: View {
     @StateObject private var store = SettingsStore.shared
     @Binding var showPopup: Bool
 #if os(iOS)
-    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: "ca-app-pub-7891478850122465/8171033829", requestInterval: 1)
+    @StateObject private var nativeViewModel = NativeAdViewModel(adUnitID: AdConfiguration.AdUnitID.native, requestInterval: AdConfiguration.nativeRefreshInterval)
 #endif
     var body: some View {
         @Bindable var viewModel = viewModel
@@ -58,7 +58,9 @@ struct ItemContentPadView: View {
 #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-                   nativeViewModel.refreshAd()
+            if !store.hasPurchasedTipJar {
+                nativeViewModel.refreshAd()
+            }
         }
 #elseif os(macOS)
         .navigationTitle(title)
@@ -185,10 +187,12 @@ struct ItemContentPadView: View {
             
             
 #if os(iOS)
-            NativeAdView(nativeViewModel: nativeViewModel, style: .card)
-                                    .frame(height: 320)
-                                    .background(Color(UIColor.secondarySystemBackground))                    .padding(.leading)
-
+            if !store.hasPurchasedTipJar {
+                NativeAdView(nativeViewModel: nativeViewModel, style: .card)
+                    .frame(height: 320)
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .padding(.leading)
+            }
 #endif
             
             ViewThatFits {
