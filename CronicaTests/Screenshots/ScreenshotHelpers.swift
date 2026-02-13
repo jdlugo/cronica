@@ -8,6 +8,10 @@ enum ScreenshotDevice: String, CaseIterable {
     case iPhone6_9 = "iPhone_6.9"
     /// 6.5" — iPhone 14 Pro Max / 13 Pro Max (required by App Store)
     case iPhone6_5 = "iPhone_6.5"
+    /// 13" — iPad Pro 13" M5 (required by App Store)
+    case iPad13 = "iPad_13"
+    /// 11" — iPad Pro 11" M5 (optional, good coverage)
+    case iPad11 = "iPad_11"
 
     var config: ViewImageConfig {
         switch self {
@@ -27,6 +31,28 @@ enum ScreenshotDevice: String, CaseIterable {
                 traits: UITraitCollection(traitsFrom: [
                     .init(displayScale: 3),
                     .init(userInterfaceStyle: .dark)
+                ])
+            )
+        case .iPad13:
+            return ViewImageConfig(
+                safeArea: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
+                size: CGSize(width: 1032, height: 1376),
+                traits: UITraitCollection(traitsFrom: [
+                    .init(displayScale: 2),
+                    .init(userInterfaceStyle: .dark),
+                    .init(horizontalSizeClass: .regular),
+                    .init(verticalSizeClass: .regular)
+                ])
+            )
+        case .iPad11:
+            return ViewImageConfig(
+                safeArea: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
+                size: CGSize(width: 834, height: 1210),
+                traits: UITraitCollection(traitsFrom: [
+                    .init(displayScale: 2),
+                    .init(userInterfaceStyle: .dark),
+                    .init(horizontalSizeClass: .regular),
+                    .init(verticalSizeClass: .regular)
                 ])
             )
         }
