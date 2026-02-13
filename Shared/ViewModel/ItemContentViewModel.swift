@@ -231,22 +231,22 @@ class ItemContentViewModel {
         } else if includeMockTrailers {
             vm.trailers = [
                 VideoItem(
-                    url: URL(string: "https://www.youtube.com/watch?v=vM-Bja2Bbe0"),
-                    thumbnail: URL(string: "https://img.youtube.com/vi/vM-Bja2Bbe0/hqdefault.jpg"),
+                    url: URL(string: "https://www.youtube.com/watch?v=BjkIOU5PhyQ"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/BjkIOU5PhyQ/hqdefault.jpg"),
                     title: "Official Trailer",
-                    videoID: "vM-Bja2Bbe0"
+                    videoID: "BjkIOU5PhyQ"
                 ),
                 VideoItem(
-                    url: URL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-                    thumbnail: URL(string: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"),
+                    url: URL(string: "https://www.youtube.com/watch?v=5AwtptT8X8k"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/5AwtptT8X8k/hqdefault.jpg"),
                     title: "Final Trailer",
-                    videoID: "dQw4w9WgXcQ"
+                    videoID: "5AwtptT8X8k"
                 ),
                 VideoItem(
-                    url: URL(string: "https://www.youtube.com/watch?v=9bZkp7q19f0"),
-                    thumbnail: URL(string: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg"),
+                    url: URL(string: "https://www.youtube.com/watch?v=xo4rkcC7kFc"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/xo4rkcC7kFc/hqdefault.jpg"),
                     title: "Teaser Trailer",
-                    videoID: "9bZkp7q19f0"
+                    videoID: "xo4rkcC7kFc"
                 )
             ]
         }

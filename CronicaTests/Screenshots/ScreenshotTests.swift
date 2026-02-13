@@ -111,7 +111,7 @@ final class ScreenshotTests: XCTestCase {
         }
     }
 
-    // MARK: - Detail Cast
+    // MARK: - Detail Cast & Recommendations
 
     func testDetailCastScreen() {
         let view = DetailCastScreenshotView()
@@ -120,19 +120,10 @@ final class ScreenshotTests: XCTestCase {
         }
     }
 
-    // MARK: - Detail Recommendations
-
-    func testDetailRecommendationsScreen() {
-        let view = DetailRecommendationsScreenshotView()
-        for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
-        }
-    }
-
-    // MARK: - Detail Trailers
+    // MARK: - Detail Trailers & Cast
 
     func testDetailTrailersScreen() {
-        let view = DetailTrailersScreenshotView()
+        let view = DetailRecommendationsScreenshotView()
         for device in ScreenshotDevice.allCases {
             snapshotView(view, device: device, named: device.rawValue)
         }

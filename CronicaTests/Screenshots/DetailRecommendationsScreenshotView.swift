@@ -1,34 +1,36 @@
 import SwiftUI
 @testable import StreamingNow
 
-/// Screenshot wrapper showing the Recommendations section from the detail page.
-/// Uses ItemContent.examples to populate a horizontal list of similar movies.
+#if DEBUG
+/// Screenshot wrapper showing Trailers and Cast sections from the detail page,
+/// stacked to fill the screen without navigation chrome.
 struct DetailRecommendationsScreenshotView: View {
-    @State private var showPopup = false
-    @State private var popupType: ActionPopupItems?
+    @State private var viewModel: ItemContentViewModel
 
-    private let item = ItemContent.example
-    private let recommendations = Array(ItemContent.examples.prefix(8))
+    private let item: ItemContent
+
+    init(item: ItemContent = .example) {
+        self.item = item
+        _viewModel = State(wrappedValue: ItemContentViewModel.preview(with: item, includeMockTrailers: true))
+    }
 
     var body: some View {
         NavigationStack {
             ScrollView {
+                TrailerListView(trailers: viewModel.trailers)
+
+                CastListView(credits: item.credits?.cast ?? [])
+
                 OverviewBoxView(
                     overview: item.itemOverview,
                     title: item.itemTitle,
                     type: .movie
                 )
                 .padding(.horizontal)
-
-                HorizontalItemContentListView(
-                    items: recommendations,
-                    title: NSLocalizedString("Recommendations", comment: ""),
-                    subtitle: NSLocalizedString("Movies", comment: ""),
-                    showPopup: $showPopup,
-                    popupType: $popupType
-                )
             }
             .navigationTitle(item.itemTitle)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
+#endif

@@ -13,7 +13,7 @@ struct DetailScreenshotView: View {
 
     private let item: ItemContent
 
-    init(item: ItemContent = .previewMock) {
+    init(item: ItemContent = .example) {
         self.item = item
         _viewModel = State(wrappedValue: ItemContentViewModel.preview(with: item))
     }

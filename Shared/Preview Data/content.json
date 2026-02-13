@@ -2,66 +2,448 @@
   "results": [
     {
       "adult": false,
-      "backdrop_path": "/pcDc2WJAYGJTTvRSEIpRZwM3Ola.jpg",
+      "backdrop_path": "/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg",
       "genres": [
         {
-          "id": 28,
-          "name": "Action"
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
         },
         {
           "id": 12,
           "name": "Adventure"
         },
         {
-          "id": 14,
-          "name": "Fantasy"
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 9648,
+          "name": "Mystery"
+        }
+      ],
+      "homepage": "https://movies.disney.com/zootopia-2",
+      "id": 1084242,
+      "imdb_id": "tt26443597",
+      "original_language": "en",
+      "original_title": "Zootopia 2",
+      "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+      "popularity": 216.4433,
+      "poster_path": "/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
+      "production_companies": [
+        {
+          "id": 6125,
+          "logo_path": "/tzsMJBJZINu7GHzrpYzpReWhh66.png",
+          "name": "Walt Disney Animation Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 158526,
+          "logo_path": "/tzsMJBJZINu7GHzrpYzpReWhh66.png",
+          "name": "Walt Disney Animation Studios",
+          "origin_country": "CA"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        },
+        {
+          "iso_3166_1": "CA",
+          "name": "Canada"
+        }
+      ],
+      "release_date": "2025-11-26",
+      "runtime": 108,
+      "status": "Released",
+      "title": "Zootopia 2",
+      "vote_average": 7.615,
+      "vote_count": 1638,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 417,
+            "known_for_department": "Acting",
+            "name": "Ginnifer Goodwin",
+            "original_name": "Ginnifer Goodwin",
+            "popularity": 3.3364,
+            "profile_path": "/xOCA2WN5MRfXmJmlzEbFEhIbfIQ.jpg",
+            "cast_id": 1,
+            "character": "Judy Hopps (voice)",
+            "credit_id": "63e49b7990fca3007b04f19b",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 23532,
+            "known_for_department": "Acting",
+            "name": "Jason Bateman",
+            "original_name": "Jason Bateman",
+            "popularity": 5.6207,
+            "profile_path": "/8e6mt0vGjPo6eW52gqRuXy5YnfN.jpg",
+            "cast_id": 16,
+            "character": "Nick Wilde (voice)",
+            "credit_id": "6448ae740f21c6049827fd5c",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 690,
+            "known_for_department": "Acting",
+            "name": "Ke Huy Quan",
+            "original_name": "Ke Huy Quan",
+            "popularity": 4.2336,
+            "profile_path": "/iestHyn7PLuVowj5Jaa1SGPboQ4.jpg",
+            "cast_id": 39,
+            "character": "Gary De'Snake (voice)",
+            "credit_id": "6835e6bfe4057d9ee0037edc",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1183672,
+            "known_for_department": "Acting",
+            "name": "Fortune Feimster",
+            "original_name": "Fortune Feimster",
+            "popularity": 1.6654,
+            "profile_path": "/aCV6S7Tuh9iUmF9on6EwaXC3rCI.jpg",
+            "cast_id": 45,
+            "character": "Nibbles Maplestick (voice)",
+            "credit_id": "6835e72b6d7078c861414b14",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 62861,
+            "known_for_department": "Acting",
+            "name": "Andy Samberg",
+            "original_name": "Andy Samberg",
+            "popularity": 4.2472,
+            "profile_path": "/jMXU5oG3i93SH1yhkpbBGskFiJl.jpg",
+            "cast_id": 68,
+            "character": "Pawbert Lynxley (voice)",
+            "credit_id": "68c86a79a13549cb19c905cd",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 11064,
+            "known_for_department": "Acting",
+            "name": "David Strathairn",
+            "original_name": "David Strathairn",
+            "popularity": 2.6501,
+            "profile_path": "/4nCzknAhELFtC73VrJjckEvpNep.jpg",
+            "cast_id": 69,
+            "character": "Milton Lynxley (voice)",
+            "credit_id": "68c86abb6afda362c186892f",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 17605,
+            "known_for_department": "Acting",
+            "name": "Idris Elba",
+            "original_name": "Idris Elba",
+            "popularity": 6.4569,
+            "profile_path": "/be1bVF7qGX91a6c5WeRPs5pKXln.jpg",
+            "cast_id": 41,
+            "character": "Chief Bogo (voice)",
+            "credit_id": "6835e6e6f0b6ebbcb0037c37",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 446511,
+            "known_for_department": "Acting",
+            "name": "Shakira",
+            "original_name": "Shakira",
+            "popularity": 1.2416,
+            "profile_path": "/AcOA8MbRrDswt6w3TmCBYl7TNOu.jpg",
+            "cast_id": 46,
+            "character": "Gazelle (voice)",
+            "credit_id": "6835e749f3c1664346414d91",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 9657,
+            "known_for_department": "Acting",
+            "name": "Patrick Warburton",
+            "original_name": "Patrick Warburton",
+            "popularity": 4.3375,
+            "profile_path": "/nDoOii5HaGwPxYa28xFC2sDkF8y.jpg",
+            "cast_id": 62,
+            "character": "Mayor Winddancer (voice)",
+            "credit_id": "6895e6c20d49cd86557f71b6",
+            "order": 8
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1745988,
+            "known_for_department": "Acting",
+            "name": "Quinta Brunson",
+            "original_name": "Quinta Brunson",
+            "popularity": 2.8394,
+            "profile_path": "/50gY1qgG5ddSLPY77K8zAq9TwJo.jpg",
+            "cast_id": 47,
+            "character": "Dr. Fuzzby (voice)",
+            "credit_id": "6835e75c6368702a21b6bd88",
+            "order": 9
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1999218,
+            "known_for_department": "Production",
+            "name": "Yvett Merino",
+            "original_name": "Yvett Merino",
+            "popularity": 0.6656,
+            "profile_path": "/lWDGq9RsYDayXIqdyXz1yHzo2tU.jpg",
+            "credit_id": "66b723807d739ff29e9edafd",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1318201,
+            "known_for_department": "Writing",
+            "name": "Jared Bush",
+            "original_name": "Jared Bush",
+            "popularity": 2.6707,
+            "profile_path": "/50XtrC5NMcqiYMXNmuNVY5tUl34.jpg",
+            "credit_id": "66b7237b40901d3fc826206b",
+            "department": "Writing",
+            "job": "Writer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1318201,
+            "known_for_department": "Writing",
+            "name": "Jared Bush",
+            "original_name": "Jared Bush",
+            "popularity": 2.6707,
+            "profile_path": "/50XtrC5NMcqiYMXNmuNVY5tUl34.jpg",
+            "credit_id": "66b7237688732302e6261d2a",
+            "department": "Directing",
+            "job": "Director"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 76595,
+            "known_for_department": "Directing",
+            "name": "Byron Howard",
+            "original_name": "Byron Howard",
+            "popularity": 4.4687,
+            "profile_path": "/ePJXkxrD44nM0VB7Xx9Q4ityzfT.jpg",
+            "credit_id": "66eda00fbeb947a007fe1536",
+            "department": "Directing",
+            "job": "Director"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1318201,
+            "known_for_department": "Writing",
+            "name": "Jared Bush",
+            "original_name": "Jared Bush",
+            "popularity": 2.6707,
+            "profile_path": "/50XtrC5NMcqiYMXNmuNVY5tUl34.jpg",
+            "credit_id": "676755d0330bce6ec99118bb",
+            "department": "Production",
+            "job": "Executive Producer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [
+          {
+            "adult": false,
+            "backdrop_path": "/1SeydkGlChbUrYJeV95TNSLQsFt.jpg",
+            "id": 125521,
+            "title": "Slayers Return",
+            "original_title": "スレイヤーズ RETURN",
+            "overview": "Lina Inverse and Naga the White Serpent are back! What begins as a routine bandit-stomping turns into the adventure of a lifetime involving magical golems, an ancient Elven weapon and even someone bent on destroying the world. It's a predicament only Lina and Naga could get themselves in to.",
+            "poster_path": "/fNQx9YD4nxpcWvriVm1paIxbMwB.jpg",
+            "media_type": "movie",
+            "original_language": "ja",
+            "genre_ids": [
+              16,
+              12,
+              35,
+              14
+            ],
+            "popularity": 1.4451,
+            "release_date": "1996-08-03",
+            "video": false,
+            "vote_average": 6.546,
+            "vote_count": 2073
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/qFQKKBvG1nPwpVYUxvcQfqLkhNJ.jpg",
+            "id": 647637,
+            "title": "Panda",
+            "original_title": "Panda",
+            "overview": "Antonio and Beba are a pair of panda bears besieged by the classic obstacles of a young couple. Their life together is defined by routine, until one day they are forced to live with their favorite singer.",
+            "poster_path": "/xm8XaBxJ52iKxXvqZw2umgZrDn3.jpg",
+            "media_type": "movie",
+            "original_language": "es",
+            "genre_ids": [
+              35
+            ],
+            "popularity": 0.3427,
+            "release_date": "2019-11-21",
+            "video": false,
+            "vote_average": 5.6,
+            "vote_count": 4
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/mjCYpJXCBYDZgMr1U1KZcFgFDfC.jpg",
+            "id": 482408,
+            "title": "Harry Potter: A History Of Magic",
+            "original_title": "Harry Potter: A History Of Magic",
+            "overview": "A thrilling journey through legends, belief and folklore, this film goes behind the scenes with the British Library as they search to tell that story through objects in their collection, in an ambitious new exhibition: Harry Potter: A History Of Magic.  J.K. Rowling, who is lending unseen manuscripts, drawings and drafts from her private archives (which will sit alongside treasures from the British Library, as well as original drafts and drawings from Jim Kay) talks about some of the personal items she has lent to the exhibition and gives new insight into her writing, looking at some of the objects from the exhibition that have fired her imagination.",
+            "poster_path": "/kkzDng2S8w2hT1gap7MdMdx7uUE.jpg",
+            "media_type": "movie",
+            "original_language": "en",
+            "genre_ids": [
+              99
+            ],
+            "popularity": 1.3322,
+            "release_date": "2017-10-28",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 93
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/isnRO0gqBRSaUJyBULOQSZ8T6nU.jpg",
+            "id": 137773,
+            "title": "Pokémon: The Mastermind of Mirage Pokémon",
+            "original_title": "戦慄のミラージュポケモン",
+            "overview": "The story of \"The Mastermind of Mirage Pokémon\" centers on a Pokémon scientist who has developed a new Mirage System to resurrect extinct Pokémon. Satoshi, Haruka, Masato, and Takeshi show up at the Mirage Mansion for a demonstration of this new machine, only to witness the kidnapping of the scientist! Then a mysterious stranger appears and claims that the machine can actually create Pokémon without weaknesses. It’s up to Satoshi and company to preserve the natural balance of the Pokémon world.",
+            "poster_path": "/hJU76t41sf5BoKVHT3L3TtQP9xs.jpg",
+            "media_type": "movie",
+            "original_language": "ja",
+            "genre_ids": [
+              10770,
+              16,
+              28,
+              12
+            ],
+            "popularity": 1.4545,
+            "release_date": "2006-04-29",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 58
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/cVqwzMSNPS4vgUDlXlSYoWOmGsI.jpg",
+            "id": 615774,
+            "title": "Scooby-Doo! Return to Zombie Island",
+            "original_title": "Scooby-Doo! Return to Zombie Island",
+            "overview": "Scooby-Doo and his pals win an all-expense paid vacation and embark on a trip of a lifetime to a tropical paradise. Their destination however, turns out to be Zombie Island. As soon as they arrive, they realize the place looks strangely familiar and is reminiscent of a trip they took years ago, in which they became wrapped up in a mystery involving zombies. The gang soon learns that their trip to paradise comes with a price when the zombies re-emerge and attack their hotel. Will Scooby-Doo and the Mystery Inc. gang finally solve the mystery behind Zombie Island?",
+            "poster_path": "/vd0oIoWhEm8o7EpS0kV7RaV0Flf.jpg",
+            "media_type": "movie",
+            "original_language": "en",
+            "genre_ids": [
+              14,
+              16,
+              10751,
+              12,
+              35,
+              9648,
+              27
+            ],
+            "popularity": 2.3349,
+            "release_date": "2019-09-03",
+            "video": false,
+            "vote_average": 6.984,
+            "vote_count": 951
+          }
+        ],
+        "total_pages": 2,
+        "total_results": 40
+      },
+      "media_type": "movie"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/82lM4GJ9uuNvNDOEpxFy77uv4Ak.jpg",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
         },
         {
           "id": 878,
           "name": "Science Fiction"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
         }
       ],
-      "homepage": "https://www.hbomax.com/zacksnydersjusticeleague",
-      "id": 791373,
+      "homepage": "https://www.20thcenturystudios.com/movies/predator-badlands",
+      "id": 1242898,
+      "imdb_id": "tt31227572",
       "original_language": "en",
-      "original_title": "Zack Snyder's Justice League",
-      "overview": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
-      "poster_path": "/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+      "original_title": "Predator: Badlands",
+      "overview": "Cast out from his clan, a young Predator finds an unlikely ally in a damaged android and embarks on a treacherous journey in search of the ultimate adversary.",
+      "popularity": 152.1325,
+      "poster_path": "/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
       "production_companies": [
         {
-          "id": 174,
-          "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
-          "name": "Warner Bros. Pictures",
+          "id": 127928,
+          "logo_path": "/h0rjX5vjW5r8yEnUBStFarjcLT4.png",
+          "name": "20th Century Studios",
           "origin_country": "US"
         },
         {
-          "id": 114152,
+          "id": 840,
           "logo_path": null,
-          "name": "The Stone Quarry",
+          "name": "Lawrence Gordon Productions",
           "origin_country": "US"
         },
         {
-          "id": 507,
-          "logo_path": "/z7H707qUWigbjHnJDMfj6QITEpb.png",
-          "name": "Atlas Entertainment",
+          "id": 1302,
+          "logo_path": "/zC3b70ixHh89qJIikLQPEvLqbPM.png",
+          "name": "Davis Entertainment",
           "origin_country": "US"
         },
         {
-          "id": 103376,
-          "logo_path": "/zIFWe4fwWURazXSjz9tF60ihgbH.png",
-          "name": "Access Entertainment",
+          "id": 185309,
+          "logo_path": null,
+          "name": "Toberoff Productions",
           "origin_country": "US"
         },
         {
-          "id": 444,
-          "logo_path": "/42UPdZl6B2cFXgNUASR8hSt9mpS.png",
-          "name": "Dune Entertainment",
-          "origin_country": "US"
-        },
-        {
-          "id": 128064,
-          "logo_path": "/13F3Jf7EFAcREU0xzZqJnVnyGXu.png",
-          "name": "DC Films",
+          "id": 22213,
+          "logo_path": "/qx9K6bFWJupwde0xQDwOvXkOaL8.png",
+          "name": "TSG Entertainment",
           "origin_country": "US"
         }
       ],
@@ -71,358 +453,380 @@
           "name": "United States of America"
         }
       ],
-      "release_date": "2021-03-18",
-      "revenue": 657000000,
-      "runtime": 242,
-      "spoken_languages": [
-        {
-          "english_name": "English",
-          "iso_639_1": "en",
-          "name": "English"
-        }
-      ],
+      "release_date": "2025-11-05",
+      "runtime": 107,
       "status": "Released",
-      "tagline": "",
-      "title": "Zack Snyder's Justice League",
+      "title": "Predator: Badlands",
+      "vote_average": 7.736,
+      "vote_count": 1886,
       "credits": {
         "cast": [
           {
             "adult": false,
-            "gender": 2,
-            "id": 880,
+            "gender": 1,
+            "id": 18050,
             "known_for_department": "Acting",
-            "name": "Ben Affleck",
-            "original_name": "Ben Affleck",
-            "popularity": 21.946,
-            "profile_path": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg",
-            "cast_id": 1,
-            "character": "Bruce Wayne / Batman",
-            "credit_id": "60143e42d96c3c00400d318a",
+            "name": "Elle Fanning",
+            "original_name": "Elle Fanning",
+            "popularity": 12.5845,
+            "profile_path": "/e8CUyxQSE99y5IOfzSLtHC0B0Ch.jpg",
+            "cast_id": 8,
+            "character": "Thia / Tessa",
+            "credit_id": "665e084b38c776c595e54834",
             "order": 0
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 73968,
+            "id": 3223391,
             "known_for_department": "Acting",
-            "name": "Henry Cavill",
-            "original_name": "Henry Cavill",
-            "popularity": 41.702,
-            "profile_path": "/iWdKjMry5Pt7vmxU7bmOQsIUyHa.jpg",
-            "cast_id": 2,
-            "character": "Clark Kent / Superman / Kal-El",
-            "credit_id": "60143e6502842000402ee8a6",
+            "name": "Dimitrius Schuster-Koloamatangi",
+            "original_name": "Dimitrius Schuster-Koloamatangi",
+            "popularity": 0.8861,
+            "profile_path": "/rmIZTT1AZK3C9fYhEOtGKtSrF8E.jpg",
+            "cast_id": 22,
+            "character": "Dek / Father",
+            "credit_id": "67f6adc67b43bdce20ade29e",
             "order": 1
           },
           {
             "adult": false,
-            "biography": "Gal Gadot (born: April 30, 1985) is an Israeli actress and model. She was born in Rosh Ha'ayin, Israel, to an Ashkenazi Jewish family (from Poland, Austria, Germany, and Czechoslovakia). She served in the IDF for two years, and won the Miss Israel title in 2004.\n\nGal began modeling in the late 2000s, and made her film debut in the fourth film of the Fast and Furious franchise, Fast & Furious (2009), as Gisele, an associate of the film's lead villain. Her role was expanded in the sequels Fast Five (2011) and Fast & Furious 6 (2013), in which her character was romantically linked to Han Seoul-Oh (Sung Kang). In the films, Gal performed her own stunts. She also appeared in the 2010 films Date Night (2010) and Knight and Day (2010). In early December 2013, Gal was cast as Wonder Woman in the DC Extended Universe.\n\nGal is a motorcycle enthusiast, and owns a black 2006 Ducati Monster-S2R. She has been married to Yaron Versano since September 28, 2008. They have one child.",
-            "birthday": "1985-04-30",
-            "deathday": null,
-            "gender": 1,
-            "homepage": "http://www.galgadot.com",
-            "id": 90633,
-            "imdb_id": "nm2933757",
+            "gender": 2,
+            "id": 1891826,
             "known_for_department": "Acting",
-            "name": "Gal Gadot",
-            "place_of_birth": "Rosh Ha'ayin, Israel",
-            "popularity": 23.573,
-            "profile_path": "/fysvehTvU6bE3JgxaOTRfvQJzJ4.jpg"
+            "name": "Ravi Narayan",
+            "original_name": "Ravi Narayan",
+            "popularity": 0.7468,
+            "profile_path": "/iM9dr3AjXTt7IGpRzZlQVG7hINa.jpg",
+            "cast_id": 76,
+            "character": "Bud",
+            "credit_id": "69013587ce5a5c277ac3e3aa",
+            "order": 2
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 117642,
+            "id": 2253146,
             "known_for_department": "Acting",
-            "name": "Jason Momoa",
-            "original_name": "Jason Momoa",
-            "popularity": 30.224,
-            "profile_path": "/6dEFBpZH8C8OijsynkSajQT99Pb.jpg",
-            "cast_id": 4,
-            "character": "Arthur Curry / Aquaman",
-            "credit_id": "60143e891511aa003f51148b",
+            "name": "Michael Homick",
+            "original_name": "Michael Homick",
+            "popularity": 0.4823,
+            "profile_path": "/a7IFYVtmNvBMJ7c20BVMc0LX6PT.jpg",
+            "cast_id": 55,
+            "character": "Kwei (Suit)",
+            "credit_id": "68c8c676758a118d0e804d91",
             "order": 3
           },
           {
             "adult": false,
-            "gender": 3,
-            "id": 132157,
-            "known_for_department": "Acting",
-            "name": "Ezra Miller",
-            "original_name": "Ezra Miller",
-            "popularity": 17.693,
-            "profile_path": "/6wmTpbYpmhthaxzM5ss3377F9IV.jpg",
-            "cast_id": 5,
-            "character": "Barry Allen / The Flash",
-            "credit_id": "60144b64a39d0b003f9d3ed8",
+            "gender": 2,
+            "id": 1636658,
+            "known_for_department": "Editing",
+            "name": "Stefan Grube",
+            "original_name": "Stefan Grube",
+            "popularity": 1.3954,
+            "profile_path": "/7SJ13Np7xL20YJjPiUbM7PshdYA.jpg",
+            "cast_id": 77,
+            "character": "Kwei (voice)",
+            "credit_id": "690135a74b781d18059fbaeb",
             "order": 4
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 1313559,
+            "id": 1440649,
             "known_for_department": "Acting",
-            "name": "Ray Fisher",
-            "original_name": "Ray Fisher",
-            "popularity": 2.695,
-            "profile_path": "/310snvA05xDOQZDn2fJSp242GHw.jpg",
-            "cast_id": 10,
-            "character": "Victor Stone / Cyborg",
-            "credit_id": "60144c3a5ad76b003e71ced1",
+            "name": "Reuben De Jong",
+            "original_name": "Reuben De Jong",
+            "popularity": 1.0473,
+            "profile_path": "/opjLobu1AKKspKfYzY6AXrjUglt.jpg",
+            "cast_id": 78,
+            "character": "Father (Suit)",
+            "credit_id": "690135b2cb10ef53d54e94bc",
             "order": 5
           },
           {
             "adult": false,
-            "gender": 1,
-            "id": 9273,
-            "known_for_department": "Acting",
-            "name": "Amy Adams",
-            "original_name": "Amy Adams",
-            "popularity": 19.03,
-            "profile_path": "/bp7PLjL2fHVuLRFsw6ccpGrGjrA.jpg",
-            "cast_id": 6,
-            "character": "Lois Lane",
-            "credit_id": "60144b92d266a2003d0d5e15",
+            "gender": 2,
+            "id": 1856011,
+            "known_for_department": "Crew",
+            "name": "Cameron Brown",
+            "original_name": "Cameron Brown",
+            "popularity": 0.5333,
+            "profile_path": "/jLEKQbppMDHeiFX23bxrcmT5dmh.jpg",
+            "cast_id": 80,
+            "character": "Drone Synth",
+            "credit_id": "690135c75947eca268fb78fb",
             "order": 6
           },
           {
             "adult": false,
-            "gender": 2,
-            "id": 16940,
+            "gender": 1,
+            "id": 1257565,
             "known_for_department": "Acting",
-            "name": "Jeremy Irons",
-            "original_name": "Jeremy Irons",
-            "popularity": 22.898,
-            "profile_path": "/w8Ct1q02Ht3sWdOSqfp3B85TzT.jpg",
-            "cast_id": 9,
-            "character": "Alfred Pennyworth",
-            "credit_id": "60144c16bf0f6300410b923c",
+            "name": "Alison Wright",
+            "original_name": "Alison Wright",
+            "popularity": 1.4193,
+            "profile_path": "/yVdCk5eWk5syRrBdxjrnJ1O2Rpg.jpg",
+            "cast_id": 81,
+            "character": "MU/TH/UR (voice)",
+            "credit_id": "690135d5af06ffe4edda083b",
             "order": 7
           },
           {
             "adult": false,
-            "gender": 1,
-            "id": 935,
-            "known_for_department": "Acting",
-            "name": "Connie Nielsen",
-            "original_name": "Connie Nielsen",
-            "popularity": 22.751,
-            "profile_path": "/lvQypTfeH2Gn2PTbzq6XkT2PLmn.jpg",
-            "cast_id": 15,
-            "character": "Queen Hippolyta",
-            "credit_id": "60144d61be2d49003ffde515",
+            "gender": 2,
+            "id": 1179419,
+            "known_for_department": "Writing",
+            "name": "Matt Duffer",
+            "original_name": "Matt Duffer",
+            "popularity": 1.8966,
+            "profile_path": "/kXO5CnSxC0znMAICGxnPeuGP73U.jpg",
+            "cast_id": 82,
+            "character": "Kwei's Ship Computer (voice)",
+            "credit_id": "690135eee31a6839613c04e3",
             "order": 8
           },
           {
             "adult": false,
-            "gender": 1,
-            "id": 2882,
-            "known_for_department": "Acting",
-            "name": "Diane Lane",
-            "original_name": "Diane Lane",
-            "popularity": 13.8,
-            "profile_path": "/yFmVATUjhT7kf12CWXnK5l02pJO.jpg",
-            "cast_id": 7,
-            "character": "Martha Kent",
-            "credit_id": "60144bc33e09f3003c3f3de8",
+            "gender": 2,
+            "id": 1179422,
+            "known_for_department": "Writing",
+            "name": "Ross Duffer",
+            "original_name": "Ross Duffer",
+            "popularity": 4.2531,
+            "profile_path": "/7wdhSHgMLry5jBKJT1mdLT3BYaZ.jpg",
+            "cast_id": 83,
+            "character": "Kwei's Ship Computer (voice)",
+            "credit_id": "690135f6e31a6839613c04e7",
             "order": 9
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 18999,
-            "known_for_department": "Acting",
-            "name": "J.K. Simmons",
-            "original_name": "J.K. Simmons",
-            "popularity": 29.166,
-            "profile_path": "/7kIiPojgSVNRXb5z0hiijcD5LJ6.jpg",
-            "cast_id": 13,
-            "character": "Commissioner James Gordon",
-            "credit_id": "60144cfa1511aa003e510070",
-            "order": 10
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 8785,
-            "known_for_department": "Acting",
-            "name": "Ciarán Hinds",
-            "original_name": "Ciarán Hinds",
-            "popularity": 15.956,
-            "profile_path": "/fhtHm9SW5YH9AiAeN6Z3vOy2z6u.jpg",
-            "cast_id": 12,
-            "character": "Steppenwolf (voice)",
-            "credit_id": "60144cabdd731b003e553a30",
-            "order": 11
-          },
-          {
-            "adult": false,
-            "gender": 1,
-            "id": 55085,
-            "known_for_department": "Acting",
-            "name": "Amber Heard",
-            "original_name": "Amber Heard",
-            "popularity": 22.163,
-            "profile_path": "/1cb5mGzGB6Sj2JPkWt9W16B19Bf.jpg",
-            "cast_id": 16,
-            "character": "Mera",
-            "credit_id": "60144d899a3c49003ee6d7a9",
-            "order": 12
           }
         ],
         "crew": [
-            {
-              "adult": false,
-              "gender": 2,
-              "id": 15217,
-              "known_for_department": "Directing",
-              "name": "Zack Snyder",
-              "original_name": "Zack Snyder",
-              "popularity": 8.824,
-              "profile_path": "/iD0GDqkvJXDXiNEZej198hjt3Tt.jpg",
-              "cast_id": 380,
-              "character": "Man in Coffee Shop (uncredited)",
-              "credit_id": "605557b2223a8b006c83b748",
-              "order": 122
-            },
           {
             "adult": false,
-            "gender": 0,
-            "id": 282,
-            "known_for_department": "Production",
-            "name": "Charles Roven",
-            "original_name": "Charles Roven",
-            "popularity": 1.22,
-            "profile_path": "/4uJLoVstC1CBcArXFOe53N2fDr1.jpg",
-            "credit_id": "60144f0abe2d490040fe9e6f",
-            "department": "Production",
-            "job": "Producer"
+            "gender": 2,
+            "id": 1061155,
+            "known_for_department": "Writing",
+            "name": "Patrick Aison",
+            "original_name": "Patrick Aison",
+            "popularity": 0.7489,
+            "profile_path": null,
+            "credit_id": "65c719ec4350110162e76c25",
+            "department": "Writing",
+            "job": "Story"
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 525,
+            "id": 568322,
             "known_for_department": "Directing",
-            "name": "Christopher Nolan",
-            "original_name": "Christopher Nolan",
-            "popularity": 16.297,
-            "profile_path": "/xuAIuYSmsUzKlUMBFGVZaWsY3DZ.jpg",
-            "credit_id": "601461580816c70042848352",
-            "department": "Production",
-            "job": "Executive Producer"
+            "name": "Dan Trachtenberg",
+            "original_name": "Dan Trachtenberg",
+            "popularity": 1.0599,
+            "profile_path": "/crABZLMi5SAz7rKm0wV6JUOeKs5.jpg",
+            "credit_id": "65c719fc680be80162a36f2f",
+            "department": "Writing",
+            "job": "Story"
           },
           {
             "adult": false,
-            "gender": 1,
-            "id": 556,
-            "known_for_department": "Production",
-            "name": "Emma Thomas",
-            "original_name": "Emma Thomas",
-            "popularity": 7.14,
-            "profile_path": "/6GemtNCy856iLho6WRsFASxQTAp.jpg",
-            "credit_id": "601461639a3c49003fe6f92a",
-            "department": "Production",
-            "job": "Executive Producer"
+            "gender": 2,
+            "id": 1092,
+            "known_for_department": "Writing",
+            "name": "Jim Thomas",
+            "original_name": "Jim Thomas",
+            "popularity": 0.9984,
+            "profile_path": null,
+            "credit_id": "65c71a12a93d2501844b73f8",
+            "department": "Writing",
+            "job": "Characters"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1094,
+            "known_for_department": "Writing",
+            "name": "John Thomas",
+            "original_name": "John Thomas",
+            "popularity": 1.5932,
+            "profile_path": null,
+            "credit_id": "65c71a17aad9c2017db65845",
+            "department": "Writing",
+            "job": "Characters"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 568322,
+            "known_for_department": "Directing",
+            "name": "Dan Trachtenberg",
+            "original_name": "Dan Trachtenberg",
+            "popularity": 1.0599,
+            "profile_path": "/crABZLMi5SAz7rKm0wV6JUOeKs5.jpg",
+            "credit_id": "65c6688594d8a8018312aad1",
+            "department": "Directing",
+            "job": "Director"
           }
         ]
-      }
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [
+          {
+            "adult": false,
+            "backdrop_path": "/1WCES8hj3IQ086iWM1XOEeb5jvL.jpg",
+            "id": 198556,
+            "title": "Main Krishna Hoon",
+            "original_title": "मैं कृष्णा हूँ",
+            "overview": "In answer to an orphan boy's prayers, the divine Lord Krishna comes to Earth, befriends the boy, and helps him find a loving family.",
+            "poster_path": "/4fddOiJPp4Mf0jFXcp2WE8qvNW2.jpg",
+            "media_type": "movie",
+            "original_language": "hi",
+            "genre_ids": [
+              16,
+              10751
+            ],
+            "popularity": 0.987,
+            "release_date": "2013-01-25",
+            "video": false,
+            "vote_average": 6.018,
+            "vote_count": 112
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/1kQGVh547uKRQwyEsnmYEsVVhiN.jpg",
+            "id": 106845,
+            "title": "Re-Kill",
+            "original_title": "Re-Kill",
+            "overview": "Five years after a zombie outbreak, the men and women of R-Division hunt down and destroy the undead. When they see signs of a second outbreak, they fear humanity may not survive.",
+            "poster_path": "/wpofLYUv0aJmDNxyUZux0wTFXJH.jpg",
+            "media_type": "movie",
+            "original_language": "en",
+            "genre_ids": [
+              27,
+              878
+            ],
+            "popularity": 4.1802,
+            "release_date": "2015-10-16",
+            "video": false,
+            "vote_average": 5.983,
+            "vote_count": 174
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/youmOAJwM4XCoHAgeYNXACA7Buc.jpg",
+            "id": 676685,
+            "title": "Panda Bear in Africa",
+            "original_title": "Pandabeer in Afrika",
+            "overview": "A young adventurous panda travels from China to Africa to rescue his best friend, Jielong the Dragon, who has been kidnapped. On his journey, he discovers a strange amazing new world of mountains, deserts and jungles.",
+            "poster_path": "/wxpu7svVqA0ALYpofQBPujGelN3.jpg",
+            "media_type": "movie",
+            "original_language": "nl",
+            "genre_ids": [
+              16,
+              12,
+              35,
+              10751
+            ],
+            "popularity": 4.1428,
+            "release_date": "2024-03-15",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 75
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/d3RW7jRsBCHfC9QZaUF9FpzJrh8.jpg",
+            "id": 896,
+            "title": "The World of Apu",
+            "original_title": "অপুর সংসার",
+            "overview": "Apu, now a jobless ex-student dreaming vaguely of a future as a writer, is invited to join an old college friend on a trip up-country to a village wedding.",
+            "poster_path": "/6Tz1Q69o2n3Zwb0ZffzPL0nFt2T.jpg",
+            "media_type": "movie",
+            "original_language": "bn",
+            "genre_ids": [
+              18
+            ],
+            "popularity": 1.2386,
+            "release_date": "1959-05-01",
+            "video": false,
+            "vote_average": 8.1,
+            "vote_count": 270
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/ePMrWBFymjeEN2nbQsjUdfnusCt.jpg",
+            "id": 19249,
+            "title": "Holiday on the Buses",
+            "original_title": "Holiday on the Buses",
+            "overview": "Due to a female passenger falling out of her top whilst running for the bus Stan is distracted and crashes the bus resulting in the depot managers car being written off. As a result Stan, Jack and Blakey are fired. Stan and Jack soon get new jobs as a bus crew at a Pontins holiday resort but discover that Blakey has also gotten a job there as the chief security guard.",
+            "poster_path": "/3ewJwuY28E4RzCRf2lklwvzPrsK.jpg",
+            "media_type": "movie",
+            "original_language": "en",
+            "genre_ids": [
+              35
+            ],
+            "popularity": 0.8061,
+            "release_date": "1973-05-19",
+            "video": false,
+            "vote_average": 7.433,
+            "vote_count": 60
+          }
+        ],
+        "total_pages": 2,
+        "total_results": 40
+      },
+      "media_type": "movie"
     },
     {
       "adult": false,
-      "backdrop_path": "/tJgmraUAmVlJPlq72yC76tKDyC4.jpg",
+      "backdrop_path": "/2t25zHKX3PAUZWppuLD36JGdgCA.jpg",
       "genres": [
         {
-          "id": 10752,
-          "name": "War"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        },
-        {
-          "id": 28,
-          "name": "Action"
+          "id": 80,
+          "name": "Crime"
         },
         {
           "id": 53,
           "name": "Thriller"
         }
       ],
-      "homepage": "https://www.1917.movie/",
-      "id": 530915,
-      "imdb_id": "tt8579674",
+      "homepage": "https://www.amazon.com/salp/crime101?hhf",
+      "id": 1171145,
+      "imdb_id": "tt32430579",
       "original_language": "en",
-      "original_title": "1917",
-      "overview": "At the height of the First World War, two young British soldiers must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers.",
-      "popularity": 53.847,
-      "poster_path": "/iZf0KyrE25z1sage4SYFLCCrMi9.jpg",
+      "original_title": "Crime 101",
+      "overview": "An elusive thief, eyeing his final score, encounters a disillusioned insurance broker at her own crossroads. As their paths intertwine, a relentless detective trails them hoping to thwart the multi-million dollar heist they are planning.",
+      "popularity": 50.3315,
+      "poster_path": "/2HoR2x23bqKpopluoBD1FH3tBi7.jpg",
       "production_companies": [
         {
-          "id": 33,
-          "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
-          "name": "Universal Pictures",
-          "origin_country": "US"
-        },
-        {
-          "id": 7,
-          "logo_path": "/vru2SssLX3FPhnKZGtYw00pVIS9.png",
-          "name": "DreamWorks Pictures",
-          "origin_country": "US"
-        },
-        {
-          "id": 7294,
-          "logo_path": "/kK4PRgceWp9KNrycD8xx8seWxYU.png",
-          "name": "Reliance Entertainment",
-          "origin_country": "IN"
-        },
-        {
-          "id": 114732,
-          "logo_path": "/tNCbisMxO5mX2X2bOQxHHQZVYnT.png",
-          "name": "New Republic Pictures",
-          "origin_country": "US"
-        },
-        {
-          "id": 1522,
-          "logo_path": "/8uaoEVgNxFH0R94O53gUiByahVr.png",
-          "name": "Neal Street Productions",
+          "id": 10163,
+          "logo_path": "/16KWBMmfPX0aJzDExDrPxSLj0Pg.png",
+          "name": "Working Title Films",
           "origin_country": "GB"
         },
         {
-          "id": 103476,
+          "id": 122772,
           "logo_path": null,
-          "name": "Mogambo Films",
-          "origin_country": "ES"
-        },
-        {
-          "id": 121685,
-          "logo_path": "/bAO6cpKP9qoqHoDn4oUjWjZ5auq.png",
-          "name": "Amblin Partners",
+          "name": "The Story Factory",
           "origin_country": "US"
         },
         {
-          "id": 8147,
-          "logo_path": "/q6HOAdSNgCbeOqwoMVRc6REgbXF.png",
-          "name": "Entertainment One",
-          "origin_country": "CA"
+          "id": 23949,
+          "logo_path": "/3QFwomSxcZZgMQGBkdUPuJEnSFB.png",
+          "name": "RAW",
+          "origin_country": "GB"
+        },
+        {
+          "id": 210099,
+          "logo_path": "/g5oRCNCi8kNVb8gEoSoIcqkhjmR.png",
+          "name": "Amazon MGM Studios",
+          "origin_country": "US"
         }
       ],
       "production_countries": [
-        {
-          "iso_3166_1": "CA",
-          "name": "Canada"
-        },
-        {
-          "iso_3166_1": "CN",
-          "name": "China"
-        },
-        {
-          "iso_3166_1": "IN",
-          "name": "India"
-        },
-        {
-          "iso_3166_1": "ES",
-          "name": "Spain"
-        },
         {
           "iso_3166_1": "GB",
           "name": "United Kingdom"
@@ -432,412 +836,2740 @@
           "name": "United States of America"
         }
       ],
-      "release_date": "2019-12-25",
-      "runtime": 119,
-      "spoken_languages": [
-        {
-          "english_name": "English",
-          "iso_639_1": "en",
-          "name": "English"
-        },
-        {
-          "english_name": "French",
-          "iso_639_1": "fr",
-          "name": "Français"
-        },
-        {
-          "english_name": "German",
-          "iso_639_1": "de",
-          "name": "Deutsch"
-        }
-      ],
+      "release_date": "2026-02-11",
+      "runtime": 140,
       "status": "Released",
-      "tagline": "Time is the enemy",
-      "title": "1917",
+      "title": "Crime 101",
+      "vote_average": 8.8,
+      "vote_count": 11,
       "credits": {
         "cast": [
           {
             "adult": false,
             "gender": 2,
-            "id": 146750,
+            "id": 74568,
             "known_for_department": "Acting",
-            "name": "George MacKay",
-            "original_name": "George MacKay",
-            "popularity": 14.577,
-            "profile_path": "/80IQRdk9FIfkVJQB54Y7rZjNyDj.jpg",
-            "cast_id": 4,
-            "character": "Lance Corporal Schofield",
-            "credit_id": "5bd46f2ac3a36820e901ac22",
+            "name": "Chris Hemsworth",
+            "original_name": "Chris Hemsworth",
+            "popularity": 6.9815,
+            "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg",
+            "cast_id": 1,
+            "character": "Mike Davis",
+            "credit_id": "64edbfe5e2bca8011c26b3d7",
             "order": 0
           },
           {
             "adult": false,
-            "gender": 2,
-            "id": 1332971,
+            "gender": 1,
+            "id": 4587,
             "known_for_department": "Acting",
-            "name": "Dean-Charles Chapman",
-            "original_name": "Dean-Charles Chapman",
-            "popularity": 7.737,
-            "profile_path": "/sDWP1EZKmzb46Arm8igxpI9siYx.jpg",
-            "cast_id": 5,
-            "character": "Lance Corporal Blake",
-            "credit_id": "5bd46f350e0a2622dd0195dc",
+            "name": "Halle Berry",
+            "original_name": "Halle Berry",
+            "popularity": 6.1366,
+            "profile_path": "/wtFetpWV8kjBsvzYKN9uEEmPdpy.jpg",
+            "cast_id": 17,
+            "character": "Sharon",
+            "credit_id": "66fd6d42b146282f7b84a8b4",
             "order": 1
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 2983,
+            "id": 103,
             "known_for_department": "Acting",
-            "name": "Mark Strong",
-            "original_name": "Mark Strong",
-            "popularity": 17.664,
-            "profile_path": "/pw6AvwaBbr44Nje9JQMBBwhchiu.jpg",
-            "cast_id": 13,
-            "character": "Captain Smith",
-            "credit_id": "5cbe2a11c3a36813698745cc",
+            "name": "Mark Ruffalo",
+            "original_name": "Mark Ruffalo",
+            "popularity": 6.1259,
+            "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg",
+            "cast_id": 5,
+            "character": "Detective Lou Lubesnick",
+            "credit_id": "664d3342e9b4172c3413c0a9",
             "order": 2
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 125660,
+            "id": 1290466,
             "known_for_department": "Acting",
-            "name": "Andrew Scott",
-            "original_name": "Andrew Scott",
-            "popularity": 19.825,
-            "profile_path": "/akbGBP3RI4siNLPr8Pa6YcD2NJt.jpg",
-            "cast_id": 15,
-            "character": "Lieutenant Leslie",
-            "credit_id": "5cbe2a3c92514108d1ff7aed",
+            "name": "Barry Keoghan",
+            "original_name": "Barry Keoghan",
+            "popularity": 3.803,
+            "profile_path": "/ngoitknM6hw8fffLywyvjzy6Iti.jpg",
+            "cast_id": 16,
+            "character": "Ormon",
+            "credit_id": "6659139d2f924e740093f33b",
             "order": 3
           },
           {
             "adult": false,
-            "gender": 2,
-            "id": 512991,
+            "gender": 1,
+            "id": 1525043,
             "known_for_department": "Acting",
-            "name": "Richard Madden",
-            "original_name": "Richard Madden",
-            "popularity": 25.142,
-            "profile_path": "/kC7X9LgAtJfpxUBRtVwaVTEXomH.jpg",
-            "cast_id": 14,
-            "character": "Lieutenant Blake",
-            "credit_id": "5cbe2a340e0a2660dcf28afa",
+            "name": "Monica Barbaro",
+            "original_name": "Monica Barbaro",
+            "popularity": 2.4668,
+            "profile_path": "/fcujBTiKyZgJzaDenhv5ryo9SyB.jpg",
+            "cast_id": 24,
+            "character": "Maya",
+            "credit_id": "671a789a4be15469e70d8f7e",
             "order": 4
           },
           {
             "adult": false,
-            "gender": 1,
-            "id": 2385743,
+            "gender": 2,
+            "id": 1154054,
             "known_for_department": "Acting",
-            "name": "Claire Duburcq",
-            "original_name": "Claire Duburcq",
-            "popularity": 7.161,
-            "profile_path": "/qS6WwLJb8GlYcIV5Cj16J3RJDE3.jpg",
-            "cast_id": 24,
-            "character": "Lauri",
-            "credit_id": "5d51eba977e1f60017ae5bc6",
+            "name": "Corey Hawkins",
+            "original_name": "Corey Hawkins",
+            "popularity": 1.5045,
+            "profile_path": "/wRt0Bc0chN5BSjvYzmg2evgqNzp.jpg",
+            "cast_id": 25,
+            "character": "Tillman",
+            "credit_id": "671fbc739ff681d9e0a4a646",
             "order": 5
           },
           {
             "adult": false,
-            "gender": 2,
-            "id": 5472,
+            "gender": 1,
+            "id": 10431,
             "known_for_department": "Acting",
-            "name": "Colin Firth",
-            "original_name": "Colin Firth",
-            "popularity": 10.357,
-            "profile_path": "/5tfW4Zez6eEVOkJ8JoePGzSFbcd.jpg",
-            "cast_id": 17,
-            "character": "General Erinmore",
-            "credit_id": "5cbe2a57c3a368145881c5d3",
+            "name": "Jennifer Jason Leigh",
+            "original_name": "Jennifer Jason Leigh",
+            "popularity": 4.8977,
+            "profile_path": "/9nT2mbQ9P8UpCXirssDxDT75jlm.jpg",
+            "cast_id": 28,
+            "character": "Angie",
+            "credit_id": "6725449001c4dbfa94f69b08",
             "order": 6
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 71580,
+            "id": 1733,
             "known_for_department": "Acting",
-            "name": "Benedict Cumberbatch",
-            "original_name": "Benedict Cumberbatch",
-            "popularity": 34.379,
-            "profile_path": "/fBEucxECxGLKVHBznO0qHtCGiMO.jpg",
-            "cast_id": 16,
-            "character": "Colonel MacKenzie",
-            "credit_id": "5cbe2a450e0a261a55f3f022",
+            "name": "Nick Nolte",
+            "original_name": "Nick Nolte",
+            "popularity": 4.4286,
+            "profile_path": "/jpYzFBi6zfn8CHVaXmqgiOTas4V.jpg",
+            "cast_id": 27,
+            "character": "Money",
+            "credit_id": "6725447eb0c1d99c32652a8e",
             "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 15455,
+            "known_for_department": "Acting",
+            "name": "Tate Donovan",
+            "original_name": "Tate Donovan",
+            "popularity": 2.7556,
+            "profile_path": "/uYgYbd842mtRY66Ehw441aKkOC5.jpg",
+            "cast_id": 26,
+            "character": "Monroe",
+            "credit_id": "67254476c1c7433ebbc43b65",
+            "order": 8
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 90498,
+            "known_for_department": "Acting",
+            "name": "Devon Bostick",
+            "original_name": "Devon Bostick",
+            "popularity": 2.7573,
+            "profile_path": "/zAdSA85Plp7NzhQeM2w8heHWgEd.jpg",
+            "cast_id": 29,
+            "character": "Devon",
+            "credit_id": "6725449f2a4deb99bd9dd290",
+            "order": 9
           }
         ],
         "crew": [
           {
             "adult": false,
             "gender": 2,
-            "id": 153,
-            "known_for_department": "Sound",
-            "name": "Thomas Newman",
-            "original_name": "Thomas Newman",
-            "popularity": 8.015,
-            "profile_path": "/j8rIiOSdBjtDL5vji8m5BtChZou.jpg",
-            "credit_id": "5d51ec030102c96f397647f2",
-            "department": "Sound",
-            "job": "Original Music Composer"
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 39,
+            "id": 859754,
             "known_for_department": "Directing",
-            "name": "Sam Mendes",
-            "original_name": "Sam Mendes",
-            "popularity": 3.292,
-            "profile_path": "/5z89X9rB76JDblqMQ52fviwXxAN.jpg",
-            "credit_id": "5b280c93925141088000158f",
-            "department": "Writing",
-            "job": "Screenplay"
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 39,
-            "known_for_department": "Directing",
-            "name": "Sam Mendes",
-            "original_name": "Sam Mendes",
-            "popularity": 3.292,
-            "profile_path": "/5z89X9rB76JDblqMQ52fviwXxAN.jpg",
-            "credit_id": "5b280c7892514108be001432",
+            "name": "Bart Layton",
+            "original_name": "Bart Layton",
+            "popularity": 1.5626,
+            "profile_path": "/zAc9d3PUZmgls9Xu0lRF9Etw1Mc.jpg",
+            "credit_id": "64edbffe83901800af826bf9",
             "department": "Directing",
             "job": "Director"
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 39,
+            "id": 65108,
+            "known_for_department": "Writing",
+            "name": "Don Winslow",
+            "original_name": "Don Winslow",
+            "popularity": 3.2471,
+            "profile_path": "/c9CN4cocSHy5fwc2IM9SU1xBi8Z.jpg",
+            "credit_id": "64edc0314cbe1200fe0d69c6",
+            "department": "Writing",
+            "job": "Novel"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 859754,
             "known_for_department": "Directing",
-            "name": "Sam Mendes",
-            "original_name": "Sam Mendes",
-            "popularity": 3.292,
-            "profile_path": "/5z89X9rB76JDblqMQ52fviwXxAN.jpg",
-            "credit_id": "5c754f6fc3a3684825d35166",
+            "name": "Bart Layton",
+            "original_name": "Bart Layton",
+            "popularity": 1.5626,
+            "profile_path": "/zAc9d3PUZmgls9Xu0lRF9Etw1Mc.jpg",
+            "credit_id": "664d337635d9e0aa1a439fba",
+            "department": "Writing",
+            "job": "Screenplay"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 74568,
+            "known_for_department": "Acting",
+            "name": "Chris Hemsworth",
+            "original_name": "Chris Hemsworth",
+            "popularity": 6.9815,
+            "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg",
+            "credit_id": "664d33e54c2316e988964774",
             "department": "Production",
             "job": "Producer"
           },
           {
             "adult": false,
             "gender": 2,
-            "id": 151,
-            "known_for_department": "Camera",
-            "name": "Roger Deakins",
-            "original_name": "Roger Deakins",
-            "popularity": 1.093,
-            "profile_path": "/pSCN7CfILlfQrxX43Kgqrx5mBYQ.jpg",
-            "credit_id": "5d51ec12b686b9241298dec0",
-            "department": "Camera",
-            "job": "Director of Photography"
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 151,
-            "known_for_department": "Camera",
-            "name": "Roger Deakins",
-            "original_name": "Roger Deakins",
-            "popularity": 1.093,
-            "profile_path": "/pSCN7CfILlfQrxX43Kgqrx5mBYQ.jpg",
-            "credit_id": "5ec94658eb79c2001ea260fd",
-            "department": "Camera",
-            "job": "Camera Operator"
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 4248,
-            "known_for_department": "Art",
-            "name": "Dennis Gassner",
-            "original_name": "Dennis Gassner",
-            "popularity": 5.466,
-            "profile_path": "/bC6zQ02HEPNzzTFvf0eIqSt8fdO.jpg",
-            "credit_id": "5d51ec1f0102c96f12764588",
-            "department": "Art",
-            "job": "Production Design"
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 3904,
-            "known_for_department": "Editing",
-            "name": "Lee Smith",
-            "original_name": "Lee Smith",
-            "popularity": 1.4,
-            "profile_path": "/zlnK1i7CqdzIFTFqfMsYLyt2Sk8.jpg",
-            "credit_id": "5c9709570e0a264ccebfcafd",
-            "department": "Editing",
-            "job": "Editor"
-          },
-          {
-            "adult": false,
-            "gender": 2,
-            "id": 86213,
-            "known_for_department": "Acting",
-            "name": "Rahul Khanna",
-            "original_name": "Rahul Khanna",
-            "popularity": 5.085,
-            "profile_path": "/eXRnf2aCfpb7gItoWtuIHz4lOEo.jpg",
-            "credit_id": "5ecbe8f8e635710021d0098c",
-            "department": "Visual Effects",
-            "job": "Visual Effects Coordinator"
+            "id": 1104904,
+            "known_for_department": "Production",
+            "name": "Ben Grayson",
+            "original_name": "Ben Grayson",
+            "popularity": 0.3917,
+            "profile_path": null,
+            "credit_id": "664d341661c3cfb5b0635e97",
+            "department": "Production",
+            "job": "Producer"
           }
         ]
-      }
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [],
+        "total_pages": 0,
+        "total_results": 0
+      },
+      "media_type": "movie"
     },
     {
       "adult": false,
-      "backdrop_path": "/k2twTjSddgLc1oFFHVibfxp2kQV.jpg",
-      "genre_ids": [
-        28,
-        12,
-        14,
-        878
+      "backdrop_path": "/tNONILTe9OJz574KZWaLze4v6RC.jpg",
+      "genres": [
+        {
+          "id": 9648,
+          "name": "Mystery"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        }
       ],
-      "id": 524434,
+      "homepage": "https://thehousemaid.movie",
+      "id": 1368166,
+      "imdb_id": "tt27543632",
       "original_language": "en",
-      "original_title": "Eternals",
-      "overview": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind's most ancient enemy, the Deviants.",
-      "popularity": 4469.099,
-      "poster_path": "/bcCBq9N1EMo3daNIjWJ8kYvrQm6.jpg",
-      "release_date": "2021-11-03",
-      "title": "Eternals",
-      "video": false,
-      "vote_average": 7.2,
-      "vote_count": 3880
+      "original_title": "The Housemaid",
+      "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+      "popularity": 298.0136,
+      "poster_path": "/mJGFduBPAzTKzOeCeTjBBOxnalB.jpg",
+      "production_companies": [
+        {
+          "id": 1632,
+          "logo_path": "/cisLn1YAUuptXVBa0xjq7ST9cH0.png",
+          "name": "Lionsgate",
+          "origin_country": "US"
+        },
+        {
+          "id": 221429,
+          "logo_path": "/7xNNmHcuDy0tOqZmsUMnZ6HcZ6E.png",
+          "name": "Media Capital Technologies",
+          "origin_country": "US"
+        },
+        {
+          "id": 198785,
+          "logo_path": "/oBnMrmwnlAKcACe5h7Vwmk8m1CC.png",
+          "name": "Hidden Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 284257,
+          "logo_path": null,
+          "name": "Pretty Dangerous Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2025-12-18",
+      "runtime": 131,
+      "status": "Released",
+      "title": "The Housemaid",
+      "vote_average": 7.198,
+      "vote_count": 1032,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 115440,
+            "known_for_department": "Acting",
+            "name": "Sydney Sweeney",
+            "original_name": "Sydney Sweeney",
+            "popularity": 42.3539,
+            "profile_path": "/uDnIdU4KGjQg7liFvb9wnALvg95.jpg",
+            "cast_id": 1,
+            "character": "Millie Calloway",
+            "credit_id": "67055a48ccbb4e7f1669de8e",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 71070,
+            "known_for_department": "Acting",
+            "name": "Amanda Seyfried",
+            "original_name": "Amanda Seyfried",
+            "popularity": 9.9151,
+            "profile_path": "/gtBUIpZ3dvLpOMIVORxE6sHSyZj.jpg",
+            "cast_id": 2,
+            "character": "Nina Winchester",
+            "credit_id": "67055a5b2ae7eb9084c0240a",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1855143,
+            "known_for_department": "Acting",
+            "name": "Brandon Sklenar",
+            "original_name": "Brandon Sklenar",
+            "popularity": 9.6667,
+            "profile_path": "/1f1NMi0IYL5p1BHVyV9IoYcwzJt.jpg",
+            "cast_id": 14,
+            "character": "Andrew Winchester",
+            "credit_id": "671ac4a16d6b705dc8713fe6",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2349355,
+            "known_for_department": "Acting",
+            "name": "Michele Morrone",
+            "original_name": "Michele Morrone",
+            "popularity": 6.7775,
+            "profile_path": "/saKjzGAuw8Fiutlv9LweLjAti0Z.jpg",
+            "cast_id": 15,
+            "character": "Enzo",
+            "credit_id": "6761b017c29ba495edcbe5e1",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4342318,
+            "known_for_department": "Acting",
+            "name": "Indiana Elle",
+            "original_name": "Indiana Elle",
+            "popularity": 3.623,
+            "profile_path": "/d9Bk6BWiPmWIx1Ssx36GqReFjQJ.jpg",
+            "cast_id": 22,
+            "character": "Cece Winchester",
+            "credit_id": "6813839de4c08aa248b1fbd3",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2035942,
+            "known_for_department": "Acting",
+            "name": "Sarah Cooper",
+            "original_name": "Sarah Cooper",
+            "popularity": 0.9333,
+            "profile_path": "/85Ys0z9F6LCi0ZloiW2X6WHbZ1i.jpg",
+            "cast_id": 71,
+            "character": "Pam",
+            "credit_id": "696982706a248243d627991f",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 20,
+            "known_for_department": "Acting",
+            "name": "Elizabeth Perkins",
+            "original_name": "Elizabeth Perkins",
+            "popularity": 3.2745,
+            "profile_path": "/vTWYllD9V76rgv9XAbtkkjjeunG.jpg",
+            "cast_id": 37,
+            "character": "Mrs. Winchester",
+            "credit_id": "693be65ea964adc5bffc47d1",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2013576,
+            "known_for_department": "Acting",
+            "name": "Ellen Tamaki",
+            "original_name": "Ellen Tamaki",
+            "popularity": 1.8257,
+            "profile_path": "/kQGqxMmGdpGTvBJEy3gWvMf1fKO.jpg",
+            "cast_id": 19,
+            "character": "Patrice",
+            "credit_id": "6813835190ca48915ce81f86",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1306314,
+            "known_for_department": "Acting",
+            "name": "Megan Ferguson",
+            "original_name": "Megan Ferguson",
+            "popularity": 1.4098,
+            "profile_path": "/eBhtfrvBa9RyQgf52sf1E3jx524.jpg",
+            "cast_id": 20,
+            "character": "Jilliane",
+            "credit_id": "6813836240139ad9d5b1fd08",
+            "order": 8
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1517553,
+            "known_for_department": "Acting",
+            "name": "Amanda Joy Erickson",
+            "original_name": "Amanda Joy Erickson",
+            "popularity": 0.6705,
+            "profile_path": "/3BieG0s7lddZr8wsNF6Rwfrz9Tm.jpg",
+            "cast_id": 23,
+            "character": "Suzanne",
+            "credit_id": "681383a8f597998248a0ef8a",
+            "order": 9
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 116805,
+            "known_for_department": "Directing",
+            "name": "Paul Feig",
+            "original_name": "Paul Feig",
+            "popularity": 1.9276,
+            "profile_path": "/mE3eFY3gq1UQ7Rj2He2YbZ7PFya.jpg",
+            "credit_id": "67055a7a98df8ea0151d595d",
+            "department": "Directing",
+            "job": "Director"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 82665,
+            "known_for_department": "Writing",
+            "name": "Rebecca Sonnenshine",
+            "original_name": "Rebecca Sonnenshine",
+            "popularity": 0.6302,
+            "profile_path": "/zS6EnSeDmbeNQkx9lRzItRzLlpX.jpg",
+            "credit_id": "67055a94222ead1edac01ad1",
+            "department": "Writing",
+            "job": "Screenplay"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4858372,
+            "known_for_department": "Writing",
+            "name": "Freida McFadden",
+            "original_name": "Freida McFadden",
+            "popularity": 2.2761,
+            "profile_path": "/pSDhgQPG3tgKW05HAWDm419ddgV.jpg",
+            "credit_id": "67055aa25454b8623369e0eb",
+            "department": "Writing",
+            "job": "Novel"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 115440,
+            "known_for_department": "Acting",
+            "name": "Sydney Sweeney",
+            "original_name": "Sydney Sweeney",
+            "popularity": 42.3539,
+            "profile_path": "/uDnIdU4KGjQg7liFvb9wnALvg95.jpg",
+            "credit_id": "67055bfd5454b8623369e15c",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 71070,
+            "known_for_department": "Acting",
+            "name": "Amanda Seyfried",
+            "original_name": "Amanda Seyfried",
+            "popularity": 9.9151,
+            "profile_path": "/gtBUIpZ3dvLpOMIVORxE6sHSyZj.jpg",
+            "credit_id": "67055c0fbd7cd86da51d5bf7",
+            "department": "Production",
+            "job": "Executive Producer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [],
+        "total_pages": 0,
+        "total_results": 0
+      },
+      "media_type": "movie"
     },
     {
       "adult": false,
-      "backdrop_path": "/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
-      "genre_ids": [878, 12],
-      "id": 438631,
+      "backdrop_path": "/sYM02XfZhqvlixmRkDcseQ6Xllk.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "homepage": "https://www.wutheringheightsfilm.com",
+      "id": 1316092,
+      "imdb_id": "tt32897959",
       "original_language": "en",
-      "original_title": "Dune",
-      "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people.",
-      "popularity": 250.5,
-      "poster_path": "/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
-      "release_date": "2021-09-15",
-      "title": "Dune",
-      "video": false,
-      "vote_average": 7.8,
-      "vote_count": 9200
+      "original_title": "“Wuthering Heights”",
+      "overview": "Tragedy strikes when Heathcliff falls in love with Catherine Earnshaw, a woman from a wealthy family in 18th-century England.",
+      "popularity": 84.9541,
+      "poster_path": "/ywRO5dyE8RyyXJd6cvd69jLZeic.jpg",
+      "production_companies": [
+        {
+          "id": 2531,
+          "logo_path": "/9MfCJ2G6Nrf9yyRj4tAgPmMiDcn.png",
+          "name": "MRC",
+          "origin_country": "US"
+        },
+        {
+          "id": 82968,
+          "logo_path": "/gRROMOG5bpF6TIDMbfaa5gnFFzl.png",
+          "name": "LuckyChap Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 207685,
+          "logo_path": null,
+          "name": "Lie Still",
+          "origin_country": "GB"
+        },
+        {
+          "id": 174,
+          "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 216687,
+          "logo_path": "/kKVYqekveOvLK1IgqdJojLjQvtu.png",
+          "name": "Domain Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        },
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        }
+      ],
+      "release_date": "2026-02-11",
+      "runtime": 136,
+      "status": "Released",
+      "title": "“Wuthering Heights”",
+      "vote_average": 7.463,
+      "vote_count": 54,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 234352,
+            "known_for_department": "Acting",
+            "name": "Margot Robbie",
+            "original_name": "Margot Robbie",
+            "popularity": 11.9646,
+            "profile_path": "/8LqG2N6j98lFGMpuYsRUAhOunSd.jpg",
+            "cast_id": 4,
+            "character": "Catherine Earnshaw",
+            "credit_id": "66f1bb7a6c3b7a8d648df33e",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2034418,
+            "known_for_department": "Acting",
+            "name": "Jacob Elordi",
+            "original_name": "Jacob Elordi",
+            "popularity": 11.7813,
+            "profile_path": "/qZNRPWCP2c5d0YaYLTzHXU9Rdoe.jpg",
+            "cast_id": 5,
+            "character": "Heathcliff",
+            "credit_id": "66f1bb826c3b7a8d648df347",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1360317,
+            "known_for_department": "Acting",
+            "name": "Hong Chau",
+            "original_name": "Hong Chau",
+            "popularity": 2.4508,
+            "profile_path": "/yGEw6uiSUBo838HkiCARs4BR40y.jpg",
+            "cast_id": 8,
+            "character": "Nelly Dean",
+            "credit_id": "673e5980f40282ebcb9b7532",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2981449,
+            "known_for_department": "Acting",
+            "name": "Alison Oliver",
+            "original_name": "Alison Oliver",
+            "popularity": 2.2064,
+            "profile_path": "/ouHdcq6Tgedx4UnJuT3liROzomq.jpg",
+            "cast_id": 9,
+            "character": "Isabella Linton",
+            "credit_id": "673e598a625bc338dc389c55",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1370832,
+            "known_for_department": "Acting",
+            "name": "Shazad Latif",
+            "original_name": "Shazad Latif",
+            "popularity": 2.9001,
+            "profile_path": "/n8vJ1AHhv294hGqZxhjM95OvpxT.jpg",
+            "cast_id": 10,
+            "character": "Edgar Linton",
+            "credit_id": "673e599c4dec1f98b29bd318",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 5225942,
+            "known_for_department": "Acting",
+            "name": "Owen Cooper",
+            "original_name": "Owen Cooper",
+            "popularity": 2.9623,
+            "profile_path": "/trvWevrSkVNORcDZ8ZOMgOJoY46.jpg",
+            "cast_id": 17,
+            "character": "Young Heathcliff",
+            "credit_id": "67bc05e6abeede36c44692ea",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1643904,
+            "known_for_department": "Acting",
+            "name": "Vy Nguyen",
+            "original_name": "Vy Nguyen",
+            "popularity": 0.3586,
+            "profile_path": "/oMyVY7yW1iNxbnnqNMscJIj5NJl.jpg",
+            "cast_id": 27,
+            "character": "Young Nelly Dean",
+            "credit_id": "67e0eec3b8e0fea9340811b8",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 5292854,
+            "known_for_department": "Acting",
+            "name": "Charlotte Mellington",
+            "original_name": "Charlotte Mellington",
+            "popularity": 0.5374,
+            "profile_path": "/mw79hdtCu9WqNH44IQUeBeAtOjn.jpg",
+            "cast_id": 28,
+            "character": "Young Catherine Earnshaw",
+            "credit_id": "67e0ef09b8e0fea9340811f0",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1829122,
+            "known_for_department": "Acting",
+            "name": "Ewan Mitchell",
+            "original_name": "Ewan Mitchell",
+            "popularity": 2.4629,
+            "profile_path": "/v1PqysDnx5umfA2DqGyjwuAxc9C.jpg",
+            "cast_id": 42,
+            "character": "Whip-Wielding Man",
+            "credit_id": "68b8a7eb87818c0f48068c48",
+            "order": 8
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 22159,
+            "known_for_department": "Acting",
+            "name": "Martin Clunes",
+            "original_name": "Martin Clunes",
+            "popularity": 1.6059,
+            "profile_path": "/xoCgVr1h3uhES9MnKCoyd05bW1v.jpg",
+            "cast_id": 43,
+            "character": "Mr. Earnshaw",
+            "credit_id": "68b8a820b657aeb10a1f3f83",
+            "order": 9
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1252934,
+            "known_for_department": "Writing",
+            "name": "Emerald Fennell",
+            "original_name": "Emerald Fennell",
+            "popularity": 4.3873,
+            "profile_path": "/ytyHUsPb7Saulczm8nCJHypIWQF.jpg",
+            "credit_id": "66916a9c2b600a4eefa52e43",
+            "department": "Directing",
+            "job": "Director"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 30224,
+            "known_for_department": "Writing",
+            "name": "Emily Brontë",
+            "original_name": "Emily Brontë",
+            "popularity": 0.8862,
+            "profile_path": "/oxEJAxnAcGwpHyahGrylRrz9eax.jpg",
+            "credit_id": "66916f9ae657768c9da52e54",
+            "department": "Writing",
+            "job": "Novel"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1252934,
+            "known_for_department": "Writing",
+            "name": "Emerald Fennell",
+            "original_name": "Emerald Fennell",
+            "popularity": 4.3873,
+            "profile_path": "/ytyHUsPb7Saulczm8nCJHypIWQF.jpg",
+            "credit_id": "6691b07289461e7b473c36c9",
+            "department": "Writing",
+            "job": "Screenplay"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 234352,
+            "known_for_department": "Acting",
+            "name": "Margot Robbie",
+            "original_name": "Margot Robbie",
+            "popularity": 11.9646,
+            "profile_path": "/8LqG2N6j98lFGMpuYsRUAhOunSd.jpg",
+            "credit_id": "66f1bbb10315b91f463b2e46",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1252934,
+            "known_for_department": "Writing",
+            "name": "Emerald Fennell",
+            "original_name": "Emerald Fennell",
+            "popularity": 4.3873,
+            "profile_path": "/ytyHUsPb7Saulczm8nCJHypIWQF.jpg",
+            "credit_id": "66f1bbf9fc009839148d4346",
+            "department": "Production",
+            "job": "Producer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [],
+        "total_pages": 0,
+        "total_results": 0
+      },
+      "media_type": "movie"
     },
     {
       "adult": false,
-      "backdrop_path": "/b0PlSFdDwbyFAJlMuA8HpKjYmEI.jpg",
-      "genre_ids": [28, 80, 18],
-      "id": 414906,
+      "backdrop_path": "/coaPCIqQBPUZsOnJcWZxhaORcDT.jpg",
+      "episode_run_time": [],
+      "first_air_date": "2024-04-10",
+      "genres": [
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        }
+      ],
+      "homepage": "https://www.amazon.com/dp/B0CN4HV16N",
+      "id": 106379,
+      "last_air_date": "2026-02-03",
+      "name": "Fallout",
+      "number_of_episodes": 16,
+      "number_of_seasons": 2,
       "original_language": "en",
-      "original_title": "The Batman",
-      "overview": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
-      "popularity": 195.3,
-      "poster_path": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
-      "release_date": "2022-03-01",
-      "title": "The Batman",
-      "video": false,
-      "vote_average": 7.7,
-      "vote_count": 8100
+      "original_name": "Fallout",
+      "overview": "The story of haves and have-nots in a world in which there's almost nothing left to have. 200 years after the apocalypse, the gentle denizens of luxury fallout shelters are forced to return to the irradiated hellscape their ancestors left behind — and are shocked to discover an incredibly complex, gleefully weird, and highly violent universe waiting for them.",
+      "popularity": 142.7591,
+      "poster_path": "/c15BtJxCXMrISLVmysdsnZUPQft.jpg",
+      "production_companies": [
+        {
+          "id": 103490,
+          "logo_path": "/xnDEtomiDZ8aLOhokbeSqh8HI99.png",
+          "name": "Kilter Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 137613,
+          "logo_path": "/g1zUaSoWV1yQhUBFPnmbO5tL7oI.png",
+          "name": "Bethesda Game Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 210099,
+          "logo_path": "/g5oRCNCi8kNVb8gEoSoIcqkhjmR.png",
+          "name": "Amazon MGM Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 6831,
+          "logo_path": "/fWSI4EjIDEEzCNJC8OTPX9Pdbxv.png",
+          "name": "Big Indie Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2024-03-24",
+          "episode_count": 24,
+          "id": 391707,
+          "name": "Specials",
+          "overview": "",
+          "poster_path": "/y7TMQf9rsHU4RcPkL5HUxio3Pry.jpg",
+          "season_number": 0,
+          "vote_average": 0.0
+        },
+        {
+          "air_date": "2024-04-10",
+          "episode_count": 8,
+          "id": 157128,
+          "name": "Season 1",
+          "overview": "200 years after the apocalypse, the gentle denizens of luxury fallout shelters are forced to return to the incredibly complex, gleefully weird and highly violent universe waiting for them above.",
+          "poster_path": "/umhZRQwBbDRWbrvLev4cz4GZBhr.jpg",
+          "season_number": 1,
+          "vote_average": 7.8
+        },
+        {
+          "air_date": "2025-12-16",
+          "episode_count": 8,
+          "id": 455510,
+          "name": "Season 2",
+          "overview": "What say you Ms MacLean?",
+          "poster_path": "/c15BtJxCXMrISLVmysdsnZUPQft.jpg",
+          "season_number": 2,
+          "vote_average": 6.9
+        }
+      ],
+      "status": "Returning Series",
+      "vote_average": 8.138,
+      "vote_count": 2552,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 989325,
+            "known_for_department": "Acting",
+            "name": "Ella Purnell",
+            "original_name": "Ella Purnell",
+            "popularity": 11.3386,
+            "profile_path": "/5PscK9HNXGFQMIxkpbR8ObB7vuR.jpg",
+            "character": "Lucy MacLean",
+            "credit_id": "6244b9ef9451e7005e7d3f49",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1386221,
+            "known_for_department": "Acting",
+            "name": "Aaron Moten",
+            "original_name": "Aaron Moten",
+            "popularity": 4.0793,
+            "profile_path": "/h2CJjnDEy2nCbCy6dWzXLmZ4p47.jpg",
+            "character": "Maximus",
+            "credit_id": "62bb56f894631800506f51bc",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 57412,
+            "known_for_department": "Acting",
+            "name": "Moisés Arias",
+            "original_name": "Moisés Arias",
+            "popularity": 3.3437,
+            "profile_path": "/fc7krDmEA4VkIY4KOJjpMXGdsfg.jpg",
+            "character": "Norm MacLean",
+            "credit_id": "65ebdea25bce9e0149465351",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1845809,
+            "known_for_department": "Acting",
+            "name": "Frances Turner",
+            "original_name": "Frances Turner",
+            "popularity": 1.931,
+            "profile_path": "/ik2MNJFA2CzeuGtdwrpgUJaidef.jpg",
+            "character": "Barb Howard",
+            "credit_id": "66187b9290cf510162a19492",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 6677,
+            "known_for_department": "Acting",
+            "name": "Kyle MacLachlan",
+            "original_name": "Kyle MacLachlan",
+            "popularity": 3.8897,
+            "profile_path": "/7gNyx8fYAUdOp2jpCEH3dyFbeV.jpg",
+            "character": "Overseer Hank MacLean",
+            "credit_id": "661a78e1daf57c01633f4ca1",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 27740,
+            "known_for_department": "Acting",
+            "name": "Walton Goggins",
+            "original_name": "Walton Goggins",
+            "popularity": 5.6666,
+            "profile_path": "/5lcVMJbWrNDFiWa1WxK4oR8zwev.jpg",
+            "character": "The Ghoul / Cooper Howard",
+            "credit_id": "620ff2f9e0ca7f006aca85e4",
+            "order": 5
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2015561,
+            "known_for_department": "Production",
+            "name": "Skye Wathen",
+            "original_name": "Skye Wathen",
+            "popularity": 0.1502,
+            "profile_path": null,
+            "credit_id": "661aac945ff34e017c599947",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 92499,
+            "known_for_department": "Crew",
+            "name": "Casey O'Neill",
+            "original_name": "Casey O'Neill",
+            "popularity": 0.4079,
+            "profile_path": "/aoT1prEjm2i4BYk2UUwYYhUtwTZ.jpg",
+            "credit_id": "661ab4dedaf57c017c3fd924",
+            "department": "Crew",
+            "job": "Stunt Coordinator"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2762680,
+            "known_for_department": "Camera",
+            "name": "Michael Romano",
+            "original_name": "Michael Romano",
+            "popularity": 0.4274,
+            "profile_path": "/vM9MaEjihIubmDVzcPpwmt5RNSy.jpg",
+            "credit_id": "68c0d0fe3c2b162ba21f5f24",
+            "department": "Camera",
+            "job": "Digital Imaging Technician"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 5883656,
+            "known_for_department": "Writing",
+            "name": "Chris Brady-Denton",
+            "original_name": "Chris Brady-Denton",
+            "popularity": 0.0821,
+            "profile_path": null,
+            "credit_id": "6943161a802672ec5d7f9339",
+            "department": "Writing",
+            "job": "Story Editor"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1747687,
+            "known_for_department": "Visual Effects",
+            "name": "Jay Worth",
+            "original_name": "Jay Worth",
+            "popularity": 0.2808,
+            "profile_path": null,
+            "credit_id": "69437246a63d509f3d36a70d",
+            "department": "Production",
+            "job": "Co-Executive Producer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [
+          {
+            "adult": false,
+            "backdrop_path": "/bwSmgmd90hCWwqOKQYTEraeOZhJ.jpg",
+            "id": 126308,
+            "name": "Shōgun",
+            "original_name": "Shōgun",
+            "overview": "In Japan in the year 1600, at the dawn of a century-defining civil war, Lord Yoshii Toranaga is fighting for his life as his enemies on the Council of Regents unite against him, when a mysterious European ship is found marooned in a nearby fishing village.",
+            "poster_path": "/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              18,
+              10768
+            ],
+            "popularity": 32.1334,
+            "first_air_date": "2024-02-27",
+            "vote_average": 8.438,
+            "vote_count": 1618,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/2qLYxCyxf4fim0X5OqM5FjZqWXu.jpg",
+            "id": 241259,
+            "name": "Baby Reindeer",
+            "original_name": "Baby Reindeer",
+            "overview": "When a struggling comedian shows one act of kindness to a vulnerable woman, it sparks a suffocating obsession which threatens to wreck both their lives.",
+            "poster_path": "/tN9OcbkAOPwHSr1sgMornZtQZBx.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              18
+            ],
+            "popularity": 7.8095,
+            "first_air_date": "2024-04-11",
+            "vote_average": 7.599,
+            "vote_count": 1077,
+            "origin_country": [
+              "GB"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/sMxOqjwaHHXuBnHkvVyzqcOPMVF.jpg",
+            "id": 251091,
+            "name": "Star Wars: Tales of the Empire",
+            "original_name": "Star Wars: Tales of the Empire",
+            "overview": "A journey into the fearsome Galactic Empire through the eyes of two warriors on divergent paths.",
+            "poster_path": "/qA28nLteurVboSSzltuyYt1lvlC.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              16,
+              10765,
+              10759
+            ],
+            "popularity": 10.1195,
+            "first_air_date": "2024-05-04",
+            "vote_average": 7.374,
+            "vote_count": 203,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/iDnTAeR2WNA62XQG0ivtteDSjd5.jpg",
+            "id": 138502,
+            "name": "X-Men '97",
+            "original_name": "X-Men '97",
+            "overview": "The X-Men, a band of mutants who use their uncanny gifts to protect a world that hates and fears them, are challenged like never before, forced to face a dangerous and unexpected new future.",
+            "poster_path": "/9Ycz7yYRf9V4jk3YXwcZhFtbNcF.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              16,
+              10759,
+              10765
+            ],
+            "popularity": 24.6809,
+            "first_air_date": "2024-03-20",
+            "vote_average": 8.521,
+            "vote_count": 629,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/ciizJ9Okzt9tBBGK7Q3T14LFT2j.jpg",
+            "id": 108545,
+            "name": "3 Body Problem",
+            "original_name": "3 Body Problem",
+            "overview": "Across continents and decades, five brilliant friends make earth-shattering discoveries as the laws of science unravel and an existential threat emerges.",
+            "poster_path": "/ykZ7hlShkdRQaL2aiieXdEMmrLb.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              10765,
+              9648,
+              18
+            ],
+            "popularity": 31.5735,
+            "first_air_date": "2024-03-21",
+            "vote_average": 7.458,
+            "vote_count": 1378,
+            "origin_country": [
+              "US"
+            ]
+          }
+        ],
+        "total_pages": 2,
+        "total_results": 40
+      },
+      "media_type": "tv"
     },
     {
       "adult": false,
-      "backdrop_path": "/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
-      "genre_ids": [28, 12, 878],
-      "id": 634649,
+      "backdrop_path": "/2xGcSLyTAzConiHAByWqhfLiatT.jpg",
+      "episode_run_time": [],
+      "first_air_date": "2022-08-21",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "homepage": "https://www.hbo.com/house-of-the-dragon",
+      "id": 94997,
+      "last_air_date": "2024-08-04",
+      "name": "House of the Dragon",
+      "number_of_episodes": 26,
+      "number_of_seasons": 3,
       "original_language": "en",
-      "original_title": "Spider-Man: No Way Home",
-      "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous.",
-      "popularity": 310.2,
-      "poster_path": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
-      "release_date": "2021-12-15",
-      "title": "Spider-Man: No Way Home",
-      "video": false,
-      "vote_average": 8.0,
-      "vote_count": 14500
+      "original_name": "House of the Dragon",
+      "overview": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
+      "popularity": 74.3863,
+      "poster_path": "/7QMsOTMUswlwxJP0rTTZfmz2tX2.jpg",
+      "production_companies": [
+        {
+          "id": 3268,
+          "logo_path": "/tuomPhY2UtuPTqqFnKMVHvSb724.png",
+          "name": "HBO",
+          "origin_country": "US"
+        },
+        {
+          "id": 180956,
+          "logo_path": null,
+          "name": "Bastard Sword",
+          "origin_country": "US"
+        },
+        {
+          "id": 180957,
+          "logo_path": null,
+          "name": "1:26 Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 180958,
+          "logo_path": null,
+          "name": "GRRM",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2022-08-21",
+          "episode_count": 73,
+          "id": 309556,
+          "name": "Specials",
+          "overview": "",
+          "poster_path": "/n9z5p7psbfhLsaRyUrv0jrNCbh0.jpg",
+          "season_number": 0,
+          "vote_average": 0.0
+        },
+        {
+          "air_date": "2022-08-21",
+          "episode_count": 10,
+          "id": 134965,
+          "name": "Season 1",
+          "overview": "Set nearly 200 years before Game of Thrones, this season chronicles the events leading up to the Targaryen civil war, known as the Dance of the Dragons. King Viserys I Targaryen names his daughter, Princess Rhaenyra, as heir to the Iron Throne, breaking tradition and igniting tensions within the realm. The court becomes divided as Queen Alicent Hightower, Viserys’s second wife, promotes her son Aegon’s claim to the throne. Political intrigue, shifting alliances, and personal betrayals set the stage for a looming conflict that threatens to tear the Targaryen dynasty apart.",
+          "poster_path": "/lx6hsqWXq4aVrXPjCqnMHFrGL5u.jpg",
+          "season_number": 1,
+          "vote_average": 7.9
+        },
+        {
+          "air_date": "2024-06-16",
+          "episode_count": 8,
+          "id": 368014,
+          "name": "Season 2",
+          "overview": "The Dance of the Dragons erupts as Rhaenyra and Aegon II both assert their claims to the Iron Throne, plunging Westeros into a brutal civil war. The season delves into the complexities of loyalty, power, and family as both sides employ dragons and armies to assert dominance. Key events include the tragic assassination of Prince Jaehaerys, escalating the conflict, and the shifting dynamics among key players like Daemon Targaryen and Alicent Hightower. As the war intensifies, the realm witnesses the devastating consequences of ambition and the high cost of succession disputes.",
+          "poster_path": "/lZwxqNWnT1dRl76ry6BM0FPqCUg.jpg",
+          "season_number": 2,
+          "vote_average": 7.4
+        },
+        {
+          "air_date": null,
+          "episode_count": 8,
+          "id": 449260,
+          "name": "Season 3",
+          "overview": "",
+          "poster_path": null,
+          "season_number": 3,
+          "vote_average": 0.0
+        }
+      ],
+      "status": "Returning Series",
+      "vote_average": 8.294,
+      "vote_count": 5709,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 3,
+            "id": 2121005,
+            "known_for_department": "Acting",
+            "name": "Emma D'Arcy",
+            "original_name": "Emma D'Arcy",
+            "popularity": 4.492,
+            "profile_path": "/9Zlmb7VmtVCxkLq5yqFFRRxCaED.jpg",
+            "character": "Princess Rhaenyra Targaryen",
+            "credit_id": "6352ee62c9dbf9007afed8d8",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 136532,
+            "known_for_department": "Acting",
+            "name": "Matt Smith",
+            "original_name": "Matt Smith",
+            "popularity": 2.9618,
+            "profile_path": "/xr2GSp8Pm6fT5VGm0I9tsWVcZ8q.jpg",
+            "character": "Prince Daemon Targaryen",
+            "credit_id": "6352ee17a843c10091b281ff",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1173984,
+            "known_for_department": "Acting",
+            "name": "Olivia Cooke",
+            "original_name": "Olivia Cooke",
+            "popularity": 3.6034,
+            "profile_path": "/7LYm4jGDq8IxAe4D6TTPkWwU0Ft.jpg",
+            "character": "Alicent Hightower",
+            "credit_id": "5fd3dd720ce1bc0042fd1f12",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1829122,
+            "known_for_department": "Acting",
+            "name": "Ewan Mitchell",
+            "original_name": "Ewan Mitchell",
+            "popularity": 2.4629,
+            "profile_path": "/v1PqysDnx5umfA2DqGyjwuAxc9C.jpg",
+            "character": "Prince Aemond Targaryen",
+            "credit_id": "6343bd126a300b007d20c781",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1457238,
+            "known_for_department": "Acting",
+            "name": "Sonoya Mizuno",
+            "original_name": "Sonoya Mizuno",
+            "popularity": 1.5683,
+            "profile_path": "/scbRPaGPw3VnR6mrmZQZi6Cuj1m.jpg",
+            "character": "Mysaria 'The White Worm'",
+            "credit_id": "69828049f1cce13b0e1eee5e",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1526130,
+            "known_for_department": "Acting",
+            "name": "Kurt Egyiawan",
+            "original_name": "Kurt Egyiawan",
+            "popularity": 0.7948,
+            "profile_path": "/bLzmxAmUxRj8wwxzlpaKKdg2Ccf.jpg",
+            "character": "Grand Maester Orwyle",
+            "credit_id": "6982806a780f3f6d0cded182",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1584566,
+            "known_for_department": "Acting",
+            "name": "Matthew Needham",
+            "original_name": "Matthew Needham",
+            "popularity": 0.6478,
+            "profile_path": "/sZHT2xFtnBawU3DoaWZACSv15gX.jpg",
+            "character": "Lord Larys 'The Clubfoot' Strong",
+            "credit_id": "698280ab8b0e7f9de1e74709",
+            "order": 8
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1765227,
+            "known_for_department": "Acting",
+            "name": "Tom Glynn-Carney",
+            "original_name": "Tom Glynn-Carney",
+            "popularity": 0.7332,
+            "profile_path": "/jJ3KqUW8ySGBwHXOCN3x2Wxjm5W.jpg",
+            "character": "King Aegon II Targaryen",
+            "credit_id": "6982813415949119048e5d3d",
+            "order": 9
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1789952,
+            "known_for_department": "Acting",
+            "name": "Harry Collett",
+            "original_name": "Harry Collett",
+            "popularity": 0.9225,
+            "profile_path": "/sGVXltoYX4Y06e5MTToox6rhJdI.jpg",
+            "character": "Prince Jacaerys 'Jace' Velaryon",
+            "credit_id": "6982815c51e54062ee620df8",
+            "order": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 65301,
+            "known_for_department": "Acting",
+            "name": "Phil Daniels",
+            "original_name": "Phil Daniels",
+            "popularity": 1.5277,
+            "profile_path": "/6yNFNjo3cWEcuAUrl0CNQnAnQ5M.jpg",
+            "character": "Maester Gerardys",
+            "credit_id": "633a95f938469a007ac5275d",
+            "order": 584
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1401800,
+            "known_for_department": "Visual Effects",
+            "name": "Wayne Stables",
+            "original_name": "Wayne Stables",
+            "popularity": 0.4521,
+            "profile_path": null,
+            "credit_id": "68e3e18075986ec77636ebb7",
+            "department": "Visual Effects",
+            "job": "Visual Effects Supervisor"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4671122,
+            "known_for_department": "Crew",
+            "name": "Nicol Shaw",
+            "original_name": "Nicol Shaw",
+            "popularity": 0.3029,
+            "profile_path": null,
+            "credit_id": "67d96346562e832c97366721",
+            "department": "Crew",
+            "job": "Transportation Coordinator"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 5232042,
+            "known_for_department": "Visual Effects",
+            "name": "Nikeah Forde",
+            "original_name": "Nikeah Forde",
+            "popularity": 0.1371,
+            "profile_path": null,
+            "credit_id": "67a65a815088b94597300a76",
+            "department": "Visual Effects",
+            "job": "Visual Effects Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2769359,
+            "known_for_department": "Crew",
+            "name": "Ben Wright",
+            "original_name": "Ben Wright",
+            "popularity": 0.4965,
+            "profile_path": "/a6buIXOJAVBlZ2OkDVyotEETyn.jpg",
+            "credit_id": "677083347d1bc87de761608d",
+            "department": "Crew",
+            "job": "Stunts"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 114017,
+            "known_for_department": "Production",
+            "name": "Karl McMillan",
+            "original_name": "Karl McMillan",
+            "popularity": 0.4485,
+            "profile_path": null,
+            "credit_id": "666fe75d4a6625dfab5473e0",
+            "department": "Production",
+            "job": "Co-Producer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [
+          {
+            "adult": false,
+            "backdrop_path": "/NNC08YmJFFlLi1prBkK8quk3dp.jpg",
+            "id": 84773,
+            "name": "The Lord of the Rings: The Rings of Power",
+            "original_name": "The Lord of the Rings: The Rings of Power",
+            "overview": "Beginning in a time of relative peace, we follow an ensemble cast of characters as they confront the re-emergence of evil to Middle-earth. From the darkest depths of the Misty Mountains, to the majestic forests of Lindon, to the breathtaking island kingdom of Númenor, to the furthest reaches of the map, these kingdoms and characters will carve out legacies that live on long after they are gone.",
+            "poster_path": "/kf5Hz70tjNAHg4swGDzOr9BfoZ1.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              10759,
+              10765,
+              18
+            ],
+            "popularity": 51.1601,
+            "first_air_date": "2022-09-01",
+            "vote_average": 7.3,
+            "vote_count": 3573,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/kCGwvjpqM1owt9kI4pkYPJWJLvc.jpg",
+            "id": 83867,
+            "name": "Andor",
+            "original_name": "Andor",
+            "overview": "In an era filled with danger, deception and intrigue, Cassian Andor will discover the difference he can make in the struggle against the tyrannical Galactic Empire. He embarks on a path that is destined to turn him into a rebel hero.",
+            "poster_path": "/khZqmwHQicTYoS7Flreb9EddFZC.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              10765,
+              10759,
+              18
+            ],
+            "popularity": 59.6635,
+            "first_air_date": "2022-09-21",
+            "vote_average": 8.274,
+            "vote_count": 1853,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/zZqpAXxVSBtxV9qPBcscfXBcL2w.jpg",
+            "id": 1399,
+            "name": "Game of Thrones",
+            "original_name": "Game of Thrones",
+            "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+            "poster_path": "/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              10765,
+              18,
+              10759
+            ],
+            "popularity": 207.5378,
+            "first_air_date": "2011-04-17",
+            "vote_average": 8.5,
+            "vote_count": 26238,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/i8taDLjpF8cCbp53N8kOFt1LSkW.jpg",
+            "id": 90802,
+            "name": "The Sandman",
+            "original_name": "The Sandman",
+            "overview": "After years of imprisonment, Morpheus — the King of Dreams — embarks on a journey across worlds to find what was stolen from him and restore his power.",
+            "poster_path": "/q54qEgagGOYCq5D1903eBVMNkbo.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              10765,
+              18,
+              10759
+            ],
+            "popularity": 36.0626,
+            "first_air_date": "2022-08-05",
+            "vote_average": 7.881,
+            "vote_count": 2498,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/eljErfkQUcFUgQkI4I1soZcH8MW.jpg",
+            "id": 92783,
+            "name": "She-Hulk: Attorney at Law",
+            "original_name": "She-Hulk: Attorney at Law",
+            "overview": "Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered hulk.",
+            "poster_path": "/hJfI6AGrmr4uSHRccfJuSsapvOb.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              35,
+              10765
+            ],
+            "popularity": 23.8808,
+            "first_air_date": "2022-08-18",
+            "vote_average": 6.116,
+            "vote_count": 2441,
+            "origin_country": [
+              "US"
+            ]
+          }
+        ],
+        "total_pages": 2,
+        "total_results": 40
+      },
+      "media_type": "tv"
     },
     {
       "adult": false,
-      "backdrop_path": "/fOy2Jurz9k6RnJnMUMRDAgBwru2.jpg",
-      "genre_ids": [28, 12, 878],
-      "id": 361743,
+      "backdrop_path": "/6uPBHw488MUW6x51zZ2OCJo6Dgp.jpg",
+      "episode_run_time": [],
+      "first_air_date": "2025-01-09",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "https://www.hbomax.com/shows/pitt-2024/e6e7bad9-d48d-4434-b334-7c651ffc4bdf",
+      "id": 250307,
+      "last_air_date": "2026-02-12",
+      "name": "The Pitt",
+      "number_of_episodes": 30,
+      "number_of_seasons": 3,
       "original_language": "en",
-      "original_title": "Top Gun: Maverick",
-      "overview": "After more than thirty years of service as one of the Navy's top aviators, and dodging the advancement in rank that would ground him, Pete Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission.",
-      "popularity": 280.1,
-      "poster_path": "/62HCnUTziyWcpDaBO2i1DG5wSaJ.jpg",
-      "release_date": "2022-05-24",
-      "title": "Top Gun: Maverick",
-      "video": false,
-      "vote_average": 8.3,
-      "vote_count": 7900
+      "original_name": "The Pitt",
+      "overview": "The staff of Pittsburgh's Trauma Medical Center work around the clock to save lives in an overcrowded and underfunded emergency department.",
+      "popularity": 78.7663,
+      "poster_path": "/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
+      "production_companies": [
+        {
+          "id": 1512,
+          "logo_path": null,
+          "name": "John Wells Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 1957,
+          "logo_path": "/pJJw98MtNFC9cHn3o15G7vaUnnX.png",
+          "name": "Warner Bros. Television",
+          "origin_country": "US"
+        },
+        {
+          "id": 249723,
+          "logo_path": null,
+          "name": "R. Scott Gemmill Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2025-01-09",
+          "episode_count": 15,
+          "id": 385657,
+          "name": "Season 1",
+          "overview": "",
+          "poster_path": "/aUToQQgvLQAqpUcVI9xls1glJM1.jpg",
+          "season_number": 1,
+          "vote_average": 8.5
+        },
+        {
+          "air_date": "2026-01-08",
+          "episode_count": 15,
+          "id": 471098,
+          "name": "Season 2",
+          "overview": "",
+          "poster_path": "/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
+          "season_number": 2,
+          "vote_average": 6.7
+        },
+        {
+          "air_date": null,
+          "episode_count": 0,
+          "id": 494559,
+          "name": "Season 3",
+          "overview": "",
+          "poster_path": null,
+          "season_number": 3,
+          "vote_average": 0.0
+        }
+      ],
+      "status": "Returning Series",
+      "vote_average": 8.7,
+      "vote_count": 467,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 13526,
+            "known_for_department": "Acting",
+            "name": "Noah Wyle",
+            "original_name": "Noah Wyle",
+            "popularity": 3.6298,
+            "profile_path": "/nwyLCQepwg8FX7OXJ4AT4ej8c7i.jpg",
+            "character": "Dr. Michael 'Robby' Robinavitch",
+            "credit_id": "660309df7707000149082989",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2126992,
+            "known_for_department": "Acting",
+            "name": "Patrick Ball",
+            "original_name": "Patrick Ball",
+            "popularity": 1.8128,
+            "profile_path": "/c9JfuBcZahNi9mqfZZCjaAqcmGl.jpg",
+            "character": "Dr. Frank Langdon",
+            "credit_id": "673340fdb9cbdabe29c2c501",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 169337,
+            "known_for_department": "Acting",
+            "name": "Katherine LaNasa",
+            "original_name": "Katherine LaNasa",
+            "popularity": 3.7552,
+            "profile_path": "/7X3f4MG24XLG2fNPJt5H38d8YCV.jpg",
+            "character": "Charge Nurse Dana Evans",
+            "credit_id": "669195663ab543433e637190",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2288895,
+            "known_for_department": "Acting",
+            "name": "Supriya Ganesh",
+            "original_name": "Supriya Ganesh",
+            "popularity": 1.028,
+            "profile_path": "/psUdosBoBVMfnSpCpe4UTAsegTP.jpg",
+            "character": "Dr. Samira Mohan",
+            "credit_id": "669195398a101afa0ea52fdc",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 204468,
+            "known_for_department": "Acting",
+            "name": "Fiona Dourif",
+            "original_name": "Fiona Dourif",
+            "popularity": 2.6304,
+            "profile_path": "/gKn9lBZLuNHACQhZJUkSIZzUQN5.jpg",
+            "character": "Dr. Cassie McKay",
+            "credit_id": "66919541bcb0716ba83d80fe",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1731714,
+            "known_for_department": "Acting",
+            "name": "Taylor Dearden",
+            "original_name": "Taylor Dearden",
+            "popularity": 4.5828,
+            "profile_path": "/4oIL97ha0B4Gmp5tf4VUsqsWQUa.jpg",
+            "character": "Dr. Melissa King",
+            "credit_id": "6691954814b49a738aace9cb",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2290706,
+            "known_for_department": "Acting",
+            "name": "Isa Briones",
+            "original_name": "Isa Briones",
+            "popularity": 1.7329,
+            "profile_path": "/hxjYdiIJltYUSQwudCJwikIovYq.jpg",
+            "character": "Dr. Trinity Santos",
+            "credit_id": "6691954f1cf71a09746e1c42",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1234583,
+            "known_for_department": "Acting",
+            "name": "Gerran Howell",
+            "original_name": "Gerran Howell",
+            "popularity": 1.6271,
+            "profile_path": "/ssyzz4yiGtbHOghoSYZIqQBEh4d.jpg",
+            "character": "Student Doctor Dennis Whitaker",
+            "credit_id": "669195588b0fa7f0d7f19d26",
+            "order": 8
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2716907,
+            "known_for_department": "Acting",
+            "name": "Shabana Azeez",
+            "original_name": "Shabana Azeez",
+            "popularity": 2.6129,
+            "profile_path": "/vu51rFTgSdB8cdCsjLx1iAtTQZG.jpg",
+            "character": "Student Doctor Victoria Javadi",
+            "credit_id": "6691955fcdad15b0aea52f95",
+            "order": 9
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1344374,
+            "known_for_department": "Acting",
+            "name": "Sepideh Moafi",
+            "original_name": "Sepideh Moafi",
+            "popularity": 3.2155,
+            "profile_path": "/7Z9BvGgwdLqlRJJft38cepGY1TZ.jpg",
+            "character": "Dr. Baran Al-Hashimi",
+            "credit_id": "68a793a73c9c6346123e8c82",
+            "order": 10
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 13526,
+            "known_for_department": "Acting",
+            "name": "Noah Wyle",
+            "original_name": "Noah Wyle",
+            "popularity": 3.6298,
+            "profile_path": "/nwyLCQepwg8FX7OXJ4AT4ej8c7i.jpg",
+            "credit_id": "660309d904733f0164ebb672",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1227308,
+            "known_for_department": "Writing",
+            "name": "R. Scott Gemmill",
+            "original_name": "R. Scott Gemmill",
+            "popularity": 0.6838,
+            "profile_path": "/yhZV8Yl3ToOlNxsNCIQ20BiVN4K.jpg",
+            "credit_id": "66030a3bb84cdd017df78c02",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 47333,
+            "known_for_department": "Production",
+            "name": "John Wells",
+            "original_name": "John Wells",
+            "popularity": 3.093,
+            "profile_path": "/j1cEQmFdSkew87UjO354qeppo1G.jpg",
+            "credit_id": "66030a7777070001630bc5b2",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3071441,
+            "known_for_department": "Production",
+            "name": "Erin Jontow",
+            "original_name": "Erin Jontow",
+            "popularity": 0.1831,
+            "profile_path": null,
+            "credit_id": "66030a8e197de401861cea48",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1731745,
+            "known_for_department": "Writing",
+            "name": "Simran Baidwan",
+            "original_name": "Simran Baidwan",
+            "popularity": 0.2964,
+            "profile_path": "/pGjZtnibUHO9RP80FEmg0xZQY0C.jpg",
+            "credit_id": "66030aaa197de4016318fbca",
+            "department": "Production",
+            "job": "Executive Producer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [
+          {
+            "adult": false,
+            "backdrop_path": "/dxzWQ4Keg2lyUgYk3OSXIjbd2c2.jpg",
+            "id": 280890,
+            "name": "The Lady's Companion",
+            "original_name": "Manual para señoritas",
+            "overview": "Hired to find husbands for three wealthy sisters, chaperone Elena Bianda is drawn into a late 19th-century world of love, scandal and comic intrigue.",
+            "poster_path": "/3C4MQlp0yWyVErSGVzHBObvFbMX.jpg",
+            "media_type": "tv",
+            "original_language": "es",
+            "genre_ids": [
+              18,
+              35
+            ],
+            "popularity": 4.1483,
+            "first_air_date": "2025-03-28",
+            "vote_average": 7.521,
+            "vote_count": 48,
+            "origin_country": [
+              "ES"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/lzfuPfP4aqbGgzIfh5tLirKDyRE.jpg",
+            "id": 49297,
+            "name": "The Incredible Dr. Pol",
+            "original_name": "The Incredible Dr. Pol",
+            "overview": "Set in Central Michigan's farm country, this reality series follows the work done at Pol Veterinary Services. Specializing in large farm animals, Dr. Pol treats horses, pigs, cows, sheep, alpacas, goats, chickens and even an occasional reindeer. The program also features Dr. Brenda Grettenberger, who has worked with Dr. Pol since 1992.",
+            "poster_path": "/faMFGFfNVfoyFRzEW9xODCtatj7.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              10764,
+              99
+            ],
+            "popularity": 5.5357,
+            "first_air_date": "2011-10-29",
+            "vote_average": 8.3,
+            "vote_count": 32,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/uzEyi1Fo5UWgqP2MMFQZZjLWb7V.jpg",
+            "id": 32552,
+            "name": "The Gates",
+            "original_name": "The Gates",
+            "overview": "Like most families that settle inside The Gates, the Monahans are unmoored from a complicated life they abandoned in Chicago. There's something very different about this place, almost... haunting. Named the new police chief of The Gates, Nick Monahan is about to be tangled up in a mystery where he will begin to piece together the dark truth about their new home, and the supernatural elements that lurk behind the shadows of The Gates.",
+            "poster_path": "/23cbKVCDdzufFYxmlUIQcHZzwv4.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              18,
+              9648,
+              10765
+            ],
+            "popularity": 5.2612,
+            "first_air_date": "2010-06-20",
+            "vote_average": 6.3,
+            "vote_count": 86,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/1H2L8QnfSmpHsFjPnoQMWgjPhBW.jpg",
+            "id": 99962,
+            "name": "McDonald & Dodds",
+            "original_name": "McDonald & Dodds",
+            "overview": "Two detectives, DCI McDonald and DS Dodds, who seemingly have nothing in common, are thrown together and forge a rumbustious friendship and entertaining partnership.",
+            "poster_path": "/yR9oUsGFsGOBcygzjF0cA2c45bx.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              18,
+              9648,
+              80,
+              35
+            ],
+            "popularity": 13.9523,
+            "first_air_date": "2020-03-01",
+            "vote_average": 7.578,
+            "vote_count": 58,
+            "origin_country": [
+              "GB"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/oUmFPTct8cffUVRo0cE4Ke1Fomo.jpg",
+            "id": 83859,
+            "name": "State of Happiness",
+            "original_name": "Lykkeland",
+            "overview": "The night before Christmas 1969, the gas flare at the Ocean Viking is lit. Phillips has found the largest sub sea oil basin in history. And everything is about to change.",
+            "poster_path": "/87L3UF1Y0gAMufigq6J9NyKz2xg.jpg",
+            "media_type": "tv",
+            "original_language": "no",
+            "genre_ids": [
+              18
+            ],
+            "popularity": 3.2698,
+            "first_air_date": "2018-10-28",
+            "vote_average": 7.0,
+            "vote_count": 25,
+            "origin_country": [
+              "NO"
+            ]
+          }
+        ],
+        "total_pages": 2,
+        "total_results": 40
+      },
+      "media_type": "tv"
     },
     {
       "adult": false,
-      "backdrop_path": "/xJHokMbljvjADYdit5fK1DVfjko.jpg",
-      "genre_ids": [878, 12, 18],
-      "id": 157336,
+      "backdrop_path": "/6umsRLI7t0ydFwCl0JNEIO0q2LH.jpg",
+      "episode_run_time": [],
+      "first_air_date": "2020-12-25",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "https://www.netflix.com/title/80232398",
+      "id": 91239,
+      "last_air_date": "2026-01-29",
+      "name": "Bridgerton",
+      "number_of_episodes": 32,
+      "number_of_seasons": 4,
       "original_language": "en",
-      "original_title": "Interstellar",
-      "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
-      "popularity": 180.4,
-      "poster_path": "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-      "release_date": "2014-11-05",
-      "title": "Interstellar",
-      "video": false,
-      "vote_average": 8.4,
-      "vote_count": 32000
+      "original_name": "Bridgerton",
+      "overview": "Wealth, lust, and betrayal set in the backdrop of Regency era England, seen through the eyes of the powerful Bridgerton family.",
+      "popularity": 154.4049,
+      "poster_path": "/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
+      "production_companies": [
+        {
+          "id": 34209,
+          "logo_path": "/rYt8Q3nYxyE4YBLmVojvoKvIROv.png",
+          "name": "shondaland",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2020-12-22",
+          "episode_count": 8,
+          "id": 127918,
+          "name": "Season 1",
+          "overview": "The eight close-knit siblings of the Bridgerton family look for love and happiness in London high society.",
+          "poster_path": "/qaewZKBKmXjb4ZfFBb1LCug6BE8.jpg",
+          "season_number": 1,
+          "vote_average": 6.8
+        },
+        {
+          "air_date": "2022-03-25",
+          "episode_count": 8,
+          "id": 177923,
+          "name": "Season 2",
+          "overview": "Duty, desire and scandal collide when Viscount Anthony Bridgerton decides to marry, only to meet his match in his intended bride's headstrong big sister.",
+          "poster_path": "/luoKpgVwi1E5nQsi7W0UuKHu2Rq.jpg",
+          "season_number": 2,
+          "vote_average": 6.6
+        },
+        {
+          "air_date": "2024-05-16",
+          "episode_count": 8,
+          "id": 301726,
+          "name": "Season 3",
+          "overview": "As a new crop of debutantes yearns to become the brightest of the ball, a wallflower with a double life finds her light amid secrets and surprises.",
+          "poster_path": "/zCEm0xrRMa5fLCQ9d0nvcw6tvcr.jpg",
+          "season_number": 3,
+          "vote_average": 6.7
+        },
+        {
+          "air_date": "2026-01-29",
+          "episode_count": 8,
+          "id": 403308,
+          "name": "Season 4",
+          "overview": "Despite his elder and younger brothers both being happily married, Benedict is loath to settle down — until he meets a captivating Lady in Silver at his mother’s masquerade ball.",
+          "poster_path": "/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
+          "season_number": 4,
+          "vote_average": 5.1
+        }
+      ],
+      "status": "Returning Series",
+      "vote_average": 8.1,
+      "vote_count": 3146,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 18031,
+            "known_for_department": "Acting",
+            "name": "Ruth Gemmell",
+            "original_name": "Ruth Gemmell",
+            "popularity": 7.3374,
+            "profile_path": "/lq8W1V45lIWAhpgjb7ezYB3B79p.jpg",
+            "character": "Lady Violet Bridgerton",
+            "credit_id": "5d2f48be6a300b16aaa1c4a6",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1127887,
+            "known_for_department": "Acting",
+            "name": "Luke Thompson",
+            "original_name": "Luke Thompson",
+            "popularity": 6.4939,
+            "profile_path": "/nPNXCTpvBsnVILldwjVcDK4yrby.jpg",
+            "character": "Benedict Bridgerton",
+            "credit_id": "622c3b9f025764004647d1ed",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2611199,
+            "known_for_department": "Acting",
+            "name": "Yerin Ha",
+            "original_name": "Yerin Ha",
+            "popularity": 3.2412,
+            "profile_path": "/amG2VsVHn3dBH8ey3H9RVDoxgyz.jpg",
+            "character": "Sophie Baek",
+            "credit_id": "66c00143805425622081c884",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1794961,
+            "known_for_department": "Acting",
+            "name": "Luke Newton",
+            "original_name": "Luke Newton",
+            "popularity": 3.7429,
+            "profile_path": "/hQsWTiBUpE2Jywg8vvvrDLVmG5m.jpg",
+            "character": "Colin Bridgerton",
+            "credit_id": "5d2f47c427d9cc416d7bbaf8",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1439488,
+            "known_for_department": "Acting",
+            "name": "Claudia Jessie",
+            "original_name": "Claudia Jessie",
+            "popularity": 8.7587,
+            "profile_path": "/urv0p4Mi81m1jZO8YWF1i9NpLL7.jpg",
+            "character": "Eloise Bridgerton",
+            "credit_id": "5d2f48586a300b0010a84cbd",
+            "order": 11
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2908684,
+            "known_for_department": "Acting",
+            "name": "Florence Hunt",
+            "original_name": "Florence Hunt",
+            "popularity": 2.218,
+            "profile_path": "/2PQxOhgqnS4S4JNiAmQtquqgDjF.jpg",
+            "character": "Hyacinth Bridgerton",
+            "credit_id": "5fe4a5e770309f003d80f60d",
+            "order": 12
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1686681,
+            "known_for_department": "Acting",
+            "name": "Will Tilston",
+            "original_name": "Will Tilston",
+            "popularity": 0.9648,
+            "profile_path": "/fdIByL5EeTImhVHtSPaEMBErF2C.jpg",
+            "character": "Gregory Bridgerton",
+            "credit_id": "622c39c34a0b19006b24fe49",
+            "order": 13
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 109651,
+            "known_for_department": "Acting",
+            "name": "Adjoa Andoh",
+            "original_name": "Adjoa Andoh",
+            "popularity": 1.88,
+            "profile_path": "/4dsLkxU3Vcw1P97JoyGWlbYhV1h.jpg",
+            "character": "Lady Agatha Danbury",
+            "credit_id": "62300d846d1bb2007a7c3997",
+            "order": 15
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 5823,
+            "known_for_department": "Acting",
+            "name": "Julie Andrews",
+            "original_name": "Julie Andrews",
+            "popularity": 3.0417,
+            "profile_path": "/kTXM2KfsXh2vSav0s9vaDKfs4lR.jpg",
+            "character": "Lady Whistledown (voice)",
+            "credit_id": "5d2f477627d9cc416d7bba6f",
+            "order": 18
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1856875,
+            "known_for_department": "Acting",
+            "name": "Golda Rosheuvel",
+            "original_name": "Golda Rosheuvel",
+            "popularity": 3.9941,
+            "profile_path": "/nlSIvTWzMEzZGljKYgpZxGcsJtv.jpg",
+            "character": "Queen Charlotte",
+            "credit_id": "62300ee9414291007bbe9e97",
+            "order": 20
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3080488,
+            "known_for_department": "Acting",
+            "name": "Julie Meghan Brown",
+            "original_name": "Julie Meghan Brown",
+            "popularity": 0.1984,
+            "profile_path": "/ivrPS5Zqw80qQAJXdJPWF5gaDQZ.jpg",
+            "credit_id": "68e9a58126bd32d38d1f6190",
+            "department": "Production",
+            "job": "Post Production Coordinator"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1736953,
+            "known_for_department": "Art",
+            "name": "Sarah Notley",
+            "original_name": "Sarah Notley",
+            "popularity": 0.2224,
+            "profile_path": null,
+            "credit_id": "697c237bdc2adf740059a069",
+            "department": "Art",
+            "job": "Art Direction"
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2439890,
+            "known_for_department": "Art",
+            "name": "Alison Gartshore",
+            "original_name": "Alison Gartshore",
+            "popularity": 0.2755,
+            "profile_path": null,
+            "credit_id": "66c150b7214e2242e9922aa1",
+            "department": "Production",
+            "job": "Production Designer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1790275,
+            "known_for_department": "Writing",
+            "name": "Jess Brownell",
+            "original_name": "Jess Brownell",
+            "popularity": 0.139,
+            "profile_path": "/vtM6LI2IRufMiO5HUJLkBxltq28.jpg",
+            "credit_id": "66c151f5667e1ca650d53c24",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 155423,
+            "known_for_department": "Acting",
+            "name": "Tom Verica",
+            "original_name": "Tom Verica",
+            "popularity": 3.5433,
+            "profile_path": "/kNh4u2PUzXw3shi3M1tmYvsJu4y.jpg",
+            "credit_id": "689b592f89fa8b0a0526856d",
+            "department": "Production",
+            "job": "Executive Producer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [
+          {
+            "adult": false,
+            "backdrop_path": "/92R2R75gIiVo32dIm0JUaIytpij.jpg",
+            "id": 196454,
+            "name": "Queen Charlotte: A Bridgerton Story",
+            "original_name": "Queen Charlotte: A Bridgerton Story",
+            "overview": "The story of how the young Queen Charlotte’s marriage to King George sparked both a great love story and a societal shift, creating the world of the Ton inherited by the characters in Bridgerton.",
+            "poster_path": "/kFSaVIlBRycGNfrLzJZX7dgSQ1o.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              18
+            ],
+            "popularity": 15.9043,
+            "first_air_date": "2023-05-04",
+            "vote_average": 8.0,
+            "vote_count": 649,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/1DmAeDIAN6nvVpgTqiurDPUwuj7.jpg",
+            "id": 97175,
+            "name": "Fate: The Winx Saga",
+            "original_name": "Fate: The Winx Saga",
+            "overview": "The coming-of-age journey of five fairies attending Alfea, a magical boarding school in the Otherworld where they must learn to master their powers while navigating love, rivalries, and the monsters that threaten their very existence.",
+            "poster_path": "/oHj6guMrLfQcBzo3uxwBJc8Y736.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              10765,
+              18
+            ],
+            "popularity": 10.1979,
+            "first_air_date": "2021-01-22",
+            "vote_average": 7.97,
+            "vote_count": 1530,
+            "origin_country": [
+              "GB"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/lPmUu3xkoksz3xsa1feIUoOBZrg.jpg",
+            "id": 117581,
+            "name": "Ginny & Georgia",
+            "original_name": "Ginny & Georgia",
+            "overview": "Free-spirited Georgia and her two kids, Ginny and Austin, move north in search of a fresh start but find that the road to new beginnings can be bumpy.",
+            "poster_path": "/vOwunzW4dx3n0J5mH40n9jTRSwY.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              35,
+              18
+            ],
+            "popularity": 24.7883,
+            "first_air_date": "2021-02-24",
+            "vote_average": 8.044,
+            "vote_count": 1754,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/jXTZaHarR9TZiMoQwiQWsGYXqnS.jpg",
+            "id": 82596,
+            "name": "Emily in Paris",
+            "original_name": "Emily in Paris",
+            "overview": "New passions. New fashions. New Emily? A plucky American marketing whiz spreads her wings in life and love after landing her dream job in Paris.",
+            "poster_path": "/c0bkO416OU7YGdOFktk45H8REgL.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              18,
+              35
+            ],
+            "popularity": 31.4532,
+            "first_air_date": "2020-10-02",
+            "vote_average": 7.6,
+            "vote_count": 1512,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/2K84O2cr0jRH7ROeeHJ3zbTR8Uf.jpg",
+            "id": 93812,
+            "name": "The Great",
+            "original_name": "The Great",
+            "overview": "A genre-bending, anti-historical ride through 18th century Russia following the rise of Catherine the Nothing to Catherine the Great and her explosive relationship with husband Peter, the emperor of Russia.",
+            "poster_path": "/tpz9UQ3hUwYufNcKWVW00FCjWyc.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              18,
+              35
+            ],
+            "popularity": 19.5349,
+            "first_air_date": "2020-05-15",
+            "vote_average": 8.088,
+            "vote_count": 1114,
+            "origin_country": [
+              "US"
+            ]
+          }
+        ],
+        "total_pages": 2,
+        "total_results": 40
+      },
+      "media_type": "tv"
     },
     {
       "adult": false,
-      "backdrop_path": "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
-      "genre_ids": [28, 878, 12],
-      "id": 27205,
+      "backdrop_path": "/c78kbj781ddvmSn5mgLWFQbC7di.jpg",
+      "episode_run_time": [],
+      "first_air_date": "2025-12-05",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "homepage": "https://www.starz.com/series/spartacus-house-of-ashur/72002",
+      "id": 240459,
+      "last_air_date": "2026-02-06",
+      "name": "Spartacus: House of Ashur",
+      "number_of_episodes": 10,
+      "number_of_seasons": 1,
       "original_language": "en",
-      "original_title": "Inception",
-      "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: inception.",
-      "popularity": 150.8,
-      "poster_path": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
-      "release_date": "2010-07-15",
-      "title": "Inception",
-      "video": false,
-      "vote_average": 8.4,
-      "vote_count": 35000
-    },
-    {
-      "adult": false,
-      "backdrop_path": "/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
-      "genre_ids": [18, 80, 53],
-      "id": 680,
-      "original_language": "en",
-      "original_title": "Pulp Fiction",
-      "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper.",
-      "popularity": 120.6,
-      "poster_path": "/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
-      "release_date": "1994-09-10",
-      "title": "Pulp Fiction",
-      "video": false,
-      "vote_average": 8.5,
-      "vote_count": 26000
-    },
-    {
-      "adult": false,
-      "backdrop_path": "/qdIMHd4sEfJSckfVJfKQvisL02a.jpg",
-      "genre_ids": [35, 18, 10749],
-      "id": 13,
-      "original_language": "en",
-      "original_title": "Forrest Gump",
-      "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do.",
-      "popularity": 100.2,
-      "poster_path": "/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
-      "release_date": "1994-06-23",
-      "title": "Forrest Gump",
-      "video": false,
-      "vote_average": 8.5,
-      "vote_count": 25000
+      "original_name": "Spartacus: House of Ashur",
+      "overview": "In a world where he survived the events of Spartacus, Ashur clawed his way to power, owning the same ludus that once owned him. Allying with a fierce gladiatrix, Ashur ignites a new kind of spectacle that offends the elite.",
+      "popularity": 137.5074,
+      "poster_path": "/vNByuzy60v31nmUVPMA8oAtneUK.jpg",
+      "production_companies": [
+        {
+          "id": 28523,
+          "logo_path": "/zzULw9w7d50BHR8fE30PZT3zJ1D.png",
+          "name": "Lionsgate Television",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2025-12-05",
+          "episode_count": 10,
+          "id": 367579,
+          "name": "Season 1",
+          "overview": "",
+          "poster_path": "/vNByuzy60v31nmUVPMA8oAtneUK.jpg",
+          "season_number": 1,
+          "vote_average": 4.7
+        }
+      ],
+      "status": "Returning Series",
+      "vote_average": 6.696,
+      "vote_count": 179,
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 224182,
+            "known_for_department": "Acting",
+            "name": "Nick E. Tarabay",
+            "original_name": "Nick E. Tarabay",
+            "popularity": 2.0731,
+            "profile_path": "/pY4eOU29ZqGdS858JRLoS5ReiEB.jpg",
+            "character": "Ashur",
+            "credit_id": "65654e233d745400ea266fe0",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 95047,
+            "known_for_department": "Acting",
+            "name": "Graham McTavish",
+            "original_name": "Graham McTavish",
+            "popularity": 2.7477,
+            "profile_path": "/qpKVz46PkKVaXzthcJO4ldFPdM9.jpg",
+            "character": "Korris",
+            "credit_id": "67881c6a79cf13ee41ad0336",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 563644,
+            "known_for_department": "Acting",
+            "name": "Tenika Davis",
+            "original_name": "Tenika Davis",
+            "popularity": 3.8589,
+            "profile_path": "/qCAf2GjM9HktCcRWrqSzqOkjTZe.jpg",
+            "character": "Achillia",
+            "credit_id": "67881c8179cf13ee41ad035f",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2533248,
+            "known_for_department": "Acting",
+            "name": "Jamaica Vaughan",
+            "original_name": "Jamaica Vaughan",
+            "popularity": 4.1743,
+            "profile_path": "/jifdsXam2H26NRnVdGb4QjN30hJ.jpg",
+            "character": "Hilara",
+            "credit_id": "67881cc2b9d1d10ef1975f79",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 16970,
+            "known_for_department": "Acting",
+            "name": "Ivana Baquero",
+            "original_name": "Ivana Baquero",
+            "popularity": 4.4002,
+            "profile_path": "/tHnwjyI2grO7lqcDwVUwRj89JZH.jpg",
+            "character": "Messia",
+            "credit_id": "67881ccd45f296f6011d1f41",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1779165,
+            "known_for_department": "Acting",
+            "name": "Jordi Webber",
+            "original_name": "Jordi Webber",
+            "popularity": 1.1794,
+            "profile_path": "/uXQCfPGydlGEJ5xKJH82bwiW680.jpg",
+            "character": "Tarchon",
+            "credit_id": "67881cd59de8a2d8349760a6",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 26054,
+            "known_for_department": "Acting",
+            "name": "Claudia Black",
+            "original_name": "Claudia Black",
+            "popularity": 2.8746,
+            "profile_path": "/xDXr8E1DM1ibfR8K9E9ccjysM7P.jpg",
+            "character": "Cossutia",
+            "credit_id": "67881ce279cf13ee41ad039b",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2848379,
+            "known_for_department": "Acting",
+            "name": "India Shaw-Smith",
+            "original_name": "India Shaw-Smith",
+            "popularity": 3.9459,
+            "profile_path": "/rKwBERCIC0jJE07O3Z3BkpLh4ZZ.jpg",
+            "character": "Viridia",
+            "credit_id": "67881ce945f296f6011d1f6e",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1416396,
+            "known_for_department": "Acting",
+            "name": "Leigh Gill",
+            "original_name": "Leigh Gill",
+            "popularity": 1.18,
+            "profile_path": "/ke4D7YZcH2uVPZGgPHJPrR7yywn.jpg",
+            "character": "Satyrus",
+            "credit_id": "67881cf21403701c991d21df",
+            "order": 8
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1213074,
+            "known_for_department": "Writing",
+            "name": "Steven S. DeKnight",
+            "original_name": "Steven S. DeKnight",
+            "popularity": 2.4125,
+            "profile_path": "/4xI7zn54omKDrKa0lshPsJZ53tK.jpg",
+            "credit_id": "65654e9aa8b2ca012c13bca9",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 102402,
+            "known_for_department": "Directing",
+            "name": "Rick Jacobson",
+            "original_name": "Rick Jacobson",
+            "popularity": 0.6079,
+            "profile_path": "/aazCWUhZTGV2m4jDGPQoTsBnGVO.jpg",
+            "credit_id": "67881bc72ba9fb7c5ead034f",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 209762,
+            "known_for_department": "Writing",
+            "name": "Aaron Helbing",
+            "original_name": "Aaron Helbing",
+            "popularity": 0.5678,
+            "profile_path": null,
+            "credit_id": "67881bd4b9d1d10ef1975eeb",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 11468,
+            "known_for_department": "Sound",
+            "name": "Joseph LoDuca",
+            "original_name": "Joseph LoDuca",
+            "popularity": 2.2175,
+            "profile_path": "/wtSopiCJFjs30sITI6fuvjEsKnL.jpg",
+            "credit_id": "693662d52810fb5208c1fa68",
+            "department": "Sound",
+            "job": "Original Music Composer"
+          }
+        ]
+      },
+      "recommendations": {
+        "page": 1,
+        "results": [
+          {
+            "adult": false,
+            "backdrop_path": "/zp4fRGjZPWaJbAyVxIlUutaIB6U.jpg",
+            "id": 232671,
+            "name": "Beauty Newbie",
+            "original_name": "หัวใจไม่มีปลอม",
+            "overview": "Liu has been bullied for her looks her whole life. To fit in at university and escape the judgment, she undergoes plastic surgery. After her transformation, she befriends Faye, a stunning natural beauty. However, Liu’s life takes a turn when Guy, a handsome acquaintance from middle school, warns her to stay away from Faye. This angers Liu, especially compared to Saint, her kind and supportive neighbor. When Liu’s secret is revealed, her friends turn on her, leaving her to question if she will ever truly be accepted for who she is.",
+            "poster_path": "/9r4fOH6Lika1gtvAQFyWMxGkiTz.jpg",
+            "media_type": "tv",
+            "original_language": "th",
+            "genre_ids": [
+              18
+            ],
+            "popularity": 2.7705,
+            "first_air_date": "2024-02-19",
+            "vote_average": 9.5,
+            "vote_count": 19,
+            "origin_country": [
+              "TH"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/tPQTuAhn8TA169i2Z4mHBBL0BhL.jpg",
+            "id": 252645,
+            "name": "The Ex-Morning",
+            "original_name": "เพราะแฟนเก่าเปลี่ยนแปลงบ่อย",
+            "overview": "When broadcaster Pathaphi gets demoted following a public shaming, his ex Tamtawan is given the job of helping him rebuild his reputation.",
+            "poster_path": "/5YrlE5zgqHFGDJylpneuaJkpL9o.jpg",
+            "media_type": "tv",
+            "original_language": "th",
+            "genre_ids": [
+              35,
+              18
+            ],
+            "popularity": 4.1642,
+            "first_air_date": "2025-05-22",
+            "vote_average": 9.5,
+            "vote_count": 31,
+            "origin_country": [
+              "TH"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/TH5eoVmj8NM3l7RYu9p8aBbYx0.jpg",
+            "id": 3370,
+            "name": "Eek! The Cat",
+            "original_name": "Eek! The Cat",
+            "overview": "Koombaya, it's Eek the cat and all his friends. Annabelle, Eek's 800-pound girlfriend, Sharky the vicious but lovable sharkdog, and Elmo the elk. Plus you can watch the Terrible Thunderlizards try to make Bill and Scooter, the cavemen, extinct. Plus there's Klutter who's, well, we're not exactly sure what Klutter is, but watch and find out for yourself.",
+            "poster_path": "/scqjDAOkZiswdZwG5Z1C9LKyLwr.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+              16,
+              10762
+            ],
+            "popularity": 8.3767,
+            "first_air_date": "1992-09-11",
+            "vote_average": 6.9,
+            "vote_count": 126,
+            "origin_country": [
+              "US"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/tZZSbNwAsKHUjqHoR15YhqikBTw.jpg",
+            "id": 69562,
+            "name": "Lovey Dovey",
+            "original_name": "แผนร้ายนายเจ้าเล่ห์",
+            "overview": "When two brothers fall for two sisters, they quickly realize the age differences between them are too big to ignore.",
+            "poster_path": "/2Jou8vTRZUl1AXGjxjtXKO6T8YA.jpg",
+            "media_type": "tv",
+            "original_language": "th",
+            "genre_ids": [],
+            "popularity": 1.9098,
+            "first_air_date": "2016-07-24",
+            "vote_average": 10.0,
+            "vote_count": 21,
+            "origin_country": [
+              "TH"
+            ]
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/uGkgjbgKHuw4xuYiwGCthr7ECbK.jpg",
+            "id": 235819,
+            "name": "Kumari Srimathi",
+            "original_name": "కుమారి శ్రీమతి",
+            "overview": "Srimathi is a 30 year old unmarried woman, with a dead end job, a dysfunctional family and a goal to win back her ancestral house. For that, she needs to raise a lot of money in a short period of time. Seeing a business oppurtunity, she decides to start a bar in her village. This is the journey of Srimathi, battling various societal and moral obstacles along the way.",
+            "poster_path": "/2008kVjRqNpzeY9dsM9bEuoZ0o5.jpg",
+            "media_type": "tv",
+            "original_language": "te",
+            "genre_ids": [
+              35,
+              18
+            ],
+            "popularity": 1.6942,
+            "first_air_date": "2023-09-28",
+            "vote_average": 7.0,
+            "vote_count": 6,
+            "origin_country": [
+              "IN"
+            ]
+          }
+        ],
+        "total_pages": 2,
+        "total_results": 40
+      },
+      "media_type": "tv"
     }
   ]
 }

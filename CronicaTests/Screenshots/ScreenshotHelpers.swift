@@ -38,10 +38,14 @@ enum ScreenshotSetup {
     static func configure() {
         UserDefaults.standard.set(true, forKey: "userHasPurchasedTipJar")
         UserDefaults.standard.set(false, forKey: "showOnboarding")
+        // Material effects (.ultraThickMaterial) don't render in snapshot tests,
+        // so disable the translucent background to get a clean dark background.
+        UserDefaults.standard.set(true, forKey: "disableTranslucentBackground")
     }
 
     static func tearDown() {
         UserDefaults.standard.removeObject(forKey: "userHasPurchasedTipJar")
         UserDefaults.standard.removeObject(forKey: "showOnboarding")
+        UserDefaults.standard.removeObject(forKey: "disableTranslucentBackground")
     }
 }
