@@ -42,6 +42,7 @@ struct WatchlistScreenshotView: View {
                 }
             }
             .navigationTitle(NSLocalizedString("Watchlist", comment: ""))
+            .toolbar(.hidden, for: .navigationBar)
         }
     }
 }

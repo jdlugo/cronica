@@ -1,3 +1,4 @@
+import SDWebImageSwiftUI
 import SwiftUI
 @testable import StreamingNow
 
@@ -33,7 +34,20 @@ struct DetailScreenshotView: View {
             }
             .environment(viewModel)
             .background {
-                TranslucentBackground(image: item.cardImageLarge)
+                // Material effects don't render in snapshot tests, so we replace
+                // TranslucentBackground with the backdrop image + explicit dark overlay.
+                ZStack {
+                    WebImage(url: item.cardImageLarge) { image in
+                        image.resizable()
+                    } placeholder: {
+                        Rectangle().fill(.background)
+                    }
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
+
+                    Color.black.opacity(0.6)
+                        .ignoresSafeArea()
+                }
             }
         }
     }

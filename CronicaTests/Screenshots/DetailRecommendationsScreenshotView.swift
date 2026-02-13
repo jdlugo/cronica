@@ -1,9 +1,10 @@
+import SDWebImageSwiftUI
 import SwiftUI
 @testable import StreamingNow
 
 #if DEBUG
-/// Screenshot wrapper showing Trailers and Cast sections from the detail page,
-/// stacked to fill the screen without navigation chrome.
+/// Screenshot wrapper showing Trailers, Cast, and Overview sections from the detail page,
+/// with a cinematic backdrop overlay.
 struct DetailRecommendationsScreenshotView: View {
     @State private var viewModel: ItemContentViewModel
 
@@ -29,7 +30,21 @@ struct DetailRecommendationsScreenshotView: View {
                 .padding(.horizontal)
             }
             .navigationTitle(item.itemTitle)
-            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(.hidden, for: .navigationBar)
+            .background {
+                ZStack {
+                    WebImage(url: item.cardImageLarge) { image in
+                        image.resizable()
+                    } placeholder: {
+                        Rectangle().fill(.background)
+                    }
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
+
+                    Color.black.opacity(0.6)
+                        .ignoresSafeArea()
+                }
+            }
         }
     }
 }

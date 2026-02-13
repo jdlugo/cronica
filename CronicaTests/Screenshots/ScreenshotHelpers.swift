@@ -13,7 +13,7 @@ enum ScreenshotDevice: String, CaseIterable {
         switch self {
         case .iPhone6_9:
             return ViewImageConfig(
-                safeArea: UIEdgeInsets(top: 59, left: 0, bottom: 34, right: 0),
+                safeArea: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
                 size: CGSize(width: 440, height: 956),
                 traits: UITraitCollection(traitsFrom: [
                     .init(displayScale: 3),
@@ -22,7 +22,7 @@ enum ScreenshotDevice: String, CaseIterable {
             )
         case .iPhone6_5:
             return ViewImageConfig(
-                safeArea: UIEdgeInsets(top: 59, left: 0, bottom: 34, right: 0),
+                safeArea: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
                 size: CGSize(width: 430, height: 932),
                 traits: UITraitCollection(traitsFrom: [
                     .init(displayScale: 3),
@@ -38,8 +38,8 @@ enum ScreenshotSetup {
     static func configure() {
         UserDefaults.standard.set(true, forKey: "userHasPurchasedTipJar")
         UserDefaults.standard.set(false, forKey: "showOnboarding")
-        // Material effects (.ultraThickMaterial) don't render in snapshot tests,
-        // so disable the translucent background to get a clean dark background.
+        // Disable the app's translucent background — Material effects don't render
+        // in snapshot tests. DetailScreenshotView uses its own explicit overlay instead.
         UserDefaults.standard.set(true, forKey: "disableTranslucentBackground")
     }
 

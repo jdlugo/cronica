@@ -50,6 +50,7 @@ struct HomeScreenshotView: View {
                 )
             }
             .navigationTitle("Home")
+            .toolbar(.hidden, for: .navigationBar)
         }
     }
 }

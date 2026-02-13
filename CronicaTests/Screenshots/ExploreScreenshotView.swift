@@ -27,6 +27,7 @@ struct ExploreScreenshotView: View {
                 .padding()
             }
             .navigationTitle(NSLocalizedString("Explore", comment: ""))
+            .toolbar(.hidden, for: .navigationBar)
         }
     }
 }

@@ -1,8 +1,9 @@
+import SDWebImageSwiftUI
 import SwiftUI
 @testable import StreamingNow
 
 /// Screenshot wrapper showing Cast & Crew and Recommendations sections
-/// from the detail page, stacked to fill the screen without navigation chrome.
+/// from the detail page, with a cinematic backdrop overlay.
 struct DetailCastScreenshotView: View {
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
@@ -24,7 +25,21 @@ struct DetailCastScreenshotView: View {
                 )
             }
             .navigationTitle(item.itemTitle)
-            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(.hidden, for: .navigationBar)
+            .background {
+                ZStack {
+                    WebImage(url: item.cardImageLarge) { image in
+                        image.resizable()
+                    } placeholder: {
+                        Rectangle().fill(.background)
+                    }
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
+
+                    Color.black.opacity(0.6)
+                        .ignoresSafeArea()
+                }
+            }
         }
     }
 }
