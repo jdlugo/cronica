@@ -2,23 +2,39 @@ import SDWebImageSwiftUI
 import SwiftUI
 @testable import StreamingNow
 
-/// Screenshot wrapper showing Cast & Crew and Recommendations sections
-/// from the detail page, with a cinematic backdrop overlay.
+/// Screenshot wrapper showing Overview, Cast & Crew, Recommendations, and
+/// Similar sections from the detail page, with a cinematic backdrop overlay.
 struct DetailCastScreenshotView: View {
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
 
     private let item = ItemContent.example
     private let recommendations = Array(ItemContent.examples.prefix(8))
+    private let similar = Array(ItemContent.examples.dropFirst(3).prefix(8))
 
     var body: some View {
         NavigationStack {
             ScrollView {
+                OverviewBoxView(
+                    overview: item.itemOverview,
+                    title: item.itemTitle,
+                    type: .movie
+                )
+                .padding(.horizontal)
+
                 CastListView(credits: item.credits?.cast ?? [])
 
                 HorizontalItemContentListView(
                     items: recommendations,
                     title: NSLocalizedString("Recommendations", comment: ""),
+                    subtitle: NSLocalizedString("Movies", comment: ""),
+                    showPopup: $showPopup,
+                    popupType: $popupType
+                )
+
+                HorizontalItemContentListView(
+                    items: similar,
+                    title: NSLocalizedString("Similar", comment: ""),
                     subtitle: NSLocalizedString("Movies", comment: ""),
                     showPopup: $showPopup,
                     popupType: $popupType

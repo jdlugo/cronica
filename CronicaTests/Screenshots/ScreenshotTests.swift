@@ -95,10 +95,7 @@ final class ScreenshotTests: XCTestCase {
     // MARK: - Search
 
     func testSearchScreen() {
-        let view = NavigationStack {
-            SearchView()
-                .toolbar(.hidden, for: .navigationBar)
-        }
+        let view = SearchScreenshotView()
         for device in ScreenshotDevice.allCases {
             snapshotView(view, device: device, named: device.screenshotName())
         }

@@ -10,6 +10,8 @@ struct HomeScreenshotView: View {
     private let trending = ItemContent.examples
     private let nowPlaying = Array(ItemContent.examples.dropFirst(3).prefix(8))
     private let upcoming = Array(ItemContent.examples.dropFirst(5).prefix(8))
+    private let topRated = Array(ItemContent.examples.dropFirst(1).prefix(8))
+    private let popularTV = Array(ItemContent.examples.dropFirst(4).prefix(8))
     private let recommendations = Array(ItemContent.examples.prefix(5))
 
     var body: some View {
@@ -39,6 +41,22 @@ struct HomeScreenshotView: View {
                     showPopup: $showPopup,
                     popupType: $popupType,
                     endpoint: .upcoming
+                )
+
+                HorizontalItemContentListView(
+                    items: topRated,
+                    title: NSLocalizedString("Top Rated", comment: ""),
+                    subtitle: NSLocalizedString("Movies", comment: ""),
+                    showPopup: $showPopup,
+                    popupType: $popupType
+                )
+
+                HorizontalItemContentListView(
+                    items: popularTV,
+                    title: NSLocalizedString("Popular", comment: ""),
+                    subtitle: NSLocalizedString("TV Shows", comment: ""),
+                    showPopup: $showPopup,
+                    popupType: $popupType
                 )
 
                 HorizontalItemContentListView(
