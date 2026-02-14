@@ -9,8 +9,9 @@ struct DetailCastScreenshotView: View {
     @State private var popupType: ActionPopupItems?
 
     private let item = ItemContent.example
-    private let recommendations = Array(ItemContent.examples.prefix(8))
-    private let similar = Array(ItemContent.examples.dropFirst(3).prefix(8))
+    // Non-overlapping slices so Recommendations and Similar show unique posters.
+    private let recommendations = Array(ItemContent.examples.dropFirst(10).prefix(8))
+    private let similar = Array(ItemContent.examples.dropFirst(18).prefix(8))
 
     var body: some View {
         NavigationStack {

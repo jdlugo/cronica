@@ -11,7 +11,7 @@ struct DetailRecommendationsScreenshotView: View {
     @State private var popupType: ActionPopupItems?
 
     private let item: ItemContent
-    private let recommendations = Array(ItemContent.examples.prefix(8))
+    private let recommendations = Array(ItemContent.examples.dropFirst(10).prefix(8))
 
     init(item: ItemContent = .example) {
         self.item = item

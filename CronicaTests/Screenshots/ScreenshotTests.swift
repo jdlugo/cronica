@@ -16,7 +16,7 @@ final class ScreenshotTests: XCTestCase {
         super.setUp()
         ScreenshotSetup.configure()
         // Set to true to generate/update screenshots
-        isRecording = true
+        // isRecording = true
     }
 
     override func tearDown() {

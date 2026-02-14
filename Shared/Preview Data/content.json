@@ -3570,6 +3570,551 @@
         "total_results": 40
       },
       "media_type": "tv"
+    },
+    {
+      "adult": false,
+      "id": 1399,
+      "name": "Game of Thrones",
+      "media_type": "tv",
+      "poster_path": "/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
+      "backdrop_path": "/zZqpAXxVSBtxV9qPBcscfXBcL2w.jpg",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "overview": "Seven noble families fight for control of the mythical land of Westeros.",
+      "vote_average": 8.456,
+      "popularity": 350.0,
+      "original_language": "en",
+      "original_name": "Game of Thrones",
+      "first_air_date": "2011-04-17",
+      "status": "Ended"
+    },
+    {
+      "adult": false,
+      "id": 126308,
+      "name": "Shōgun",
+      "media_type": "tv",
+      "poster_path": "/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg",
+      "backdrop_path": "/bwSmgmd90hCWwqOKQYTEraeOZhJ.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10768,
+          "name": "War & Politics"
+        }
+      ],
+      "overview": "In Japan in the year 1600, at the dawn of a century-defining civil war, Lord Yoshii Toranaga is fighting for his life.",
+      "vote_average": 8.7,
+      "popularity": 280.0,
+      "original_language": "ja",
+      "original_name": "Shōgun",
+      "first_air_date": "2024-02-27",
+      "status": "Returning Series"
+    },
+    {
+      "adult": false,
+      "id": 241259,
+      "name": "Baby Reindeer",
+      "media_type": "tv",
+      "poster_path": "/tN9OcbkAOPwHSr1sgMornZtQZBx.jpg",
+      "backdrop_path": "/2qLYxCyxf4fim0X5OqM5FjZqWXu.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "overview": "A struggling comedian's life changes forever when a vulnerable woman starts stalking him.",
+      "vote_average": 8.1,
+      "popularity": 200.0,
+      "original_language": "en",
+      "original_name": "Baby Reindeer",
+      "first_air_date": "2024-04-11",
+      "status": "Ended"
+    },
+    {
+      "adult": false,
+      "id": 138502,
+      "name": "X-Men '97",
+      "media_type": "tv",
+      "poster_path": "/9Ycz7yYRf9V4jk3YXwcZhFtbNcF.jpg",
+      "backdrop_path": "/iDnTAeR2WNA62XQG0ivtteDSjd5.jpg",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        }
+      ],
+      "overview": "The X-Men, a band of mutants who use their uncanny gifts to protect a world that hates and fears them.",
+      "vote_average": 8.4,
+      "popularity": 250.0,
+      "original_language": "en",
+      "original_name": "X-Men '97",
+      "first_air_date": "2024-03-20",
+      "status": "Returning Series"
+    },
+    {
+      "adult": false,
+      "id": 108545,
+      "name": "3 Body Problem",
+      "media_type": "tv",
+      "poster_path": "/ykZ7hlShkdRQaL2aiieXdEMmrLb.jpg",
+      "backdrop_path": "/ciizJ9Okzt9tBBGK7Q3T14LFT2j.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 9648,
+          "name": "Mystery"
+        }
+      ],
+      "overview": "A fateful decision made in 1960s China echoes across space and time to a group of scientists in the present.",
+      "vote_average": 7.6,
+      "popularity": 180.0,
+      "original_language": "en",
+      "original_name": "3 Body Problem",
+      "first_air_date": "2024-03-21",
+      "status": "Returning Series"
+    },
+    {
+      "adult": false,
+      "id": 84773,
+      "name": "The Lord of the Rings: The Rings of Power",
+      "media_type": "tv",
+      "poster_path": "/kf5Hz70tjNAHg4swGDzOr9BfoZ1.jpg",
+      "backdrop_path": "/NNC08YmJFFlLi1prBkK8quk3dp.jpg",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "overview": "Epic drama set thousands of years before the events of J.R.R. Tolkien's The Hobbit and The Lord of the Rings.",
+      "vote_average": 7.2,
+      "popularity": 220.0,
+      "original_language": "en",
+      "original_name": "The Lord of the Rings: The Rings of Power",
+      "first_air_date": "2022-09-01",
+      "status": "Returning Series"
+    },
+    {
+      "adult": false,
+      "id": 83867,
+      "name": "Andor",
+      "media_type": "tv",
+      "poster_path": "/khZqmwHQicTYoS7Flreb9EddFZC.jpg",
+      "backdrop_path": "/kCGwvjpqM1owt9kI4pkYPJWJLvc.jpg",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "overview": "In an era filled with danger, deception and intrigue, Cassian Andor will embark on the path that is destined to turn him into a rebel hero.",
+      "vote_average": 8.0,
+      "popularity": 160.0,
+      "original_language": "en",
+      "original_name": "Andor",
+      "first_air_date": "2022-09-21",
+      "status": "Returning Series"
+    },
+    {
+      "adult": false,
+      "id": 90802,
+      "name": "The Sandman",
+      "media_type": "tv",
+      "poster_path": "/q54qEgagGOYCq5D1903eBVMNkbo.jpg",
+      "backdrop_path": "/i8taDLjpF8cCbp53N8kOFt1LSkW.jpg",
+      "genres": [
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "overview": "After years of imprisonment, Morpheus — the King of Dreams — embarks on a journey across worlds to find what was stolen from him and restore his power.",
+      "vote_average": 7.9,
+      "popularity": 140.0,
+      "original_language": "en",
+      "original_name": "The Sandman",
+      "first_air_date": "2022-08-05",
+      "status": "Canceled"
+    },
+    {
+      "adult": false,
+      "id": 196454,
+      "name": "Queen Charlotte: A Bridgerton Story",
+      "media_type": "tv",
+      "poster_path": "/kFSaVIlBRycGNfrLzJZX7dgSQ1o.jpg",
+      "backdrop_path": "/92R2R75gIiVo32dIm0JUaIytpij.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "overview": "The story of how the young Queen's marriage to King George sparked a great love story and a societal shift.",
+      "vote_average": 7.8,
+      "popularity": 130.0,
+      "original_language": "en",
+      "original_name": "Queen Charlotte: A Bridgerton Story",
+      "first_air_date": "2023-05-04",
+      "status": "Ended"
+    },
+    {
+      "adult": false,
+      "id": 82596,
+      "name": "Emily in Paris",
+      "media_type": "tv",
+      "poster_path": "/c0bkO416OU7YGdOFktk45H8REgL.jpg",
+      "backdrop_path": "/jXTZaHarR9TZiMoQwiQWsGYXqnS.jpg",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "overview": "A young American woman from the Midwest is hired to provide an American point of view at a French marketing firm in Paris.",
+      "vote_average": 7.7,
+      "popularity": 120.0,
+      "original_language": "en",
+      "original_name": "Emily in Paris",
+      "first_air_date": "2020-10-02",
+      "status": "Returning Series"
+    },
+    {
+      "adult": false,
+      "id": 117581,
+      "name": "Ginny & Georgia",
+      "media_type": "tv",
+      "poster_path": "/vOwunzW4dx3n0J5mH40n9jTRSwY.jpg",
+      "backdrop_path": "/lPmUu3xkoksz3xsa1feIUoOBZrg.jpg",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "overview": "Free-spirited Georgia and her two kids, Ginny and Austin, move to a picturesque New England town to start fresh.",
+      "vote_average": 7.9,
+      "popularity": 110.0,
+      "original_language": "en",
+      "original_name": "Ginny & Georgia",
+      "first_air_date": "2021-02-24",
+      "status": "Canceled"
+    },
+    {
+      "adult": false,
+      "id": 92783,
+      "name": "She-Hulk: Attorney at Law",
+      "media_type": "tv",
+      "poster_path": "/hJfI6AGrmr4uSHRccfJuSsapvOb.jpg",
+      "backdrop_path": "/eljErfkQUcFUgQkI4I1soZcH8MW.jpg",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        }
+      ],
+      "overview": "Jennifer Walters — an attorney specializing in superhuman-oriented legal cases — must navigate the complicated life of a single, 30-something who also happens to be a green 6-foot-7-inch superpowered hulk.",
+      "vote_average": 6.2,
+      "popularity": 100.0,
+      "original_language": "en",
+      "original_name": "She-Hulk: Attorney at Law",
+      "first_air_date": "2022-08-18",
+      "status": "Canceled"
+    },
+    {
+      "adult": false,
+      "id": 93812,
+      "name": "The Great",
+      "media_type": "tv",
+      "poster_path": "/tpz9UQ3hUwYufNcKWVW00FCjWyc.jpg",
+      "backdrop_path": "/2K84O2cr0jRH7ROeeHJ3zbTR8Uf.jpg",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "overview": "A royal woman living in rural Russia during the 18th century is forced to choose between her own personal happiness and the future of Russia.",
+      "vote_average": 8.1,
+      "popularity": 90.0,
+      "original_language": "en",
+      "original_name": "The Great",
+      "first_air_date": "2020-05-15",
+      "status": "Canceled"
+    },
+    {
+      "adult": false,
+      "id": 251091,
+      "name": "Star Wars: Tales of the Empire",
+      "media_type": "tv",
+      "poster_path": "/qA28nLteurVboSSzltuyYt1lvlC.jpg",
+      "backdrop_path": "/sMxOqjwaHHXuBnHkvVyzqcOPMVF.jpg",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        }
+      ],
+      "overview": "An animated anthology series exploring the darker side of the galaxy from the perspective of villains.",
+      "vote_average": 6.8,
+      "popularity": 85.0,
+      "original_language": "en",
+      "original_name": "Star Wars: Tales of the Empire",
+      "first_air_date": "2024-05-04",
+      "status": "Ended"
+    },
+    {
+      "adult": false,
+      "id": 97175,
+      "name": "Fate: The Winx Saga",
+      "media_type": "tv",
+      "poster_path": "/oHj6guMrLfQcBzo3uxwBJc8Y736.jpg",
+      "backdrop_path": "/1DmAeDIAN6nvVpgTqiurDPUwuj7.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        }
+      ],
+      "overview": "A coming-of-age journey of five fairies attending Alfea, a magical boarding school in the Otherworld.",
+      "vote_average": 7.3,
+      "popularity": 80.0,
+      "original_language": "en",
+      "original_name": "Fate: The Winx Saga",
+      "first_air_date": "2021-01-22",
+      "status": "Canceled"
+    },
+    {
+      "adult": false,
+      "id": 647637,
+      "title": "Panda",
+      "media_type": "movie",
+      "poster_path": "/xm8XaBxJ52iKxXvqZw2umgZrDn3.jpg",
+      "backdrop_path": "/qFQKKBvG1nPwpVYUxvcQfqLkhNJ.jpg",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        }
+      ],
+      "overview": "A young panda sets off on an epic journey to find his true home.",
+      "vote_average": 6.5,
+      "popularity": 75.0,
+      "original_language": "en",
+      "original_title": "Panda",
+      "release_date": "2024-06-15",
+      "runtime": 95,
+      "status": "Released"
+    },
+    {
+      "adult": false,
+      "id": 482408,
+      "title": "Harry Potter: A History Of Magic",
+      "media_type": "movie",
+      "poster_path": "/kkzDng2S8w2hT1gap7MdMdx7uUE.jpg",
+      "backdrop_path": "/mjCYpJXCBYDZgMr1U1KZcFgFDfC.jpg",
+      "genres": [
+        {
+          "id": 99,
+          "name": "Documentary"
+        }
+      ],
+      "overview": "A documentary uncovering the real history behind the magic in the Harry Potter stories.",
+      "vote_average": 7.2,
+      "popularity": 70.0,
+      "original_language": "en",
+      "original_title": "Harry Potter: A History Of Magic",
+      "release_date": "2017-10-28",
+      "runtime": 87,
+      "status": "Released"
+    },
+    {
+      "adult": false,
+      "id": 615774,
+      "title": "Scooby-Doo! Return to Zombie Island",
+      "media_type": "movie",
+      "poster_path": "/vd0oIoWhEm8o7EpS0kV7RaV0Flf.jpg",
+      "backdrop_path": "/cVqwzMSNPS4vgUDlXlSYoWOmGsI.jpg",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 9648,
+          "name": "Mystery"
+        }
+      ],
+      "overview": "Scooby and the gang visit Moonscar Island where they run into zombies once more.",
+      "vote_average": 6.0,
+      "popularity": 65.0,
+      "original_language": "en",
+      "original_title": "Scooby-Doo! Return to Zombie Island",
+      "release_date": "2019-10-01",
+      "runtime": 79,
+      "status": "Released"
+    },
+    {
+      "adult": false,
+      "id": 896,
+      "title": "The World of Apu",
+      "media_type": "movie",
+      "poster_path": "/6Tz1Q69o2n3Zwb0ZffzPL0nFt2T.jpg",
+      "backdrop_path": "/d3RW7jRsBCHfC9QZaUF9FpzJrh8.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "overview": "Apu is a jobless former student dreaming of a career as a writer. An old college friend talks him into attending a wedding.",
+      "vote_average": 8.1,
+      "popularity": 60.0,
+      "original_language": "bn",
+      "original_title": "অপুর সংসার",
+      "release_date": "1959-05-01",
+      "runtime": 106,
+      "status": "Released"
+    },
+    {
+      "adult": false,
+      "id": 125521,
+      "title": "Slayers Return",
+      "media_type": "movie",
+      "poster_path": "/fNQx9YD4nxpcWvriVm1paIxbMwB.jpg",
+      "backdrop_path": "/1SeydkGlChbUrYJeV95TNSLQsFt.jpg",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "overview": "Lina Inverse and Naga the Serpent are hired to protect a town from bandits.",
+      "vote_average": 6.7,
+      "popularity": 55.0,
+      "original_language": "ja",
+      "original_title": "スレイヤーズりたーん",
+      "release_date": "1996-08-03",
+      "runtime": 66,
+      "status": "Released"
     }
   ]
 }

@@ -9,9 +9,8 @@ struct WatchlistScreenshotView: View {
 
     private let favorites = Array(ItemContent.examples.prefix(6))
 
-    // Triple the data to fill iPad grids. Use enumerated ForEach below
-    // since ItemContent.id (Int) is the same across copies.
-    private let items = ItemContent.examples + ItemContent.examples + ItemContent.examples
+    // Start the grid after the favorites so posters don't repeat.
+    private let items = Array(ItemContent.examples.dropFirst(6))
 
     private var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 160))]

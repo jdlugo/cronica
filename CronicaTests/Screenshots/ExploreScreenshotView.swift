@@ -7,9 +7,7 @@ struct ExploreScreenshotView: View {
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
 
-    // Triple the data to fill iPad grids. Use enumerated ForEach below
-    // since ItemContent.id (Int) is the same across copies.
-    private let items = ItemContent.examples + ItemContent.examples + ItemContent.examples
+    private let items = ItemContent.examples
 
     private var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 160))]

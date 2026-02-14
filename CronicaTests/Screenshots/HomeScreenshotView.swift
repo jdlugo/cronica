@@ -7,12 +7,13 @@ struct HomeScreenshotView: View {
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
 
-    private let trending = ItemContent.examples
-    private let nowPlaying = Array(ItemContent.examples.dropFirst(3).prefix(8))
-    private let upcoming = Array(ItemContent.examples.dropFirst(5).prefix(8))
-    private let topRated = Array(ItemContent.examples.dropFirst(1).prefix(8))
+    // Each section uses a distinct slice so visible posters never repeat.
+    private let trending = Array(ItemContent.examples.prefix(10))
+    private let nowPlaying = Array(ItemContent.examples.dropFirst(7).prefix(8))
+    private let upcoming = Array(ItemContent.examples.dropFirst(15).prefix(8))
+    private let topRated = Array(ItemContent.examples.dropFirst(22).prefix(8))
     private let popularTV = Array(ItemContent.examples.dropFirst(4).prefix(8))
-    private let recommendations = Array(ItemContent.examples.prefix(5))
+    private let recommendations = Array(ItemContent.examples.dropFirst(10).prefix(5))
 
     var body: some View {
         NavigationStack {
