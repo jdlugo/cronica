@@ -70,7 +70,7 @@ final class ScreenshotTests: XCTestCase {
     func testHomeScreen() {
         let view = HomeScreenshotView()
         for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
+            snapshotView(view, device: device, named: device.screenshotName())
         }
     }
 
@@ -79,7 +79,7 @@ final class ScreenshotTests: XCTestCase {
     func testExploreScreen() {
         let view = ExploreScreenshotView()
         for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
+            snapshotView(view, device: device, named: device.screenshotName())
         }
     }
 
@@ -88,7 +88,7 @@ final class ScreenshotTests: XCTestCase {
     func testWatchlistScreen() {
         let view = WatchlistScreenshotView()
         for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
+            snapshotView(view, device: device, named: device.screenshotName())
         }
     }
 
@@ -100,7 +100,7 @@ final class ScreenshotTests: XCTestCase {
                 .toolbar(.hidden, for: .navigationBar)
         }
         for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
+            snapshotView(view, device: device, named: device.screenshotName())
         }
     }
 
@@ -109,7 +109,7 @@ final class ScreenshotTests: XCTestCase {
     func testDetailScreen() {
         let view = DetailScreenshotView()
         for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
+            snapshotView(view, device: device, named: device.screenshotName())
         }
     }
 
@@ -118,7 +118,7 @@ final class ScreenshotTests: XCTestCase {
     func testDetailCastScreen() {
         let view = DetailCastScreenshotView()
         for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
+            snapshotView(view, device: device, named: device.screenshotName())
         }
     }
 
@@ -127,7 +127,7 @@ final class ScreenshotTests: XCTestCase {
     func testDetailTrailersScreen() {
         let view = DetailRecommendationsScreenshotView()
         for device in ScreenshotDevice.allCases {
-            snapshotView(view, device: device, named: device.rawValue)
+            snapshotView(view, device: device, named: device.screenshotName())
         }
     }
 }

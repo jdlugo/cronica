@@ -8,7 +8,9 @@ struct WatchlistScreenshotView: View {
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
 
-    private let items = ItemContent.examples + ItemContent.examples
+    // Triple the data to fill iPad grids. Use enumerated ForEach below
+    // since ItemContent.id (Int) is the same across copies.
+    private let items = ItemContent.examples + ItemContent.examples + ItemContent.examples
 
     private var columns: [GridItem] {
         if horizontalSizeClass == .regular {
@@ -23,7 +25,7 @@ struct WatchlistScreenshotView: View {
                 VStack {
                     Section {
                         LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(items) { item in
+                            ForEach(Array(items.enumerated()), id: \.offset) { _, item in
                                 ItemContentPosterView(
                                     item: item,
                                     showPopup: $showPopup,

@@ -3,6 +3,9 @@ import SwiftUI
 import UIKit
 
 /// Device configurations matching App Store required screenshot sizes.
+///
+/// Screenshot filenames include locale, device, and pixel dimensions for easy
+/// App Store Connect identification: `en-US_iPhone_6.9in_1320x2868`.
 enum ScreenshotDevice: String, CaseIterable {
     /// 6.9" — iPhone 16 Pro Max / 15 Pro Max (required by App Store)
     case iPhone6_9 = "iPhone_6.9"
@@ -12,6 +15,17 @@ enum ScreenshotDevice: String, CaseIterable {
     case iPad13 = "iPad_13"
     /// 11" — iPad Pro 11" M5 (optional, good coverage)
     case iPad11 = "iPad_11"
+
+    /// Descriptive filename for App Store screenshots.
+    /// Format: `{locale}_{device}_{pixelW}x{pixelH}`
+    func screenshotName(locale: String = "en-US") -> String {
+        switch self {
+        case .iPhone6_9: return "\(locale)_iPhone_6.9in_1320x2868"
+        case .iPhone6_5: return "\(locale)_iPhone_6.5in_1290x2796"
+        case .iPad13:    return "\(locale)_iPad_13in_2064x2752"
+        case .iPad11:    return "\(locale)_iPad_11in_1668x2420"
+        }
+    }
 
     var config: ViewImageConfig {
         switch self {
