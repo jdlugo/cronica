@@ -16,7 +16,7 @@ final class ScreenshotTests: XCTestCase {
         super.setUp()
         ScreenshotSetup.configure()
         // Set to true to generate/update screenshots
-        // isRecording = true
+        isRecording = true
     }
 
     override func tearDown() {
@@ -37,8 +37,34 @@ final class ScreenshotTests: XCTestCase {
         testName: String = #function,
         line: UInt = #line
     ) {
+        snapshotView(view, config: device.config, named: name, precision: precision, file: file, testName: testName, line: line)
+    }
+
+    /// Overload for watch devices — same UIWindow hosting approach.
+    private func snapshotView<V: View>(
+        _ view: V,
+        device: WatchScreenshotDevice,
+        named name: String,
+        precision: Float = 0.95,
+        file: StaticString = #filePath,
+        testName: String = #function,
+        line: UInt = #line
+    ) {
+        snapshotView(view, config: device.config, named: name, precision: precision, file: file, testName: testName, line: line)
+    }
+
+    /// Core snapshot helper that accepts a raw ViewImageConfig.
+    private func snapshotView<V: View>(
+        _ view: V,
+        config: ViewImageConfig,
+        named name: String,
+        precision: Float = 0.95,
+        file: StaticString = #filePath,
+        testName: String = #function,
+        line: UInt = #line
+    ) {
         let hostingController = UIHostingController(rootView: view)
-        let size = device.config.size ?? CGSize(width: 440, height: 956)
+        let size = config.size ?? CGSize(width: 440, height: 956)
         hostingController.view.frame = CGRect(origin: .zero, size: size)
 
         let window = UIWindow(frame: hostingController.view.frame)
@@ -48,7 +74,6 @@ final class ScreenshotTests: XCTestCase {
         hostingController.view.setNeedsLayout()
         hostingController.view.layoutIfNeeded()
 
-        // Wait for SDWebImage to load posters from network/cache
         let renderExpectation = expectation(description: "Render \(name)")
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             renderExpectation.fulfill()
@@ -57,7 +82,7 @@ final class ScreenshotTests: XCTestCase {
 
         assertSnapshot(
             of: hostingController,
-            as: .image(on: device.config, precision: precision),
+            as: .image(on: config, precision: precision),
             named: name,
             file: file,
             testName: testName,
@@ -124,6 +149,33 @@ final class ScreenshotTests: XCTestCase {
     func testDetailTrailersScreen() {
         let view = DetailRecommendationsScreenshotView()
         for device in ScreenshotDevice.allCases {
+            snapshotView(view, device: device, named: device.screenshotName())
+        }
+    }
+
+    // MARK: - Watch Detail
+
+    func testWatchDetailScreen() {
+        let view = WatchDetailScreenshotView()
+        for device in WatchScreenshotDevice.allCases {
+            snapshotView(view, device: device, named: device.screenshotName())
+        }
+    }
+
+    // MARK: - Watch Watchlist
+
+    func testWatchWatchlistScreen() {
+        let view = WatchWatchlistScreenshotView()
+        for device in WatchScreenshotDevice.allCases {
+            snapshotView(view, device: device, named: device.screenshotName())
+        }
+    }
+
+    // MARK: - Watch Trending
+
+    func testWatchTrendingScreen() {
+        let view = WatchTrendingScreenshotView()
+        for device in WatchScreenshotDevice.allCases {
             snapshotView(view, device: device, named: device.screenshotName())
         }
     }

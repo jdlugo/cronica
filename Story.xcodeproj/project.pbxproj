@@ -386,6 +386,9 @@
 		AF2000000000000000000018 /* DetailRecommendationsScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000008 /* DetailRecommendationsScreenshotView.swift */; };
 		AF2000000000000000000019 /* DetailTrailersScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2000000000000000000009 /* DetailTrailersScreenshotView.swift */; };
 		AF200000000000000000001A /* SearchScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF200000000000000000000A /* SearchScreenshotView.swift */; };
+		AF200000000000000000001B /* WatchDetailScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF200000000000000000000B /* WatchDetailScreenshotView.swift */; };
+		AF200000000000000000001C /* WatchWatchlistScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF200000000000000000000C /* WatchWatchlistScreenshotView.swift */; };
+		AF200000000000000000001D /* WatchTrendingScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF200000000000000000000D /* WatchTrendingScreenshotView.swift */; };
 		B8FCAE982AEDA38E00F688FE /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */; };
 		B8FF4DBB27F91A4900C7DE9F /* SeasonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */; };
 		B8FF4DBF27FA511A00C7DE9F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF4DBE27FA511A00C7DE9F /* TitleView.swift */; };
@@ -744,6 +747,9 @@
 		AF2000000000000000000008 /* DetailRecommendationsScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecommendationsScreenshotView.swift; sourceTree = "<group>"; };
 		AF2000000000000000000009 /* DetailTrailersScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrailersScreenshotView.swift; sourceTree = "<group>"; };
 		AF200000000000000000000A /* SearchScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenshotView.swift; sourceTree = "<group>"; };
+		AF200000000000000000000B /* WatchDetailScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDetailScreenshotView.swift; sourceTree = "<group>"; };
+		AF200000000000000000000C /* WatchWatchlistScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWatchlistScreenshotView.swift; sourceTree = "<group>"; };
+		AF200000000000000000000D /* WatchTrendingScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTrendingScreenshotView.swift; sourceTree = "<group>"; };
 		B8FF4DBA27F91A4900C7DE9F /* SeasonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListView.swift; sourceTree = "<group>"; };
 		B8FF4DBE27FA511A00C7DE9F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		B8FF4DC027FB56F500C7DE9F /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
@@ -1549,6 +1555,9 @@
 				AF2000000000000000000008 /* DetailRecommendationsScreenshotView.swift */,
 				AF2000000000000000000009 /* DetailTrailersScreenshotView.swift */,
 				AF200000000000000000000A /* SearchScreenshotView.swift */,
+				AF200000000000000000000B /* WatchDetailScreenshotView.swift */,
+				AF200000000000000000000C /* WatchWatchlistScreenshotView.swift */,
+				AF200000000000000000000D /* WatchTrendingScreenshotView.swift */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -2155,6 +2164,9 @@
 				AF2000000000000000000018 /* DetailRecommendationsScreenshotView.swift in Sources */,
 				AF2000000000000000000019 /* DetailTrailersScreenshotView.swift in Sources */,
 				AF200000000000000000001A /* SearchScreenshotView.swift in Sources */,
+				AF200000000000000000001B /* WatchDetailScreenshotView.swift in Sources */,
+				AF200000000000000000001C /* WatchWatchlistScreenshotView.swift in Sources */,
+				AF200000000000000000001D /* WatchTrendingScreenshotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -73,6 +73,47 @@ enum ScreenshotDevice: String, CaseIterable {
     }
 }
 
+/// Watch device configurations for App Store screenshots.
+///
+/// Separate enum to avoid polluting `ScreenshotDevice.allCases` used by iOS tests.
+/// Renders watch-sized SwiftUI views through the iOS test target at watch point dimensions.
+enum WatchScreenshotDevice: String, CaseIterable {
+    /// Series 9/8/7 (45mm) — 396×484 pixels @2x
+    case watch45mm = "Watch_45mm"
+    /// Ultra 2 (49mm) — 410×502 pixels @2x
+    case watchUltra = "Watch_Ultra"
+
+    func screenshotName(locale: String = "en-US") -> String {
+        switch self {
+        case .watch45mm:  return "\(locale)_Watch_45mm_396x484"
+        case .watchUltra: return "\(locale)_Watch_Ultra_410x502"
+        }
+    }
+
+    var config: ViewImageConfig {
+        switch self {
+        case .watch45mm:
+            return ViewImageConfig(
+                safeArea: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
+                size: CGSize(width: 198, height: 242),
+                traits: UITraitCollection(traitsFrom: [
+                    .init(displayScale: 2),
+                    .init(userInterfaceStyle: .dark)
+                ])
+            )
+        case .watchUltra:
+            return ViewImageConfig(
+                safeArea: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
+                size: CGSize(width: 205, height: 251),
+                traits: UITraitCollection(traitsFrom: [
+                    .init(displayScale: 2),
+                    .init(userInterfaceStyle: .dark)
+                ])
+            )
+        }
+    }
+}
+
 /// Common setup for screenshot tests — hides ads and disables onboarding.
 enum ScreenshotSetup {
     static func configure() {
