@@ -1,0 +1,8 @@
+{
+  "buildID": "f5f4967e-9706-463c-ae9c-3db50d9cfa6b",
+  "version": "4.25.44",
+  "build": "17",
+  "locale": "en-US",
+  "whatsNew": "Movie Scramble: hold a tile and drag it onto another to swap. A drop outside the board should cancel. Tap-to-swap still works. Finish a puzzle and reopen the app to check progress recovery.\n\nMemory: check the brighter card backs and posters, complete every pair, then replay to get a fresh board. Check that controls look tappable and stay fully visible at larger text sizes on iPhone and iPad.\n\nTransitions are subtle and short. Try the same flows with Settings > Accessibility > Motion > Reduce Motion enabled; gameplay should remain immediate and usable.",
+  "verified": true
+}

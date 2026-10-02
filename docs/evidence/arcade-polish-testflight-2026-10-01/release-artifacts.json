@@ -1,0 +1,46 @@
+{
+  "sourceCommit": "a1729f0eb61fdda0f1188b7d323500389ae8c214",
+  "version": "4.25.44",
+  "build": "17",
+  "workingTreeClean": true,
+  "publishedSourceCommit": "d40d38c16e5392a045f5b8a884fe36b0b265ee22",
+  "publishedBranch": "codex/arcade-polish-testflight",
+  "archive": "/private/tmp/StreamingNow-4.25.44-17.xcarchive",
+  "archiveResult": "SUCCEEDED",
+  "archiveSignature": "verified Apple Development / LCU85X35W5",
+  "exportResult": "SUCCEEDED",
+  "exportSignature": "verified Apple Distribution / LCU85X35W5",
+  "ipa": "/private/tmp/streaming-now-4.25.44-17/StreamingNow.ipa",
+  "ipaSHA256": "57e29bafe0aa97b2883446c852ce832dbcfb33f5f6becc4350e1a800779e3f2c",
+  "symbols": "/private/tmp/streaming-now-4.25.44-17-dSYMs.zip",
+  "symbolUpload": "SUCCEEDED",
+  "symbolUploadApprovedByUser": true,
+  "symbolUploadConfirmedSlices": 4,
+  "symbolUploadLog": "/private/tmp/arcade-polish-release-symbols-2026-10-01.log",
+  "uploadResult": "SUCCEEDED",
+  "uploadLog": "/private/tmp/arcade-polish-release-upload-2026-10-01.log",
+  "uploadCompletedLocal": "2026-10-01 21:05:29 EDT",
+  "appleProcessing": "VALID",
+  "physicalTestFlightSmoke": "not verified",
+  "appleProcessingVerification": {
+    "checkedAt": 1790903300.0948522,
+    "results": [
+      {
+        "id": "f5f4967e-9706-463c-ae9c-3db50d9cfa6b",
+        "version": "4.25.44",
+        "build": "17",
+        "processingState": "VALID",
+        "uploadedDate": "2026-10-01T18:06:39-07:00",
+        "beta": {
+          "autoNotifyEnabled": true,
+          "internalBuildState": "IN_BETA_TESTING",
+          "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+        }
+      }
+    ]
+  },
+  "internalTestFlight": "IN_BETA_TESTING",
+  "externalBetaReview": "READY_FOR_BETA_SUBMISSION",
+  "testNotesVerified": true,
+  "temporaryUploadCredentialRemoved": true
+}

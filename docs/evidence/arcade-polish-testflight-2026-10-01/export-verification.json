@@ -1,0 +1,27 @@
+{
+  "bundles": [
+    {
+      "CFBundleIdentifier": "com.dlugokecki.qscanlite",
+      "CFBundleShortVersionString": "4.25.44",
+      "CFBundleVersion": "17"
+    },
+    {
+      "CFBundleIdentifier": "com.dlugokecki.qscanlite.widget",
+      "CFBundleShortVersionString": "4.25.44",
+      "CFBundleVersion": "17"
+    },
+    {
+      "CFBundleIdentifier": "com.dlugokecki.qscanlite.watch",
+      "CFBundleShortVersionString": "4.25.44",
+      "CFBundleVersion": "17"
+    }
+  ],
+  "distributionSignature": "verified",
+  "team": "LCU85X35W5",
+  "pushEnvironment": "production",
+  "cloudKitEnvironment": "Production",
+  "debuggerAllowed": false,
+  "ipaSHA256": "57e29bafe0aa97b2883446c852ce832dbcfb33f5f6becc4350e1a800779e3f2c",
+  "sourceCommit": "a1729f0eb61fdda0f1188b7d323500389ae8c214",
+  "workingTreeClean": true
+}

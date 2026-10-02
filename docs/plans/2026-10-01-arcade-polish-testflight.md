@@ -7,10 +7,10 @@ The user authorized a local commit, branch push, and TestFlight upload. Package 
 - [x] Verify fresh engine checks (10,361), analytics checks (96), localization keys (173), and production ad-unit gate.
 - [x] Preserve current-source standard/reduced-motion iPhone and large-text iPad complete-flow evidence (four checks).
 - [x] Run the current-source app unit suite (284 passed) and startup/settings/Daily Mix regressions (three passed). Reset simulator fixture contamination for the clean unit/startup run; preserve initial failures.
-- [ ] Commit explicit release files and push codex/arcade-growth-delivery to the user fork.
-- [ ] Archive the exact committed source, verify version/signing, and export.
-- [ ] Upload approved Crashlytics symbols and the signed binary.
-- [ ] Independently confirm Apple processing and internal TestFlight availability.
-- [ ] Record and push release evidence.
+- [x] Commit explicit release files (a1729f0e). Preserve that local branch and publish identical application/test source as d40d38c1 on codex/arcade-polish-testflight to avoid oversized generated-media history.
+- [x] Archive the exact committed source, verify version/signing, and export. Main/widget/watch build 17; production push/CloudKit; distribution signature verified.
+- [x] Upload approved Crashlytics symbols (four slices) and the signed binary; Apple upload accepted at 21:05:29 EDT.
+- [x] Independently confirm Apple VALID / IN_BETA_TESTING. Build ID f5f4967e-9706-463c-ae9c-3db50d9cfa6b; test notes saved and verified.
+- [x] Record release evidence and publish it in the release-branch follow-up commit.
 
 Physical TestFlight installation, live-service telemetry, and real-user motion comfort remain separate validation gates. Previous locked-phone state did not establish physical-device proof.

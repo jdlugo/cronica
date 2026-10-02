@@ -1,0 +1,10 @@
+[21:03:26]: [33mGet started using a Gemfile for fastlane https://docs.fastlane.tools/getting-started/ios/setup/#use-a-gemfile[0m
+[21:03:26]: Creating authorization token for App Store Connect API
+[21:03:26]: Ready to upload new build to TestFlight (App: 455556959)...
+[21:03:27]: Going to upload updated app to App Store Connect
+[21:03:27]: This might take a few minutes. Please don't interrupt the script.
+[21:05:29]: --------------------------------------------------------------------
+[21:05:29]: Successfully uploaded package to App Store Connect. It might take a few minutes until it's visible online.
+[21:05:29]: --------------------------------------------------------------------
+[21:05:29]: Successfully uploaded the new binary to App Store Connect
+[21:05:29]: `skip_waiting_for_build_processing` used and no `changelog` supplied - skipping waiting for build processing

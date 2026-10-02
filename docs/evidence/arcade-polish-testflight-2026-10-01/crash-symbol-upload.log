@@ -1,0 +1,5 @@
+Successfully submitted symbols for architecture arm64 with UUID e2e7c61188333829a388abe7bf1c7092 in dSYM: /tmp/StreamingNow-4.25.44-17.xcarchive/dSYMs/StreamingNowWidgetExtension.appex.dSYM/Contents/Resources/DWARF/StreamingNowWidgetExtension
+Successfully submitted symbols for architecture arm64_32 with UUID cb4f2b0551533c9f88e3eb14de17008b in dSYM: /tmp/StreamingNow-4.25.44-17.xcarchive/dSYMs/StreamingNow.app.dSYM/Contents/Resources/DWARF/StreamingNow
+Successfully submitted symbols for architecture arm64 with UUID f32951e97a6934f6b28de33b159443fb in dSYM: /tmp/StreamingNow-4.25.44-17.xcarchive/dSYMs/StreamingNow.app.dSYM/Contents/Resources/DWARF/StreamingNow
+Successfully submitted symbols for architecture arm64 with UUID 025b74fb7ec7360096b691298b080e87 in dSYM: /tmp/StreamingNow-4.25.44-17.xcarchive/dSYMs/StreamingNow.app 1.dSYM/Contents/Resources/DWARF/StreamingNow
+[32mSuccessfully uploaded Crashlytics symbols[0m

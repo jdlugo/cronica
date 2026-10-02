@@ -1,0 +1,15 @@
+{
+  "archiveSourceCommit": "a1729f0eb61fdda0f1188b7d323500389ae8c214",
+  "publishedSourceCommit": "d40d38c16e5392a045f5b8a884fe36b0b265ee22",
+  "publishedBranch": "codex/arcade-polish-testflight",
+  "parent": "9f2fc824aaba7054f1221fd95112964f3c56cd60",
+  "applicationAndTestSourceMatch": true,
+  "generatedOutputPrefixesExcluded": [
+    "CronicaTests/Screenshots/__Snapshots__/",
+    "fastlane/screenshots/",
+    "fastlane/preview_videos/"
+  ],
+  "excludedGeneratedFiles": 1351,
+  "originalLocalHistoryPreserved": true,
+  "reason": "Original branch has 12GB of unpushed generated-media history and a 225MB ZIP exceeding GitHub file limits"
+}
