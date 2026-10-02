@@ -398,6 +398,11 @@ struct ArcadeRound: Codable, Equatable {
               matched.allSatisfy(board.indices.contains), selected.allSatisfy({ !matched.contains($0) }),
               eliminated.isSubset(of: Set(kind == .heist ? heistOptions : options)), (kind == .directorsCut || !eliminated.contains(kind == .heist ? heistAnswer : answer)), mistakes >= 0,
               (0...2).contains(step), !skipped || isComplete else { return false }
+        if kind == .memory || kind == .doubleFeature {
+            // A saved match must contain both cards; partial matches cannot be finished.
+            let pairs = Dictionary(grouping: matched, by: { pairKey(board[$0]) })
+            guard pairs.values.allSatisfy({ $0.count == 2 }) else { return false }
+        }
         return true
     }
 }

@@ -6,6 +6,19 @@ import Foundation
         func expect(_ condition: @autoclosure () -> Bool, _ message: String) {
             precondition(condition(), message); checks += 1
         }
+        for kind in [ArcadeKind.memory, .doubleFeature] {
+            for seed in 0..<40 {
+                var round = ArcadeRound.make(kind: kind, seed: seed)
+                let partner = round.board.indices.first { $0 != 0 && round.pairKey(round.board[$0]) == round.pairKey(round.board[0]) }!
+                let unrelated = round.board.indices.first { round.pairKey(round.board[$0]) != round.pairKey(round.board[0]) }!
+                round.matched = [0, partner]
+                expect(round.isValid, "A complete saved pair remains resumable")
+                round.matched = [0]
+                expect(!round.isValid, "A half-matched saved pair would leave one card impossible to match")
+                round.matched = [0, unrelated]
+                expect(!round.isValid, "An even count of mismatched saved cards is still invalid")
+            }
+        }
         for seed in 0..<40 {
             var dragged = ArcadeRound.make(kind: .scramble, seed: seed)
             let original = dragged
@@ -263,6 +276,16 @@ import Foundation
         defaults.set(try JSONEncoder().encode(practice), forKey: store.key(isDaily: false, kind: .memory))
         expect(store.load(isDaily: false, kind: .memory) == nil, "Malformed board cannot load")
         expect(store.nextPracticeNumber() == 1 && store.nextPracticeNumber() == 2, "Practice variation persists")
+        for kind in [ArcadeKind.memory, .doubleFeature] {
+            var brokenPair = ArcadeSession.practice(kind, number: 0)
+            brokenPair.rounds[0].matched = [0]
+            defaults.set(try JSONEncoder().encode(brokenPair), forKey: store.key(isDaily: false, kind: kind))
+            expect(store.load(isDaily: false, kind: kind) == nil, "Half-matched saved pair must fall back to a fresh game")
+            let recovered = store.nextPracticeSession(kind)
+            store.save(recovered)
+            expect(recovered.current.matched.isEmpty && store.load(isDaily: false, kind: kind) == recovered,
+                   "Rejected matching save can be replaced by a playable fresh game")
+        }
         for kind in ArcadeKind.allCases {
             // An old or fixture-created first round must be included in the replay history.
             let first = ArcadeSession.practice(kind, number: 0)
