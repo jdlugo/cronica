@@ -1,0 +1,16 @@
+{
+  "originalSourceCommit": "3ccaffc16c1b2572ea487ba7c19dcaa3dfccf02b",
+  "publishedSourceCommit": "699a8a503559fa91d977c006b15014ac07b31460",
+  "publicationParent": "4fde7a64b4318bfe64fda4557c6a8b1f79a0d8cc",
+  "verifiedDifferencePrefixes": [
+    "CronicaTests/Screenshots/__Snapshots__/",
+    "fastlane/screenshots/",
+    "fastlane/preview_videos/"
+  ],
+  "verifiedDifferenceOtherFiles": [
+    ".gitignore"
+  ],
+  "unexpectedDifferences": [],
+  "originalLocalBranchPreserved": "codex/arcade-growth-delivery",
+  "newBinaryUploaded": false
+}

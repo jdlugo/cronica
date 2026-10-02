@@ -7,9 +7,9 @@ User instruction: go to bed and keep grinding. Goal: close simulator-verifiable 
 - [x] Run complete current-source iPad UI flows for all ten games; inspect result/replay controls and retained screenshots.
 - [x] Verify existing interruption/restart checks across game types; avoid repeating current-source checks without a coverage reason.
 - [x] Add focused accessibility audit coverage if supported; distinguish automated audit findings from actual VoiceOver or human accessibility testing.
-- [ ] Reproduce and fix concrete issues, run required regression checks, and commit locally.
-- [ ] Publish tested source/evidence to codex/arcade-polish-testflight while preserving the original local branch and generated media.
-- [ ] Report game-level coverage, changes, and remaining physical/production/human gates. Pause the overnight heartbeat when this finite pass is complete or only human/device gates remain.
+- [x] Reproduce and fix concrete issues, run required regression checks, and commit locally; retain unresolved findings after bounded attempts.
+- [x] Publish tested source/evidence to codex/arcade-polish-testflight while preserving the original local branch and generated media.
+- [x] Report game-level coverage, changes, and remaining physical/production/human gates. Pause the overnight heartbeat when this finite pass is complete or only human/device gates remain.
 
 Release baseline: clean local application source a1729f0e; evidence commit f889d1ab. Published source d40d38c1 plus evidence 0bf7131f on fork/codex/arcade-polish-testflight. Build 4.25.44 (17) is VALID / IN_BETA_TESTING; approved Crashlytics symbols and English TestFlight notes are uploaded. A prepared simulator test package has matching production source and build metadata 16; it is usable for unchanged-source flow coverage, but is not a physical installation of build 17. XcodeBuildMCP transport is closed; the already authorized direct xcodebuild runner worked.
 
@@ -26,3 +26,5 @@ Batch 2 outcome: all ten games completed on both devices; iPhone main suite 19/2
 Final bounded closeout (22:43–22:58 EDT): retry only the lobby/navigation checks on each device, preserve the final diagnostics, commit/publish tested source and evidence, and pause the heartbeat. No further layout-fix loop; record unresolved structural findings as a release gate. The only production change since full game coverage is the lobby column declaration; reversing it exactly reproduces the earlier view hash.
 
 Final verification: all ten game flows on both devices passed. Complete matched-pair saves and legacy pairing remain valid; 10,606 engine checks passed. Standard/Reduce Motion, relaunch recovery, large text, localized Memory, full unit regression and startup/settings checks passed. Final lobby navigation passes on both devices. Named title warnings cleared, while two unmapped iPhone and four unmapped iPad clipping findings remain. Strict audits keep those failures visible. A new upload is held; build 17 does not contain these subsequent source fixes. Source/evidence publication and heartbeat closeout follow next.
+
+Closeout: recovery fix `7ccf0144` and UI/evidence commit `3ccaffc1` are committed locally. Tested source was published as `699a8a50` on the clean release branch, with no unexpected source differences; the original local history and generated media remain preserved. The heartbeat is PAUSED. Both final lobby navigation checks pass, while strict audits retain two unmapped iPhone and four unmapped iPad clipping reports. No subsequent binary was uploaded; the new source changes remain outside build 17. Physical TestFlight, VoiceOver/manual audit interpretation, live CloudKit and production telemetry remain separate work.
