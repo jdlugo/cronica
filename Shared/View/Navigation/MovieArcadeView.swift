@@ -144,7 +144,8 @@ struct MovieArcadeView: View {
         let session: ArcadeSession
         let surface: ArcadeDiscoverySurface
     }
-    private let columns = [GridItem(.adaptive(minimum: 145), spacing: 12)]
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 2)
+    private let supportingText = Color(white: 0.8)
     var body: some View {
         NavigationStack {
             GeometryReader { viewport in
@@ -217,7 +218,7 @@ struct MovieArcadeView: View {
         VStack(alignment: .leading, spacing: 22) {
             VStack(alignment: .leading, spacing: 8) {
                 Text("A little movie magic.").font(.largeTitle.bold())
-                Text("Swap scenes. Spot stars. Make connections.").foregroundStyle(.secondary)
+                Text("Swap scenes. Spot stars. Make connections.").foregroundStyle(supportingText)
             }
             Text("Start here · No movie trivia needed").font(.title2.bold())
             gameGrid([.memory, .scene])
@@ -249,7 +250,7 @@ struct MovieArcadeView: View {
                     .transition(.opacity)
             }
             Text("A 12-movie starter pack · Works offline · No timer\nDaily Mix has its own score; your Daily Puzzle streak stays separate.")
-                .font(.footnote).foregroundStyle(.secondary)
+                .font(.footnote).foregroundStyle(supportingText)
         }
     }
     private func gameGrid(_ kinds: [ArcadeKind]) -> some View {
@@ -258,12 +259,12 @@ struct MovieArcadeView: View {
                 Button { navigate { player.openPractice(kind) } } label: {
                     VStack(alignment: .leading, spacing: 10) {
                         HStack {
-                            Image(systemName: kind.symbol).font(.title2).foregroundStyle(accent(kind))
+                            Image(systemName: kind.symbol).font(.title2).foregroundStyle(accent(kind)).fixedSize()
                             Spacer()
-                            Image(systemName: "play.circle.fill").font(.title3).foregroundStyle(accent(kind)).accessibilityHidden(true)
+                            Image(systemName: "play.circle.fill").font(.title3).foregroundStyle(accent(kind)).fixedSize().accessibilityHidden(true)
                         }
-                        Text(kind.title).font(.headline).foregroundStyle(.white)
-                        Text(teaser(kind)).font(.caption).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                        Text(kind.title).font(.headline).foregroundStyle(.white).fixedSize(horizontal: false, vertical: true)
+                        Text(teaser(kind)).font(.caption).foregroundStyle(supportingText).fixedSize(horizontal: false, vertical: true)
                     }
                     .frame(maxWidth: .infinity, minHeight: 108, alignment: .topLeading).padding(16)
                     .background(.white.opacity(0.055), in: RoundedRectangle(cornerRadius: 20))
@@ -291,7 +292,7 @@ struct MovieArcadeView: View {
             Text(round.kind.title).font(.largeTitle.bold()).fixedSize(horizontal: false, vertical: true).accessibilityIdentifier("arcade.roundTitle").accessibilityAddTraits(.isHeader)
             if round.isComplete { result(round, session: session).transition(.opacity) }
             else {
-                Text(round.instruction).font(.body).foregroundStyle(.secondary)
+                Text(round.instruction).font(.body).foregroundStyle(supportingText)
                 knowledgeHelp(round)
                 game(round)
                 if let feedback = round.feedback, round.kind != .timeline && !(round.kind == .heist && round.awaitingNext) {
@@ -398,7 +399,7 @@ struct MovieArcadeView: View {
             }
         case .scene:
             scene(round.film.id)
-            Text(round.film.localizedPlot).font(.callout).foregroundStyle(.secondary)
+            Text(round.film.localizedPlot).font(.callout).foregroundStyle(supportingText)
             choices(round)
         case .scramble:
             scramble(round)
@@ -407,7 +408,7 @@ struct MovieArcadeView: View {
                 poster(round.film.id).frame(width: 100)
                 VStack(alignment: .leading, spacing: 8) {
                     Text(round.film.title).font(.title2.bold())
-                    Text("Who’s in the cast?").foregroundStyle(.secondary)
+                    Text("Who’s in the cast?").foregroundStyle(supportingText)
                 }
             }
             choices(round, portraits: true)
@@ -497,7 +498,7 @@ struct MovieArcadeView: View {
             .aspectRatio(1.5, contentMode: .fit)
             if round.canGuess {
                 Text("Scene restored!").font(.headline).foregroundStyle(.mint)
-                Text(round.film.localizedPlot).font(.callout).foregroundStyle(.secondary)
+                Text(round.film.localizedPlot).font(.callout).foregroundStyle(supportingText)
                 choices(round)
             } else {
                 Label(arcadeText(round.selected.isEmpty ? "Hold & drag, or tap two tiles" : "Now tap the tile to swap it with."), systemImage: "hand.draw.fill")
@@ -552,7 +553,7 @@ struct MovieArcadeView: View {
                 Spacer()
             }.padding(14).background(.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 18))
             let incoming = ArcadeCatalog.film(round.films[round.step + 1])
-            Text(arcadeText("Movie %@ of 3", String(round.step + 1))).font(.caption).foregroundStyle(.secondary)
+            Text(arcadeText("Movie %@ of 3", String(round.step + 1))).font(.caption).foregroundStyle(supportingText)
             poster(incoming.id).frame(maxWidth: 120)
             Text(incoming.title).font(.title3.bold()).multilineTextAlignment(.center)
             if round.clues.contains(.year) { Text(String(incoming.year)).font(.title2.bold()).foregroundStyle(.mint) }
@@ -606,8 +607,16 @@ struct MovieArcadeView: View {
                                             VStack(spacing: 10) {
                                                 Image(systemName: "sparkles").font(.caption).foregroundStyle(.yellow)
                                                 Image(systemName: "film.fill").font(.largeTitle).foregroundStyle(.white)
-                                                Label(arcadeText("Tap to flip"), systemImage: "hand.tap.fill")
+                                                Label {
+                                                    Text(arcadeText("Tap to flip"))
+                                                        .fixedSize(horizontal: false, vertical: true)
+                                                } icon: {
+                                                    Image(systemName: "hand.tap.fill")
+                                                }
                                                     .font(.caption2.bold()).multilineTextAlignment(.center)
+                                                    .foregroundStyle(.white)
+                                                    .padding(.horizontal, 8).padding(.vertical, 5)
+                                                    .background(.black.opacity(0.65), in: Capsule())
                                             }.padding(8)
                                         }
                                         .accessibilityHidden(true)
@@ -644,7 +653,7 @@ struct MovieArcadeView: View {
                 Text("All pairs found!").font(.title2.bold()).foregroundStyle(.mint)
                 primary(arcadeText("Finish round · %@ points", String(round.matchingPoints ?? round.availablePoints)), id: "arcade.memory.finish") { act(.finishMatching) }
                 Text(arcadeText("Optional bonus: when did %@ come out?", round.film.title)).font(.headline)
-                Text("Your matching points are safe either way.").font(.callout).foregroundStyle(.secondary)
+                Text("Your matching points are safe either way.").font(.callout).foregroundStyle(supportingText)
                 choices(round)
             }
         }
@@ -700,7 +709,7 @@ struct MovieArcadeView: View {
                     .font(.system(size: 52)).foregroundStyle(round.skipped ? .yellow : .mint)
                 VStack(alignment: .leading, spacing: 5) {
                     Text(arcadeText(round.skipped ? "Now you know!" : round.kind == .heist ? "You’re in." : round.points == 3 ? "That’s movie magic." : "Nicely played.")).font(.title2.bold())
-                    Text(round.skipped ? arcadeText("A fresh round is waiting.") : arcadeText("%@ of 3 points earned", String(round.points))).foregroundStyle(.secondary)
+                    Text(round.skipped ? arcadeText("A fresh round is waiting.") : arcadeText("%@ of 3 points earned", String(round.points))).foregroundStyle(supportingText)
                 }
             }.accessibilityIdentifier("arcade.result")
             if round.kind == .heist && !round.skipped {
@@ -726,7 +735,7 @@ struct MovieArcadeView: View {
             Image(systemName: "sparkles").font(.system(size: 48)).foregroundStyle(.mint)
             Text("That’s a wrap!").font(.largeTitle.bold())
             Text("\(session.points) / \(session.maximumPoints)").font(.system(size: 56, weight: .bold, design: .rounded)).minimumScaleFactor(0.5).lineLimit(1).accessibilityIdentifier("arcade.summaryScore")
-            Text("Four games. A little more movie magic in your day.").foregroundStyle(.secondary)
+            Text("Four games. A little more movie magic in your day.").foregroundStyle(supportingText)
             ForEach(Array(session.rounds.enumerated()), id: \.offset) { _, round in
                 (typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
                     Label(round.kind.title, systemImage: round.kind.symbol)
@@ -738,7 +747,7 @@ struct MovieArcadeView: View {
                 Label("Share my mix", systemImage: "square.and.arrow.up").frame(maxWidth: .infinity, minHeight: 48)
             }.buttonStyle(.bordered).accessibilityIdentifier("arcade.share")
             primary("Keep playing", id: "arcade.keepPlaying") { navigate { player.backToGames() } }
-            Text("A fresh mix tomorrow. Free play is always here.").font(.footnote).foregroundStyle(.secondary)
+            Text("A fresh mix tomorrow. Free play is always here.").font(.footnote).foregroundStyle(supportingText)
             discoverySection(session.discoveryFilmIDs, session: session, surface: .summary)
         }
     }
@@ -746,7 +755,7 @@ struct MovieArcadeView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Save it for movie night").font(.title3.bold())
             Text("Explore the movies you just played. Add a favorite to your watchlist.")
-                .font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                .font(.subheadline).foregroundStyle(supportingText).fixedSize(horizontal: false, vertical: true)
             ForEach(films, id: \.self) { id in
                 let film = ArcadeCatalog.film(id)
                 Button {
@@ -758,7 +767,7 @@ struct MovieArcadeView: View {
                         poster(id).frame(width: typeSize.isAccessibilitySize ? 72 : 60)
                         VStack(alignment: .leading, spacing: 5) {
                             Text(film.title).font(.headline).fixedSize(horizontal: false, vertical: true)
-                            Text(String(film.year)).font(.subheadline).foregroundStyle(.secondary)
+                            Text(String(film.year)).font(.subheadline).foregroundStyle(supportingText)
                             Text("Movie details & watchlist").font(.caption).foregroundStyle(.mint)
                                 .fixedSize(horizontal: false, vertical: true)
                         }

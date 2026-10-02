@@ -1,0 +1,173 @@
+[
+  {
+    "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+    "element": "",
+    "elementType": "",
+    "frame": "nil",
+    "label": "",
+    "summary": "Text clipped",
+    "type": "131072"
+  },
+  {
+    "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+    "element": "",
+    "elementType": "",
+    "frame": "nil",
+    "label": "",
+    "summary": "Text clipped",
+    "type": "131072"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((20.0, 796.0304361979166, 319.0, 51.666666666666856))",
+    "label": "A 12-movie starter pack \u00b7 Works offline \u00b7 No timer\nDaily Mix has its own score; your Daily Puzzle streak stays separate.",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((20.0, 121.86376953125011, 114.0, 20.33333333333337))",
+    "label": "Fewer choices",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((36.0, 257.66666666666663, 141.66666666666666, 14.333333333333371))",
+    "label": "Piece the scene together",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 233.0, 95.33333333333331, 20.33333333333337))",
+    "label": "Casting Call",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 263.33333333333337, 117.33333333333331, 14.333333333333258))",
+    "label": "Put a face to the film",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((36.0, 385.0, 126.66666666666666, 20.333333333333314))",
+    "label": "Before or After?",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((36.0, 415.3333333333333, 85.0, 30.33333333333337))",
+    "label": "Travel through movie history",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 380.6666666666667, 118.33333333333331, 20.333333333333314))",
+    "label": "Odd Movie Out",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 411.0, 101.66666666666663, 30.333333333333314))",
+    "label": "Spot the one that doesn\u2019t belong",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((36.0, 535.6666666666666, 121.33333333333331, 20.33333333333337))",
+    "label": "Double Feature",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((36.0, 566.0, 101.0, 14.333333333333371))",
+    "label": "Connect the stars",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 530.6666666666666, 127.66666666666669, 20.33333333333337))",
+    "label": "Movie Detective",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 561.0, 124.33333333333331, 14.333333333333371))",
+    "label": "Follow your own clues",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((36.0, 685.3333333333334, 93.33333333333331, 20.333333333333258))",
+    "label": "Movie Heist",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((36.0, 715.6666666666666, 122.33333333333331, 14.333333333333371))",
+    "label": "Crack the movie vault",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 689.0, 111.33333333333331, 20.33333333333337))",
+    "label": "Director\u2019s Cut",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((223.0, 719.3333333333334, 108.66666666666663, 30.333333333333258))",
+    "label": "Put a triple feature in order",
+    "summary": "Contrast failed",
+    "type": "1"
+  }
+]

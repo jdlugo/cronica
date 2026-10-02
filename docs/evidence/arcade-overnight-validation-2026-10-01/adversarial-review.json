@@ -1,0 +1,50 @@
+{
+  "reviewer": "adversarial",
+  "scope": "Current Arcade touch and motion interaction, save/load validation, action acceptance, event journal, navigation and discovery boundaries",
+  "findings": [
+    {
+      "title": "Incomplete saved matches can strand a matching round",
+      "priority": 2,
+      "classification": "Controlled malformed-save reproduction; not an observed production incident",
+      "location": "Shared/Model/MovieArcade.swift: ArcadeRound.isValid",
+      "evidence": "The original validator accepted matched=[0] and unrelated two-card matches. Disabled matched cards then cannot form their complete pair.",
+      "resolution": "Require each matched group to contain exactly two cards; reject the decoded session and allow a fresh game. Local commit 7ccf0144; final standalone engine count 10606, including complete legacy-pair compatibility."
+    },
+    {
+      "title": "Supporting text and card captions need clearer contrast and wrapping",
+      "priority": 2,
+      "classification": "Readability improvement with remaining automated contrast diagnostics",
+      "resolution": "Use opaque supporting text and a dark, vertically wrapping caption backing. Retain all contrast diagnostics separately; two representative solid-pixel samples are readable but do not prove global contrast."
+    },
+    {
+      "title": "Expanded lobby title may clip with increased text size",
+      "priority": 2,
+      "classification": "Reproduced automated finding; the remaining underlying visual defect is not identified",
+      "resolution": "Two-column lobby layout clears named Director\u2019s Cut and Movie Heist title warnings. Final strict audits retain two unmapped clipping findings on iPhone and four on iPad; both navigation checks pass. Hold a new upload and do not suppress the remaining structural reports."
+    }
+  ],
+  "verified_checks": [
+    "Cancelled or stale tile callbacks are guarded by current seed and board; model rejects invalid slots, solved boards and completed rounds.",
+    "Memory labels do not expose face-down identities; both visual faces remain hidden from the accessibility tree.",
+    "Animations do not control scoring or saving; system Reduce Motion removes the added animations.",
+    "Accepted-action journal rejects terminal callbacks, pauses inactive intervals, and bounds persisted run records."
+  ],
+  "residual_risks": [
+    "Physical device gestures, VoiceOver user experience, live current-build telemetry and CloudKit synchronization remain unverified."
+  ],
+  "testing_gaps": [
+    "Unmapped expanded-lobby clipping and gradient/poster contrast diagnostics require further inspection.",
+    "Physical TestFlight, VoiceOver, current-build production telemetry and CloudKit remain unverified."
+  ],
+  "controller_findings": [
+    {
+      "title": "Casting iPad test waits for a virtualized actor without scrolling",
+      "evidence": [
+        "The iPad run failed on waitForExistence for arcade.choice.31 before any scroll call.",
+        "The shared actor grid is lazy and the iPad sheet viewport does not expose the second row initially.",
+        "The viewport-aware scrolling helper passed the same Casting scenario on both the final iPhone and iPad app."
+      ],
+      "classification": "Confirmed test-controller issue; corrected and passed on both devices"
+    }
+  ]
+}

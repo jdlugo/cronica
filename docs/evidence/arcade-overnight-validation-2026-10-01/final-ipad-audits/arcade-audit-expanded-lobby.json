@@ -1,0 +1,155 @@
+[
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((242.0, 949.0, 411.0, 34.0))",
+    "label": "A 12-movie starter pack \u00b7 Works offline \u00b7 No timer\nDaily Mix has its own score; your Daily Puzzle streak stays separate.",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((264.0, 146.5, 365.5, 26.5))",
+    "label": "Four quick games. One happy brain.",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((264.0, 190.75, 76.0, 20.5))",
+    "label": "Let\u2019s play",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((242.0, 274.75, 114.0, 20.5))",
+    "label": "Fewer choices",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((258.0, 380.0, 127.0, 20.5))",
+    "label": "Movie Scramble",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((258.0, 410.5, 141.5, 14.5))",
+    "label": "Piece the scene together",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((534.0, 416.5, 117.5, 14.5))",
+    "label": "Put a face to the film",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((258.0, 568.0, 161.0, 14.5))",
+    "label": "Travel through movie history",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((534.0, 564.0, 186.5, 14.5))",
+    "label": "Spot the one that doesn\u2019t belong",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((258.0, 719.0, 101.0, 14.5))",
+    "label": "Connect the stars",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((534.0, 714.5, 124.5, 14.5))",
+    "label": "Follow your own clues",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((258.0, 868.5, 122.5, 14.5))",
+    "label": "Crack the movie vault",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Contrast failed for SwiftUI.AccessibilityNode",
+    "element": "",
+    "elementType": "48",
+    "frame": "Optional((534.0, 872.5, 152.5, 14.5))",
+    "label": "Put a triple feature in order",
+    "summary": "Contrast failed",
+    "type": "1"
+  },
+  {
+    "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+    "element": "",
+    "elementType": "",
+    "frame": "nil",
+    "label": "",
+    "summary": "Text clipped",
+    "type": "131072"
+  },
+  {
+    "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+    "element": "",
+    "elementType": "",
+    "frame": "nil",
+    "label": "",
+    "summary": "Text clipped",
+    "type": "131072"
+  },
+  {
+    "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+    "element": "",
+    "elementType": "",
+    "frame": "nil",
+    "label": "",
+    "summary": "Text clipped",
+    "type": "131072"
+  },
+  {
+    "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+    "element": "",
+    "elementType": "",
+    "frame": "nil",
+    "label": "",
+    "summary": "Text clipped",
+    "type": "131072"
+  }
+]

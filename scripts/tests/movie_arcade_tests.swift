@@ -307,6 +307,9 @@ import Foundation
         _ = legacyPairs.apply(.card(0))
         let oldPairRound = try JSONDecoder().decode(ArcadeRound.self, from: JSONEncoder().encode(legacyPairs))
         expect(oldPairRound.isValid && oldPairRound.selected == [0], "Legacy fixed pairing board remains resumable")
+        var legacyMatched = oldPairRound
+        expect(legacyMatched.apply(.card(1)) && legacyMatched.matched == [0, 1] && legacyMatched.isValid,
+               "The stricter validator preserves complete pairs in legacy Double Feature saves")
         var repeatedDailyFilmSlots = 0
         for day in 1...28 {
             let run = ArcadeSession.daily(day: String(format: "2026-10-%02d", day))

@@ -1,0 +1,38 @@
+[
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 509.0, 339.0, 20.5))",
+    "label" : "Swap scenes. Spot stars. Make connections.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 996.5, 411.0, 34.0))",
+    "label" : "A 12-movie starter pack · Works offline · No timer\nDaily Mix has its own score; your Daily Puzzle streak stays separate.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((258.0, 681.5, 126.5, 14.5))",
+    "label" : "Flip, remember, match",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((442.0, 679.5, 96.0, 14.5))",
+    "label" : "Name that scene",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  }
+]

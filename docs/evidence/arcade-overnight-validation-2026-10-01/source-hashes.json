@@ -1,0 +1,19 @@
+{
+  "iPhoneMainRun": {
+    "Shared/Model/MovieArcade.swift": "37237be49d3e3f3c42ceb68236ffe0889c77bec2cdfe370987089823d53e19dc",
+    "Shared/View/Navigation/MovieArcadeView.swift": "75f4fb0b351a341c8e87335919be25b3e3ab0c07a9548d5215a3b806d2e6b569",
+    "CronicaUITests/CronicaUITests.swift": "b7a482599208808ac461bf45d7dca9f0334b33184a063183d5648ef96e046441",
+    "scripts/tests/movie_arcade_tests.swift": "0b9e0fcc93de1479ca485b8f2554759d8fa34adc60bf4a4ef915191bab3b8e92"
+  },
+  "finalController": {
+    "Shared/Model/MovieArcade.swift": "37237be49d3e3f3c42ceb68236ffe0889c77bec2cdfe370987089823d53e19dc",
+    "Shared/View/Navigation/MovieArcadeView.swift": "75f4fb0b351a341c8e87335919be25b3e3ab0c07a9548d5215a3b806d2e6b569",
+    "CronicaUITests/CronicaUITests.swift": "ace1ae46dbdfb0133d53775776d95fef065a1678388374cd925340f2fef0d789",
+    "scripts/tests/movie_arcade_tests.swift": "0b9e0fcc93de1479ca485b8f2554759d8fa34adc60bf4a4ef915191bab3b8e92"
+  },
+  "note": "Only audit-controller scrolling and diagnostic capture changed after the iPhone main run; production source is unchanged.",
+  "finalEngineTestSHA256": "bb928a2165114a9d5af6ae6ecd274851e0fdf5756cb00009407b4f73386cbb16",
+  "engineNote": "Added a standalone legacy matched-pair compatibility check after the compiled UI runs; no production source changed.",
+  "finalLobbyViewSHA256": "2c63c258f3b2e8903402aad14d9aa56d59ad6b3c34590dd4ac89bed7435d2455",
+  "lobbyScopeProof": "Reversing only the column declaration exactly reproduces the view hash used for the complete game runs; gameplay bodies are unchanged."
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.result",
+    "elementType" : "48",
+    "frame" : "Optional((318.0, 134.01123046875, 143.5, 26.5))",
+    "label" : "Nicely played.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.result",
+    "elementType" : "48",
+    "frame" : "Optional((318.0, 165.51123046875, 153.0, 20.5))",
+    "label" : "2 of 3 points earned",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.differentGame",
+    "elementType" : "9",
+    "frame" : "Optional((242.0, 704.0, 540.0, 52.0))",
+    "label" : "Try a different game",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 820.01123046875, 460.5, 18.0))",
+    "label" : "Explore the movies you just played. Add a favorite to your watchlist.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 924.01123046875, 140.5, 14.5))",
+    "label" : "Movie details & watchlist",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 1001.51123046875, 158.5, 20.5))",
+    "label" : "Avengers: Endgame",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 1050.01123046875, 140.5, 14.5))",
+    "label" : "Movie details & watchlist",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 1153.01123046875, 35.0, 18.0))",
+    "label" : "1993",
+    "summary" : "Contrast nearly passed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast is not high enough for SwiftUI.AccessibilityNode unless font size is larger.",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 1176.01123046875, 140.5, 14.5))",
+    "label" : "Movie details & watchlist",
+    "summary" : "Contrast nearly passed",
+    "type" : "1"
+  }
+]

@@ -280,6 +280,7 @@ final class CronicaUITests: XCTestCase {
             "--preview-video-disable-monetization", "--movie-quiz-fixture", "--daily-puzzle-use-fallback",
             "-AppleLanguages", "(en)",
             "-showOnboarding", "NO",
+            "-selectedView", "home",
             "-userHasPurchasedTipJar", "YES",
             "-disableTranslucentBackground", "YES",
             "-displayDeveloperSettings", developerMode ? "YES" : "NO",
@@ -340,7 +341,13 @@ final class CronicaUITests: XCTestCase {
     }
 
     private func assertArcadeResult(_ app: XCUIApplication, screenshot: String) {
-        XCTAssertTrue(app.buttons["arcade.playAgain"].waitForExistence(timeout: 10))
+        let replay = app.buttons["arcade.playAgain"]
+        XCTAssertTrue(replay.waitForExistence(timeout: 10))
+        arcadeScrollTo(replay, in: app)
+        XCTAssertTrue(replay.isHittable)
+        let viewport = app.scrollViews["arcade.scroll"].frame
+        XCTAssertGreaterThanOrEqual(replay.frame.minY, viewport.minY + 16)
+        XCTAssertLessThanOrEqual(replay.frame.maxY, viewport.maxY - 16)
         attachScreenshot(named: screenshot)
     }
 
@@ -567,6 +574,7 @@ final class CronicaUITests: XCTestCase {
 
     func testArcadeCastingWrongChoiceThenCorrectPortrait() {
         let app = arcadeApp("casting"); app.launch()
+        arcadeScrollTo(app.buttons["arcade.choice.31"], in: app)
         XCTAssertTrue(app.buttons["arcade.choice.31"].waitForExistence(timeout: 10))
         attachScreenshot(named: "arcade-casting-portraits")
         arcadeTap("arcade.choice.3223", in: app)
@@ -764,6 +772,96 @@ final class CronicaUITests: XCTestCase {
         arcadeTap("arcade.memory.finish", in: app)
         assertArcadeResult(app, screenshot: "arcade-memory-bonus-safe")
         XCTAssertEqual(app.staticTexts["arcade.points"].label, "3/3 points")
+    }
+
+    func testArcadeLobbyStructuralAccessibilityAudit() throws {
+        let app = makeApp()
+        app.launchArguments += ["-selectedView", "home", "--arcade-test", "--arcade-reset"]
+        app.launch()
+        arcadeTap("arcade.home", in: app)
+        try auditArcadeAccessibility(app, name: "arcade-audit-featured-lobby")
+        arcadeTap("arcade.allGames", in: app)
+        arcadeScrollTo(app.buttons["arcade.game.directorsCut"], in: app)
+        // Bring the footer fully into view to separate possible viewport clipping
+        // from truncation inside the text's own layout.
+        let notes = app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "A 12-movie starter pack")).firstMatch
+        XCTAssertTrue(notes.waitForExistence(timeout: 5))
+        arcadeScrollTo(notes, in: app)
+        let viewport = app.scrollViews["arcade.scroll"].frame
+        XCTAssertGreaterThanOrEqual(notes.frame.minY, viewport.minY + 16)
+        XCTAssertLessThanOrEqual(notes.frame.maxY, viewport.maxY - 16)
+        try auditArcadeAccessibility(app, name: "arcade-audit-expanded-lobby")
+    }
+
+    func testArcadeMemoryStructuralAccessibilityAudit() throws {
+        let app = arcadeApp("memory"); app.launch()
+        XCTAssertTrue(app.buttons["arcade.card.0"].waitForExistence(timeout: 10))
+        try auditArcadeAccessibility(app, name: "arcade-audit-memory-card-backs")
+        for card in [0, 1] { arcadeTap("arcade.card.\(card)", in: app) }
+        arcadeScrollTo(app.buttons["arcade.retryPair"], in: app)
+        try auditArcadeAccessibility(app, name: "arcade-audit-memory-mismatch")
+        arcadeTap("arcade.retryPair", in: app)
+        for card in [0, 2, 1, 4, 3, 5] { arcadeTap("arcade.card.\(card)", in: app) }
+        arcadeTap("arcade.memory.finish", in: app)
+        assertArcadeResult(app, screenshot: "arcade-audit-memory-result")
+        try auditArcadeAccessibility(app, name: "arcade-audit-memory-result-controls")
+        arcadeTap("arcade.playAgain", in: app)
+        XCTAssertTrue(app.buttons["arcade.card.0"].waitForExistence(timeout: 10))
+        try auditArcadeAccessibility(app, name: "arcade-audit-memory-replay")
+    }
+
+    func testArcadeScrambleStructuralAccessibilityAudit() throws {
+        let app = arcadeApp("scramble"); app.launch()
+        XCTAssertTrue(app.buttons["arcade.tile.0"].waitForExistence(timeout: 10))
+        try auditArcadeAccessibility(app, name: "arcade-audit-scramble-board")
+        for tile in [0, 1, 1, 2] { arcadeTap("arcade.tile.\(tile)", in: app) }
+        arcadeScrollTo(app.buttons["arcade.choice.862"], in: app)
+        try auditArcadeAccessibility(app, name: "arcade-audit-scramble-choices")
+        arcadeTap("arcade.choice.862", in: app)
+        assertArcadeResult(app, screenshot: "arcade-audit-scramble-result")
+        try auditArcadeAccessibility(app, name: "arcade-audit-scramble-result-controls")
+    }
+
+    private func auditArcadeAccessibility(_ app: XCUIApplication, name: String) throws {
+        let viewport = app.scrollViews["arcade.scroll"]
+        var previousFrame = CGRect.zero
+        var settledSamples = 0
+        let settled = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            guard viewport.exists, app.buttons["arcade.close"].isHittable else { return false }
+            let frame = viewport.frame
+            guard frame.height > 100, app.frame.contains(frame) else { return false }
+            settledSamples = frame == previousFrame ? settledSamples + 1 : 0
+            previousFrame = frame
+            return settledSamples >= 2
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [settled], timeout: 8), .completed, "Arcade presentation must settle before auditing")
+        attachScreenshot(named: name)
+        let hierarchy = XCTAttachment(string: app.debugDescription)
+        hierarchy.name = name + "-hierarchy"
+        hierarchy.lifetime = .keepAlways
+        add(hierarchy)
+        var findings: [[String: String]] = []
+        try app.performAccessibilityAudit(for: [.contrast, .hitRegion, .sufficientElementDescription, .textClipped, .trait]) { issue in
+            findings.append([
+                "type": String(issue.auditType.rawValue),
+                "element": issue.element?.identifier ?? "",
+                "label": issue.element?.label ?? "",
+                "frame": String(describing: issue.element?.frame),
+                "elementType": issue.element.map { String($0.elementType.rawValue) } ?? "",
+                "summary": issue.compactDescription,
+                "detail": issue.detailedDescription,
+            ])
+            return true // Retain every issue in the report, including contrast diagnostics.
+        }
+        let data = try JSONSerialization.data(withJSONObject: findings, options: [.prettyPrinted, .sortedKeys])
+        let attachment = XCTAttachment(data: data, uniformTypeIdentifier: "public.json")
+        attachment.name = name + "-issues"
+        attachment.lifetime = .keepAlways
+        add(attachment)
+        // Layered gradients/posters need visual contrast review; keep those findings
+        // as diagnostics instead of equating them with structural audit failures.
+        let structuralFindings = findings.filter { $0["type"] != String(XCUIAccessibilityAuditType.contrast.rawValue) }
+        XCTAssertTrue(structuralFindings.isEmpty, "Structural accessibility issues at \(name): \(String(decoding: data, as: UTF8.self))")
     }
 
     func testArcadeReducedMotionCanMatchReplayAndDrag() {

@@ -1,0 +1,74 @@
+[
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.result",
+    "elementType" : "48",
+    "frame" : "Optional((318.0, 149.5, 204.0, 26.5))",
+    "label" : "That’s movie magic.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.result",
+    "elementType" : "48",
+    "frame" : "Optional((318.0, 181.0, 153.5, 20.5))",
+    "label" : "3 of 3 points earned",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.differentGame",
+    "elementType" : "9",
+    "frame" : "Optional((242.0, 741.5, 540.0, 52.0))",
+    "label" : "Try a different game",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 821.5, 202.5, 24.0))",
+    "label" : "Save it for movie night",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 857.5, 460.5, 18.0))",
+    "label" : "Explore the movies you just played. Add a favorite to your watchlist.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 913.0, 75.5, 20.5))",
+    "label" : "Toy Story",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 938.5, 34.5, 18.0))",
+    "label" : "1995",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((328.0, 961.5, 140.5, 14.5))",
+    "label" : "Movie details & watchlist",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  }
+]

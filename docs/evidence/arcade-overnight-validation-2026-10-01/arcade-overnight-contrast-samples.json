@@ -1,0 +1,60 @@
+[
+  {
+    "label": "scramble instructions",
+    "cropPixels": [
+      60,
+      810,
+      1140,
+      995
+    ],
+    "foregroundRGB": [
+      204,
+      204,
+      204
+    ],
+    "foregroundSolidPixelCount": 15531,
+    "backgroundSamplePoint": [
+      1000,
+      970
+    ],
+    "backgroundRGB": [
+      3,
+      8,
+      13
+    ],
+    "solidPixelContrastRatio": 12.52,
+    "limitation": "Representative solid pixels in a fixed screenshot crop; not every glyph, background or state",
+    "exportedScreenshotFile": "BDB4BDA9-E9E8-41EE-A77E-6982178E6DB3.png",
+    "sourceResultBundle": "/private/tmp/arcade-overnight-accessibility-iteration2-2026-10-01.xcresult",
+    "calculation": "Approximate sRGB relative luminance using representative solid foreground/background pixels"
+  },
+  {
+    "label": "memory caption",
+    "cropPixels": [
+      840,
+      1440,
+      1110,
+      1500
+    ],
+    "foregroundRGB": [
+      255,
+      255,
+      255
+    ],
+    "foregroundSolidPixelCount": 1434,
+    "backgroundSamplePoint": [
+      920,
+      1445
+    ],
+    "backgroundRGB": [
+      85,
+      26,
+      41
+    ],
+    "solidPixelContrastRatio": 13.41,
+    "limitation": "Representative solid pixels in a fixed screenshot crop; not every glyph, background or state",
+    "exportedScreenshotFile": "E644EE6D-C3AF-4A08-915B-31C5F956E1FD.png",
+    "sourceResultBundle": "/private/tmp/arcade-overnight-accessibility-iteration2-2026-10-01.xcresult",
+    "calculation": "Approximate sRGB relative luminance using representative solid foreground/background pixels"
+  }
+]

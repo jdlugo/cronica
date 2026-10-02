@@ -1,0 +1,92 @@
+[
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((243.5, 220.556640625, 85.0, 14.5))",
+    "label" : "FREE PLAY",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.points",
+    "elementType" : "48",
+    "frame" : "Optional((699.0, 220.556640625, 83.0, 14.5))",
+    "label" : "Up to 3 points",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.roundTitle",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 255.056640625, 252.5, 41.0))",
+    "label" : "Movie Scramble",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 316.056640625, 518.0, 42.5))",
+    "label" : "Hold and drag a tile onto another to swap. Or tap two tiles. Build the scene, then name the movie.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((301.5, 791.056640625, 421.0, 19.5))",
+    "label" : "A cowboy toy feels threatened by a new space-ranger toy.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.feedback",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 986.5, 540.0, 49.0))",
+    "label" : "Scene restored! Now name the movie.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 826.5, 266.0, 64.0))",
+    "label" : "Back to the Future",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((516.0, 826.5, 266.0, 64.0))",
+    "label" : "Jurassic Park",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 902.5, 266.0, 64.0))",
+    "label" : "Toy Story",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((516.0, 902.5, 266.0, 64.0))",
+    "label" : "Avengers: Endgame",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 160.01123046875, 525.5, 42.5))",
+    "label" : "Flip two cards to find a matching pair. Find all three to finish; the year question is optional.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.pairs",
+    "elementType" : "48",
+    "frame" : "Optional((467.25, 222.51123046875, 89.5, 20.5))",
+    "label" : "0 of 3 pairs",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.feedback",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 882.0, 540.0, 47.5))",
+    "label" : "Not a pair. Take a look, then try again.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((429.0, 966.5, 189.5, 18.0))",
+    "label" : "Reveal & move on · 0 points",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((291.5, 418.0, 75.16665649414062, 14.4376220703125))",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((475.0, 418.0, 75.1666259765625, 14.4376220703125))",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((658.0, 418.0, 75.16668701171875, 14.4376220703125))",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((291.5, 690.0, 75.16665649414062, 14.4376220703125))",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((475.0, 690.0, 75.1666259765625, 14.4376220703125))",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((658.0, 690.0, 75.16668701171875, 14.4376220703125))",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  }
+]

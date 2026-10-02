@@ -1,0 +1,29 @@
+[
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((242.0, 555.443359375, 518.0, 42.5))",
+    "label" : "Hold and drag a tile onto another to swap. Or tap two tiles. Build the scene, then name the movie.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((398.5, 993.943359375, 228.75, 19.5))",
+    "label" : "Hold & drag, or tap two tiles",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "elementType" : "48",
+    "frame" : "Optional((433.75, 1046.5, 182.0, 18.0))",
+    "label" : "Assemble for me · −1 point",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  }
+]

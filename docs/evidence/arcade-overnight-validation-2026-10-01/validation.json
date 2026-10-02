@@ -1,0 +1,197 @@
+{
+  "status": "New upload held for unresolved expanded-lobby structural audit findings",
+  "existingUpload": "4.25.44 (17); subsequent fixes are source changes and are not included in that binary",
+  "unitTestsPassed": 284,
+  "startupAndSettingsUIPassed": 2,
+  "engineChecksPassed": 10606,
+  "analyticsChecksPassed": 96,
+  "localizationKeysVerified": 173,
+  "productionAdUnitGate": "Passed",
+  "devices": [
+    {
+      "name": "iPhone 17 Pro",
+      "id": "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+      "runtime": "iOS 26.3.1 simulator"
+    },
+    {
+      "name": "iPad Air 13-inch M4",
+      "id": "98FE16C6-D028-494C-8E3E-5F6A442E3CAE",
+      "runtime": "iOS 26.3.1 simulator"
+    }
+  ],
+  "runs": {
+    "regression": {
+      "result": "Passed",
+      "totalTestCount": 286,
+      "passedTests": 286,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "resultBundle": "/private/tmp/arcade-overnight-final-regression-2026-10-01.xcresult",
+      "log": "/private/tmp/arcade-overnight-final-regression-2026-10-01.log"
+    },
+    "iPhoneMain": {
+      "result": "Failed",
+      "totalTestCount": 20,
+      "passedTests": 19,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "resultBundle": "/private/tmp/arcade-overnight-final-iphone-2026-10-01.xcresult",
+      "log": "/private/tmp/arcade-overnight-final-iphone-2026-10-01.log"
+    },
+    "iPhoneRecoveryMotion": {
+      "result": "Failed",
+      "totalTestCount": 4,
+      "passedTests": 3,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "resultBundle": "/private/tmp/arcade-overnight-iphone-focused-recovery-motion-2026-10-01.xcresult",
+      "log": "/private/tmp/arcade-overnight-iphone-focused-recovery-motion-2026-10-01.log"
+    },
+    "iPadMain": {
+      "result": "Failed",
+      "totalTestCount": 21,
+      "passedTests": 20,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "resultBundle": "/private/tmp/arcade-overnight-final-ipad-2026-10-01.xcresult",
+      "log": "/private/tmp/arcade-overnight-final-ipad-2026-10-01.log"
+    },
+    "iPhoneLobbyFinal": {
+      "result": "Failed",
+      "totalTestCount": 2,
+      "passedTests": 1,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "resultBundle": "/private/tmp/arcade-overnight-final-lobby-iphone-2026-10-01.xcresult",
+      "log": "/private/tmp/arcade-overnight-final-lobby-iphone-2026-10-01.log"
+    },
+    "iPadLobbyFinal": {
+      "result": "Failed",
+      "totalTestCount": 2,
+      "passedTests": 1,
+      "failedTests": 1,
+      "skippedTests": 0,
+      "resultBundle": "/private/tmp/arcade-overnight-final-lobby-ipad-retry-2026-10-01.xcresult",
+      "log": "/private/tmp/arcade-overnight-final-lobby-ipad-retry-2026-10-01.log"
+    }
+  },
+  "gameFlows": {
+    "Scene Spotter": {
+      "testMethod": "testArcadeSceneSpotterCompletesWithoutSkipping",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Movie Scramble": {
+      "testMethod": "testArcadeScrambleHoldAndDragFinishesAndRestoresProgress",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Casting Call": {
+      "testMethod": "testArcadeCastingWrongChoiceThenCorrectPortrait",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Director's Cut": {
+      "testMethod": "testArcadeDirectorsCutCompletesChronologicalTripleFeature",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Movie Heist": {
+      "testMethod": "testArcadeHeistCracksThreeLocks",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Before or After?": {
+      "testMethod": "testArcadeTimelineRevealsYearsAndCompletesThreePlacements",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Odd Movie Out": {
+      "testMethod": "testArcadeOddOneOutExplainsTheRule",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Double Feature": {
+      "testMethod": "testArcadeDoubleFeatureMismatchAndThreeConnections",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Movie Detective": {
+      "testMethod": "testArcadeDetectiveLetsPlayerChooseClueOrder",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    },
+    "Poster Memory": {
+      "testMethod": "testArcadeMemoryCanFinishWithoutTrivia",
+      "iphone": "Passed",
+      "ipad": "Passed"
+    }
+  },
+  "finalLobbyStructuralFindings": {
+    "iphone": [
+      {
+        "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+        "element": "",
+        "elementType": "",
+        "frame": "nil",
+        "label": "",
+        "summary": "Text clipped",
+        "type": "131072"
+      },
+      {
+        "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+        "element": "",
+        "elementType": "",
+        "frame": "nil",
+        "label": "",
+        "summary": "Text clipped",
+        "type": "131072"
+      }
+    ],
+    "ipad": [
+      {
+        "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+        "element": "",
+        "elementType": "",
+        "frame": "nil",
+        "label": "",
+        "summary": "Text clipped",
+        "type": "131072"
+      },
+      {
+        "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+        "element": "",
+        "elementType": "",
+        "frame": "nil",
+        "label": "",
+        "summary": "Text clipped",
+        "type": "131072"
+      },
+      {
+        "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+        "element": "",
+        "elementType": "",
+        "frame": "nil",
+        "label": "",
+        "summary": "Text clipped",
+        "type": "131072"
+      },
+      {
+        "detail": "Text of this element may be clipped at larger Dynamic Type sizes.",
+        "element": "",
+        "elementType": "",
+        "frame": "nil",
+        "label": "",
+        "summary": "Text clipped",
+        "type": "131072"
+      }
+    ]
+  },
+  "sourceScope": "The final production change after complete game coverage is only the lobby column declaration; source-hashes.json proves gameplay bodies are unchanged. Both final lobby navigation checks pass; both strict expanded-lobby audits remain failing.",
+  "evidenceLimits": [
+    "Deterministic fixture interactions with known answers; not human fun or retention evidence",
+    "Contrast diagnostics retained separately; no full accessibility sign-off",
+    "Physical TestFlight, VoiceOver, live CloudKit and production telemetry not verified"
+  ],
+  "incompleteResultNotAccepted": "The first final-lobby iPad bundle reported unknown/zero results near critically low free disk space. No proven causal diagnosis; the retained retry reports one pass and one structural-audit failure."
+}

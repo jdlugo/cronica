@@ -1,0 +1,2 @@
+main/movie_arcade_tests.swift:7: Precondition failed: A half-matched saved pair would leave one card impossible to match
+scripts/test_movie_arcade.sh: line 7: 11673 Trace/BPT trap: 5       "$arcade_scratch/arcade-tests"

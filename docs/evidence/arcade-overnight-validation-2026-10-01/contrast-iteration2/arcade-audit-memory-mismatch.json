@@ -1,0 +1,23 @@
+[
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "arcade.feedback",
+    "label" : "Not a pair. Take a look, then try again.",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  },
+  {
+    "detail" : "Contrast failed for SwiftUI.AccessibilityNode",
+    "element" : "",
+    "label" : "Tap to flip",
+    "summary" : "Contrast failed",
+    "type" : "1"
+  }
+]
