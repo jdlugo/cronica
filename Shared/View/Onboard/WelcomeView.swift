@@ -1,16 +1,15 @@
-//
-//  WelcomeView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 18/03/22.
-//
-
 import SwiftUI
-#if !os(macOS)
+
 /// Onboard experience.
 struct WelcomeView: View {
     @AppStorage("showOnboarding") var displayOnboard = true
     @State private var showPolicy = false
+    @Environment(\.colorScheme) private var colorScheme
+
+    private var onboardingBackground: Color {
+        colorScheme == .dark ? .black : .white
+    }
+
     var body: some View {
         VStack(alignment: .leading) {
             CenterHorizontalView {
@@ -18,7 +17,7 @@ struct WelcomeView: View {
                     Image("Cronica")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 90, height: 90, alignment: .center)
+                        .frame(width: 100, height: 100, alignment: .center)
                         .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
                         .shadow(radius: 5)
                         .padding(.leading)
@@ -26,11 +25,11 @@ struct WelcomeView: View {
                         Text("Cronica")
                             .font(.title)
                             .fontWeight(.bold)
-                            .fontDesign(.rounded)
-                        Text("An Egger & Co Product")
+                            .fontDesign(.default)
+                        Text("Be reminded of upcoming Movies & TV Shows.")
                             .font(.callout)
                             .foregroundColor(.secondary)
-                            .fontDesign(.rounded)
+                            .fontDesign(.default)
                             .padding(.trailing)
                     }
                     .padding(.leading, 6)
@@ -38,16 +37,18 @@ struct WelcomeView: View {
             }
             .padding([.top, .bottom])
             ScrollView {
-                informationContainerView
+                InformationContainerView()
             }
             .padding(.horizontal)
             Spacer()
             HStack {
                 Spacer()
-                Button("Continue") {
+                Button {
                     withAnimation {
                         displayOnboard.toggle()
                     }
+                } label: {
+                    Text("Continue")
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(Color.blue.gradient)
@@ -57,7 +58,7 @@ struct WelcomeView: View {
                 .padding([.leading, .vertical])
                 Button {
 #if os(macOS)
-                    NSWorkspace.shared.open(URL(string: "https://www.oncronica.com/privacy")!)
+                    NSWorkspace.shared.open(URL(string: "https://streamingnowapp.com/privacy")!)
 #else
                     showPolicy.toggle()
 #endif
@@ -78,39 +79,44 @@ struct WelcomeView: View {
             }
             .padding()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(onboardingBackground.ignoresSafeArea())
         .interactiveDismissDisabled(true)
 #if os(iOS)
+        .presentationBackground(onboardingBackground)
         .fullScreenCover(isPresented: $showPolicy) {
-            SFSafariViewWrapper(url: URL(string: "https://www.oncronica.com/privacy")!)
+            SFSafariViewWrapper(url: URL(string: "https://streamingnowapp.com/privacy")!)
         }
 #endif
     }
-    
-    private var informationContainerView: some View {
+}
+
+private struct InformationContainerView: View {
+    var body: some View {
         VStack(alignment: .leading) {
             informationItem(
-                title: NSLocalizedString("Your Watchlist", comment: ""),
-                subtitle: NSLocalizedString("Add everything you want, the Watchlist automatically organizes it for you.", comment: ""),
+                title: "Your Watchlist",
+                subtitle: "Add everything you want, the Watchlist automatically organizes it for you.",
                 imageName: "rectangle.stack.fill",
                 imageTint: .purple
             )
             
             informationItem(
-                title: NSLocalizedString("Always Synced", comment: ""),
-                subtitle: NSLocalizedString("Your Watchlist is always in sync with your Apple Watch, iPad, Mac, and Apple TV.", comment: ""),
+                title: "Always Synced",
+                subtitle: "Your Watchlist is always in sync with your Apple Watch, iPad, Mac, and Apple TV.",
                 imageName: "icloud.fill"
             )
             
             informationItem(
-                title: NSLocalizedString("Track your episodes", comment: ""),
-                subtitle: NSLocalizedString("Keep track of every episode you've watched.", comment: ""),
+                title: "Track your episodes",
+                subtitle: "Keep track of every episode you've watched.",
                 imageName: "rectangle.fill.badge.checkmark",
                 imageTint: .green
             )
             
             informationItem(
-                title: NSLocalizedString("Never miss out", comment: ""),
-                subtitle: NSLocalizedString("Get notifications about the newest releases.", comment: ""),
+                title: "Never miss out",
+                subtitle: "Get notifications about the newest releases.",
                 imageName: "bell.fill",
                 imageTint: .orange
             )
@@ -137,12 +143,12 @@ struct WelcomeView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
                     .accessibility(addTraits: .isHeader)
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                 
                 Text(NSLocalizedString(subtitle, comment: ""))
                     .font(.callout)
                     .foregroundColor(.secondary)
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.leading, 6)
@@ -155,4 +161,3 @@ struct WelcomeView: View {
 #Preview {
     WelcomeView()
 }
-#endif

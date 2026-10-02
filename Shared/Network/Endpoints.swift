@@ -1,10 +1,3 @@
-//
-//  Endpoints.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 28/01/22.
-//
-
 import Foundation
 
 /// Endpoints represents a default list that can be fetched from TMDb.
@@ -20,14 +13,14 @@ enum Endpoints: String, CaseIterable, Identifiable {
     }
     var title: String {
         switch self {
-        case .upcoming: return NSLocalizedString("Up Coming", comment: "")
-        case .nowPlaying: return NSLocalizedString("Latest Movies", comment: "")
+        case .upcoming: return "Up Coming"
+        case .nowPlaying: return "Latest Movies"
         }
     }
     var subtitle: String {
         switch self {
-        case .upcoming: return NSLocalizedString("Coming Soon To Theaters", comment: "")
-        case .nowPlaying: return NSLocalizedString("Recently Released", comment: "")
+        case .upcoming: return "Coming Soon To Theaters"
+        case .nowPlaying: return "Recently Released"
         }
     }
     var type: MediaType {

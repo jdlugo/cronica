@@ -1,15 +1,8 @@
-//
-//  UpNextMenuBar.swift
-//  Story (iOS)
-//
-//  Created by Alexandre Madeira on 22/11/23.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct UpNextMenuBar: View {
-    @StateObject private var viewModel: UpNextViewModel = .shared
+    @State private var viewModel: UpNextViewModel = .shared
     @FetchRequest(
         entity: WatchlistItem.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \WatchlistItem.title, ascending: true)],
@@ -22,25 +15,23 @@ struct UpNextMenuBar: View {
             Section {
                 List {
                     ForEach(viewModel.episodes) { item in
-                        Button {
-                            Task { await viewModel.markAsWatched(item) }
-                        } label: {
-                            upNextRowItem(item)
-                        }
-                        .buttonStyle(.plain)
-                        .padding(.top, item == viewModel.episodes.first ? 8 : 0)
-                        .padding(.top, item == viewModel.episodes.last ? 8 : 0)
+                        upNextRowItem(item)
+                            .onTapGesture {
+                                Task { await viewModel.markAsWatched(item) }
+                            }
+                            .padding(.top, item == viewModel.episodes.first ? 8 : 0)
+                            .padding(.top, item == viewModel.episodes.last ? 8 : 0)
                     }
                 }
                 .overlay {
                     if !viewModel.isLoaded {
-                        CronicaLoadingPopupView()
+                        ProgressView("Loading")
                     }
                 }
                 .redacted(reason: viewModel.isLoaded ? [] : .placeholder)
             } header: {
                 HStack {
-                    Text("Up Next")
+                    Text("upNext")
                         .font(.callout)
                         .fontWeight(.semibold)
                     Spacer()
@@ -63,23 +54,20 @@ struct UpNextMenuBar: View {
     
     private func upNextRowItem(_ item: UpNextEpisode) -> some View {
         HStack {
-            LazyImage(url: item.episode.itemImageSmall ?? item.backupImage) { state in
-                if let image = state.image {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } else {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "sparkles.tv")
-                            .foregroundColor(.white.opacity(0.8))
-                    }
-                    .frame(width: 95, height: 50)
+            WebImage(url: item.episode.itemImageSmall ?? item.backupImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "sparkles.tv")
+                        .foregroundColor(.white.opacity(0.8))
                 }
+                .frame(width: 95, height: 50)
             }
+            .aspectRatio(contentMode: .fill)
             .transition(.opacity)
-            .frame(width: 95, height: 50)
-            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                .frame(width: 95, height: 50)
+                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             VStack(alignment: .leading) {
                 Text(item.showTitle)
                     .font(.callout)

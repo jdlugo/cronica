@@ -1,0 +1,71 @@
+name: Preview Videos CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - "codex/**"
+    paths:
+      - ".github/workflows/preview-videos-ci.yml"
+      - "scripts/record_preview_videos.py"
+      - "CronicaTests/Screenshots/MarketingScreenshotTests.swift"
+      - "CronicaTests/Screenshots/preview_video_scenarios.json"
+      - "fastlane/Fastfile"
+  workflow_dispatch:
+    inputs:
+      scenario:
+        description: "Optional scenario ID (home-discovery, watchlist-search, detail-deep-dive)"
+        required: false
+        type: string
+  schedule:
+    - cron: "30 14 * * 1-5"
+
+jobs:
+  generate-preview-videos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select latest Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Ensure ffmpeg
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            brew update
+            brew install ffmpeg
+          fi
+
+      - name: Clean previous output
+        run: rm -rf fastlane/preview_videos
+
+      - name: Generate preview videos
+        run: |
+          if [ -n "${{ github.event.inputs.scenario }}" ]; then
+            python3 scripts/record_preview_videos.py \
+              --scenario "${{ github.event.inputs.scenario }}" \
+              --output-dir fastlane/preview_videos
+          else
+            python3 scripts/record_preview_videos.py \
+              --output-dir fastlane/preview_videos
+          fi
+
+      - name: Verify outputs exist
+        run: |
+          count=$(find fastlane/preview_videos -maxdepth 1 -name '*.mp4' | wc -l | tr -d ' ')
+          if [ "${count}" = "0" ]; then
+            echo "No preview videos were generated."
+            exit 1
+          fi
+          echo "Generated ${count} preview video(s)."
+          ls -lh fastlane/preview_videos/*.mp4
+
+      - name: Upload preview videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-preview-videos
+          path: fastlane/preview_videos/*.mp4
+          if-no-files-found: error

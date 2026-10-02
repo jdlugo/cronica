@@ -1,0 +1,30 @@
+{
+  "version": "4.25.44",
+  "build": "17",
+  "sourceSHA256": {
+    "Shared/Model/MovieArcade.swift": "8dcc4d30a8a1ad0841e88d8f679084fc9fa0564bb6fb7f5d81483a345085459e",
+    "Shared/View/Navigation/MovieArcadeView.swift": "f579e57195e12c7b43b9fe7c6736eb05f2ab1c4d8882f6b1e3172664980c9918",
+    "CronicaUITests/CronicaUITests.swift": "515ffdefd350d0890e1e22beba01236f3f9f23dd6712013df35cc551b4d1154a",
+    "scripts/tests/movie_arcade_tests.swift": "6dc7a448c8112b819a82109645f2a9ebaea787da17f3c182f1ec1e5820126e5b"
+  },
+  "engineChecks": 10361,
+  "analyticsChecks": 96,
+  "localizationKeys": 173,
+  "productionAdGate": "passed",
+  "unitTests": 284,
+  "currentSourceUI": {
+    "standardAndReducedMotionIPhoneAndLargeTextIPad": 4,
+    "startup": 1,
+    "dailyMixAndSettings": 2
+  },
+  "testProductBuild": "16; production source unchanged since compilation; only release build metadata incremented to 17",
+  "initialRegression": {
+    "failed": 6,
+    "reason": "Paid-user flag and Settings tab persisted by prior UI fixtures",
+    "retainedResult": "/private/tmp/arcade-polish-release-regression-2026-10-01.xcresult",
+    "resolution": "Remove only simulator fixture paid flag and restore Home tab while shutdown; clean baseline passes all units and launch"
+  },
+  "physicalTestFlightSmoke": "not verified",
+  "archive": "pending",
+  "upload": "pending"
+}

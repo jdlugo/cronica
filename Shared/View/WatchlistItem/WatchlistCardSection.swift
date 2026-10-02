@@ -1,10 +1,3 @@
-//
-//  WatchlistCardSection.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 20/12/22.
-//
-
 import SwiftUI
 
 struct WatchlistCardSection: View {
@@ -38,7 +31,9 @@ struct WatchlistCardSection: View {
                                 .font(.footnote)
                                 .textCase(.uppercase)
                             Spacer()
-                            Text("\(items.count) items")
+                            let formatString = NSLocalizedString("items count", comment: "")
+                            let result = String(format: formatString, items.count)
+                            Text(result)
                                 .foregroundColor(.secondary)
                                 .font(.footnote)
                                 .textCase(.uppercase)
@@ -49,7 +44,13 @@ struct WatchlistCardSection: View {
                 }.padding()
             }
         } else {
-            EmptyListView()
+            CenterHorizontalView {
+                Text("emptyList")
+                    .multilineTextAlignment(.center)
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                    .padding()
+            }
         }
     }
     
@@ -71,11 +72,8 @@ private struct DrawingConstants {
 #elseif os(tvOS)
     static let columns: CGFloat = 420
     static let spacing: CGFloat = 40
-#elseif os(iOS)
+#else
     static let columns: CGFloat = UIDevice.isIPad ? 240 : 160
-    static let spacing: CGFloat = 20
-#elseif os(visionOS)
-    static let columns: CGFloat = 240
     static let spacing: CGFloat = 20
 #endif
 }

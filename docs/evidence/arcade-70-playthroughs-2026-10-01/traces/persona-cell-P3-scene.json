@@ -1,0 +1,148 @@
+{
+  "accepted_action_count" : 1,
+  "action_count" : 1,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "displayed_title" : "Toy Story",
+      "request_id" : "persona-cell-P3-scene-image-02333E6C-7314-4182-A077-C3A86B2835B9",
+      "screenshot_path" : "\/Users\/johndlugokecki\/Library\/Developer\/CoreSimulator\/Devices\/54589BE9-B7F0-4E11-890E-E437D7D446EB\/data\/Containers\/Data\/Application\/A089C2F4-191C-44EF-9DE0-FEDA33BE7662\/tmp\/arcade-persona-live\/persona-cell-P3-scene-image-02333E6C-7314-4182-A077-C3A86B2835B9.png",
+      "type" : "live_visual_judgment",
+      "vision_basis" : "Fresh screenshot shows Buzz's white-green spacesuit and Woody's cowboy hat and checked shirt. P3's familiar-title set includes Toy Story; visual identification doesn't require unknown cast or release facts."
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:3\/3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Toy Story",
+      "points" : "3\/3 points",
+      "target" : "arcade.choice.862",
+      "type" : "attempt",
+      "visible_feedback" : ""
+    },
+    {
+      "after" : "arcade.points:Up to 3 points|||",
+      "before" : "arcade.points:3\/3 points|||",
+      "resume_verified" : false,
+      "terminal_before_interruption" : true,
+      "type" : "terminate_relaunch"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:0\/3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Reveal & move on · 0 points",
+      "points" : "0\/3 points",
+      "target" : "arcade.skip",
+      "type" : "administrative_reveal",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Clayface",
+        "Close",
+        "Colony",
+        "Coyote vs. Acme",
+        "Daily Puzzle, New Today, Recognize the movie from the image., 4 movies. Four choices. Just tap., Play Puzzle",
+        "Digger",
+        "East of Eden",
+        "Explore",
+        "Games",
+        "Home",
+        "La bola negra",
+        "Latest Movies, Recently Released",
+        "Movie Arcade, A daily mix. Three great places to start.",
+        "Notifications",
+        "Other Mommy",
+        "Pan's Labyrinth",
+        "Play another",
+        "Resident Evil",
+        "Runner",
+        "Search",
+        "Settings",
+        "Street Fighter",
+        "The Fix",
+        "The Uprising",
+        "Trending, Today",
+        "Try a different game",
+        "Up Coming, Coming Soon To Theaters",
+        "Verity",
+        "Watchlist"
+      ],
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 33.777697086334229,
+  "attempt_count" : 1,
+  "declared_prior_facts" : [
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "ocean liner",
+      "title" : "Titanic",
+      "year" : "1997"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "simulation",
+      "title" : "The Matrix",
+      "year" : "1999"
+    },
+    {
+      "actors" : "Sam Neill",
+      "plot_words" : "dinosaurs",
+      "title" : "Jurassic Park",
+      "year" : "1993"
+    },
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "dreams",
+      "title" : "Inception",
+      "year" : "2010"
+    },
+    {
+      "actors" : "Tom Hanks",
+      "plot_words" : "cowboy toy, space-ranger",
+      "title" : "Toy Story",
+      "year" : "1995"
+    }
+  ],
+  "declared_prior_titles" : [
+    "Titanic",
+    "The Matrix",
+    "Jurassic Park",
+    "Inception",
+    "Toy Story"
+  ],
+  "game" : "scene",
+  "help_count" : 0,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization.",
+    "Recovery comparison covers points, selected\/matched cards and progress labels; it does not prove all clues, feedback or board state persisted.",
+    "First accepted action completed this round; interruption checked terminal-result recovery, not unfinished-round recovery."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "revealed_after_stop",
+  "payment_gate_found" : false,
+  "persona" : "P3",
+  "points_label" : "0\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n0\/3 points\nScene Spotter\nNow you know!\nA fresh round is waiting.\nToy Story (1995)\nA cowboy toy feels threatened by a new space-ranger toy.\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : false,
+  "resumed" : true,
+  "runtime_seconds" : 163.79044008255005,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "Visible progress or selected state changed across interruption",
+  "utility_action_found" : true,
+  "vision_wait_seconds" : 130.01274299621582
+}

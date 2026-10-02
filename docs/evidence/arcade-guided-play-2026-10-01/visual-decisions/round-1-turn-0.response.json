@@ -1,0 +1,1 @@
+{"taps": ["arcade.tile.0", "arcade.tile.1", "arcade.tile.2", "arcade.tile.3"], "reason": "The man is split across the outer edges. Swapping each horizontal pair should join his face/body and the car seams in the center."}

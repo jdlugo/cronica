@@ -1,6 +1,6 @@
 //
 //  EmptyListView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 21/04/23.
 //

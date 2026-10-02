@@ -1,12 +1,5 @@
-//
-//  EpisodeFrameView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/05/22.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 /// A view that displays a frame with an image, episode number, title, and two line overview,
 /// on tap it display a sheet view with more information.
@@ -23,7 +16,6 @@ struct EpisodeFrameView: View {
     @Binding var isInWatchlist: Bool
     @StateObject private var settings: SettingsStore = .shared
     let showCover: URL?
-    @State private var showConfirmation = false
 #if os(tvOS)
     @FocusState var isFocused
 #endif
@@ -55,7 +47,7 @@ struct EpisodeFrameView: View {
                                        show: show,
                                        isWatched: $isWatched)
                     if SettingsStore.shared.markEpisodeWatchedOnTap {
-                        Button("Show Details") {
+                        Button("showDetails") {
                             showDetails.toggle()
                         }
                     }
@@ -66,7 +58,7 @@ struct EpisodeFrameView: View {
                     }
                     Divider()
                     if !isWatched {
-                        Button("Mark This and Prior Episodes Watched", action: markThisAndAllPreviously)
+                        Button("markThisAndPreviously", action: markThisAndAllPreviously)
                     }
 #endif
                 }
@@ -79,8 +71,8 @@ struct EpisodeFrameView: View {
                 isWatched = persistence.isEpisodeSaved(show: show, season: season, episode: episode.id)
             }
         }
-        .onChange(of: checkedIfWatched) { _, check in
-            if check {
+        .onChange(of: checkedIfWatched) {
+            if checkedIfWatched {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     withAnimation {
                         isWatched = persistence.isEpisodeSaved(show: show, season: season, episode: episode.id)
@@ -132,87 +124,81 @@ struct EpisodeFrameView: View {
     }
     
     private var image: some View {
-        Button {
-            if settings.markEpisodeWatchedOnTap, settings.askConfirmationToMarkEpisodeWatched {
-                showConfirmation.toggle()
-            } else if settings.markEpisodeWatchedOnTap, !settings.askConfirmationToMarkEpisodeWatched {
-                markAsWatched()
-            } else {
-                showDetails.toggle()
-            }
-        } label: {
-            EpisodeFrameImageView(episode: episode, isWatched: $isWatched, showCover: showCover)
-                .transition(.opacity)
-                .frame(width: DrawingConstants.imageWidth,
-                       height: DrawingConstants.imageHeight)
-                .clipShape(
-                    RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
-                                     style: .continuous)
-                )
-                .overlay {
-                    if isWatched {
-                        ZStack {
-                            Color.black.opacity(0.4)
-                            Image(systemName: "checkmark.circle.fill")
-                                .font(.title2)
-                                .foregroundColor(.white)
-                        }
-                        .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
-                        .frame(width: DrawingConstants.imageWidth,
-                               height: DrawingConstants.imageHeight)
-                        .accessibilityHidden(true)
-                    }
+        WebImage(url: isWatched ? episode.itemImageMedium : settings.hideEpisodesThumbnails ? showCover : episode.itemImageMedium) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Rectangle().fill(.gray.gradient)
+                VStack {
+                    Spacer()
+                    Text(episode.itemTitle)
+                        .foregroundColor(.white.opacity(0.8))
+                        .font(.body)
+                        .fontDesign(.default)
+                        .lineLimit(1)
+                        .padding()
+                    Spacer()
                 }
+                .padding()
+            }
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .accessibilityHidden(true)
         }
-        .buttonStyle(.plain)
-        .applyHoverEffect()
-        .sheet(isPresented: $showDetails) {
-#if os(tvOS)
-            EpisodeDetailsView(episode: episode,
-                               season: season,
-                               show: show,
-                               showTitle: showTitle,
-                               isWatched: $isWatched)
-#else
-            NavigationStack {
-                EpisodeDetailsView(episode: episode, season: season, show: show, showTitle: showTitle, isWatched: $isWatched)
-                    .toolbar {
-#if os(macOS)
-                        ToolbarItem {
-                            Button("Close") {
-                                showDetails = false
-                            }
-                        }
-#else
-                        ToolbarItem(placement: .topBarLeading) {
-                            RoundedCloseButton {
-                                showDetails = false
-                            }
-                        }
-#endif
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .clipShape(
+                RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
+                                 style: .continuous)
+            )
+            .overlay {
+                if isWatched {
+                    ZStack {
+                        Color.black.opacity(0.4)
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.title2)
+                            .foregroundColor(.white)
                     }
+                    .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+                    .frame(width: DrawingConstants.imageWidth,
+                           height: DrawingConstants.imageHeight)
+                    .accessibilityHidden(true)
+                }
             }
-            .appTheme()
-            .presentationDetents([.large])
-            .presentationCornerRadius(12)
-            .presentationDragIndicator(.visible)
+            .applyHoverEffect()
+            .onTapGesture {
+                if SettingsStore.shared.markEpisodeWatchedOnTap {
+                    markAsWatched()
+                } else {
+                    showDetails.toggle()
+                }
+            }
+            .sheet(isPresented: $showDetails) {
+#if os(tvOS)
+                EpisodeDetailsView(episode: episode,
+                                   season: season,
+                                   show: show,
+                                   showTitle: showTitle,
+                                   isWatched: $isWatched)
+#else
+                NavigationStack {
+                    EpisodeDetailsView(episode: episode, season: season, show: show, showTitle: showTitle, isWatched: $isWatched)
+                        .toolbar {
+                            ToolbarItem {
+                                Button("Done") { showDetails = false }
+                            }
+                        }
+                }
+                .appTheme()
+                .presentationDetents([.large])
 #if os(macOS)
-            .frame(minWidth: 800, idealWidth: 800, minHeight: 600, idealHeight: 600, alignment: .center)
+                .frame(minWidth: 800, idealWidth: 800, minHeight: 600, idealHeight: 600, alignment: .center)
 #endif
 #endif
-        }
-        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-        .confirmationDialog("Confirm Watched Episode",
-                            isPresented: $showConfirmation, titleVisibility: .visible) {
-            Button("Confirm") {
-                markAsWatched()
             }
-            Button("Cancel", role: .cancel) {
-                showConfirmation = false
-            }
-        } message: {
-            Text("Mark Episode \(episode.itemEpisodeNumber) from season \(episode.itemSeasonNumber) of \(showTitle) as Watched?")
-        }
+            .shadow(color: Color.black.opacity(0.2), radius: 2, x: 0, y: 4)
     }
     
     private func markAsWatched() {
@@ -269,40 +255,6 @@ struct EpisodeFrameView: View {
     }
 }
 
-private struct EpisodeFrameImageView: View {
-    let episode: Episode
-    @Binding var isWatched: Bool
-    let showCover: URL?
-    @StateObject private var settings: SettingsStore = .shared
-    var body: some View {
-        LazyImage(url: isWatched ? episode.itemImageMedium : settings.hideEpisodesThumbnails ? showCover : episode.itemImageMedium) { state in
-            if let image = state.image {
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } else {
-                ZStack {
-                    Rectangle().fill(.gray.gradient)
-                    VStack {
-                        Spacer()
-                        Text(episode.itemTitle)
-                            .foregroundColor(.white.opacity(0.8))
-                            .font(.body)
-                            .fontDesign(.rounded)
-                            .lineLimit(1)
-                            .padding()
-                        Spacer()
-                    }
-                    .padding()
-                }
-                .frame(width: DrawingConstants.imageWidth,
-                       height: DrawingConstants.imageHeight)
-                .accessibilityHidden(true)
-            }
-        }
-    }
-}
-
 private struct DrawingConstants {
 #if os(tvOS)
     static let imageWidth: CGFloat = 360
@@ -311,6 +263,6 @@ private struct DrawingConstants {
     static let imageWidth: CGFloat = 200
     static let imageHeight: CGFloat = 120
 #endif
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let titleLineLimit: Int = 1
 }

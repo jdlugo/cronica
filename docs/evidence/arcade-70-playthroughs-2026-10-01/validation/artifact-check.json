@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "complete": true,
+  "partial": false,
+  "expected_cells": 70,
+  "recorded_cells": 70,
+  "unique_cells": 70,
+  "missing_cells": 0,
+  "raw_traces_checked": 70,
+  "raw_trace_original_checksums_verified": 70,
+  "screenshot_links_checked": 215,
+  "preview_links_checked": 362,
+  "gameplay_tap_counts_verified": 70,
+  "result_scans_unverified": 37,
+  "terminal_relaunch_metadata_checked": 2,
+  "live_visual_judgment_captures_verified": 21,
+  "outcomes": {
+    "earned": 27,
+    "earned_with_help": 13,
+    "revealed_after_stop": 30
+  },
+  "evidence_type": "assigned simulator persona traces; not human fun, voluntary replay, retention or purchase evidence",
+  "errors": [],
+  "warnings": []
+}

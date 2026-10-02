@@ -1,10 +1,3 @@
-//
-//  CenterVerticalView.swift
-//  CronicaMac
-//
-//  Created by Alexandre Madeira on 30/11/22.
-//
-
 import SwiftUI
 
 struct CenterVerticalView<Content: View>: View {

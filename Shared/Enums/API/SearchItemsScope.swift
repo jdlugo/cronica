@@ -1,10 +1,3 @@
-//
-//  SearchItemsScope.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 16/08/22.
-//
-
 import SwiftUI
 
 enum SearchItemsScope: String, Identifiable, Hashable, CaseIterable {
@@ -14,7 +7,7 @@ enum SearchItemsScope: String, Identifiable, Hashable, CaseIterable {
         switch self {
         case .noScope: return "All"
         case .movies: return "Movies"
-        case .shows: return "Series"
+        case .shows: return "Shows"
         case .people: return "People"
         }
     }

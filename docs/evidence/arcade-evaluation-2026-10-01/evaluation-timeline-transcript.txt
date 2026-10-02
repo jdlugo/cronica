@@ -1,0 +1,12 @@
+timeline, round=1, deliberate_taps=5, automation_seconds=22, visible=Movie Arcade | Home | FREE PLAY | 2/3 points | Before or After? | Nicely played. | 2 of 3 points earned | 1985 · Back to the Future
+1993 · Jurassic Park
+1995 · Toy Story
+2019 · Avengers: Endgame | This product uses the TMDb API but is not endorsed or certified by TMDb. | Daily Puzzle | New Today | Recognize the movie from the image. | 4 movies. Four choices. Just tap. | Play Puzzle | Movie Arcade | Nine ways to play. Find your favorite. | Trending | Today | Up Coming | Coming Soon To Theaters | Latest Movies | Recently Released | This product uses the TMDb API but is not endorsed or certified by TMDb.
+timeline, round=2, deliberate_taps=5, automation_seconds=21, visible=Movie Arcade | Home | FREE PLAY | 1/3 points | Before or After? | Nicely played. | 1 of 3 points earned | 1999 · The Matrix
+2009 · Avatar
+2014 · John Wick
+2019 · Avengers: Endgame | This product uses the TMDb API but is not endorsed or certified by TMDb. | Daily Puzzle | New Today | Recognize the movie from the image. | 4 movies. Four choices. Just tap. | Play Puzzle | Movie Arcade | Nine ways to play. Find your favorite. | Trending | Today | Up Coming | Coming Soon To Theaters | Latest Movies | Recently Released | This product uses the TMDb API but is not endorsed or certified by TMDb.
+timeline, round=3, deliberate_taps=5, automation_seconds=21, visible=Movie Arcade | Home | FREE PLAY | 1/3 points | Before or After? | Nicely played. | 1 of 3 points earned | 1995 · Toy Story
+2010 · Inception
+2019 · Avengers: Endgame
+2023 · Barbie | This product uses the TMDb API but is not endorsed or certified by TMDb. | Daily Puzzle | New Today | Recognize the movie from the image. | 4 movies. Four choices. Just tap. | Play Puzzle | Movie Arcade | Nine ways to play. Find your favorite. | Trending | Today | Up Coming | Coming Soon To Theaters | Latest Movies | Recently Released | This product uses the TMDb API but is not endorsed or certified by TMDb.

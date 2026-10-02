@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-01",
+  "base_commit": "2ec730a7",
+  "branch": "codex/arcade-growth-delivery",
+  "simulator": {
+    "device": "iPhone 17 Pro",
+    "runtime": "iOS 26.3",
+    "id": "54589BE9-B7F0-4E11-890E-E437D7D446EB"
+  },
+  "combined_build": "passed",
+  "model": {
+    "command": "bash scripts/test_movie_arcade.sh",
+    "checks": 9759,
+    "seed_count": 40,
+    "modes": 10,
+    "status": "passed"
+  },
+  "analytics": {
+    "command": "bash scripts/test_arcade_analytics.sh",
+    "checks": 87,
+    "status": "passed"
+  },
+  "purchase_contract": {
+    "command": "python3 scripts/check_arcade_purchase_contract.py --self-test",
+    "locales": 15,
+    "invalid_mutations_rejected": 5,
+    "status": "passed",
+    "live_transaction_verified": false
+  },
+  "ui_runs": [
+    {
+      "selected": "all 18 arcade UI checks",
+      "passed": 17,
+      "failed": 1,
+      "result_bundle": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/result-bundles/test_sim_2026-10-01T12-14-45-481Z_pid91666_6ffdaad5.xcresult",
+      "build_log": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/logs/test_sim_2026-10-01T12-14-45-480Z_pid91666_51deb38e.log",
+      "failure": "Test navigation searched virtualized featured cards after lower library cards."
+    },
+    {
+      "selected": "testArcadeCuratedEntryKeepsFullLibrary",
+      "passed": 0,
+      "failed": 1,
+      "result_bundle": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/result-bundles/test_sim_2026-10-01T12-28-44-835Z_pid91666_a9ca9342.xcresult",
+      "failure": "Test verified all library cards but fixed scroll count could not return to Scramble."
+    },
+    {
+      "selected": "testArcadeCuratedEntryKeepsFullLibrary",
+      "passed": 1,
+      "failed": 0,
+      "result_bundle": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/result-bundles/test_sim_2026-10-01T12-31-30-728Z_pid91666_c62d94a1.xcresult",
+      "build_log": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/logs/test_sim_2026-10-01T12-31-30-728Z_pid91666_6aa52283.log",
+      "duration_seconds": 38.2
+    }
+  ],
+  "ui_distinct_checks_with_passing_evidence": 18,
+  "ui_claim_limit": "Passing evidence is across runs; no second clean full-suite run.",
+  "screenshots": [
+    "curated-lobby.png",
+    "expanded-library.png",
+    "memory-optional-bonus.png",
+    "memory-matching-win.png",
+    "memory-bonus-safe.png",
+    "daily-summary.png"
+  ],
+  "external_gates": [
+    "Live purchase/restore/ad suppression",
+    "AdMob earnings access",
+    "Release-device telemetry ingestion",
+    "Human first-time study"
+  ],
+  "growth_lift_measured": false,
+  "app_store_submission_performed": false
+}

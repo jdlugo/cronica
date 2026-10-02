@@ -1,12 +1,12 @@
 //
 //  EpisodeView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 27/09/22.
 //
 
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct EpisodeRow: View {
     let episode: Episode
@@ -16,20 +16,17 @@ struct EpisodeRow: View {
     @State private var isWatched: Bool = false
     var body: some View {
         HStack {
-            LazyImage(url: episode.itemImageMedium) { state in
-                if let image = state.image {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } else {
-                    ZStack {
-                        Rectangle().fill(.secondary)
-                        Image(systemName: "tv")
-                    }
-                    .frame(width: DrawingConstants.imageWidth,
-                           height: DrawingConstants.imageHeight)
+            WebImage(url: episode.itemImageMedium) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.secondary)
+                    Image(systemName: "tv")
                 }
+                .frame(width: DrawingConstants.imageWidth,
+                       height: DrawingConstants.imageHeight)
             }
+            .aspectRatio(contentMode: .fill)
             .transition(.opacity)
             .frame(width: DrawingConstants.imageWidth,
                    height: DrawingConstants.imageHeight)
@@ -38,21 +35,21 @@ struct EpisodeRow: View {
                                  style: .continuous)
             )
             .overlay {
-                if isWatched {
-                    ZStack {
-                        Color.black.opacity(0.6)
-                        Image(systemName: "checkmark.circle")
-                            .foregroundColor(.white)
+                    if isWatched {
+                        ZStack {
+                            Color.black.opacity(0.6)
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(.white)
+                        }
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
+                                             style: .continuous)
+                        )
+                        .frame(width: DrawingConstants.imageWidth,
+                               height: DrawingConstants.imageHeight)
                     }
-                    .clipShape(
-                        RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
-                                         style: .continuous)
-                    )
-                    .frame(width: DrawingConstants.imageWidth,
-                           height: DrawingConstants.imageHeight)
                 }
-            }
-            .padding(.trailing)
+                .padding(.trailing)
             VStack(alignment: .leading) {
                 Text(episode.itemTitle)
                     .lineLimit(DrawingConstants.lineLimit)
@@ -73,7 +70,7 @@ struct EpisodeRow: View {
 }
 
 private struct DrawingConstants {
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let imageWidth: CGFloat = 70
     static let imageHeight: CGFloat = 45
     static let lineLimit: Int = 1

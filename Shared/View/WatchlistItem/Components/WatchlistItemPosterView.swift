@@ -1,12 +1,5 @@
-//
-//  WatchlistItemPosterView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 20/12/22.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct WatchlistItemPosterView: View {
     let content: WatchlistItem
@@ -44,54 +37,87 @@ struct WatchlistItemPosterView: View {
 #endif
         .accessibilityLabel(Text(content.itemTitle))
         .sheet(isPresented: $showNote) {
-            ReviewView(id: content.itemContentID, showView: $showNote)
+            NavigationStack {
+                ReviewView(id: content.itemContentID, showView: $showNote)
+            }
+            .presentationDetents([.large])
+#if os(macOS)
+            .frame(width: 400, height: 400, alignment: .center)
+#elseif os(iOS)
+            .appTheme()
+            .appTint()
+#endif
         }
         .sheet(isPresented: $showCustomListView) {
-            ItemContentCustomListSelector(contentID: content.itemContentID,
-                                          showView: $showCustomListView,
-                                          title: content.itemTitle,
-                                          image: content.itemPosterImageMedium)
+            NavigationStack {
+                ItemContentCustomListSelector(contentID: content.itemContentID,
+                                              showView: $showCustomListView,
+                                              title: content.itemTitle,
+                                              image: content.backCompatibleCardImage)
+            }
+            .presentationDetents([.large])
+#if os(macOS)
+            .frame(width: 500, height: 600, alignment: .center)
+#else
+            .appTheme()
+            .appTint()
+#endif
         }
     }
     
     private var image: some View {
-        WatchlistPosterImageView(item: content)
+        WebImage(url: content.backCompatiblePosterImage) { image in
+            image.resizable()
+        } placeholder: {
+            PosterPlaceholder(title: content.itemTitle, type: content.itemMedia)
+        }
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
             .overlay {
                 if isInWatchlist {
                     VStack {
                         Spacer()
                         HStack {
                             Spacer()
+#if !os(tvOS)
+                            if !settings.isCompactUI {
+                                if isArchive {
+                                    Image(systemName: "archivebox.fill")
+                                        .imageScale(.small)
+                                        .foregroundColor(.white.opacity(0.9))
+                                        .padding([.vertical])
+                                        .padding(.trailing, 4)
+                                }
+                                if isPin {
+                                    Image(systemName: "pin.fill")
+                                        .imageScale(.small)
+                                        .foregroundColor(.white.opacity(0.9))
+                                        .padding([.vertical])
+                                        .padding(.trailing, 4)
+                                }
+                            }
                             if isFavorite {
                                 Image(systemName: "suit.heart.fill")
                                     .imageScale(.small)
                                     .foregroundColor(.white.opacity(0.9))
                                     .padding([.vertical])
-                                    .padding(.horizontal)
-#if os(tvOS)
-                                    .font(.caption)
-#endif
+                                    .padding(.trailing, 4)
                             }
-                            if !isFavorite, isWatched {
+                            if isWatched {
                                 Image(systemName: "rectangle.badge.checkmark.fill")
                                     .imageScale(.small)
                                     .foregroundColor(.white.opacity(0.9))
                                     .padding([.vertical])
-                                    .padding(.horizontal)
-#if os(tvOS)
-                                    .font(.caption)
-#endif
+                                    .padding(.trailing, 4)
                             }
-                            if !isFavorite, !isWatched {
-                                Image(systemName: "square.stack.fill")
-                                    .imageScale(.small)
-                                    .foregroundColor(.white.opacity(0.9))
-                                    .padding([.vertical, .trailing])
-#if os(tvOS)
-                                    .font(.caption)
 #endif
-                            }
-                            
+                            Image(systemName: "square.stack.fill")
+                                .imageScale(.small)
+                                .foregroundColor(.white.opacity(0.9))
+                                .padding([.vertical, .trailing])
+#if os(tvOS)
+                                .font(.caption)
+#endif
                         }
                         .background {
                             if content.mediumPosterImage != nil {
@@ -116,7 +142,7 @@ struct WatchlistItemPosterView: View {
                    height: settings.isCompactUI ? DrawingConstants.compactPosterHeight : DrawingConstants.posterHeight)
             .clipShape(RoundedRectangle(cornerRadius: settings.isCompactUI ? DrawingConstants.compactPosterRadius : DrawingConstants.posterRadius,
                                         style: .continuous))
-            .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+            .shadow(radius: DrawingConstants.shadowRadius)
             .padding(.zero)
             .applyHoverEffect()
 #if !os(tvOS)
@@ -159,22 +185,6 @@ struct WatchlistItemPosterView: View {
     WatchlistItemPosterView(content: .example, showPopup: .constant(false), popupType: .constant(nil))
 }
 
-private struct WatchlistPosterImageView: View {
-    let item: WatchlistItem
-    var body: some View {
-        LazyImage(url: item.backCompatiblePosterImage) { state in
-            if let image = state.image {
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .transition(.opacity)
-            } else {
-                PosterPlaceholder(title: item.itemTitle, type: item.itemMedia)
-            }
-        }
-    }
-}
-
 private struct DrawingConstants {
 #if !os(tvOS)
     static let posterWidth: CGFloat = 160
@@ -186,6 +196,6 @@ private struct DrawingConstants {
     static let compactPosterWidth: CGFloat = 80
     static let compactPosterHeight: CGFloat = 140
     static let compactPosterRadius: CGFloat = 6
-    static let posterRadius: CGFloat = 12
+    static let posterRadius: CGFloat = 8
     static let shadowRadius: CGFloat = 2.5
 }

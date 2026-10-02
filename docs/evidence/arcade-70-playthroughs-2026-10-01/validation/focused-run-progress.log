@@ -1,0 +1,21 @@
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testClueRecovery]' started.
+PERSONA_CELL_START P1 detective
+PERSONA_CELL_COMPLETE P1 detective earned_with_help
+PERSONA_CELL_START P2 detective
+PERSONA_CELL_COMPLETE P2 detective earned_with_help
+PERSONA_CELL_START P3 detective
+PERSONA_CELL_COMPLETE P3 detective earned_with_help
+PERSONA_CELL_START P4 detective
+PERSONA_CELL_COMPLETE P4 detective earned_with_help
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testClueRecovery]' passed (166.622 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5EvidenceRecovery]' started.
+PERSONA_CELL_START P5 heist
+PERSONA_CELL_COMPLETE P5 heist earned
+PERSONA_CELL_START P5 directorsCut
+PERSONA_CELL_COMPLETE P5 directorsCut earned
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5EvidenceRecovery]' passed (242.058 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6EvidenceRecovery]' started.
+PERSONA_CELL_START P6 heist
+PERSONA_CELL_COMPLETE P6 heist revealed_after_stop Displayed film/cast outside declared actor knowledge
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6EvidenceRecovery]' passed (79.951 seconds).
+** TEST SUCCEEDED **

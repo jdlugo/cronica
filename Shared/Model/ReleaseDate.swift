@@ -1,10 +1,3 @@
-//
-//  ReleaseDate.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 26/08/22.
-//
-
 import Foundation
 
 struct ReleaseDates: Codable, Hashable {

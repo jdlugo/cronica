@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#170509">
+    <meta name="description" content="Decode, connect, and arrange today's movie in three quick acts.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Daily Reel">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Daily Reel | Streaming Now">
+    <meta property="og:description" content="Decode, connect, and arrange today's movie in three quick acts.">
+    <meta property="og:url" content="https://streaming-now-daily-reel.web.app/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Daily Reel | Streaming Now">
+    <meta name="twitter:description" content="Decode, connect, and arrange today's movie in three quick acts.">
+    <link rel="canonical" href="https://streaming-now-daily-reel.web.app/">
+    <link rel="manifest" href="/public/manifest.webmanifest?v=4">
+    <link rel="icon" href="/public/icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="/styles.css?v=21">
+    <title>Daily Reel | Streaming Now</title>
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <div class="shell">
+        <header class="masthead">
+          <div><p class="brand-kicker">Daily</p><h1 class="brand">REEL</h1></div>
+          <div class="masthead-meta"></div>
+        </header>
+        <div class="loader" role="status">
+          <div>
+            <div class="reel-icon" aria-hidden="true">&#127902;&#65039;</div>
+            <p class="eyebrow">Threading today's reel</p>
+            <p class="loader-copy">Checking the projector and saving your seat...</p>
+            <div class="loader-track" aria-hidden="true"><span></span></div>
+            <p class="loader-acts">Decode &middot; Connect &middot; Arrange</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <noscript>Daily Reel needs JavaScript to keep your run in sync.</noscript>
+    <script>
+      const pageParams = new URLSearchParams(window.location.search);
+      const previewRequested = pageParams.get("preview") === "1";
+      const localPreview = ["localhost", "127.0.0.1"].includes(window.location.hostname) && previewRequested;
+      const recoveryPreview = previewRequested && pageParams.get("recovery") === "app-check";
+      window.__DAILY_REEL_CONFIG__ = window.__DAILY_REEL_CONFIG__ || {
+        mode: localPreview || recoveryPreview ? "preview" : "live",
+        publicLaunch: true,
+        apiBaseUrl: "https://us-central1-admob-app-id-9658087638.cloudfunctions.net/dailyReelAPI/",
+        recaptchaEnterpriseSiteKey: "6LffkZ4tAAAAAFwa5suL0gJV9eTmBSY-pDM8Q9qP",
+        locale: navigator.language || "en",
+        posthogProjectToken: "phc_BLdyicSixZuappyemExRRxzABikUHqvhyskpTjDYZGkX",
+        posthogHost: "https://us.i.posthog.com",
+        appStoreURL: "https://apps.apple.com/app/id455556959"
+      };
+    </script>
+    <script type="module" src="/src/app.js?v=25"></script>
+    <script type="module" src="/src/register-service-worker.js?v=2"></script>
+  </body>
+</html>

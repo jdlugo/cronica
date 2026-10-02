@@ -1,0 +1,226 @@
+{
+  "accepted_action_count" : 5,
+  "action_count" : 5,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "After 1995",
+      "points" : "Up to 3 points",
+      "target" : "arcade.after",
+      "type" : "attempt",
+      "visible_feedback" : "Avengers: Endgame came out in 2019, after Toy Story (1995)."
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|||",
+      "before_feedback" : "Avengers: Endgame came out in 2019, after Toy Story (1995).",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Next movie",
+      "points" : "Up to 3 points",
+      "target" : "arcade.timeline.next",
+      "type" : "progress",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Before 1995",
+      "points" : "Up to 3 points",
+      "target" : "arcade.before",
+      "type" : "attempt",
+      "visible_feedback" : "Jurassic Park came out in 1993, before Toy Story (1995)."
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|||",
+      "before_feedback" : "Jurassic Park came out in 1993, before Toy Story (1995).",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Next movie",
+      "points" : "Up to 3 points",
+      "target" : "arcade.timeline.next",
+      "type" : "progress",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:3\/3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Before 1995",
+      "points" : "3\/3 points",
+      "target" : "arcade.before",
+      "type" : "attempt",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Clayface",
+        "Close",
+        "Colony",
+        "Coyote vs. Acme",
+        "Daily Puzzle, New Today, Recognize the movie from the image., 4 movies. Four choices. Just tap., Play Puzzle",
+        "Digger",
+        "East of Eden",
+        "Explore",
+        "Games",
+        "Home",
+        "La bola negra",
+        "Latest Movies, Recently Released",
+        "Movie Arcade, A daily mix. Three great places to start.",
+        "Notifications",
+        "Other Mommy",
+        "Pan's Labyrinth",
+        "Play another",
+        "Resident Evil",
+        "Runner",
+        "Search",
+        "Settings",
+        "Street Fighter",
+        "The Fix",
+        "The Uprising",
+        "Trending, Today",
+        "Try a different game",
+        "Up Coming, Coming Soon To Theaters",
+        "Verity",
+        "Watchlist"
+      ],
+      "type" : "result_inspection"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:3\/3 points|||",
+      "displayed_label" : "Play another",
+      "points" : "Up to 3 points",
+      "target" : "arcade.playAgain",
+      "type" : "scripted_replay",
+      "visible_feedback" : ""
+    }
+  ],
+  "active_automation_seconds" : 45.1389240026474,
+  "attempt_count" : 3,
+  "declared_prior_facts" : [
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "ocean liner",
+      "title" : "Titanic",
+      "year" : "1997"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "simulation",
+      "title" : "The Matrix",
+      "year" : "1999"
+    },
+    {
+      "actors" : "Sam Neill, Samuel L. Jackson",
+      "plot_words" : "dinosaurs",
+      "title" : "Jurassic Park",
+      "year" : "1993"
+    },
+    {
+      "actors" : "Leonardo DiCaprio, Michael Caine",
+      "plot_words" : "dreams",
+      "title" : "Inception",
+      "year" : "2010"
+    },
+    {
+      "actors" : "Margot Robbie, Ryan Gosling",
+      "plot_words" : "pink world",
+      "title" : "Barbie",
+      "year" : "2023"
+    },
+    {
+      "actors" : "Robert Downey Jr., Samuel L. Jackson, Zoe Saldaña",
+      "plot_words" : "universe-changing",
+      "title" : "Avengers: Endgame",
+      "year" : "2019"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "retired assassin",
+      "title" : "John Wick",
+      "year" : "2014"
+    },
+    {
+      "actors" : "Ryan Gosling",
+      "plot_words" : "jazz musician",
+      "title" : "La La Land",
+      "year" : "2016"
+    },
+    {
+      "actors" : "Sam Worthington, Zoe Saldaña",
+      "plot_words" : "alien moon",
+      "title" : "Avatar",
+      "year" : "2009"
+    },
+    {
+      "actors" : "Matthew McConaughey, Michael Caine",
+      "plot_words" : "wormhole",
+      "title" : "Interstellar",
+      "year" : "2014"
+    },
+    {
+      "actors" : "Tom Hanks",
+      "plot_words" : "cowboy toy, space-ranger",
+      "title" : "Toy Story",
+      "year" : "1995"
+    },
+    {
+      "actors" : "Michael J. Fox",
+      "plot_words" : "modified car",
+      "title" : "Back to the Future",
+      "year" : "1985"
+    }
+  ],
+  "declared_prior_titles" : [
+    "Titanic",
+    "The Matrix",
+    "Jurassic Park",
+    "Inception",
+    "Barbie",
+    "Avengers: Endgame",
+    "John Wick",
+    "La La Land",
+    "Avatar",
+    "Interstellar",
+    "Toy Story",
+    "Back to the Future"
+  ],
+  "game" : "timeline",
+  "help_count" : 0,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization.",
+    "Second round was started by assigned policy, not voluntary replay; not completed."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "earned",
+  "payment_gate_found" : false,
+  "persona" : "P2",
+  "points_label" : "3\/3 points",
+  "replay_started" : true,
+  "result_controls_inspected" : true,
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n3\/3 points\nBefore or After?\nThat’s movie magic.\n3 of 3 points earned\n1985 · Back to the Future\n1993 · Jurassic Park\n1995 · Toy Story\n2019 · Avengers: Endgame\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 45.138923048973083,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "",
+  "utility_action_found" : true,
+  "vision_wait_seconds" : 0
+}

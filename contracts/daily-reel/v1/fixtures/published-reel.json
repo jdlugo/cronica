@@ -1,0 +1,259 @@
+{
+  "contractVersion": "daily-reel.v1",
+  "publicationId": "fixture-2026-08-28",
+  "contentVersion": "fixture-2026-08-28.1",
+  "scoringVersion": "daily-reel-score.v1",
+  "publicationWindow": {
+    "availableAt": "2026-08-28T05:00:00Z",
+    "expiresAt": "2026-08-29T05:00:00Z"
+  },
+  "defaultLocale": "en",
+  "supportedLocales": ["en", "fr-FR", "es-ES", "es-MX", "pt-BR"],
+  "scoring": {
+    "maxScore": 300,
+    "perActMax": 100,
+    "maxIncorrectAttemptsPerAct": 3
+  },
+  "localized": {
+    "en": {
+      "theme": "Extraordinary journeys",
+      "shareText": "Can you beat my Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-1",
+          "role": "decode",
+          "prompt": "Decode the movie from these emojis.",
+          "emoji": ["👨‍🔬", "🕰️", "🎸"],
+          "assistOptions": [
+            { "id": "title-length", "kind": "titleLength", "label": "Show title length", "scoreImpact": 0 },
+            { "id": "standard-hint", "kind": "hint", "label": "Get a hint", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "connect-1",
+          "role": "connect",
+          "prompt": "What connects all three movies?",
+          "films": [
+            { "id": "tmdb:329", "title": "Jurassic Park", "posterPath": null },
+            { "id": "tmdb:578", "title": "Jaws", "posterPath": null },
+            { "id": "tmdb:601", "title": "E.T. the Extra-Terrestrial", "posterPath": null }
+          ],
+          "choices": [
+            { "id": "c1", "label": "Directed by Steven Spielberg" },
+            { "id": "c2", "label": "Released in the same year" },
+            { "id": "c3", "label": "Set in outer space" },
+            { "id": "c4", "label": "Based on a comic book" }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Get a hint", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "arrange-1",
+          "role": "arrange",
+          "prompt": "Put these movies in release order, earliest first.",
+          "films": [
+            { "id": "tmdb:603", "title": "The Matrix", "posterPath": null },
+            { "id": "tmdb:27205", "title": "Inception", "posterPath": null },
+            { "id": "tmdb:218", "title": "The Terminator", "posterPath": null }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Get a hint", "scoreImpact": 1 }
+          ]
+        }
+      ]
+    },
+    "fr-FR": {
+      "theme": "Voyages extraordinaires",
+      "shareText": "Peux-tu battre mon score au Daily Reel ?",
+      "acts": [
+        {
+          "id": "decode-1",
+          "role": "decode",
+          "prompt": "Décode le film grâce à ces émojis.",
+          "emoji": ["👨‍🔬", "🕰️", "🎸"],
+          "assistOptions": [
+            { "id": "title-length", "kind": "titleLength", "label": "Voir la longueur du titre", "scoreImpact": 0 },
+            { "id": "standard-hint", "kind": "hint", "label": "Obtenir un indice", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "connect-1",
+          "role": "connect",
+          "prompt": "Quel est le lien entre ces trois films ?",
+          "films": [
+            { "id": "tmdb:329", "title": "Jurassic Park", "posterPath": null },
+            { "id": "tmdb:578", "title": "Les Dents de la mer", "posterPath": null },
+            { "id": "tmdb:601", "title": "E.T. l'extra-terrestre", "posterPath": null }
+          ],
+          "choices": [
+            { "id": "c1", "label": "Réalisés par Steven Spielberg" },
+            { "id": "c2", "label": "Sortis la même année" },
+            { "id": "c3", "label": "Situés dans l'espace" },
+            { "id": "c4", "label": "Adaptés d'une bande dessinée" }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Obtenir un indice", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "arrange-1",
+          "role": "arrange",
+          "prompt": "Classe ces films par date de sortie, du plus ancien au plus récent.",
+          "films": [
+            { "id": "tmdb:603", "title": "Matrix", "posterPath": null },
+            { "id": "tmdb:27205", "title": "Inception", "posterPath": null },
+            { "id": "tmdb:218", "title": "Terminator", "posterPath": null }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Obtenir un indice", "scoreImpact": 1 }
+          ]
+        }
+      ]
+    },
+    "es-ES": {
+      "theme": "Viajes extraordinarios",
+      "shareText": "¿Puedes superar mi Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-1",
+          "role": "decode",
+          "prompt": "Descifra la película con estos emojis.",
+          "emoji": ["👨‍🔬", "🕰️", "🎸"],
+          "assistOptions": [
+            { "id": "title-length", "kind": "titleLength", "label": "Ver la longitud del título", "scoreImpact": 0 },
+            { "id": "standard-hint", "kind": "hint", "label": "Obtener una pista", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "connect-1",
+          "role": "connect",
+          "prompt": "¿Qué conecta estas tres películas?",
+          "films": [
+            { "id": "tmdb:329", "title": "Parque Jurásico", "posterPath": null },
+            { "id": "tmdb:578", "title": "Tiburón", "posterPath": null },
+            { "id": "tmdb:601", "title": "E.T., el extraterrestre", "posterPath": null }
+          ],
+          "choices": [
+            { "id": "c1", "label": "Dirigidas por Steven Spielberg" },
+            { "id": "c2", "label": "Estrenadas el mismo año" },
+            { "id": "c3", "label": "Ambientadas en el espacio" },
+            { "id": "c4", "label": "Basadas en un cómic" }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Obtener una pista", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "arrange-1",
+          "role": "arrange",
+          "prompt": "Ordena las películas por estreno, de la más antigua a la más reciente.",
+          "films": [
+            { "id": "tmdb:603", "title": "Matrix", "posterPath": null },
+            { "id": "tmdb:27205", "title": "Origen", "posterPath": null },
+            { "id": "tmdb:218", "title": "Terminator", "posterPath": null }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Obtener una pista", "scoreImpact": 1 }
+          ]
+        }
+      ]
+    },
+    "es-MX": {
+      "theme": "Viajes extraordinarios",
+      "shareText": "¿Puedes superar mi Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-1",
+          "role": "decode",
+          "prompt": "Adivina la película con estos emojis.",
+          "emoji": ["👨‍🔬", "🕰️", "🎸"],
+          "assistOptions": [
+            { "id": "title-length", "kind": "titleLength", "label": "Ver cuántas letras tiene", "scoreImpact": 0 },
+            { "id": "standard-hint", "kind": "hint", "label": "Pedir una pista", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "connect-1",
+          "role": "connect",
+          "prompt": "¿Qué tienen en común estas tres películas?",
+          "films": [
+            { "id": "tmdb:329", "title": "Jurassic Park", "posterPath": null },
+            { "id": "tmdb:578", "title": "Tiburón", "posterPath": null },
+            { "id": "tmdb:601", "title": "E.T., el extraterrestre", "posterPath": null }
+          ],
+          "choices": [
+            { "id": "c1", "label": "Dirigidas por Steven Spielberg" },
+            { "id": "c2", "label": "Estrenadas el mismo año" },
+            { "id": "c3", "label": "Ambientadas en el espacio" },
+            { "id": "c4", "label": "Basadas en un cómic" }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Pedir una pista", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "arrange-1",
+          "role": "arrange",
+          "prompt": "Ordena las películas por estreno, de la más antigua a la más reciente.",
+          "films": [
+            { "id": "tmdb:603", "title": "Matrix", "posterPath": null },
+            { "id": "tmdb:27205", "title": "El origen", "posterPath": null },
+            { "id": "tmdb:218", "title": "El exterminador", "posterPath": null }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Pedir una pista", "scoreImpact": 1 }
+          ]
+        }
+      ]
+    },
+    "pt-BR": {
+      "theme": "Jornadas extraordinárias",
+      "shareText": "Você consegue superar meu Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-1",
+          "role": "decode",
+          "prompt": "Descubra o filme com estes emojis.",
+          "emoji": ["👨‍🔬", "🕰️", "🎸"],
+          "assistOptions": [
+            { "id": "title-length", "kind": "titleLength", "label": "Ver o tamanho do título", "scoreImpact": 0 },
+            { "id": "standard-hint", "kind": "hint", "label": "Pedir uma dica", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "connect-1",
+          "role": "connect",
+          "prompt": "O que conecta estes três filmes?",
+          "films": [
+            { "id": "tmdb:329", "title": "Jurassic Park", "posterPath": null },
+            { "id": "tmdb:578", "title": "Tubarão", "posterPath": null },
+            { "id": "tmdb:601", "title": "E.T. - O Extraterrestre", "posterPath": null }
+          ],
+          "choices": [
+            { "id": "c1", "label": "Dirigidos por Steven Spielberg" },
+            { "id": "c2", "label": "Lançados no mesmo ano" },
+            { "id": "c3", "label": "Ambientados no espaço" },
+            { "id": "c4", "label": "Baseados em quadrinhos" }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Pedir uma dica", "scoreImpact": 1 }
+          ]
+        },
+        {
+          "id": "arrange-1",
+          "role": "arrange",
+          "prompt": "Ordene os filmes por lançamento, do mais antigo ao mais recente.",
+          "films": [
+            { "id": "tmdb:603", "title": "Matrix", "posterPath": null },
+            { "id": "tmdb:27205", "title": "A Origem", "posterPath": null },
+            { "id": "tmdb:218", "title": "O Exterminador do Futuro", "posterPath": null }
+          ],
+          "assistOptions": [
+            { "id": "standard-hint", "kind": "hint", "label": "Pedir uma dica", "scoreImpact": 1 }
+          ]
+        }
+      ]
+    }
+  }
+}

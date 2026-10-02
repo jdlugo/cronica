@@ -1,10 +1,3 @@
-//
-//  SearchItemContent-Extension.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/08/23.
-//
-
 import Foundation
 
 extension SearchItemContent {
@@ -29,8 +22,7 @@ extension SearchItemContent {
 	}
 	var itemTheatricalString: String? {
 		if let dates = releaseDates?.results {
-			let productionRegion = "US"
-			return DatesManager.getDetailedReleaseDateFormatted(results: dates, productionRegion: productionRegion)
+			return DatesManager.getDetailedReleaseDateFormatted(results: dates, productionRegion: nil)
 		}
 		if let date = nextEpisodeDate {
 			return "\(DatesManager.dateString.string(from: date))"
@@ -48,6 +40,16 @@ extension SearchItemContent {
 			return "\(DatesManager.dateString.string(from: itemFallbackDate))"
 		}
 		return ""
+	}
+	var itemRating: String? {
+		if let voteAverage {
+			if voteAverage <= 0.9 {
+				return nil
+			} else {
+				return NSLocalizedString("\(voteAverage.rounded())/10", comment: "")
+			}
+		}
+		return nil
 	}
 	
 	// MARK: Double
@@ -198,6 +200,13 @@ extension SearchItemContent {
 	var originalItemTitle: String? {
 		if let originalTitle { return originalTitle }
 		if let originalName { return originalName }
+		return nil
+	}
+	
+	var itemInfoTVShow: String? {
+		if let numberOfSeasons, let numberOfEpisodes {
+			return NSLocalizedString("\(numberOfSeasons) Seasons • \(numberOfEpisodes) Episodes", comment: "")
+		}
 		return nil
 	}
 	

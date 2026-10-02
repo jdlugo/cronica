@@ -1,6 +1,6 @@
 //
 //  WatchlistView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 13/08/22.
 //
@@ -31,28 +31,15 @@ struct WatchlistView: View {
                 }
             }
             .navigationTitle("Watchlist")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
             .disableAutocorrection(true)
             .toolbar {
-                ToolbarItem(placement: .bottomBar) {
+                ToolbarItem(placement: .primaryAction) {
                     HStack {
-                        Spacer()
-                        Button("Sort List", systemImage: "line.3.horizontal.decrease") {
-                            withAnimation { showPicker = true }
-                        }
-                        .controlSize(.small)
-                        .imageScale(.small)
-                        .labelStyle(.iconOnly)
-                        .buttonBorderShape(.circle)
-                        .contentShape(.circle)
-                        .buttonStyle(.borderedProminent)
-                        .foregroundStyle(.white.gradient)
-                        .tint(.blue)
-                        .frame(width: 50, height: 50)
-                        .clipShape(Circle())
-                        .padding(.horizontal)
-                        .shadow(radius: 2.5)
+                        filterButton
+                        sortButton
                     }
+                    .padding(.vertical, 4)
                 }
             }
             .navigationDestination(for: WatchlistItem.self) { item in
@@ -80,19 +67,45 @@ struct WatchlistView: View {
             .sheet(isPresented: $showPicker) {
                 WatchlistSelectorView(showView: $showPicker,
                                       selectedList: $selectedList,
-                                      selectedCustomList: $selectedCustomList,
-                                      sortOrder: $sortOrder)
+                                      selectedCustomList: $selectedCustomList)
             }
             .onAppear {
                 if selectedList == nil && selectedCustomList == nil {
                     selectedList = selectedOrder
                 }
             }
-            .onChange(of: selectedList) { _, newValue in
-                guard let newValue else { return }
-                selectedOrder = newValue
+            .onChange(of: selectedList) { newValue in
+                if let newValue {
+                    selectedOrder = newValue
+                }
             }
         }
+    }
+	
+	private var sortButton: some View {
+		Picker(selection: $sortOrder) {
+			ForEach(WatchlistSortOrder.allCases) { item in
+				Text(item.localizableName).tag(item)
+			}
+		} label: {
+			Label("Sort Order", systemImage: "arrow.up.arrow.down.circle")
+				.labelStyle(.iconOnly)
+		}
+		.pickerStyle(.navigationLink)
+		.buttonBorderShape(.roundedRectangle(radius: 16))
+		.buttonStyle(.bordered)
+	}
+    
+    private var filterButton: some View {
+        Button {
+            withAnimation { showPicker = true }
+        } label: {
+            Label("Sort List", systemImage: "line.3.horizontal.decrease")
+                .foregroundColor(.white)
+				.labelStyle(.iconOnly)
+        }
+        .buttonBorderShape(.roundedRectangle(radius: 16))
+        .buttonStyle(.bordered)
     }
     
     @ViewBuilder

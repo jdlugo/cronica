@@ -1,10 +1,3 @@
-//
-//  CompanyDetails.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 05/02/23.
-//
-
 import SwiftUI
 
 struct CompanyDetails: View {
@@ -39,9 +32,15 @@ struct CompanyDetails: View {
 #endif
         }
         .overlay {
-            if !isLoaded { CronicaLoadingPopupView() }
+            if !isLoaded { ProgressView().unredacted() }
         }
-        .scrollBounceBehavior(.basedOnSize)
+        .toolbar {
+#if os(iOS)
+            ToolbarItem(placement: .navigationBarTrailing) {
+                styleOptions 
+            }
+#endif
+        }
         .redacted(reason: isLoaded ? [] : .placeholder)
 #if !os(tvOS)
         .navigationTitle(company.name)
@@ -64,6 +63,23 @@ struct CompanyDetails: View {
         .actionPopup(isShowing: $showPopup, for: popupType)
     }
     
+#if os(iOS) || os(macOS)
+    private var styleOptions: some View {
+        Menu {
+            Picker(selection: $settings.sectionStyleType) {
+                ForEach(SectionDetailsPreferredStyle.allCases) { item in
+                    Text(item.title).tag(item)
+                }
+            } label: {
+                Label("sectionStyleTypePicker", systemImage: "circle.grid.2x2")
+            }
+        } label: {
+            Label("sectionStyleTypePicker", systemImage: "circle.grid.2x2")
+                .labelStyle(.iconOnly)
+        }
+    }
+#endif
+    
     private var listStyle: some View {
         Form {
             Section {
@@ -85,8 +101,10 @@ struct CompanyDetails: View {
                                     }
                             }
                         }
-                    } else if items.isEmpty, isLoaded {
-                        ContentUnavailableView("Try again later", systemImage: "popcorn")
+                    } else {
+                        if isLoaded {
+                            ContentUnavailableView("Try again later", systemImage: "popcorn")
+                        }
                     }
                 }
             }
@@ -118,7 +136,7 @@ struct CompanyDetails: View {
                 }
             } else {
                 if isLoaded {
-                    SimpleUnavailableView()
+                    ContentUnavailableView("Try again later", systemImage: "popcorn")
                 }
             }
         }
@@ -149,7 +167,7 @@ struct CompanyDetails: View {
                 }
             } else {
                 if isLoaded {
-                    SimpleUnavailableView()
+                    ContentUnavailableView("Try again later", systemImage: "popcorn")
                 }
             }
         }.padding(.all, settings.isCompactUI ? 10 : nil)
@@ -162,7 +180,7 @@ struct CompanyDetails: View {
 }
 
 private struct DrawingConstants {
-#if os(macOS) || os(tvOS) || os(visionOS)
+#if os(macOS) || os(tvOS)
     static let columns: [GridItem] = [GridItem(.adaptive(minimum: 240))]
 #else
     static let columns: [GridItem] = [GridItem(.adaptive(minimum: UIDevice.isIPad ? 240 : 160 ))]
@@ -207,11 +225,5 @@ private extension CompanyDetails {
             let message = "Company ID: \(id), error: \(error.localizedDescription)"
             CronicaTelemetry.shared.handleMessage(message, for: "CompanyDetails.load()")
         }
-    }
-}
-
-struct SimpleUnavailableView: View {
-    var body: some View {
-        ContentUnavailableView("Try again later", systemImage: "rectangle.on.rectangle")
     }
 }

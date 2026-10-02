@@ -1,10 +1,3 @@
-//
-//  CompaniesListView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 07/05/23.
-//
-
 import SwiftUI
 
 struct CompaniesListView: View {
@@ -12,7 +5,7 @@ struct CompaniesListView: View {
     var body: some View {
         Form {
             if companies.isEmpty {
-                CronicaLoadingPopupView()
+                CenterHorizontalView { ProgressView().padding() }
             } else {
                 Section {
                     List(companies, id: \.self) { item in
@@ -23,12 +16,11 @@ struct CompaniesListView: View {
                 }
             }
         }
-        .navigationTitle("Companies")
+        .navigationTitle("companiesTitle")
 #if os(macOS)
         .formStyle(.grouped)
 #elseif os(iOS)
         .navigationBarTitleDisplayMode(.large)
 #endif
-        .scrollBounceBehavior(.basedOnSize)
     }
 }

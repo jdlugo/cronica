@@ -1,0 +1,105 @@
+{
+  "accepted_action_count" : 2,
+  "action_count" : 2,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Assemble for me · −1 point",
+      "points" : "Up to 2 points",
+      "target" : "arcade.assemble",
+      "type" : "help",
+      "visible_feedback" : "Scene restored. Which movie is it?"
+    },
+    {
+      "displayed_title" : "Toy Story",
+      "request_id" : "persona-cell-P7-scramble-image-377B168F-D079-4399-9B95-E672C7C0D18F",
+      "screenshot_path" : "\/Users\/johndlugokecki\/Library\/Developer\/CoreSimulator\/Devices\/54589BE9-B7F0-4E11-890E-E437D7D446EB\/data\/Containers\/Data\/Application\/A91F5CED-9379-4503-87EA-1515C35E9094\/tmp\/arcade-persona-live\/persona-cell-P7-scramble-image-377B168F-D079-4399-9B95-E672C7C0D18F.png",
+      "type" : "live_visual_judgment",
+      "vision_basis" : "Fresh Taylor screenshot after assisted restoration shows Buzz Lightyear and Woody in the four-tile image. Toy Story is declared familiar. The scene is recognizable while controls and clue remain English; no independent assembly or language comprehension is inferred."
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:2\/3 points|||",
+      "before_feedback" : "Scene restored. Which movie is it?",
+      "before_signature" : "arcade.points:Up to 2 points|||",
+      "displayed_label" : "Toy Story",
+      "points" : "2\/3 points",
+      "target" : "arcade.choice.862",
+      "type" : "attempt",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Close",
+        "Games",
+        "Play another",
+        "Try a different game"
+      ],
+      "scope" : "arcade_sheet",
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 23.908225059509277,
+  "attempt_count" : 1,
+  "declared_prior_facts" : [
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "The Matrix",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Jurassic Park",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Toy Story",
+      "year" : "unknown"
+    }
+  ],
+  "declared_prior_titles" : [
+    "The Matrix",
+    "Jurassic Park",
+    "Toy Story"
+  ],
+  "game" : "scramble",
+  "harness_revision" : "lazy-control-recovery-v2",
+  "help_count" : 1,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization.",
+    "Spanish locale; weak-English policy, controller can locate untranslated controls.",
+    "Used Assemble for Me: assisted restoration, not autonomous visual reconstruction."
+  ],
+  "locale" : "es_ES",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "earned_with_help",
+  "payment_gate_found" : false,
+  "persona" : "P7",
+  "points_label" : "2\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_inspection_scope" : "arcade_sheet",
+  "result_text" : "Movie Arcade\nInicio\nFREE PLAY\n2\/3 points\nMovie Scramble\nNicely played.\n2 of 3 points earned\nToy Story (1995)\nA cowboy toy feels threatened by a new space-ranger toy.\nEste producto utiliza la API de TMDb pero no está respaldado o certificado por TMDb.\ndailyPuzzleTitle\ndailyPuzzleNewToday\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\ndailyPuzzlePlayPuzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTendencias\nHoy\nPróximamente\nMuy Pronto en Cines\nNuevas Películas\nRecién Estrenadas\nEste producto utiliza la API de TMDb pero no está respaldado o certificado por TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 125.67984807491302,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "",
+  "utility_action_found" : false,
+  "vision_wait_seconds" : 101.77162396907806
+}

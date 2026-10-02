@@ -1,10 +1,3 @@
-//
-//  TitleView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 03/04/22.
-//
-
 import SwiftUI
 
 struct TitleView: View {
@@ -15,10 +8,10 @@ struct TitleView: View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(title)
+                    Text(NSLocalizedString(title, comment: ""))
                         .padding([.top, .leading])
                         .fontWeight(.semibold)
-                        .fontDesign(.rounded)
+                        .fontDesign(.default)
 #if os(tvOS)
                         .font(.callout)
 #else
@@ -26,7 +19,7 @@ struct TitleView: View {
 #endif
                     if showChevron {
                         Image(systemName: "chevron.right")
-                            .fontDesign(.rounded)
+                            .fontDesign(.default)
                             .font(.callout)
                             .fontWeight(.regular)
                             .foregroundColor(.secondary)
@@ -36,8 +29,8 @@ struct TitleView: View {
                 }
                 if let subtitle {
                     HStack {
-                        Text(subtitle)
-                            .fontDesign(.rounded)
+                        Text(NSLocalizedString(subtitle, comment: ""))
+                            .fontDesign(.default)
                             .foregroundColor(.secondary)
                             .padding(.leading)
 #if os(tvOS)

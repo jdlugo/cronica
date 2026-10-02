@@ -1,0 +1,125 @@
+{
+  "checkedAt": 1790902218.9370298,
+  "results": [
+    {
+      "id": "e84c9af8-807f-41cb-a104-cebeaf5cdf5b",
+      "version": "4.25.44",
+      "build": "16",
+      "processingState": "VALID",
+      "uploadedDate": "2026-10-01T15:41:06-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "354d68d0-8fcb-4dc8-93b8-49d89baffd99",
+      "version": "4.25.43",
+      "build": "15",
+      "processingState": "VALID",
+      "uploadedDate": "2026-09-30T17:47:23-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "cd329f9d-d816-481f-9687-59c2092fd510",
+      "version": "4.25.42",
+      "build": "14",
+      "processingState": "VALID",
+      "uploadedDate": "2026-09-28T11:02:30-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "58102c79-4391-48c1-afde-925e6d53fe42",
+      "version": "4.25.41",
+      "build": "13",
+      "processingState": "VALID",
+      "uploadedDate": "2026-09-21T08:20:39-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "fbcfdfb5-b151-4e8b-a5f1-9cdaaf4e866e",
+      "version": "4.25.41",
+      "build": "12",
+      "processingState": "VALID",
+      "uploadedDate": "2026-09-21T07:47:46-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "76906daf-cf5c-40db-947a-d07865b742ab",
+      "version": "4.25.40",
+      "build": "11",
+      "processingState": "VALID",
+      "uploadedDate": "2026-08-28T06:04:28-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "3a01827f-b0b2-427e-9a7a-b6055612aec2",
+      "version": "4.25.40",
+      "build": "10",
+      "processingState": "VALID",
+      "uploadedDate": "2026-08-27T18:08:41-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "0183cac1-9dba-4f65-8153-896a15bb1521",
+      "version": "4.25.40",
+      "build": "9",
+      "processingState": "VALID",
+      "uploadedDate": "2026-08-27T14:02:18-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "b03f20d7-8c60-4c5e-a9b2-ffb7194a2ae0",
+      "version": "4.25.39",
+      "build": "8",
+      "processingState": "VALID",
+      "uploadedDate": "2026-08-27T04:45:18-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    },
+    {
+      "id": "6d3703c4-d8d1-4908-a5ae-9fb387a5e6ab",
+      "version": "4.25.39",
+      "build": "7",
+      "processingState": "VALID",
+      "uploadedDate": "2026-08-24T07:51:07-07:00",
+      "beta": {
+        "autoNotifyEnabled": true,
+        "internalBuildState": "IN_BETA_TESTING",
+        "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+      }
+    }
+  ]
+}

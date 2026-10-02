@@ -1,10 +1,3 @@
-//
-//  ItemContentContextMenu.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 06/06/22.
-//
-
 import SwiftUI
 
 struct ItemContentContextMenu: ViewModifier {
@@ -20,12 +13,14 @@ struct ItemContentContextMenu: ViewModifier {
 	@Binding var showCustomListView: Bool
 	@Binding var popupType: ActionPopupItems?
 	@StateObject private var settings = SettingsStore.shared
-    @State private var showRemoveConfirmation = false
 	func body(content: Content) -> some View {
 #if !os(watchOS)
 		return content
 			.contextMenu {
 #if os(iOS) || os(macOS)
+                Text(item.itemTitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
                 Divider()
 				switch settings.shareLinkPreference {
 				case .cronica: if let cronicaUrl { ShareLink(item: cronicaUrl) }
@@ -42,8 +37,11 @@ struct ItemContentContextMenu: ViewModifier {
 					Button {
 						showNote.toggle()
 					} label: {
-						Label("Review", systemImage: "note.text")
+						Label("reviewTitle", systemImage: "note.text")
 					}
+#endif
+#if DEBUG
+					printButton
 #endif
 				}
 				Divider()
@@ -56,11 +54,6 @@ struct ItemContentContextMenu: ViewModifier {
 										image: item.cardImageLarge,
 										overview: item.itemOverview)
 			}
-            .confirmationDialog("Are You Sure?", isPresented: $showRemoveConfirmation, titleVisibility: .visible) {
-                Button("Confirm", action: remove)
-            } message: {
-                Text("Remove \(item.itemTitle) from your Watchlist?")
-            }
 #if !os(tvOS)
 			.swipeActions(edge: .leading, allowsFullSwipe: settings.allowFullSwipe) {
 				if !isInWatchlist {
@@ -68,7 +61,7 @@ struct ItemContentContextMenu: ViewModifier {
 									isInWatchlist: $isInWatchlist,
 									showPopup: $showPopup,
 									showListSelector: $showCustomListView,
-                                    popupType: $popupType, showRemoveConfirmation: $showRemoveConfirmation)
+									popupType: $popupType)
 					.tint(isInWatchlist ? .red : .green)
 				} else {
 					primaryLeftSwipeActions
@@ -87,7 +80,7 @@ struct ItemContentContextMenu: ViewModifier {
 	
 	private var addAndMarkWatchedButton: some View {
 		Button(action: addAndMarkAsWatched) {
-			Label("Add & Mark Watched", systemImage: "rectangle.badge.checkmark.fill")
+			Label("addAndMarkWatchedButton", systemImage: "rectangle.badge.checkmark.fill")
 		}
 	}
 	
@@ -118,29 +111,12 @@ struct ItemContentContextMenu: ViewModifier {
 			}
 		}
 	}
-    
-    private func remove() {
-        let persistence = PersistenceController.shared
-        let notification = NotificationManager.shared
-        let watchlistItem = persistence.fetch(for: item.itemContentID)
-        if let watchlistItem {
-            if watchlistItem.notify {
-                notification.removeNotification(identifier: item.itemContentID)
-            }
-            persistence.delete(watchlistItem)
-            withAnimation {
-                showPopup.toggle()
-                isInWatchlist.toggle()
-                popupType = isInWatchlist ? .addedWatchlist : .removedWatchlist
-            }
-        }
-    }
 	
 	private var cronicaUrl: URL? {
 		let encodedTitle = item.itemTitle.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
 		let posterPath = item.posterPath ?? String()
 		let encodedPoster = posterPath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-		return URL(string: "https://www.oncronica.com/details?id=\(item.itemContentID)&img=\(encodedPoster ?? String())&title=\(encodedTitle ?? String())")
+		return URL(string: "https://streamingnowapp.com/details?id=\(item.itemContentID)&img=\(encodedPoster ?? String())&title=\(encodedTitle ?? String())")
 	}
 	
 	private var watchedButton: some View {
@@ -176,8 +152,18 @@ struct ItemContentContextMenu: ViewModifier {
 						isInWatchlist: $isInWatchlist,
 						showPopup: $showPopup,
 						showListSelector: $showCustomListView,
-                        popupType: $popupType,
-                        showRemoveConfirmation: $showRemoveConfirmation)
+						popupType: $popupType)
+	}
+	
+	@ViewBuilder
+	private var printButton: some View {
+#if DEBUG
+		Button {
+			print(item)
+		} label: {
+			Label("Print", systemImage: "hammer.fill")
+		}
+#endif
 	}
 	
 	@ViewBuilder

@@ -1,0 +1,274 @@
+{
+  "accepted_action_count" : 13,
+  "action_count" : 13,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs|||arcade.card.0:Avengers: Endgame:Selected",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs||",
+      "displayed_label" : "Face-down card 1",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.0",
+      "type" : "selection",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|arcade.pairs:0 of 3 pairs|||arcade.card.0:Avengers: Endgame:Selected|arcade.card.1:Toy Story:Selected|arcade.card.2:Face-down card 3:|arcade.card.3:Face-down card 4:|arcade.card.4:Face-down card 5:|arcade.card.5:Face-down card 6:",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs|||arcade.card.0:Avengers: Endgame:Selected",
+      "displayed_label" : "Face-down card 2",
+      "points" : "Up to 2 points",
+      "target" : "arcade.card.1",
+      "type" : "attempt",
+      "visible_feedback" : "Not a pair. Take a look, then try again."
+    },
+    {
+      "first" : "arcade.card.0",
+      "first_title" : "Avengers: Endgame",
+      "second" : "arcade.card.1",
+      "second_title" : "Toy Story",
+      "type" : "learned_visible_cards"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|arcade.pairs:0 of 3 pairs||",
+      "before_feedback" : "Not a pair. Take a look, then try again.",
+      "before_signature" : "arcade.points:Up to 2 points|arcade.pairs:0 of 3 pairs|||arcade.card.0:Avengers: Endgame:Selected|arcade.card.1:Toy Story:Selected|arcade.card.2:Face-down card 3:|arcade.card.3:Face-down card 4:|arcade.card.4:Face-down card 5:|arcade.card.5:Face-down card 6:",
+      "displayed_label" : "Turn them over & try again",
+      "points" : "Up to 2 points",
+      "target" : "arcade.retryPair",
+      "type" : "progress",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|arcade.pairs:0 of 3 pairs|||arcade.card.2:Avengers: Endgame:Selected",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 2 points|arcade.pairs:0 of 3 pairs||",
+      "displayed_label" : "Face-down card 3",
+      "points" : "Up to 2 points",
+      "target" : "arcade.card.2",
+      "type" : "selection",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.2:Avengers: Endgame:Matched",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 2 points|arcade.pairs:0 of 3 pairs|||arcade.card.2:Avengers: Endgame:Selected",
+      "displayed_label" : "Face-down card 1",
+      "points" : "Up to 2 points",
+      "target" : "arcade.card.0",
+      "type" : "attempt",
+      "visible_feedback" : "A perfect pair!"
+    },
+    {
+      "first" : "arcade.card.2",
+      "first_title" : "Avengers: Endgame",
+      "second" : "arcade.card.0",
+      "second_title" : "Avengers: Endgame",
+      "type" : "learned_visible_cards"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.3:Jurassic Park:Selected",
+      "before_feedback" : "A perfect pair!",
+      "before_signature" : "arcade.points:Up to 2 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.2:Avengers: Endgame:Matched",
+      "displayed_label" : "Face-down card 4",
+      "points" : "Up to 2 points",
+      "target" : "arcade.card.3",
+      "type" : "selection",
+      "visible_feedback" : "A perfect pair!"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 1 point|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Face-down card 2:|arcade.card.2:Avengers: Endgame:Matched|arcade.card.3:Jurassic Park:Selected|arcade.card.4:Toy Story:Selected|arcade.card.5:Face-down card 6:",
+      "before_feedback" : "A perfect pair!",
+      "before_signature" : "arcade.points:Up to 2 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.3:Jurassic Park:Selected",
+      "displayed_label" : "Face-down card 5",
+      "points" : "Up to 1 point",
+      "target" : "arcade.card.4",
+      "type" : "attempt",
+      "visible_feedback" : "Not a pair. Take a look, then try again."
+    },
+    {
+      "first" : "arcade.card.3",
+      "first_title" : "Jurassic Park",
+      "second" : "arcade.card.4",
+      "second_title" : "Toy Story",
+      "type" : "learned_visible_cards"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 1 point|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.2:Avengers: Endgame:Matched",
+      "before_feedback" : "Not a pair. Take a look, then try again.",
+      "before_signature" : "arcade.points:Up to 1 point|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Face-down card 2:|arcade.card.2:Avengers: Endgame:Matched|arcade.card.3:Jurassic Park:Selected|arcade.card.4:Toy Story:Selected|arcade.card.5:Face-down card 6:",
+      "displayed_label" : "Turn them over & try again",
+      "points" : "Up to 1 point",
+      "target" : "arcade.retryPair",
+      "type" : "progress",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 1 point|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Selected|arcade.card.2:Avengers: Endgame:Matched",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 1 point|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.2:Avengers: Endgame:Matched",
+      "displayed_label" : "Face-down card 2",
+      "points" : "Up to 1 point",
+      "target" : "arcade.card.1",
+      "type" : "selection",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 1 point|arcade.pairs:2 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.4:Toy Story:Matched",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 1 point|arcade.pairs:1 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Selected|arcade.card.2:Avengers: Endgame:Matched",
+      "displayed_label" : "Face-down card 5",
+      "points" : "Up to 1 point",
+      "target" : "arcade.card.4",
+      "type" : "attempt",
+      "visible_feedback" : "A perfect pair!"
+    },
+    {
+      "first" : "arcade.card.1",
+      "first_title" : "Toy Story",
+      "second" : "arcade.card.4",
+      "second_title" : "Toy Story",
+      "type" : "learned_visible_cards"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 1 point|arcade.pairs:2 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.4:Toy Story:Matched|arcade.card.5:Jurassic Park:Selected",
+      "before_feedback" : "A perfect pair!",
+      "before_signature" : "arcade.points:Up to 1 point|arcade.pairs:2 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.4:Toy Story:Matched",
+      "displayed_label" : "Face-down card 6",
+      "points" : "Up to 1 point",
+      "target" : "arcade.card.5",
+      "type" : "selection",
+      "visible_feedback" : "A perfect pair!"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 1 point|arcade.pairs:3 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.3:Jurassic Park:Matched|arcade.card.4:Toy Story:Matched|arcade.card.5:Jurassic Park:Matched",
+      "before_feedback" : "A perfect pair!",
+      "before_signature" : "arcade.points:Up to 1 point|arcade.pairs:2 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.4:Toy Story:Matched|arcade.card.5:Jurassic Park:Selected",
+      "displayed_label" : "Face-down card 4",
+      "points" : "Up to 1 point",
+      "target" : "arcade.card.3",
+      "type" : "attempt",
+      "visible_feedback" : "All pairs found! Finish now, or try the optional year question."
+    },
+    {
+      "first" : "arcade.card.5",
+      "first_title" : "Jurassic Park",
+      "second" : "arcade.card.3",
+      "second_title" : "Jurassic Park",
+      "type" : "learned_visible_cards"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:1\/3 points|||",
+      "before_feedback" : "All pairs found! Finish now, or try the optional year question.",
+      "before_signature" : "arcade.points:Up to 1 point|arcade.pairs:3 of 3 pairs|||arcade.card.0:Avengers: Endgame:Matched|arcade.card.1:Toy Story:Matched|arcade.card.2:Avengers: Endgame:Matched|arcade.card.3:Jurassic Park:Matched|arcade.card.4:Toy Story:Matched|arcade.card.5:Jurassic Park:Matched",
+      "displayed_label" : "Finish round · 1 points",
+      "points" : "1\/3 points",
+      "target" : "arcade.memory.finish",
+      "type" : "progress",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Clayface",
+        "Close",
+        "Colony",
+        "Coyote vs. Acme",
+        "Daily Puzzle, New Today, Recognize the movie from the image., 4 movies. Four choices. Just tap., Play Puzzle",
+        "Digger",
+        "East of Eden",
+        "Explore",
+        "Games",
+        "Home",
+        "La bola negra",
+        "Latest Movies, Recently Released",
+        "Movie Arcade, A daily mix. Three great places to start.",
+        "Notifications",
+        "Other Mommy",
+        "Pan's Labyrinth",
+        "Play another",
+        "Resident Evil",
+        "Runner",
+        "Search",
+        "Settings",
+        "Street Fighter",
+        "The Fix",
+        "The Uprising",
+        "Trending, Today",
+        "Try a different game",
+        "Up Coming, Coming Soon To Theaters",
+        "Verity",
+        "Watchlist"
+      ],
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 97.050256013870239,
+  "attempt_count" : 5,
+  "declared_prior_facts" : [
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "The Matrix",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Jurassic Park",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Toy Story",
+      "year" : "unknown"
+    }
+  ],
+  "declared_prior_titles" : [
+    "The Matrix",
+    "Jurassic Park",
+    "Toy Story"
+  ],
+  "game" : "memory",
+  "help_count" : 0,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+    "Not a pair. Take a look, then try again."
+  ],
+  "outcome" : "earned",
+  "payment_gate_found" : false,
+  "persona" : "P1",
+  "points_label" : "1\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n1\/3 points\nPoster Memory\nNicely played.\n1 of 3 points earned\nAll three poster pairs found!\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 97.050256013870239,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "",
+  "utility_action_found" : true,
+  "vision_wait_seconds" : 0
+}

@@ -4,7 +4,48 @@
 
 # Ignore .DS_Store files
 .DS_Store
+# Node / Firebase Functions artifacts
+node_modules/
+functions/lib/
+functions/node_modules/
 # Ignore .xcuserstate files
 .xcuserstate
 # Ignore .xcbkptlist files
 .xcbkptlist
+
+# Generated test artifacts
+CronicaTests/Screenshots/__Snapshots__/ScreenshotTests/Archive.zip
+
+# Local build outputs and packaging artifacts
+.build/
+build/
+*.ipa
+*.dSYM.zip
+
+# Python caches
+**/__pycache__/
+*.pyc
+
+# Local logs
+firepit-log.txt
+fastlane/report.xml
+
+# Local secrets
+.env
+.env.*
+!.env.admob.local.example
+
+# Local browser / Firebase / agent tooling artifacts
+.firebase/
+.playwright-cli/
+.playwright-mcp/
+.claude/
+output/
+--full-page
+daily-reel-mobile-result.png
+functions/firestore-debug.log
+
+# Generated simulator captures and store media stay in local evidence storage.
+CronicaTests/Screenshots/__Snapshots__/
+fastlane/screenshots/
+fastlane/preview_videos/

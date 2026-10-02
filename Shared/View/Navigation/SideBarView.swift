@@ -1,15 +1,9 @@
-//
-//  SideBarView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 28/04/22.
-//
 import SwiftUI
 
 #if os(macOS)
 struct SideBarView: View {
     @SceneStorage("selectedView") private var selectedView: Screens = .home
-    @StateObject private var viewModel = SearchViewModel()
+    @State private var viewModel = SearchViewModel()
     @State private var selectedSearchItem: ItemContent?
 	@State private var showNotifications = false
     private let persistence = PersistenceController.shared
@@ -48,9 +42,7 @@ struct SideBarView: View {
                         .environment(\.managedObjectContext, persistence.container.viewContext)
                 }
             case .search:
-                NavigationStack { SearchView(shouldFocusOnSearchField: .constant(false)) }
-            default:
-                NavigationStack { HomeView().environment(\.managedObjectContext, persistence.container.viewContext) }
+                NavigationStack { SearchView() }
             }
         }
         .navigationSplitViewStyle(.balanced)

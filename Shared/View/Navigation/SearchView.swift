@@ -1,10 +1,3 @@
-//
-//  SearchView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 02/03/22.
-//
-
 import SwiftUI
 
 struct SearchView: View {
@@ -14,24 +7,18 @@ struct SearchView: View {
 #else
     private let columns: [GridItem] = [GridItem(.adaptive(minimum: 160))]
 #endif
-    @StateObject private var viewModel = SearchViewModel()
+    @State private var viewModel = SearchViewModel()
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
     @State private var scope: SearchItemsScope = .noScope
     @State private var currentlyQuery = String()
-    @Binding var shouldFocusOnSearchField: Bool
     var body: some View {
         VStack {
 #if os(iOS)
             listView
-#elseif os(tvOS) || os(macOS) || os(visionOS)
+#elseif os(tvOS) || os(macOS)
             posterView
 #endif
-        }
-        .task {
-            if !viewModel.items.isEmpty, viewModel.query.isEmpty {
-                viewModel.items.removeAll()
-            }
         }
 #if !os(tvOS)
         .navigationTitle("Search")
@@ -86,10 +73,9 @@ struct SearchView: View {
                 .ignoresSafeArea(.all, edges: .horizontal)
 #endif
         }
-#if os(iOS) || os(visionOS)
+#if os(iOS)
         .searchable(text: $viewModel.query,
-                    isPresented: $shouldFocusOnSearchField,
-                    placement: UIDevice.isIPad ? .toolbar : .navigationBarDrawer(displayMode: .always),
+                    placement: .navigationBarDrawer(displayMode: .always),
                     prompt: Text("Movies, Shows, People"))
         .searchScopes($scope) {
             ForEach(SearchItemsScope.allCases) { scope in
@@ -114,7 +100,7 @@ struct SearchView: View {
 #endif
     }
     
-#if os(iOS) || os(macOS) || os(visionOS)
+#if !os(tvOS)
     @ViewBuilder
     private var listView: some View {
         switch viewModel.stage {
@@ -122,7 +108,6 @@ struct SearchView: View {
             ScrollView {
                 VStack {
                     TrendingKeywordsListView()
-                        .environmentObject(viewModel)
                     Spacer()
                 }
             }
@@ -133,30 +118,34 @@ struct SearchView: View {
             List {
                 switch scope {
                 case .noScope:
-                    ForEach(viewModel.items) { item in
+                    let results = viewModel.items
+                    ForEach(results) { item in
                         SearchItemView(item: item,
                                        showPopup: $showPopup,
                                        popupType: $popupType)
                     }
-                    if !viewModel.items.isEmpty {
+                    if !results.isEmpty {
                         loadableProgressRing
                     }
                 case .movies:
-                    ForEach(viewModel.items.filter { $0.itemContentMedia == .movie }) { item in
+                    let results = viewModel.items.filter { $0.itemContentMedia == .movie }
+                    ForEach(results) { item in
                         SearchItemView(item: item,
                                        showPopup: $showPopup,
                                        popupType: $popupType)
                     }
                     loadableProgressRing
                 case .shows:
-                    ForEach(viewModel.items.filter { $0.itemContentMedia == .tvShow && $0.media != .person }) { item in
+                    let results = viewModel.items.filter { $0.itemContentMedia == .tvShow && $0.media != .person }
+                    ForEach(results) { item in
                         SearchItemView(item: item,
                                        showPopup: $showPopup,
                                        popupType: $popupType)
                     }
                     loadableProgressRing
                 case .people:
-                    ForEach(viewModel.items.filter { $0.media == .person }) { item in
+                    let results = viewModel.items.filter { $0.media == .person }
+                    ForEach(results) { item in
                         SearchItemView(item: item,
                                        showPopup: $showPopup,
                                        popupType: $popupType)
@@ -168,7 +157,7 @@ struct SearchView: View {
     }
 #endif
     
-#if os(tvOS) || os(macOS) || os(visionOS)
+#if os(tvOS) || os(macOS)
     @ViewBuilder
     private var posterView: some View {
         switch viewModel.stage {
@@ -214,7 +203,6 @@ struct SearchView: View {
     }
 #endif
     
-    @ViewBuilder
     private var emptyView: some View {
         ContentUnavailableView.search(text: viewModel.query)
     }
@@ -225,11 +213,10 @@ struct SearchView: View {
             .padding()
     }
     
-    @ViewBuilder
     private var failureView: some View {
-        ContentUnavailableView("Try again later", systemImage: "magnifyingglass").padding()
+        ContentUnavailableView("Search failed, try again later.", systemImage: "magnifyingglass").padding()
     }
-    
+
     @ViewBuilder
     private var loadableProgressRing: some View {
         if viewModel.startPagination && !viewModel.endPagination {
@@ -251,5 +238,5 @@ extension SearchView {
 }
 
 #Preview {
-    SearchView(shouldFocusOnSearchField: .constant(false))
+    SearchView()
 }

@@ -1,0 +1,565 @@
+{
+  "contractVersion": "daily-reel.v1",
+  "scoringVersion": "daily-reel-score.v1",
+  "defaultLocale": "en",
+  "scoring": {
+    "maxScore": 300,
+    "perActMax": 100,
+    "maxIncorrectAttemptsPerAct": 3
+  },
+  "publicationId": "fixture-2026-08-31",
+  "contentVersion": "fixture-2026-08-31.1",
+  "publicationWindow": {
+    "availableAt": "2026-08-31T05:00:00Z",
+    "expiresAt": "2026-09-01T05:00:00Z"
+  },
+  "supportedLocales": [
+    "en",
+    "fr-FR",
+    "es-ES",
+    "es-MX",
+    "pt-BR"
+  ],
+  "localized": {
+    "en": {
+      "theme": "A thousand possible lives",
+      "shareText": "Can you find the hero in every universe?",
+      "acts": [
+        {
+          "id": "decode-doctor-strange",
+          "role": "decode",
+          "prompt": "Decode the movie from this visual spell.",
+          "emoji": [
+            "🩺",
+            "🌀",
+            "🪄"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Show title length",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-michelle-yeoh",
+          "role": "connect",
+          "prompt": "One performer crosses all three worlds. Who is it?",
+          "films": [
+            {
+              "id": "tmdb:714",
+              "title": "Tomorrow Never Dies",
+              "posterPath": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg"
+            },
+            {
+              "id": "tmdb:146",
+              "title": "Crouching Tiger, Hidden Dragon",
+              "posterPath": "/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg"
+            },
+            {
+              "id": "tmdb:455207",
+              "title": "Crazy Rich Asians",
+              "posterPath": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Michelle Yeoh appears in all three"
+            },
+            {
+              "id": "c2",
+              "label": "Ang Lee directed all three"
+            },
+            {
+              "id": "c3",
+              "label": "All are set in Hong Kong"
+            },
+            {
+              "id": "c4",
+              "label": "All won Best Picture"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-march-2022",
+          "role": "arrange",
+          "prompt": "Three reality-bending releases landed within 14 days. Put them in exact order.",
+          "films": [
+            {
+              "id": "tmdb:545611",
+              "title": "Everything Everywhere All at Once",
+              "posterPath": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+            },
+            {
+              "id": "tmdb:508947",
+              "title": "Turning Red",
+              "posterPath": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+            },
+            {
+              "id": "tmdb:696806",
+              "title": "The Adam Project",
+              "posterPath": "/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "fr-FR": {
+      "theme": "Mille vies possibles",
+      "shareText": "Peux-tu trouver l'héroïne dans chaque univers ?",
+      "acts": [
+        {
+          "id": "decode-doctor-strange",
+          "role": "decode",
+          "prompt": "Décode le film grâce à ce sort visuel.",
+          "emoji": [
+            "🩺",
+            "🌀",
+            "🪄"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Voir la longueur du titre",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-michelle-yeoh",
+          "role": "connect",
+          "prompt": "Une interprète traverse ces trois mondes. Qui est-ce ?",
+          "films": [
+            {
+              "id": "tmdb:714",
+              "title": "Demain ne meurt jamais",
+              "posterPath": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg"
+            },
+            {
+              "id": "tmdb:146",
+              "title": "Tigre & Dragon",
+              "posterPath": "/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg"
+            },
+            {
+              "id": "tmdb:455207",
+              "title": "Crazy Rich Asians",
+              "posterPath": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Michelle Yeoh joue dans les trois"
+            },
+            {
+              "id": "c2",
+              "label": "Ang Lee a réalisé les trois"
+            },
+            {
+              "id": "c3",
+              "label": "Tous se déroulent à Hong Kong"
+            },
+            {
+              "id": "c4",
+              "label": "Tous ont gagné l'Oscar du meilleur film"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-march-2022",
+          "role": "arrange",
+          "prompt": "Trois réalités sont sorties en 14 jours. Classe-les exactement.",
+          "films": [
+            {
+              "id": "tmdb:545611",
+              "title": "Everything Everywhere All at Once",
+              "posterPath": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+            },
+            {
+              "id": "tmdb:508947",
+              "title": "Alerte rouge",
+              "posterPath": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+            },
+            {
+              "id": "tmdb:696806",
+              "title": "Adam à travers le temps",
+              "posterPath": "/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "es-ES": {
+      "theme": "Mil vidas posibles",
+      "shareText": "¿Puedes encontrar a la heroína en cada universo?",
+      "acts": [
+        {
+          "id": "decode-doctor-strange",
+          "role": "decode",
+          "prompt": "Descifra la película con este hechizo visual.",
+          "emoji": [
+            "🩺",
+            "🌀",
+            "🪄"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver la longitud del título",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-michelle-yeoh",
+          "role": "connect",
+          "prompt": "Una actriz cruza estos tres mundos. ¿Quién es?",
+          "films": [
+            {
+              "id": "tmdb:714",
+              "title": "El mañana nunca muere",
+              "posterPath": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg"
+            },
+            {
+              "id": "tmdb:146",
+              "title": "Tigre y dragón",
+              "posterPath": "/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg"
+            },
+            {
+              "id": "tmdb:455207",
+              "title": "Crazy Rich Asians",
+              "posterPath": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Michelle Yeoh aparece en las tres"
+            },
+            {
+              "id": "c2",
+              "label": "Ang Lee dirigió las tres"
+            },
+            {
+              "id": "c3",
+              "label": "Todas ocurren en Hong Kong"
+            },
+            {
+              "id": "c4",
+              "label": "Todas ganaron el Óscar a mejor película"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-march-2022",
+          "role": "arrange",
+          "prompt": "Tres realidades llegaron en solo 14 días. Ordénalas exactamente.",
+          "films": [
+            {
+              "id": "tmdb:545611",
+              "title": "Todo a la vez en todas partes",
+              "posterPath": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+            },
+            {
+              "id": "tmdb:508947",
+              "title": "Red",
+              "posterPath": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+            },
+            {
+              "id": "tmdb:696806",
+              "title": "El proyecto Adam",
+              "posterPath": "/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "es-MX": {
+      "theme": "Mil vidas posibles",
+      "shareText": "¿Puedes encontrar a la heroína en cada universo?",
+      "acts": [
+        {
+          "id": "decode-doctor-strange",
+          "role": "decode",
+          "prompt": "Adivina la película con este hechizo visual.",
+          "emoji": [
+            "🩺",
+            "🌀",
+            "🪄"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver cuántas letras tiene",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-michelle-yeoh",
+          "role": "connect",
+          "prompt": "Una actriz cruza estos tres mundos. ¿Quién es?",
+          "films": [
+            {
+              "id": "tmdb:714",
+              "title": "007: El mañana nunca muere",
+              "posterPath": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg"
+            },
+            {
+              "id": "tmdb:146",
+              "title": "El tigre y el dragón",
+              "posterPath": "/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg"
+            },
+            {
+              "id": "tmdb:455207",
+              "title": "Locamente millonarios",
+              "posterPath": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Michelle Yeoh aparece en las tres"
+            },
+            {
+              "id": "c2",
+              "label": "Ang Lee dirigió las tres"
+            },
+            {
+              "id": "c3",
+              "label": "Todas ocurren en Hong Kong"
+            },
+            {
+              "id": "c4",
+              "label": "Todas ganaron el Óscar a mejor película"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-march-2022",
+          "role": "arrange",
+          "prompt": "Tres realidades llegaron en solo 14 días. Ordénalas exactamente.",
+          "films": [
+            {
+              "id": "tmdb:545611",
+              "title": "Todo en Todas Partes al Mismo Tiempo",
+              "posterPath": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+            },
+            {
+              "id": "tmdb:508947",
+              "title": "Red",
+              "posterPath": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+            },
+            {
+              "id": "tmdb:696806",
+              "title": "El proyecto Adam",
+              "posterPath": "/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "pt-BR": {
+      "theme": "Mil vidas possíveis",
+      "shareText": "Você encontra a heroína em cada universo?",
+      "acts": [
+        {
+          "id": "decode-doctor-strange",
+          "role": "decode",
+          "prompt": "Descubra o filme com este feitiço visual.",
+          "emoji": [
+            "🩺",
+            "🌀",
+            "🪄"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver o tamanho do título",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-michelle-yeoh",
+          "role": "connect",
+          "prompt": "Uma atriz atravessa estes três mundos. Quem é?",
+          "films": [
+            {
+              "id": "tmdb:714",
+              "title": "007: O Amanhã Nunca Morre",
+              "posterPath": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg"
+            },
+            {
+              "id": "tmdb:146",
+              "title": "O Tigre e o Dragão",
+              "posterPath": "/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg"
+            },
+            {
+              "id": "tmdb:455207",
+              "title": "Podres de Ricos",
+              "posterPath": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Michelle Yeoh aparece nos três"
+            },
+            {
+              "id": "c2",
+              "label": "Ang Lee dirigiu os três"
+            },
+            {
+              "id": "c3",
+              "label": "Todos se passam em Hong Kong"
+            },
+            {
+              "id": "c4",
+              "label": "Todos ganharam o Oscar de melhor filme"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-march-2022",
+          "role": "arrange",
+          "prompt": "Três realidades chegaram em apenas 14 dias. Coloque na ordem exata.",
+          "films": [
+            {
+              "id": "tmdb:545611",
+              "title": "Tudo em Todo o Lugar ao Mesmo Tempo",
+              "posterPath": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+            },
+            {
+              "id": "tmdb:508947",
+              "title": "Red: Crescer é Uma Fera",
+              "posterPath": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+            },
+            {
+              "id": "tmdb:696806",
+              "title": "O Projeto Adam",
+              "posterPath": "/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

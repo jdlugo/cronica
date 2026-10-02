@@ -1,20 +1,16 @@
-//
-//  NetworkService.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 20/01/22.
-//  swiftlint:disable trailing_whitespace
-
 import Foundation
 import os
 
-final class NetworkService: Sendable {
+class NetworkService {
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier!,
+        subsystem: Bundle.main.bundleIdentifier ?? "com.unknown.app",
         category: String(describing: NetworkService.self)
     )
     static let shared = NetworkService()
     private let decoder = JSONDecoder()
+#if DEBUG && os(iOS) && targetEnvironment(simulator)
+    var fixtureItemLoader: ((ItemContent.ID, MediaType) throws -> ItemContent?)?
+#endif
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy,MM,dd"
@@ -27,6 +23,9 @@ final class NetworkService: Sendable {
     }
     
     func fetchItem(id: ItemContent.ID, type: MediaType) async throws -> ItemContent {
+#if DEBUG && os(iOS) && targetEnvironment(simulator)
+        if let fixture = try fixtureItemLoader?(id, type) { return fixture }
+#endif
         if id == 0 {
             throw NetworkError.contentRemoved
         }
@@ -101,6 +100,43 @@ final class NetworkService: Sendable {
         let response: ItemContentResponse = try await self.fetch(url: url)
         return response.results
     }
+
+    func fetchDiscoverAdvanced(type: MediaType, page: Int, genres: Set<Int>, sort: TMDBSortBy, yearRange: ClosedRange<Int>?, ratingRange: ClosedRange<Double>?) async throws -> [ItemContent] {
+        var component = URLComponents()
+        component.scheme = "https"
+        component.host = "api.themoviedb.org"
+        component.path = "/3/discover/\(type.rawValue)"
+        var queryItems: [URLQueryItem] = [
+            .init(name: "api_key", value: Key.tmdbApi),
+            .init(name: "language", value: Locale.userLang),
+            .init(name: "region", value: Locale.userRegion),
+            .init(name: "sort_by", value: sort.rawValue),
+            .init(name: "include_adult", value: "false"),
+            .init(name: "include_video", value: "false"),
+            .init(name: "page", value: "\(page)")
+        ]
+        if !genres.isEmpty {
+            queryItems.append(.init(name: "with_genres", value: genres.map(String.init).joined(separator: ",")))
+        }
+        if let yearRange {
+            if type == .movie {
+                queryItems.append(.init(name: "primary_release_date.gte", value: "\(yearRange.lowerBound)-01-01"))
+                queryItems.append(.init(name: "primary_release_date.lte", value: "\(yearRange.upperBound)-12-31"))
+            } else {
+                queryItems.append(.init(name: "first_air_date.gte", value: "\(yearRange.lowerBound)-01-01"))
+                queryItems.append(.init(name: "first_air_date.lte", value: "\(yearRange.upperBound)-12-31"))
+            }
+        }
+        if let ratingRange {
+            queryItems.append(.init(name: "vote_average.gte", value: String(format: "%.1f", ratingRange.lowerBound)))
+            queryItems.append(.init(name: "vote_average.lte", value: String(format: "%.1f", ratingRange.upperBound)))
+            queryItems.append(.init(name: "vote_count.gte", value: "50"))
+        }
+        component.queryItems = queryItems
+        guard let url = component.url else { throw NetworkError.invalidEndpoint }
+        let response: ItemContentResponse = try await self.fetch(url: url)
+        return response.results
+    }
     
     func fetchKeywords(type: MediaType, id: Int) async throws -> [ItemContentKeyword] {
         guard let url = URL(string: "https://api.themoviedb.org/3/\(type.rawValue)/\(id)/keywords?api_key=\(Key.tmdbApi)")
@@ -127,9 +163,26 @@ final class NetworkService: Sendable {
         return try await self.fetch(url: url)
     }
     
-    func fetchWatchProviderServices(for type: MediaType, region: String) async throws -> WatchProviderResultContent {
-        let url = URL(string: "https://api.themoviedb.org/3/watch/providers/\(type.rawValue)?api_key=\(Key.tmdbApi)&watch_region=\(region)")
-        guard let url
+    static func watchProviderServicesURL(
+        for type: MediaType,
+        region: AppContentRegion
+    ) -> URL? {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.themoviedb.org"
+        components.path = "/3/watch/providers/\(type.rawValue)"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Key.tmdbApi),
+            URLQueryItem(name: "watch_region", value: region.rawValue)
+        ]
+        return components.url
+    }
+
+    func fetchWatchProviderServices(
+        for type: MediaType,
+        region: AppContentRegion
+    ) async throws -> WatchProviderResultContent {
+        guard let url = Self.watchProviderServicesURL(for: type, region: region)
         else {
             throw NetworkError.invalidRequest
         }
@@ -175,6 +228,7 @@ final class NetworkService: Sendable {
         }
     }
     
+    
 	func urlBuilder(type: MediaType, company: Int? = nil, page: Int, keywords: Int? = nil, sortBy: String) -> URL? {
         var component = URLComponents()
         component.scheme = "https"
@@ -204,6 +258,9 @@ final class NetworkService: Sendable {
 				.init(name: "with_keywords", value: "\(keywords)")
 			]
 		}
+#if DEBUG
+        print(component.url as Any)
+#endif
         return component.url
     }
     
@@ -245,6 +302,9 @@ final class NetworkService: Sendable {
                 .init(name: "region", value: Locale.userRegion)
             ]
         }
+#if DEBUG
+        print("URL: \(component.url as Any)")
+#endif
         return component.url
     }
     
@@ -281,6 +341,7 @@ final class NetworkService: Sendable {
                 .init(name: "with_genres", value: genres)
             ]
         }
+        print("URL: \(component.url as Any)")
         return component.url
     }
     

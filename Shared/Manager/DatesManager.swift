@@ -1,10 +1,3 @@
-//
-//  DatesManager.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 05/02/23.
-//
-
 import Foundation
 
 /// Migrate to extension based formatters and functions to get release dates and format the result.
@@ -34,49 +27,46 @@ class DatesManager {
 		formatter.formatOptions = .withFullDate
 		return formatter
 	}
-	static func getDetailedReleaseDateFormatted(results: [ReleaseDatesResult], productionRegion: String) -> String? {
-		if results.isEmpty { return nil }
-		if results.contains(where: { $0.iso31661?.lowercased() == Locale.userRegion.lowercased() }) {
-			let result = results.filter { $0.iso31661?.lowercased()  == Locale.userRegion.lowercased() }.first
-			guard let dates = result?.releaseDates else { return nil }
-			var content: String?
-			if dates.contains(where: { $0.type == ReleaseDateType.theatrical.toInt }) {
-				guard let theatrical = dates.filter({ $0.type == ReleaseDateType.theatrical.toInt }).first else { return nil }
-				content = theatrical.releaseDate
-			} else {
-				guard let firstDateAvailable = dates.first else { return nil }
-				content = firstDateAvailable.releaseDate
-			}
-			guard let content else { return nil }
-			guard let releaseDate = releaseDateFormatter.date(from: content) else { return nil }
-			return dateString.string(from: releaseDate)
-		} else if results.contains(where: { $0.iso31661?.lowercased() == productionRegion.lowercased() }) {
-			let result = results.filter { $0.iso31661?.lowercased()  == productionRegion.lowercased() }.first
-			guard let dates = result?.releaseDates else { return nil }
-			var content: String?
-			if dates.contains(where: { $0.type == ReleaseDateType.theatrical.toInt }) {
-				guard let theatrical = dates.filter({ $0.type == ReleaseDateType.theatrical.toInt }).first else { return nil }
-				content = theatrical.releaseDate
-			} else {
-				guard let firstDateAvailable = dates.first else { return nil }
-				content = firstDateAvailable.releaseDate
-			}
-			guard let content else { return nil }
-			guard let releaseDate = releaseDateFormatter.date(from: content) else { return nil }
-			return dateString.string(from: releaseDate)
-		}
-		let result = results.filter { $0.iso31661?.lowercased()  == "US".lowercased() }.first
-		guard let dates = result?.releaseDates else { return nil }
-		var content: String?
-		if dates.contains(where: { $0.type == ReleaseDateType.theatrical.toInt }) {
-			guard let theatrical = dates.filter({ $0.type == ReleaseDateType.theatrical.toInt }).first else { return nil }
-			content = theatrical.releaseDate
-		} else {
-			guard let firstDateAvailable = dates.first else { return nil }
-			content = firstDateAvailable.releaseDate
-		}
-		guard let content else { return nil }
-		guard let releaseDate = releaseDateFormatter.date(from: content) else { return nil }
-		return dateString.string(from: releaseDate)
-	}
+    static func preferredReleaseRegion(
+        availableRegions: [String],
+        userRegion: String,
+        productionRegion: String?
+    ) -> String? {
+        let candidates: [String?] = [userRegion, productionRegion, "US"]
+        for candidate in candidates.compactMap({ $0 }).filter({ !$0.isEmpty }) {
+            if let match = availableRegions.first(where: {
+                $0.caseInsensitiveCompare(candidate) == .orderedSame
+            }) {
+                return match
+            }
+        }
+        return nil
+    }
+
+    static func getDetailedReleaseDateFormatted(
+        results: [ReleaseDatesResult],
+        productionRegion: String?,
+        userRegion: String = Locale.userRegion
+    ) -> String? {
+        guard let preferredRegion = preferredReleaseRegion(
+            availableRegions: results.compactMap { $0.iso31661 },
+            userRegion: userRegion,
+            productionRegion: productionRegion
+        ),
+              let result = results.first(where: {
+                  $0.iso31661?.caseInsensitiveCompare(preferredRegion) == .orderedSame
+              }),
+              let dates = result.releaseDates else {
+            return nil
+        }
+
+        let content = dates.first(where: {
+            $0.type == ReleaseDateType.theatrical.toInt
+        })?.releaseDate ?? dates.first?.releaseDate
+        guard let content,
+              let releaseDate = releaseDateFormatter.date(from: content) else {
+            return nil
+        }
+        return dateString.string(from: releaseDate)
+    }
 }

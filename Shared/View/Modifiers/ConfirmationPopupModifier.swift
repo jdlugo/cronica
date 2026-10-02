@@ -1,10 +1,3 @@
-//
-//  ConfirmationPopupModifier.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/06/22.
-//
-
 import SwiftUI
 
 /// A dialog that displays a message inside a container of the top of the view.
@@ -16,31 +9,51 @@ struct ConfirmationPopupModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .overlay {
-                if isShowing, let item {
-                    HStack {
-                        Label(item.localizedString, systemImage: item.toSfSymbol)
-                            .font(.body)
-                            .fontDesign(.rounded)
+                if isShowing {
+                    if let item {
+                        VStack {
+#if os(tvOS)
+                            HStack {
+                                Spacer()
+                                HStack {
+                                    Label(item.localizedString, systemImage: item.toSfSymbol)
+                                        .fontWeight(.semibold)
+                                        .padding()
+                                }
+                                .background { Rectangle().fill(.ultraThickMaterial) }
+                                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                                .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+                                .padding()
+                                .opacity(isShowing ? 1 : 0)
+                                .animation(.linear, value: isShowing)
+                            }
+#endif
+                            Spacer()
+#if !os(tvOS)
+                            HStack {
+                                Label(item.localizedString, systemImage: item.toSfSymbol)
+                                    .symbolEffect(.bounce, value: isShowing)
+                                    .padding()
+                            }
+#if !os(watchOS)
+                            .background { Rectangle().fill(.regularMaterial) }
+#endif
+                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                            .shadow(radius: 2)
                             .padding()
-                            
-                    }
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            withAnimation(.snappy) {
-                                isShowing = false
+                            .opacity(isShowing ? 1 : 0)
+                            .animation(.linear, value: isShowing)
+                            .onTapGesture { withAnimation { isShowing = false } }
+#endif
+                        }
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                withAnimation {
+                                    isShowing = false
+                                }
                             }
                         }
                     }
-#if !os(watchOS)
-                    .background { Rectangle().fill(.thickMaterial) }
-#endif
-                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .shadow(radius: 1)
-                    .padding(.bottom)
-                    .animation(.snappy, value: isShowing)
-                    .onTapGesture { withAnimation { isShowing = false } }
-                    .transition(.move(edge: .bottom))
-                    .frame (maxHeight: .infinity, alignment: .bottom)
                 }
             }
     }
@@ -52,39 +65,23 @@ enum ActionPopupItems: String, Identifiable, CaseIterable {
          markedArchive, removedArchive, markedPin, removedPin, markedEpisodeWatched, removedEpisodeWatched,
          feedbackSent
     
-    var localizedString: String {
-        switch self {
-        case .addedWatchlist: String(localized: "Added")
-        case .removedWatchlist: String(localized: "Removed")
-        case .markedWatched: String(localized: "Watched")
-        case .removedWatched: String(localized: "Unwatched")
-        case .markedFavorite: String(localized: "Favorited")
-        case .removedFavorite: String(localized: "Unfavorited")
-        case .markedArchive: String(localized: "Archived")
-        case .removedArchive: String(localized: "Unarchived")
-        case .markedPin: String(localized: "Pinned")
-        case .removedPin: String(localized: "Unpinned")
-        case .markedEpisodeWatched: String(localized: "Watched")
-        case .removedEpisodeWatched: String(localized: "Unwatched")
-        case .feedbackSent: String(localized: "Feedback sent. Thank you.")
-        }
-    }
+    var localizedString: String { return NSLocalizedString(rawValue, comment: "") }
     
     var toSfSymbol: String {
         switch self {
-        case .addedWatchlist: "plus.circle.fill"
-        case .removedWatchlist: "minus.circle.fill"
-        case .markedWatched: "rectangle.badge.checkmark.fill"
-        case .removedWatched: "rectangle.badge.checkmark"
-        case .markedFavorite: "heart.fill"
-        case .removedFavorite: "heart.slash.fill"
-        case .markedArchive: "archivebox.fill"
-        case .removedArchive: "archivebox"
-        case .markedPin: "pin.fill"
-        case .removedPin: "pin.slash.fill"
-        case .markedEpisodeWatched: "rectangle.badge.checkmark.fill"
-        case .removedEpisodeWatched: "rectangle.badge.checkmark"
-        case .feedbackSent: "envelope.fill"
+        case .addedWatchlist: return "plus.circle.fill"
+        case .removedWatchlist: return "minus.circle.fill"
+        case .markedWatched: return "rectangle.badge.checkmark.fill"
+        case .removedWatched: return "rectangle.badge.checkmark"
+        case .markedFavorite: return "heart.fill"
+        case .removedFavorite: return "heart.slash.fill"
+        case .markedArchive: return "archivebox.fill"
+        case .removedArchive: return "archivebox"
+        case .markedPin: return "pin.fill"
+        case .removedPin: return "pin.slash.fill"
+        case .markedEpisodeWatched: return "rectangle.badge.checkmark.fill"
+        case .removedEpisodeWatched: return "rectangle.badge.checkmark"
+        case .feedbackSent: return "envelope.fill"
         }
     }
 }

@@ -1,10 +1,3 @@
-//
-//  AppTheme.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 03/01/23.
-//
-
 import SwiftUI
 
 enum AppTheme: String, CaseIterable, Identifiable {
@@ -13,9 +6,11 @@ enum AppTheme: String, CaseIterable, Identifiable {
     var overrideTheme: ColorScheme? {
         switch self {
         case .system:
-            return nil
+            return .dark
+            //return nil
         case .light:
-            return .light
+            return .dark
+            //return .light
         case .dark:
             return .dark
         }
@@ -23,11 +18,11 @@ enum AppTheme: String, CaseIterable, Identifiable {
     var localizableName: String {
         switch self {
         case .system:
-            return NSLocalizedString("System", comment: "")
+            return NSLocalizedString("appThemeDark", comment: "")
         case .light:
-            return NSLocalizedString("Light", comment: "")
+            return NSLocalizedString("appThemeDark", comment: "")
         case .dark:
-            return NSLocalizedString("Dark", comment: "")
+            return NSLocalizedString("appThemeDark", comment: "")
         }
     }
 }

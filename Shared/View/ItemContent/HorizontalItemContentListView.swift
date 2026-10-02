@@ -1,10 +1,3 @@
-//
-//  HorizontalItemContentListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 06/06/22.
-//
-
 import SwiftUI
 
 /// Display a list of ItemContent within PosterView, with a TitleView indicating
@@ -22,20 +15,18 @@ struct HorizontalItemContentListView: View {
         if let items {
             if !items.isEmpty {
                 VStack {
-#if os(tvOS) || os(visionOS)
-                    TitleView(title: title, subtitle: subtitle)
 #if os(tvOS)
+                    TitleView(title: title, subtitle: subtitle)
                         .padding(.leading, 64)
-#endif
 #else
                     if let endpoint {
                         NavigationLink(value: endpoint) {
-                            TitleView(title: title, subtitle: subtitle, showChevron: items.count > 4 ? true : false)
+                            TitleView(title: title, subtitle: subtitle, showChevron: true)
                         }
                         .buttonStyle(.plain)
                     } else {
                         NavigationLink(value: [title: items]) {
-                            TitleView(title: title, subtitle: subtitle, showChevron: items.count > 4 ? true : false)
+                            TitleView(title: title, subtitle: subtitle, showChevron: true)
                         }
                         .buttonStyle(.plain)
                     }
@@ -93,8 +84,8 @@ struct HorizontalItemContentListView: View {
             LazyHStack {
                 ForEach(items) { item in
                     ItemContentPosterView(item: item,
-                                          showPopup: $showPopup,
-                                          popupType: $popupType)
+                           showPopup: $showPopup,
+                           popupType: $popupType)
 #if !os(tvOS)
                     .padding([.leading, .trailing], settings.isCompactUI ? 1 : 4)
                     .padding(.leading, item.id == items.first?.id ? 16 : 0)

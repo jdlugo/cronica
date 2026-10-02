@@ -1,14 +1,8 @@
-//
-//  KeywordSectionView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/08/23.
-//
-
 import SwiftUI
 
 struct KeywordSectionView: View {
     let keyword: CombinedKeywords
+    
     // States
     @StateObject private var settings = SettingsStore.shared
     @State private var showPopup = false
@@ -19,6 +13,7 @@ struct KeywordSectionView: View {
     @State private var isLoaded = false
     @State private var startPagination = false
     @State private var endPagination = false
+    
     // Network service
     private let network = NetworkService.shared
     var body: some View {
@@ -26,7 +21,7 @@ struct KeywordSectionView: View {
 #if os(tvOS)
             ScrollView {
                 HStack {
-                    Text(keyword.name)
+                    Text(NSLocalizedString(keyword.name, comment: ""))
                         .font(.title3)
                         .foregroundStyle(.secondary)
                     Spacer()
@@ -44,7 +39,7 @@ struct KeywordSectionView: View {
 #endif
         }
 #if !os(tvOS)
-        .navigationTitle(keyword.name)
+        .navigationTitle(NSLocalizedString(keyword.name, comment: ""))
 #endif
         .overlay { if !isLoaded { ProgressView().unredacted() } }
         .onAppear {
@@ -52,19 +47,22 @@ struct KeywordSectionView: View {
                 await load(keyword.id, sortBy: sortBy, reload: false)
             }
         }
-        .onChange(of: sortBy) { _, newSortBy in
+        .onChange(of: sortBy) {
             Task {
                 await load(keyword.id, sortBy: sortBy, reload: true)
             }
         }
         .toolbar {
 #if os(iOS)
-            ToolbarItem(placement: .topBarTrailing) {
-                sortButton
-                    .unredacted()
-                    .disabled(!isLoaded)
+            ToolbarItem(placement: .navigationBarTrailing) {
+                HStack {
+                    sortButton
+                    styleOptions
+                }
+                .unredacted()
+                .disabled(!isLoaded)
             }
-#elseif os(macOS) || os(visionOS)
+            #elseif os(macOS)
             ToolbarItem {
                 sortButton
                     .unredacted()
@@ -91,6 +89,18 @@ struct KeywordSectionView: View {
                   systemImage: "arrow.up.arrow.down.circle")
         }
         .labelStyle(.iconOnly)
+    }
+    
+    private var styleOptions: some View {
+        Picker("sectionStyleTypePicker",
+               systemImage: "circle.grid.2x2",
+               selection: $settings.sectionStyleType) {
+            ForEach(SectionDetailsPreferredStyle.allCases) { item in
+                Text(item.title).tag(item)
+            }
+        }
+        .labelStyle(.iconOnly)
+        .pickerStyle(.menu)
     }
     
     private var listStyle: some View {
@@ -150,12 +160,13 @@ struct KeywordSectionView: View {
                         .onAppear(perform: loadMoreOnAppear)
                 }
             }
-        }.padding(.all, settings.isCompactUI ? 10 : nil)
+        }
+                  .padding(.all, settings.isCompactUI ? 10 : nil)
     }
 }
 
 private struct DrawingConstants {
-#if os(macOS) || os(visionOS)
+#if os(macOS)
     static let columns: [GridItem] = [GridItem(.adaptive(minimum: 240))]
 #elseif os(tvOS)
     static let columns: [GridItem] = [GridItem(.adaptive(minimum: 420))]

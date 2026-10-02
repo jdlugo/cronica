@@ -1,20 +1,49 @@
-//
-//  PersistenceController.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 29/01/22.
-//  swiftlint:disable trailing_whitespace
-
 import CoreData
 import CloudKit
 
 /// An environment singleton responsible for managing Watchlist Core Data stack, including handling saving,
 /// tracking watchlists, and dealing with sample data.
 struct PersistenceController {
-    static let shared = PersistenceController()
-    // MARK: Preview sample
+    static let shared: PersistenceController = {
+#if DEBUG && targetEnvironment(simulator)
+        if ProcessInfo.processInfo.arguments.contains("--arcade-discovery-test") {
+            let directory = URL.applicationSupportDirectory.appendingPathComponent("ArcadeDiscoveryTests", isDirectory: true)
+            try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+            let url = directory.appendingPathComponent("Watchlist.sqlite")
+            if ProcessInfo.processInfo.arguments.contains("--arcade-reset") {
+                for suffix in ["", "-wal", "-shm"] {
+                    try? FileManager.default.removeItem(atPath: url.path + suffix)
+                }
+            }
+            return PersistenceController(useCloudKit: false, storeURL: url)
+        }
+#endif
+        return PersistenceController()
+    }()
+    private static let enableCloudKitInSimulatorArgument = "-EnableCloudKitInSimulator"
+    private static let initializeCloudKitSchemaArgument = "-InitializeCloudKitSchema"
+    private static let modelName = "Watchlist"
+    private static let managedObjectModel: NSManagedObjectModel = {
+        let bundles = [
+            Bundle.main,
+            Bundle(for: WatchlistItem.self),
+        ]
+
+        for bundle in bundles {
+            guard let modelURL = bundle.url(forResource: modelName, withExtension: "momd") else {
+                continue
+            }
+            if let model = NSManagedObjectModel(contentsOf: modelURL) {
+                return model
+            }
+        }
+
+        fatalError("Unable to load \(modelName).momd")
+    }()
+    
+    // MARK: Preview sample - uses NSPersistentContainer (no CloudKit) for reliability
     static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
+        let result = PersistenceController(inMemory: true, useCloudKit: false)
         let viewContext = result.container.viewContext
         for item in ItemContent.examples {
             let newItem = WatchlistItem(context: viewContext)
@@ -27,39 +56,64 @@ struct PersistenceController {
         do {
             try viewContext.save()
         } catch {
-            fatalError("Fatal error creating preview: \(error.localizedDescription)")
+            print("Preview Core Data save error: \(error.localizedDescription)")
         }
         return result
     }()
     
-    let container: NSPersistentCloudKitContainer = {
-        let container = NSPersistentCloudKitContainer(name: "Watchlist")
+    let container: NSPersistentContainer
+    
+    init(inMemory: Bool = false, useCloudKit: Bool = true, storeURL: URL? = nil) {
+        if Self.shouldUseCloudKit(useCloudKit) {
+            container = NSPersistentCloudKitContainer(
+                name: Self.modelName,
+                managedObjectModel: Self.managedObjectModel
+            )
+        } else {
+            container = NSPersistentContainer(
+                name: Self.modelName,
+                managedObjectModel: Self.managedObjectModel
+            )
+        }
+        
+        if inMemory {
+            let description = NSPersistentStoreDescription()
+            description.type = NSInMemoryStoreType
+            container.persistentStoreDescriptions = [description]
+        } else if let storeURL {
+            container.persistentStoreDescriptions = [NSPersistentStoreDescription(url: storeURL)]
+        }
+        
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
-#if DEBUG
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-#endif
+                print("Core Data persistent store error: \(error), \(error.userInfo)")
             }
             storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
             storeDescription.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
-            
         }
+        
 #if DEBUG && os(iOS)
-        do {
-            try container.initializeCloudKitSchema()
-        } catch {
-            print("initializeCloudKitSchema: \(error.localizedDescription)")
+        if !inMemory,
+           ProcessInfo.processInfo.arguments.contains(Self.initializeCloudKitSchemaArgument),
+           let cloudKitContainer = container as? NSPersistentCloudKitContainer {
+            do {
+                try cloudKitContainer.initializeCloudKitSchema()
+            } catch {
+                print("initializeCloudKitSchema: \(error.localizedDescription)")
+            }
         }
 #endif
-        return container
-    }()
-    
-    init(inMemory: Bool = false) {
-        if inMemory {
-            container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
-        }
+    }
+
+    private static func shouldUseCloudKit(_ useCloudKit: Bool) -> Bool {
+        guard useCloudKit else { return false }
+#if targetEnvironment(simulator)
+        return ProcessInfo.processInfo.arguments.contains(Self.enableCloudKitInSimulatorArgument)
+#else
+        return true
+#endif
     }
     
     func save() {

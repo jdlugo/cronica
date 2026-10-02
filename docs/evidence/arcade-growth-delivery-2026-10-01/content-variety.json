@@ -1,0 +1,7 @@
+{
+  "baseline_commit": "2ec730a7",
+  "dates": "2026-10-01 through 2026-10-28",
+  "baseline": "28 October fixtures: distinct film slots=195, repeated film slots=47",
+  "current": "28 October fixtures: distinct film slots=218, repeated film slots=24",
+  "limitation": "Deterministic content variety only; no human enjoyment or retention inference."
+}

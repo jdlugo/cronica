@@ -1,12 +1,5 @@
-//
-//  ItemContentItemView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 04/05/23.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct ItemContentRowView: View {
 	let item: ItemContent
@@ -26,42 +19,47 @@ struct ItemContentRowView: View {
 		NavigationLink(value: item) {
 			HStack {
 				ZStack {
-                    LazyImage(url: item.cardImageSmall) { state in
-                        if let image = state.image {
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        } else {
-                            ZStack {
-                                Rectangle().fill(.gray.gradient)
-                                Image(systemName: "popcorn.fill")
-                                    .foregroundColor(.white.opacity(0.8))
-                            }
-                            .frame(width: DrawingConstants.imageWidth,
-                                   height: DrawingConstants.imageHeight)
-                        }
-                    }
-                    .transition(.opacity)
-                    .frame(width: DrawingConstants.imageWidth,
-                           height: DrawingConstants.imageHeight)
-                    .shadow(radius: 2.5)
+					WebImage(url: item.cardImageSmall) { image in
+						image.resizable()
+					} placeholder: {
+						ZStack {
+							Rectangle().fill(.gray.gradient)
+							Image(systemName: "popcorn.fill")
+								.foregroundColor(.white.opacity(0.8))
+						}
+						.frame(width: DrawingConstants.imageWidth,
+							   height: DrawingConstants.imageHeight)
+					}
+					.aspectRatio(contentMode: .fill)
+					.transition(.opacity)
+						.frame(width: DrawingConstants.imageWidth,
+							   height: DrawingConstants.imageHeight)
+						.shadow(radius: 2.5)
 					if isWatched {
 						Color.black.opacity(0.5)
 						Image(systemName: "rectangle.fill.badge.checkmark")
 							.foregroundColor(.white)
 					}
+					//                    else if isInWatchlist {
+					//                        Color.black.opacity(0.5)
+					//                        Image(systemName: "checkmark.circle.fill")
+					//                            .foregroundColor(.white)
+					//                    }
 				}
 				.frame(width: DrawingConstants.imageWidth,
 					   height: DrawingConstants.imageHeight)
 				.clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius))
-                .shadow(color: .black.opacity(0.2), radius: 2.5, x: 0, y: 2.5)
 				VStack(alignment: .leading) {
-                    Text(item.itemTitle)
-                        .lineLimit(DrawingConstants.textLimit)
-                        .fontWeight(.medium)
-                    Text(showNotificationDate ? item.itemNotificationDescription : item.itemSearchDescription)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+					HStack {
+						Text(item.itemTitle)
+							.lineLimit(DrawingConstants.textLimit)
+					}
+					HStack {
+						Text(showNotificationDate ? item.itemNotificationDescription : item.itemSearchDescription)
+							.font(.caption)
+							.foregroundColor(.secondary)
+						Spacer()
+					}
 				}
 #if os(iOS) || os(macOS)
 				Spacer()
@@ -89,13 +87,30 @@ struct ItemContentRowView: View {
 				}
 			}
 			.sheet(isPresented: $showNote) {
-                ReviewView(id: item.itemContentID, showView: $showNote)
+#if os(iOS) || os(macOS)
+				NavigationStack {
+					ReviewView(id: item.itemContentID, showView: $showNote)
+				}
+				.presentationDetents([.large])
+#if os(macOS)
+				.frame(width: 400, height: 400, alignment: .center)
+#endif
+#endif
 			}
 			.sheet(isPresented: $showCustomListView) {
-                ItemContentCustomListSelector(contentID: item.itemContentID,
-                                              showView: $showCustomListView,
-                                              title: item.itemTitle,
-                                              image: item.posterImageMedium)
+				NavigationStack {
+					ItemContentCustomListSelector(contentID: item.itemContentID,
+												  showView: $showCustomListView,
+												  title: item.itemTitle,
+												  image: item.cardImageSmall)
+				}
+				.presentationDetents([.large])
+#if os(macOS)
+				.frame(width: 500, height: 600, alignment: .center)
+#else
+				.appTheme()
+				.appTint()
+#endif
 			}
 		}
 	}
@@ -103,14 +118,13 @@ struct ItemContentRowView: View {
 
 private struct DrawingConstants {
 #if os(watchOS)
-    static let imageWidth: CGFloat = 80.5
-    static let textLimit: Int = 2
+	static let imageWidth: CGFloat = 70
 #else
-    static let imageWidth: CGFloat = 88
-    static let textLimit: Int = 1
+	static let imageWidth: CGFloat = 80
 #endif
-    static let imageHeight: CGFloat = 55
-    static let imageRadius: CGFloat = 12
+	static let imageHeight: CGFloat = 50
+	static let imageRadius: CGFloat = 8
+	static let textLimit: Int = 1
 }
 
 #Preview {

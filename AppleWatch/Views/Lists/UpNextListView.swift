@@ -1,16 +1,16 @@
 //
 //  UpNextListView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 17/07/23.
 //
 
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct UpNextListView: View {
     static let tag: Screens? = .upNext
-    @StateObject private var viewModel = UpNextViewModel.shared
+    @State private var viewModel = UpNextViewModel.shared
     @FetchRequest(
         entity: WatchlistItem.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \WatchlistItem.title, ascending: true)],
@@ -18,7 +18,7 @@ struct UpNextListView: View {
                                                                     NSPredicate(format: "isArchive == %d", false),
                                                                     NSPredicate(format: "watched == %d", false)])
     ) private var items: FetchedResults<WatchlistItem>
-    @Environment(\.scenePhase) private var scene
+    @State private var selectedEpisode: UpNextEpisode?
     var body: some View {
         NavigationStack {
             VStack {
@@ -28,8 +28,10 @@ struct UpNextListView: View {
                 } else {
                     List {
                         ForEach(viewModel.episodes) { episode in
-                            UpNextRowItemView(item: episode)
-                                .environmentObject(viewModel)
+                            upNextRowItem(episode)
+                                .onTapGesture {
+                                    selectedEpisode = episode
+                                }
                         }
                         Button {
                             Task {
@@ -41,11 +43,29 @@ struct UpNextListView: View {
                             }
                         }
                     }
-                    .overlay { if !viewModel.isLoaded { CronicaLoadingPopupView() } }
+                    .overlay { if !viewModel.isLoaded { ProgressView() } }
                     .redacted(reason: viewModel.isLoaded ? [] : .placeholder)
+                    .task(id: viewModel.isWatched) {
+                        if viewModel.isWatched {
+                            await viewModel.handleWatched(selectedEpisode)
+                            self.selectedEpisode = nil
+                        }
+                    }
                     .task {
                         await viewModel.load(items)
                         await viewModel.checkForNewEpisodes(items)
+                    }
+                    .sheet(item: $selectedEpisode) { item in
+                        NavigationStack {
+                            EpisodeDetailsView(episode: item.episode,
+                                               season: item.episode.itemSeasonNumber,
+                                               show: item.showID,
+                                               showTitle: item.showTitle,
+                                               isWatched: $viewModel.isWatched)
+                            .onDisappear {
+                                self.selectedEpisode = nil
+                            }
+                        }
                     }
                     .refreshable {
                         Task { await viewModel.reload(items) }
@@ -53,15 +73,42 @@ struct UpNextListView: View {
                     
                 }
             }
-            .navigationTitle("Up Next")
+            .navigationTitle("upNext")
             .navigationBarTitleDisplayMode(.inline)
-            .onChange(of: scene) { _, _ in
-                if scene == .active {
-                    Task {
-                        await viewModel.checkForNewEpisodes(items)
-                    }
+        }
+    }
+    
+    private func upNextRowItem(_ item: UpNextEpisode) -> some View {
+        HStack {
+            WebImage(url: item.episode.itemImageMedium ?? item.backupImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "sparkles.tv")
+                        .foregroundColor(.white.opacity(0.8))
                 }
+                .unredacted()
+                .frame(width: DrawingConstants.imageWidth,
+                       height: DrawingConstants.imageHeight)
             }
+            .aspectRatio(contentMode: .fill)
+            .transition(.opacity)
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+            VStack(alignment: .leading) {
+                Text(item.showTitle)
+                    .font(.caption)
+                    .lineLimit(2)
+                Text(String(format: NSLocalizedString("S%d, E%d", comment: ""), item.episode.itemSeasonNumber, item.episode.itemEpisodeNumber))
+                    .font(.caption)
+                    .textCase(.uppercase)
+                    .foregroundColor(.secondary)
+                    .lineLimit(1)
+            }
+            .padding(.leading, 2)
+            Spacer()
         }
     }
 }
@@ -69,70 +116,10 @@ struct UpNextListView: View {
 private struct DrawingConstants {
     static let imageWidth: CGFloat = 70
     static let imageHeight: CGFloat = 50
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let textLimit: Int = 1
 }
 
 #Preview {
     UpNextListView()
-}
-
-private struct UpNextRowItemView: View {
-    let item: UpNextEpisode
-    @State private var askConfirmation = false
-    @EnvironmentObject var viewModel: UpNextViewModel
-    var body: some View {
-        Button {
-            askConfirmation.toggle()
-        } label: {
-            HStack {
-                LazyImage(url: item.episode.itemImageMedium ?? item.backupImage) { state in
-                    if let image = state.image {
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    } else {
-                        ZStack {
-                            Rectangle().fill(.gray.gradient)
-                            Image(systemName: "sparkles.tv")
-                                .foregroundColor(.white.opacity(0.8))
-                        }
-                        .unredacted()
-                        .frame(width: DrawingConstants.imageWidth,
-                               height: DrawingConstants.imageHeight)
-                    }
-                }
-                .transition(.opacity)
-                .frame(width: DrawingConstants.imageWidth,
-                       height: DrawingConstants.imageHeight)
-                .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
-                VStack(alignment: .leading) {
-                    Text(item.showTitle)
-                        .font(.caption)
-                        .lineLimit(2)
-                    Text(String(format: NSLocalizedString("S%d, E%d", comment: ""), item.episode.itemSeasonNumber, item.episode.itemEpisodeNumber))
-                        .font(.caption)
-                        .textCase(.uppercase)
-                        .foregroundColor(.secondary)
-                        .lineLimit(1)
-                }
-                .padding(.leading, 2)
-                Spacer()
-            }
-        }
-        .confirmationDialog("Confirm Watched Episode",
-                            isPresented: $askConfirmation, titleVisibility: .visible) {
-            Button("Confirm") {
-                Task {
-                    await viewModel.markAsWatched(item)
-                }
-            }
-            Button("Cancel", role: .cancel) {
-                askConfirmation = false
-            }
-        } message: {
-            Text("Mark Episode \(item.episode.itemEpisodeNumber) from season \(item.episode.itemSeasonNumber) of \(item.showTitle) as Watched?")
-        }
-        
-    }
 }

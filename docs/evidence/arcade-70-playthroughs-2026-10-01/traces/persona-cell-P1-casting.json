@@ -1,0 +1,107 @@
+{
+  "accepted_action_count" : 0,
+  "action_count" : 0,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:0\/3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Reveal & move on · 0 points",
+      "points" : "0\/3 points",
+      "target" : "arcade.skip",
+      "type" : "administrative_reveal",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Clayface",
+        "Close",
+        "Colony",
+        "Coyote vs. Acme",
+        "Daily Puzzle, New Today, Recognize the movie from the image., 4 movies. Four choices. Just tap., Play Puzzle",
+        "Digger",
+        "East of Eden",
+        "Explore",
+        "Games",
+        "Home",
+        "La bola negra",
+        "Latest Movies, Recently Released",
+        "Movie Arcade, A daily mix. Three great places to start.",
+        "Notifications",
+        "Other Mommy",
+        "Pan's Labyrinth",
+        "Play another",
+        "Resident Evil",
+        "Runner",
+        "Search",
+        "Settings",
+        "Street Fighter",
+        "The Fix",
+        "The Uprising",
+        "Trending, Today",
+        "Try a different game",
+        "Up Coming, Coming Soon To Theaters",
+        "Verity",
+        "Watchlist"
+      ],
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 22.782207012176514,
+  "attempt_count" : 0,
+  "declared_prior_facts" : [
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "The Matrix",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Jurassic Park",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Toy Story",
+      "year" : "unknown"
+    }
+  ],
+  "declared_prior_titles" : [
+    "The Matrix",
+    "Jurassic Park",
+    "Toy Story"
+  ],
+  "game" : "casting",
+  "help_count" : 0,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "revealed_after_stop",
+  "payment_gate_found" : false,
+  "persona" : "P1",
+  "points_label" : "0\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n0\/3 points\nCasting Call\nNow you know!\nA fresh round is waiting.\nTom Hanks appears in Toy Story.\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 22.782207012176514,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "Actor knowledge required beyond title recognition",
+  "utility_action_found" : true,
+  "vision_wait_seconds" : 0
+}

@@ -1,24 +1,19 @@
-//
-//  SearchViewModel.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 06/03/22.
-//
-
 import Foundation
 import SwiftUI
 
-@MainActor final class SearchViewModel: ObservableObject, Sendable { 
-    @Published var query: String = ""
+@MainActor
+@Observable
+class SearchViewModel {
+    var query: String = ""
     private var service: NetworkService = NetworkService.shared
     var trimmedQuery: String {
         query.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     private var page = 1
-    @Published var items = [SearchItemContent]()
-    @Published var startPagination: Bool = false
-    @Published var endPagination: Bool = false
-    @Published var stage: SearchStage = .none
+    var items = [SearchItemContent]()
+    var startPagination: Bool = false
+    var endPagination: Bool = false
+    var stage: SearchStage = .none
     
     func search(_ query: String) async {
         if Task.isCancelled { return }
@@ -60,7 +55,6 @@ import SwiftUI
             withAnimation {  stage = .success }
             startPagination = true
         } catch {
-            if query.isEmpty, !items.isEmpty { items.removeAll() }
             if Task.isCancelled { return }
             withAnimation { stage = .failure }
             CronicaTelemetry.shared.handleMessage(error.localizedDescription,

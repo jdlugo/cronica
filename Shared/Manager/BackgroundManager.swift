@@ -1,17 +1,9 @@
-//
-//  BackgroundManager.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 12/04/22.
-//
-
 import Foundation
 import CoreData
 
-final class BackgroundManager {
-	private let context = PersistenceController.shared.container.newBackgroundContext()
+class BackgroundManager {
+	private let persistence = PersistenceController.shared
 	private let network = NetworkService.shared
-	private let notifications = NotificationManager.shared
 	private static let lastMaintenanceKey = "lastMaintenance"
 	private static let lastWatchingRefreshKey = "lastWatchingRefreshKey"
 	private static let lastUpcomingRefreshKey = "lastUpcomingRefreshKey"
@@ -66,6 +58,7 @@ final class BackgroundManager {
 	}
 	
 	private func fetchWatchingItems() -> [WatchlistItem] {
+		let context = persistence.container.viewContext
 		let request: NSFetchRequest<WatchlistItem> = WatchlistItem.fetchRequest()
 		let watchingPredicate = NSPredicate(format: "isWatching == %d", true)
 		let archivePredicate = NSPredicate(format: "isArchive == %d", false)
@@ -86,23 +79,26 @@ final class BackgroundManager {
 	}
 	
 	private func fetchUpcomingItems() -> [WatchlistItem] {
+		let context = persistence.container.viewContext
 		let request: NSFetchRequest<WatchlistItem> = WatchlistItem.fetchRequest()
 		let soonPredicate = NSPredicate(format: "schedule == %d", ItemSchedule.soon.toInt)
 		let renewedPredicate = NSPredicate(format: "schedule == %d", ItemSchedule.renewed.toInt)
 		let productionPredicate = NSPredicate(format: "schedule == %d", ItemSchedule.production.toInt)
+		let archivePredicate = NSPredicate(format: "isArchive == %d", false)
 		let orPredicate = NSCompoundPredicate(
 			type: .or,
 			subpredicates: [productionPredicate,
 							soonPredicate,
 							renewedPredicate]
 		)
-		let andPredicate = NSCompoundPredicate(type: .and, subpredicates: [orPredicate])
+		let andPredicate = NSCompoundPredicate(type: .and, subpredicates: [orPredicate, archivePredicate])
 		request.predicate = andPredicate
 		guard let list = try? context.fetch(request) else { return [] }
 		return list
 	}
 	
 	private func fetchReleasedItems() -> [WatchlistItem] {
+		let context = persistence.container.viewContext
 		let request: NSFetchRequest<WatchlistItem> = WatchlistItem.fetchRequest()
 		let endedPredicate = NSPredicate(format: "schedule == %d", ItemSchedule.ended.toInt)
 		let archivePredicate = NSPredicate(format: "isArchive == %d", true)
@@ -111,7 +107,7 @@ final class BackgroundManager {
 			subpredicates: [endedPredicate,
 							archivePredicate]
 		)
-		guard let list = try? self.context.fetch(request) else { return [] }
+		guard let list = try? context.fetch(request) else { return [] }
 		return list
 	}
 	
@@ -145,16 +141,22 @@ final class BackgroundManager {
 			// If fetched item release date is different than the scheduled one,
 			// then remove the old date and register the new one.
 			if item.itemDate.areDifferentDates(with: content.itemFallbackDate) {
-				notifications.removeNotification(identifier: content.itemContentID)
+				await MainActor.run {
+					NotificationManager.shared.removeNotification(identifier: content.itemContentID)
+				}
 			}
 			if content.itemStatus == .cancelled {
-				notifications.removeNotification(identifier: content.itemContentID)
+				await MainActor.run {
+					NotificationManager.shared.removeNotification(identifier: content.itemContentID)
+				}
 			}
 			// In order to avoid passing the limit of local notifications,
 			// the app will only register when it's less than two months away
 			// from release date.
 			if content.itemFallbackDate.isLessThanTwoWeeksAway() {
-				notifications.schedule(content)
+				await MainActor.run {
+					NotificationManager.shared.schedule(content)
+				}
 			}
 		}
 		PersistenceController.shared.update(item: content)

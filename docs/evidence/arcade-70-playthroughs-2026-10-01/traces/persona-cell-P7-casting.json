@@ -1,0 +1,86 @@
+{
+  "accepted_action_count" : 0,
+  "action_count" : 0,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:0\/3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Reveal & move on · 0 points",
+      "points" : "0\/3 points",
+      "target" : "arcade.skip",
+      "type" : "administrative_reveal",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Close",
+        "Games",
+        "Play another",
+        "Try a different game"
+      ],
+      "scope" : "arcade_sheet",
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 19.282366991043091,
+  "attempt_count" : 0,
+  "declared_prior_facts" : [
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "The Matrix",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Jurassic Park",
+      "year" : "unknown"
+    },
+    {
+      "actors" : "",
+      "plot_words" : "",
+      "title" : "Toy Story",
+      "year" : "unknown"
+    }
+  ],
+  "declared_prior_titles" : [
+    "The Matrix",
+    "Jurassic Park",
+    "Toy Story"
+  ],
+  "game" : "casting",
+  "harness_revision" : "lazy-control-recovery-v2",
+  "help_count" : 0,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization.",
+    "Spanish locale; weak-English policy, controller can locate untranslated controls."
+  ],
+  "locale" : "es_ES",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "revealed_after_stop",
+  "payment_gate_found" : false,
+  "persona" : "P7",
+  "points_label" : "0\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_inspection_scope" : "arcade_sheet",
+  "result_text" : "Movie Arcade\nInicio\nFREE PLAY\n0\/3 points\nCasting Call\nNow you know!\nA fresh round is waiting.\nTom Hanks appears in Toy Story.\nEste producto utiliza la API de TMDb pero no está respaldado o certificado por TMDb.\ndailyPuzzleTitle\ndailyPuzzleNewToday\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\ndailyPuzzlePlayPuzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTendencias\nHoy\nPróximamente\nMuy Pronto en Cines\nNuevas Películas\nRecién Estrenadas\nEste producto utiliza la API de TMDb pero no está respaldado o certificado por TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 19.282366037368774,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "Untranslated English knowledge-dependent instructions",
+  "utility_action_found" : false,
+  "vision_wait_seconds" : 0
+}

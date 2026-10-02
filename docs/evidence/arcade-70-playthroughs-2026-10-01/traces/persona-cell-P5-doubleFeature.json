@@ -1,0 +1,204 @@
+{
+  "accepted_action_count" : 6,
+  "action_count" : 6,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs|||arcade.card.0:Barbie:Selected",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs||",
+      "displayed_label" : "Barbie",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.0",
+      "type" : "selection",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.3:La La Land:Matched",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs|||arcade.card.0:Barbie:Selected",
+      "displayed_label" : "La La Land",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.3",
+      "type" : "attempt",
+      "visible_feedback" : "Connected by Ryan Gosling!"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.1:John Wick:Selected|arcade.card.3:La La Land:Matched",
+      "before_feedback" : "Connected by Ryan Gosling!",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.3:La La Land:Matched",
+      "displayed_label" : "John Wick",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.1",
+      "type" : "selection",
+      "visible_feedback" : "Connected by Ryan Gosling!"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:2 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.1:John Wick:Matched|arcade.card.3:La La Land:Matched|arcade.card.5:The Matrix:Matched",
+      "before_feedback" : "Connected by Ryan Gosling!",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:1 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.1:John Wick:Selected|arcade.card.3:La La Land:Matched",
+      "displayed_label" : "The Matrix",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.5",
+      "type" : "attempt",
+      "visible_feedback" : "Connected by Keanu Reeves!"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:2 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.1:John Wick:Matched|arcade.card.2:Inception:Selected|arcade.card.3:La La Land:Matched|arcade.card.5:The Matrix:Matched",
+      "before_feedback" : "Connected by Keanu Reeves!",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:2 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.1:John Wick:Matched|arcade.card.3:La La Land:Matched|arcade.card.5:The Matrix:Matched",
+      "displayed_label" : "Inception",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.2",
+      "type" : "selection",
+      "visible_feedback" : "Connected by Keanu Reeves!"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:3\/3 points|||",
+      "before_feedback" : "Connected by Keanu Reeves!",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:2 of 3 pairs|||arcade.card.0:Barbie:Matched|arcade.card.1:John Wick:Matched|arcade.card.2:Inception:Selected|arcade.card.3:La La Land:Matched|arcade.card.5:The Matrix:Matched",
+      "displayed_label" : "Titanic",
+      "points" : "3\/3 points",
+      "target" : "arcade.card.4",
+      "type" : "attempt",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Close",
+        "Games",
+        "Play another",
+        "Try a different game"
+      ],
+      "scope" : "arcade_sheet",
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 78.099918961524963,
+  "attempt_count" : 3,
+  "declared_prior_facts" : [
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "ocean liner",
+      "title" : "Titanic",
+      "year" : "1997"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "simulation",
+      "title" : "The Matrix",
+      "year" : "1999"
+    },
+    {
+      "actors" : "Sam Neill, Samuel L. Jackson",
+      "plot_words" : "dinosaurs",
+      "title" : "Jurassic Park",
+      "year" : "1993"
+    },
+    {
+      "actors" : "Leonardo DiCaprio, Michael Caine",
+      "plot_words" : "dreams",
+      "title" : "Inception",
+      "year" : "2010"
+    },
+    {
+      "actors" : "Margot Robbie, Ryan Gosling",
+      "plot_words" : "pink world",
+      "title" : "Barbie",
+      "year" : "2023"
+    },
+    {
+      "actors" : "Robert Downey Jr., Samuel L. Jackson, Zoe Saldaña",
+      "plot_words" : "universe-changing",
+      "title" : "Avengers: Endgame",
+      "year" : "2019"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "retired assassin",
+      "title" : "John Wick",
+      "year" : "2014"
+    },
+    {
+      "actors" : "Ryan Gosling",
+      "plot_words" : "jazz musician",
+      "title" : "La La Land",
+      "year" : "2016"
+    },
+    {
+      "actors" : "Sam Worthington, Zoe Saldaña",
+      "plot_words" : "alien moon",
+      "title" : "Avatar",
+      "year" : "2009"
+    },
+    {
+      "actors" : "Matthew McConaughey, Michael Caine",
+      "plot_words" : "wormhole",
+      "title" : "Interstellar",
+      "year" : "2014"
+    },
+    {
+      "actors" : "Tom Hanks",
+      "plot_words" : "cowboy toy, space-ranger",
+      "title" : "Toy Story",
+      "year" : "1995"
+    },
+    {
+      "actors" : "Michael J. Fox",
+      "plot_words" : "modified car",
+      "title" : "Back to the Future",
+      "year" : "1985"
+    }
+  ],
+  "declared_prior_titles" : [
+    "Titanic",
+    "The Matrix",
+    "Jurassic Park",
+    "Inception",
+    "Barbie",
+    "Avengers: Endgame",
+    "John Wick",
+    "La La Land",
+    "Avatar",
+    "Interstellar",
+    "Toy Story",
+    "Back to the Future"
+  ],
+  "game" : "doubleFeature",
+  "harness_revision" : "lazy-control-recovery-v2",
+  "help_count" : 0,
+  "large_text" : true,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization.",
+    "Accessibility XXXL only; VoiceOver and Reduce Motion not exercised."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "earned",
+  "payment_gate_found" : false,
+  "persona" : "P5",
+  "points_label" : "3\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_inspection_scope" : "arcade_sheet",
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n3\/3 points\nDouble Feature\nThat’s movie magic.\n3 of 3 points earned\nTitanic + Inception · Leonardo DiCaprio\nThe Matrix + John Wick · Keanu Reeves\nBarbie + La La Land · Ryan Gosling\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 78.099918961524963,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "",
+  "utility_action_found" : false,
+  "vision_wait_seconds" : 0
+}

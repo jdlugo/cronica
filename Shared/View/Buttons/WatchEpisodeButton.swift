@@ -1,10 +1,3 @@
-//
-//  WatchEpisodeButton.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 15/08/22.
-//
-
 import SwiftUI
 
 struct WatchEpisodeButton: View {
@@ -33,7 +26,7 @@ struct WatchEpisodeButton: View {
             .padding(.vertical, 4)
 #endif
 #else
-            Label(isWatched ? "Unwatched" : "Watched",
+            Label(isWatched ? "Remove from Watched" : "Mark as Watched",
                   systemImage: isWatched ? "rectangle.fill.badge.checkmark" : "rectangle.badge.checkmark")
             .symbolEffect(isWatched ? .bounce.down : .bounce.up,
                           value: isWatched)
@@ -68,13 +61,14 @@ extension WatchEpisodeButton {
         isItemSaved = isShowSaved
     }
     
+    @MainActor
     private func handleList() async {
         let contentId = "\(show)@\(MediaType.tvShow.toInt)"
         let item = persistence.fetch(for: contentId)
         guard let item else { return }
         persistence.updateWatchedEpisodes(for: item, with: episode)
         await MainActor.run {
-            withAnimation { self.isWatched.toggle() }
+            withAnimation { isWatched.toggle() }
         }
         HapticManager.shared.successHaptic()
         let nextEpisode = await EpisodeHelper().fetchNextEpisode(for: self.episode, show: show)

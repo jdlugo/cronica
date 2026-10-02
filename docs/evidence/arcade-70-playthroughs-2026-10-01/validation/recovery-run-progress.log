@@ -1,0 +1,63 @@
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5Recovery]' started.
+PERSONA_CELL_START P5 scene
+PERSONA_CELL_COMPLETE P5 scene earned
+PERSONA_CELL_START P5 scramble
+PERSONA_CELL_COMPLETE P5 scramble earned_with_help
+PERSONA_CELL_START P5 timeline
+PERSONA_CELL_COMPLETE P5 timeline earned
+PERSONA_CELL_START P5 oddOneOut
+PERSONA_CELL_COMPLETE P5 oddOneOut earned
+PERSONA_CELL_START P5 doubleFeature
+PERSONA_CELL_COMPLETE P5 doubleFeature earned
+PERSONA_CELL_START P5 detective
+PERSONA_CELL_COMPLETE P5 detective earned_with_help
+PERSONA_CELL_START P5 memory
+PERSONA_CELL_COMPLETE P5 memory earned
+PERSONA_CELL_START P5 heist
+PERSONA_CELL_COMPLETE P5 directorsCut earned
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5Recovery]' passed (740.246 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6]' started.
+PERSONA_CELL_START P6 scene
+PERSONA_CELL_COMPLETE P6 scene earned
+PERSONA_CELL_START P6 scramble
+PERSONA_CELL_COMPLETE P6 scramble earned_with_help
+PERSONA_CELL_START P6 casting
+PERSONA_CELL_COMPLETE P6 casting earned
+PERSONA_CELL_START P6 timeline
+PERSONA_CELL_COMPLETE P6 timeline revealed_after_stop Incoming title/year outside declared knowledge: Avengers: Endgame
+PERSONA_CELL_START P6 oddOneOut
+PERSONA_CELL_COMPLETE P6 oddOneOut revealed_after_stop One or more release years outside declared knowledge
+PERSONA_CELL_START P6 doubleFeature
+PERSONA_CELL_COMPLETE P6 doubleFeature revealed_after_stop Remaining connection outside declared actor knowledge
+PERSONA_CELL_START P6 detective
+PERSONA_CELL_COMPLETE P6 detective earned_with_help
+PERSONA_CELL_START P6 memory
+PERSONA_CELL_COMPLETE P6 memory earned
+PERSONA_CELL_START P6 heist
+PERSONA_CELL_COMPLETE P6 heist revealed_after_stop Limited retry budget exhausted
+PERSONA_CELL_START P6 directorsCut
+PERSONA_CELL_COMPLETE P6 directorsCut revealed_after_stop Chronology includes a title/year outside declared knowledge
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6]' passed (581.848 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP7]' started.
+PERSONA_CELL_START P7 scene
+PERSONA_CELL_COMPLETE P7 scene earned
+PERSONA_CELL_START P7 scramble
+PERSONA_CELL_COMPLETE P7 scramble earned_with_help
+PERSONA_CELL_START P7 casting
+PERSONA_CELL_COMPLETE P7 casting revealed_after_stop Untranslated English knowledge-dependent instructions
+PERSONA_CELL_START P7 timeline
+PERSONA_CELL_COMPLETE P7 timeline revealed_after_stop Untranslated English knowledge-dependent instructions
+PERSONA_CELL_START P7 oddOneOut
+PERSONA_CELL_COMPLETE P7 oddOneOut revealed_after_stop Untranslated English knowledge-dependent instructions
+PERSONA_CELL_START P7 doubleFeature
+PERSONA_CELL_COMPLETE P7 doubleFeature revealed_after_stop Untranslated English knowledge-dependent instructions
+PERSONA_CELL_START P7 detective
+PERSONA_CELL_COMPLETE P7 detective revealed_after_stop Plot clue is untranslated English; no declared native-language inference
+PERSONA_CELL_START P7 memory
+PERSONA_CELL_COMPLETE P7 memory earned
+PERSONA_CELL_START P7 heist
+PERSONA_CELL_COMPLETE P7 heist revealed_after_stop Heist cast lock requires unknown actor knowledge
+PERSONA_CELL_START P7 directorsCut
+PERSONA_CELL_COMPLETE P7 directorsCut revealed_after_stop Untranslated English knowledge-dependent instructions
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP7]' passed (586.457 seconds).
+** TEST SUCCEEDED **

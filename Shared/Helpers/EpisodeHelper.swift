@@ -1,13 +1,6 @@
-//
-//  EpisodeHelper.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 08/05/23.
-//
-
 import Foundation
 
-class EpisodeHelper: @unchecked Sendable {
+class EpisodeHelper {
     private let network = NetworkService.shared
     
     func fetchNextEpisode(for episode: Episode, show: Int) async -> Episode? {
@@ -38,11 +31,14 @@ class EpisodeHelper: @unchecked Sendable {
             }
         } catch {
             if Task.isCancelled { return nil }
+            let message = "Episode:\(episode.seasonNumber as Any)\nSeason:\(episode.seasonNumber as Any)\nShow: \(show).\nError: \(error.localizedDescription)"
             guard let showContent = try? await network.fetchItem(id: show, type: .tvShow) else {
+                CronicaTelemetry.shared.handleMessage(message, for: "EpisodeHelper.fetchNextEpisode")
                 return nil
             }
             let lastEpisodeToAir = showContent.lastEpisodeToAir
             guard let lastEpisodeToAir else {
+                CronicaTelemetry.shared.handleMessage(message, for: "EpisodeHelper.fetchNextEpisode")
                 return nil
             }
             if lastEpisodeToAir.itemEpisodeNumber == episode.itemEpisodeNumber {
@@ -50,6 +46,7 @@ class EpisodeHelper: @unchecked Sendable {
                 if showContent.itemStatus == .ended && hasLastEpisodeReleased {
                     let contentId = "\(show)@\(MediaType.tvShow.toInt)"
                     guard let watchlistItem = PersistenceController.shared.fetch(for: contentId) else {
+                        CronicaTelemetry.shared.handleMessage(message, for: "EpisodeHelper.fetchNextEpisode")
                         return nil
                     }
                     PersistenceController.shared.updateWatched(for: watchlistItem)

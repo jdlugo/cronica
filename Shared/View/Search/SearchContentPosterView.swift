@@ -1,12 +1,5 @@
-//
-//  SearchContentPosterView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 11/08/23.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct SearchContentPosterView: View {
     let item: SearchItemContent
@@ -66,9 +59,14 @@ struct SearchContentPosterView: View {
     
     private var image: some View {
         NavigationLink(value: item) {
-            SearchPosterImageView(imageUrl: item.posterImageMedium, title: item.itemTitle, type: item.itemContentMedia)
-                .overlay{ overlay }
-                .transition(.opacity)
+            WebImage(url: item.posterImageMedium) { image in
+                image.resizable()
+            } placeholder: {
+                PosterPlaceholder(title: item.itemTitle, type: item.itemContentMedia)
+            }
+            .aspectRatio(contentMode: .fill)
+            .overlay{ overlay }
+            .transition(.opacity)
                 .frame(width: settings.isCompactUI ? DrawingConstants.compactPosterWidth : DrawingConstants.posterWidth,
                        height: settings.isCompactUI ? DrawingConstants.compactPosterHeight : DrawingConstants.posterHeight)
                 .clipShape(
@@ -92,13 +90,33 @@ struct SearchContentPosterView: View {
                     }
                 }
                 .sheet(isPresented: $showNote) {
-                    ReviewView(id: item.itemContentID, showView: $showNote)
+#if os(iOS) || os(macOS)
+                    NavigationStack {
+                        ReviewView(id: item.itemContentID, showView: $showNote)
+                    }
+                    .presentationDetents([.large])
+#if os(macOS)
+                    .frame(width: 400, height: 400, alignment: .center)
+#elseif os(iOS)
+                    .appTheme()
+                    .appTint()
+#endif
+#endif
                 }
                 .sheet(isPresented: $showCustomListView) {
-                    ItemContentCustomListSelector(contentID: item.itemContentID,
-                                                  showView: $showCustomListView,
-                                                  title: item.itemTitle,
-                                                  image: item.posterImageMedium)
+                    NavigationStack {
+                        ItemContentCustomListSelector(contentID: item.itemContentID,
+                                                      showView: $showCustomListView,
+                                                      title: item.itemTitle, image: item.cardImageSmall)
+                    }
+                    .presentationDetents([.large])
+                    .presentationDragIndicator(.visible)
+#if os(macOS)
+                    .frame(width: 500, height: 600, alignment: .center)
+#else
+                    .appTheme()
+                    .appTint()
+#endif
                 }
         }
         .searchItemContextMenu(item: item,
@@ -134,20 +152,20 @@ struct SearchContentPosterView: View {
                         }
                     }
                     if isFavorite {
-                        Image(systemName: "suit.heart")
+                        Image(systemName: "suit.heart.fill")
                             .imageScale(.small)
                             .foregroundColor(.white.opacity(0.9))
                             .padding([.vertical])
                             .padding(.trailing, 4)
                     }
                     if isWatched {
-                        Image(systemName: "rectangle.badge.checkmark")
+                        Image(systemName: "rectangle.badge.checkmark.fill")
                             .imageScale(.small)
                             .foregroundColor(.white.opacity(0.9))
                             .padding([.vertical])
                             .padding(.trailing, 4)
                     }
-                    Image(systemName: "square.stack")
+                    Image(systemName: "square.stack.fill")
                         .imageScale(.small)
                         .foregroundColor(.white.opacity(0.9))
                         .padding([.vertical, .trailing])
@@ -188,23 +206,6 @@ struct SearchContentPosterView: View {
     }
 }
 
-private struct SearchPosterImageView: View {
-    let imageUrl: URL?
-    let title: String
-    let type: MediaType
-    var body: some View {
-        LazyImage(url: imageUrl) { state in
-            if let image = state.image {
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } else {
-                PosterPlaceholder(title: title, type: type)
-            }
-        }
-    }
-}
-
 private struct DrawingConstants {
 #if os(tvOS)
     static let posterWidth: CGFloat = 260
@@ -213,7 +214,7 @@ private struct DrawingConstants {
     static let posterWidth: CGFloat = 160
     static let posterHeight: CGFloat = 240
 #endif
-    static let posterRadius: CGFloat = 12
+    static let posterRadius: CGFloat = 8
     static let compactPosterWidth: CGFloat = 80
     static let compactPosterRadius: CGFloat = 4
     static let compactPosterHeight: CGFloat = 140

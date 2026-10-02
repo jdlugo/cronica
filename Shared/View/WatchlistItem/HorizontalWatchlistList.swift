@@ -1,10 +1,3 @@
-//
-//  HorizontalWatchlistList.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 07/05/23.
-//
-
 import SwiftUI
 
 struct HorizontalWatchlistList: View {
@@ -17,17 +10,15 @@ struct HorizontalWatchlistList: View {
     @Binding var shouldReload: Bool
     var body: some View {
         VStack {
-#if os(tvOS) || os(visionOS)
+#if os(tvOS)
             TitleView(title: title,
                       subtitle: subtitle)
-#if os(tvOS)
             .padding(.leading, 64)
-#endif
 #else
             NavigationLink(value: [title:items]) {
                 TitleView(title: title,
                           subtitle: subtitle,
-                          showChevron: items.count > 4 ? true : false)
+                          showChevron: true)
             }
             .buttonStyle(.plain)
 #endif

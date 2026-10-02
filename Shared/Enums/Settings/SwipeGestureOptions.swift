@@ -1,10 +1,3 @@
-//
-//  SwipeGestureOptions.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 03/02/23.
-//
-
 import Foundation
 
 enum SwipeGestureOptions: String, CaseIterable, Identifiable {
@@ -12,12 +5,18 @@ enum SwipeGestureOptions: String, CaseIterable, Identifiable {
     case markWatch, markFavorite, markPin, markArchive, delete, share
     var localizableName: String {
         switch self {
-        case .markWatch: NSLocalizedString("Watch", comment: "")
-        case .markFavorite: NSLocalizedString("Favorite", comment: "")
-        case .markPin: NSLocalizedString("Pin", comment: "")
-        case .markArchive: NSLocalizedString("Archive", comment: "")
-        case .delete: NSLocalizedString("Remove", comment: "")
-        case .share: NSLocalizedString("Share", comment: "")
+        case .markWatch:
+            return NSLocalizedString("swipeGestureWatch", comment: "")
+        case .markFavorite:
+            return NSLocalizedString("swipeGestureFavorite", comment: "")
+        case .markPin:
+            return NSLocalizedString("swipeGesturePin", comment: "")
+        case .markArchive:
+            return NSLocalizedString("swipeGestureArchive", comment: "")
+        case .delete:
+            return NSLocalizedString("Remove", comment: "")
+        case .share:
+            return NSLocalizedString("swipeGestureShare", comment: "")
         }
     }
 }
@@ -29,12 +28,18 @@ enum SecondaryButtonOptions: String, CaseIterable, Identifiable {
     
     var localizableTitle: String {
         switch self {
-        case .watched: NSLocalizedString("Watch", comment: "")
-        case .favorite: NSLocalizedString("Favorite", comment: "")
-        case .archive: NSLocalizedString("Archive", comment: "")
-        case .pin: NSLocalizedString("Pin", comment: "")
-        case .review: NSLocalizedString("Review", comment: "")
-        case .lists: NSLocalizedString("Lists", comment: "")
+        case .watched:
+            return NSLocalizedString("Watch", comment: "")
+        case .favorite:
+            return NSLocalizedString("Favorite", comment: "")
+        case .archive:
+            return NSLocalizedString("Archive", comment: "")
+        case .pin:
+            return NSLocalizedString("Pin", comment: "")
+        case .review:
+            return NSLocalizedString("Review", comment: "")
+        case .lists:
+            return NSLocalizedString("Lists", comment: "")
         }
     }
 }

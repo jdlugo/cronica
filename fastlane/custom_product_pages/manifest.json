@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "app_id": "455556959",
+  "pages": [
+    {
+      "reference_name": "Daily Puzzle - International",
+      "primary_locale": {
+        "locale": "en-US",
+        "promotional_text": "Solve today's emoji movie puzzle, then discover what to watch and where to stream it."
+      },
+      "slug": "daily-puzzle",
+      "screen_order": ["HomeScreen", "DetailScreen", "WatchlistScreen"],
+      "locales": {
+        "fr-FR": {
+          "promotional_text": "Devinez le film avec les emojis du jour, enchaînez les défis, puis découvrez où le regarder et gardez vos envies dans votre watchlist.",
+          "keywords": ["jeu", "devinette", "quotidien"]
+        },
+        "es-ES": {
+          "promotional_text": "Adivina la película con el juego diario de emojis, supera nuevos retos, descubre dónde verla y guarda tus próximas pelis.",
+          "keywords": ["juego", "emoji", "diario"]
+        },
+        "es-MX": {
+          "promotional_text": "Adivina la peli con el reto diario de emojis, sigue jugando, descubre dónde verla y guarda lo que quieres ver.",
+          "keywords": ["juego", "emoji", "diario"]
+        },
+        "pt-BR": {
+          "promotional_text": "Adivinhe o filme no desafio diário de emojis, continue jogando, descubra onde assistir e salve sua próxima sessão.",
+          "keywords": ["jogo", "emoji", "diário"]
+        }
+      }
+    },
+    {
+      "reference_name": "Movie Tracker - International",
+      "primary_locale": {
+        "locale": "en-US",
+        "promotional_text": "Track movies and shows, build your watchlist, and find where to stream them."
+      },
+      "slug": "movie-tracker",
+      "screen_order": ["WatchlistScreen", "DetailScreen", "HomeScreen"],
+      "locales": {
+        "fr-FR": {
+          "promotional_text": "Organisez les films et séries à voir, suivez vos épisodes et trouvez les plateformes disponibles dans votre région.",
+          "keywords": ["watchlist", "épisodes", "saisons"]
+        },
+        "es-ES": {
+          "promotional_text": "Organiza películas y series, sigue tus episodios y encuentra las plataformas disponibles en tu región.",
+          "keywords": ["watchlist", "episodios", "temporadas"]
+        },
+        "es-MX": {
+          "promotional_text": "Organiza pelis y series, sigue tus episodios y encuentra las plataformas disponibles en México.",
+          "keywords": ["watchlist", "episodios", "temporadas"]
+        },
+        "pt-BR": {
+          "promotional_text": "Organize filmes e séries, acompanhe episódios e encontre as plataformas disponíveis na sua região.",
+          "keywords": ["watchlist", "episódios", "temporadas"]
+        }
+      }
+    }
+  ]
+}

@@ -1,14 +1,7 @@
-//
-//  WatchlistSectionDetails.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 28/01/23.
-//
-
 import SwiftUI
-#if !os(tvOS)
+#if os(iOS) || os(macOS)
 struct WatchlistSectionDetails: View {
-    var title = String(localized: "Upcoming")
+    var title = "Upcoming"
     let items: [WatchlistItem]
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
@@ -21,9 +14,15 @@ struct WatchlistSectionDetails: View {
             case .poster: posterStyle
             }
         }
-        .scrollBounceBehavior(.basedOnSize)
+        .toolbar {
+#if os(iOS)
+            ToolbarItem(placement: .navigationBarTrailing) {
+                styleOptions
+            }
+#endif
+        }
         .actionPopup(isShowing: $showPopup, for: popupType)
-        .navigationTitle(title)
+        .navigationTitle(LocalizedStringKey(title))
 #if os(iOS)
         .navigationBarTitleDisplayMode(.large)
 #endif
@@ -66,15 +65,32 @@ struct WatchlistSectionDetails: View {
             }.padding(.all, settings.isCompactUI ? 10 : nil)
         }
     }
+    
+#if os(iOS) || os(macOS)
+    private var styleOptions: some View {
+        Menu {
+            Picker(selection: $settings.sectionStyleType) {
+                ForEach(SectionDetailsPreferredStyle.allCases) { item in
+                    Text(item.title).tag(item)
+                }
+            } label: {
+                Label("sectionStyleTypePicker", systemImage: "circle.grid.2x2")
+            }
+        } label: {
+            Label("sectionStyleTypePicker", systemImage: "circle.grid.2x2")
+                .labelStyle(.iconOnly)
+        }
+    }
+#endif
 }
 
 private struct DrawingConstants {
-#if os(macOS) || os(visionOS)
+#if os(macOS)
     static let columns = [GridItem(.adaptive(minimum: 240))]
 #else
     static let columns = [GridItem(.adaptive(minimum: UIDevice.isIPad ? 240 : 160))]
 #endif
-#if os(macOS) || os(visionOS)
+#if os(macOS)
     static let posterColumns = [GridItem(.adaptive(minimum: 160))]
 #elseif os(iOS)
     static let posterColumns  = [GridItem(.adaptive(minimum: 160))]

@@ -1,15 +1,8 @@
-//
-//  DetailedReleaseDateView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 27/06/23.
-//
-
 import SwiftUI
 
 struct DetailedReleaseDateView: View {
     let item: [ReleaseDatesResult]?
-    var productionRegion = "US"
+    var productionRegion: String?
     @State private var dates = [ReleaseDateDisplay]()
     @State private var isLoading = true
     @Binding var dismiss: Bool
@@ -30,21 +23,13 @@ struct DetailedReleaseDateView: View {
                         }
                     }
                 }
+                .scrollBounceBehavior(.basedOnSize)
             }
-            .scrollBounceBehavior(.basedOnSize)
             .toolbar {
-#if !os(macOS)
-                ToolbarItem(placement: .topBarLeading) {
-                    RoundedCloseButton { dismiss.toggle() }
-                }
-#else
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Done") { dismiss.toggle() }
-                }
-#endif
+                Button("Done") { dismiss.toggle() }
             }
             .onAppear(perform: load)
-            .navigationTitle("Release Dates")
+            .navigationTitle("releaseDates")
 #if os(macOS)
             .formStyle(.grouped)
 #elseif os(iOS)
@@ -52,8 +37,6 @@ struct DetailedReleaseDateView: View {
 #endif
         }
         .presentationDetents([.medium])
-        .presentationDragIndicator(.visible)
-        .presentationCornerRadius(12)
         .appTheme()
         .appTint()
     }
@@ -61,29 +44,20 @@ struct DetailedReleaseDateView: View {
 
 extension DetailedReleaseDateView {
     private func load() {
-        guard let item else { return }
-        if item.contains(where: { $0.iso31661?.lowercased() == Locale.userRegion.lowercased() }) {
-            guard let releaseDateRegion = item.first(where: { $0.iso31661?.lowercased() == Locale.userRegion.lowercased() })
-            else { return }
-            let result = fetchDates(releaseDateRegion.releaseDates, region: Locale.userRegion)
-            guard let result else { return }
-            dates = result
-            isLoading = false
-        } else if item.contains(where: {$0.iso31661?.lowercased() == productionRegion.lowercased() }) {
-            guard let releaseDateRegion = item.first(where: { $0.iso31661?.lowercased() == productionRegion.lowercased() })
-            else { return }
-            let result = fetchDates(releaseDateRegion.releaseDates, region: productionRegion)
-            guard let result else { return }
-            dates = result
-            isLoading = false
-        } else {
-            guard let releaseDateRegion = item.first(where: { $0.iso31661?.lowercased() == "US".lowercased() })
-            else { return }
-            let result = fetchDates(releaseDateRegion.releaseDates, region: "US")
-            guard let result else { return }
-            dates = result
-            isLoading = false
+        guard let item,
+              let preferredRegion = DatesManager.preferredReleaseRegion(
+                  availableRegions: item.compactMap { $0.iso31661 },
+                  userRegion: Locale.userRegion,
+                  productionRegion: productionRegion
+              ),
+              let releaseDateRegion = item.first(where: {
+                  $0.iso31661?.caseInsensitiveCompare(preferredRegion) == .orderedSame
+              }),
+              let result = fetchDates(releaseDateRegion.releaseDates, region: preferredRegion) else {
+            return
         }
+        dates = result
+        isLoading = false
     }
     
     private func fetchDates(_ dates: [ReleaseDate]?, region: String?) -> [ReleaseDateDisplay]? {

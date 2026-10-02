@@ -1,0 +1,352 @@
+{
+  "generationKey": "daily-reel-2026-09-01-three-eras-of-the-bat-v1",
+  "intendedPublicationId": "2026-09-01",
+  "themeSeed": "Shadows, memory, and masks",
+  "publicReelTemplate": "../fixtures/published-reel-2026-09-01.json",
+  "contentVersion": "daily-reel-2026-09-01.1",
+  "publicationWindow": {
+    "availableAt": "2026-09-01T05:00:00Z",
+    "expiresAt": "2026-09-02T05:00:00Z"
+  },
+  "posterPaths": {
+    "tmdb:155": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "tmdb:77": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg",
+    "tmdb:374720": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg",
+    "tmdb:872585": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    "tmdb:268": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg",
+    "tmdb:272": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
+    "tmdb:414906": "/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+  },
+  "answers": {
+    "en": {
+      "decode": {
+        "acceptedAnswers": [
+          "The Dark Knight",
+          "Dark Knight"
+        ],
+        "titleLength": 13,
+        "hint": "Think of Gotham's battle between a bat and a clown.",
+        "revealTitle": "The Dark Knight",
+        "explanation": "A dark moon supplies \"dark,\" and the chess knight completes the rebus."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "His films often bend time, memory, and identity.",
+        "explanation": "Christopher Nolan directed Memento, Dunkirk, and Oppenheimer."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:268",
+          "tmdb:272",
+          "tmdb:414906"
+        ],
+        "hint": "The three Gotham eras began in the late 1980s, mid-2000s, and early 2020s.",
+        "explanation": "Batman opened in 1989, Batman Begins in 2005, and The Batman in 2022."
+      },
+      "threadReveal": {
+        "title": "Three eras of the Bat",
+        "explanation": "Christopher Nolan directed The Dark Knight; then you found his fingerprints across Memento, Dunkirk, and Oppenheimer before ordering Batman, Batman Begins, and The Batman through three generations of Gotham."
+      }
+    },
+    "fr-FR": {
+      "decode": {
+        "acceptedAnswers": [
+          "The Dark Knight : Le Chevalier noir",
+          "The Dark Knight",
+          "Le Chevalier noir"
+        ],
+        "titleLength": 28,
+        "hint": "Pense au duel de Gotham entre une chauve-souris et un clown.",
+        "revealTitle": "The Dark Knight : Le Chevalier noir",
+        "explanation": "Une lune sombre donne « dark » et le cavalier d’échecs complète le rébus."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Ses films jouent souvent avec le temps, la mémoire et l’identité.",
+        "explanation": "Christopher Nolan a réalisé Memento, Dunkerque et Oppenheimer."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:268",
+          "tmdb:272",
+          "tmdb:414906"
+        ],
+        "hint": "Ces trois époques de Gotham commencent à la fin des années 1980, au milieu des années 2000 et au début des années 2020.",
+        "explanation": "Batman est sorti en 1989, Batman Begins en 2005 et The Batman en 2022."
+      },
+      "threadReveal": {
+        "title": "Trois époques de Batman",
+        "explanation": "Christopher Nolan a réalisé The Dark Knight : Le Chevalier noir ; tu as ensuite retrouvé sa patte dans Memento, Dunkerque et Oppenheimer avant de classer Batman, Batman Begins et The Batman sur trois générations de Gotham."
+      }
+    },
+    "es-ES": {
+      "decode": {
+        "acceptedAnswers": [
+          "El caballero oscuro",
+          "The Dark Knight"
+        ],
+        "titleLength": 17,
+        "hint": "Piensa en la batalla de Gotham entre un murciélago y un payaso.",
+        "revealTitle": "El caballero oscuro",
+        "explanation": "Una luna oscura aporta «oscuro» y el caballo de ajedrez completa el jeroglífico."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Sus películas suelen jugar con el tiempo, la memoria y la identidad.",
+        "explanation": "Christopher Nolan dirigió Memento, Dunkerque y Oppenheimer."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:268",
+          "tmdb:272",
+          "tmdb:414906"
+        ],
+        "hint": "Las tres eras de Gotham comenzaron a finales de los 80, a mediados de los 2000 y a principios de los 2020.",
+        "explanation": "Batman se estrenó en 1989, Batman Begins en 2005 y The Batman en 2022."
+      },
+      "threadReveal": {
+        "title": "Tres eras de Batman",
+        "explanation": "Christopher Nolan dirigió El caballero oscuro; después reconociste su huella en Memento, Dunkerque y Oppenheimer antes de ordenar Batman, Batman Begins y The Batman a través de tres generaciones de Gotham."
+      }
+    },
+    "es-MX": {
+      "decode": {
+        "acceptedAnswers": [
+          "Batman: El caballero de la noche",
+          "El caballero de la noche",
+          "The Dark Knight"
+        ],
+        "titleLength": 26,
+        "hint": "Piensa en la batalla de Gotham entre un murciélago y un payaso.",
+        "revealTitle": "Batman: El caballero de la noche",
+        "explanation": "Una luna oscura aporta la oscuridad y el caballo de ajedrez completa el acertijo."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Sus películas suelen jugar con el tiempo, la memoria y la identidad.",
+        "explanation": "Christopher Nolan dirigió Amnesia, Dunkerque y Oppenheimer."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:268",
+          "tmdb:272",
+          "tmdb:414906"
+        ],
+        "hint": "Las tres eras de Gotham comenzaron a finales de los 80, a mediados de los 2000 y a principios de los 2020.",
+        "explanation": "Batman se estrenó en 1989, Batman inicia en 2005 y The Batman en 2022."
+      },
+      "threadReveal": {
+        "title": "Tres eras de Batman",
+        "explanation": "Christopher Nolan dirigió Batman: El caballero de la noche; después reconociste su huella en Amnesia, Dunkerque y Oppenheimer antes de ordenar Batman, Batman inicia y The Batman a través de tres generaciones de Gotham."
+      }
+    },
+    "pt-BR": {
+      "decode": {
+        "acceptedAnswers": [
+          "Batman: O Cavaleiro das Trevas",
+          "O Cavaleiro das Trevas",
+          "The Dark Knight"
+        ],
+        "titleLength": 25,
+        "hint": "Pense na batalha de Gotham entre um morcego e um palhaço.",
+        "revealTitle": "Batman: O Cavaleiro das Trevas",
+        "explanation": "Uma lua escura representa as trevas, e o cavalo de xadrez completa o enigma."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Seus filmes costumam brincar com tempo, memória e identidade.",
+        "explanation": "Christopher Nolan dirigiu Amnésia, Dunkirk e Oppenheimer."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:268",
+          "tmdb:272",
+          "tmdb:414906"
+        ],
+        "hint": "As três eras de Gotham começaram no fim dos anos 1980, em meados dos anos 2000 e no início dos anos 2020.",
+        "explanation": "Batman estreou em 1989, Batman Begins em 2005 e The Batman em 2022."
+      },
+      "threadReveal": {
+        "title": "Três eras do Batman",
+        "explanation": "Christopher Nolan dirigiu Batman: O Cavaleiro das Trevas; depois você reconheceu sua marca em Amnésia, Dunkirk e Oppenheimer antes de ordenar Batman, Batman Begins e The Batman por três gerações de Gotham."
+      }
+    }
+  },
+  "movieFacts": [
+    {
+      "movieId": "tmdb:155",
+      "tmdbId": 155,
+      "releaseDate": "2008-07-16",
+      "directorIds": [
+        "person:525"
+      ],
+      "actorIds": [
+        "person:3894",
+        "person:1810",
+        "person:6383",
+        "person:3895",
+        "person:1579"
+      ],
+      "genreIds": [
+        28,
+        80,
+        53
+      ],
+      "franchiseId": "collection:263"
+    },
+    {
+      "movieId": "tmdb:77",
+      "tmdbId": 77,
+      "releaseDate": "2000-10-11",
+      "directorIds": [
+        "person:525"
+      ],
+      "actorIds": [
+        "person:529",
+        "person:530",
+        "person:532",
+        "person:534",
+        "person:535"
+      ],
+      "genreIds": [
+        9648,
+        53
+      ],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:374720",
+      "tmdbId": 374720,
+      "releaseDate": "2017-07-19",
+      "directorIds": [
+        "person:525"
+      ],
+      "actorIds": [
+        "person:1687041",
+        "person:2524",
+        "person:40900",
+        "person:11181",
+        "person:2037"
+      ],
+      "genreIds": [
+        10752,
+        28,
+        18
+      ],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:872585",
+      "tmdbId": 872585,
+      "releaseDate": "2023-07-19",
+      "directorIds": [
+        "person:525"
+      ],
+      "actorIds": [
+        "person:2037",
+        "person:5081",
+        "person:1892",
+        "person:3223",
+        "person:1373737"
+      ],
+      "genreIds": [
+        18,
+        36
+      ],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:268",
+      "tmdbId": 268,
+      "releaseDate": "1989-06-21",
+      "directorIds": [
+        "person:510"
+      ],
+      "actorIds": [
+        "person:2232",
+        "person:514",
+        "person:326",
+        "person:4040",
+        "person:3798"
+      ],
+      "genreIds": [
+        14,
+        28,
+        80
+      ],
+      "franchiseId": "collection:120794"
+    },
+    {
+      "movieId": "tmdb:272",
+      "tmdbId": 272,
+      "releaseDate": "2005-06-10",
+      "directorIds": [
+        "person:525"
+      ],
+      "actorIds": [
+        "person:3894",
+        "person:3895",
+        "person:3896",
+        "person:3897",
+        "person:64"
+      ],
+      "genreIds": [
+        18,
+        80,
+        28
+      ],
+      "franchiseId": "collection:263"
+    },
+    {
+      "movieId": "tmdb:414906",
+      "tmdbId": 414906,
+      "releaseDate": "2022-03-01",
+      "directorIds": [
+        "person:32278"
+      ],
+      "actorIds": [
+        "person:11288",
+        "person:37153",
+        "person:2954",
+        "person:72466",
+        "person:17142"
+      ],
+      "genreIds": [
+        80,
+        9648,
+        53
+      ],
+      "franchiseId": "collection:948485"
+    }
+  ],
+  "connection": {
+    "kind": "director",
+    "key": "person:525",
+    "evidenceByMovieId": {
+      "tmdb:77": "TMDb credits Christopher Nolan as director of Memento.",
+      "tmdb:374720": "TMDb credits Christopher Nolan as director of Dunkirk.",
+      "tmdb:872585": "TMDb credits Christopher Nolan as director of Oppenheimer."
+    }
+  },
+  "difficulty": {
+    "decode": "medium",
+    "connect": "medium",
+    "arrange": "medium"
+  },
+  "safety": {
+    "isSafe": true,
+    "categories": []
+  },
+  "recentMovieIds": [
+    "tmdb:329",
+    "tmdb:578",
+    "tmdb:601",
+    "tmdb:218",
+    "tmdb:603",
+    "tmdb:27205",
+    "tmdb:105"
+  ],
+  "recentThemeKeys": [
+    "Extraordinary journeys"
+  ]
+}

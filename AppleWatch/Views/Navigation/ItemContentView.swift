@@ -1,25 +1,23 @@
 //
 //  ItemContentView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 03/08/22.
 //
 
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct ItemContentView: View {
     let id: Int
     let title: String
 	let type: MediaType
     let image: URL?
-    @StateObject private var viewModel = ItemContentViewModel()
+    @State private var viewModel = ItemContentViewModel()
     @State private var showCustomListSheet = false
     @State private var showMoreOptions = false
     @State private var isWatched = false
 	@StateObject private var store = SettingsStore.shared
-    @State private var showConfirmationPopup = false
-    @StateObject private var settings = SettingsStore.shared
     var body: some View {
         VStack {
             ScrollView {
@@ -38,48 +36,21 @@ struct ItemContentView: View {
 						.foregroundColor(.secondary)
 				}
                 
-                Button {
-                    if viewModel.isInWatchlist {
-                        if SettingsStore.shared.showRemoveConfirmation {
-                            showConfirmationPopup = true
-                        } else {
-                            updateWatchlist()
-                        }
-                    } else {
-                        HapticManager.shared.successHaptic()
-                        updateWatchlist()
-                    }
-                } label: {
-                    HStack {
-                        Image(systemName: viewModel.isInWatchlist ? "minus.circle.fill" : "plus.circle.fill")
-                            .symbolEffect(viewModel.isInWatchlist ? .bounce.down : .bounce.up,
-                                          value: viewModel.isInWatchlist)
-                            .imageScale(.medium)
-                        Text(viewModel.isInWatchlist ? "Remove" : "Add")
-                            .lineLimit(1)
-                            .padding(.top, 2)
-                            .font(.caption)
-                    }
-                }
-                .buttonStyle(.bordered)
-                .controlSize(.small)
-                .disabled(viewModel.isLoading)
-                .confirmationDialog("Are You Sure?",
-                                    isPresented: $showConfirmationPopup,
-                                    titleVisibility: .visible) {
-                    Button("Confirm") { updateWatchlist() }
-                    Button("Cancel") {  showConfirmationPopup = false }
-                }
-                .padding()
+                DetailWatchlistButton(showCustomList: $showCustomListSheet)
+                    .environment(viewModel)
+                    .padding()
                 
                 if let seasons = viewModel.content?.seasons {
                     NavigationLink("Seasons", value: seasons)
                         .padding([.horizontal, .bottom])
                 }
                 
+                if viewModel.isInWatchlist {
+                    customListButton.padding([.horizontal, .bottom])
+                }
+                
                 HStack {
                     if viewModel.isInWatchlist {
-                        //customListButton
                         Button {
                             showMoreOptions.toggle()
                         } label: {
@@ -90,47 +61,42 @@ struct ItemContentView: View {
                         .sheet(isPresented: $showMoreOptions) {
                             VStack {
                                 ScrollView {
-                                    pinButton.padding(.bottom)
-                                    favoriteButton.padding(.bottom)
                                     watchButton.padding(.bottom)
+                                    favoriteButton.padding(.bottom)
+                                    pinButton.padding(.bottom)
                                     archiveButton.padding(.bottom)
                                 }
                                 .padding(.horizontal)
                             }
                         }
                     }
+                    
+					shareButton
                 }
                 .padding([.bottom, .horizontal])
                 
                 AboutSectionView(about: viewModel.content?.itemOverview)
-                
-                shareButton
                 
                 AttributionView()
             }
         }
         .task { await viewModel.load(id: id, type: type) }
         .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.large)
         .redacted(reason: viewModel.isLoading ? .placeholder : [])
         .sheet(isPresented: $showCustomListSheet) {
             if let contentID = viewModel.content?.itemContentID {
-                ItemContentCustomListSelector(contentID: contentID,
-                                              showView: $showCustomListSheet,
-                                              title: title,
-                                              image: viewModel.content?.posterImageMedium)
-                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                NavigationStack {
+                    ItemContentCustomListSelector(contentID: contentID,
+                                                  showView: $showCustomListSheet,
+                                                  title: title,
+                                                  image: viewModel.content?.cardImageSmall)
+                }
             }
         }
         .navigationDestination(for: [Season].self) { seasons in
-            if let season = viewModel.content?.seasons {
-                SeasonListView(
-                    showID: id,
-                    showTitle: title,
-                    seasons: season,
-                    isInWatchlist: $viewModel.isInWatchlist,
-                    showCover: viewModel.content?.cardImageMedium
-                )
+            if let seasons = viewModel.content?.itemSeasons {
+                SeasonListView(showID: id, showTitle: title, numberOfSeasons: seasons, isInWatchlist: $viewModel.isInWatchlist, showCover: viewModel.content?.cardImageMedium)
             }
         }
         .navigationDestination(for: [Int:Episode].self) { item in
@@ -140,18 +106,18 @@ struct ItemContentView: View {
                 EpisodeDetailsView(episode: value, season: keys, show: id, showTitle: title, isWatched: $isWatched)
             }
         }
-        .background { TranslucentBackground(image: image) }
+        .background {
+            TranslucentBackground(image: image)
+        }
     }
     
     private var watchButton: some View {
         Button {
             viewModel.update(.watched)
         } label: {
-            HStack {
+            VStack {
                 Image(systemName: viewModel.isWatched ? "rectangle.badge.checkmark.fill" : "rectangle.badge.checkmark")
-                    .symbolEffect(viewModel.isWatched ? .bounce.down : .bounce.up,
-                                  value: viewModel.isWatched)
-                    .imageScale(.medium)
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isWatched, value: viewModel.isWatched))
                 Text("Watched")
                     .padding(.top, 2)
                     .font(.caption)
@@ -159,25 +125,24 @@ struct ItemContentView: View {
             }
             .padding(.vertical, 2)
         }
-        .buttonStyle(.bordered)
+        .buttonStyle(.borderedProminent)
     }
     
     private var customListButton: some View {
-        Button("Add To List", systemImage: "rectangle.on.rectangle.angled") {
+        Button {
             showCustomListSheet.toggle()
+        } label: {
+            Text("addToCustomList")
         }
-        .labelStyle(.iconOnly)
     }
     
     private var favoriteButton: some View {
         Button {
             viewModel.update(.favorite)
         } label: {
-            HStack {
+            VStack {
                 Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                    .symbolEffect(viewModel.isFavorite ? .bounce.down : .bounce.up,
-                                  value: viewModel.isFavorite)
-                    .imageScale(.medium)
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isFavorite, value: viewModel.isFavorite))
                 Text("Favorite")
                     .padding(.top, 2)
                     .font(.caption)
@@ -185,18 +150,16 @@ struct ItemContentView: View {
             }
             .padding(.vertical, 2)
         }
-        .buttonStyle(.bordered)
+        .buttonStyle(.borderedProminent)
     }
     
     private var archiveButton: some View {
         Button {
             viewModel.update(.archive)
         } label: {
-            HStack {
+            VStack {
                 Image(systemName: viewModel.isArchive ? "archivebox.fill" : "archivebox")
-                    .symbolEffect(viewModel.isArchive ? .bounce.down : .bounce.up,
-                                  value: viewModel.isArchive)
-                    .imageScale(.medium)
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isArchive, value: viewModel.isArchive))
                 Text("Archive")
                     .padding(.top, 2)
                     .font(.caption)
@@ -204,18 +167,16 @@ struct ItemContentView: View {
             }
             .padding(.vertical, 2)
         }
-        .buttonStyle(.bordered)
+        .buttonStyle(.borderedProminent)
     }
     
     private var pinButton: some View {
         Button {
             viewModel.update(.pin)
         } label: {
-            HStack {
+            VStack {
                 Image(systemName: viewModel.isPin ? "pin.fill" : "pin")
-                    .symbolEffect(viewModel.isPin ? .bounce.down : .bounce.up,
-                                  value: viewModel.isPin)
-                    .imageScale(.medium)
+                    .modifier(WatchSymbolEffectModifier(isActive: viewModel.isPin, value: viewModel.isPin))
                 Text("Pin")
                     .padding(.top, 2)
                     .font(.caption)
@@ -223,14 +184,17 @@ struct ItemContentView: View {
             }
             .padding(.vertical, 2)
         }
-        .buttonStyle(.bordered)
+        .buttonStyle(.borderedProminent)
     }
 	
 	@ViewBuilder
 	private var shareButton: some View {
 		switch store.shareLinkPreference {
-		case .tmdb: if let url = viewModel.content?.itemURL { ShareLink(item: url) }
-		case .cronica: if let cronicaUrl { ShareLink(item: cronicaUrl) }
+		case .tmdb: if let url = viewModel.content?.itemURL { ShareLink(item: url).labelStyle(.iconOnly) }
+		case .cronica: if let cronicaUrl {
+			ShareLink(item: cronicaUrl)
+				.labelStyle(.iconOnly)
+		}
 		}
 	}
 	
@@ -239,22 +203,24 @@ struct ItemContentView: View {
 			let encodedTitle = item.itemTitle.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
 			let posterPath = item.posterPath ?? String()
 			let encodedPoster = posterPath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-			return URL(string: "https://www.oncronica.com/details?id=\(item.itemContentID)&img=\(encodedPoster ?? String())&title=\(encodedTitle ?? String())")
+			return URL(string: "https://streamingnowapp.com/details?id=\(item.itemContentID)&img=\(encodedPoster ?? String())&title=\(encodedTitle ?? String())")
 		}
 		return nil
 	}
+}
+
+// MARK: - Symbol Effect Modifier for watchOS
+private struct WatchSymbolEffectModifier: ViewModifier {
+    let isActive: Bool
+    let value: Bool
     
-    private func updateWatchlist() {
-        guard let item = viewModel.content else { return }
-        viewModel.updateWatchlist(with: item)
-        if settings.openListSelectorOnAdding && viewModel.isInWatchlist {
-            showCustomListSheet.toggle()
-        }
+    func body(content: Content) -> some View {
+        content.symbolEffect(isActive ? .bounce.down : .bounce.up, value: value)
     }
 }
 
 private struct DrawingConstants {
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let lineLimit: Int = 1
 }
 
@@ -264,3 +230,4 @@ private struct DrawingConstants {
                     type: ItemContent.example.itemContentMedia,
                     image: ItemContent.example.cardImageMedium)
 }
+

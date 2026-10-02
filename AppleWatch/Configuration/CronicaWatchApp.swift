@@ -1,6 +1,6 @@
 //
 //  CronicaWatchApp.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 02/08/22.
 //
@@ -16,21 +16,44 @@ struct CronicaWatchApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            NavigationSplitView {
-                List(selection: $selectedView) {
-                    ForEach(Screens.allCases) { screen in
-                        Label(screen.title, systemImage: screen.toSFSymbols).tag(screen)
+            TabView(selection: $selectedView) {
+                SearchView()
+                    .tag(SearchView.tag)
+                    .environment(\.managedObjectContext, persistence.container.viewContext)
+                    .tabItem {
+                        Label("Trending", systemImage: "popcorn")
+                            .labelStyle(.titleOnly)
                     }
-                }
-            } detail: {
-                switch selectedView {
-                case .trending: TrendingView().environment(\.managedObjectContext, persistence.container.viewContext)
-                case .upcoming: UpcomingListView().environment(\.managedObjectContext, persistence.container.viewContext)
-                case .watchlist: WatchlistView().environment(\.managedObjectContext, persistence.container.viewContext)
-                case .upNext: UpNextListView().environment(\.managedObjectContext, persistence.container.viewContext)
-                default: WatchlistView().environment(\.managedObjectContext, persistence.container.viewContext)
-                }
+                WatchlistView()
+                    .tag(WatchlistView.tag)
+                    .environment(\.managedObjectContext, persistence.container.viewContext)
+                    .tabItem {
+                        Label("Watchlist", systemImage: "square.stack")
+                            .labelStyle(.titleOnly)
+                    }
+                UpNextListView()
+                    .tag(UpNextListView.tag)
+                    .environment(\.managedObjectContext, persistence.container.viewContext)
+                    .tabItem {
+                        Label("Up Next", systemImage: "tv")
+                            .labelStyle(.titleOnly)
+                    }
+                UpcomingListView()
+                    .tag(UpcomingListView.tag)
+                    .environment(\.managedObjectContext, persistence.container.viewContext)
+                    .tabItem {
+                        Label("Upcoming", systemImage: "calendar")
+                            .labelStyle(.titleOnly)
+                    }
+                
+                SettingsView()
+                    .tag(SettingsView.tag)
+                    .tabItem {
+                        Label("Settings", systemImage: "gearshape")
+                            .labelStyle(.titleOnly)
+                    }
             }
+            
         }
     }
 }

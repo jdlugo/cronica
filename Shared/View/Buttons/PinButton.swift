@@ -1,10 +1,3 @@
-//
-//  PinButton.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 04/05/23.
-//
-
 import SwiftUI
 
 struct PinButton: View {
@@ -14,7 +7,7 @@ struct PinButton: View {
     @Binding var showPopup: Bool
     private let persistence = PersistenceController.shared
     var body: some View {
-        Button(isPin ? "Unpin" : "Pin",
+        Button(isPin ? "Unpin Item" : "Pin Item",
                systemImage: isPin ? "pin.fill" : "pin",
                action: updatePin)
     }

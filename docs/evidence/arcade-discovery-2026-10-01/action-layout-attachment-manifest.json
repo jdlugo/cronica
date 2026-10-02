@@ -1,0 +1,41 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "8F03A74A-45C5-4C91-A220-584C4287AE42.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-movie-saved_0_D31C135E-6DFA-4A29-AD3E-D5A35FB18DFC.png",
+        "timestamp" : 1790880065.167
+      }
+    ],
+    "testIdentifier" : "CronicaUITests/testArcadeDiscoverySavesMovieAndReturnsToReplay()",
+    "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaUITests/CronicaUITests/testArcadeDiscoverySavesMovieAndReturnsToReplay"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "54B68773-4546-4B48-B269-D6CE436D984F.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-spanish-large-text-result_0_635C0630-9ACB-44A9-857E-81EB9DBBEE23.png",
+        "timestamp" : 1790880200.676
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "F7FCE3E5-3CB0-4367-A130-F32FA725C9EA.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-spanish-large-text-saved_0_DD22FB9F-A327-46E1-8A7B-E402A6B78CB3.png",
+        "timestamp" : 1790880164.914
+      }
+    ],
+    "testIdentifier" : "CronicaUITests/testArcadeDiscoverySpanishMemoryAtLargeText()",
+    "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaUITests/CronicaUITests/testArcadeDiscoverySpanishMemoryAtLargeText"
+  }
+]

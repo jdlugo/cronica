@@ -1,0 +1,96 @@
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP1]' started.
+PERSONA_CELL_START P1 scene
+PERSONA_CELL_COMPLETE P1 scene earned
+PERSONA_CELL_START P1 scramble
+PERSONA_CELL_COMPLETE P1 scramble earned_with_help
+PERSONA_CELL_START P1 casting
+PERSONA_CELL_COMPLETE P1 casting revealed_after_stop Actor knowledge required beyond title recognition
+PERSONA_CELL_START P1 timeline
+PERSONA_CELL_COMPLETE P1 timeline revealed_after_stop Before/after year knowledge required
+PERSONA_CELL_START P1 oddOneOut
+PERSONA_CELL_COMPLETE P1 oddOneOut revealed_after_stop Release-era trivia outside declared knowledge
+PERSONA_CELL_START P1 doubleFeature
+PERSONA_CELL_COMPLETE P1 doubleFeature revealed_after_stop Shared-actor knowledge required; persona has title recognition only
+PERSONA_CELL_START P1 detective
+PERSONA_CELL_COMPLETE P1 detective earned_with_help
+PERSONA_CELL_START P1 memory
+PERSONA_CELL_COMPLETE P1 memory earned
+PERSONA_CELL_START P1 heist
+PERSONA_CELL_COMPLETE P1 heist revealed_after_stop Heist cast lock requires unknown actor knowledge
+PERSONA_CELL_START P1 directorsCut
+PERSONA_CELL_COMPLETE P1 directorsCut revealed_after_stop Chronological release knowledge required
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP1]' passed (483.764 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP2]' started.
+PERSONA_CELL_START P2 scene
+PERSONA_CELL_COMPLETE P2 scene earned
+PERSONA_CELL_START P2 scramble
+PERSONA_CELL_COMPLETE P2 scramble earned_with_help
+PERSONA_CELL_START P2 casting
+PERSONA_CELL_COMPLETE P2 casting earned
+PERSONA_CELL_START P2 timeline
+PERSONA_CELL_COMPLETE P2 timeline earned
+PERSONA_CELL_START P2 oddOneOut
+PERSONA_CELL_COMPLETE P2 oddOneOut earned
+PERSONA_CELL_START P2 doubleFeature
+PERSONA_CELL_COMPLETE P2 doubleFeature earned
+PERSONA_CELL_START P2 detective
+PERSONA_CELL_COMPLETE P2 detective earned_with_help
+PERSONA_CELL_START P2 memory
+PERSONA_CELL_COMPLETE P2 memory earned
+PERSONA_CELL_START P2 heist
+PERSONA_CELL_COMPLETE P2 heist earned
+PERSONA_CELL_START P2 directorsCut
+PERSONA_CELL_COMPLETE P2 directorsCut earned
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP2]' passed (643.602 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP3]' started.
+PERSONA_CELL_START P3 scene
+PERSONA_CELL_COMPLETE P3 scene revealed_after_stop Visible progress or selected state changed across interruption
+PERSONA_CELL_START P3 scramble
+PERSONA_CELL_COMPLETE P3 scramble earned_with_help
+PERSONA_CELL_START P3 casting
+PERSONA_CELL_COMPLETE P3 casting revealed_after_stop Visible progress or selected state changed across interruption
+PERSONA_CELL_START P3 timeline
+PERSONA_CELL_COMPLETE P3 timeline revealed_after_stop Incoming title/year outside declared knowledge: Avengers: Endgame
+PERSONA_CELL_START P3 oddOneOut
+PERSONA_CELL_COMPLETE P3 oddOneOut revealed_after_stop One or more release years outside declared knowledge
+PERSONA_CELL_START P3 doubleFeature
+PERSONA_CELL_COMPLETE P3 doubleFeature revealed_after_stop Remaining connection outside declared actor knowledge
+PERSONA_CELL_START P3 detective
+PERSONA_CELL_COMPLETE P3 detective earned_with_help
+PERSONA_CELL_START P3 memory
+PERSONA_CELL_COMPLETE P3 memory earned
+PERSONA_CELL_START P3 heist
+PERSONA_CELL_COMPLETE P3 heist revealed_after_stop Displayed film/cast outside declared actor knowledge
+PERSONA_CELL_START P3 directorsCut
+PERSONA_CELL_COMPLETE P3 directorsCut revealed_after_stop Chronology includes a title/year outside declared knowledge
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP3]' passed (748.388 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP4]' started.
+PERSONA_CELL_START P4 scene
+PERSONA_CELL_COMPLETE P4 scene earned
+PERSONA_CELL_START P4 scramble
+PERSONA_CELL_COMPLETE P4 scramble earned_with_help
+PERSONA_CELL_START P4 casting
+PERSONA_CELL_COMPLETE P4 casting earned
+PERSONA_CELL_START P4 timeline
+PERSONA_CELL_COMPLETE P4 timeline revealed_after_stop Incoming title/year outside declared knowledge: Avengers: Endgame
+PERSONA_CELL_START P4 oddOneOut
+PERSONA_CELL_COMPLETE P4 oddOneOut revealed_after_stop One or more release years outside declared knowledge
+PERSONA_CELL_START P4 doubleFeature
+PERSONA_CELL_COMPLETE P4 doubleFeature revealed_after_stop Remaining connection outside declared actor knowledge
+PERSONA_CELL_START P4 detective
+PERSONA_CELL_COMPLETE P4 detective earned_with_help
+PERSONA_CELL_START P4 memory
+PERSONA_CELL_COMPLETE P4 memory earned
+PERSONA_CELL_START P4 heist
+PERSONA_CELL_COMPLETE P4 heist revealed_after_stop Displayed film/cast outside declared actor knowledge
+PERSONA_CELL_START P4 directorsCut
+PERSONA_CELL_COMPLETE P4 directorsCut revealed_after_stop Chronology includes a title/year outside declared knowledge
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP4]' passed (592.627 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5]' started.
+PERSONA_CELL_START P5 scene
+PERSONA_CELL_COMPLETE P5 scene automation_failed harness("No movie choices")
+PERSONA_CELL_START P5 scramble
+PERSONA_CELL_COMPLETE P5 scramble automation_failed harness("No movie choices")
+PERSONA_CELL_START P5 casting
+PERSONA_CELL_COMPLETE P5 casting earned
+PERSONA_CELL_START P5 timeline

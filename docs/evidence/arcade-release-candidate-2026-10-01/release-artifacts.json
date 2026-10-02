@@ -1,0 +1,38 @@
+{
+  "sourceCommit": "46acf14b77455bb5f8a79544aa0be172bbd13647",
+  "version": "4.25.44",
+  "build": "16",
+  "createdAt": "2026-10-01T22:33:50.576235+00:00",
+  "workingTreeClean": true,
+  "archive": "/private/tmp/StreamingNow-4.25.44-16.xcarchive",
+  "archiveResult": "SUCCEEDED",
+  "exportResult": "SUCCEEDED",
+  "ipa": "/private/tmp/streaming-now-4.25.44-16/StreamingNow.ipa",
+  "ipaSHA256": "0e509cb2773f9e2efae5124aae538c3c8e4a303ee2504175d5a5507624168631",
+  "symbols": "/private/tmp/streaming-now-4.25.44-16-dSYMs.zip",
+  "symbolUpload": "SUCCEEDED",
+  "symbolUploadApprovedByUser": true,
+  "symbolUploadExitCode": 0,
+  "symbolUploadConfirmedSlices": 4,
+  "symbolUploadLog": "/private/tmp/arcade-release-symbols-2026-10-01.log",
+  "uploadResult": "SUCCEEDED",
+  "uploadLog": "/private/tmp/arcade-release-upload-2026-10-01.log",
+  "uploadCompletedLocal": "2026-10-01 18:39:51 EDT",
+  "appleProcessingVerification": {
+    "checkedAt": 1790894569.5973802,
+    "results": [
+      {
+        "id": "e84c9af8-807f-41cb-a104-cebeaf5cdf5b",
+        "version": "4.25.44",
+        "build": "16",
+        "processingState": "VALID",
+        "uploadedDate": "2026-10-01T15:41:06-07:00",
+        "beta": {
+          "autoNotifyEnabled": true,
+          "internalBuildState": "IN_BETA_TESTING",
+          "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+        }
+      }
+    ]
+  }
+}

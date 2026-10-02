@@ -1,0 +1,2016 @@
+/* (No Comment) */
+" Cronica" = "Streaming Now";
+
+/* (No Comment) */
+"'Update Items' will update your items with new information available on TMDb, if available." = "'Aktualizuj elementy' zaktualizuje Twoje elementy z nowymi informacjami dostępnymi w TMDb, jeśli są dostępne.";
+
+/* No comment provided by engineer. */
+"(numberOfSeasons) Seasons • (numberOfEpisodes) Episodes" = "(numberOfSeasons) Sezonów • (numberOfEpisodes) Odcinków";
+
+/* No comment provided by engineer. */
+"(voteAverage.rounded(.down))/10" = "(voteAverage.rounded(.down))/10";
+
+/* No comment provided by engineer. */
+"(voteAverage.rounded())/10" = "(voteAverage.rounded())/10";
+
+/* No comment provided by engineer. */
+"%@, tap to open list options." = "%@, dotknij, aby otworzyć opcje listy.";
+
+/* No comment provided by engineer. */
+"%lld Items" = "%lld pozycji";
+
+/* (No Comment) */
+"%lld items • %@" = "%lld elementy • %@";
+
+/* (No Comment) */
+"%lld Seasons • %lld Episodes" = "%lld Sezonów • %lld Odcinki";
+
+/* (No Comment) */
+"%lld upcoming notifications." = "%lld nadchodzących powiadomień.";
+
+/* (No Comment) */
+"%lld/10" = "%lld/10";
+
+/* (No Comment) */
+"%llditems" = "%lld elementy";
+
+/* No comment provided by engineer. */
+"🛠️" = "🛠️";
+
+/* (No Comment) */
+"About" = "O nas";
+
+/* (No Comment) */
+"aboutTitle" = "O nas";
+
+/* (No Comment) */
+"accentColor" = "Kolor akcentu";
+
+/* (No Comment) */
+"Account" = "Konto";
+
+/* (No Comment) */
+"AccountSettingsViewFooter" = "Połącz swoje konto TMDb, aby importować i synchronizować swoją listę filmów do obejrzenia oraz listy.";
+
+/* MARK: TMDb Sync */
+"AccountSettingsViewFooterHeader" = "Połącz swoje konto TMDb";
+
+/* (No Comment) */
+"AccountSettingsViewHeaderSignIn" = "Zarządzaj swoimi listami TMDb";
+
+/* (No Comment) */
+"AccountSettingsViewListsManager" = "Twoje listy TMDB";
+
+/* (No Comment) */
+"AccountSettingsViewSignIn" = "Połącz";
+
+/* (No Comment) */
+"AccountSettingsViewSignOut" = "Rozłącz";
+
+/* (No Comment) */
+"AccountSettingsViewWatchlist" = "Lista filmów TMDB";
+
+/* (No Comment) */
+"acknowledgmentsAppIconSubtitle" = "Akhmad";
+
+/* MARK: AcknowledgementsSettings */
+"acknowledgmentsAppIconTitle" = "Projektant ikon";
+
+/* (No Comment) */
+"acknowledgmentsContentProviderSubtitle" = "TMDb";
+
+/* (No Comment) */
+"acknowledgmentsContentProviderTitle" = "Dostawca zawartości";
+
+/* (No Comment) */
+"acknowledgmentsSDWebImage" = "SDWebImageSwiftUI";
+
+/* (No Comment) */
+"acknowledgmentsTitle" = "Podziękowania";
+
+/* (No Comment) */
+"acknowledgmentsUserTitle" = "Dziękujemy za opinię i wsparcie!";
+
+/* (No Comment) */
+"Action" = "Akcja";
+
+/* (No Comment) */
+"Action & Adventure" = "Akcja i przygoda";
+
+/* (No Comment) */
+"Add everything you want, the Watchlist automatically organizes it for you." = "Dodaj wszystko, czego chcesz, Lista obserwowanych automatycznie to dla ciebie organizuje.";
+
+/* (No Comment) */
+"Add to Favorites" = "Dodaj do ulubionych";
+
+/* (No Comment) */
+"Add to List" = "Dodaj do listy";
+
+/* MARK: ContentDetailsView.swift */
+"Add to watchlist" = "Dodaj do listy obserwowanych";
+
+/* (No Comment) */
+"addAndMarkWatchedButton" = "Dodaj i oznacz jako obejrzane";
+
+/* (No Comment) */
+"Added to watchlist" = "Dodano do listy obserwowanych";
+
+/* (No Comment) */
+"addedToWatchlist" = "Dodano do listy obejrzanych";
+
+/* (No Comment) */
+"addedWatchlist" = "Dodano do listy obserwowanych";
+
+/* (No Comment) */
+"addToCustomList" = "Dodaj do listy...";
+
+/* (No Comment) */
+"addToList" = "Dodaj do listy...";
+
+/* (No Comment) */
+"Adventure" = "Przygoda";
+
+/* (No Comment) */
+"Alien" = "Obcy";
+
+/* (No Comment) */
+"All" = "Wszystko";
+
+/* (No Comment) */
+"allCustomWatchListFilters" = "Wszystkie";
+
+/* (No Comment) */
+"allItems" = "Wszystkie elementy";
+
+/* (No Comment) */
+"allItemsMovies" = "Wszystkie filmy";
+
+/* (No Comment) */
+"allItemsTVShows" = "Wszystkie programy telewizyjne";
+
+/* (No Comment) */
+"allowNotification" = "Włącz powiadomienia";
+
+/* (No Comment) */
+"Always Synced" = "Zawsze zsynchronizowany";
+
+/* (No Comment) */
+"Animation" = "Animacja";
+
+/* (No Comment) */
+"Anime" = "Anime";
+
+/* (No Comment) */
+"appearanceAppIcon" = "Ikona aplikacji";
+
+/* (No Comment) */
+"appearanceAppThemeTitle" = "Motyw aplikacji";
+
+/* (No Comment) */
+"appearanceCompactUI" = "Kompaktowy interfejs użytkownika";
+
+/* (No Comment) */
+"appearanceCompactUISubtitle" = "Zmniejsz rozmiar niektórych elementów interfejsu użytkownika, aby zmieścić więcej elementów na ekranie.";
+
+/* (No Comment) */
+"appearanceExplore" = "Badaj";
+
+/* (No Comment) */
+"appearanceExploreDisplayType" = "Preferencje wyświetlania w Eksploruj";
+
+/* (No Comment) */
+"appearanceHorizontalListsTitle" = "Styl listy poziomej";
+
+/* (No Comment) */
+"appearanceLists" = "Listy";
+
+/* (No Comment) */
+"appearanceListsDisplayType" = "Preferencja wyświetlania list";
+
+/* (No Comment) */
+"appearanceRowStyleSubtitle" = "Wybierz sposób wyświetlania listy obserwowanych";
+
+/* (No Comment) */
+"appearanceRowStyleTitle" = "Styl elementu listy obserwowanych";
+
+/* (No Comment) */
+"appearanceRowTypeSubtitle" = "Wybierz rodzaj informacji, które chcesz wyświetlić.";
+
+/* MARK: AppearanceSetting */
+"appearanceRowTypeTitle" = "Informacje o elemencie listy obserwowanych";
+
+/* (No Comment) */
+"appearanceSectionDetailsTitle" = "Styl szczegółów sekcji";
+
+/* (No Comment) */
+"appearanceSendFeedback" = "Wyślij opinie";
+
+/* (No Comment) */
+"appearanceStyle" = "Preferencje stylu";
+
+/* (No Comment) */
+"appearanceTheme" = "Motywy";
+
+/* (No Comment) */
+"appearanceThemeTitle" = "Kolor aplikacji";
+
+/* (No Comment) */
+"appearanceTitle" = "Wygląd";
+
+/* (No Comment) */
+"appearanceUpNextTitle" = "Styl szczegółów Up Next";
+
+/* (No Comment) */
+"appearanceWatchlist" = "Lista obserwowanych";
+
+/* (No Comment) */
+"appIconFeedbackTitle" = "Masz pomysł na ikonę? Wyślij opinię";
+
+/* (No Comment) */
+"appRegionSubtitle" = "Aplikacja dostosuje dostawców usług telewizyjnych w zależności od Twojego regionu.";
+
+/* (No Comment) */
+"appRegionTitle" = "Region";
+
+/* MARK: AppThemeColors */
+"appThemeColorsBlue" = "Niebieski";
+
+/* (No Comment) */
+"appThemeColorsBrown" = "Brązowy";
+
+/* (No Comment) */
+"appThemeColorsCyan" = "Cyan";
+
+/* (No Comment) */
+"appThemeColorsGray" = "Szary";
+
+/* (No Comment) */
+"appThemeColorsGreen" = "Zielony";
+
+/* (No Comment) */
+"appThemeColorsIndigo" = "Indygo";
+
+/* (No Comment) */
+"appThemeColorsMint" = "Mięta";
+
+/* (No Comment) */
+"appThemeColorsOrange" = "Pomarańczowy";
+
+/* (No Comment) */
+"appThemeColorsPink" = "Różowy";
+
+/* (No Comment) */
+"appThemeColorsPurple" = "Purpurowy";
+
+/* (No Comment) */
+"appThemeColorsRed" = "Czerwony";
+
+/* (No Comment) */
+"appThemeColorsTeal" = "Turkusowy";
+
+/* (No Comment) */
+"appThemeColorsYellow" = "Żółty";
+
+/* (No Comment) */
+"appThemeDark" = "Ciemny";
+
+/* (No Comment) */
+"appThemeLight" = "Światło";
+
+/* MARK: AppTheme */
+"appThemeSystem" = "System";
+
+/* (No Comment) */
+"Archive" = "Archiwum";
+
+/* (No Comment) */
+"Archive Item" = "Element archiwalny";
+
+/* (No Comment) */
+"areYouSure" = "Czy na pewno?";
+
+/* (No Comment) */
+"Arriving Soon" = "Wkrótce przybywa";
+
+/* No comment provided by engineer. */
+"Asked for review: %@" = "Poproszono o recenzję: %@";
+
+/* No comment provided by engineer. */
+"Back" = "Wstecz";
+
+/* (No Comment) */
+"Based on novel or book" = "Na podstawie powieści lub książki";
+
+/* (No Comment) */
+"Based on true story" = "Oparty na prawdziwej historii";
+
+/* (No Comment) */
+"Based on Video-Game" = "Na podstawie gry wideo";
+
+/* (No Comment) */
+"Be reminded of upcoming Movies & TV Shows." = "Przypominaj o nadchodzących filmach i programach telewizyjnych.";
+
+/* (No Comment) */
+"behaviorAllowFullSwipeSubtitle" = "Pełne przesunięcie aktywuje główną akcję";
+
+/* (No Comment) */
+"behaviorAllowFullSwipeTitle" = "Zezwól na pełne przesunięcie";
+
+/* (No Comment) */
+"behaviorDoubleTapSubtitle" = "Wybierz, jaką funkcję wykonać po dwukrotnym kliknięciu na obraz okładki.";
+
+/* MARK: BehaviorSetting */
+"behaviorDoubleTapTitle" = "Podwójne kliknięcie na okładce";
+
+/* (No Comment) */
+"behaviorEpisodeTitle" = "Dotknij, aby oznaczyć odcinek jako obejrzany";
+
+/* (No Comment) */
+"behaviorGestureTitle" = "Gesty";
+
+/* (No Comment) */
+"behaviorLinkTitle" = "Linki";
+
+/* (No Comment) */
+"behaviorMarkPreviouslyEpisodes" = "Oznacz wszystkie wcześniejsze odcinki, gdy nowszy jest oznaczony jako obejrzany";
+
+/* (No Comment) */
+"behaviorPrimaryLeftGesture" = "Główny gest lewy";
+
+/* (No Comment) */
+"behaviorPrimaryRightGesture" = "Podstawowy gest prawy";
+
+/* (No Comment) */
+"behaviorSecondaryLeftGesture" = "Wsteczny gest w lewo";
+
+/* (No Comment) */
+"behaviorSecondaryRightGesture" = "Wtórny gest w prawo";
+
+/* (No Comment) */
+"behaviorSwipeTitle" = "Gesty przeciągania";
+
+/* (No Comment) */
+"behaviorTitle" = "Zachowanie";
+
+/* (No Comment) */
+"behaviorWatchProvidersSubtitle" = "Zobacz, na jakich platformach dostępne są treści.";
+
+/* (No Comment) */
+"behaviorWatchProvidersTitle" = "Dostawcy usług telewizyjnych";
+
+/* (No Comment) */
+"behaviorYouTubeTitle" = "Otwórz zwiastuny na YouTube";
+
+/* No comment provided by engineer. */
+"Beta" = "Beta";
+
+/* MARK: CastDetailsView.swift */
+"Biography" = "Biografia";
+
+/* (No Comment) */
+"callToReviewSubtitle" = "Zostaw recenzję w App Store!";
+
+/* (No Comment) */
+"callToReviewTitle" = "Cieszysz się Croniką?";
+
+/* (No Comment) */
+"Cancel" = "Anuluj";
+
+/* (No Comment) */
+"cancelConfirmDialogAction" = "Anuluj";
+
+/* (No Comment) */
+"Cancelled" = "Anulowane";
+
+/* (No Comment) */
+"cancelOpenWatchProvider" = "Anuluj";
+
+/* (No Comment) */
+"cantSendFeedback" = "Aby przesłać opinie w aplikacji, musisz wyłączyć opcję 'Wyłącz raporty o awariach'";
+
+/* (No Comment) */
+"Cast & Crew" = "Obsada i ekipa";
+
+/* (No Comment) */
+"changeLanguage" = "Zmień język aplikacji";
+
+/* (No Comment) */
+"changelogViewTitle" = "Co nowego";
+
+/* (No Comment) */
+"Classical" = "Klasyczny";
+
+/* (No Comment) */
+"Collapse" = "Zwiń";
+
+/* (No Comment) */
+"Comedy" = "Komedia";
+
+/* MARK: WatchlistSectionView.swift */
+"Coming Soon" = "Wkrótce dostępne";
+
+/* (No Comment) */
+"Coming Soon To Theaters" = "Wkrótce w kinach";
+
+/* (No Comment) */
+"companiesTitle" = "Firmy";
+
+/* (No Comment) */
+"Confirm" = "Potwierdź";
+
+/* (No Comment) */
+"confirmAndDeleteItems" = "Potwierdź i usuń elementy";
+
+/* (No Comment) */
+"confirmDialogAction" = "Potwierdź";
+
+/* (No Comment) */
+"confirmOpenDontAskAgainProvider" = "Potwierdź i nie pytaj ponownie";
+
+/* (No Comment) */
+"confirmOpenWatchProvider" = "Potwierdź";
+
+/* (No Comment) */
+"connectedAccounts" = "Połączone konta";
+
+/* (No Comment) */
+"connectedAccountTMDB" = "Baza filmowa";
+
+/* (No Comment) */
+"contentRegionTitle" = "Region";
+
+/* (No Comment) */
+"Continue" = "Kontynuuj";
+
+/* (No Comment) */
+"Create" = "Utwórz";
+
+/* (No Comment) */
+"createList" = "Utwórz nową listę";
+
+/* (No Comment) */
+"createNote" = "Dodaj notatkę";
+
+/* (No Comment) */
+"Crime" = "Przestępstwo";
+
+/* (No Comment) */
+"Crime Investigation" = "Śledztwo w sprawie przestępstw";
+
+/* (No Comment) */
+"Cronica" = "Streaming Now";
+
+/* (No Comment) */
+"cronicaGitHub" = "Repozytorium Streaming Now na GitHubie";
+
+/* (No Comment) */
+"dateAsc" = "Data (Rosnąco)";
+
+/* (No Comment) */
+"dateDesc" = "Data (malejąco)";
+
+/* (No Comment) */
+"Default" = "Optymalizowane";
+
+/* (No Comment) */
+"Default List" = "Domyślna lista";
+
+/* (No Comment) */
+"defaultWatchlistFilters" = "Filtry";
+
+/* (No Comment) */
+"defaultWatchlistShowAllItems" = "Pokaż wszystkie przedmioty";
+
+/* (No Comment) */
+"defaultWatchlistSmartFilters" = "Inteligentne filtry";
+
+/* (No Comment) */
+"Delete" = "Usuń";
+
+/* (No Comment) */
+"deleteConfirmationMessage" = "Tej czynności nie można cofnąć. \nSpowoduje to usunięcie tylko listy lokalnej, a nie listy na TMDb.";
+
+/* (No Comment) */
+"deleteList" = "Usuń listę";
+
+/* (No Comment) */
+"Design" = "Projekt";
+
+/* (No Comment) */
+"Details Page" = "Strona szczegółów";
+
+/* (No Comment) */
+"Developed by Alexandre Madeira" = "Rozwinięte przez Alexandre Madeira";
+
+/* No comment provided by engineer. */
+"Developer Options" = "Opcje programisty";
+
+/* (No Comment) */
+"Digital" = "Cyfrowy";
+
+/* (No Comment) */
+"disableTranslucentTitle" = "Wyłącz przezroczyste tło";
+
+/* (No Comment) */
+"Discover what's next" = "Odkryj coś nowego";
+
+/* No comment provided by engineer. */
+"Dismiss" = "Odrzuć";
+
+/* (No Comment) */
+"dismissReviewCall" = "Odrzuć";
+
+/* (No Comment) */
+"Documentary" = "Dokumentalny";
+
+/* MARK: Common */
+"Done" = "Zrobione";
+
+/* (No Comment) */
+"Double Tap Gesture" = "Podwójny dotyk";
+
+/* (No Comment) */
+"Drama" = "Dramat";
+
+/* No comment provided by engineer. */
+"E%lld" = "E%lld";
+
+/* (No Comment) */
+"Edit" = "Edytuj";
+
+/* (No Comment) */
+"editListRemoveItems" = "Usunąć przedmioty";
+
+/* (No Comment) */
+"editNotes" = "Edytuj notatki";
+
+/* (No Comment) */
+"Email (optional)" = "E-mail (opcjonalnie)";
+
+/* No comment provided by engineer. */
+"Empty" = "Puste";
+
+/* No comment provided by engineer. */
+"Empty List" = "Pusta lista";
+
+/* (No Comment) */
+"emptyList" = "Nie znaleziono niczego pasującego do wybranego filtra.\nSpróbuj zmienić filtry.";
+
+/* (No Comment) */
+"emptyLists" = "Puste";
+
+/* (No Comment) */
+"enablePreferredLaunchScreen" = "Włącz preferowany ekran startowy";
+
+/* (No Comment) */
+"Ended Series" = "Zakończone seriale";
+
+/* No comment provided by engineer. */
+"Episode" = "Odcinek";
+
+/* No comment provided by engineer. */
+"Episode (episodeNumber)" = "Epizod (episodeNumber)";
+
+/* (No Comment) */
+"Episode %lld" = "ODCINEK %lld";
+
+/* No comment provided by engineer. */
+"Episode: %lld, of the show: %@." = "Odcinek: %lld, z programu: %@.";
+
+/* (No Comment) */
+"episodeNotificationSubtitle" = "Powiadamiaj, gdy zostanie wydany nowy odcinek serialu z twojej listy obserwowanych.";
+
+/* (No Comment) */
+"episodeNotificationTitle" = "Powiadom nowe odcinki";
+
+/* (No Comment) */
+"Error" = "Błąd";
+
+/* (No Comment) */
+"Error reading this title" = "Błąd odczytu tego tytułu.";
+
+/* MARK: ExploreView.swift */
+"Explore" = "Odkryj";
+
+/* (No Comment) */
+"exploreDisplayTypePicker" = "Styl wyświetlania";
+
+/* (No Comment) */
+"explorePreferredDisplayTypeCard" = "Karta";
+
+/* (No Comment) */
+"explorePreferredDisplayTypePoster" = "Plakat";
+
+/* (No Comment) */
+"exportTitle" = "Eksportuj";
+
+/* (No Comment) */
+"Family" = "Rodzina";
+
+/* (No Comment) */
+"Fantasy" = "Fantazja";
+
+/* (No Comment) */
+"Favorite" = "Ulubione";
+
+/* (No Comment) */
+"Favorites" = "Ulubione";
+
+/* (No Comment) */
+"featureOneDescription" = "Sprawdź następny odcinek ulubionego serialu telewizyjnego i oznacz go jako obejrzany w mgnieniu oka.";
+
+/* (No Comment) */
+"featureOneTitle" = "Następne";
+
+/* (No Comment) */
+"featureRoadmap" = "Nadchodzące funkcje";
+
+/* (No Comment) */
+"featureRoadmapHeader" = "Głosuj na następne funkcje, które chcesz zobaczyć jako pierwsze.";
+
+/* (No Comment) */
+"featureRoadmapSubtitle" = "Użyj ikony „plusa”, aby zaproponować nową funkcję.";
+
+/* (No Comment) */
+"featureThreeDescription" = "Więcej ustawień i ulepszony interfejs użytkownika do dostosowania Streaming Now dokładnie tak, jak lubisz.";
+
+/* (No Comment) */
+"featureThreeTitle" = "Dostosuj swoje doświadczenie";
+
+/* (No Comment) */
+"featureTwoDescription" = "Otrzymuj dostosowane rekomendacje filmów i programów telewizyjnych na podstawie tego, co oglądałeś w Streaming Now.";
+
+/* (No Comment) */
+"featureTwoTitle" = "Spersonalizowane rekomendacje";
+
+/* (No Comment) */
+"Feedback" = "Opinia";
+
+/* (No Comment) */
+"Feedback sent" = "Dziękuję za Twoją opinię.";
+
+/* (No Comment) */
+"feedbackSent" = "Opinia wysłana. Dziękuję!";
+
+/* No comment provided by engineer. */
+"Fetch" = "Pobierz";
+
+/* MARK: FilmographyView.swift */
+"Filmography" = "Filmografia";
+
+/* (No Comment) */
+"filterDiscoverTitle" = "Filtry";
+
+/* No comment provided by engineer. */
+"Filters" = "Filtry";
+
+/* (No Comment) */
+"Find" = "Znajdź";
+
+/* (No Comment) */
+"First Air Date" = "Data pierwszego wyświetlenia";
+
+/* (No Comment) */
+"For more details, open the companion app." = "Aby uzyskać więcej szczegółów, otwórz aplikację iPhone.";
+
+/* (No Comment) */
+"From Watchlist" = "Z listy obserwowanych";
+
+/* (No Comment) */
+"generatingExportFile" = "Generowanie pliku JSON, proszę czekać.";
+
+/* (No Comment) */
+"Genre" = "Gatunek";
+
+/* (No Comment) */
+"genreDiscoverFilterTitle" = "Gatunek";
+
+/* (No Comment) */
+"Genres" = "Gatunki";
+
+/* (No Comment) */
+"German" = "Niemiecki";
+
+/* (No Comment) */
+"Gesture" = "Gest";
+
+/* (No Comment) */
+"Get notifications about the newest releases." = "Otrzymuj powiadomienia o najnowszych wydaniach.";
+
+/* (No Comment) */
+"hapticFeedbackTitle" = "Sprzężenie hapticzne";
+
+/* (No Comment) */
+"hideAddedItemsDiscoverFilter" = "Ukryj dodane elementy";
+
+/* (No Comment) */
+"History" = "Historia";
+
+/* MARK: ContentView.swift */
+"Home" = "Strona główna";
+
+/* (No Comment) */
+"Horror" = "Horror";
+
+/* (No Comment) */
+"IMDb" = "IMDb";
+
+/* (No Comment) */
+"importedSucceeded" = "Pomyślnie zaimportowano";
+
+/* (No Comment) */
+"importExportWarning" = "Eksport/Import jest w fazie beta, używaj go tylko do eksportu swoich danych lub do importu, jeśli zmieniasz swoje konto iCloud, nie ma obecnie logiki, aby uniknąć duplikacji. Aktualizacja w przyszłości zapewni lepsze doświadczenie dla wszystkich.";
+
+/* (No Comment) */
+"importingTMDB" = "Importowanie Twojej listy obserwowanych, proszę czekać.";
+
+/* (No Comment) */
+"importingWatchlistTMDB" = "Importowanie, proszę czekać.";
+
+/* (No Comment) */
+"importTitle" = "Importuj";
+
+/* (No Comment) */
+"importTMDBList" = "Importuj tę listę";
+
+/* (No Comment) */
+"importTMDBWatchlist" = "Importuj listę obserwowanych";
+
+/* (No Comment) */
+"In Production" = "W Produkcji";
+
+/* (No Comment) */
+"Information" = "Informacje";
+
+/* (No Comment) */
+"Internal error: Something went wrong, contact TMDB." = "Wystąpił błąd wewnętrzny: Coś poszło nie tak, skontaktuj się z TMDb.";
+
+/* (No Comment) */
+"Invalid API key: You must be granted a valid key." = "Nieprawidłowy klucz API.";
+
+/* (No Comment) */
+"Invalid Endpoint" = "Nieprawidłowy punkt końcowy.";
+
+/* (No Comment) */
+"Invalid Request" = "Nieprawidłowe żądanie.";
+
+/* MARK: Error */
+"Invalid Response" = "Nieprawidłowa odpowiedź.";
+
+/* No comment provided by engineer. */
+"Is TelemetryDeck Initialized: %@" = "Czy TelemetryDeck jest zainicjowany: %@";
+
+/* No comment provided by engineer. */
+"Is User Signed In With TMDB: %@" = "Czy użytkownik jest zalogowany za pomocą TMDB: %@";
+
+/* No comment provided by engineer. */
+"Item ID" = "ID przedmiotu";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypeCard" = "Karta";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypePoster" = "Plakat";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypeStandard" = "Domyślny";
+
+/* No comment provided by engineer. */
+"items count" = "liczba elementów";
+
+/* (No Comment) */
+"itemsTMDB" = "Elementy na liście obserwowanych";
+
+/* MARK: WatchProviders */
+"justWatchSubtitle" = "Dostarczone przez JustWatch";
+
+/* (No Comment) */
+"Keep everything organized inside the Watchlist." = "Zachowuj wszystko zorganizowane wewnątrz listy obserwowanych.";
+
+/* (No Comment) */
+"Keep track of every episode you've watched." = "Zachowuj śledzenie każdego odcinka, który obejrzałeś.";
+
+/* (No Comment) */
+"Kids" = "Dzieci";
+
+/* (No Comment) */
+"Know for" = "Znane jako";
+
+/* No comment provided by engineer. */
+"Last maintenance: %@" = "Ostatnie przeglądy: %@";
+
+/* No comment provided by engineer. */
+"Last upcoming refresh: %@" = "Ostatnie nadchodzące odświeżenie: %@";
+
+/* No comment provided by engineer. */
+"Last update on (itemLastUpdateFormatted)" = "Ostatnia aktualizacja na (itemLastUpdateFormatted)";
+
+/* No comment provided by engineer. */
+"Last watching refresh: %@" = "Ostatnie odświeżenie oglądania: %@";
+
+/* (No Comment) */
+"Latest Movies" = "Najnowsze filmy";
+
+/* (No Comment) */
+"Latest Shows" = "Najnowsze odcinki";
+
+/* (No Comment) */
+"Libraries" = "Biblioteki";
+
+/* (No Comment) */
+"List" = "Lista";
+
+/* (No Comment) */
+"List Filters" = "Filtry listy";
+
+/* (No Comment) */
+"listBasicHeader" = "Podstawowe";
+
+/* (No Comment) */
+"listDeleted" = "Ta lista została pomyślnie usunięta.";
+
+/* (No Comment) */
+"listDescription" = "Opis listy";
+
+/* (No Comment) */
+"listItemsToAdd" = "Wybierz przedmioty";
+
+/* (No Comment) */
+"listName" = "Nazwa listy";
+
+/* (No Comment) */
+"Lists" = "Listy";
+
+/* (No Comment) */
+"Loading" = "Ładowanie";
+
+/* (No Comment) */
+"Mark as" = "Oznacz jako";
+
+/* (No Comment) */
+"Mark as Favorite" = "Oznacz jako ulubione";
+
+/* (No Comment) */
+"Mark as Watched" = "Oznacz jako obejrzane";
+
+/* (No Comment) */
+"Mark Season as Watched" = "Oznacz sezon jako obejrzany";
+
+/* (No Comment) */
+"Mark selected as unwatched" = "Oznacz wybrane jako nieotrzymane";
+
+/* (No Comment) */
+"Mark selected as watched" = "Oznacz jako obejrzane";
+
+/* (No Comment) */
+"Mark some episodes as watched to use Up Next." = "Oznacz niektóre odcinki jako obejrzane, aby skorzystać z funkcji Następny.";
+
+/* (No Comment) */
+"Mark this and previous episodes as watched" = "Oznacz tę i poprzednie odcinki jako obejrzane";
+
+/* (No Comment) */
+"markAsWatched" = "Oznacz jako obejrzane";
+
+/* (No Comment) */
+"markedArchive" = "Oznaczone jako archiwum";
+
+/* (No Comment) */
+"markedAsArchive" = "Oznaczone jako Archiwum";
+
+/* (No Comment) */
+"markedAsFavorite" = "Oznaczone jako ulubione";
+
+/* (No Comment) */
+"markedAsPin" = "Oznaczone jako Pin";
+
+/* (No Comment) */
+"markedAsWatched" = "Oznaczone jako obejrzane";
+
+/* (No Comment) */
+"markedEpisodeWatched" = "Oznaczono odcinek jako obejrzany";
+
+/* (No Comment) */
+"markedFavorite" = "Oznaczone jako Ulubione";
+
+/* (No Comment) */
+"markedPin" = "Przypięty";
+
+/* (No Comment) */
+"markedWatched" = "Oznaczone jako obejrzane";
+
+/* (No Comment) */
+"markThisAndPreviously" = "Oznacz ten odcinek i wszystkie wcześniejsze jako obejrzane";
+
+/* (No Comment) */
+"markThisSeasonAsWatched" = "Oznacz ten sezon jako obejrzany";
+
+/* (No Comment) */
+"Media" = "Media";
+
+/* (No Comment) */
+"Media Type" = "Typ nośnika";
+
+/* (No Comment) */
+"mediaTypeDiscoverFilterTitle" = "Typ nośnika";
+
+/* (No Comment) */
+"mediaTypeFilter" = "Filtruj według mediów";
+
+/* (No Comment) */
+"mediaTypeFiltersMovies" = "Filmy";
+
+/* (No Comment) */
+"mediaTypeFiltersNoFilter" = "Wszystkie";
+
+/* (No Comment) */
+"mediaTypeFiltersTvShows" = "Programy telewizyjne";
+
+/* No comment provided by engineer. */
+"More" = "Więcej";
+
+/* (No Comment) */
+"More Options" = "Więcej opcji";
+
+/* (No Comment) */
+"moreInfoShow" = "Więcej informacji";
+
+/* (No Comment) */
+"Movie" = "Film";
+
+/* (No Comment) */
+"movieNotificationSubtitle" = "Powiadom, gdy film z twojej listy obejrzanych zostanie wydany.";
+
+/* (No Comment) */
+"movieNotificationTitle" = "Powiadomienia o premierach filmów";
+
+/* (No Comment) */
+"Movies" = "Filmy";
+
+/* (No Comment) */
+"Movies, Shows, People" = "Filmy, Seriale, Osoby";
+
+/* (No Comment) */
+"moviesCustomWatchListFilters" = "Filmy";
+
+/* (No Comment) */
+"Music" = "Muzyka";
+
+/* (No Comment) */
+"My Pins" = "Moje Piny";
+
+/* (No Comment) */
+"Mystery" = "Tajemnica";
+
+/* (No Comment) */
+"needToSync %lld" = "Dostępne jest %lld elementów do synchronizacji";
+
+/* No comment provided by engineer. */
+"Network" = "Sieć";
+
+/* (No Comment) */
+"Never miss out" = "Nigdy niczego nie przegap";
+
+/* (No Comment) */
+"newCustomListTitle" = "Nowa lista";
+
+/* (No Comment) */
+"newList" = "Nowa lista";
+
+/* (No Comment) */
+"Next episode arrives today." = "Następny odcinek zostaje dzisiaj.";
+
+/* (No Comment) */
+"No biography available." = "Brak dostępnej biografii.";
+
+/* (No Comment) */
+"No details available." = "Brak dostępnych szczegółów.";
+
+/* (No Comment) */
+"No Episode Available" = "Brak dostępnego odcinka";
+
+/* (No Comment) */
+"No information available" = "Brak dostępnych informacji";
+
+/* (No Comment) */
+"No information available." = "Brak dostępnych informacji.";
+
+/* (No Comment) */
+"No Name Found" = "Nie znaleziono nazwy";
+
+/* (No Comment) */
+"No notifications" = "Brak powiadomień";
+
+/* (No Comment) */
+"No results" = "Brak wyników";
+
+/* (No Comment) */
+"No Results" = "Brak wyników";
+
+/* (No Comment) */
+"No results from TMDb" = "Brak wyników z TMDb";
+
+/* (No Comment) */
+"No results from Watchlist" = "Brak wyników z listy obserwowanych";
+
+/* (No Comment) */
+"No title available" = "Brak dostępnego tytułu";
+
+/* (No Comment) */
+"noListFoundMessage" = "Nie znaleziono listy pasującej do Twojego zapytania, spróbuj innego.";
+
+/* (No Comment) */
+"noResultsFound" = "Nic nie znaleziono dla Twojego zapytania.\nSpróbuj innego lub sprawdź, czy tytuł nie znajduje się w archiwum.";
+
+/* (No Comment) */
+"Not Available" = "Niedostępne";
+
+/* No comment provided by engineer. */
+"Not Found" = "Nie znaleziono";
+
+/* (No Comment) */
+"Not Watched" = "Nie obejrzano";
+
+/* (No Comment) */
+"Notes" = "Uwagi";
+
+/* MARK: NotificationListView */
+"Notifications" = "Powiadomienia";
+
+/* (No Comment) */
+"notificationsSettingsFeedbackCall" = "Masz sugestię? Wyślij opinię";
+
+/* (No Comment) */
+"Now Available" = "Teraz dostępne";
+
+/* (No Comment) */
+"Official Website" = "Oficjalna strona internetowa";
+
+/* (No Comment) */
+"Open in" = "Otwórz w";
+
+/* (No Comment) */
+"Open in YouTube" = "Otwórz w YouTube";
+
+/* (No Comment) */
+"Open Trailers in YouTube App" = "Otwórz Trailery w aplikacji YouTube";
+
+/* (No Comment) */
+"openCustomListSelectorWhenAdding" = "Otwórz selektor listy podczas dodawania elementu";
+
+/* (No Comment) */
+"openNotificationInSettings" = "Edytuj powiadomienia w aplikacji Ustawienia";
+
+/* (No Comment) */
+"openWatchProviderTitle" = "Otworzy to stronę TMDb z linkami do każdej usługi.";
+
+/* (No Comment) */
+"Organize" = "Organizuj";
+
+/* (No Comment) */
+"Original Title" = "Oryginalny Tytuł";
+
+/* (No Comment) */
+"Overview" = "Przegląd";
+
+/* (No Comment) */
+"People" = "Ludzie";
+
+/* (No Comment) */
+"Person" = "Osoba";
+
+/* (No Comment) */
+"Physical" = "Fizyczny";
+
+/* (No Comment) */
+"Pin" = "Przypnij";
+
+/* (No Comment) */
+"Pin Item" = "Przypnij przedmiot";
+
+/* (No Comment) */
+"Pin Items" = "Przypnij przedmioty";
+
+/* (No Comment) */
+"Pinned Items" = "Przypięte elementy";
+
+/* (No Comment) */
+"pinnedList" = "Lista przypięta";
+
+/* (No Comment) */
+"pinOnHome" = "Przytwierdź tę listę na stronie głównej";
+
+/* (No Comment) */
+"Pins" = "Piny";
+
+/* (No Comment) */
+"Popular Movies" = "Popularne filmy";
+
+/* (No Comment) */
+"Popular Movies by Genre" = "Popularne filmy według gatunku";
+
+/* (No Comment) */
+"Popular TV Shows by Genre" = "Popularne seriale telewizyjne wg gatunku";
+
+/* (No Comment) */
+"Popularity" = "Popularność";
+
+/* (No Comment) */
+"Prefer Poster in Details Page" = "Preferuj plakat na stronie Szczegóły";
+
+/* (No Comment) */
+"preferredLaunchScreen" = "Preferowany ekran startowy";
+
+/* (No Comment) */
+"Premiere" = "Premiera";
+
+/* No comment provided by engineer. */
+"Presentation" = "Prezentacja";
+
+/* No comment provided by engineer. */
+"Preview" = "Podgląd";
+
+/* (No Comment) */
+"Privacy" = "Prywatność";
+
+/* (No Comment) */
+"Privacy Policy" = "Polityka prywatności";
+
+/* (No Comment) */
+"Production" = "Produkcja";
+
+/* (No Comment) */
+"Production Companies" = "Przedsiębiorstwa produkcyjne";
+
+/* (No Comment) */
+"Production Company" = "Firma produkcyjna";
+
+/* (No Comment) */
+"publishListToTMDB" = "Opublikuj listę na TMDb";
+
+/* (No Comment) */
+"publishOnTMDB" = "Opublikuj na TMDb";
+
+/* (No Comment) */
+"publishPrivate" = "Prywatne";
+
+/* (No Comment) */
+"publishPublic" = "Publiczny";
+
+/* (No Comment) */
+"publishTMDBMessage" = "Spowoduje to utworzenie nowej listy o tej samej nazwie i elementach tej lokalnej listy na TMDb.\nWybierz poziom prywatności, który chcesz:";
+
+/* (No Comment) */
+"quitWhenClosingApp" = "Zakończ, gdy zamykasz aplikację";
+
+/* (No Comment) */
+"Rating" = "Ocena";
+
+/* (No Comment) */
+"ratingAsc" = "Ocena (rosnąco)";
+
+/* (No Comment) */
+"ratingDesc" = "Ocena (malejąco)";
+
+/* (No Comment) */
+"Ratings Score" = "Ocena";
+
+/* (No Comment) */
+"Reality" = "Rzeczywistość";
+
+/* (No Comment) */
+"Reboot" = "Uruchom ponownie";
+
+/* (No Comment) */
+"Recent Notifications" = "Ostatnie powiadomienia";
+
+/* (No Comment) */
+"Recently Released" = "Niedawno wydane";
+
+/* (No Comment) */
+"Recommendations" = "Rekomendacje";
+
+/* (No Comment) */
+"recommendationsSubtitle" = "Na podstawie obejrzanych przez Ciebie treści";
+
+/* (No Comment) */
+"recommendationsTitle" = "Rekomendacje";
+
+/* (No Comment) */
+"Region of Origin" = "Region pochodzenia";
+
+/* (No Comment) */
+"Release Date" = "Data premiery";
+
+/* (No Comment) */
+"Release Date (Ascending)" = "Data premiery (rosnąco)";
+
+/* (No Comment) */
+"Release Date (Descending)" = "Data wydania (malejąco)";
+
+/* (No Comment) */
+"Released" = "Wydane";
+
+/* (No Comment) */
+"Released Movies" = "Wydane filmy";
+
+/* (No Comment) */
+"Released Shows" = "Pokaż wydane";
+
+/* (No Comment) */
+"releaseDates" = "Daty premiery";
+
+/* (No Comment) */
+"Releases" = "Wydania";
+
+/* (No Comment) */
+"Releasing Soon" = "Wkrótce premiera";
+
+/* No comment provided by engineer. */
+"Reload" = "Odśwież";
+
+/* (No Comment) */
+"Remove" = "Usuń";
+
+/* (No Comment) */
+"Remove from Archive" = "Usuń z archiwum";
+
+/* (No Comment) */
+"Remove from Favorites" = "Usuń z ulubionych";
+
+/* (No Comment) */
+"Remove from List" = "Usuń z listy";
+
+/* (No Comment) */
+"Remove from Watched" = "Usuń z Obserwowanych";
+
+/* (No Comment) */
+"Remove from watchlist" = "Usuń z listy obserwowanych";
+
+/* (No Comment) */
+"Remove Notification" = "Usuń powiadomienie";
+
+/* (No Comment) */
+"Remove Pin" = "Usuń pinezkę";
+
+/* (No Comment) */
+"Remove Selected" = "Usuń wybrane";
+
+/* (No Comment) */
+"removedArchive" = "Usunięte z archiwum";
+
+/* (No Comment) */
+"removedEpisodeWatched" = "Usunięto odcinek z obejrzanych";
+
+/* (No Comment) */
+"removedFavorite" = "Usunięto z ulubionych";
+
+/* (No Comment) */
+"removedFromArchive" = "Usunięto z archiwum";
+
+/* (No Comment) */
+"removedFromFavorites" = "Usunięto z Ulubionych";
+
+/* (No Comment) */
+"removedFromPin" = "Usunięto z Pin";
+
+/* (No Comment) */
+"removedFromWatched" = "Usunięte z obejrzanych";
+
+/* MARK: WatchlistButtonView */
+"removeDialogTitle" = "Jesteś pewien?";
+
+/* (No Comment) */
+"removedPin" = "Odpięty";
+
+/* (No Comment) */
+"removedWatched" = "Usunięto z Obserwowanych";
+
+/* (No Comment) */
+"removedWatchlist" = "Usunięto z obserwowanych";
+
+/* (No Comment) */
+"removeFromPinOnWatchedTitle" = "Usuń z ulubionych, gdy przedmiot zostanie oznaczony jako obejrzany";
+
+/* (No Comment) */
+"removeTMDBAccount" = "Odłączyć konto TMDB?";
+
+/* (No Comment) */
+"Renewed Series" = "Odnowione serie";
+
+/* No comment provided by engineer. */
+"Reset asked for review" = "Reset zażądał recenzji";
+
+/* (No Comment) */
+"resetToDefault" = "Przywróć domyślne";
+
+/* (No Comment) */
+"restorePurchases" = "Przywróć zakupy";
+
+/* (No Comment) */
+"Results from TMDb" = "Wyniki z TMDb";
+
+/* (No Comment) */
+"Results from Watchlist" = "Wyniki z listy obserwowanych";
+
+/* (No Comment) */
+"Retry" = "Ponów";
+
+/* (No Comment) */
+"Review Cronica" = "Recenzja Streaming Now";
+
+/* (No Comment) */
+"reviewInTheAppStore" = "Recenzja aplikacji";
+
+/* (No Comment) */
+"reviewOf %@" = "Recenzja: %@";
+
+/* (No Comment) */
+"reviewTitle" = "Recenzja";
+
+/* (No Comment) */
+"Roadmap" = "Mapa drogowa";
+
+/* (No Comment) */
+"Romance" = "Romans";
+
+/* (No Comment) */
+"Romantic Comedy" = "Komedia romantyczna";
+
+/* MARK: InformationSectionView.swift */
+"Run Time" = "Czas wykonania";
+
+/* (No Comment) */
+"S%d, E%d" = "S%d, E%d";
+
+/* No comment provided by engineer. */
+"S%lld, E%lld" = "S%lld, E%lld";
+
+/* (No Comment) */
+"Save" = "Zapisz";
+
+/* (No Comment) */
+"Sci-Fi & Fantasy" = "Sci-Fi i Fantasy";
+
+/* (No Comment) */
+"Science Fiction" = "Fikcja naukowa";
+
+/* MARK: SearchView.swift */
+"Search" = "Szukaj";
+
+/* No comment provided by engineer. */
+"Search %@" = "Szukaj %@";
+
+/* No comment provided by engineer. */
+"Search failed, try again later." = "Wyszukiwanie nie powiodło się, spróbuj ponownie później.";
+
+/* (No Comment) */
+"Search for upcoming movies and tv shows." = "Wyszukaj nadchodzące filmy i programy telewizyjne.";
+
+/* (No Comment) */
+"Search results" = "Wyniki wyszukiwania";
+
+/* MARK: watchOS */
+"Search TMDb" = "Wyszukaj w TMDb";
+
+/* (No Comment) */
+"Search watchlist" = "Wyszukaj listę obserwowanych";
+
+/* (No Comment) */
+"Searching" = "Szukanie";
+
+/* (No Comment) */
+"Season" = "Sezon";
+
+/* No comment provided by engineer. */
+"Season (nextSeasonNumber)" = "Sezon (nextSeasonNumber)";
+
+/* (No Comment) */
+"Season %lld" = "Sezon %lld";
+
+/* (No Comment) */
+"Season Marked as Watched" = "Oznaczony sezon jako obejrzany";
+
+/* MARK: SeasonListView.swift */
+"Seasons" = "Pory roku";
+
+/* No comment provided by engineer. */
+"sectionStyleTypePicker" = "pickerTypuStyluSekcji";
+
+/* No comment provided by engineer. */
+"Select the Media Type" = "Wybierz typ multimediów";
+
+/* (No Comment) */
+"selectedWatchProvider" = "Usługi streamingowe";
+
+/* (No Comment) */
+"selectedWatchProviderSubtitle" = "Pokaż tylko „Dostawcę treści” jeśli tytuł jest dostępny na jednym z Twoich preferowanych serwisów.";
+
+/* (No Comment) */
+"selectedWatchProviderTitle" = "Preferowane usługi streamingowe";
+
+/* (No Comment) */
+"Send" = "Wyślij";
+
+/* (No Comment) */
+"Send feedback" = "Wyślij opinię";
+
+/* (No Comment) */
+"Send Feedback" = "Wyślij opinię";
+
+/* No comment provided by engineer. */
+"Send Object to Developer" = "Wyślij obiekt do dewelopera";
+
+/* (No Comment) */
+"Send your suggestions to help improve Cronica." = "Wyślij swoje sugestie, aby pomóc w poprawieniu Streaming Now.";
+
+/* (No Comment) */
+"sendEmail" = "Wyślij email";
+
+/* (No Comment) */
+"sendEmailFooter" = "Jeśli wolisz, możesz wysłać e-maila, aby uzyskać szybszą odpowiedź.";
+
+/* (No Comment) */
+"sendEmailFooterBackup" = "Możesz również wysłać e-mail na contact@streamingnowapp.com, korzystając z klienta poczty e-mail.";
+
+/* (No Comment) */
+"Settings" = "Ustawienia";
+
+/* (No Comment) */
+"settingsAcknowledgments" = "Podziękowania";
+
+/* (No Comment) */
+"settingsAcknowledgmentsFooter" = "Dzięki wszystkim, którzy sprawili, że Streaming Now stała się możliwa.";
+
+/* (No Comment) */
+"settingsAppearanceTitle" = "Wygląd";
+
+/* MARK: Settings */
+"settingsBehaviorTitle" = "Zachowanie";
+
+/* (No Comment) */
+"settingsDeveloperOptions" = "Ustawienia dewelopera";
+
+/* (No Comment) */
+"settingsDisableTelemetrySubtitle" = "Streaming Now gromadzi minimalne dane w celu zminimalizowania awarii aplikacji, dane te są anonimowe. Zobacz więcej szczegółów w Polityce prywatności.";
+
+/* (No Comment) */
+"settingsDisableTelemetryTitle" = "Wyłącz raporty o awariach";
+
+/* (No Comment) */
+"settingsFeedbackTitle" = "Wyślij opinię";
+
+/* (No Comment) */
+"settingsGeneralTitle" = "Ogólne";
+
+/* (No Comment) */
+"settingsNotificationTitle" = "Powiadomienia";
+
+/* (No Comment) */
+"settingsPrivacyPolicy" = "Polityka prywatności";
+
+/* (No Comment) */
+"settingsPrivacySupportTitle" = "Prywatność i wsparcie";
+
+/* (No Comment) */
+"settingsRegionContentTitle" = "Zawartość i region";
+
+/* (No Comment) */
+"settingsReviewCronica" = "Przejrzyj Streaming Now w App Store";
+
+/* (No Comment) */
+"settingsSyncTitle" = "Synchronizacja";
+
+/* (No Comment) */
+"Share" = "Udostępnij";
+
+/* (No Comment) */
+"shareEpisode" = "Udostępnij odcinek";
+
+/* (No Comment) */
+"shareLinkPreference" = "Wybierz preferowany sposób udostępniania linków";
+
+/* (No Comment) */
+"shareLinkPreferenceSubtitle" = "Możesz wybrać udostępnianie za pomocą linku Streaming Now, który umożliwi otwarcie aplikacji.\nNależy zauważyć, że nie wszystkie treści mogą być udostępniane za pomocą linku Streaming Now, aplikacja zawsze będzie korzystać z linków TMDB, jeśli będzie to konieczne.";
+
+/* (No Comment) */
+"shareList" = "Udostępnij listę";
+
+/* (No Comment) */
+"shareShow" = "Udostępnij program telewizyjny";
+
+/* (No Comment) */
+"Show Details" = "Pokaż szczegóły";
+
+/* (No Comment) */
+"Show More" = "Pokaż więcej";
+
+/* No comment provided by engineer. */
+"Show Onboarding" = "Pokaż wstępne wprowadzenie";
+
+/* (No Comment) */
+"showConfirmationOnRemovingItem" = "Pokaż potwierdzenie usunięcia";
+
+/* (No Comment) */
+"showDetails" = "Pokaż szczegóły";
+
+/* (No Comment) */
+"Shows" = "Widoki";
+
+/* MARK: Widget */
+"Shows movies and TV Shows trending from TMDb." = "Pokazuje trendy filmy i seriale z TMDb.";
+
+/* (No Comment) */
+"showsCustomWatchListFilters" = "Seriale telewizyjne";
+
+/* (No Comment) */
+"Sort" = "Sortować";
+
+/* No comment provided by engineer. */
+"Sort By" = "Sortuj według";
+
+/* (No Comment) */
+"Sort List" = "Sortuj listę";
+
+/* (No Comment) */
+"Source Code" = "Kod źródłowy";
+
+/* (No Comment) */
+"Space" = "Przestrzeń";
+
+/* (No Comment) */
+"Spanish" = "Hiszpański";
+
+/* (No Comment) */
+"Spin off" = "Spin-off";
+
+/* (No Comment) */
+"Status" = "Status";
+
+/* (No Comment) */
+"Superhero" = "Superbohater";
+
+/* (No Comment) */
+"Supernatural Horror" = "Nadprzyrodzony horror";
+
+/* MARK: SettingsView.swift */
+"Support" = "Wsparcie";
+
+/* (No Comment) */
+"Survival" = "Przetrwanie";
+
+/* (No Comment) */
+"Swipe to Edit your list" = "Przesuń palcem, aby edytować swoją listę";
+
+/* (No Comment) */
+"swipeGestureArchive" = "Archiwum";
+
+/* (No Comment) */
+"swipeGestureDelete" = "Usuń";
+
+/* (No Comment) */
+"swipeGestureFavorite" = "Ulubione";
+
+/* (No Comment) */
+"swipeGesturePin" = "Przypiąć";
+
+/* (No Comment) */
+"swipeGestureShare" = "Udostępnij";
+
+/* (No Comment) */
+"swipeGestureWatch" = "Oglądać";
+
+/* (No Comment) */
+"Sync" = "Synchronizuj";
+
+/* (No Comment) */
+"syncingWatchlistTMDB" = "Synchronizowanie Twojej listy obserwowanych. Proszę czekać.";
+
+/* (No Comment) */
+"syncInProgress" = "Synchronizacja w toku";
+
+/* (No Comment) */
+"syncNow" = "Synchronizuj teraz z TMDB";
+
+/* (No Comment) */
+"syncSettingsItemsTitle" = "Przedmioty";
+
+/* (No Comment) */
+"syncSettingsTitle" = "Synchronizacja";
+
+/* (No Comment) */
+"syncSettingsUpdateWatchlistSubtitle" = "Aktualizuj elementy o nowe informacje, jeśli są dostępne w TMDb.";
+
+/* MARK: SyncSetting */
+"syncSettingsUpdateWatchlistTitle" = "Aktualizuj elementy";
+
+/* (No Comment) */
+"syncSettingsWatchlistTitle" = "Lista obserwowanych";
+
+/* (No Comment) */
+"syncTMDBList" = "Utrzymuj tę listę w synchronizacji";
+
+/* (No Comment) */
+"syncWatchlist" = "Synchronizuj listę obserwowanych";
+
+/* (No Comment) */
+"TelemetryDeck" = "TelemetryDeck";
+
+/* (No Comment) */
+"thankYouTipJarMessage" = "Dziękujemy za zakup! Twoje wsparcie jest bardzo doceniane. 😁";
+
+/* (No Comment) */
+"The API is undergoing maintenance. Try again later." = "API jest obecnie wyłączony z powodu prac konserwacyjnych. Spróbuj ponownie później.";
+
+/* (No Comment) */
+"The Discover will help you find your next favorite title." = "Discover pomoże Ci znaleźć Twój ulubiony tytuł.";
+
+/* (No Comment) */
+"The function is performed when double-tap the cover image." = "Funkcja jest wykonywana po podwójnym tapnięciu na obrazku okładki.";
+
+/* (No Comment) */
+"The movie will be released today." = "Film zostanie dzisiaj wydany.";
+
+/* MARK: Notification content */
+"The next episode is set to arrive today." = "Następny odcinek ma pojawić się dzisiaj.";
+
+/* (No Comment) */
+"Theatrical" = "Teatralny";
+
+/* (No Comment) */
+"Theatrical Limited" = "Ograniczone Teatralne";
+
+/* No comment provided by engineer. */
+"This content has been removed from TMDB, you can delete it." = "Zawartość ta została usunięta z TMDB, możesz ją usunąć.";
+
+/* No comment provided by engineer. */
+"This is a preview" = "To jest podgląd";
+
+/* No comment provided by engineer. */
+"This list has been deleted." = "Ta lista została usunięta.";
+
+/* (No Comment) */
+"This list is empty." = "Ta lista jest pusta.";
+
+/* MARK: AttributionView.swift */
+"This product uses the TMDb API but is not endorsed or certified by TMDb." = "Ten produkt korzysta z API TMDb, ale nie jest onendosowany ani certyfikowany przez TMDb.";
+
+/* (No Comment) */
+"This week" = "W tym tygodniu";
+
+/* (No Comment) */
+"Thriller" = "Thriller";
+
+/* (No Comment) */
+"Ticket" = "Bilet";
+
+/* (No Comment) */
+"tipJar" = "Usuń reklamy";
+
+/* (No Comment) */
+"tipJarDescription" = "Usuń reklamy i wesprzyj Streaming Now.";
+
+/* (No Comment) */
+"tipJarFooter" = "Opcjonalny jednorazowy zakup usuwa reklamy w całej aplikacji Streaming Now i wspiera jej rozwój.";
+
+/* MARK: TipJarSetting */
+"tipJarTitle" = "Usuń reklamy";
+
+/* (No Comment) */
+"Title" = "Tytuł";
+
+/* (No Comment) */
+"titleAsc" = "Tytuł (Rosnąco)";
+
+/* (No Comment) */
+"titleDesc" = "Tytuł (Malejąco)";
+
+/* (No Comment) */
+"TMDb" = "TMDb";
+
+/* No comment provided by engineer. */
+"TMDB" = "TMDB";
+
+/* (No Comment) */
+"tmdbLists" = "Twoje listy w TMDB";
+
+/* (No Comment) */
+"tmdbListSyncConfig" = "Konfiguracja";
+
+/* (No Comment) */
+"tmdbSyncFeatures" = "Będziesz mógł zobaczyć swoje listy i zarządzać ich zawartością.";
+
+/* (No Comment) */
+"To Watch" = "Obejrzyj";
+
+/* (No Comment) */
+"Today" = "Dzisiaj";
+
+/* (No Comment) */
+"Track your episodes" = "Śledź swoje odcinki";
+
+/* (No Comment) */
+"Trailers" = "Zwiastuny";
+
+/* (No Comment) */
+"Translation" = "Tłumaczenie";
+
+/* MARK: HomeView.swift */
+"Trending" = "Popularne";
+
+/* (No Comment) */
+"Trending Keywords" = "Popularne słowa kluczowe";
+
+/* No comment provided by engineer. */
+"Trending service ins't available right now." = "Usługa Trending nie jest obecnie dostępna.";
+
+/* (No Comment) */
+"TV" = "TV";
+
+/* (No Comment) */
+"TV Show" = "Program telewizyjny";
+
+/* (No Comment) */
+"TV Shows" = "Programy telewizyjne";
+
+/* (No Comment) */
+"tvShowDetails" = "Szczegóły programu telewizyjnego";
+
+/* (No Comment) */
+"Unknown" = "Nieznane";
+
+/* (No Comment) */
+"Unpin Item" = "Odepnij element";
+
+/* (No Comment) */
+"Untitled List" = "Nieopisana lista";
+
+/* (No Comment) */
+"Unwatched" = "Nie obejrzane";
+
+/* (No Comment) */
+"Up Coming" = "Nadchodzące";
+
+/* No comment provided by engineer. */
+"Up Next" = "Następne";
+
+/* (No Comment) */
+"Upcoming" = "Nadchodzące";
+
+/* (No Comment) */
+"Upcoming Episodes" = "Nadchodzące odcinki";
+
+/* (No Comment) */
+"Upcoming Movies" = "Nadchodzące filmy";
+
+/* (No Comment) */
+"Upcoming Notifications" = "Nadchodzące powiadomienia";
+
+/* (No Comment) */
+"Upcoming Seasons" = "Nadchodzące sezony";
+
+/* (No Comment) */
+"Update Items" = "Zaktualizuj elementy";
+
+/* (No Comment) */
+"upNext" = "Następne";
+
+/* (No Comment) */
+"upNextSubtitle" = "Twoje następne odcinki";
+
+/* No comment provided by engineer. */
+"User Lang: %@" = "Język użytkownika: %@";
+
+/* No comment provided by engineer. */
+"User Region: %@" = "Region użytkownika: %@";
+
+/* (No Comment) */
+"Version %@" = "Wersja %@";
+
+/* No comment provided by engineer. */
+"Version %@ • %@" = "Wersja %@ • %@";
+
+/* (No Comment) */
+"War" = "Wojna";
+
+/* MARK: DoubleTapGesture */
+"Watched" = "Obejrzane";
+
+/* (No Comment) */
+"Watching" = "Oglądanie";
+
+/* (No Comment) */
+"Watchlist" = "Lista obserwowanych";
+
+/* (No Comment) */
+"watchlistDisplayTypePicker" = "Styl wyświetlania";
+
+/* (No Comment) */
+"watchlistItemTypeCard" = "Karta";
+
+/* MARK: WatchlistItemType */
+"watchlistItemTypeList" = "Lista";
+
+/* (No Comment) */
+"watchlistItemTypePoster" = "Plakat";
+
+/* No comment provided by engineer. */
+"watchlistSortORder" = "watchlistSortORder";
+
+/* (No Comment) */
+"watchlistSubtitleRowDate" = "Data wydania";
+
+/* (No Comment) */
+"watchlistSubtitleRowGenre" = "Gatunek";
+
+/* MARK: WatchlistSubtitleRow */
+"watchlistSubtitleRowNone" = "Domyślny";
+
+/* (No Comment) */
+"watchProviderAe" = "Zjednoczone Emiraty Arabskie";
+
+/* (No Comment) */
+"watchProviderAr" = "Argentina";
+
+/* (No Comment) */
+"watchProviderAt" = "Austria";
+
+/* (No Comment) */
+"watchProviderAu" = "Australia";
+
+/* (No Comment) */
+"watchProviderBe" = "Belgia";
+
+/* (No Comment) */
+"watchProviderBg" = "Bułgaria";
+
+/* MARK: WatchProviderOption */
+"watchProviderBr" = "Brazylia";
+
+/* (No Comment) */
+"watchProviderCa" = "Kanada";
+
+/* (No Comment) */
+"watchProviderCh" = "Szwajcaria";
+
+/* (No Comment) */
+"watchProviderCz" = "Republika Czeska";
+
+/* (No Comment) */
+"watchProviderDe" = "Niemcy";
+
+/* (No Comment) */
+"watchProviderDk" = "Dania";
+
+/* (No Comment) */
+"watchProviderEe" = "Estonia";
+
+/* (No Comment) */
+"watchProviderEs" = "Hiszpania";
+
+/* (No Comment) */
+"watchProviderFi" = "Finlandia";
+
+/* (No Comment) */
+"watchProviderFr" = "Francja";
+
+/* (No Comment) */
+"watchProviderGb" = "Wielka Brytania";
+
+/* (No Comment) */
+"watchProviderHk" = "Hongkong";
+
+/* (No Comment) */
+"watchProviderHr" = "Chorwacja";
+
+/* (No Comment) */
+"watchProviderHu" = "Węgry";
+
+/* (No Comment) */
+"watchProviderId" = "Indonezja";
+
+/* (No Comment) */
+"watchProviderIe" = "Irlandia";
+
+/* (No Comment) */
+"watchProviderIndia" = "Indie";
+
+/* (No Comment) */
+"watchProviderIt" = "Włochy";
+
+/* (No Comment) */
+"watchProviderJp" = "Japonia";
+
+/* (No Comment) */
+"watchProviderKr" = "Korea Południowa";
+
+/* (No Comment) */
+"watchProviderLt" = "Litwa";
+
+/* (No Comment) */
+"watchProviderMx" = "Meksyk";
+
+/* (No Comment) */
+"watchProviderNl" = "Holandia";
+
+/* (No Comment) */
+"watchProviderNo" = "Norwegia";
+
+/* (No Comment) */
+"watchProviderNz" = "Nowa Zelandia";
+
+/* (No Comment) */
+"watchProviderPh" = "Filipiny";
+
+/* (No Comment) */
+"watchProviderPl" = "Polska";
+
+/* (No Comment) */
+"watchProviderPt" = "Portugalia";
+
+/* (No Comment) */
+"watchProviderRs" = "Serbia";
+
+/* (No Comment) */
+"watchProviderSe" = "Szwecja";
+
+/* (No Comment) */
+"watchProviderSk" = "Słowacja";
+
+/* (No Comment) */
+"watchProviderTitleList" = "Jak oglądać";
+
+/* (No Comment) */
+"watchProviderToggleDiscover" = "Tylko pokazuj od dostawcy zegarka";
+
+/* (No Comment) */
+"watchProviderTr" = "Turcja";
+
+/* (No Comment) */
+"watchProviderUs" = "Stany Zjednoczone Ameryki";
+
+/* (No Comment) */
+"watchProviderZa" = "RPA";
+
+/* (No Comment) */
+"watchRegionSubtitle" = "Dostawcy usług dostępnych na żądanie dostosują się do wybranej regionu.";
+
+/* (No Comment) */
+"watchRegionTitle" = "Region dostawcy usługi obejrzenia";
+
+/* MARK: WelcomeView.swift */
+"Welcome to" = "Witaj w";
+
+/* (No Comment) */
+"What's New" = "Co nowego";
+
+/* (No Comment) */
+"whereToWatchDiscoverFilter" = "Gdzie oglądać";
+
+/* (No Comment) */
+"You may like" = "Może ci się spodobać";
+
+/* MARK: WatchlistView.swift */
+"Your list is empty." = "Twoja lista jest pusta.";
+
+/* (No Comment) */
+"Your pinned items" = "Twoje przypięte elementy";
+
+/* (No Comment) */
+"Your smart Watchlist" = "Twój inteligentny Wykaz";
+
+/* (No Comment) */
+"Your upcoming items will appear here." = "Twoje nadchodzące przedmioty pojawią się tutaj.";
+
+/* (No Comment) */
+"Your Watchlist" = "Twoja lista obserwowanych";
+
+/* (No Comment) */
+"Your Watchlist is always in sync with your Apple Watch, iPad, Mac, and Apple TV." = "Twój wykaz obserwowanych elementów jest zawsze zsynchronizowany z twoimi urządzeniami Apple Watch, iPad, Mac i Apple TV.";
+
+/* (No Comment) */
+"yourLists" = "Twoje listy";
+
+"Prefer Series Cover instead of Episode Thumbnail on Up Next" = "Prefer Cover on Up Next";
+"Hide Titles from Unwatched Episodes" = "Hide Titles from Unwatched Episodes";
+"To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes." = "To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes.";
+"Hide Thumbnails from Unwatched Episodes" = "Hide Thumbnails from Unwatched Episodes";
+"To avoid potential spoilers, you can hide thumbnails from unwatched episodes." = "To avoid potential spoilers, you can hide thumbnails from unwatched episodes.";
+"Add" = "Add";
+"upNextSkipThisEpisode" = "Skip this episode";
+
+"MARK_EPISODE_WATCHED" = "Oznacz odcinek %1$d z sezonu %2$d z %3$@ jako obejrzany?";
+"Confirm Watched Episode" = "Potwierdź obejrzany odcinek";
+
+// MARK: Screenshot Section Headers
+"Now Playing" = "Aktualnie w kinach";
+"Top Rated" = "Najwyżej oceniane";
+"Popular" = "Popularne";
+"Similar" = "Podobne";
+
+//MARK: Puzzle Archive
+"puzzleArchiveTitle" = "Archiwum Łamigłówek";
+"puzzleArchiveSubtitle" = "Klasyczne łamigłówki filmowe do grania w dowolnym momencie. Bez presji serii!";
+"puzzleArchiveSolvedLabel" = "Rozwiązane";
+"puzzleArchiveStarsLabel" = "Gwiazdki";
+"puzzleArchiveViewArchive" = "Archiwum Łamigłówek";
+"puzzleArchiveUnsolved" = "Nierozwiązane";

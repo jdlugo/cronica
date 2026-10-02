@@ -1,0 +1,332 @@
+{
+  "generationKey": "daily-reel-2026-09-03-carrey-breakout-v1",
+  "intendedPublicationId": "2026-09-03",
+  "themeSeed": "Faces behind the mask",
+  "publicReelTemplate": "../fixtures/published-reel-2026-09-03.json",
+  "contentVersion": "daily-reel-2026-09-03.1",
+  "publicationWindow": {
+    "availableAt": "2026-09-03T05:00:00Z",
+    "expiresAt": "2026-09-04T05:00:00Z"
+  },
+  "posterPaths": {
+    "tmdb:37165": "/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+    "tmdb:8871": "/1WZbbPApEivA421gCOluuzMMKCk.jpg",
+    "tmdb:38": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+    "tmdb:454626": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg",
+    "tmdb:3049": "/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg",
+    "tmdb:854": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg",
+    "tmdb:8467": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg"
+  },
+  "answers": {
+    "en": {
+      "decode": {
+        "acceptedAnswers": [
+          "The Truman Show",
+          "Truman Show"
+        ],
+        "titleLength": 13,
+        "hint": "His entire life is a television set.",
+        "revealTitle": "The Truman Show",
+        "explanation": "The television, globe, and watchful eye point to a man whose whole world is a show."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Look past the green fur, heartbreak, and giant mustache.",
+        "explanation": "Jim Carrey plays the Grinch, Joel Barish, and Dr. Robotnik."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:3049",
+          "tmdb:854",
+          "tmdb:8467"
+        ],
+        "hint": "All three opened during 1994.",
+        "explanation": "Ace Ventura opened February 4, The Mask July 29, and Dumb and Dumber December 16, 1994."
+      },
+      "threadReveal": {
+        "title": "The year Jim Carrey became unstoppable",
+        "explanation": "The Truman Show exposed Jim Carrey's dramatic range; How the Grinch Stole Christmas hid him under makeup, and Ace Ventura: Pet Detective began a 1994 run that also delivered The Mask and Dumb and Dumber."
+      }
+    },
+    "fr-FR": {
+      "decode": {
+        "acceptedAnswers": [
+          "The Truman Show",
+          "Truman Show"
+        ],
+        "titleLength": 13,
+        "hint": "Toute sa vie se déroule sur un plateau de télévision.",
+        "revealTitle": "The Truman Show",
+        "explanation": "La télévision, le globe et l'œil évoquent un homme dont le monde entier est un spectacle."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Regarde au-delà des poils verts, du chagrin et de l'énorme moustache.",
+        "explanation": "Jim Carrey incarne le Grinch, Joel Barish et le Dr Robotnik."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:3049",
+          "tmdb:854",
+          "tmdb:8467"
+        ],
+        "hint": "Les trois films sont sortis en 1994.",
+        "explanation": "Ace Ventura est sorti le 4 février, The Mask le 29 juillet et Dumb & Dumber le 16 décembre 1994."
+      },
+      "threadReveal": {
+        "title": "L'année où Jim Carrey est devenu incontournable",
+        "explanation": "The Truman Show a révélé le talent dramatique de Jim Carrey ; Le Grinch l'a caché sous le maquillage, et Ace Ventura, détective chiens et chats a lancé une année 1994 qui a aussi offert The Mask et Dumb & Dumber."
+      }
+    },
+    "es-ES": {
+      "decode": {
+        "acceptedAnswers": [
+          "El show de Truman",
+          "The Truman Show"
+        ],
+        "titleLength": 14,
+        "hint": "Toda su vida transcurre en un plató de televisión.",
+        "revealTitle": "El show de Truman",
+        "explanation": "La televisión, el mundo y el ojo apuntan a un hombre cuya vida entera es un espectáculo."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Mira más allá del pelo verde, el desamor y el enorme bigote.",
+        "explanation": "Jim Carrey interpreta al Grinch, Joel Barish y el Dr. Robotnik."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:3049",
+          "tmdb:854",
+          "tmdb:8467"
+        ],
+        "hint": "Las tres se estrenaron en 1994.",
+        "explanation": "Ace Ventura llegó el 4 de febrero, La máscara el 29 de julio y Dos tontos muy tontos el 16 de diciembre de 1994."
+      },
+      "threadReveal": {
+        "title": "El año en que Jim Carrey se volvió imparable",
+        "explanation": "El show de Truman reveló el talento dramático de Jim Carrey; El Grinch lo ocultó bajo maquillaje, y Ace Ventura, un detective diferente inició un 1994 que también trajo La máscara y Dos tontos muy tontos."
+      }
+    },
+    "es-MX": {
+      "decode": {
+        "acceptedAnswers": [
+          "Truman Show: Historia de una Vida",
+          "The Truman Show",
+          "El show de Truman"
+        ],
+        "titleLength": 27,
+        "hint": "Toda su vida ocurre dentro de un set de televisión.",
+        "revealTitle": "Truman Show: Historia de una Vida",
+        "explanation": "La televisión, el mundo y el ojo apuntan a un hombre cuya vida completa es un programa."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Mira detrás del pelo verde, el corazón roto y el enorme bigote.",
+        "explanation": "Jim Carrey interpreta al Grinch, Joel Barish y el Dr. Robotnik."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:3049",
+          "tmdb:854",
+          "tmdb:8467"
+        ],
+        "hint": "Las tres llegaron a cines en 1994.",
+        "explanation": "Ace Ventura llegó el 4 de febrero, La Máscara el 29 de julio y Una pareja de idiotas el 16 de diciembre de 1994."
+      },
+      "threadReveal": {
+        "title": "El año en que Jim Carrey se volvió imparable",
+        "explanation": "Truman Show: Historia de una Vida mostró el lado dramático de Jim Carrey; El Grinch lo escondió bajo maquillaje, y Ace Ventura: Detective de Mascotas inició un 1994 que también trajo La Máscara y Una pareja de idiotas."
+      }
+    },
+    "pt-BR": {
+      "decode": {
+        "acceptedAnswers": [
+          "O Show de Truman: O Show da Vida",
+          "O Show de Truman",
+          "The Truman Show"
+        ],
+        "titleLength": 24,
+        "hint": "A vida inteira dele acontece em um estúdio de televisão.",
+        "revealTitle": "O Show de Truman: O Show da Vida",
+        "explanation": "A televisão, o mundo e o olho apontam para um homem cuja vida inteira é um programa."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Olhe além dos pelos verdes, do coração partido e do bigode gigante.",
+        "explanation": "Jim Carrey interpreta o Grinch, Joel Barish e o Dr. Robotnik."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:3049",
+          "tmdb:854",
+          "tmdb:8467"
+        ],
+        "hint": "Os três chegaram aos cinemas em 1994.",
+        "explanation": "Ace Ventura estreou em 4 de fevereiro, O Máskara em 29 de julho e Debi & Lóide em 16 de dezembro de 1994."
+      },
+      "threadReveal": {
+        "title": "O ano em que Jim Carrey ficou imparável",
+        "explanation": "O Show de Truman: O Show da Vida revelou o lado dramático de Jim Carrey; O Grinch o escondeu sob maquiagem, e Ace Ventura: Um Detetive Diferente iniciou um 1994 que também trouxe O Máskara e Debi & Lóide: Dois Idiotas em Apuros."
+      }
+    }
+  },
+  "movieFacts": [
+    {
+      "movieId": "tmdb:37165",
+      "tmdbId": 37165,
+      "releaseDate": "1998-06-04",
+      "directorIds": [
+        "person:2690"
+      ],
+      "actorIds": [
+        "person:206"
+      ],
+      "genreIds": [
+        35,
+        18
+      ],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:8871",
+      "tmdbId": 8871,
+      "releaseDate": "2000-11-17",
+      "directorIds": [
+        "person:6159"
+      ],
+      "actorIds": [
+        "person:206"
+      ],
+      "genreIds": [
+        10751,
+        35,
+        14
+      ],
+      "franchiseId": "tmdb:1738568"
+    },
+    {
+      "movieId": "tmdb:38",
+      "tmdbId": 38,
+      "releaseDate": "2004-03-19",
+      "directorIds": [
+        "person:201"
+      ],
+      "actorIds": [
+        "person:206"
+      ],
+      "genreIds": [
+        878,
+        18,
+        10749
+      ],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:454626",
+      "tmdbId": 454626,
+      "releaseDate": "2020-02-12",
+      "directorIds": [
+        "person:93364"
+      ],
+      "actorIds": [
+        "person:206"
+      ],
+      "genreIds": [
+        28,
+        878,
+        35,
+        10751
+      ],
+      "franchiseId": "tmdb:720879"
+    },
+    {
+      "movieId": "tmdb:3049",
+      "tmdbId": 3049,
+      "releaseDate": "1994-02-04",
+      "directorIds": [
+        "person:4499"
+      ],
+      "actorIds": [
+        "person:206"
+      ],
+      "genreIds": [
+        35,
+        80,
+        9648
+      ],
+      "franchiseId": "tmdb:3167"
+    },
+    {
+      "movieId": "tmdb:854",
+      "tmdbId": 854,
+      "releaseDate": "1994-07-29",
+      "directorIds": [
+        "person:26713"
+      ],
+      "actorIds": [
+        "person:206"
+      ],
+      "genreIds": [
+        35,
+        14,
+        80,
+        10749
+      ],
+      "franchiseId": "tmdb:43072"
+    },
+    {
+      "movieId": "tmdb:8467",
+      "tmdbId": 8467,
+      "releaseDate": "1994-12-16",
+      "directorIds": [
+        "person:7396"
+      ],
+      "actorIds": [
+        "person:206"
+      ],
+      "genreIds": [
+        35
+      ],
+      "franchiseId": "tmdb:96665"
+    }
+  ],
+  "connection": {
+    "kind": "actor",
+    "key": "person:206",
+    "evidenceByMovieId": {
+      "tmdb:8871": "TMDb credits Jim Carrey as the Grinch.",
+      "tmdb:38": "TMDb credits Jim Carrey as Joel Barish.",
+      "tmdb:454626": "TMDb credits Jim Carrey as Dr. Robotnik."
+    }
+  },
+  "difficulty": {
+    "decode": "medium",
+    "connect": "medium",
+    "arrange": "hard"
+  },
+  "safety": {
+    "isSafe": true,
+    "categories": []
+  },
+  "recentMovieIds": [
+    "tmdb:329",
+    "tmdb:578",
+    "tmdb:601",
+    "tmdb:218",
+    "tmdb:603",
+    "tmdb:27205",
+    "tmdb:105",
+    "tmdb:155",
+    "tmdb:77",
+    "tmdb:374720",
+    "tmdb:872585",
+    "tmdb:268",
+    "tmdb:272",
+    "tmdb:414906"
+  ],
+  "recentThemeKeys": [
+    "Extraordinary journeys",
+    "Shadows, memory, and masks"
+  ]
+}

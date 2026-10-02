@@ -1,0 +1,703 @@
+{
+  "insights": [
+    {
+      "name": "Daily Puzzle — Acquisition → Solve Funnel",
+      "description": "Core gameplay funnel: opened → session start → first guess → solved. Open requests are reported separately because they cover only explicit entry intents.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "FunnelsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_opened",
+              "event": "daily_puzzle_opened",
+              "custom_name": "Opened"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_session_started",
+              "event": "daily_puzzle_session_started",
+              "custom_name": "Session started"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_guess_submitted",
+              "event": "daily_puzzle_guess_submitted",
+              "custom_name": "Guess submitted"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_solved",
+              "event": "daily_puzzle_solved",
+              "custom_name": "Solved"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "funnelsFilter": {
+            "layout": "horizontal",
+            "exclusions": [],
+            "funnelVizType": "steps",
+            "funnelOrderType": "ordered",
+            "funnelStepReference": "total",
+            "funnelWindowInterval": 1,
+            "breakdownAttributionType": "first_touch",
+            "funnelWindowIntervalUnit": "day"
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Daily Puzzle — Notification Prompt Conversion",
+      "description": "Inline reminder offer → actual enabled outcome. Filter to builds containing the new opt-in flow.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "FunnelsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_prompt_shown",
+              "event": "daily_puzzle_prompt_shown",
+              "custom_name": "Prompt shown"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_notification_outcome",
+              "event": "daily_puzzle_notification_outcome",
+              "custom_name": "Reminders enabled",
+              "properties": [{"key": "outcome", "value": "enabled", "operator": "exact", "type": "event"}]
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "funnelsFilter": {
+            "layout": "horizontal",
+            "exclusions": [],
+            "funnelVizType": "steps",
+            "funnelOrderType": "ordered",
+            "funnelStepReference": "total",
+            "funnelWindowInterval": 1,
+            "breakdownAttributionType": "first_touch",
+            "funnelWindowIntervalUnit": "day"
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Daily Puzzle — Hint Unlock Impact",
+      "description": "Did users solve after opening and unlocking hints.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "FunnelsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_opened",
+              "event": "daily_puzzle_opened",
+              "custom_name": "Opened"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_hint_unlocked",
+              "event": "daily_puzzle_hint_unlocked",
+              "custom_name": "Hint unlocked"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_solved",
+              "event": "daily_puzzle_solved",
+              "custom_name": "Solved"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "funnelsFilter": {
+            "layout": "horizontal",
+            "exclusions": [],
+            "funnelVizType": "steps",
+            "funnelOrderType": "ordered",
+            "funnelStepReference": "total",
+            "funnelWindowInterval": 1,
+            "breakdownAttributionType": "first_touch",
+            "funnelWindowIntervalUnit": "day"
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Daily Puzzle — Session Lifecycle",
+      "description": "Open → session start → session end (all outcomes).",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "FunnelsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_opened",
+              "event": "daily_puzzle_opened",
+              "custom_name": "Opened"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_session_started",
+              "event": "daily_puzzle_session_started",
+              "custom_name": "Session started"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_session_ended",
+              "event": "daily_puzzle_session_ended",
+              "custom_name": "Session ended"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "funnelsFilter": {
+            "layout": "horizontal",
+            "exclusions": [],
+            "funnelVizType": "steps",
+            "funnelOrderType": "ordered",
+            "funnelStepReference": "total",
+            "funnelWindowInterval": 1,
+            "breakdownAttributionType": "first_touch",
+            "funnelWindowIntervalUnit": "day"
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Ad Funnel Impact (Puzzle Session → Ad Events → Solve)",
+      "description": "Tracks whether puzzle sessions convert after ad touchpoints.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "FunnelsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_session_started",
+              "event": "daily_puzzle_session_started",
+              "custom_name": "Session started"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_interstitial_present",
+              "event": "ad_interstitial_present",
+              "custom_name": "Interstitial present"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_solved",
+              "event": "daily_puzzle_solved",
+              "custom_name": "Solved"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "funnelsFilter": {
+            "layout": "horizontal",
+            "exclusions": [],
+            "funnelVizType": "steps",
+            "funnelOrderType": "ordered",
+            "funnelStepReference": "total",
+            "funnelWindowInterval": 1,
+            "breakdownAttributionType": "first_touch",
+            "funnelWindowIntervalUnit": "day"
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Daily Puzzle + Ad Daily Event Volume",
+      "description": "Daily trend of primary gameplay and ad events.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "TrendsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_opened",
+              "event": "daily_puzzle_opened"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_solved",
+              "event": "daily_puzzle_solved"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_guess_submitted",
+              "event": "daily_puzzle_guess_submitted"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_hint_unlocked",
+              "event": "daily_puzzle_hint_unlocked"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_interstitial_present",
+              "event": "ad_interstitial_present"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_rewarded_present",
+              "event": "ad_rewarded_present"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_app_open_present",
+              "event": "ad_app_open_present"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_hint_present",
+              "event": "ad_hint_present"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "trendsFilter": {
+            "display": "ActionsLineGraph",
+            "showLegend": true,
+            "showValuesOnSeries": false,
+            "aggregationAxisFormat": "numeric",
+            "showPercentStackView": false,
+            "smoothingIntervals": 1
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Release Health — Launches by Build",
+      "description": "Daily app launches split by build number for release monitoring.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "TrendsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "app_launched",
+              "event": "app_launched",
+              "custom_name": "App launches"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "trendsFilter": {
+            "display": "ActionsLineGraph",
+            "showLegend": true,
+            "showValuesOnSeries": false,
+            "aggregationAxisFormat": "numeric",
+            "showPercentStackView": false,
+            "smoothingIntervals": 1
+          },
+          "breakdownFilter": {
+            "breakdown": "build_number",
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Release Health — Consent Eligibility",
+      "description": "Daily allowed and denied ad-startup eligibility outcomes after consent resolves.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "TrendsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "ad_startup_eligibility_evaluated",
+              "event": "ad_startup_eligibility_evaluated",
+              "custom_name": "Ad startup eligibility"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "trendsFilter": {
+            "display": "ActionsLineGraph",
+            "showLegend": true,
+            "showValuesOnSeries": false,
+            "aggregationAxisFormat": "numeric",
+            "showPercentStackView": false,
+            "smoothingIntervals": 1
+          },
+          "breakdownFilter": {
+            "breakdown": "outcome",
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Release Health — Core Outcomes by Build",
+      "description": "Launch, puzzle, and ad-impression volume split by build number.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "TrendsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "app_launched",
+              "event": "app_launched"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_opened",
+              "event": "daily_puzzle_opened"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_solved",
+              "event": "daily_puzzle_solved"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_interstitial_impression",
+              "event": "ad_interstitial_impression"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_rewarded_impression",
+              "event": "ad_rewarded_impression"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_app_open_impression",
+              "event": "ad_app_open_impression"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "trendsFilter": {
+            "display": "ActionsLineGraph",
+            "showLegend": true,
+            "showValuesOnSeries": false,
+            "aggregationAxisFormat": "numeric",
+            "showPercentStackView": false,
+            "smoothingIntervals": 1
+          },
+          "breakdownFilter": {
+            "breakdown": "build_number",
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Daily Puzzle — Entry Intent by Source",
+      "description": "Explicit puzzle-open requests by source. Compare volume separately from total opens because not every entry path emits an open request.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "TrendsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_open_requested",
+              "event": "daily_puzzle_open_requested",
+              "custom_name": "Explicit open intent"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "trendsFilter": {
+            "display": "ActionsLineGraph",
+            "showLegend": true,
+            "showValuesOnSeries": false,
+            "aggregationAxisFormat": "numeric",
+            "showPercentStackView": false,
+            "smoothingIntervals": 1
+          },
+          "breakdownFilter": {
+            "breakdown": "source",
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Daily Run — Completion and Continuation",
+      "description": "Three-round run start → completion → Keep Playing conversion.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "FunnelsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_run_started",
+              "event": "daily_puzzle_run_started",
+              "custom_name": "Run started"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_run_completed",
+              "event": "daily_puzzle_run_completed",
+              "custom_name": "Run completed"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_run_continue_tapped",
+              "event": "daily_puzzle_run_continue_tapped",
+              "custom_name": "Keep Playing tapped"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "funnelsFilter": {
+            "layout": "horizontal",
+            "exclusions": [],
+            "funnelVizType": "steps",
+            "funnelOrderType": "ordered",
+            "funnelStepReference": "total",
+            "funnelWindowInterval": 1,
+            "breakdownAttributionType": "first_touch",
+            "funnelWindowIntervalUnit": "day"
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Weekly Movie Goal — Outcomes",
+      "description": "Weekly-goal progress, completion, and same-day duplicate outcomes.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "TrendsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_weekly_goal_updated",
+              "event": "daily_puzzle_weekly_goal_updated",
+              "custom_name": "Weekly goal update"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "trendsFilter": {
+            "display": "ActionsLineGraph",
+            "showLegend": true,
+            "showValuesOnSeries": false,
+            "aggregationAxisFormat": "numeric",
+            "showPercentStackView": false,
+            "smoothingIntervals": 1
+          },
+          "breakdownFilter": {
+            "breakdown": "outcome",
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Rewarded Hint — Offer to Assisted Solve",
+      "description": "Contextual hint offer → tap → granted reward → solved conversion.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "FunnelsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_hint_offer_shown",
+              "event": "daily_puzzle_hint_offer_shown",
+              "custom_name": "Offer shown"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_hint_offer_tapped",
+              "event": "daily_puzzle_hint_offer_tapped",
+              "custom_name": "Offer tapped"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_hint_reward_granted",
+              "event": "daily_puzzle_hint_reward_granted",
+              "custom_name": "Reward granted"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "daily_puzzle_solved",
+              "event": "daily_puzzle_solved",
+              "custom_name": "Solved"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "funnelsFilter": {
+            "layout": "horizontal",
+            "exclusions": [],
+            "funnelVizType": "steps",
+            "funnelOrderType": "ordered",
+            "funnelStepReference": "total",
+            "funnelWindowInterval": 1,
+            "breakdownAttributionType": "first_touch",
+            "funnelWindowIntervalUnit": "day"
+          },
+          "breakdownFilter": {
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "Monetization — Ad Impressions by Build",
+      "description": "Interstitial, rewarded, and app-open impression volume split by build number.",
+      "query": {
+        "kind": "InsightVizNode",
+        "source": {
+          "kind": "TrendsQuery",
+          "series": [
+            {
+              "kind": "EventsNode",
+              "name": "ad_interstitial_impression",
+              "event": "ad_interstitial_impression",
+              "custom_name": "Interstitial impressions"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_rewarded_impression",
+              "event": "ad_rewarded_impression",
+              "custom_name": "Rewarded impressions"
+            },
+            {
+              "kind": "EventsNode",
+              "name": "ad_app_open_impression",
+              "event": "ad_app_open_impression",
+              "custom_name": "App-open impressions"
+            }
+          ],
+          "interval": "day",
+          "dateRange": {
+            "date_from": "-30d",
+            "explicitDate": false
+          },
+          "properties": [],
+          "trendsFilter": {
+            "display": "ActionsLineGraph",
+            "showLegend": true,
+            "showValuesOnSeries": false,
+            "aggregationAxisFormat": "numeric",
+            "showPercentStackView": false,
+            "smoothingIntervals": 1
+          },
+          "breakdownFilter": {
+            "breakdown": "build_number",
+            "breakdown_type": "event"
+          },
+          "filterTestAccounts": false,
+          "version": 2
+        }
+      }
+    }
+  ]
+}

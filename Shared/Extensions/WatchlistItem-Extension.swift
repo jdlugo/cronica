@@ -1,10 +1,3 @@
-//
-//  WatchlistItem-CoreDataHelpers.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 15/02/22.
-//
-
 import Foundation
 import CoreData
 
@@ -72,7 +65,7 @@ extension WatchlistItem {
 		case .tvShow:
 			if upcomingSeason {
 				if itemDateForNextSeason.isEmpty {
-					return "Season \(nextSeasonNumber)"
+					return NSLocalizedString("Season \(nextSeasonNumber)", comment: "")
 				}
 #if os(watchOS)
 				return itemDateForNextSeason

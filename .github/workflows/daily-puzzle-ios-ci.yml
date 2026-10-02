@@ -1,0 +1,49 @@
+name: Daily Puzzle iOS CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - "codex/**"
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  ios-targeted-tests:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select latest Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Test reminder scheduling and cancellation races
+        run: bash scripts/test_daily_puzzle_reminders.sh
+
+      - name: Run Daily Puzzle targeted suite
+        run: |
+          IOS_DESTINATION="$(xcodebuild -showdestinations -project Story.xcodeproj -scheme 'Story (iOS)' 2>/dev/null | awk '/platform:iOS Simulator/ && $0 !~ /Any iOS Simulator Device/ { print }' | sed -n 's/.*id:\([^,}]*\).*/id=\1/p' | head -n 1)"
+          if [ -z "$IOS_DESTINATION" ]; then
+            echo "No iOS Simulator destination detected"
+            exit 1
+          fi
+
+          xcodebuild test \
+            -project Story.xcodeproj \
+            -scheme 'Story (iOS)' \
+            -destination "$IOS_DESTINATION" \
+            -only-testing:CronicaTests/DailyPuzzleViewModelTests \
+            -only-testing:CronicaTests/DailyPuzzleServiceTests \
+            -only-testing:CronicaTests/DailyPuzzleAnswerAcceptanceTests \
+            -only-testing:CronicaTests/DailyPuzzleHintOfferTests \
+            -only-testing:CronicaTests/DailyPuzzlePushTopicManagerTests \
+            -only-testing:CronicaTests/DailyPuzzleReminderPresentationTests \
+            -only-testing:CronicaTests/DailyPuzzleLaunchIntentStoreTests \
+            -only-testing:CronicaTests/NotificationDelegateTests \
+            -only-testing:CronicaTests/DailyPuzzleAdminConfigServiceTests

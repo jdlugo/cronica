@@ -1,10 +1,3 @@
-//
-//  NotificationListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 25/09/22.
-//
-
 import SwiftUI
 
 #if !os(tvOS)
@@ -16,41 +9,46 @@ struct NotificationListView: View {
     @State private var showPopup = false
     @State private var popupType: ActionPopupItems?
     var body: some View {
-        Form {
-            if hasLoaded {
-                List {
-                    deliveredItemsView
-                    upcomingItemsView
+        NavigationStack {
+            Form {
+                if hasLoaded {
+                    List {
+                        deliveredItemsView
+                        upcomingItemsView
+                    }
+                } else {
+                    CenterHorizontalView { ProgressView("Loading") }
                 }
-            } else {
-                EmptyView()
             }
-        }
-        .overlay {
-            if !hasLoaded {
-                CronicaLoadingPopupView()
-            }
-        }
-        .actionPopup(isShowing: $showPopup, for: popupType)
-        .navigationTitle("Notifications")
+            .actionPopup(isShowing: $showPopup, for: popupType)
+            .navigationTitle("Notifications")
 #if os(macOS)
-        .formStyle(.grouped)
+            .formStyle(.grouped)
 #elseif os(iOS)
-        .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.large)
 #endif
-        .toolbar {
+            .toolbar {
 #if os(iOS)
-            ToolbarItem(placement: .topBarTrailing) {
-                configButton
-            }
+                ToolbarItem(placement: .navigationBarTrailing) { Button("Done", action: dismiss) }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    configButton
+                }
+#else
+                Button("Done", action: dismiss)
 #endif
+            }
+            .navigationDestination(for: ItemContent.self) { item in
+                ItemContentDetails(title: item.itemTitle, id: item.id, type: item.itemContentMedia, handleToolbar: true)
+            }
+            .navigationDestination(for: Person.self) { item in
+                PersonDetailsView(name: item.name, id: item.id)
+            }
+            .task { await load() }
         }
-        .task { await load() }
-        .scrollBounceBehavior(.basedOnSize)
     }
     
     private var configButton: some View {
-        NavigationLink(destination: NotificationsSettingsView()) {
+        NavigationLink(destination: NotificationsSettingsView(navigationTitle: String())) {
             Label("Settings", systemImage: "gearshape")
         }
     }
@@ -75,9 +73,9 @@ struct NotificationListView: View {
     
     @ViewBuilder
     private var upcomingItemsView: some View {
-        if items.isEmpty, deliveredItems.isEmpty {
+        if items.isEmpty {
             CenterHorizontalView {
-                Text("No Notifications")
+                Text("No notifications")
                     .padding()
                     .font(.callout)
                     .foregroundColor(.secondary)

@@ -1,0 +1,894 @@
+/*
+  Localizable.strings
+  Story
+
+  Created by Alexandre Madeira on 03/03/22.
+  
+*/
+
+//MARK: Common
+"Done" = "Concluído";
+"No details available." = "Nenhum detalhe disponível.";
+"Not Available" = "Não disponível";
+"No information available" = "Nenhuma informação disponível";
+"No title available" = "Nenhuma informação disponível";
+"Up Coming" = "Próximos Lançamentos";
+"Upcoming Episodes" = "Próximos Episódios";
+"Arriving Soon" = "Chegando em breve";
+"Latest Movies" = "Lançamentos Recentes";
+"Latest Shows" = "Últimas séries de TV";
+"TV Show" = "Série";
+"Movie" = "Filme";
+"People" = "Pessoa";
+"Popular Movies" = "Filmes Populares";
+"Movies" = "Filmes";
+"TV Shows" = "Séries";
+"The movie will be released today." = "O filme será lançado hoje.";
+"New episode available." = "Novo episódio disponível.";
+"Sort" = "Agrupar";
+"Media Type" = "Tipo";
+"Default" = "Otimizada";
+"Favorites" = "Favoritos";
+"To Watch" = "Para Assistir";
+"Unwatched" = "Para Assistir";
+"Watched" = "Assistidos";
+"Upcoming Movies" = "Próximos Filmes";
+"Upcoming Seasons" = "Próximas Temporadas";
+"Renewed Series" = "Série Renovada";
+"Releasing Soon" = "Lançamento em breve";
+"Recently Released" = "Lançado recentemente";
+"Remove" = "Remover";
+"Added to watchlist" = "Adicionado à lista";
+"Mark as" = "Marcar como";
+"Add to Favorites" = "Adicionar aos Favoritos";
+"Share" = "Compartilhar";
+"Mark this and previous episodes as watched" = "Marque este e os episódios anteriores como assistidos";
+"No Episode Available" = "Nenhum Episódio Disponível";
+"Season Marked as Watched" = "Temporada marcada como assistida";
+"No biography available." = "Nenhuma biografia disponível.";
+"No information available." = "Nenhuma informação disponível.";
+"No title available" = "Nenhum título disponível";
+"No Name Found" = "Nenhum nome encontrado";
+"Not Available" = "Indisponível";
+"Remove Selected" = "Remover Selecionados";
+"Mark selected as watched" = "Marcar selecionados como assistidos";
+"Mark selected as unwatched" = "Marcar selecionados como não assistidos";
+"Open in" = "Abrir em";
+"IMDb" = "IMDb";
+"TMDb" = "TMDb";
+"Coming Soon To Theaters" = "Em Breve Nos Cinemas";
+"Pins" = "Fixados";
+"Write a review" = "Escreva uma avaliação";
+"Share App" = "Compartilhar aplicativo";
+"Email (optional)" = "E-mail (opcional)";
+"Open in YouTube" = "Abrir no YouTube";
+"List Filters" = "Filtros de Lista";
+"Add to List" = "Adicionar à Lista";
+"Remove from List" = "Remover da Lista";
+"Pinned Items" = "Itens Fixados";
+"Show Details" = "Mostrar Detalhes";
+"Archive" = "Arquivo";
+"Archive Item" = "Arquivar Item";
+"Remove from Archive" = "Remover do Arquivo";
+"Be reminded of upcoming Movies & TV Shows." = "Lembre-se dos próximos filmes e séries.";
+"Your smart Watchlist" = "Sua Lista inteligente";
+"addAndMarkWatchedButton" = "Adicionar e Marcar como Assistido";
+"markedAsWatched" = "Marcado como Assistido";
+"removedFromWatched" = "Removido de Assistido";
+"markedAsFavorite" = "Marcado como Favorito";
+"removedFromFavorites" = "Removido dos Favoritos";
+
+//MARK: AttributionView.swift
+"This product uses the TMDb API but is not endorsed or certified by TMDb." = "Este produto usa a API TMDb, mas não é endossado ou certificado pelo TMDb.";
+
+//MARK: OverlayView.swift
+"Something went wrong, try again later." = "Algo deu errado, tente novamente mais tarde.";
+
+//MARK: ContentDetailsView.swift
+"Add to watchlist" = "Adicionar";
+"Remove from watchlist" = "Remover";
+"About" = "Sobre";
+"Trailers" = "Trailers";
+"Season" = "Temporada";
+"Seasons" = "Temporadas";
+"Recommendations" = "Recomendações";
+"You may like" = "Você pode gostar";
+"Mark as Watched" = "Marcar como Assistido";
+"Remove from Watched" = "Remover de Assistidos";
+"Mark as Favorite" = "Marcar como Favorito";
+"Remove from Favorites" = "Remover de Favoritos";
+"Ratings Score" = "Pontuação de Classificações";
+
+//MARK: ExploreView.swift
+"Explore" = "Descubra";
+"Action" = "Ação";
+"Adventure" = "Aventura";
+"Animation" = "Animação";
+"Comedy" = "Comédia";
+"Crime" = "Crime";
+"Documentary" = "Documentário";
+"Drama" = "Drama";
+"Family" = "Família";
+"Fantasy" = "Fantasia";
+"History" = "História";
+"Horror" = "Terror";
+"Music" = "Música";
+"Mystery" = "Mistério";
+"Romance" = "Romance";
+"Science Fiction" = "Ficção científica";
+"Thriller" = "Thriller";
+"War" = "Guerra";
+"Action & Adventure" = "Ação e Aventura";
+"Kids" = "Infantil";
+"Reality" = "Reality";
+"Sci-Fi & Fantasy" = "Ficção Científica e Fantasia";
+"Popular Movies by Genre" = "Filmes populares por gênero";
+"Popular TV Shows by Genre" = "Séries de TV populares por gênero";
+"Genres" = "Gêneros";
+
+//MARK: InformationSectionView.swift
+"Run Time" = "Tempo de Duração";
+"Release Date" = "Data de Lançamento";
+"Status" = "Status";
+"Genre" = "Gênero";
+"Region of Origin" = "Região de Origem";
+"Production Company" = "Empresa de Produção";
+"Information" = "Informações";
+
+//MARK: ContentView.swift
+"Home" = "Início";
+"Watchlist" = "Lista";
+"Search" = "Pesquisar";
+"Streaming Now" = "Streaming Now";
+
+//MARK: SettingsView.swift
+"Support" = "Suporte";
+"Send feedback" = "Enviar Sugestão";
+"Privacy Policy" = "Política de Privacidade";
+"Gesture" = "Gestos";
+"Double Tap Gesture" = "Gesto de Dois Toques";
+"The function is performed when double-tap the cover image." = "A função será executada quando tocar duas vezes na imagem da capa.";
+"Settings" = "Ajustes";
+"Review Streaming Now" = "Avalie Streaming Now";
+"Send Feedback" = "Enviar Sugestão";
+"Feedback" = "Sugestão";
+"Send" = "Enviar";
+"Cancel" = "Cancelar";
+"Send your suggestions to help improve Streaming Now." = "Envie suas sugestões para ajudar a melhorar o Streaming Now.";
+"Feedback sent" = "Obrigado pelo seu feedback.";
+"Sync" = "Sincronização";
+"Update Items" = "Atualizar Itens";
+"'Update Items' will update your items with new information available on TMDb, if available." = "'Atualizar Itens' atualizará seus itens com novas informações disponíveis no TMDb, se disponíveis.";
+"Privacy" = "Privacidade";
+"Open Trailers in YouTube App" = "Abra Trailers no Aplicativo do YouTube";
+"Media" = "Vídeos";
+"Show Genre on Watchlist" = "Mostrar Gênero na Lista";
+
+//MARK: HomeView.swift
+"Trending" = "Em Alta";
+"This week" = "Esta semana";
+"Today" = "Hoje";
+"My Pins" = "Meus Pins";
+"Your pinned items" = "Seus itens fixados";
+"Remove Pin" = "Remover Fixado";
+
+//MARK: WatchlistSectionView.swift
+"Coming Soon" = "Em Breve";
+"From Watchlist" = "Da Lista";
+
+//MARK: WelcomeView.swift
+"Welcome to" = "Bem-vindo a";
+" Streaming Now" = " Streaming Now";
+"Continue" = "Continuar";
+"Find" = "Busque";
+"Search for upcoming movies and tv shows." = "Procure seus próximos filmes e programas de TV.";
+"Never miss out" = "Receba as notificações";
+"Get notifications about the newest releases." = "Receba notificações sobre os últimos lançamentos.";
+"Organize" = "Tudo organizado";
+"Keep everything organized inside the Watchlist." = "Mantenha tudo organizado dentro da Lista.";
+"Your Watchlist" = "Sua Lista";
+"Add everything you want, the Watchlist automatically organizes it for you." = "Adicione tudo o que quiser, a Lista organiza automaticamente para você.";
+"Discover what's next" = "Descubra novos títulos";
+"The Discover will help you find your next favorite title." = "O Descubra ajudará você a encontrar seu próximo título favorito.";
+"Track your episodes" = "Acompanhe seus episódios";
+"Keep track of every episode you've watched." = "Acompanhe todos os episódios que você assistiu.";
+"Always Synced" = "Sempre Sincronizado";
+"Your Watchlist is always in sync with your Apple Watch, iPad, Mac, and Apple TV." = "Sua Lista está sempre sincronizada com seu Apple Watch, iPad, Mac e Apple TV.";
+
+//MARK: CastDetailsView.swift
+"Biography" = "Biografia";
+"Cast & Crew" = "Elenco & Equipe";
+
+//MARK: SeasonListView.swift
+"Seasons" = "Temporadas";
+"Season %lld" = "Temporada %lld";
+"Episode %lld" = "Episódio %lld";
+"Mark Season as Watched" = "Marcar temporada como assistida";
+
+//MARK: FilmographyView.swift
+"Filmography" = "Filmografia";
+"Know for" = "Conhecido por";
+
+//MARK: SearchView.swift
+"Search" = "Pesquisar";
+"Movies, Shows, People" = "Filmes, Séries, Pessoas";
+"Searching" = "Pesquisando";
+"No Results" = "Sem Resultados";
+"All" = "Todos";
+"Shows" = "Séries";
+
+//MARK: WatchlistView.swift
+"Your list is empty." = "Sua lista está vazia.";
+"Coming Soon" = "Em Breve";
+"Now Available" = "Disponível";
+"Released" = "Lançado";
+"Watchlist" = "Lista";
+"Search watchlist" = "Procure na Lista";
+"In Production" = "Em Produção";
+"Production" = "Em Produção";
+"Cancelled" = "Cancelado";
+"Unknown" = "Desconhecido";
+"Released Movies" = "Filmes Lançados";
+"Released Shows" = "Séries Lançadas";
+"Releases" = "Lançamentos";
+"Upcoming" = "Em Breve";
+"No results" = "Sem resultados";
+"Search results" = "Resultado da busca";
+"This list is empty." = "Esta lista está vazia.";
+"Sort List" = "Filtrar Lista";
+"Results from Watchlist" = "Resultados da Lista";
+"No results from Watchlist" = "Nenhum resultado da Lista";
+"Results from TMDb" = "Resultados do TMDb";
+"No results from TMDb" = "Nenhum resultado do TMDb";
+"Pin Item" = "Fixar Item";
+"Unpin Item" = "Desafixar Item";
+"Pin Items" = "Fixar Itens";
+
+// MARK: Error
+"Invalid Response" = "Resposta Inválida.";
+"Invalid Request" = "Solicitação Inválida.";
+"Invalid Endpoint" = "Endpoint Inválido.";
+"Error reading this title" = "Erro ao ler este título.";
+"Invalid API key: You must be granted a valid key." = "Chave de API inválida.";
+"Internal error: Something went wrong, contact TMDB." = "Erro interno: algo deu errado, entre em contato com o TMDB.";
+"The API is undergoing maintenance. Try again later." = "A API está em manutenção. Tente novamente mais tarde.";
+"Error" = "Erro";
+"Cancel" = "Cancelar";
+"Retry" = "Tentar novamente";
+
+// MARK: watchOS
+"Search TMDb" = "Procure no TMDb";
+"For more details, open the companion app." = "Para mais detalhes, abra o aplicativo no iPhone.";
+
+// MARK: Widget
+"Shows movies and TV Shows trending from TMDb." = "Mostra filmes e séries em destaque da TMDb.";
+
+// MARK: NotificationListView
+"Notifications" = "Notificações";
+"Upcoming Notifications" = "Próximas Notificações";
+"Recent Notifications" = "Notificações Recentes";
+"No notifications" = "Sem notificações";
+"Remove Notification" = "Remover Notificação";
+"Loading" = "Carregando";
+"%lld upcoming notifications." = "%lld notificações futuras.";
+
+// MARK: AppearanceSetting
+"appearanceRowTypeTitle" = "Informações do item da Lista";
+"appearanceRowTypeSubtitle" = "Escolha que tipo de informação você deseja exibir.";
+"appearanceWatchlist" = "Lista";
+"appearanceTitle" = "Aparência";
+"appearanceThemeTitle" = "Cor de Destaque";
+"appearanceTheme" = "Temas";
+"appearanceRowStyleTitle" = "Estilo do Item da Lista";
+"appearanceRowStyleSubtitle" = "Escolha como exibir sua Lista";
+"appearanceAppThemeTitle" = "Tema do aplicativo";
+"disableTranslucentTitle" = "Desativar Fundo Translúcido";
+"appearanceExploreDisplayType" = "Preferência de Exibição do Descubra";
+"appearanceExplore" = "Descubra";
+"appearanceListsDisplayType" = "Preferência de Exibição de Listas";
+"appearanceLists" = "Listas";
+
+// MARK: BehaviorSetting
+"behaviorDoubleTapTitle" = "Toque Duplo Na Capa";
+"behaviorDoubleTapSubtitle" = "Escolha qual função executar ao tocar duas vezes na imagem da capa.";
+"behaviorGestureTitle" = "Gestos";
+"behaviorYouTubeTitle" = "Abra Trailers no YouTube";
+"behaviorYouTubeSubtitle" = "Abra trailers no aplicativo do YouTube.";
+"behaviorLinkTitle" = "Links";
+"behaviorTitle" = "Comportamento";
+"behaviorEpisodeTitle" = "Toque para marcar o episódio como assistido";
+"hapticFeedbackTitle" = "Feedback Tátil";
+
+// MARK: WatchlistSubtitleRow
+"watchlistSubtitleRowNone" = "Padrão";
+"watchlistSubtitleRowGenre" = "Gênero";
+"watchlistSubtitleRowDate" = "Data de Lançamento";
+
+// MARK: DoubleTapGesture
+"Watched" = "Assistido";
+"Favorite" = "Favorito";
+
+// MARK: CronicaSettings
+"settingsBehaviorTitle" = "Comportamento";
+"settingsAppearanceTitle" = "Aparência";
+"settingsGeneralTitle" = "Geral";
+"settingsSyncTitle" = "Sincronização";
+"settingsReviewCronica" = "Escreva uma Review";
+"settingsPrivacyPolicy" = "Política de privacidade";
+"settingsDisableTelemetryTitle" = "Desativar Relatórios de Falhas";
+"settingsDisableTelemetrySubtitle" = "Veja mais detalhes na Política de Privacidade.";
+"settingsFeedbackTitle" = "Enviar Feedback";
+"settingsPrivacySupportTitle" = "Privacidade e Suporte";
+"settingsDeveloperTitle" = "Desenvolvido por Alexandre Madeira";
+
+// MARK: SyncSetting
+"syncSettingsUpdateWatchlistTitle" = "Atualizar Itens";
+"syncSettingsUpdateWatchlistSubtitle" = "Atualize itens com novas informações, se disponíveis no TMDb.";
+"syncSettingsWatchlistTitle" = "Lista";
+"syncSettingsTitle" = "Sincronização";
+
+// MARK: AppThemeColors
+"appThemeColorsBlue" = "Azul";
+"appThemeColorsRed" = "Vermelho";
+"appThemeColorsGreen" = "Verde";
+"appThemeColorsBrown" = "Marrom";
+"appThemeColorsCyan" = "Ciano";
+"appThemeColorsGray" = "Cinza";
+"appThemeColorsIndigo" = "Anil";
+"appThemeColorsMint" = "Mint";
+"appThemeColorsOrange" = "Laranja";
+"appThemeColorsPink" = "Rosa";
+"appThemeColorsPurple" = "Roxo";
+"appThemeColorsTeal" = "Teal";
+"appThemeColorsYellow" = "Amarelo";
+
+// MARK: WatchlistItemType
+"watchlistItemTypeList" = "Lista";
+"watchlistItemTypePoster" = "Poster";
+"watchlistItemTypeCard" = "Cartão";
+
+// MARK: AppTheme
+"appThemeSystem" = "Sistema";
+"appThemeLight" = "Claro";
+"appThemeDark" = "Escuro";
+
+// MARK: AcknowledgementsSettings
+"acknowledgmentsAppIconTitle" = "Designer do Ícone";
+"acknowledgmentsAppIconSubtitle" = "Akhmad";
+"acknowledgmentsContentProviderTitle" = "Provedor de Conteúdo";
+"acknowledgmentsContentProviderSubtitle" = "TMDb";
+"acknowledgmentsSDWebImage" = "SDWebImageSwiftUI";
+"settingsAcknowledgments" = "Agradecimentos";
+"settingsAcknowledgmentsFooter" = "Obrigado a todos que tornaram a Streaming Now possível.";
+"acknowledgmentsTitle" = "Agradecimentos";
+"acknowledgmentsUserTitle" = "Obrigado pelo seu feedback e apoio!";
+
+// MARK: TipJarSetting
+"tipJarTitle" = "Remover anúncios";
+"tipJarFooter" = "Uma compra única e opcional remove os anúncios de todo o Streaming Now e apoia o desenvolvimento do aplicativo.";
+"restorePurchases" = "Restaurar Compras";
+
+// MARK: WatchlistButtonView
+"removeDialogTitle" = "Você Tem Certeza?";
+"confirmDialogAction" = "Confirmar";
+"cancelConfirmDialogAction" = "Cancelar";
+
+
+"justWatchSubtitle" = "Fornecido pelo JustWatch";
+
+"openWatchProviderTitle" = "Isso abrirá o site da TMDb com os links para cada serviço.";
+"confirmOpenWatchProvider" = "Confirmar";
+"confirmOpenDontAskAgainProvider" = "Confirme e não pergunte novamente";
+"cancelOpenWatchProvider" = "Cancelar";
+
+
+"watchProviderTitleList" = "Como Assistir";
+"behaviorWatchProvidersTitle" = "Provedor de Conteúdo";
+"behaviorWatchProvidersSubtitle" = "Veja em quais plataformas o conteúdo está disponível.";
+"watchRegionTitle" = "Região do Provedor de Conteúdo";
+"watchRegionSubtitle" = "O provedor de conteúdo se adaptará à região selecionada.";
+"contentRegionTitle" = "Região";
+
+
+// MARK: WatchProviderOption
+"watchProviderBr" = "Brasil";
+"watchProviderUs" = "Estados Unidos da América";
+"watchProviderAe" = "Emirados Árabes Unidos";
+"watchProviderAr" = "Argentina";
+"watchProviderAt" = "Áustria";
+"watchProviderAu" = "Australia";
+"watchProviderBe" = "Bélgica";
+"watchProviderBg" = "Bulgária";
+"watchProviderCa" = "Canadá";
+"watchProviderCh" = "Suíça";
+"watchProviderCz" = "República Checa";
+"watchProviderDe" = "Alemanha";
+"watchProviderDk" = "Dinamarca";
+"watchProviderEe" = "Estônia";
+"watchProviderEs" = "Espanha";
+"watchProviderFi" = "Finlândia";
+"watchProviderFr" = "França";
+"watchProviderGb" = "Reino Unido";
+"watchProviderHk" = "Hong Kong";
+"watchProviderHr" = "Croácia";
+"watchProviderHu" = "Hungria";
+"watchProviderId" = "Indonesia";
+"watchProviderIe" = "Irlanda";
+"watchProviderIndia" = "India";
+"watchProviderIt" = "Itália";
+"watchProviderJp" = "Japão";
+"watchProviderKr" = "Coreia do Sul";
+"watchProviderLt" = "Lituânia";
+"watchProviderMx" = "Mexico";
+"watchProviderNl" = "Holanda";
+"watchProviderNo" = "Noruega";
+"watchProviderNz" = "Nova Zelândia";
+"watchProviderPh" = "Filipinas";
+"watchProviderPl" = "Polônia";
+"watchProviderPt" = "Portugal";
+"watchProviderRs" = "Serbia";
+"watchProviderSk" = "Eslováquia";
+"watchProviderTr" = "Turquia";
+"watchProviderSe" = "Suécia";
+"watchProviderZa" = "África do Sul";
+
+"sendEmail" = "Enviar Email";
+"sendEmailFooter" = "Se preferir, você pode enviar um e-mail para um acompanhamento mais rápido.";
+
+"mediaTypeDiscoverFilterTitle" = "Tipo de Mídia";
+"genreDiscoverFilterTitle" = "Gênero";
+"filterDiscoverTitle" = "Filtros";
+"hideAddedItemsDiscoverFilter" = "Ocultar Itens Adicionados";
+"whereToWatchDiscoverFilter" = "Onde Assistir";
+"watchProviderToggleDiscover" = "Only Show From Watch Provider";
+
+"swipeGestureWatch" = "Assistido";
+"swipeGestureFavorite" = "Favorito";
+"swipeGesturePin" = "Fixado";
+"swipeGestureArchive" = "Arquivar";
+"swipeGestureDelete" = "Deletar";
+"swipeGestureShare" = "Compartilhar";
+
+
+"behaviorSwipeTitle" = "Gestos de Deslize";
+"behaviorAllowFullSwipeTitle" = "Permitir Deslize Completo";
+"behaviorAllowFullSwipeSubtitle" = "O Deslize Completo ativará a ação principal";
+"behaviorPrimaryLeftGesture" = "Gesto Principal Esquerdo";
+"behaviorSecondaryLeftGesture" = "Gesto Secundário Esquerdo";
+"behaviorPrimaryRightGesture" = "Gesto Principal Direito";
+"behaviorSecondaryRightGesture" = "Gesto Secundário Direito";
+"resetToDefault" = "Redefinir para o Padrão";
+
+// MARK: Notification content
+"The next episode is set to arrive today." = "O próximo episódio está programado para chegar hoje.";
+"Next episode arrives today." = "Próximo episódio chega hoje.";
+
+
+"listName" = "Nome da Lista";
+"shareList" = "Compartilhar Lista";
+"listBasicHeader" = "Básico";
+"newCustomListTitle" = "Nova Lista";
+"createList" = "Salvar";
+"newList" = "Nova Lista";
+"createList" = "Criar Nova Lista";
+"listDescription" = "Descrição da Lista";
+"yourLists" = "Suas Listas";
+"Lists" = "Listas";
+"listItemsToAdd" = "Selecione Itens";
+"cantSendFeedback" = "Para enviar feedback no aplicativo, você deve desativar 'Desativar Relatórios de Falhas'";
+"addToList" = "Adicionar à Lista...";
+"addNote" = "Adicionar Nota";
+"companiesTitle" = "Empresas";
+"allCustomWatchListFilters" = "Tudo";
+"moviesCustomWatchListFilters" = "Filmes";
+"showsCustomWatchListFilters" = "Séries";
+"%d items" = "%d items";
+"%d items • %@" = "%d itens • %@";
+"%d items" = "%d itens";
+"Search %@" = "Buscar %@";
+"Save" = "Salvar";
+"editListRemoveItems" = "Remover Itens";
+"Default List" = "Lista Padrão";
+"Delete" = "Deletar";
+"featureRoadmap" = "Próximos Recursos";
+"featureRoadmapHeader" = "Vote nos próximos recursos que você deseja ver primeiro.";
+"featureRoadmapSubtitle" = "Use o ícone 'mais' para sugerir um novo recurso.";
+"importTitle" = "Importar";
+"importSubtitle" = "Importar dados de um arquivo JSON";
+"exportTitle" = "Exportar";
+"exportSubtitle" = "Exportar dados para um arquivo JSON";
+"syncSettingsItemsTitle" = "Itens";
+"generatingExportFile" = "Gerando arquivo JSON, por favor aguarde.";
+"allowNotification" = "Permitir Notificações";
+"movieNotificationTitle" = "Notificar Lançamentos de Filmes";
+"movieNotificationSubtitle" = "Notificar quando um filme da sua lista for lançado.";
+"episodeNotificationTitle" = "Notificar Novos Episódios";
+"episodeNotificationSubtitle" = "Notificar quando um novo episódio de uma série da sua lista for lançado.";
+"settingsNotificationTitle" = "Notificações";
+"changelogViewTitle" = "Novidades";
+"tipJar" = "Remover anúncios";
+"tipJarDescription" = "Remova os anúncios e apoie o Streaming Now.";
+"featureOneTitle" = "Próximo na Lista";
+"featureOneDescription" = "Confira o próximo episódio da sua série favorita e marque como assistido rapidamente.";
+"featureTwoTitle" = "Recomendações Personalizadas";
+"featureTwoDescription" = "Obtenha recomendações personalizadas de filmes e séries com base no que você assistiu no Streaming Now.";
+"featureThreeTitle" = "Ajuste Fino da Experiência";
+"featureThreeDescription" = "Mais configurações e interface do usuário melhorada para personalizar o Streaming Now exatamente como você gosta.";
+"thankYouTipJarMessage" = "Obrigado pela sua contribuição! Seu apoio é muito apreciado. 😁";
+"notificationsSettingsFeedbackCall" = "Você tem alguma sugestão? Envie um Feedback";
+"openNotificationInSettings" = "Editar Notificações em Ajustes";
+"defaultWatchlistShowAllItems" = "Mostrar Todos os Itens";
+"defaultWatchlistSmartFilters" = "Filtros Inteligentes";
+"defaultWatchlistFilters" = "Filtros";
+"standardSortByReleaseDateAsc" = "Data de Lançamento (Crescente)";
+"standardSortByReleaseDateDsc" = "Data de Lançamento (Decrescente)";
+"standardSortByTitleAsc" = "Título (Crescente)";
+"standardSortByTitleDsc" = "Título (Decrescente)";
+"standardSortBy" = "Ordenar por";
+"standardSortByLastModified" = "Última Modificação";
+"More Options" = "Mais Opções";
+"addToCustomList" = "Adicionar à Lista...";
+"behaviorMarkPreviouslyEpisodes" = "Marque todos os episódios anteriores quando um mais novo for marcado como assistido";
+"changeLanguage" = "Alterar o idioma do aplicativo";
+"sendEmailFooterBackup" = "Você também pode enviar um e-mail para contact@streamingnowapp.com usando seu cliente de e-mail.";
+"addedToWatchlist" = "Adicionado à Lista";
+"upNext" = "Seguintes";
+"markAsWatched" = "Marque como assistido";
+"recommendationsTitle" = "Recomendações";
+"recommendationsSubtitle" = "Com base no seu conteúdo assistido";
+"allItems" = "Todos os Itens";
+"mediaTypeFiltersNoFilter" = "Tudo";
+"mediaTypeFiltersMovies" = "Filmes";
+"mediaTypeFiltersTvShows" = "Séries";
+"mediaTypeFilter" = "Filtrar por mídia";
+"allItemsMovies" = "Todos os Filmes";
+"allItemsTVShows" = "Todas as Séries";
+"importedSucceeded" = "Importado com sucesso";
+"tmdbAccountButtonSignIn" = "Entrar";
+"tmdbAccountButtonSignOut" = "Sair da sessão";
+"tmdbAccountHeader" = "Sincronize com TMDb";
+"tmdbAccountFooter" = "Gerencie e mantenha suas listas sincronizadas com sua conta TMDb";
+"tmdbAccountListsManager" = "Gerencie suas listas";
+"appearanceAppIcon" = "Ícone do aplicativo";
+"Classical" = "Clássico";
+"Ticket" = "Ingresso";
+"explorePreferredDisplayTypeCard" = "Card";
+"explorePreferredDisplayTypePoster" = "Poster";
+"itemContentListPreferredDisplayTypeStandard" = "Padrão";
+"itemContentListPreferredDisplayTypeCard" = "Card";
+"itemContentListPreferredDisplayTypePoster" = "Poster";
+"appIconFeedbackTitle" = "Tem uma ideia para um ícone? Envie um feedback";
+"exploreDisplayTypePicker" = "Estilo de exibição";
+"watchlistDisplayTypePicker" = "Estilo de exibição";
+"cronicaGitHub" = "Streaming Now GitHub Repo";
+"appearanceCompactUI" = "UI compacta";
+"appearanceCompactUISubtitle" = "Reduz alguns elementos da interface do usuário para acomodar mais itens na tela.";
+"selectedWatchProvider" = "Serviços de Streaming";
+"selectedWatchProviderTitle" = "Serviços de Streaming Preferenciais";
+"selectedWatchProviderSubtitle" = "Só mostre 'Onde Assistir' se o título estiver disponível em um dos seus serviços preferidos.";
+"importExportWarning" = "Exportar/Importar está em fase beta, use apenas para exportar seus dados ou para importar se estiver mudando sua conta do iCloud, não há lógica no momento para evitar duplicação. Uma atualização futura fornecerá uma experiência melhor para todos.";
+"tvShowDetails" = "Detalhes da Série";
+
+// MARK: TMDb Sync
+"AccountSettingsViewFooterHeader" = "Conecte sua conta TMDb";
+"AccountSettingsViewFooter" = "Conecte sua conta TMDb para importar e sincronizar sua lista de filmes e séries e outras listas.";
+"AccountSettingsViewSignOut" = "Desconectar";
+"AccountSettingsViewSignIn" = "Conectar";
+"AccountSettingsViewListsManager" = "Suas listas TMDb";
+"AccountSettingsViewHeaderSignIn" = "Gerencie suas listas TMDb";
+"removeTMDBAccount" = "Desconectar conta TMDb?";
+"Confirm" = "Confirmar";
+"tmdbLists" = "Suas listas TMDb";
+"syncTMDBList" = "Manter esta lista sincronizada";
+"importTMDBList" = "Importar esta lista";
+"tmdbListSyncConfig" = "Configuração";
+"importTMDBWatchlist" = "Importar lista de filmes e séries do TMDb";
+"syncNow" = "Sincronizar agora com o TMDb";
+"Loading" = "Carregando";
+"AccountSettingsViewWatchlist" = "Lista de filmes e séries do TMDb";
+"importingTMDB" = "Importando sua lista de filmes e séries, aguarde.";
+"needToSync %lld" = "Existem %lld itens disponíveis para sincronizar";
+"itemsTMDB" = "Seus itens na lista";
+"syncingWatchlistTMDB" = "Sincronizando sua lista de filmes e séries, aguarde.";
+"syncWatchlist" = "Sincronizar lista de filmes e séries";
+"deleteList" = "Excluir lista";
+"listDeleted" = "Esta lista foi excluída com sucesso.";
+"areYouSure" = "Você tem certeza?";
+"deleteConfirmationMessage" = "Esta ação não pode ser desfeita.\nEsta ação não excluirá a lista local, apenas a lista no TMDb.";
+"emptyLists" = "Vazio";
+"publishListToTMDB" = "Publicar lista no TMDb";
+"publishPublic" = "Pública";
+"publishPrivate" = "Privada";
+"publishTMDBMessage" = "Isso criará uma nova lista com o mesmo título e itens desta lista local no TMDb.\nSelecione o nível de privacidade que você deseja:";
+
+
+"editNotes" = "Editar notas";
+"createNote" = "Adicionar nota";
+"reviewTitle" = "Análise";
+"reviewOf %@" = "Análise de: %@";
+"Season" = "Temporada";
+"Rating" = "Avaliação";
+"Notes" = "Notas";
+"enablePreferredLaunchScreen" = "Ativar tela de lançamento preferida";
+"preferredLaunchScreen" = "Tela de lançamento preferida";
+"syncInProgress" = "Sincronização em andamento";
+"upNextSubtitle" = "Seus próximos episódios";
+"pinnedList" = "Lista fixada";
+"markThisSeasonAsWatched" = "Marcar esta temporada como assistida";
+"pinOnHome" = "Fixar esta lista na tela inicial";
+"markThisAndPreviously" = "Marcar este episódio e todos os anteriores como assistidos";
+"publishOnTMDB" = "Publicar no TMDb";
+"shareEpisode" = "Compartilhar episódio";
+"shareShow" = "Compartilhar Série";
+"accentColor" = "Cor de destaque";
+"showDetails" = "Mostrar detalhes";
+"removedFromPin" = "Removido da fixação";
+"markedAsPin" = "Marcado como fixado";
+"removedFromArchive" = "Removido do arquivo";
+"markedAsArchive" = "Marcado como arquivado";
+
+"aboutTitle" = "Sobre";
+"Version %@" = "Versão %@";
+"TelemetryDeck" = "TelemetryDeck";
+"Roadmap" = "Roadmap";
+"Developed by Alexandre Madeira" = "Desenvolvido por Alexandre Madeira";
+"Official Website" = "Website Oficial";
+"%d/10" = "%d/10";
+"First Air Date" = "Data de Estreia";
+"%lld Seasons • %lld Episodes" = "%lld Temporadas • %lld Episódios";
+"Overview" = "Visão Geral";
+"Original Title" = "Título Original";
+"What's New" = "Novidades";
+
+"settingsRegionContentTitle" = "Conteúdo e Região";
+"appRegionTitle" = "Região";
+"appRegionSubtitle" = "O aplicativo irá adaptar os provedores de streaming com base na sua região.";
+"Translation" = "Tradução";
+"German" = "Alemão";
+"Libraries" = "Bibliotecas";
+"Source Code" = "Código Fonte";
+"Show More" = "Mostrar Mais";
+"Collapse" = "Recolher";
+"Watching" = "Assistindo";
+"connectedAccounts" = "Contas Conectadas";
+"connectedAccountTMDB" = "The Movie Database";
+"importingWatchlistTMDB" = "Importando, por favor aguarde.";
+"importTMDBWatchlist" = "Importar Lista";
+"Account" = "Conta";
+"Ended Series" = "Finalizado";
+"Create" = "Criar";
+"Production Companies" = "Empresas de Produção";
+"releaseDates" = "Datas de Lançamento";
+"removeFromPinOnWatchedTitle" = "Remover do Pin quando item for marcado como assistido";
+"Remove" = "Remover";
+"openCustomListSelectorWhenAdding" = "Abrir Seletor de Lista ao Adicionar um Item";
+"showConfirmationOnRemovingItem" = "Mostrar Confirmação ao Remover Item";
+"S%d, E%d" = "T%d, E%d";
+"Premiere" = "Estreia";
+"Theatrical Limited" = "Cinema Limitado";
+"Theatrical" = "Cinema";
+"Digital" = "Digital";
+"Physical" = "Físico";
+"TV" = "TV";
+"addedWatchlist" = "Adicionado";
+"removedWatchlist" = "Removido";
+"markedWatched" = "Marcado como assistido";
+"removedWatched" = "Removido dos assistidos";
+"markedFavorite" = "Marcado como favorito";
+"removedFavorite" = "Removido dos favoritos";
+"markedArchive" = "Marcado como arquivo";
+"removedArchive" = "Removido dos arquivos";
+"markedPin" = "Fixado";
+"removedPin" = "Desafixado";
+"S%d, E%d" = "T%d, E%d";
+"Mark some episodes as watched to use Up Next." = "Marque alguns episódios como assistidos para usar o Seguintes.";
+"Your upcoming items will appear here." = "Seus próximos títulos aparecerão aqui.";
+"Prefer Poster in Details Page" = "Preferir Cartaz na Página de Detalhes";
+"Details Page" = "Página de Detalhes";
+"moreInfoShow" = "Mais Informações";
+"markedEpisodeWatched" = "Episódio Marcado como Assistido";
+"removedEpisodeWatched" = "Episódio Removido dos Assistidos";
+"confirmAndDeleteItems" = "Confirmar e Deletar Itens";
+"tmdbSyncFeatures" = "Você poderá ver suas listas e gerenciar seu conteúdo.";
+"callToReviewTitle" = "Está gostando de Streaming Now?";
+"callToReviewSubtitle" = "Deixe um comentário na App Store!";
+"reviewInTheAppStore" = "Avaliar o App";
+"dismissReviewCall" = "Dispensar";
+"feedbackSent" = "Feedback Enviado. Obrigado!";
+"titleAsc" = "Título (Crescente)";
+"titleDesc" = "Título (Decrescente)";
+"dateAsc" = "Data (Crescente)";
+"dateDesc" = "Data (Decrescente)";
+"ratingAsc" = "Avaliação (Crescente)";
+"ratingDesc" = "Avaliação (Decrescente)";
+"Spanish" = "Espanhol";
+"Not Watched" = "Não Assistido";
+"emptyList" = "Nada encontrado que corresponda ao filtro selecionado.\nTente mudar os filtros.";
+"appearanceStyle" = "Preferências de Estilo";
+"appearanceSectionDetailsTitle" = "Estilo de Detalhes da Seção";
+"appearanceHorizontalListsTitle" = "Estilo de Lista Horizontal";
+"List" = "Lista";
+"noResultsFound" = "Nada encontrado com sua consulta.\nTente outra consulta ou verifique se o título não está no arquivo.";
+"shareLinkPreference" = "Escolha a forma preferida de compartilhar links";
+"shareLinkPreferenceSubtitle" = "Você pode optar por compartilhar usando um link da Streaming Now que permitirá abrir o aplicativo.\nObserve que nem todo conteúdo pode ser compartilhado com um link da Streaming Now, o aplicativo sempre usará links TMDB, se necessário.";
+"Edit" = "Editar";
+"Delete" = "Excluir";
+"Swipe to Edit your list" = "Deslize para editar sua lista";
+"Details Page" = "Página de Detalhes";
+"Prefer Poster in Details Page" = "Preferir Pôster na Página de Detalhes";
+"Design" = "Design";
+"Pin" = "Fixar";
+
+"appearanceUpNextTitle" = "Estilo de Detalhes de Seguinte";
+"quitWhenClosingApp" = "Sair ao Fechar o App";
+"noListFoundMessage" = "Nenhuma lista encontrada com a sua consulta, tente outra.";
+"Trending Keywords" = "Palavras-chave em Alta";
+"Popularity" = "Popularidade";
+"Release Date (Descending)" = "Data de Lançamento (Decrescente)";
+"Release Date (Ascending)" = "Data de Lançamento (Crescente)";
+"Anime" = "Anime";
+"Based on Video-Game" = "Baseado em Video Game";
+"Superhero" = "Super-herói";
+"Romantic Comedy" = "Comédia Romântica";
+"Based on true story" = "Baseado em História Real";
+"Supernatural Horror" = "Horror Sobrenatural";
+"Survival" = "Sobrevivência";
+"Space" = "Espaço";
+"Based on novel or book" = "Baseado em Livro";
+"Alien" = "Extraterrestre";
+"Crime Investigation" = "Investigação Criminal";
+"Reboot" = "Reboot";
+"Spin off" = "Spin off";
+
+"Prefer Series Cover instead of Episode Thumbnail on Up Next" = "Preferir Capa da Série em Vez da Miniatura do Episódio no Próximo";
+"Hide Titles from Unwatched Episodes" = "Ocultar Títulos dos Episódios Não Assistidos";
+"To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes." = "Para evitar possíveis spoilers, você pode ocultar títulos e sinopse dos episódios não assistidos.";
+"Hide Thumbnails from Unwatched Episodes" = "Ocultar Miniaturas dos Episódios Não Assistidos";
+"To avoid potential spoilers, you can hide thumbnails from unwatched episodes." = "Para evitar possíveis spoilers, você pode ocultar miniaturas dos episódios não assistidos.";
+"Add" = "Adicionar";
+"upNextSkipThisEpisode" = "Pular este episódio";
+
+"MARK_EPISODE_WATCHED" = "Marcar Episódio %1$d da Temporada %2$d de %3$@ como assistido?";
+"Confirm Watched Episode" = "Confirmar Episódio Assistido";
+
+// MARK: Screenshot Section Headers
+"Now Playing" = "Em cartaz";
+"Top Rated" = "Mais bem avaliados";
+"Popular" = "Populares";
+"Similar" = "Semelhantes";
+
+//MARK: Puzzle Archive
+"puzzleArchiveTitle" = "Arquivo de Puzzles";
+"puzzleArchiveSubtitle" = "Puzzles clássicos de filmes para jogar a qualquer momento. Sem pressão de sequência!";
+"puzzleArchiveSolvedLabel" = "Resolvidos";
+"puzzleArchiveStarsLabel" = "Estrelas";
+"puzzleArchiveViewArchive" = "Arquivo de Puzzles";
+"puzzleArchiveUnsolved" = "Não resolvido";
+
+// MARK: Daily Puzzle
+"dailyPuzzleReminderNotificationTitle" = "Desafio diário";
+"dailyPuzzleDailyReminderBody" = "O quiz de cinema de hoje está pronto. Reconheça a imagem e toque na resposta!";
+"dailyPuzzleRemindersSettingsTitle" = "Lembretes do desafio diário";
+"dailyPuzzleRemindersSettingsDescription" = "Um lembrete às 18h, no seu horário local. Não será enviado se você já concluiu o desafio de hoje.";
+"dailyPuzzleRemindersSettingsPlay" = "Jogar o desafio diário";
+"dailyPuzzleReminderNotificationBody" = "Tente novamente o desafio de hoje antes do fim do dia.";
+"dailyPuzzleTitle" = "Desafio diário";
+"dailyPuzzleSubtitle" = "Adivinhe o filme com os emojis de hoje.";
+"dailyPuzzlePlayPuzzle" = "Jogar";
+"dailyPuzzleViewPuzzle" = "Ver desafio";
+"dailyPuzzleGuessFromEmojis" = "Adivinhe o filme com estes emojis.";
+"dailyPuzzleGuessTitlePlaceholder" = "Título do filme";
+"dailyPuzzleSubmitGuess" = "Responder";
+"dailyPuzzleHint1Format" = "Dica 1: %@";
+"dailyPuzzleHint2Format" = "Dica 2: %@";
+"dailyPuzzleSolvedMessage" = "Resolvido. Muito bem!";
+"dailyPuzzleShareResult" = "Compartilhar resultado";
+"dailyPuzzleAttemptsFormat" = "Tentativas: %d";
+"dailyPuzzleWrongGuess" = "Quase!";
+"dailyPuzzleFailedMessage" = "Mais sorte na próxima vez!";
+"dailyPuzzleStreakAtStakeFormat" = "🔥 Sequência de %d dias em jogo";
+"dailyPuzzleStreakFormat" = "🔥 Sequência de %d dias!";
+"dailyPuzzleEnableRemindersTitle" = "Ativar lembretes do desafio diário?";
+"dailyPuzzleEnableRemindersMessage" = "Adivinhe o filme com estes emojis.";
+"dailyPuzzleEnableAction" = "Ativar";
+"dailyPuzzleNotNowAction" = "Agora não";
+"dailyPuzzleCardStreakFormat" = "Sequência de %d dias! 🔥";
+"dailyPuzzleNewToday" = "Novo hoje";
+"dailyPuzzleShareSolvedFormat" = "🎬 Desafio diário de filmes — Resolvido em %d/%d!";
+"dailyPuzzleShareStreakFormat" = "🔥 Sequência de %d dias";
+"dailyPuzzleSharePlayCTA" = "Jogue em https://apps.apple.com/app/id455556959";
+"dailyPuzzleRunTitle" = "Rodada diária";
+"dailyPuzzleRunRoundFormat" = "Rodada %d de %d";
+"dailyPuzzleRunContinuePrompt" = "Continue jogando para concluir o seu Daily Run.";
+"dailyPuzzleRunProgressAccessibilityLabel" = "Progresso da rodada diária";
+"dailyPuzzleRunComplete" = "Rodada diária concluída";
+"dailyPuzzleRunSolvedFormat" = "%d/%d resolvidos";
+"dailyPuzzleRunAttemptsFormat" = "%d tentativas";
+"dailyPuzzleRunHintsFormat" = "%d dicas";
+"dailyPuzzleRunStreakFormat" = "Sequência de %d dias";
+"dailyPuzzleRunShareTitle" = "Rodada diária do Cronica";
+"dailyPuzzleRunAttemptsHintsFormat" = "%d tentativas | %d dicas";
+"dailyPuzzleRunShareStreakFormat" = "Sequência de %d dias";
+"dailyPuzzleRunShareChallenge" = "Você consegue superar minha pontuação?";
+"dailyPuzzleWeeklyGoalTitle" = "Meta semanal de filmes";
+"dailyPuzzleWeeklyGoalDaysFormat" = "%d/%d dias";
+"dailyPuzzleWeeklyGoalCompleteMessage" = "Meta semanal concluída. Mantenha sua sequência!";
+"dailyPuzzleWeeklyGoalProgressMessage" = "Volte amanhã para chegar um dia mais perto.";
+"dailyPuzzleWeeklyGoalAccessibilityValueFormat" = "%d de %d dias concluídos";
+"dailyPuzzleShareRun" = "Compartilhar rodada";
+"dailyPuzzleKeepPlaying" = "Continuar jogando";
+
+"dailyPuzzleStarterClueOneWord" = "Dica inicial: título com 1 palavra";
+"dailyPuzzleStarterClueManyWordsFormat" = "Dica inicial: título com %d palavras";
+"dailyPuzzleTitlePatternAction" = "Mostrar padrão do título";
+"dailyPuzzleTitlePatternFormat" = "Padrão do título: %@";
+"dailyPuzzleDifficultyQuestion" = "Como foi a dificuldade deste desafio?";
+"dailyPuzzleDifficultyTooEasy" = "Fácil demais";
+"dailyPuzzleDifficultyJustRight" = "Na medida";
+"dailyPuzzleDifficultyTooHard" = "Difícil demais";
+"dailyPuzzleDifficultyThanks" = "Obrigado. Vamos ajustar os próximos desafios.";
+
+// Optional hint offered after an incorrect guess.
+"dailyPuzzleRewardedHintFormat" = "Assistir a um anúncio para ver a dica %ld";
+
+/* Puzzle loading recovery */
+"puzzleNextLoadError" = "Não foi possível carregar o próximo desafio";
+"puzzleRetry" = "Tentar novamente";
+"puzzleOffline" = "Desafios offline";
+"puzzleStay" = "Ficar aqui";
+"puzzleNextLoadMessage" = "Seu progresso está salvo. Tente novamente ou jogue os desafios incluídos sem conexão com a internet.";
+
+// Contextual puzzle reminder opt-in
+"puzzleReminderEnabled" = "Lembretes ativados para as 18h";
+"puzzleReminderDisable" = "Desativar lembretes do desafio";
+"puzzleReminderSettings" = "Abrir ajustes de notificações";
+"puzzleReminderTomorrow" = "Lembrar amanhã";
+"puzzleReminderSchedule" = "Um lembrete às 18h, no seu horário local. Não é enviado se você já terminou.";
+"puzzleReminderDenied" = "As notificações estão desativadas nos Ajustes. Ative-as para receber lembretes do desafio.";
+"puzzleReminderError" = "Não foi possível ativar os lembretes. Tente novamente.";
+
+// Movie image quiz
+"movieQuizCard" = "4 filmes. Quatro opções. É só tocar.";
+"movieQuizCorrect" = "Você acertou!";
+"movieQuizReveal" = "A resposta é…";
+"movieQuizLegacy" = "Concluído antes da atualização do quiz";
+"movieQuizPoints" = "%ld / 3 pontos";
+"movieQuizQuestion" = "Que filme é este?";
+"movieQuizTryAgain" = "Esse não. Aqui vai uma dica: tente outro título.";
+"movieQuizEliminated" = "Eliminado";
+"movieQuizHint" = "Ver dica · −1 ponto";
+"movieQuizSkip" = "Revelar resposta";
+"movieQuizUnavailable" = "Não foi possível carregar esta rodada.";
+"movieQuizRetry" = "Tentar novamente";
+"movieQuizLoading" = "Carregando o quiz de cinema…";
+"movieQuizImageUnavailable" = "Imagem indisponível. Jogue com uma dica.";
+"movieQuizRunScore" = "%ld / %ld pontos · %ld acertos de primeira";
+"movieQuizParticipationStreak" = "Sequência de %ld dias jogando";
+"movieQuizArchiveRound" = "Quiz de cinema";
+"movieQuizCardSubtitle" = "Reconheça o filme pela imagem.";
+"movieQuizTitle597" = "Titanic";
+"movieQuizTitle603" = "Matrix";
+"movieQuizTitle329" = "Jurassic Park: O Parque dos Dinossauros";
+"movieQuizTitle27205" = "A Origem";
+"movieQuizTitle346698" = "Barbie";
+"movieQuizTitle299534" = "Avengers: Endgame";
+"movieQuizFeedback" = "Avaliar esta rodada";
+
+// Movie image tile reveal
+"movieQuizTilePrompt" = "Toque nos quadrados para descobrir o filme";
+"movieQuizRevealStatus" = "%ld de 9 quadrados · Pontuação máxima: %ld";
+"movieQuizTileLabel" = "Revelar quadrado %ld";
+"movieQuizRevealAll" = "Revelar imagem";
+"movieQuizRevealAllScore" = "Revelar imagem · pontuação %ld";
+"movieQuizTileScoreHint" = "Pontuação após revelar: até %ld";
+"movieQuizRevealHelp" = "Revele mais quando precisar. Menos quadrados revelados valem mais pontos.";
+"movieQuizFullImage" = "Imagem completa revelada";
+
+// Movie image zoom reveal
+"movieQuizZoomPrompt" = "Olhe de perto. Que filme é este?";
+"movieQuizZoomOut" = "Afastar · −1 ponto";
+"movieQuizZoomOutFree" = "Afastar";
+"movieQuizZoomClose" = "Close · Até %ld pontos";
+"movieQuizZoomWider" = "Vista mais ampla · Até %ld pontos";
+"movieQuizZoomFull" = "Imagem completa · Até %ld pontos";
+"movieQuizHintFree" = "Mostrar dica";

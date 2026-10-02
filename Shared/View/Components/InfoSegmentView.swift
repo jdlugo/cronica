@@ -1,10 +1,3 @@
-//
-//  InfoSegmentView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/05/23.
-//
-
 import SwiftUI
 
 struct InfoSegmentView: View {

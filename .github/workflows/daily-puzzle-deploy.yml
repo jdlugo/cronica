@@ -1,0 +1,164 @@
+name: Daily Puzzle Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      firebase_project_id:
+        description: Firebase project ID for deployment
+        required: false
+        default: admob-app-id-9658087638
+        type: string
+      functions_base_url:
+        description: Base HTTPS URL for deployed functions
+        required: false
+        default: https://us-central1-admob-app-id-9658087638.cloudfunctions.net
+        type: string
+
+jobs:
+  backend-checks:
+    name: Backend checks (tests/build/firestore)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: functions
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Unit tests
+        run: npm test
+
+      - name: TypeScript build
+        run: npm run build
+
+      - name: Firestore emulator integration tests
+        run: npm run test:firestore
+
+  deploy-functions:
+    name: Deploy functions and smoke
+    runs-on: ubuntu-latest
+    needs: backend-checks
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      FIREBASE_PROJECT_ID: ${{ inputs.firebase_project_id }}
+      DAILY_PUZZLE_FUNCTIONS_BASE_URL: ${{ inputs.functions_base_url }}
+      DAILY_PUZZLE_ADMIN_KEY: ${{ secrets.DAILY_PUZZLE_ADMIN_KEY }}
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: functions
+
+      - name: Authenticate to Google Cloud (service account fallback)
+        if: ${{ env.FIREBASE_TOKEN == '' }}
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ADMOB_APP_ID_9658087638 }}
+
+      - name: Deploy Firebase functions only
+        run: |
+          if [[ -n "${FIREBASE_TOKEN}" ]]; then
+            firebase deploy --project "${FIREBASE_PROJECT_ID}" --only functions --non-interactive --token "${FIREBASE_TOKEN}"
+          else
+            firebase deploy --project "${FIREBASE_PROJECT_ID}" --only functions --non-interactive
+          fi
+
+      - name: Smoke check getLatestDailyPuzzle schema
+        run: |
+          latest_url="${DAILY_PUZZLE_FUNCTIONS_BASE_URL%/}/getLatestDailyPuzzle"
+          latest_response="$(curl -fsSL --max-time 30 "${latest_url}")"
+
+          printf "%s" "${latest_response}" | node -e '
+            const fs = require("node:fs");
+            const raw = fs.readFileSync(0, "utf8");
+            const payload = JSON.parse(raw);
+            const required = [
+              "date",
+              "puzzle_id",
+              "media_type",
+              "tmdb_id",
+              "title",
+              "emoji_clue",
+              "hint_1",
+              "hint_2",
+              "accepted_answers",
+              "source",
+              "generated_at"
+            ];
+
+            for (const key of required) {
+              if (!(key in payload)) {
+                throw new Error(`Missing field: ${key}`);
+              }
+            }
+
+            if (!Array.isArray(payload.accepted_answers) || payload.accepted_answers.length === 0) {
+              throw new Error("accepted_answers must be a non-empty array");
+            }
+
+            if (typeof payload.tmdb_id !== "number") {
+              throw new Error("tmdb_id must be a number");
+            }
+          '
+
+      - name: Smoke check sendDailyPuzzleTestPush
+        run: |
+          if [[ -z "${DAILY_PUZZLE_ADMIN_KEY}" ]]; then
+            printf "DAILY_PUZZLE_ADMIN_KEY secret is required for deploy smoke checks.\n" >&2
+            exit 1
+          fi
+
+          test_push_url="${DAILY_PUZZLE_FUNCTIONS_BASE_URL%/}/sendDailyPuzzleTestPush"
+          test_push_response="$(curl -fsSL --max-time 30 -X POST -H "x-admin-key: ${DAILY_PUZZLE_ADMIN_KEY}" "${test_push_url}")"
+
+          printf "%s" "${test_push_response}" | node -e '
+            const fs = require("node:fs");
+            const raw = fs.readFileSync(0, "utf8");
+            const payload = JSON.parse(raw);
+            if (payload.ok !== true) {
+              throw new Error("sendDailyPuzzleTestPush did not return ok=true");
+            }
+          '

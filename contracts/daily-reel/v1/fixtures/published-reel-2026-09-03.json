@@ -1,0 +1,565 @@
+{
+  "contractVersion": "daily-reel.v1",
+  "scoringVersion": "daily-reel-score.v1",
+  "defaultLocale": "en",
+  "scoring": {
+    "maxScore": 300,
+    "perActMax": 100,
+    "maxIncorrectAttemptsPerAct": 3
+  },
+  "publicationId": "fixture-2026-09-03",
+  "contentVersion": "fixture-2026-09-03.1",
+  "publicationWindow": {
+    "availableAt": "2026-09-03T05:00:00Z",
+    "expiresAt": "2026-09-04T05:00:00Z"
+  },
+  "supportedLocales": [
+    "en",
+    "fr-FR",
+    "es-ES",
+    "es-MX",
+    "pt-BR"
+  ],
+  "localized": {
+    "en": {
+      "theme": "Faces behind the mask",
+      "shareText": "Can you survive Jim Carrey's wildest year?",
+      "acts": [
+        {
+          "id": "decode-truman",
+          "role": "decode",
+          "prompt": "Decode the movie from this visual rebus.",
+          "emoji": [
+            "📺",
+            "🌎",
+            "👁️"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Show title length",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-carrey",
+          "role": "connect",
+          "prompt": "One performer disappears into all three roles. Who is it?",
+          "films": [
+            {
+              "id": "tmdb:8871",
+              "title": "How the Grinch Stole Christmas",
+              "posterPath": "/1WZbbPApEivA421gCOluuzMMKCk.jpg"
+            },
+            {
+              "id": "tmdb:38",
+              "title": "Eternal Sunshine of the Spotless Mind",
+              "posterPath": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg"
+            },
+            {
+              "id": "tmdb:454626",
+              "title": "Sonic the Hedgehog",
+              "posterPath": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "All star Jim Carrey"
+            },
+            {
+              "id": "c2",
+              "label": "Directed by the same filmmaker"
+            },
+            {
+              "id": "c3",
+              "label": "Released in the same year"
+            },
+            {
+              "id": "c4",
+              "label": "Based on comic books"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-carrey-1994",
+          "role": "arrange",
+          "prompt": "Three breakout comedies. Put them in exact release order, earliest first.",
+          "films": [
+            {
+              "id": "tmdb:854",
+              "title": "The Mask",
+              "posterPath": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg"
+            },
+            {
+              "id": "tmdb:8467",
+              "title": "Dumb and Dumber",
+              "posterPath": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg"
+            },
+            {
+              "id": "tmdb:3049",
+              "title": "Ace Ventura: Pet Detective",
+              "posterPath": "/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "fr-FR": {
+      "theme": "Des visages derrière le masque",
+      "shareText": "Peux-tu survivre à l'année la plus folle de Jim Carrey ?",
+      "acts": [
+        {
+          "id": "decode-truman",
+          "role": "decode",
+          "prompt": "Décode le film grâce à ce rébus visuel.",
+          "emoji": [
+            "📺",
+            "🌎",
+            "👁️"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Voir la longueur du titre",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-carrey",
+          "role": "connect",
+          "prompt": "Un interprète disparaît dans ces trois rôles. Qui est-ce ?",
+          "films": [
+            {
+              "id": "tmdb:8871",
+              "title": "Le Grinch",
+              "posterPath": "/1WZbbPApEivA421gCOluuzMMKCk.jpg"
+            },
+            {
+              "id": "tmdb:38",
+              "title": "Eternal Sunshine of the Spotless Mind",
+              "posterPath": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg"
+            },
+            {
+              "id": "tmdb:454626",
+              "title": "Sonic, le film",
+              "posterPath": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Jim Carrey joue dans les trois"
+            },
+            {
+              "id": "c2",
+              "label": "Le même réalisateur"
+            },
+            {
+              "id": "c3",
+              "label": "Sortis la même année"
+            },
+            {
+              "id": "c4",
+              "label": "Adaptés de bandes dessinées"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-carrey-1994",
+          "role": "arrange",
+          "prompt": "Trois comédies cultes. Classe-les par date de sortie exacte.",
+          "films": [
+            {
+              "id": "tmdb:854",
+              "title": "The Mask",
+              "posterPath": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg"
+            },
+            {
+              "id": "tmdb:8467",
+              "title": "Dumb & Dumber",
+              "posterPath": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg"
+            },
+            {
+              "id": "tmdb:3049",
+              "title": "Ace Ventura, détective chiens et chats",
+              "posterPath": "/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "es-ES": {
+      "theme": "Rostros detrás de la máscara",
+      "shareText": "¿Puedes sobrevivir al año más salvaje de Jim Carrey?",
+      "acts": [
+        {
+          "id": "decode-truman",
+          "role": "decode",
+          "prompt": "Descifra la película con este jeroglífico visual.",
+          "emoji": [
+            "📺",
+            "🌎",
+            "👁️"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver la longitud del título",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-carrey",
+          "role": "connect",
+          "prompt": "Un actor desaparece dentro de estos tres papeles. ¿Quién es?",
+          "films": [
+            {
+              "id": "tmdb:8871",
+              "title": "El Grinch",
+              "posterPath": "/1WZbbPApEivA421gCOluuzMMKCk.jpg"
+            },
+            {
+              "id": "tmdb:38",
+              "title": "¡Olvídate de mí!",
+              "posterPath": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg"
+            },
+            {
+              "id": "tmdb:454626",
+              "title": "Sonic: La película",
+              "posterPath": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Jim Carrey actúa en las tres"
+            },
+            {
+              "id": "c2",
+              "label": "El mismo director"
+            },
+            {
+              "id": "c3",
+              "label": "Se estrenaron el mismo año"
+            },
+            {
+              "id": "c4",
+              "label": "Basadas en cómics"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-carrey-1994",
+          "role": "arrange",
+          "prompt": "Tres comedias rompedoras. Ordénalas por fecha exacta de estreno.",
+          "films": [
+            {
+              "id": "tmdb:854",
+              "title": "La máscara",
+              "posterPath": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg"
+            },
+            {
+              "id": "tmdb:8467",
+              "title": "Dos tontos muy tontos",
+              "posterPath": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg"
+            },
+            {
+              "id": "tmdb:3049",
+              "title": "Ace Ventura, un detective diferente",
+              "posterPath": "/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "es-MX": {
+      "theme": "Rostros detrás de la máscara",
+      "shareText": "¿Puedes sobrevivir al año más salvaje de Jim Carrey?",
+      "acts": [
+        {
+          "id": "decode-truman",
+          "role": "decode",
+          "prompt": "Adivina la película con este acertijo visual.",
+          "emoji": [
+            "📺",
+            "🌎",
+            "👁️"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver cuántas letras tiene",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-carrey",
+          "role": "connect",
+          "prompt": "Un actor desaparece dentro de estos tres papeles. ¿Quién es?",
+          "films": [
+            {
+              "id": "tmdb:8871",
+              "title": "El Grinch",
+              "posterPath": "/1WZbbPApEivA421gCOluuzMMKCk.jpg"
+            },
+            {
+              "id": "tmdb:38",
+              "title": "Eterno resplandor de una mente sin recuerdos",
+              "posterPath": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg"
+            },
+            {
+              "id": "tmdb:454626",
+              "title": "Sonic: La película",
+              "posterPath": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Jim Carrey aparece en las tres"
+            },
+            {
+              "id": "c2",
+              "label": "El mismo director"
+            },
+            {
+              "id": "c3",
+              "label": "Se estrenaron el mismo año"
+            },
+            {
+              "id": "c4",
+              "label": "Basadas en cómics"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-carrey-1994",
+          "role": "arrange",
+          "prompt": "Tres comedias que lo cambiaron todo. Ordénalas por estreno exacto.",
+          "films": [
+            {
+              "id": "tmdb:854",
+              "title": "La Máscara",
+              "posterPath": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg"
+            },
+            {
+              "id": "tmdb:8467",
+              "title": "Una pareja de idiotas",
+              "posterPath": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg"
+            },
+            {
+              "id": "tmdb:3049",
+              "title": "Ace Ventura: Detective de Mascotas",
+              "posterPath": "/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "pt-BR": {
+      "theme": "Rostos por trás da máscara",
+      "shareText": "Você sobrevive ao ano mais insano de Jim Carrey?",
+      "acts": [
+        {
+          "id": "decode-truman",
+          "role": "decode",
+          "prompt": "Descubra o filme com este enigma visual.",
+          "emoji": [
+            "📺",
+            "🌎",
+            "👁️"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver o tamanho do título",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-carrey",
+          "role": "connect",
+          "prompt": "Um ator desaparece dentro destes três papéis. Quem é?",
+          "films": [
+            {
+              "id": "tmdb:8871",
+              "title": "O Grinch",
+              "posterPath": "/1WZbbPApEivA421gCOluuzMMKCk.jpg"
+            },
+            {
+              "id": "tmdb:38",
+              "title": "Brilho Eterno de uma Mente sem Lembranças",
+              "posterPath": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg"
+            },
+            {
+              "id": "tmdb:454626",
+              "title": "Sonic: O Filme",
+              "posterPath": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Jim Carrey atua nos três"
+            },
+            {
+              "id": "c2",
+              "label": "O mesmo diretor"
+            },
+            {
+              "id": "c3",
+              "label": "Lançados no mesmo ano"
+            },
+            {
+              "id": "c4",
+              "label": "Baseados em quadrinhos"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-carrey-1994",
+          "role": "arrange",
+          "prompt": "Três comédias que explodiram. Ordene pela data exata de estreia.",
+          "films": [
+            {
+              "id": "tmdb:854",
+              "title": "O Máskara",
+              "posterPath": "/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg"
+            },
+            {
+              "id": "tmdb:8467",
+              "title": "Debi & Lóide: Dois Idiotas em Apuros",
+              "posterPath": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg"
+            },
+            {
+              "id": "tmdb:3049",
+              "title": "Ace Ventura: Um Detetive Diferente",
+              "posterPath": "/pqiRuETmuSybfnVZ7qyeoXhQyN1.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

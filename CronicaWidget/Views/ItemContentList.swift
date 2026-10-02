@@ -61,15 +61,16 @@ private struct PosterImage: View {
                     .aspectRatio(contentMode: .fill)
             } else if let image = item.data {
 #if os(iOS)
-                Image(uiImage: UIImage(data: image) ?? UIImage(systemName: "popcorn")!)
+                Image(uiImage: UIImage(data: image) ?? UIImage(systemName: "popcorn.fill")!)
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
 #elseif os(macOS)
                 if let nsImage = NSImage(data: image) {
                     Image(nsImage: nsImage)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 } else {
-                    Image(systemName: "popcorn")
+                    Image(systemName: "popcorn.fill")
                 }
 #endif
             } else {
@@ -89,7 +90,7 @@ private struct PlaceholderImage: View {
         VStack {
             ZStack {
                 Rectangle().fill(Color.gray.gradient)
-                Image(systemName: "popcorn")
+                Image(systemName: "popcorn.fill")
                     .foregroundColor(.white.opacity(0.8))
             }
         }

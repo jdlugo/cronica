@@ -1,0 +1,64 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "modelName" : "iPhone 17 Pro",
+        "osBuildNumber" : "23D8133",
+        "osVersion" : "26.3.1",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 2,
+      "passedTests" : 22,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "Story (iOS) · Built with macOS 27.0",
+  "expectedFailures" : 0,
+  "failedTests" : 2,
+  "finishTime" : 1790879357.568,
+  "passedTests" : 22,
+  "result" : "Failed",
+  "runtimeWarnings" : [
+
+  ],
+  "skippedTests" : 0,
+  "startTime" : 1790878829.638,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "This NSPersistentStoreCoordinator has no persistent stores (unknown).  It cannot perform a save operation. (NSInternalInconsistencyException)",
+      "targetName" : "CronicaTests",
+      "testIdentifier" : 16,
+      "testIdentifierString" : "PersistenceTests/testWatchlistAdditionCallbackRequiresSuccessfulSave()",
+      "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaTests/PersistenceTests/testWatchlistAdditionCallbackRequiresSuccessfulSave",
+      "testName" : "testWatchlistAdditionCallbackRequiresSuccessfulSave()"
+    },
+    {
+      "failureText" : "XCTAssertFalse failed: throwing \"NSInternalInconsistencyException: This NSPersistentStoreCoordinator has no persistent stores (unknown).  It cannot perform a save operation.\" - No store must not report a successful save",
+      "targetName" : "CronicaTests",
+      "testIdentifier" : 18,
+      "testIdentifierString" : "PersistenceTests/testWatchlistSaveReportsFailureAndCanRetry()",
+      "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaTests/PersistenceTests/testWatchlistSaveReportsFailureAndCanRetry",
+      "testName" : "testWatchlistSaveReportsFailureAndCanRetry()"
+    }
+  ],
+  "title" : "Test - Story (iOS)",
+  "topInsights" : [
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "49% of duration",
+      "text" : "1 longest test run with outlier durations exceeding 0.09s (three standard deviations)"
+    }
+  ],
+  "totalTestCount" : 24
+}

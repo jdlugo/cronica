@@ -1,0 +1,140 @@
+{
+  "accepted_action_count" : 3,
+  "action_count" : 3,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "displayed_title" : "Toy Story",
+      "request_id" : "persona-cell-P6-heist-lock1-60F10329-C59E-4B22-91B6-9ACD6E7124F8",
+      "screenshot_path" : "\/Users\/johndlugokecki\/Library\/Developer\/CoreSimulator\/Devices\/54589BE9-B7F0-4E11-890E-E437D7D446EB\/data\/Containers\/Data\/Application\/171EE9E8-399A-4F01-A546-5559CB6AB875\/tmp\/arcade-persona-live\/persona-cell-P6-heist-lock1-60F10329-C59E-4B22-91B6-9ACD6E7124F8.png",
+      "type" : "live_visual_judgment",
+      "vision_basis" : "Fresh Riley corrective-run screenshot visibly shows Buzz Lightyear and cowboy Woody; this identifies the declared familiar title Toy Story. The observation may be remembered within this same round after the assigned wrong guess."
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|||arcade.heist.lock:LOCK 1 OF 3|arcade.choice.157336:Interstellar:Ruled out",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||arcade.heist.lock:LOCK 1 OF 3",
+      "displayed_label" : "Interstellar",
+      "points" : "Up to 2 points",
+      "target" : "arcade.choice.157336",
+      "type" : "attempt",
+      "visible_feedback" : "The lock held. That option is ruled out—try another."
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|||arcade.heist.lock:LOCK 1 OF 3",
+      "before_feedback" : "The lock held. That option is ruled out—try another.",
+      "before_signature" : "arcade.points:Up to 2 points|||arcade.heist.lock:LOCK 1 OF 3|arcade.choice.157336:Interstellar:Ruled out",
+      "displayed_label" : "Toy Story",
+      "points" : "Up to 2 points",
+      "target" : "arcade.choice.862",
+      "type" : "attempt",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|||arcade.heist.lock:LOCK 2 OF 3",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 2 points|||arcade.heist.lock:LOCK 1 OF 3",
+      "displayed_label" : "Next lock",
+      "points" : "Up to 2 points",
+      "target" : "arcade.heist.next",
+      "type" : "progress",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:0\/3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 2 points|||arcade.heist.lock:LOCK 2 OF 3",
+      "displayed_label" : "Reveal & move on · 0 points",
+      "points" : "0\/3 points",
+      "target" : "arcade.skip",
+      "type" : "administrative_reveal",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Close",
+        "Games",
+        "Play another",
+        "Try a different game"
+      ],
+      "scope" : "arcade_sheet",
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 51.549923062324524,
+  "attempt_count" : 2,
+  "declared_prior_facts" : [
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "ocean liner",
+      "title" : "Titanic",
+      "year" : "1997"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "simulation",
+      "title" : "The Matrix",
+      "year" : "1999"
+    },
+    {
+      "actors" : "Sam Neill",
+      "plot_words" : "dinosaurs",
+      "title" : "Jurassic Park",
+      "year" : "1993"
+    },
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "dreams",
+      "title" : "Inception",
+      "year" : "2010"
+    },
+    {
+      "actors" : "Tom Hanks",
+      "plot_words" : "cowboy toy, space-ranger",
+      "title" : "Toy Story",
+      "year" : "1995"
+    }
+  ],
+  "declared_prior_titles" : [
+    "Titanic",
+    "The Matrix",
+    "Jurassic Park",
+    "Inception",
+    "Toy Story"
+  ],
+  "game" : "heist",
+  "harness_revision" : "live-vision-retained-v3",
+  "help_count" : 0,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Unpaid fixture, monetization suppressed; no normal startup ad, live purchase or restore evidence. Payment scan covers only isolated game result controls."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+    "Displayed option ruled out: Interstellar",
+    "The lock held. That option is ruled out—try another."
+  ],
+  "outcome" : "revealed_after_stop",
+  "payment_gate_found" : false,
+  "persona" : "P6",
+  "points_label" : "0\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_inspection_scope" : "arcade_sheet",
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n0\/3 points\nMovie Heist\nNow you know!\nA fresh round is waiting.\nVault 249 opened! Recovered: Jurassic Park.\nThree locks. One clean getaway.\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 76.751345038414001,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "Displayed film\/cast outside declared actor knowledge",
+  "utility_action_found" : false,
+  "vision_wait_seconds" : 25.201421976089478
+}

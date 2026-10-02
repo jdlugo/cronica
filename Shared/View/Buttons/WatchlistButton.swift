@@ -1,10 +1,3 @@
-//
-//  WatchlistButton.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 04/05/23.
-//
-
 import SwiftUI
 
 struct WatchlistButton: View {
@@ -15,17 +8,12 @@ struct WatchlistButton: View {
     @Binding var popupType: ActionPopupItems?
     private let persistence = PersistenceController.shared
     private let notification = NotificationManager.shared
-    @Binding var showRemoveConfirmation: Bool
     var body: some View {
         Button(role: isInWatchlist ? .destructive : nil) {
             if !isInWatchlist { HapticManager.shared.successHaptic() }
-            if isInWatchlist, SettingsStore.shared.showRemoveConfirmation {
-                showRemoveConfirmation = true
-            } else {
-                updateWatchlist()
-            }
+            updateWatchlist()
         } label: {
-            Label(isInWatchlist ? "Remove": "Add",
+            Label(isInWatchlist ? "Remove": "Add to watchlist",
                   systemImage: isInWatchlist ? "minus.circle" : "plus.circle")
 #if os(macOS)
             .foregroundColor(isInWatchlist ? .red : nil)
@@ -64,7 +52,7 @@ struct WatchlistButton: View {
             let contentID = identifier.dropLast(2)
             let content = try? await NetworkService.shared.fetchItem(id: Int(contentID)!, type: media)
             guard let content else { return }
-            persistence.save(content)
+            guard persistence.save(content) else { return }
             registerNotification(content)
             displayConfirmation()
             if content.itemContentMedia == .tvShow { addFirstEpisodeToUpNext(content) }
@@ -105,5 +93,5 @@ struct WatchlistButton: View {
                     isInWatchlist: .constant(true),
                     showPopup: .constant(false),
                     showListSelector: .constant(false),
-                    popupType: .constant(.addedWatchlist), showRemoveConfirmation: .constant(false))
+                    popupType: .constant(.addedWatchlist))
 }

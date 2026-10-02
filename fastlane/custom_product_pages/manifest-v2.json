@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "marketing_iteration": "MKT-INTL-002",
+  "app_id": "455556959",
+  "pages": [
+    {
+      "reference_name": "Daily Puzzle - International",
+      "primary_locale": {
+        "locale": "en-US",
+        "promotional_text": "Guess a new movie from emojis every day. Keep playing the archive, see where it streams, and save favorites for movie night.",
+        "keywords": ["daily puzzle", "emoji game"]
+      },
+      "slug": "daily-puzzle",
+      "screen_order": ["HomeScreen", "DetailScreen", "WatchlistScreen"],
+      "locales": {
+        "fr-FR": {
+          "promotional_text": "Devinez un nouveau film en emojis chaque jour. Continuez dans les archives, voyez où le regarder et gardez vos favoris pour votre soirée cinéma.",
+          "keywords": ["jeu", "devinette", "quotidien"]
+        },
+        "es-ES": {
+          "promotional_text": "Adivina una película nueva con emojis cada día. Sigue con el archivo, descubre dónde verla y guarda tus favoritas para la noche de cine.",
+          "keywords": ["juego", "emoji", "diario"]
+        },
+        "es-MX": {
+          "promotional_text": "Adivina una peli nueva con emojis cada día. Sigue con el archivo, descubre dónde verla y guarda tus favoritas para la noche de pelis.",
+          "keywords": ["juego", "emoji", "diario"]
+        },
+        "pt-BR": {
+          "promotional_text": "Adivinhe um filme novo com emojis todo dia. Continue no arquivo, veja onde assistir e salve seus favoritos para a noite de cinema.",
+          "keywords": ["jogo", "emoji", "diário"]
+        }
+      }
+    },
+    {
+      "reference_name": "Movie Tracker - International",
+      "primary_locale": {
+        "locale": "en-US",
+        "promotional_text": "Keep movies and shows in one watchlist, track episodes, and instantly see where each title is streaming near you.",
+        "keywords": ["movie tracker", "where to watch", "watchlist"]
+      },
+      "slug": "movie-tracker",
+      "screen_order": ["WatchlistScreen", "DetailScreen", "HomeScreen"],
+      "locales": {
+        "fr-FR": {
+          "promotional_text": "Réunissez films et séries dans une seule liste, suivez les épisodes et voyez aussitôt où chaque titre est disponible en France.",
+          "keywords": ["watchlist", "épisodes", "saisons"]
+        },
+        "es-ES": {
+          "promotional_text": "Reúne películas y series en una sola lista, sigue episodios y descubre al instante dónde ver cada título en España.",
+          "keywords": ["watchlist", "episodios", "temporadas"]
+        },
+        "es-MX": {
+          "promotional_text": "Reúne pelis y series en una sola lista, sigue episodios y descubre al instante dónde ver cada título en México.",
+          "keywords": ["watchlist", "episodios", "temporadas"]
+        },
+        "pt-BR": {
+          "promotional_text": "Reúna filmes e séries em uma lista, acompanhe episódios e veja na hora onde cada título está disponível no Brasil.",
+          "keywords": ["watchlist", "episódios", "temporadas"]
+        }
+      }
+    }
+  ]
+}

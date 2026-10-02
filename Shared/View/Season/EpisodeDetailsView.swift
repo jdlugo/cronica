@@ -1,11 +1,5 @@
-//
-//  EpisodeDetailsView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 20/06/22.
-//
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct EpisodeDetailsView: View {
     let episode: Episode
@@ -27,9 +21,9 @@ struct EpisodeDetailsView: View {
     var body: some View {
         details
             .actionPopup(isShowing: $showPopup, for: popupType)
-            .onChange(of: isWatched) { _, hasWatched in
+            .onChange(of: isWatched) {
                 if isUpNext { return }
-                if hasWatched {
+                if isWatched {
                     popupType = .markedEpisodeWatched
                     showPopup = true
                 } else {
@@ -41,164 +35,11 @@ struct EpisodeDetailsView: View {
     
 #if os(tvOS)
     private var details: some View {
-        EpisodeDetailsTVView(episode: episode, season: season, show: show, isWatched: $isWatched)
-    }
-#endif
-    
-#if os(iOS) || os(macOS) || os(visionOS)
-    private var details: some View {
-        ScrollView {
-            VStack {
-                HeroImage(url: episode.itemImageLarge, title: episode.itemTitle)
-#if os(macOS) || os(visionOS)
-                    .frame(width: DrawingConstants.padImageWidth,
-                           height: DrawingConstants.padImageHeight)
-#else
-                    .frame(width: (horizontalSizeClass == .regular) ? DrawingConstants.padImageWidth : DrawingConstants.imageWidth,
-                           height: (horizontalSizeClass == .compact) ? DrawingConstants.imageHeight : DrawingConstants.padImageHeight)
-#endif
-                    .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
-                    .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
-#if os(macOS)
-                    .padding(.top)
-#endif
-                
-                
-                if let info = episode.itemInfo {
-                    Text(episode.itemTitle)
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .padding(.top, 8)
-                        .padding(.horizontal)
-                        .padding(.bottom, 0.5)
-                        .multilineTextAlignment(.center)
-                    Text(showTitle)
-                        .multilineTextAlignment(.center)
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.secondary)
-                        .padding(.horizontal)
-                    if !info.isEmpty {
-                        CenterHorizontalView {
-                            Text(info)
-                                .font(.caption)
-                                .fontWeight(.medium)
-                                .foregroundColor(.secondary)
-                        }
-                        .padding(.horizontal)
-                    }
-                }
-                
-                HStack {
-                    WatchEpisodeButton(episode: episode,
-                                       season: season,
-                                       show: show,
-                                       isWatched: $isWatched)
-                    .buttonStyle(.borderedProminent)
-#if os(iOS)
-                    .buttonBorderShape(.roundedRectangle(radius: 12))
-                    .padding(isUpNext ? .leading : .horizontal)
-                    .tint(settings.appTheme.color)
-#elseif os(macOS)
-                    .padding(.horizontal)
-                    .controlSize(.large)
-                    .tint(isWatched ? .red : .blue)
-#endif
-                    .keyboardShortcut("e", modifiers: [.control])
-                    .shadow(radius: isUpNext ? 0 : 2.5)
-                }
-                .padding(.top, 4)
-                .padding(.bottom)
-                
-                OverviewBoxView(overview: episode.itemOverview,
-                                title: episode.itemTitle,
-                                type: .tvShow)
-                .padding([.horizontal, .bottom])
-            }
-        }
-        .scrollBounceBehavior(.basedOnSize)
-        .task { load() }
-#if !os(visionOS)
-        .background {
-            TranslucentBackground(image: episode.itemImageLarge)
-        }
-#endif
-        .onAppear {
-            if isUpNext, showItem == nil {
-                Task {
-                    showItem = try await NetworkService.shared.fetchItem(id: show, type: .tvShow)
-                }
-            }
-        }
-#if os(iOS)
-        .toolbar {
-            if UIDevice.isIPhone {
-                ToolbarItem(placement: .topBarTrailing){
-                    if let showItem {
-                        NavigationLink(value: showItem) {
-                            Image(systemName: "info")
-                                .imageScale(.medium)
-                                .accessibilityLabel("More Info")
-                                .fontDesign(.rounded)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.white)
-                                .padding(.horizontal, 4)
-                                .padding(.vertical, 2)
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .contentShape(Circle())
-                        .clipShape(Circle())
-                        .buttonBorderShape(.circle)
-                        .shadow(radius: 2.5)
-                    }
-                }
-            }
-        }
-        .navigationBarTitleDisplayMode(.large)
-        .navigationTitle(Text(String()))
-#endif
-    }
-#endif
-}
-
-private struct DrawingConstants {
-    static let titleLineLimit: Int = 1
-    static let shadowRadius: CGFloat = 12
-    static let imageWidth: CGFloat = 360
-    static let imageHeight: CGFloat = 210
-    static let imageRadius: CGFloat = 12
-    static let padImageWidth: CGFloat = 500
-    static let padImageHeight: CGFloat = 300
-    static let padImageRadius: CGFloat = 12
-}
-
-extension EpisodeDetailsView {
-    private func load() {
-        isWatched = persistence.isEpisodeSaved(show: show, season: season, episode: episode.id)
-    }
-    
-    private func checkIfItemIsSaved() {
-        let contentId = "\(show)@\(MediaType.tvShow.toInt)"
-        let isShowSaved = persistence.isItemSaved(id: contentId)
-        isInWatchlist = isShowSaved
-    }
-}
-
-private struct EpisodeDetailsTVView: View {
-    let episode: Episode
-    let season: Int
-    let show: Int
-    @Binding var isWatched: Bool
-    var body: some View {
         ZStack {
-            LazyImage(url: episode.itemImageOriginal) { state in
-                if let image = state.image {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                }
-            }
-            .frame(width: 1920, height: 1080)
+            WebImage(url: episode.itemImageOriginal)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 1920, height: 1080)
             VStack {
                 Spacer()
                 ZStack {
@@ -245,19 +86,17 @@ private struct EpisodeDetailsTVView: View {
                                            season: season,
                                            show: show,
                                            isWatched: $isWatched)
-                        .tint(.primary)
+						.tint(.primary)
                         .padding(.horizontal)
                     }
                     .padding()
                     Spacer()
                     VStack(alignment: .leading) {
                         HStack {
-                            InfoSegmentView(title: NSLocalizedString("Episode", comment: ""),
-                                            info: "\(episode.itemEpisodeNumber)")
-                            InfoSegmentView(title: NSLocalizedString("Season", comment: ""),
-                                            info: "\(episode.itemSeasonNumber)")
+                            InfoSegmentView(title: "Episode", info: "\(episode.itemEpisodeNumber)")
+                            InfoSegmentView(title: "Season", info: "\(episode.itemSeasonNumber)")
                         }
-                        InfoSegmentView(title: NSLocalizedString("Release", comment: ""), info: episode.itemDate)
+                        InfoSegmentView(title: "Release", info: episode.itemDate)
                     }
                     .padding()
                 }
@@ -265,5 +104,133 @@ private struct EpisodeDetailsTVView: View {
             }
             .padding()
         }
+    }
+#endif
+    
+#if os(iOS) || os(macOS)
+    private var details: some View {
+        VStack {
+            ScrollView {
+                HeroImage(url: episode.itemImageLarge, title: episode.itemTitle)
+#if os(macOS)
+                    .frame(width: DrawingConstants.padImageWidth,
+                           height: DrawingConstants.padImageHeight)
+#else
+                    .frame(width: (horizontalSizeClass == .regular) ? DrawingConstants.padImageWidth : DrawingConstants.imageWidth,
+                           height: (horizontalSizeClass == .compact) ? DrawingConstants.imageHeight : DrawingConstants.padImageHeight)
+#endif
+                    .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+                    .shadow(radius: DrawingConstants.shadowRadius)
+#if os(macOS)
+                    .padding(.top)
+#endif
+                
+                
+                if let info = episode.itemInfo {
+                    Text(episode.itemTitle)
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .padding(.top, 8)
+                        .padding(.horizontal)
+                        .padding(.bottom, 0.5)
+                        .multilineTextAlignment(.center)
+                    Text(showTitle)
+                        .multilineTextAlignment(.center)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                    if !info.isEmpty {
+                        CenterHorizontalView {
+                            Text(info)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+                
+                HStack {
+                    WatchEpisodeButton(episode: episode,
+                                       season: season,
+                                       show: show,
+                                       isWatched: $isWatched)
+                    .buttonStyle(.borderedProminent)
+#if os(iOS)
+                    .buttonBorderShape(.roundedRectangle(radius: 12))
+                    .padding(isUpNext ? .leading : .horizontal)
+                    .tint(settings.appTheme.color)
+#elseif os(macOS)
+                    .padding(.horizontal)
+                    .controlSize(.large)
+                    .tint(isWatched ? .red : .blue)
+#endif
+                    .keyboardShortcut("e", modifiers: [.control])
+                    .shadow(radius: isUpNext ? 0 : 2.5)
+#if os(iOS)
+                    if let showItem {
+                        NavigationLink(value: showItem) {
+                            VStack {
+                                Image(systemName: "info.circle.fill")
+                                Text("moreInfoShow")
+                                    .lineLimit(1)
+                                    .padding(.top, 2)
+                                    .font(.caption)
+                            }
+                            .frame(height: 40)
+                            .padding(.vertical, 4)
+                            .frame(minWidth: 80)
+                        }
+                        .buttonStyle(.bordered)
+                        .buttonBorderShape(.roundedRectangle(radius: 12))
+                        .tint(.primary)
+                        .applyHoverEffect()
+                        .padding(.horizontal)
+                    }
+#endif
+                }
+                .padding(.top, 4)
+                .padding(.bottom)
+                
+                OverviewBoxView(overview: episode.itemOverview,
+                                title: episode.itemTitle,
+                                type: .tvShow)
+                .padding([.horizontal, .bottom])
+            }
+            .task { load() }
+        }
+        .background {
+            TranslucentBackground(image: episode.itemImageLarge)
+        }
+        .onAppear {
+            if isUpNext && showItem == nil {
+                Task {
+                    showItem = try await NetworkService.shared.fetchItem(id: show, type: .tvShow)
+                }
+            }
+        }
+    }
+#endif
+}
+
+private struct DrawingConstants {
+    static let titleLineLimit: Int = 1
+    static let shadowRadius: CGFloat = 12
+    static let imageWidth: CGFloat = 360
+    static let imageHeight: CGFloat = 210
+    static let imageRadius: CGFloat = 8
+    static let padImageWidth: CGFloat = 500
+    static let padImageHeight: CGFloat = 300
+    static let padImageRadius: CGFloat = 8
+}
+
+extension EpisodeDetailsView {
+    private func load() {
+        isWatched = persistence.isEpisodeSaved(show: show, season: season, episode: episode.id)
+    }
+    
+    private func checkIfItemIsSaved() {
+        let contentId = "\(show)@\(MediaType.tvShow.toInt)"
+        let isShowSaved = persistence.isItemSaved(id: contentId)
+        isInWatchlist = isShowSaved
     }
 }

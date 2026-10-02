@@ -1,39 +1,83 @@
 //
 //  SearchView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 07/08/23.
 //
 
 import SwiftUI
 
-struct TrendingView: View {
-    static let tag: Screens? = .trending
+struct SearchView: View {
+    static let tag: Screens? = .search
     private let service: NetworkService = NetworkService.shared
     @State private var trending = [ItemContent]()
     @State private var isLoaded = false
+    
+    // search
+    @State private var viewModel = SearchViewModel()
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \WatchlistItem.title, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<WatchlistItem>
+    @State private var query = String()
+    @State private var filteredItems = [WatchlistItem]()
+    @State private var isInWatchlist = false
+    @State private var hasLoadedTMDbResults = false
+    @State private var showPopup = false
+    @State private var popupType: ActionPopupItems?
     var body: some View {
         NavigationStack {
             Form {
-                Section {
-                    List {
-                        ForEach(trending) { item in
-                            NavigationLink(value: item) {
-                                ItemContentRow(item: item)
+                if query.isEmpty {
+                    Section("Trending") {
+                        List {
+                            ForEach(trending) { item in
+                                NavigationLink(value: item) {
+                                    ItemContentRow(item: item)
+                                }
                             }
                         }
+                        .redacted(reason: isLoaded ? [] : .placeholder)
                     }
-                    .redacted(reason: isLoaded ? [] : .placeholder)
+                } else {
+                    searchResults
                 }
+                
             }
-			.overlay { if !isLoaded { CronicaLoadingPopupView() } }
-            .navigationTitle("Trending")
-            .navigationBarTitleDisplayMode(.inline)
+			.overlay { if !isLoaded { ProgressView().unredacted() } }
+            .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.large)
+            .searchable(text: $query)
+            .task(id: query) {
+                if query.isEmpty { return }
+                if Task.isCancelled { return }
+                withAnimation { hasLoadedTMDbResults = false }
+                if !filteredItems.isEmpty { filteredItems.removeAll() }
+                filteredItems.append(contentsOf: items.filter { ($0.title?.localizedStandardContains(query))! as Bool })
+                await viewModel.search(query)
+                withAnimation { hasLoadedTMDbResults = true }
+            }
+            .navigationDestination(for: WatchlistItem.self) { item in
+                ItemContentView(id: item.itemId,
+                                title: item.itemTitle,
+                                type: item.itemMedia,
+                                image: item.backCompatibleCardImage)
+            }
             .navigationDestination(for: ItemContent.self) { item in
                 ItemContentView(id: item.id,
                                 title: item.itemTitle,
                                 type: item.itemContentMedia,
                                 image: item.cardImageMedium)
+            }
+            .navigationDestination(for: SearchItemContent.self) { item in
+                if item.media == .person {
+                    PersonDetailsView(name: item.itemTitle, id: item.id)
+                } else {
+                    ItemContentView(id: item.id,
+                                    title: item.itemTitle,
+                                    type: item.itemContentMedia,
+                                    image: item.cardImageMedium)
+                }
             }
             .onAppear(perform: load)
         }
@@ -50,7 +94,39 @@ struct TrendingView: View {
                         isLoaded = true
                     } catch {
                         if Task.isCancelled { return }
+                        let message = "Can't load trending/all/day, error: \(error.localizedDescription)"
+                        CronicaTelemetry.shared.handleMessage(message, for: "SearchView.load()")
                     }
+                }
+            }
+        }
+    }
+    
+    private var searchResults: some View {
+        List {
+            if !filteredItems.isEmpty {
+                Section("Results from Watchlist") {
+                    ForEach(filteredItems) { item in
+                        NavigationLink(value: item) {
+                            WatchlistItemRowView(content: item, showPopup: $showPopup, popupType: $popupType)
+                        }
+                    }
+                }
+            }
+            
+            Section("Results from TMDb") {
+                if hasLoadedTMDbResults {
+                    if !viewModel.items.isEmpty {
+                        ForEach(viewModel.items) { item in
+                            NavigationLink(value: item) {
+                                SearchItem(item: item)
+                            }
+                        }
+                    } else {
+                        Text("No results from TMDb")
+                    }
+                } else {
+                    ProgressView("Loading")
                 }
             }
         }
@@ -58,5 +134,5 @@ struct TrendingView: View {
 }
 
 #Preview {
-    TrendingView()
+    SearchView()
 }

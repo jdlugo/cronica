@@ -1,35 +1,35 @@
-//
-//  ItemContentViewModel.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 02/03/22.
-//  
-
 import Foundation
 import SwiftUI
 
 @MainActor
-class ItemContentViewModel: ObservableObject {
+@Observable
+class ItemContentViewModel {
     private let service = NetworkService.shared
     private let notification = NotificationManager.shared
-    private let persistence = PersistenceController.shared
-    @Published private(set) var content: ItemContent?
-    @Published private(set) var recommendations = [ItemContent]()
-    @Published private(set) var trailers = [VideoItem]()
-    @Published private(set) var credits = [Person]()
-    @Published private(set) var errorMessage = "Something went wrong, try again later."
-    @Published var showErrorAlert = false
-    @Published var isInWatchlist = false
-    @Published private(set) var isWatched = false
-    @Published private(set) var isFavorite = false
-    @Published private(set) var isArchive = false
-    @Published private(set) var isPin = false
-    @Published private(set) var isLoading = true
-    @Published private(set) var showMarkAsButton = false
-    @Published private(set) var isItemAddedToAnyList = false
-    @Published private(set) var showPoster = false
+    private let persistence: PersistenceController
+    private(set) var content: ItemContent?
+    private(set) var recommendations = [ItemContent]()
+    private(set) var trailers = [VideoItem]()
+    private(set) var credits = [Person]()
+    private(set) var errorMessage = "Something went wrong, try again later."
+    var showErrorAlert = false
+    var isInWatchlist = false
+    private(set) var isWatched = false
+    private(set) var isFavorite = false
+    private(set) var isArchive = false
+    private(set) var isPin = false
+    private(set) var isLoading = true
+    private(set) var showMarkAsButton = false
+    private(set) var isItemAddedToAnyList = false
+    private(set) var showPoster = false
     private var isNotificationAvailable = false
     private var hasNotificationScheduled = false
+    // Invoked only after an explicit addition succeeds, never during load/resume.
+    var onWatchlistAdded: (() -> Void)?
+
+    init(persistence: PersistenceController = .shared) {
+        self.persistence = persistence
+    }
     
     func load(id: ItemContent.ID, type: MediaType) async {
         if Task.isCancelled { return }
@@ -39,10 +39,6 @@ class ItemContentViewModel: ObservableObject {
                 guard let content else { return }
                 isInWatchlist = persistence.isItemSaved(id: content.itemContentID)
                 if content.backdropPath == nil && content.posterPath != nil { showPoster = true }
-                let settings = SettingsStore.shared
-                if settings.usePostersAsCover {
-                    showPoster = true
-                }
                 withAnimation {
                     if isInWatchlist {
                         isWatched = persistence.isMarkedAsWatched(id: content.itemContentID)
@@ -113,8 +109,17 @@ class ItemContentViewModel: ObservableObject {
             persistence.delete(watchlistItem)
         } else {
             // Adds the item to Watchlist
+            if persistence.isItemSaved(id: item.itemContentID) {
+                withAnimation { isInWatchlist = true }
+                return
+            }
+            guard persistence.save(item) else {
+                errorMessage = NSLocalizedString("Could not save this movie. Please try again.", comment: "Watchlist save failure")
+                showErrorAlert = true
+                return
+            }
             withAnimation { isInWatchlist.toggle() }
-            persistence.save(item)
+            onWatchlistAdded?()
             if item.itemCanNotify && item.itemFallbackDate.isLessThanTwoWeeksAway() {
                 notification.schedule(item)
             }
@@ -226,6 +231,43 @@ class ItemContentViewModel: ObservableObject {
             }
         }
     }
+
+#if DEBUG
+    static func preview(with item: ItemContent, includeMockTrailers: Bool = false) -> ItemContentViewModel {
+        let vm = ItemContentViewModel()
+        vm.content = item
+        vm.isLoading = false
+        vm.showMarkAsButton = true
+        vm.recommendations = Array(ItemContent.examples.prefix(5))
+        vm.credits = item.credits?.cast ?? []
+        let itemTrailers = item.itemTrailers
+        if !itemTrailers.isEmpty {
+            vm.trailers = Array(itemTrailers.prefix(3))
+        } else if includeMockTrailers {
+            vm.trailers = [
+                VideoItem(
+                    url: URL(string: "https://www.youtube.com/watch?v=BjkIOU5PhyQ"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/BjkIOU5PhyQ/hqdefault.jpg"),
+                    title: "Official Trailer",
+                    videoID: "BjkIOU5PhyQ"
+                ),
+                VideoItem(
+                    url: URL(string: "https://www.youtube.com/watch?v=5AwtptT8X8k"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/5AwtptT8X8k/hqdefault.jpg"),
+                    title: "Final Trailer",
+                    videoID: "5AwtptT8X8k"
+                ),
+                VideoItem(
+                    url: URL(string: "https://www.youtube.com/watch?v=xo4rkcC7kFc"),
+                    thumbnail: URL(string: "https://img.youtube.com/vi/xo4rkcC7kFc/hqdefault.jpg"),
+                    title: "Teaser Trailer",
+                    videoID: "xo4rkcC7kFc"
+                )
+            ]
+        }
+        return vm
+    }
+#endif
 }
 
 enum UpdateItemProperties: String, Identifiable, CaseIterable {
@@ -234,10 +276,10 @@ enum UpdateItemProperties: String, Identifiable, CaseIterable {
     
     var title: String {
         switch self {
-        case .watched: String(localized: "Watched")
-        case .favorite: String(localized: "Favorite")
-        case .pin: String(localized: "Pin")
-        case .archive: String(localized: "Archive")
+        case .watched: return NSLocalizedString("Watched", comment: "")
+        case .favorite: return NSLocalizedString("Favorite", comment: "")
+        case .pin: return NSLocalizedString("Pin", comment: "")
+        case .archive: return NSLocalizedString("Archive", comment: "")
         }
     }
 }

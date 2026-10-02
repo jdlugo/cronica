@@ -1,10 +1,3 @@
-//
-//  PersistenceController-CustomList.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 14/02/23.
-//
-
 import Foundation
 
 extension PersistenceController {

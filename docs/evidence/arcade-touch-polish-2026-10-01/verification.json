@@ -1,0 +1,20 @@
+{
+  "baseCommit": "b71e274aa699869238a62c77800f81abd4eba77a",
+  "sourceSHA256": {
+    "Shared/Model/MovieArcade.swift": "8dcc4d30a8a1ad0841e88d8f679084fc9fa0564bb6fb7f5d81483a345085459e",
+    "Shared/View/Navigation/MovieArcadeView.swift": "7de0a221dc088026e5ff552a2cf2d16f7091e0f5213ed8619794b30742ac64d3",
+    "CronicaUITests/CronicaUITests.swift": "8514d9d0db518183561992f54e1afbc9a1f68c976f3d0f6b0b4f970ed8562168"
+  },
+  "releaseUploaded": false,
+  "currentInternalTestFlight": "4.25.44 (16), earlier implementation",
+  "engineChecks": 10361,
+  "analyticsChecks": 96,
+  "localizedKeys": 173,
+  "resultBundles": [
+    "/private/tmp/arcade-touch-single-input-v2-2026-10-01.xcresult",
+    "/private/tmp/arcade-touch-iphone-verified-2026-10-01.xcresult",
+    "/private/tmp/arcade-touch-ipad-verified-2026-10-01.xcresult",
+    "/private/tmp/arcade-touch-ipad-visible-controls-2026-10-01.xcresult"
+  ],
+  "distinctPassingDeviceTestChecks": 10
+}

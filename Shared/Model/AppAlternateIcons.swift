@@ -1,9 +1,3 @@
-//
-//  AppAlternateIcons.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/04/23.
-//
 #if os(iOS)
 import Foundation
 import UIKit
@@ -23,7 +17,7 @@ enum Icon: String, CaseIterable, Identifiable {
     var description: String {
         switch self {
         case .primary:
-            return NSLocalizedString("Modern", comment: "")
+            return NSLocalizedString("Ticket", comment: "")
         case .ticket:
             return NSLocalizedString("Classical", comment: "")
         }
@@ -39,8 +33,10 @@ enum Icon: String, CaseIterable, Identifiable {
     }
 }
 
-class IconModel: ObservableObject {
-    @Published private(set) var selectedAppIcon: Icon = .primary
+@MainActor
+@Observable
+class IconModel {
+    private(set) var selectedAppIcon: Icon = .primary
     
     init() {
         if let iconName = UIApplication.shared.alternateIconName, let appIcon = Icon(rawValue: iconName) {
@@ -52,7 +48,7 @@ class IconModel: ObservableObject {
     
     func updateAppIcon(to icon: Icon) {
         selectedAppIcon = icon
-        Task { @MainActor in
+        Task {
             guard UIApplication.shared.alternateIconName != icon.iconName else { return }
             try? await UIApplication.shared.setAlternateIconName(icon.iconName)
         }

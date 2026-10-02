@@ -1,10 +1,3 @@
-//
-//  WatchListView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 15/01/22.
-//
-
 import SwiftUI
 
 struct WatchlistView: View {
@@ -26,20 +19,16 @@ struct WatchlistView: View {
             if selectedList != nil {
                 CustomWatchlist(selectedList: $selectedList, showPopup: $showPopup, popupType: $popupType)
             } else {
-#if os(tvOS)
-                DefaultWatchlist(showPopup: $showPopup, popupType: $popupType, selectedList: $selectedList)
-#else
                 DefaultWatchlist(showPopup: $showPopup, popupType: $popupType)
-#endif
             }
         }
         .actionPopup(isShowing: $showPopup, for: popupType)
 #if !os(tvOS)
         .navigationTitle(navigationTitle)
 #endif
-        .onChange(of: selectedList) { _, newValue in
-            if let newValue {
-                navigationTitle = newValue.itemTitle
+        .onChange(of: selectedList) {
+            if let selectedList {
+                navigationTitle = selectedList.itemTitle
             } else {
                 navigationTitle = NSLocalizedString("Watchlist", comment: "")
             }
@@ -87,7 +76,10 @@ struct WatchlistView: View {
             SelectListView(selectedList: $selectedList,
                            navigationTitle: $navigationTitle,
                            showListSelection: $showListSelection)
-#if os(macOS)
+            .presentationDetents([.large])
+#if os(iOS)
+            .appTheme()
+#elseif os(macOS)
             .frame(width: 480, height: 400, alignment: .center)
 #endif
         }
@@ -97,7 +89,7 @@ struct WatchlistView: View {
             ToolbarItem(placement: .principal) {
                 WatchlistTitle(navigationTitle: $navigationTitle, showListSelection: $showListSelection)
             }
-#elseif os(macOS) || os(visionOS)
+#elseif os(macOS)
             ToolbarItem(placement: .navigation) {
                 WatchlistTitle(navigationTitle: $navigationTitle, showListSelection: $showListSelection)
                     .buttonStyle(.bordered)
@@ -108,6 +100,8 @@ struct WatchlistView: View {
 }
 
 #Preview {
-    WatchlistView()
-        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    NavigationStack {
+        WatchlistView()
+    }
+    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

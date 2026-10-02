@@ -1,0 +1,560 @@
+{
+  "contractVersion": "daily-reel.v1",
+  "publicationId": "fixture-2026-09-01",
+  "contentVersion": "fixture-2026-09-01.1",
+  "scoringVersion": "daily-reel-score.v1",
+  "publicationWindow": {
+    "availableAt": "2026-09-01T05:00:00Z",
+    "expiresAt": "2026-09-02T05:00:00Z"
+  },
+  "defaultLocale": "en",
+  "supportedLocales": [
+    "en",
+    "fr-FR",
+    "es-ES",
+    "es-MX",
+    "pt-BR"
+  ],
+  "scoring": {
+    "maxScore": 300,
+    "perActMax": 100,
+    "maxIncorrectAttemptsPerAct": 3
+  },
+  "localized": {
+    "en": {
+      "theme": "Shadows, memory, and masks",
+      "shareText": "Can you beat my Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-dark-knight",
+          "role": "decode",
+          "prompt": "Decode the movie from this visual rebus.",
+          "emoji": [
+            "🌑",
+            "♞"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Show title length",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-nolan",
+          "role": "connect",
+          "prompt": "What connects all three movies?",
+          "films": [
+            {
+              "id": "tmdb:77",
+              "title": "Memento",
+              "posterPath": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg"
+            },
+            {
+              "id": "tmdb:374720",
+              "title": "Dunkirk",
+              "posterPath": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg"
+            },
+            {
+              "id": "tmdb:872585",
+              "title": "Oppenheimer",
+              "posterPath": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Directed by Christopher Nolan"
+            },
+            {
+              "id": "c2",
+              "label": "Scored by Hans Zimmer"
+            },
+            {
+              "id": "c3",
+              "label": "Based on true stories"
+            },
+            {
+              "id": "c4",
+              "label": "Star Christian Bale"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-batman-eras",
+          "role": "arrange",
+          "prompt": "Put these Batman movies in release order, earliest first.",
+          "films": [
+            {
+              "id": "tmdb:414906",
+              "title": "The Batman",
+              "posterPath": "/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+            },
+            {
+              "id": "tmdb:268",
+              "title": "Batman",
+              "posterPath": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg"
+            },
+            {
+              "id": "tmdb:272",
+              "title": "Batman Begins",
+              "posterPath": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Get a hint",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "fr-FR": {
+      "theme": "Ombres, mémoire et masques",
+      "shareText": "Peux-tu battre mon score au Daily Reel ?",
+      "acts": [
+        {
+          "id": "decode-dark-knight",
+          "role": "decode",
+          "prompt": "Décode le film grâce à ce rébus visuel.",
+          "emoji": [
+            "🌑",
+            "♞"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Voir la longueur du titre",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-nolan",
+          "role": "connect",
+          "prompt": "Quel est le lien entre ces trois films ?",
+          "films": [
+            {
+              "id": "tmdb:77",
+              "title": "Memento",
+              "posterPath": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg"
+            },
+            {
+              "id": "tmdb:374720",
+              "title": "Dunkerque",
+              "posterPath": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg"
+            },
+            {
+              "id": "tmdb:872585",
+              "title": "Oppenheimer",
+              "posterPath": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Réalisés par Christopher Nolan"
+            },
+            {
+              "id": "c2",
+              "label": "Musique de Hans Zimmer"
+            },
+            {
+              "id": "c3",
+              "label": "Inspirés d'histoires vraies"
+            },
+            {
+              "id": "c4",
+              "label": "Avec Christian Bale"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-batman-eras",
+          "role": "arrange",
+          "prompt": "Classe ces films Batman par date de sortie, du plus ancien au plus récent.",
+          "films": [
+            {
+              "id": "tmdb:414906",
+              "title": "The Batman",
+              "posterPath": "/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+            },
+            {
+              "id": "tmdb:268",
+              "title": "Batman",
+              "posterPath": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg"
+            },
+            {
+              "id": "tmdb:272",
+              "title": "Batman Begins",
+              "posterPath": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtenir un indice",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "es-ES": {
+      "theme": "Sombras, memoria y máscaras",
+      "shareText": "¿Puedes superar mi Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-dark-knight",
+          "role": "decode",
+          "prompt": "Descifra la película con este jeroglífico visual.",
+          "emoji": [
+            "🌑",
+            "♞"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver la longitud del título",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-nolan",
+          "role": "connect",
+          "prompt": "¿Qué conecta estas tres películas?",
+          "films": [
+            {
+              "id": "tmdb:77",
+              "title": "Memento",
+              "posterPath": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg"
+            },
+            {
+              "id": "tmdb:374720",
+              "title": "Dunkerque",
+              "posterPath": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg"
+            },
+            {
+              "id": "tmdb:872585",
+              "title": "Oppenheimer",
+              "posterPath": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Dirigidas por Christopher Nolan"
+            },
+            {
+              "id": "c2",
+              "label": "Música de Hans Zimmer"
+            },
+            {
+              "id": "c3",
+              "label": "Basadas en hechos reales"
+            },
+            {
+              "id": "c4",
+              "label": "Protagonizadas por Christian Bale"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-batman-eras",
+          "role": "arrange",
+          "prompt": "Ordena estas películas de Batman por estreno, de la más antigua a la más reciente.",
+          "films": [
+            {
+              "id": "tmdb:414906",
+              "title": "The Batman",
+              "posterPath": "/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+            },
+            {
+              "id": "tmdb:268",
+              "title": "Batman",
+              "posterPath": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg"
+            },
+            {
+              "id": "tmdb:272",
+              "title": "Batman Begins",
+              "posterPath": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Obtener una pista",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "es-MX": {
+      "theme": "Sombras, memoria y máscaras",
+      "shareText": "¿Puedes superar mi Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-dark-knight",
+          "role": "decode",
+          "prompt": "Adivina la película con este acertijo visual.",
+          "emoji": [
+            "🌑",
+            "♞"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver cuántas letras tiene",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-nolan",
+          "role": "connect",
+          "prompt": "¿Qué tienen en común estas tres películas?",
+          "films": [
+            {
+              "id": "tmdb:77",
+              "title": "Amnesia",
+              "posterPath": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg"
+            },
+            {
+              "id": "tmdb:374720",
+              "title": "Dunkerque",
+              "posterPath": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg"
+            },
+            {
+              "id": "tmdb:872585",
+              "title": "Oppenheimer",
+              "posterPath": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Dirigidas por Christopher Nolan"
+            },
+            {
+              "id": "c2",
+              "label": "Música de Hans Zimmer"
+            },
+            {
+              "id": "c3",
+              "label": "Basadas en hechos reales"
+            },
+            {
+              "id": "c4",
+              "label": "Protagonizadas por Christian Bale"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-batman-eras",
+          "role": "arrange",
+          "prompt": "Ordena estas películas de Batman por estreno, de la más antigua a la más reciente.",
+          "films": [
+            {
+              "id": "tmdb:414906",
+              "title": "The Batman",
+              "posterPath": "/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+            },
+            {
+              "id": "tmdb:268",
+              "title": "Batman",
+              "posterPath": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg"
+            },
+            {
+              "id": "tmdb:272",
+              "title": "Batman inicia",
+              "posterPath": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir una pista",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    },
+    "pt-BR": {
+      "theme": "Sombras, memória e máscaras",
+      "shareText": "Você consegue superar meu Daily Reel?",
+      "acts": [
+        {
+          "id": "decode-dark-knight",
+          "role": "decode",
+          "prompt": "Descubra o filme com este enigma visual.",
+          "emoji": [
+            "🌑",
+            "♞"
+          ],
+          "assistOptions": [
+            {
+              "id": "title-length",
+              "kind": "titleLength",
+              "label": "Ver o tamanho do título",
+              "scoreImpact": 0
+            },
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "connect-nolan",
+          "role": "connect",
+          "prompt": "O que conecta estes três filmes?",
+          "films": [
+            {
+              "id": "tmdb:77",
+              "title": "Amnésia",
+              "posterPath": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg"
+            },
+            {
+              "id": "tmdb:374720",
+              "title": "Dunkirk",
+              "posterPath": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg"
+            },
+            {
+              "id": "tmdb:872585",
+              "title": "Oppenheimer",
+              "posterPath": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+            }
+          ],
+          "choices": [
+            {
+              "id": "c1",
+              "label": "Dirigidos por Christopher Nolan"
+            },
+            {
+              "id": "c2",
+              "label": "Trilha de Hans Zimmer"
+            },
+            {
+              "id": "c3",
+              "label": "Baseados em histórias reais"
+            },
+            {
+              "id": "c4",
+              "label": "Estrelados por Christian Bale"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        },
+        {
+          "id": "arrange-batman-eras",
+          "role": "arrange",
+          "prompt": "Ordene estes filmes do Batman por lançamento, do mais antigo ao mais recente.",
+          "films": [
+            {
+              "id": "tmdb:414906",
+              "title": "The Batman",
+              "posterPath": "/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+            },
+            {
+              "id": "tmdb:268",
+              "title": "Batman",
+              "posterPath": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg"
+            },
+            {
+              "id": "tmdb:272",
+              "title": "Batman Begins",
+              "posterPath": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg"
+            }
+          ],
+          "assistOptions": [
+            {
+              "id": "standard-hint",
+              "kind": "hint",
+              "label": "Pedir uma dica",
+              "scoreImpact": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

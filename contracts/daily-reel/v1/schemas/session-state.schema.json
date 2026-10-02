@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://streaming-now.app/contracts/daily-reel/v1/session-state.schema.json",
+  "title": "Daily Reel Session State v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contractVersion",
+    "sessionId",
+    "publicationId",
+    "contentVersion",
+    "scoringVersion",
+    "configId",
+    "mode",
+    "status",
+    "currentActIndex",
+    "acts",
+    "totalScore",
+    "completedAt"
+  ],
+  "properties": {
+    "contractVersion": { "const": "daily-reel-session.v1" },
+    "sessionId": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "publicationId": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "contentVersion": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "scoringVersion": { "const": "daily-reel-score.v1" },
+    "configId": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "mode": { "enum": ["daily", "challenge", "encore", "practice"] },
+    "status": { "enum": ["active", "completed"] },
+    "currentActIndex": { "type": "integer", "minimum": 0, "maximum": 3 },
+    "acts": {
+      "type": "array",
+      "prefixItems": [
+        { "$ref": "#/$defs/decodeProgress" },
+        { "$ref": "#/$defs/connectProgress" },
+        { "$ref": "#/$defs/arrangeProgress" }
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "totalScore": { "type": "integer", "minimum": 0, "maximum": 300 },
+    "completedAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "$defs": {
+    "progressBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actId",
+        "role",
+        "status",
+        "incorrectAttempts",
+        "scoreAffectingClues",
+        "requestedClueIds",
+        "score"
+      ],
+      "properties": {
+        "actId": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "role": { "enum": ["decode", "connect", "arrange"] },
+        "status": { "enum": ["playing", "solved", "revealed", "exhausted"] },
+        "incorrectAttempts": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "scoreAffectingClues": { "type": "integer", "minimum": 0 },
+        "requestedClueIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 },
+          "uniqueItems": true
+        },
+        "score": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 }
+      }
+    },
+    "decodeProgress": {
+      "allOf": [
+        { "$ref": "#/$defs/progressBase" },
+        { "properties": { "role": { "const": "decode" } } }
+      ]
+    },
+    "connectProgress": {
+      "allOf": [
+        { "$ref": "#/$defs/progressBase" },
+        { "properties": { "role": { "const": "connect" } } }
+      ]
+    },
+    "arrangeProgress": {
+      "allOf": [
+        { "$ref": "#/$defs/progressBase" },
+        { "properties": { "role": { "const": "arrange" } } }
+      ]
+    }
+  }
+}

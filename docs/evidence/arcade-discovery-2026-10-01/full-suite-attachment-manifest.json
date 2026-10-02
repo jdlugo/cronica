@@ -1,0 +1,95 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "EB0F1E97-A7B0-42DC-BE86-C66A449D8985.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-existing-save-after-relaunch_0_B4642918-C5F1-49FF-9B80-B1194FAA1F40.png",
+        "timestamp" : 1790879636.331
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "7742EF6A-6D19-4F66-857A-897F9812543B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-daily-summary_0_662A68BA-19F1-4605-B5B7-6914045A8CEE.png",
+        "timestamp" : 1790879621.213
+      }
+    ],
+    "testIdentifier" : "CronicaUITests/testArcadeDiscoveryDailySummaryKeepsSavedMovieAcrossRelaunch()",
+    "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaUITests/CronicaUITests/testArcadeDiscoveryDailySummaryKeepsSavedMovieAcrossRelaunch"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "078775DC-A244-4651-8FEB-D5D0A1DEC1A4.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-second-movie-independent_0_DAD833EE-CD63-4152-AF13-49BA2704E3D1.png",
+        "timestamp" : 1790879687.273
+      }
+    ],
+    "testIdentifier" : "CronicaUITests/testArcadeDiscoveryHeistKeepsMovieDetailsSeparate()",
+    "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaUITests/CronicaUITests/testArcadeDiscoveryHeistKeepsMovieDetailsSeparate"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "B09D73C7-9FEF-48A6-B457-0321065CBE00.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-load-retry_0_AFEBA7F3-2B1A-45D1-BC8F-D1E7C6230387.png",
+        "timestamp" : 1790879740.832
+      }
+    ],
+    "testIdentifier" : "CronicaUITests/testArcadeDiscoveryMovieLoadCanRetry()",
+    "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaUITests/CronicaUITests/testArcadeDiscoveryMovieLoadCanRetry"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "873BF1F4-10EF-435E-B15C-2DEC69F55CEB.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-movie-saved_0_6335908E-8340-435D-893E-E3037D769C30.png",
+        "timestamp" : 1790879795.645
+      }
+    ],
+    "testIdentifier" : "CronicaUITests/testArcadeDiscoverySavesMovieAndReturnsToReplay()",
+    "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaUITests/CronicaUITests/testArcadeDiscoverySavesMovieAndReturnsToReplay"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "52216D8E-AE33-4A82-94D0-728CEF26B465.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-spanish-large-text-result_0_87371B21-1923-4466-97A4-C48D3DB87119.png",
+        "timestamp" : 1790879931.339
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "54589BE9-B7F0-4E11-890E-E437D7D446EB",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "2127CD27-8662-4E50-8EBF-10F53236049A.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "arcade-discovery-spanish-large-text-saved_0_62C7DDDD-3543-4CFD-9A76-4DFA9BA962F2.png",
+        "timestamp" : 1790879895.796
+      }
+    ],
+    "testIdentifier" : "CronicaUITests/testArcadeDiscoverySpanishMemoryAtLargeText()",
+    "testIdentifierURL" : "test://com.apple.xcode/Story/CronicaUITests/CronicaUITests/testArcadeDiscoverySpanishMemoryAtLargeText"
+  }
+]

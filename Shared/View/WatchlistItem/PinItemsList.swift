@@ -1,10 +1,3 @@
-//
-//  PinItemsList.swift
-//  CronicaMac
-//
-//  Created by Alexandre Madeira on 03/11/22.
-//
-
 import SwiftUI
 
 struct PinItemsList: View {
@@ -19,8 +12,8 @@ struct PinItemsList: View {
     var body: some View {
         if !items.isEmpty {
             HorizontalWatchlistList(items: items.sorted { $0.itemTitle < $1.itemTitle },
-                                    title: NSLocalizedString("Pins", comment: ""),
-                                    subtitle: String(),
+                                    title: "My Pins",
+                                    subtitle: "Pinned Items",
                                     showPopup: $showPopup,
                                     popupType: $popupType,
                                     shouldReload: $shouldReload)

@@ -1,10 +1,3 @@
-//
-//  CustomList-Extensions.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 13/02/23.
-//
-
 import Foundation
 
 extension CustomList {
@@ -15,7 +8,28 @@ extension CustomList {
         if let updatedDate {
             return updatedDate.convertDateToString()
         }
-        return String()
+        return ""
+    }
+    var itemGlanceInfo: String {
+        if let notes {
+            if !notes.isEmpty {
+                return notes
+            }
+        }
+        if let items {
+            let formatString = NSLocalizedString("items count", comment: "")
+            let result = String(format: formatString, items.count)
+            return result
+        }
+        return NSLocalizedString("Last update on \(itemLastUpdateFormatted)", comment: "")
+    }
+    var itemCount: String {
+        if let items {
+            let formatString = NSLocalizedString("items count", comment: "")
+            let result = String(format: formatString, items.count)
+            return result
+        }
+        return NSLocalizedString("Empty", comment: "")
     }
     var itemFooter: String {
         if let notes {

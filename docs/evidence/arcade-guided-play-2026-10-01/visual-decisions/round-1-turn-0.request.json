@@ -1,0 +1,14 @@
+{
+  "choices" : [
+
+  ],
+  "round" : 1,
+  "screenshot" : "\/Users\/johndlugokecki\/Library\/Developer\/CoreSimulator\/Devices\/54589BE9-B7F0-4E11-890E-E437D7D446EB\/data\/Containers\/Data\/Application\/FA556A2F-3DFC-4C61-AEED-244A5DFFD1FE\/tmp\/arcade-visual-live\/round-1-turn-0.png",
+  "tiles" : [
+    "arcade.tile.0",
+    "arcade.tile.1",
+    "arcade.tile.2",
+    "arcade.tile.3"
+  ],
+  "turn" : 0
+}

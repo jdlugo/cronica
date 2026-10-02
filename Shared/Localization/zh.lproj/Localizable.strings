@@ -1,0 +1,2016 @@
+/* (No Comment) */
+" Cronica" = "Streaming Now";
+
+/* (No Comment) */
+"'Update Items' will update your items with new information available on TMDb, if available." = "'更新项目'将使用TMDb上可用的新信息更新您的项目，如果可用。";
+
+/* No comment provided by engineer. */
+"(numberOfSeasons) Seasons • (numberOfEpisodes) Episodes" = "(numberOfSeasons) 季 • (numberOfEpisodes) 集";
+
+/* No comment provided by engineer. */
+"(voteAverage.rounded(.down))/10" = "(voteAverage.rounded(.down))/10";
+
+/* No comment provided by engineer. */
+"(voteAverage.rounded())/10" = "(voteAverage.rounded())/10";
+
+/* No comment provided by engineer. */
+"%@, tap to open list options." = "%@，点击以打开列表选项。";
+
+/* No comment provided by engineer. */
+"%lld Items" = "%lld 项";
+
+/* (No Comment) */
+"%lld items • %@" = "%lld 个项目 • %@";
+
+/* (No Comment) */
+"%lld Seasons • %lld Episodes" = "%lld 季 • %lld 集";
+
+/* (No Comment) */
+"%lld upcoming notifications." = "%lld个即将到来的通知。";
+
+/* (No Comment) */
+"%lld/10" = "%lld/10";
+
+/* (No Comment) */
+"%llditems" = "%lld 个项目";
+
+/* No comment provided by engineer. */
+"🛠️" = "🛠️";
+
+/* (No Comment) */
+"About" = "关于";
+
+/* (No Comment) */
+"aboutTitle" = "关于";
+
+/* (No Comment) */
+"accentColor" = "强调色";
+
+/* (No Comment) */
+"Account" = "账户";
+
+/* (No Comment) */
+"AccountSettingsViewFooter" = "将您的 TMDb 账户连接到导入和同步您的观看列表和列表。";
+
+/* MARK: TMDb Sync */
+"AccountSettingsViewFooterHeader" = "连接您的TMDb帐户";
+
+/* (No Comment) */
+"AccountSettingsViewHeaderSignIn" = "管理您的TMDb列表";
+
+/* (No Comment) */
+"AccountSettingsViewListsManager" = "您的TMDB列表";
+
+/* (No Comment) */
+"AccountSettingsViewSignIn" = "连接";
+
+/* (No Comment) */
+"AccountSettingsViewSignOut" = "断开连接";
+
+/* (No Comment) */
+"AccountSettingsViewWatchlist" = "TMDB观看列表";
+
+/* (No Comment) */
+"acknowledgmentsAppIconSubtitle" = "阿克马德";
+
+/* MARK: AcknowledgementsSettings */
+"acknowledgmentsAppIconTitle" = "图标设计师";
+
+/* (No Comment) */
+"acknowledgmentsContentProviderSubtitle" = "TMDb";
+
+/* (No Comment) */
+"acknowledgmentsContentProviderTitle" = "内容提供者";
+
+/* (No Comment) */
+"acknowledgmentsSDWebImage" = "SDWebImageSwiftUI";
+
+/* (No Comment) */
+"acknowledgmentsTitle" = "致谢";
+
+/* (No Comment) */
+"acknowledgmentsUserTitle" = "感谢您的反馈和支持！";
+
+/* (No Comment) */
+"Action" = "行动";
+
+/* (No Comment) */
+"Action & Adventure" = "动作和冒险";
+
+/* (No Comment) */
+"Add everything you want, the Watchlist automatically organizes it for you." = "添加您想要的任何内容，Watchlist会自动为您组织。";
+
+/* (No Comment) */
+"Add to Favorites" = "添加到收藏夹";
+
+/* (No Comment) */
+"Add to List" = "添加到列表";
+
+/* MARK: ContentDetailsView.swift */
+"Add to watchlist" = "加入观看列表";
+
+/* (No Comment) */
+"addAndMarkWatchedButton" = "添加并标记为已观看";
+
+/* (No Comment) */
+"Added to watchlist" = "已添加到观看列表";
+
+/* (No Comment) */
+"addedToWatchlist" = "加入到观看列表";
+
+/* (No Comment) */
+"addedWatchlist" = "已添加到观看列表";
+
+/* (No Comment) */
+"addToCustomList" = "加入清单...";
+
+/* (No Comment) */
+"addToList" = "添加到清单...";
+
+/* (No Comment) */
+"Adventure" = "冒险";
+
+/* (No Comment) */
+"Alien" = "外星人";
+
+/* (No Comment) */
+"All" = "所有";
+
+/* (No Comment) */
+"allCustomWatchListFilters" = "全部";
+
+/* (No Comment) */
+"allItems" = "所有物品";
+
+/* (No Comment) */
+"allItemsMovies" = "所有电影";
+
+/* (No Comment) */
+"allItemsTVShows" = "所有电视节目";
+
+/* (No Comment) */
+"allowNotification" = "允许通知";
+
+/* (No Comment) */
+"Always Synced" = "始终同步";
+
+/* (No Comment) */
+"Animation" = "动画";
+
+/* (No Comment) */
+"Anime" = "动漫";
+
+/* (No Comment) */
+"appearanceAppIcon" = "应用图标";
+
+/* (No Comment) */
+"appearanceAppThemeTitle" = "应用主题";
+
+/* (No Comment) */
+"appearanceCompactUI" = "紧凑的用户界面";
+
+/* (No Comment) */
+"appearanceCompactUISubtitle" = "减小一些UI元素的大小，以适应屏幕上更多的项目。";
+
+/* (No Comment) */
+"appearanceExplore" = "探索";
+
+/* (No Comment) */
+"appearanceExploreDisplayType" = "探索偏好设置";
+
+/* (No Comment) */
+"appearanceHorizontalListsTitle" = "水平列表样式";
+
+/* (No Comment) */
+"appearanceLists" = "列表";
+
+/* (No Comment) */
+"appearanceListsDisplayType" = "列表显示偏好";
+
+/* (No Comment) */
+"appearanceRowStyleSubtitle" = "选择如何显示您的观看列表";
+
+/* (No Comment) */
+"appearanceRowStyleTitle" = "观看列表的项目样式";
+
+/* (No Comment) */
+"appearanceRowTypeSubtitle" = "选择您想要显示的信息类型。";
+
+/* MARK: AppearanceSetting */
+"appearanceRowTypeTitle" = "收藏夹项的信息";
+
+/* (No Comment) */
+"appearanceSectionDetailsTitle" = "章节详细的样式";
+
+/* (No Comment) */
+"appearanceSendFeedback" = "发送反馈";
+
+/* (No Comment) */
+"appearanceStyle" = "风格偏好";
+
+/* (No Comment) */
+"appearanceTheme" = "主题";
+
+/* (No Comment) */
+"appearanceThemeTitle" = "应用程序色调";
+
+/* (No Comment) */
+"appearanceTitle" = "外观";
+
+/* (No Comment) */
+"appearanceUpNextTitle" = "下一个详情样式";
+
+/* (No Comment) */
+"appearanceWatchlist" = "观看列表";
+
+/* (No Comment) */
+"appIconFeedbackTitle" = "有一个图标的想法吗？发送反馈";
+
+/* (No Comment) */
+"appRegionSubtitle" = "该应用将根据您的地区调整手表供应商。";
+
+/* (No Comment) */
+"appRegionTitle" = "区域";
+
+/* MARK: AppThemeColors */
+"appThemeColorsBlue" = "蓝色";
+
+/* (No Comment) */
+"appThemeColorsBrown" = "棕色";
+
+/* (No Comment) */
+"appThemeColorsCyan" = "青色";
+
+/* (No Comment) */
+"appThemeColorsGray" = "灰色";
+
+/* (No Comment) */
+"appThemeColorsGreen" = "绿色";
+
+/* (No Comment) */
+"appThemeColorsIndigo" = "靛蓝色";
+
+/* (No Comment) */
+"appThemeColorsMint" = "薄荷";
+
+/* (No Comment) */
+"appThemeColorsOrange" = "橙色";
+
+/* (No Comment) */
+"appThemeColorsPink" = "粉色";
+
+/* (No Comment) */
+"appThemeColorsPurple" = "紫色";
+
+/* (No Comment) */
+"appThemeColorsRed" = "红色";
+
+/* (No Comment) */
+"appThemeColorsTeal" = "青色";
+
+/* (No Comment) */
+"appThemeColorsYellow" = "黄色";
+
+/* (No Comment) */
+"appThemeDark" = "黑色";
+
+/* (No Comment) */
+"appThemeLight" = "光";
+
+/* MARK: AppTheme */
+"appThemeSystem" = "系统";
+
+/* (No Comment) */
+"Archive" = "归档";
+
+/* (No Comment) */
+"Archive Item" = "存档项目";
+
+/* (No Comment) */
+"areYouSure" = "你确定吗？";
+
+/* (No Comment) */
+"Arriving Soon" = "即将到达";
+
+/* No comment provided by engineer. */
+"Asked for review: %@" = "请求了评论：%@";
+
+/* No comment provided by engineer. */
+"Back" = "返回";
+
+/* (No Comment) */
+"Based on novel or book" = "基于小说或书籍";
+
+/* (No Comment) */
+"Based on true story" = "根据真实故事";
+
+/* (No Comment) */
+"Based on Video-Game" = "基于视频游戏";
+
+/* (No Comment) */
+"Be reminded of upcoming Movies & TV Shows." = "提醒即将上映的电影和电视节目。";
+
+/* (No Comment) */
+"behaviorAllowFullSwipeSubtitle" = "全滑动将触发主要操作";
+
+/* (No Comment) */
+"behaviorAllowFullSwipeTitle" = "允许完全滑动";
+
+/* (No Comment) */
+"behaviorDoubleTapSubtitle" = "选择双击封面图像时要执行的功能。";
+
+/* MARK: BehaviorSetting */
+"behaviorDoubleTapTitle" = "双击封面";
+
+/* (No Comment) */
+"behaviorEpisodeTitle" = "点击标记为已观看";
+
+/* (No Comment) */
+"behaviorGestureTitle" = "手势";
+
+/* (No Comment) */
+"behaviorLinkTitle" = "链接";
+
+/* (No Comment) */
+"behaviorMarkPreviouslyEpisodes" = "当新的剧集标记为已看时，标记所有以前的剧集";
+
+/* (No Comment) */
+"behaviorPrimaryLeftGesture" = "主要左手势";
+
+/* (No Comment) */
+"behaviorPrimaryRightGesture" = "主要右手势";
+
+/* (No Comment) */
+"behaviorSecondaryLeftGesture" = "次要左手势";
+
+/* (No Comment) */
+"behaviorSecondaryRightGesture" = "辅助右手势";
+
+/* (No Comment) */
+"behaviorSwipeTitle" = "滑动手势";
+
+/* (No Comment) */
+"behaviorTitle" = "行为";
+
+/* (No Comment) */
+"behaviorWatchProvidersSubtitle" = "查看内容可用的平台。";
+
+/* (No Comment) */
+"behaviorWatchProvidersTitle" = "观看提供商";
+
+/* (No Comment) */
+"behaviorYouTubeTitle" = "在YouTube中打开预告片";
+
+/* No comment provided by engineer. */
+"Beta" = "测试版";
+
+/* MARK: CastDetailsView.swift */
+"Biography" = "传记";
+
+/* (No Comment) */
+"callToReviewSubtitle" = "在App Store上留下评论！";
+
+/* (No Comment) */
+"callToReviewTitle" = "喜歡 Streaming Now 嗎?";
+
+/* (No Comment) */
+"Cancel" = "取消";
+
+/* (No Comment) */
+"cancelConfirmDialogAction" = "取消";
+
+/* (No Comment) */
+"Cancelled" = "已取消";
+
+/* (No Comment) */
+"cancelOpenWatchProvider" = "取消";
+
+/* (No Comment) */
+"cantSendFeedback" = "要在应用内发送反馈，您必须禁用“禁用崩溃报告”";
+
+/* (No Comment) */
+"Cast & Crew" = "演员和制作人员";
+
+/* (No Comment) */
+"changeLanguage" = "更改应用语言";
+
+/* (No Comment) */
+"changelogViewTitle" = "有什么新的";
+
+/* (No Comment) */
+"Classical" = "古典";
+
+/* (No Comment) */
+"Collapse" = "折叠";
+
+/* (No Comment) */
+"Comedy" = "喜剧";
+
+/* MARK: WatchlistSectionView.swift */
+"Coming Soon" = "即将推出";
+
+/* (No Comment) */
+"Coming Soon To Theaters" = "即將上映";
+
+/* (No Comment) */
+"companiesTitle" = "公司";
+
+/* (No Comment) */
+"Confirm" = "确认";
+
+/* (No Comment) */
+"confirmAndDeleteItems" = "确认并删除项目";
+
+/* (No Comment) */
+"confirmDialogAction" = "确认";
+
+/* (No Comment) */
+"confirmOpenDontAskAgainProvider" = "确认并且不再询问";
+
+/* (No Comment) */
+"confirmOpenWatchProvider" = "确认";
+
+/* (No Comment) */
+"connectedAccounts" = "连接的帐户";
+
+/* (No Comment) */
+"connectedAccountTMDB" = "电影数据库";
+
+/* (No Comment) */
+"contentRegionTitle" = "地区";
+
+/* (No Comment) */
+"Continue" = "继续";
+
+/* (No Comment) */
+"Create" = "创建";
+
+/* (No Comment) */
+"createList" = "创建新列表";
+
+/* (No Comment) */
+"createNote" = "添加笔记";
+
+/* (No Comment) */
+"Crime" = "犯罪";
+
+/* (No Comment) */
+"Crime Investigation" = "犯罪调查";
+
+/* (No Comment) */
+"Cronica" = "Streaming Now";
+
+/* (No Comment) */
+"cronicaGitHub" = "Streaming Now GitHub存储库";
+
+/* (No Comment) */
+"dateAsc" = "日期（升序）";
+
+/* (No Comment) */
+"dateDesc" = "日期（降序）";
+
+/* (No Comment) */
+"Default" = "优化";
+
+/* (No Comment) */
+"Default List" = "默认列表";
+
+/* (No Comment) */
+"defaultWatchlistFilters" = "过滤器";
+
+/* (No Comment) */
+"defaultWatchlistShowAllItems" = "显示所有项目";
+
+/* (No Comment) */
+"defaultWatchlistSmartFilters" = "智能筛选";
+
+/* (No Comment) */
+"Delete" = "删除";
+
+/* (No Comment) */
+"deleteConfirmationMessage" = "无法撤销此操作。\n这将不会删除本地列表，只会删除 TMDb 上的列表。";
+
+/* (No Comment) */
+"deleteList" = "删除列表";
+
+/* (No Comment) */
+"Design" = "设计";
+
+/* (No Comment) */
+"Details Page" = "详细页面";
+
+/* (No Comment) */
+"Developed by Alexandre Madeira" = "由Alexandre Madeira开发";
+
+/* No comment provided by engineer. */
+"Developer Options" = "开发人员选项";
+
+/* (No Comment) */
+"Digital" = "数码";
+
+/* (No Comment) */
+"disableTranslucentTitle" = "禁用半透明背景";
+
+/* (No Comment) */
+"Discover what's next" = "发现下一个";
+
+/* No comment provided by engineer. */
+"Dismiss" = "忽略";
+
+/* (No Comment) */
+"dismissReviewCall" = "关闭";
+
+/* (No Comment) */
+"Documentary" = "纪录片";
+
+/* MARK: Common */
+"Done" = "完成";
+
+/* (No Comment) */
+"Double Tap Gesture" = "双击手势";
+
+/* (No Comment) */
+"Drama" = "戏剧";
+
+/* No comment provided by engineer. */
+"E%lld" = "E%lld";
+
+/* (No Comment) */
+"Edit" = "编辑";
+
+/* (No Comment) */
+"editListRemoveItems" = "删除项目";
+
+/* (No Comment) */
+"editNotes" = "修改备注";
+
+/* (No Comment) */
+"Email (optional)" = "邮箱（可选）";
+
+/* No comment provided by engineer. */
+"Empty" = "空";
+
+/* No comment provided by engineer. */
+"Empty List" = "空列表";
+
+/* (No Comment) */
+"emptyList" = "未找到符合所选筛选条件的内容。\n请尝试更改筛选条件。";
+
+/* (No Comment) */
+"emptyLists" = "空";
+
+/* (No Comment) */
+"enablePreferredLaunchScreen" = "启用首选的启动界面";
+
+/* (No Comment) */
+"Ended Series" = "已结束系列";
+
+/* No comment provided by engineer. */
+"Episode" = "剧集";
+
+/* No comment provided by engineer. */
+"Episode (episodeNumber)" = "剧集 (episodeNumber)";
+
+/* (No Comment) */
+"Episode %lld" = "第 %lld 集";
+
+/* No comment provided by engineer. */
+"Episode: %lld, of the show: %@." = "节目：%lld，%@";
+
+/* (No Comment) */
+"episodeNotificationSubtitle" = "当您关注的电视节目发布新剧集时通知您。";
+
+/* (No Comment) */
+"episodeNotificationTitle" = "通知新剧集";
+
+/* (No Comment) */
+"Error" = "错误";
+
+/* (No Comment) */
+"Error reading this title" = "阅读标题时发生错误。";
+
+/* MARK: ExploreView.swift */
+"Explore" = "探索";
+
+/* (No Comment) */
+"exploreDisplayTypePicker" = "显示样式";
+
+/* (No Comment) */
+"explorePreferredDisplayTypeCard" = "卡片";
+
+/* (No Comment) */
+"explorePreferredDisplayTypePoster" = "海报";
+
+/* (No Comment) */
+"exportTitle" = "导出";
+
+/* (No Comment) */
+"Family" = "家庭";
+
+/* (No Comment) */
+"Fantasy" = "幻想";
+
+/* (No Comment) */
+"Favorite" = "最喜欢";
+
+/* (No Comment) */
+"Favorites" = "收藏";
+
+/* (No Comment) */
+"featureOneDescription" = "快速查看您最喜欢的电视剧的下一集，并标记为已观看。";
+
+/* (No Comment) */
+"featureOneTitle" = "即將來臨";
+
+/* (No Comment) */
+"featureRoadmap" = "即将推出的功能";
+
+/* (No Comment) */
+"featureRoadmapHeader" = "投票选择你想首先看到的下一个功能。";
+
+/* (No Comment) */
+"featureRoadmapSubtitle" = "使用“加号”图标建议一个新功能。";
+
+/* (No Comment) */
+"featureThreeDescription" = "更多设置和改进的界面，以您喜欢的方式自定义Streaming Now。";
+
+/* (No Comment) */
+"featureThreeTitle" = "优化您的体验";
+
+/* (No Comment) */
+"featureTwoDescription" = "根据你在 Streaming Now 中观看的内容，提供量身定制的电影和电视节目推荐。";
+
+/* (No Comment) */
+"featureTwoTitle" = "个性化推荐";
+
+/* (No Comment) */
+"Feedback" = "反馈";
+
+/* (No Comment) */
+"Feedback sent" = "谢谢您的反馈。";
+
+/* (No Comment) */
+"feedbackSent" = "反馈已发送。谢谢！";
+
+/* No comment provided by engineer. */
+"Fetch" = "提取";
+
+/* MARK: FilmographyView.swift */
+"Filmography" = "电影作品";
+
+/* (No Comment) */
+"filterDiscoverTitle" = "筛选";
+
+/* No comment provided by engineer. */
+"Filters" = "筛选器";
+
+/* (No Comment) */
+"Find" = "找到";
+
+/* (No Comment) */
+"First Air Date" = "首播日期";
+
+/* (No Comment) */
+"For more details, open the companion app." = "更详细信息，请打开 iPhone 应用程序。";
+
+/* (No Comment) */
+"From Watchlist" = "从观看列表";
+
+/* (No Comment) */
+"generatingExportFile" = "生成JSON文件，请稍等。";
+
+/* (No Comment) */
+"Genre" = "流派";
+
+/* (No Comment) */
+"genreDiscoverFilterTitle" = "类型";
+
+/* (No Comment) */
+"Genres" = "类型";
+
+/* (No Comment) */
+"German" = "德语";
+
+/* (No Comment) */
+"Gesture" = "手势";
+
+/* (No Comment) */
+"Get notifications about the newest releases." = "获取关于最新发布的通知。";
+
+/* (No Comment) */
+"hapticFeedbackTitle" = "触觉反馈";
+
+/* (No Comment) */
+"hideAddedItemsDiscoverFilter" = "隐藏已添加的项目";
+
+/* (No Comment) */
+"History" = "历史";
+
+/* MARK: ContentView.swift */
+"Home" = "主页";
+
+/* (No Comment) */
+"Horror" = "恐怖";
+
+/* (No Comment) */
+"IMDb" = "IMDb";
+
+/* (No Comment) */
+"importedSucceeded" = "成功导入";
+
+/* (No Comment) */
+"importExportWarning" = "导出/导入功能目前处于测试阶段，只能用于导出数据或切换iCloud帐户时导入数据，目前尚无逻辑来避免重复。未来的更新将提供更好的体验。";
+
+/* (No Comment) */
+"importingTMDB" = "导入您的观影清单，请稍候。";
+
+/* (No Comment) */
+"importingWatchlistTMDB" = "导入中，请稍候。";
+
+/* (No Comment) */
+"importTitle" = "导入";
+
+/* (No Comment) */
+"importTMDBList" = "导入此列表";
+
+/* (No Comment) */
+"importTMDBWatchlist" = "导入观看列表";
+
+/* (No Comment) */
+"In Production" = "生产中";
+
+/* (No Comment) */
+"Information" = "信息";
+
+/* (No Comment) */
+"Internal error: Something went wrong, contact TMDB." = "内部错误：出了些问题，请联系 TMDb。";
+
+/* (No Comment) */
+"Invalid API key: You must be granted a valid key." = "无效的API密钥。";
+
+/* (No Comment) */
+"Invalid Endpoint" = "无效的终端点。";
+
+/* (No Comment) */
+"Invalid Request" = "无效请求。";
+
+/* MARK: Error */
+"Invalid Response" = "无效的响应。";
+
+/* No comment provided by engineer. */
+"Is TelemetryDeck Initialized: %@" = "是否初始化 TelemetryDeck: %@";
+
+/* No comment provided by engineer. */
+"Is User Signed In With TMDB: %@" = "用户是否使用TMDB登录: %@";
+
+/* No comment provided by engineer. */
+"Item ID" = "项目标识";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypeCard" = "卡片";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypePoster" = "海报";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypeStandard" = "默认";
+
+/* No comment provided by engineer. */
+"items count" = "项目数量";
+
+/* (No Comment) */
+"itemsTMDB" = "您的关注列表";
+
+/* MARK: WatchProviders */
+"justWatchSubtitle" = "由JustWatch提供";
+
+/* (No Comment) */
+"Keep everything organized inside the Watchlist." = "在观看列表中保持一切井井有条。";
+
+/* (No Comment) */
+"Keep track of every episode you've watched." = "跟踪您观看的每一集。";
+
+/* (No Comment) */
+"Kids" = "孩子们";
+
+/* (No Comment) */
+"Know for" = "知名于";
+
+/* No comment provided by engineer. */
+"Last maintenance: %@" = "上次维护时间：%@";
+
+/* No comment provided by engineer. */
+"Last upcoming refresh: %@" = "最后的即将到来的刷新：%@";
+
+/* No comment provided by engineer. */
+"Last update on (itemLastUpdateFormatted)" = "上次更新于(itemLastUpdateFormatted)";
+
+/* No comment provided by engineer. */
+"Last watching refresh: %@" = "上次查看更新：%@";
+
+/* (No Comment) */
+"Latest Movies" = "最新电影";
+
+/* (No Comment) */
+"Latest Shows" = "最新节目";
+
+/* (No Comment) */
+"Libraries" = "图书馆";
+
+/* (No Comment) */
+"List" = "列表";
+
+/* (No Comment) */
+"List Filters" = "列表过滤器";
+
+/* (No Comment) */
+"listBasicHeader" = "基本";
+
+/* (No Comment) */
+"listDeleted" = "此列表已成功删除。";
+
+/* (No Comment) */
+"listDescription" = "列表描述";
+
+/* (No Comment) */
+"listItemsToAdd" = "选择项目";
+
+/* (No Comment) */
+"listName" = "列表名称";
+
+/* (No Comment) */
+"Lists" = "列表";
+
+/* (No Comment) */
+"Loading" = "加载中";
+
+/* (No Comment) */
+"Mark as" = "标记为";
+
+/* (No Comment) */
+"Mark as Favorite" = "标记为收藏";
+
+/* (No Comment) */
+"Mark as Watched" = "标记为已观看";
+
+/* (No Comment) */
+"Mark Season as Watched" = "标记为已观看的季节";
+
+/* (No Comment) */
+"Mark selected as unwatched" = "标记为未观看";
+
+/* (No Comment) */
+"Mark selected as watched" = "将选中标记为已观看";
+
+/* (No Comment) */
+"Mark some episodes as watched to use Up Next." = "将一些剧集标记为已观看，以使用“接下来”功能。";
+
+/* (No Comment) */
+"Mark this and previous episodes as watched" = "标记此及之前的集数为已观看";
+
+/* (No Comment) */
+"markAsWatched" = "标记为已观看";
+
+/* (No Comment) */
+"markedArchive" = "标记为存档";
+
+/* (No Comment) */
+"markedAsArchive" = "归档";
+
+/* (No Comment) */
+"markedAsFavorite" = "标记为收藏";
+
+/* (No Comment) */
+"markedAsPin" = "标记为固定";
+
+/* (No Comment) */
+"markedAsWatched" = "标记为已观看";
+
+/* (No Comment) */
+"markedEpisodeWatched" = "标记为已观看";
+
+/* (No Comment) */
+"markedFavorite" = "标记为收藏";
+
+/* (No Comment) */
+"markedPin" = "固定";
+
+/* (No Comment) */
+"markedWatched" = "标记为已观看";
+
+/* (No Comment) */
+"markThisAndPreviously" = "将此集与所有以前的集都标记为已观看";
+
+/* (No Comment) */
+"markThisSeasonAsWatched" = "将此季标记为已观看";
+
+/* (No Comment) */
+"Media" = "媒体";
+
+/* (No Comment) */
+"Media Type" = "媒体类型";
+
+/* (No Comment) */
+"mediaTypeDiscoverFilterTitle" = "媒体类型";
+
+/* (No Comment) */
+"mediaTypeFilter" = "按媒体筛选";
+
+/* (No Comment) */
+"mediaTypeFiltersMovies" = "电影";
+
+/* (No Comment) */
+"mediaTypeFiltersNoFilter" = "全部";
+
+/* (No Comment) */
+"mediaTypeFiltersTvShows" = "电视节目";
+
+/* No comment provided by engineer. */
+"More" = "更多";
+
+/* (No Comment) */
+"More Options" = "更多选项";
+
+/* (No Comment) */
+"moreInfoShow" = "更多信息";
+
+/* (No Comment) */
+"Movie" = "电影";
+
+/* (No Comment) */
+"movieNotificationSubtitle" = "当您的观影清单上有电影发布时通知您。";
+
+/* (No Comment) */
+"movieNotificationTitle" = "通知电影发布";
+
+/* (No Comment) */
+"Movies" = "电影";
+
+/* (No Comment) */
+"Movies, Shows, People" = "电影，节目，人物";
+
+/* (No Comment) */
+"moviesCustomWatchListFilters" = "电影";
+
+/* (No Comment) */
+"Music" = "音乐";
+
+/* (No Comment) */
+"My Pins" = "我的收藏";
+
+/* (No Comment) */
+"Mystery" = "神秘";
+
+/* (No Comment) */
+"needToSync %lld" = "有%lld项可用于同步";
+
+/* No comment provided by engineer. */
+"Network" = "网络";
+
+/* (No Comment) */
+"Never miss out" = "永不错过";
+
+/* (No Comment) */
+"newCustomListTitle" = "新列表";
+
+/* (No Comment) */
+"newList" = "新列表";
+
+/* (No Comment) */
+"Next episode arrives today." = "下一集将在今天到达。";
+
+/* (No Comment) */
+"No biography available." = "没有可用的个人传记。";
+
+/* (No Comment) */
+"No details available." = "暂无详细信息";
+
+/* (No Comment) */
+"No Episode Available" = "暂无剧集可用";
+
+/* (No Comment) */
+"No information available" = "暂无信息";
+
+/* (No Comment) */
+"No information available." = "暂无信息可用。";
+
+/* (No Comment) */
+"No Name Found" = "找不到姓名";
+
+/* (No Comment) */
+"No notifications" = "没有通知";
+
+/* (No Comment) */
+"No results" = "没有结果";
+
+/* (No Comment) */
+"No Results" = "没有结果";
+
+/* (No Comment) */
+"No results from TMDb" = "TMDb没有结果";
+
+/* (No Comment) */
+"No results from Watchlist" = "观察列表无结果";
+
+/* (No Comment) */
+"No title available" = "无标题可用";
+
+/* (No Comment) */
+"noListFoundMessage" = "未找到符合您查询的清单，请尝试其他清单。";
+
+/* (No Comment) */
+"noResultsFound" = "没有找到符合您查询的内容。\n请尝试其他查询或检查标题是否不在存档中。";
+
+/* (No Comment) */
+"Not Available" = "不可用";
+
+/* No comment provided by engineer. */
+"Not Found" = "未找到";
+
+/* (No Comment) */
+"Not Watched" = "未观看";
+
+/* (No Comment) */
+"Notes" = "笔记";
+
+/* MARK: NotificationListView */
+"Notifications" = "通知";
+
+/* (No Comment) */
+"notificationsSettingsFeedbackCall" = "您有任何建议吗？发送反馈";
+
+/* (No Comment) */
+"Now Available" = "现已上市";
+
+/* (No Comment) */
+"Official Website" = "官方网站";
+
+/* (No Comment) */
+"Open in" = "在里打开";
+
+/* (No Comment) */
+"Open in YouTube" = "在YouTube中打开";
+
+/* (No Comment) */
+"Open Trailers in YouTube App" = "在YouTube应用中打开预告片";
+
+/* (No Comment) */
+"openCustomListSelectorWhenAdding" = "添加项目时打开列表选择器";
+
+/* (No Comment) */
+"openNotificationInSettings" = "在设置应用中编辑通知";
+
+/* (No Comment) */
+"openWatchProviderTitle" = "这将打开 TMDb 网站，并显示每个服务的链接。";
+
+/* (No Comment) */
+"Organize" = "组织";
+
+/* (No Comment) */
+"Original Title" = "原始标题";
+
+/* (No Comment) */
+"Overview" = "概览";
+
+/* (No Comment) */
+"People" = "人们";
+
+/* (No Comment) */
+"Person" = "人";
+
+/* (No Comment) */
+"Physical" = "物理";
+
+/* (No Comment) */
+"Pin" = "别针";
+
+/* (No Comment) */
+"Pin Item" = "固定项目";
+
+/* (No Comment) */
+"Pin Items" = "固定项目";
+
+/* (No Comment) */
+"Pinned Items" = "固定项目";
+
+/* (No Comment) */
+"pinnedList" = "固定列表";
+
+/* (No Comment) */
+"pinOnHome" = "将此列表置于主页";
+
+/* (No Comment) */
+"Pins" = "标记";
+
+/* (No Comment) */
+"Popular Movies" = "热门电影";
+
+/* (No Comment) */
+"Popular Movies by Genre" = "按流派分类的热门电影";
+
+/* (No Comment) */
+"Popular TV Shows by Genre" = "按流派分类的热门电视剧";
+
+/* (No Comment) */
+"Popularity" = "流行";
+
+/* (No Comment) */
+"Prefer Poster in Details Page" = "在详细页中显示海报";
+
+/* (No Comment) */
+"preferredLaunchScreen" = "首选启动屏幕";
+
+/* (No Comment) */
+"Premiere" = "首映";
+
+/* No comment provided by engineer. */
+"Presentation" = "演示";
+
+/* No comment provided by engineer. */
+"Preview" = "预览";
+
+/* (No Comment) */
+"Privacy" = "隐私";
+
+/* (No Comment) */
+"Privacy Policy" = "隐私政策";
+
+/* (No Comment) */
+"Production" = "生产";
+
+/* (No Comment) */
+"Production Companies" = "制片公司";
+
+/* (No Comment) */
+"Production Company" = "制片公司";
+
+/* (No Comment) */
+"publishListToTMDB" = "在 TMDb 上发布列表";
+
+/* (No Comment) */
+"publishOnTMDB" = "在TMDb上发布";
+
+/* (No Comment) */
+"publishPrivate" = "私密";
+
+/* (No Comment) */
+"publishPublic" = "公共";
+
+/* (No Comment) */
+"publishTMDBMessage" = "这将在 TMDb 上创建一个具有相同标题和项目的新列表。\n选择您希望的隐私级别：";
+
+/* (No Comment) */
+"quitWhenClosingApp" = "关闭应用程序时退出";
+
+/* (No Comment) */
+"Rating" = "评分";
+
+/* (No Comment) */
+"ratingAsc" = "评级（升序）";
+
+/* (No Comment) */
+"ratingDesc" = "评分（降序）";
+
+/* (No Comment) */
+"Ratings Score" = "评分";
+
+/* (No Comment) */
+"Reality" = "现实";
+
+/* (No Comment) */
+"Reboot" = "重启";
+
+/* (No Comment) */
+"Recent Notifications" = "最近的通知";
+
+/* (No Comment) */
+"Recently Released" = "最近发布";
+
+/* (No Comment) */
+"Recommendations" = "推荐";
+
+/* (No Comment) */
+"recommendationsSubtitle" = "根据您观看的内容";
+
+/* (No Comment) */
+"recommendationsTitle" = "推荐";
+
+/* (No Comment) */
+"Region of Origin" = "原产地区";
+
+/* (No Comment) */
+"Release Date" = "发布日期";
+
+/* (No Comment) */
+"Release Date (Ascending)" = "发布日期（升序）";
+
+/* (No Comment) */
+"Release Date (Descending)" = "发布日期（降序）";
+
+/* (No Comment) */
+"Released" = "发布";
+
+/* (No Comment) */
+"Released Movies" = "已上映的电影";
+
+/* (No Comment) */
+"Released Shows" = "发布的节目";
+
+/* (No Comment) */
+"releaseDates" = "发布日期";
+
+/* (No Comment) */
+"Releases" = "发布";
+
+/* (No Comment) */
+"Releasing Soon" = "即将发布";
+
+/* No comment provided by engineer. */
+"Reload" = "重新加载";
+
+/* (No Comment) */
+"Remove" = "移除";
+
+/* (No Comment) */
+"Remove from Archive" = "从归档中移除";
+
+/* (No Comment) */
+"Remove from Favorites" = "从收藏夹移除";
+
+/* (No Comment) */
+"Remove from List" = "从列表中移除";
+
+/* (No Comment) */
+"Remove from Watched" = "从观看列表中移除";
+
+/* (No Comment) */
+"Remove from watchlist" = "从关注列表中移除";
+
+/* (No Comment) */
+"Remove Notification" = "移除通知";
+
+/* (No Comment) */
+"Remove Pin" = "删除图钉";
+
+/* (No Comment) */
+"Remove Selected" = "删除所选";
+
+/* (No Comment) */
+"removedArchive" = "已从存档中删除";
+
+/* (No Comment) */
+"removedEpisodeWatched" = "从已观看中删除了剧集";
+
+/* (No Comment) */
+"removedFavorite" = "已从收藏夹中删除";
+
+/* (No Comment) */
+"removedFromArchive" = "从存档中移除";
+
+/* (No Comment) */
+"removedFromFavorites" = "从收藏夹中移除";
+
+/* (No Comment) */
+"removedFromPin" = "从收藏夹中移除";
+
+/* (No Comment) */
+"removedFromWatched" = "从已关注中移除";
+
+/* MARK: WatchlistButtonView */
+"removeDialogTitle" = "你确定吗？";
+
+/* (No Comment) */
+"removedPin" = "取消置顶";
+
+/* (No Comment) */
+"removedWatched" = "已从观看列表中移除";
+
+/* (No Comment) */
+"removedWatchlist" = "已从观看列表中移除";
+
+/* (No Comment) */
+"removeFromPinOnWatchedTitle" = "当项目标记为已观看时，从收藏夹中移除";
+
+/* (No Comment) */
+"removeTMDBAccount" = "解除连接TMDB账户?";
+
+/* (No Comment) */
+"Renewed Series" = "更新系列";
+
+/* No comment provided by engineer. */
+"Reset asked for review" = "重新要求评论";
+
+/* (No Comment) */
+"resetToDefault" = "恢复默认设置";
+
+/* (No Comment) */
+"restorePurchases" = "恢复购买";
+
+/* (No Comment) */
+"Results from TMDb" = "来自TMDb的结果";
+
+/* (No Comment) */
+"Results from Watchlist" = "观察列表的结果";
+
+/* (No Comment) */
+"Retry" = "重试";
+
+/* (No Comment) */
+"Review Cronica" = "复查 Streaming Now";
+
+/* (No Comment) */
+"reviewInTheAppStore" = "应用评论";
+
+/* (No Comment) */
+"reviewOf %@" = "评价: %@";
+
+/* (No Comment) */
+"reviewTitle" = "评论";
+
+/* (No Comment) */
+"Roadmap" = "路线图";
+
+/* (No Comment) */
+"Romance" = "浪漫";
+
+/* (No Comment) */
+"Romantic Comedy" = "浪漫喜剧";
+
+/* MARK: InformationSectionView.swift */
+"Run Time" = "运行时间";
+
+/* (No Comment) */
+"S%d, E%d" = "S%d，E%d";
+
+/* No comment provided by engineer. */
+"S%lld, E%lld" = "S%lld，E%lld";
+
+/* (No Comment) */
+"Save" = "保存";
+
+/* (No Comment) */
+"Sci-Fi & Fantasy" = "科幻与奇幻";
+
+/* (No Comment) */
+"Science Fiction" = "科幻小说";
+
+/* MARK: SearchView.swift */
+"Search" = "搜索";
+
+/* No comment provided by engineer. */
+"Search %@" = "搜索 %@";
+
+/* No comment provided by engineer. */
+"Search failed, try again later." = "搜索失败，请稍后重试。";
+
+/* (No Comment) */
+"Search for upcoming movies and tv shows." = "搜索即将上映的电影和电视节目。";
+
+/* (No Comment) */
+"Search results" = "搜索结果";
+
+/* MARK: watchOS */
+"Search TMDb" = "搜索 TMDb";
+
+/* (No Comment) */
+"Search watchlist" = "搜索监视列表";
+
+/* (No Comment) */
+"Searching" = "搜索中";
+
+/* (No Comment) */
+"Season" = "季节";
+
+/* No comment provided by engineer. */
+"Season (nextSeasonNumber)" = "季节（nextSeasonNumber）";
+
+/* (No Comment) */
+"Season %lld" = "第 %lld 季";
+
+/* (No Comment) */
+"Season Marked as Watched" = "标记为已观看的季节";
+
+/* MARK: SeasonListView.swift */
+"Seasons" = "季节";
+
+/* No comment provided by engineer. */
+"sectionStyleTypePicker" = "sectionStyleTypePicker";
+
+/* No comment provided by engineer. */
+"Select the Media Type" = "选择媒体类型";
+
+/* (No Comment) */
+"selectedWatchProvider" = "流媒体服务";
+
+/* (No Comment) */
+"selectedWatchProviderSubtitle" = "只有在您喜欢的服务提供商中有可用的标题时，才显示“观看提供商”。";
+
+/* (No Comment) */
+"selectedWatchProviderTitle" = "首选流媒体服务";
+
+/* (No Comment) */
+"Send" = "发送";
+
+/* (No Comment) */
+"Send feedback" = "发送反馈";
+
+/* (No Comment) */
+"Send Feedback" = "发送反馈";
+
+/* No comment provided by engineer. */
+"Send Object to Developer" = "发送对象给开发人员";
+
+/* (No Comment) */
+"Send your suggestions to help improve Cronica." = "向我们发送您的建议，帮助改进 Streaming Now。";
+
+/* (No Comment) */
+"sendEmail" = "发送邮件";
+
+/* (No Comment) */
+"sendEmailFooter" = "如果你喜欢的话，你可以发送电子邮件以更快地跟进。";
+
+/* (No Comment) */
+"sendEmailFooterBackup" = "您还可以使用您的电子邮件客户端向contact@streamingnowapp.com发送电子邮件。";
+
+/* (No Comment) */
+"Settings" = "设置";
+
+/* (No Comment) */
+"settingsAcknowledgments" = "致谢";
+
+/* (No Comment) */
+"settingsAcknowledgmentsFooter" = "感谢所有让 Streaming Now 变得可能的人。";
+
+/* (No Comment) */
+"settingsAppearanceTitle" = "外观";
+
+/* MARK: Settings */
+"settingsBehaviorTitle" = "行为";
+
+/* (No Comment) */
+"settingsDeveloperOptions" = "开发者设置";
+
+/* (No Comment) */
+"settingsDisableTelemetrySubtitle" = "Streaming Now收集最少的数据以减少应用程序崩溃，这些数据是匿名的。在隐私政策中查看更多详情。";
+
+/* (No Comment) */
+"settingsDisableTelemetryTitle" = "禁用崩溃报告";
+
+/* (No Comment) */
+"settingsFeedbackTitle" = "发送反馈";
+
+/* (No Comment) */
+"settingsGeneralTitle" = "常规";
+
+/* (No Comment) */
+"settingsNotificationTitle" = "通知";
+
+/* (No Comment) */
+"settingsPrivacyPolicy" = "隐私政策";
+
+/* (No Comment) */
+"settingsPrivacySupportTitle" = "隐私和支持";
+
+/* (No Comment) */
+"settingsRegionContentTitle" = "内容和地区";
+
+/* (No Comment) */
+"settingsReviewCronica" = "在App Store上審閱Streaming Now";
+
+/* (No Comment) */
+"settingsSyncTitle" = "同步";
+
+/* (No Comment) */
+"Share" = "分享";
+
+/* (No Comment) */
+"shareEpisode" = "分享剧集";
+
+/* (No Comment) */
+"shareLinkPreference" = "选择您喜欢的分享链接方式";
+
+/* (No Comment) */
+"shareLinkPreferenceSubtitle" = "您可以选择使用一个Streaming Now链接来共享并打开该应用程序。\n请注意，并非所有内容都可以使用Streaming Now链接共享，如果必要，应用程序将始终使用TMDB链接。";
+
+/* (No Comment) */
+"shareList" = "分享清单";
+
+/* (No Comment) */
+"shareShow" = "分享电视节目";
+
+/* (No Comment) */
+"Show Details" = "显示详情";
+
+/* (No Comment) */
+"Show More" = "显示更多";
+
+/* No comment provided by engineer. */
+"Show Onboarding" = "显示引导";
+
+/* (No Comment) */
+"showConfirmationOnRemovingItem" = "显示删除确认";
+
+/* (No Comment) */
+"showDetails" = "显示详情";
+
+/* (No Comment) */
+"Shows" = "展示";
+
+/* MARK: Widget */
+"Shows movies and TV Shows trending from TMDb." = "显示从TMDb上热门的电影和电视节目。";
+
+/* (No Comment) */
+"showsCustomWatchListFilters" = "电视节目";
+
+/* (No Comment) */
+"Sort" = "排序";
+
+/* No comment provided by engineer. */
+"Sort By" = "排序方式";
+
+/* (No Comment) */
+"Sort List" = "排序列表";
+
+/* (No Comment) */
+"Source Code" = "源代码";
+
+/* (No Comment) */
+"Space" = "太空";
+
+/* (No Comment) */
+"Spanish" = "西班牙语";
+
+/* (No Comment) */
+"Spin off" = "外传";
+
+/* (No Comment) */
+"Status" = "状态";
+
+/* (No Comment) */
+"Superhero" = "超级英雄";
+
+/* (No Comment) */
+"Supernatural Horror" = "超自然恐怖";
+
+/* MARK: SettingsView.swift */
+"Support" = "支持";
+
+/* (No Comment) */
+"Survival" = "生存";
+
+/* (No Comment) */
+"Swipe to Edit your list" = "滑动以编辑您的列表";
+
+/* (No Comment) */
+"swipeGestureArchive" = "存档";
+
+/* (No Comment) */
+"swipeGestureDelete" = "删除";
+
+/* (No Comment) */
+"swipeGestureFavorite" = "收藏";
+
+/* (No Comment) */
+"swipeGesturePin" = "针";
+
+/* (No Comment) */
+"swipeGestureShare" = "分享";
+
+/* (No Comment) */
+"swipeGestureWatch" = "观看";
+
+/* (No Comment) */
+"Sync" = "同步";
+
+/* (No Comment) */
+"syncingWatchlistTMDB" = "正在同步您的关注列表，请稍候。";
+
+/* (No Comment) */
+"syncInProgress" = "同步进行中";
+
+/* (No Comment) */
+"syncNow" = "即刻与TMDB同步";
+
+/* (No Comment) */
+"syncSettingsItemsTitle" = "物品";
+
+/* (No Comment) */
+"syncSettingsTitle" = "同步";
+
+/* (No Comment) */
+"syncSettingsUpdateWatchlistSubtitle" = "如有，则使用 TMDb 上的新信息更新项目。";
+
+/* MARK: SyncSetting */
+"syncSettingsUpdateWatchlistTitle" = "更新项目";
+
+/* (No Comment) */
+"syncSettingsWatchlistTitle" = "观看列表";
+
+/* (No Comment) */
+"syncTMDBList" = "保持此列表同步";
+
+/* (No Comment) */
+"syncWatchlist" = "同步观看清单";
+
+/* (No Comment) */
+"TelemetryDeck" = "遥测甲板";
+
+/* (No Comment) */
+"thankYouTipJarMessage" = "感谢您的购买！您的支持非常感谢。😁";
+
+/* (No Comment) */
+"The API is undergoing maintenance. Try again later." = "API正在进行维护。请稍后重试。";
+
+/* (No Comment) */
+"The Discover will help you find your next favorite title." = "探索功能将帮助您找到下一个喜爱的标题。";
+
+/* (No Comment) */
+"The function is performed when double-tap the cover image." = "当双击封面图像时执行该功能。";
+
+/* (No Comment) */
+"The movie will be released today." = "电影将在今天上映。";
+
+/* MARK: Notification content */
+"The next episode is set to arrive today." = "下一集预计在今天到达。";
+
+/* (No Comment) */
+"Theatrical" = "戏剧的";
+
+/* (No Comment) */
+"Theatrical Limited" = "戏剧限定";
+
+/* No comment provided by engineer. */
+"This content has been removed from TMDB, you can delete it." = "此内容已从TMDB中删除，您可以删除它。";
+
+/* No comment provided by engineer. */
+"This is a preview" = "这是一个预览";
+
+/* No comment provided by engineer. */
+"This list has been deleted." = "该列表已被删除。";
+
+/* (No Comment) */
+"This list is empty." = "此列表为空。";
+
+/* MARK: AttributionView.swift */
+"This product uses the TMDb API but is not endorsed or certified by TMDb." = "本产品使用TMDb API，但未经TMDb认可或认证。";
+
+/* (No Comment) */
+"This week" = "本周";
+
+/* (No Comment) */
+"Thriller" = "惊悚片";
+
+/* (No Comment) */
+"Ticket" = "门票";
+
+/* (No Comment) */
+"tipJar" = "移除广告";
+
+/* (No Comment) */
+"tipJarDescription" = "移除广告，支持Streaming Now。";
+
+/* (No Comment) */
+"tipJarFooter" = "自愿进行一次性购买，即可移除Streaming Now中的广告并支持应用开发。";
+
+/* MARK: TipJarSetting */
+"tipJarTitle" = "移除广告";
+
+/* (No Comment) */
+"Title" = "标题";
+
+/* (No Comment) */
+"titleAsc" = "标题（升序）";
+
+/* (No Comment) */
+"titleDesc" = "标题（降序）";
+
+/* (No Comment) */
+"TMDb" = "TMDb";
+
+/* No comment provided by engineer. */
+"TMDB" = "TMDB";
+
+/* (No Comment) */
+"tmdbLists" = "你的TMDB的列表";
+
+/* (No Comment) */
+"tmdbListSyncConfig" = "配置";
+
+/* (No Comment) */
+"tmdbSyncFeatures" = "您将能够查看您的列表并管理其内容。";
+
+/* (No Comment) */
+"To Watch" = "观看";
+
+/* (No Comment) */
+"Today" = "今天";
+
+/* (No Comment) */
+"Track your episodes" = "跟踪您的剧集";
+
+/* (No Comment) */
+"Trailers" = "预告片";
+
+/* (No Comment) */
+"Translation" = "翻译";
+
+/* MARK: HomeView.swift */
+"Trending" = "热门";
+
+/* (No Comment) */
+"Trending Keywords" = "热门关键词";
+
+/* No comment provided by engineer. */
+"Trending service ins't available right now." = "热门服务暂时不可用。";
+
+/* (No Comment) */
+"TV" = "电视";
+
+/* (No Comment) */
+"TV Show" = "电视节目";
+
+/* (No Comment) */
+"TV Shows" = "电视节目";
+
+/* (No Comment) */
+"tvShowDetails" = "电视节目详情";
+
+/* (No Comment) */
+"Unknown" = "未知";
+
+/* (No Comment) */
+"Unpin Item" = "取消置顶项目";
+
+/* (No Comment) */
+"Untitled List" = "无标题列表";
+
+/* (No Comment) */
+"Unwatched" = "未观看";
+
+/* (No Comment) */
+"Up Coming" = "即将到来";
+
+/* No comment provided by engineer. */
+"Up Next" = "即将播放";
+
+/* (No Comment) */
+"Upcoming" = "即将到来";
+
+/* (No Comment) */
+"Upcoming Episodes" = "即将播出的剧集";
+
+/* (No Comment) */
+"Upcoming Movies" = "即将上映的电影";
+
+/* (No Comment) */
+"Upcoming Notifications" = "即将到来的通知";
+
+/* (No Comment) */
+"Upcoming Seasons" = "即将到来的季节";
+
+/* (No Comment) */
+"Update Items" = "更新项目";
+
+/* (No Comment) */
+"upNext" = "即将播放";
+
+/* (No Comment) */
+"upNextSubtitle" = "您的下一集";
+
+/* No comment provided by engineer. */
+"User Lang: %@" = "用户语言：%@";
+
+/* No comment provided by engineer. */
+"User Region: %@" = "用户区域: %@";
+
+/* (No Comment) */
+"Version %@" = "版本%@";
+
+/* No comment provided by engineer. */
+"Version %@ • %@" = "版本 %@ • %@";
+
+/* (No Comment) */
+"War" = "战争";
+
+/* MARK: DoubleTapGesture */
+"Watched" = "观看了";
+
+/* (No Comment) */
+"Watching" = "观看";
+
+/* (No Comment) */
+"Watchlist" = "观看列表";
+
+/* (No Comment) */
+"watchlistDisplayTypePicker" = "显示样式";
+
+/* (No Comment) */
+"watchlistItemTypeCard" = "卡片";
+
+/* MARK: WatchlistItemType */
+"watchlistItemTypeList" = "列表";
+
+/* (No Comment) */
+"watchlistItemTypePoster" = "海报";
+
+/* No comment provided by engineer. */
+"watchlistSortORder" = "观看清单排序顺序";
+
+/* (No Comment) */
+"watchlistSubtitleRowDate" = "发布日期";
+
+/* (No Comment) */
+"watchlistSubtitleRowGenre" = "流派";
+
+/* MARK: WatchlistSubtitleRow */
+"watchlistSubtitleRowNone" = "默认";
+
+/* (No Comment) */
+"watchProviderAe" = "阿拉伯联合酋长国";
+
+/* (No Comment) */
+"watchProviderAr" = "阿根廷";
+
+/* (No Comment) */
+"watchProviderAt" = "奥地利";
+
+/* (No Comment) */
+"watchProviderAu" = "澳大利亚";
+
+/* (No Comment) */
+"watchProviderBe" = "比利时";
+
+/* (No Comment) */
+"watchProviderBg" = "保加利亚";
+
+/* MARK: WatchProviderOption */
+"watchProviderBr" = "巴西";
+
+/* (No Comment) */
+"watchProviderCa" = "加拿大";
+
+/* (No Comment) */
+"watchProviderCh" = "瑞士";
+
+/* (No Comment) */
+"watchProviderCz" = "捷克共和国";
+
+/* (No Comment) */
+"watchProviderDe" = "德国";
+
+/* (No Comment) */
+"watchProviderDk" = "丹麦";
+
+/* (No Comment) */
+"watchProviderEe" = "爱沙尼亚";
+
+/* (No Comment) */
+"watchProviderEs" = "西班牙";
+
+/* (No Comment) */
+"watchProviderFi" = "芬兰";
+
+/* (No Comment) */
+"watchProviderFr" = "法国";
+
+/* (No Comment) */
+"watchProviderGb" = "英国";
+
+/* (No Comment) */
+"watchProviderHk" = "香港";
+
+/* (No Comment) */
+"watchProviderHr" = "克罗地亚";
+
+/* (No Comment) */
+"watchProviderHu" = "匈牙利";
+
+/* (No Comment) */
+"watchProviderId" = "印度尼西亚";
+
+/* (No Comment) */
+"watchProviderIe" = "爱尔兰";
+
+/* (No Comment) */
+"watchProviderIndia" = "印度";
+
+/* (No Comment) */
+"watchProviderIt" = "意大利";
+
+/* (No Comment) */
+"watchProviderJp" = "日本";
+
+/* (No Comment) */
+"watchProviderKr" = "韩国";
+
+/* (No Comment) */
+"watchProviderLt" = "立陶宛";
+
+/* (No Comment) */
+"watchProviderMx" = "墨西哥";
+
+/* (No Comment) */
+"watchProviderNl" = "荷兰";
+
+/* (No Comment) */
+"watchProviderNo" = "挪威";
+
+/* (No Comment) */
+"watchProviderNz" = "新西兰";
+
+/* (No Comment) */
+"watchProviderPh" = "菲律宾";
+
+/* (No Comment) */
+"watchProviderPl" = "波兰";
+
+/* (No Comment) */
+"watchProviderPt" = "葡萄牙";
+
+/* (No Comment) */
+"watchProviderRs" = "塞尔维亚";
+
+/* (No Comment) */
+"watchProviderSe" = "瑞典";
+
+/* (No Comment) */
+"watchProviderSk" = "斯洛伐克";
+
+/* (No Comment) */
+"watchProviderTitleList" = "如何观看";
+
+/* (No Comment) */
+"watchProviderToggleDiscover" = "仅显示来自观看提供商";
+
+/* (No Comment) */
+"watchProviderTr" = "土耳其";
+
+/* (No Comment) */
+"watchProviderUs" = "美利坚合众国";
+
+/* (No Comment) */
+"watchProviderZa" = "南非";
+
+/* (No Comment) */
+"watchRegionSubtitle" = "观看提供者将根据所选地区进行适应。";
+
+/* (No Comment) */
+"watchRegionTitle" = "观看提供商地区";
+
+/* MARK: WelcomeView.swift */
+"Welcome to" = "欢迎来到";
+
+/* (No Comment) */
+"What's New" = "有什么新内容";
+
+/* (No Comment) */
+"whereToWatchDiscoverFilter" = "在哪里观看";
+
+/* (No Comment) */
+"You may like" = "你可能喜欢";
+
+/* MARK: WatchlistView.swift */
+"Your list is empty." = "您的列表为空。";
+
+/* (No Comment) */
+"Your pinned items" = "您的固定项目";
+
+/* (No Comment) */
+"Your smart Watchlist" = "您的智能观察清单";
+
+/* (No Comment) */
+"Your upcoming items will appear here." = "您即将到来的物品将会显示在这里。";
+
+/* (No Comment) */
+"Your Watchlist" = "您的关注列表";
+
+/* (No Comment) */
+"Your Watchlist is always in sync with your Apple Watch, iPad, Mac, and Apple TV." = "您的观看列表始终与您的Apple Watch、iPad、Mac和Apple TV同步。";
+
+/* (No Comment) */
+"yourLists" = "您的清单";
+
+"Prefer Series Cover instead of Episode Thumbnail on Up Next" = "Prefer Cover on Up Next";
+"Hide Titles from Unwatched Episodes" = "Hide Titles from Unwatched Episodes";
+"To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes." = "To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes.";
+"Hide Thumbnails from Unwatched Episodes" = "Hide Thumbnails from Unwatched Episodes";
+"To avoid potential spoilers, you can hide thumbnails from unwatched episodes." = "To avoid potential spoilers, you can hide thumbnails from unwatched episodes.";
+"Add" = "Add";
+"upNextSkipThisEpisode" = "Skip this episode";
+
+"MARK_EPISODE_WATCHED" = "标记%3$@第%2$d季第%1$d集的剧集为已观看?";
+"Confirm Watched Episode" = "确认已观看的剧集";
+
+// MARK: Screenshot Section Headers
+"Now Playing" = "正在上映";
+"Top Rated" = "最高评分";
+"Popular" = "热门";
+"Similar" = "类似";
+
+//MARK: Puzzle Archive
+"puzzleArchiveTitle" = "谜题档案";
+"puzzleArchiveSubtitle" = "随时可玩的经典电影谜题。没有连续记录压力！";
+"puzzleArchiveSolvedLabel" = "已解决";
+"puzzleArchiveStarsLabel" = "星星";
+"puzzleArchiveViewArchive" = "谜题档案";
+"puzzleArchiveUnsolved" = "未解决";

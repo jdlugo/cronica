@@ -1,10 +1,3 @@
-//
-//  ItemContentSearchRowView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 11/08/23.
-//
-
 import SwiftUI
 
 struct ItemContentSearchRowView: View {
@@ -40,13 +33,34 @@ struct ItemContentSearchRowView: View {
 						}
 					}
 					.sheet(isPresented: $showNote) {
-                        ReviewView(id: item.itemContentID, showView: $showNote)
+#if os(iOS) || os(macOS)
+						NavigationStack {
+							ReviewView(id: item.itemContentID, showView: $showNote)
+						}
+						.presentationDetents([.large])
+#if os(macOS)
+						.frame(width: 400, height: 400, alignment: .center)
+#elseif os(iOS)
+						.appTheme()
+						.appTint()
+#endif
+#endif
 					}
 					.sheet(isPresented: $showCustomListView) {
-                        ItemContentCustomListSelector(contentID: item.itemContentID,
-                                                      showView: $showCustomListView,
-                                                      title: item.itemTitle,
-                                                      image: item.posterImageMedium)
+						NavigationStack {
+							ItemContentCustomListSelector(contentID: item.itemContentID,
+														  showView: $showCustomListView,
+														  title: item.itemTitle,
+														  image: item.cardImageSmall)
+						}
+						.presentationDetents([.large])
+						.presentationDragIndicator(.visible)
+#if os(macOS)
+						.frame(width: 500, height: 600, alignment: .center)
+#elseif !os(watchOS)
+						.appTheme()
+						.appTint()
+#endif
 					}
 			} else {
 				NavigationLink(value: item) {
@@ -59,13 +73,34 @@ struct ItemContentSearchRowView: View {
 							}
 						}
 						.sheet(isPresented: $showNote) {
-                            ReviewView(id: item.itemContentID, showView: $showNote)
+#if os(iOS) || os(macOS)
+							NavigationStack {
+								ReviewView(id: item.itemContentID, showView: $showNote)
+							}
+							.presentationDetents([.large])
+#if os(macOS)
+							.frame(width: 400, height: 400, alignment: .center)
+#elseif os(iOS)
+							.appTheme()
+							.appTint()
+#endif
+#endif
 						}
 						.sheet(isPresented: $showCustomListView) {
-                            ItemContentCustomListSelector(contentID: item.itemContentID,
-                                                          showView: $showCustomListView,
-                                                          title: item.itemTitle,
-                                                          image: item.posterImageMedium)
+							NavigationStack {
+								ItemContentCustomListSelector(contentID: item.itemContentID,
+															  showView: $showCustomListView,
+															  title: item.itemTitle,
+															  image: item.cardImageSmall)
+							}
+							.presentationDetents([.large])
+							.presentationDragIndicator(.visible)
+#if os(macOS)
+							.frame(width: 500, height: 600, alignment: .center)
+#else
+							.appTheme()
+							.appTint()
+#endif
 						}
 				}
 			}

@@ -1,0 +1,30 @@
+{
+  "name": "Streaming Now Daily Reel",
+  "short_name": "Daily Reel",
+  "description": "Decode, connect, and arrange today's movie in three quick acts.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#060607",
+  "theme_color": "#170509",
+  "lang": "en",
+  "categories": ["games", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "Play today's Daily Reel",
+      "short_name": "Play today",
+      "url": "/"
+    }
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/public/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

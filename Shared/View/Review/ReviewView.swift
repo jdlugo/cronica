@@ -1,12 +1,4 @@
-//
-//  WatchlistItemNoteView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 25/04/23.
-//
-
 import SwiftUI
-import NukeUI
 
 struct ReviewView: View {
     let id: String
@@ -18,122 +10,58 @@ struct ReviewView: View {
     @State private var canSave = false
     @State private var showReviewImageSheet = false
     let persistence = PersistenceController.shared
-    @StateObject private var settings: SettingsStore = .shared
     var body: some View {
-        NavigationStack {
-            Form {
-                if isLoading {
-                    Section {
-                        CenterHorizontalView { ProgressView().padding() }
-                    }
-                } else {
-                    if let item {
-                        Section {
-                            VStack {
-                                HStack(alignment: .center) {
-                                    LazyImage(url: item.itemPosterImageMedium) { state in
-                                        if let image = state.image {
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                        } else {
-                                            ZStack {
-                                                Rectangle().fill(.gray.gradient)
-                                                Image(systemName: "popcorn.fill")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .frame(width: 50, height: 50, alignment: .center)
-                                                    .foregroundColor(.white)
-                                            }
-                                        }
-                                    }
-                                    .frame(width: 150, height: 220)
-                                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                    .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
-                                }
-                                .frame(maxWidth: .infinity)
-                                Text(item.itemTitle)
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.center)
-                                    .font(.title3)
-                                
-                                Text(item.itemMedia.title)
-                                    .fontWeight(.medium)
-                                    .multilineTextAlignment(.center)
-                                    .font(.caption)
-                            }
-                        }
-                        .listRowInsets(EdgeInsets())
-                        .listRowBackground(Color.clear)
-                        
-                        Section("Rating") {
-                            CenterHorizontalView {
-                                RatingView(rating: $rating)
-                            }
-                        }
-#if os(iOS) || os(macOS)
-                        Section("Notes") {
-                            TextEditor(text: $note)
-                                .frame(minHeight: 150, maxHeight: 800)
-                            
-                        }
-#endif
-                    } else {
-                        ProgressView()
-                    }
+        Form {
+            if isLoading {
+                Section {
+                    CenterHorizontalView { ProgressView().padding() }
                 }
-            }
-#if !os(tvOS) && !os(visionOS)
-            .scrollContentBackground(settings.disableTranslucent ? .visible : .hidden)
-            .background {
+            } else {
                 if let item {
-                    TranslucentBackground(image: item.itemPosterImageMedium, useLighterMaterial: true)
+                    Section("About") { Text("reviewOf \(item.itemTitle)") }
+                    Section("Rating") {
+                        CenterHorizontalView {
+                            RatingView(rating: $rating)
+                        }
+                    }
+#if os(iOS) || os(macOS)
+                    Section("Notes") {
+                        TextEditor(text: $note)
+                            .frame(minHeight: 150)
+                    }
+#endif
+                } else {
+                    ProgressView()
                 }
             }
-            .scrollContentBackground(settings.disableTranslucent ? .visible : .hidden)
-#elseif !os(tvOS) && !os(macOS)
-            .navigationBarTitleDisplayMode(.inline)
-#endif
-            .navigationTitle("Review")
-            .onAppear(perform: load)
-            .onChange(of: rating) { _, newValue in
-                guard let item else { return }
-                if newValue != Int(item.userRating) {
-                    if !canSave { canSave = true }
-                    save(dismiss: false)
-                }
-            }
-            .onChange(of: note) { _, newValue in
-                guard let item else { return }
-                if newValue != item.userNotes {
-                    if !canSave { canSave = true }
-                }
-            }
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .topBarLeading) { doneButton }
-                ToolbarItem(placement: .topBarTrailing) { saveButton }
-#else
-                ToolbarItem(placement: .confirmationAction) { saveButton }
-                ToolbarItem(placement: .cancellationAction) { doneButton }
-#endif
-            }
-#if os(macOS)
-            .formStyle(.grouped)
-#endif
-#if !os(tvOS)
-            .scrollContentBackground(.hidden)
-#endif
-            .scrollBounceBehavior(.basedOnSize)
         }
-        .presentationDetents([.large])
-        .presentationDragIndicator(.visible)
-        .presentationCornerRadius(12)
+        .navigationTitle("reviewTitle")
+        .onAppear { load() }
+        .onChange(of: rating) {
+            guard let item else { return }
+            if rating != Int(item.userRating) {
+                if !canSave { canSave = true }
+            }
+        }
+        .onChange(of: note) {
+            guard let item else { return }
+            if note != item.userNotes {
+                if !canSave { canSave = true }
+            }
+        }
+        .toolbar {
+#if os(iOS)
+            ToolbarItem(placement: .navigationBarLeading) { doneButton }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                saveButton
+            }
+#elseif os(macOS)
+            ToolbarItem(placement: .confirmationAction) { saveButton }
+            ToolbarItem(placement: .cancellationAction) { doneButton }
+#endif
+        }
 #if os(macOS)
-        .frame(width: 400, height: 400, alignment: .center)
-#elseif os(iOS)
-        .appTheme()
-        .appTint()
+        .formStyle(.grouped)
 #endif
     }
     
@@ -147,31 +75,19 @@ struct ReviewView: View {
         self.item = item
         isLoading = false
     }
-    
-    @ViewBuilder
+     
     private var doneButton: some View {
-#if os(macOS)
-        Button("Done", action: dismiss)
-#else
-        RoundedCloseButton(action: dismiss)
-#endif
+        Button("Cancel", action: dismiss)
     }
     
     private var saveButton: some View {
-        Button("Save") { save() }
-            .disabled(!canSave)
-        #if !os(macOS)
-            .buttonBorderShape(.capsule)
-            .buttonStyle(.borderedProminent)
-        #endif
+        Button("Save", action: save).disabled(!canSave)
     }
     
-    private func save(dismiss: Bool = true) {
+    private func save() {
         guard let item else { return }
         persistence.updateReview(for: item, rating: rating, notes: note)
-        if dismiss {
-            self.dismiss()
-        }
+        dismiss()
     }
     
     private func dismiss() { showView.toggle() }

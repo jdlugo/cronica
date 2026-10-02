@@ -1,0 +1,3511 @@
+Project: streaming-now (id=560852)
+
+== Health Checks ==
+GET /api/projects/@current/
+{
+  "id": 560852,
+  "name": "streaming-now",
+  "uuid": "01a00af8-a811-0000-0fb5-482809c08b5c",
+  "timezone": "UTC"
+}
+
+== Totals ==
+All events in last 14 days: 20867
+
+== Top Events ==
+{
+  "cache_key": "cache_560852_f6cc65545f1d09f143b0da843e48d56f7ac068617179cf9e24e5a7938eddafff",
+  "cache_target_age": "2026-09-18T20:21:53.363174Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    events.event AS event,\n    count() AS total\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_0)s), toIntervalDay(14))))\nGROUP BY\n    events.event\nORDER BY\n    total DESC\nLIMIT 25 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "event",
+    "total"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": null,
+  "hogql": "SELECT\n    event,\n    count() AS total\nFROM\n    events\nWHERE\n    greaterOrEquals(timestamp, minus(now(), toIntervalDay(14)))\nGROUP BY\n    event\nORDER BY\n    total DESC\nLIMIT 25",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:21:53.363174Z",
+  "limit": null,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:22:53.363174Z",
+  "offset": null,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:21:53.619594Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "$screen",
+      5074
+    ],
+    [
+      "ad_app_open_load",
+      2866
+    ],
+    [
+      "ad_app_open_present",
+      2089
+    ],
+    [
+      "Application Opened",
+      1492
+    ],
+    [
+      "app_launched",
+      1162
+    ],
+    [
+      "watch_region_resolved",
+      1139
+    ],
+    [
+      "ad_startup_eligibility_evaluated",
+      980
+    ],
+    [
+      "DailyPuzzlePushTopicManager",
+      941
+    ],
+    [
+      "DailyPuzzleService",
+      876
+    ],
+    [
+      "Application Installed",
+      768
+    ],
+    [
+      "review_prompt_eligibility_evaluated",
+      625
+    ],
+    [
+      "Application Backgrounded",
+      599
+    ],
+    [
+      "ad_app_open_impression",
+      409
+    ],
+    [
+      "ad_app_open_dismiss",
+      279
+    ],
+    [
+      "ad_interstitial_load",
+      241
+    ],
+    [
+      "SearchView.load()",
+      204
+    ],
+    [
+      "ad_interstitial_present",
+      110
+    ],
+    [
+      "daily_puzzle_opened",
+      109
+    ],
+    [
+      "daily_puzzle_session_started",
+      109
+    ],
+    [
+      "$rageclick",
+      103
+    ],
+    [
+      "HomeViewModel.load()",
+      83
+    ],
+    [
+      "daily_puzzle_guess_submitted",
+      59
+    ],
+    [
+      "daily_puzzle_run_started",
+      57
+    ],
+    [
+      "Application Updated",
+      55
+    ],
+    [
+      "ad_rewarded_load",
+      54
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "event",
+      "String"
+    ],
+    [
+      "total",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Guessing/Ads related ==
+{
+  "cache_key": "cache_560852_afba5c70e79ac455736fd23174401310c98b8113eb7d11831b2a94430b46a7d3",
+  "cache_target_age": "2026-09-18T20:21:53.748900Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    events.event AS event,\n    count() AS total\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), or(ilike(events.event, %(hogql_val_0)s), ilike(events.event, %(hogql_val_1)s), ilike(events.event, %(hogql_val_2)s)), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_3)s), toIntervalDay(14))))\nGROUP BY\n    events.event\nORDER BY\n    total DESC\nLIMIT 25 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "event",
+    "total"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": null,
+  "hogql": "SELECT\n    event,\n    count() AS total\nFROM\n    events\nWHERE\n    and(or(ilike(event, '%guess%'), ilike(event, '%puzzle%'), ilike(event, '%ad%')), greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))))\nGROUP BY\n    event\nORDER BY\n    total DESC\nLIMIT 25",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:21:53.748900Z",
+  "limit": null,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:22:53.748900Z",
+  "offset": null,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:21:54.174669Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "ad_app_open_load",
+      2866
+    ],
+    [
+      "ad_app_open_present",
+      2089
+    ],
+    [
+      "ad_startup_eligibility_evaluated",
+      980
+    ],
+    [
+      "DailyPuzzlePushTopicManager",
+      941
+    ],
+    [
+      "DailyPuzzleService",
+      876
+    ],
+    [
+      "ad_app_open_impression",
+      409
+    ],
+    [
+      "ad_app_open_dismiss",
+      279
+    ],
+    [
+      "ad_interstitial_load",
+      241
+    ],
+    [
+      "SearchView.load()",
+      204
+    ],
+    [
+      "ad_interstitial_present",
+      110
+    ],
+    [
+      "daily_puzzle_session_started",
+      109
+    ],
+    [
+      "daily_puzzle_opened",
+      109
+    ],
+    [
+      "HomeViewModel.load()",
+      83
+    ],
+    [
+      "daily_puzzle_guess_submitted",
+      59
+    ],
+    [
+      "daily_puzzle_run_started",
+      57
+    ],
+    [
+      "ad_rewarded_load",
+      54
+    ],
+    [
+      "ad_app_open_click",
+      52
+    ],
+    [
+      "daily_puzzle_open_requested",
+      38
+    ],
+    [
+      "ad_hint_present",
+      30
+    ],
+    [
+      "ItemContentViewModel.load()",
+      29
+    ],
+    [
+      "daily_puzzle_session_ended",
+      23
+    ],
+    [
+      "ad_rewarded_present",
+      22
+    ],
+    [
+      "daily_puzzle_solved",
+      22
+    ],
+    [
+      "daily_puzzle_hint_unlocked",
+      19
+    ],
+    [
+      "ad_rewarded_impression",
+      11
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "event",
+      "String"
+    ],
+    [
+      "total",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Daily puzzle + ad event primitive counts ==
+daily_puzzle_guess_submitted:       59
+daily_puzzle_hint_unlocked:         19
+daily_puzzle_solved:                22
+daily_puzzle_failed:                1
+daily_puzzle_ad_opportunity:        0
+daily_puzzle_prompt_shown:          0
+daily_puzzle_prompt_response:       0
+daily_puzzle_opened:                109
+daily_puzzle_share_tapped:          0
+daily_puzzle_next_tapped:           0
+daily_puzzle_next_loaded:           0
+daily_puzzle_reminders_toggle_changed: 0
+daily_puzzle_open_requested:        38
+daily_puzzle_session_started:       109
+daily_puzzle_session_ended:         23
+daily_puzzle_run_started:           57
+daily_puzzle_run_completed:         0
+daily_puzzle_run_shared:            0
+daily_puzzle_run_continue_tapped:   0
+daily_puzzle_weekly_goal_updated:   0
+daily_puzzle_hint_offer_shown:      10
+daily_puzzle_hint_offer_tapped:     7
+daily_puzzle_hint_reward_granted:   4
+ad_interstitial_load:               241
+ad_interstitial_engagement:         3
+ad_interstitial_present:            110
+ad_interstitial_dismiss:            9
+ad_interstitial_impression:         9
+ad_interstitial_click:              0
+ad_rewarded_load:                   54
+ad_rewarded_present:                22
+ad_rewarded_dismiss:                9
+ad_rewarded_impression:             11
+ad_rewarded_click:                  1
+ad_hint_present:                    30
+ad_hint_dismiss:                    0
+ad_hint_waiting_for_inventory:      0
+ad_hint_interstitial_presented:     0
+ad_hint_rewarded_presented:         0
+ad_app_open_load:                   2866
+ad_app_open_present:                2089
+ad_app_open_dismiss:                279
+ad_app_open_impression:             409
+ad_app_open_click:                  52
+
+== Daily puzzle entry volume by source and build (last 14 days) ==
+{
+  "cache_key": "cache_560852_e3f6a0901140e75f74e0cfed0b6e414faf3f8456921520bfebe480402a95ff2e",
+  "cache_target_age": "2026-09-18T20:22:46.744007Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n    events.event AS event,\n    nullIf(nullIf(events.mat_source, ''), 'null') AS source,\n    count() AS total_events,\n    uniq(events.distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_2)s), toIntervalDay(14))), in(events.event, tuple(%(hogql_val_3)s, %(hogql_val_4)s)))\nGROUP BY\n    app_version,\n    build_number,\n    events.event,\n    source\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total_events DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "event",
+    "source",
+    "total_events",
+    "unique_users"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.app_version AS app_version,\n    properties.build_number AS build_number,\n    event,\n    properties.source AS source,\n    count() AS total_events,\n    uniq(distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), in(event, tuple('daily_puzzle_open_requested', 'daily_puzzle_opened')))\nGROUP BY\n    app_version,\n    build_number,\n    event,\n    source\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total_events DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:22:46.744007Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:23:46.744007Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:22:47.089125Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      "daily_puzzle_opened",
+      "archive_list",
+      46,
+      4
+    ],
+    [
+      "4.25.40",
+      "11",
+      "daily_puzzle_opened",
+      "push_notification",
+      38,
+      30
+    ],
+    [
+      "4.25.40",
+      "11",
+      "daily_puzzle_open_requested",
+      "push_notification",
+      37,
+      29
+    ],
+    [
+      "4.25.40",
+      "11",
+      "daily_puzzle_opened",
+      "home_card",
+      22,
+      11
+    ],
+    [
+      "4.25.39",
+      "9",
+      "daily_puzzle_opened",
+      "push_notification",
+      1,
+      1
+    ],
+    [
+      "4.25.39",
+      "9",
+      "daily_puzzle_open_requested",
+      "push_notification",
+      1,
+      1
+    ],
+    [
+      "4.25.39",
+      "8",
+      "daily_puzzle_opened",
+      "home_card",
+      2,
+      1
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "event",
+      "String"
+    ],
+    [
+      "source",
+      "Nullable(String)"
+    ],
+    [
+      "total_events",
+      "UInt64"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Daily puzzle strict session funnel by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_a8b46e8cfcb8e1a8e15dcc1ff7e39ac2e0b868bd755f0c1b7bbb2274e97b7e8d",
+  "cache_target_age": "2026-09-18T20:22:47.275057Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    app_version AS app_version,\n    build_number AS build_number,\n    countIf(has_opened) AS opened_sessions,\n    countIf(and(has_opened, has_started)) AS started_sessions,\n    countIf(and(has_opened, has_started, has_guess)) AS guessing_sessions,\n    countIf(and(has_opened, has_started, has_guess, has_terminal)) AS terminal_sessions,\n    if(equals(opened_sessions, 0), 0.0, multiply(divide(started_sessions, opened_sessions), 100)) AS open_to_start_pct,\n    if(equals(started_sessions, 0), 0.0, multiply(divide(guessing_sessions, started_sessions), 100)) AS start_to_guess_pct,\n    if(equals(guessing_sessions, 0), 0.0, multiply(divide(terminal_sessions, guessing_sessions), 100)) AS guess_to_terminal_pct\nFROM\n    (SELECT\n        nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n        if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n        toString(if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL)) AS runtime_session_id,\n        greater(countIf(equals(events.event, %(hogql_val_4)s)), 0) AS has_opened,\n        greater(countIf(equals(events.event, %(hogql_val_5)s)), 0) AS has_started,\n        greater(countIf(equals(events.event, %(hogql_val_6)s)), 0) AS has_guess,\n        greater(countIf(in(events.event, tuple(%(hogql_val_7)s, %(hogql_val_8)s))), 0) AS has_terminal\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_9)s), toIntervalDay(14))), has(events.properties_group_custom, %(hogql_val_10)s), ifNull(notEquals(toString(if(has(events.properties_group_custom, %(hogql_val_11)s), events.properties_group_custom[%(hogql_val_12)s], NULL)), %(hogql_val_13)s), 1))\n    GROUP BY\n        app_version,\n        build_number,\n        runtime_session_id)\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "opened_sessions",
+    "started_sessions",
+    "guessing_sessions",
+    "terminal_sessions",
+    "open_to_start_pct",
+    "start_to_guess_pct",
+    "guess_to_terminal_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    app_version,\n    build_number,\n    countIf(has_opened) AS opened_sessions,\n    countIf(and(has_opened, has_started)) AS started_sessions,\n    countIf(and(has_opened, has_started, has_guess)) AS guessing_sessions,\n    countIf(and(has_opened, has_started, has_guess, has_terminal)) AS terminal_sessions,\n    if(equals(opened_sessions, 0), 0.0, multiply(divide(started_sessions, opened_sessions), 100)) AS open_to_start_pct,\n    if(equals(started_sessions, 0), 0.0, multiply(divide(guessing_sessions, started_sessions), 100)) AS start_to_guess_pct,\n    if(equals(guessing_sessions, 0), 0.0, multiply(divide(terminal_sessions, guessing_sessions), 100)) AS guess_to_terminal_pct\nFROM\n    (SELECT\n        properties.app_version AS app_version,\n        properties.build_number AS build_number,\n        toString(properties.runtime_session_id) AS runtime_session_id,\n        greater(countIf(equals(event, 'daily_puzzle_opened')), 0) AS has_opened,\n        greater(countIf(equals(event, 'daily_puzzle_session_started')), 0) AS has_started,\n        greater(countIf(equals(event, 'daily_puzzle_guess_submitted')), 0) AS has_guess,\n        greater(countIf(in(event, tuple('daily_puzzle_solved', 'daily_puzzle_failed'))), 0) AS has_terminal\n    FROM\n        events\n    WHERE\n        and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), notEquals(properties.runtime_session_id, NULL), notEquals(toString(properties.runtime_session_id), ''))\n    GROUP BY\n        app_version,\n        build_number,\n        runtime_session_id)\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:22:47.275057Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:23:47.275057Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:22:47.738100Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      50,
+      50,
+      8,
+      3,
+      100.0,
+      16.0,
+      37.5
+    ],
+    [
+      "4.25.39",
+      "9",
+      1,
+      1,
+      1,
+      0,
+      100.0,
+      100.0,
+      0.0
+    ],
+    [
+      "4.25.39",
+      "8",
+      1,
+      1,
+      0,
+      0,
+      100.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "opened_sessions",
+      "UInt64"
+    ],
+    [
+      "started_sessions",
+      "UInt64"
+    ],
+    [
+      "guessing_sessions",
+      "UInt64"
+    ],
+    [
+      "terminal_sessions",
+      "UInt64"
+    ],
+    [
+      "open_to_start_pct",
+      "Float64"
+    ],
+    [
+      "start_to_guess_pct",
+      "Float64"
+    ],
+    [
+      "guess_to_terminal_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Three-round Daily Run funnel by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_504146165a89d715a617b828122b6059cfe5f79594f7004d617b5f5f894dfcbf",
+  "cache_target_age": "2026-09-18T20:22:47.871428Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    app_version AS app_version,\n    build_number AS build_number,\n    countIf(has_started) AS runs_started,\n    countIf(and(has_started, has_completed)) AS runs_completed,\n    countIf(and(has_started, has_completed, has_shared)) AS completed_runs_shared,\n    countIf(and(has_started, has_completed, has_continued)) AS completed_runs_continued,\n    if(equals(runs_started, 0), 0.0, multiply(divide(runs_completed, runs_started), 100)) AS run_completion_pct,\n    if(equals(runs_completed, 0), 0.0, multiply(divide(completed_runs_shared, runs_completed), 100)) AS run_share_pct,\n    if(equals(runs_completed, 0), 0.0, multiply(divide(completed_runs_continued, runs_completed), 100)) AS run_continue_pct\nFROM\n    (SELECT\n        nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n        if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n        events.distinct_id AS distinct_id,\n        toString(if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL)) AS run_sequence,\n        greater(countIf(equals(events.event, %(hogql_val_4)s)), 0) AS has_started,\n        greater(countIf(equals(events.event, %(hogql_val_5)s)), 0) AS has_completed,\n        greater(countIf(equals(events.event, %(hogql_val_6)s)), 0) AS has_shared,\n        greater(countIf(equals(events.event, %(hogql_val_7)s)), 0) AS has_continued\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_8)s), toIntervalDay(14))), in(events.event, tuple(%(hogql_val_9)s, %(hogql_val_10)s, %(hogql_val_11)s, %(hogql_val_12)s)), has(events.properties_group_custom, %(hogql_val_13)s))\n    GROUP BY\n        app_version,\n        build_number,\n        events.distinct_id,\n        run_sequence)\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "runs_started",
+    "runs_completed",
+    "completed_runs_shared",
+    "completed_runs_continued",
+    "run_completion_pct",
+    "run_share_pct",
+    "run_continue_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    app_version,\n    build_number,\n    countIf(has_started) AS runs_started,\n    countIf(and(has_started, has_completed)) AS runs_completed,\n    countIf(and(has_started, has_completed, has_shared)) AS completed_runs_shared,\n    countIf(and(has_started, has_completed, has_continued)) AS completed_runs_continued,\n    if(equals(runs_started, 0), 0.0, multiply(divide(runs_completed, runs_started), 100)) AS run_completion_pct,\n    if(equals(runs_completed, 0), 0.0, multiply(divide(completed_runs_shared, runs_completed), 100)) AS run_share_pct,\n    if(equals(runs_completed, 0), 0.0, multiply(divide(completed_runs_continued, runs_completed), 100)) AS run_continue_pct\nFROM\n    (SELECT\n        properties.app_version AS app_version,\n        properties.build_number AS build_number,\n        distinct_id,\n        toString(properties.run_sequence) AS run_sequence,\n        greater(countIf(equals(event, 'daily_puzzle_run_started')), 0) AS has_started,\n        greater(countIf(equals(event, 'daily_puzzle_run_completed')), 0) AS has_completed,\n        greater(countIf(equals(event, 'daily_puzzle_run_shared')), 0) AS has_shared,\n        greater(countIf(equals(event, 'daily_puzzle_run_continue_tapped')), 0) AS has_continued\n    FROM\n        events\n    WHERE\n        and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), in(event, tuple('daily_puzzle_run_started', 'daily_puzzle_run_completed', 'daily_puzzle_run_shared', 'daily_puzzle_run_continue_tapped')), notEquals(properties.run_sequence, NULL))\n    GROUP BY\n        app_version,\n        build_number,\n        distinct_id,\n        run_sequence)\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:22:47.871428Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:23:47.871428Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:22:48.280997Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      37,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "runs_started",
+      "UInt64"
+    ],
+    [
+      "runs_completed",
+      "UInt64"
+    ],
+    [
+      "completed_runs_shared",
+      "UInt64"
+    ],
+    [
+      "completed_runs_continued",
+      "UInt64"
+    ],
+    [
+      "run_completion_pct",
+      "Float64"
+    ],
+    [
+      "run_share_pct",
+      "Float64"
+    ],
+    [
+      "run_continue_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Weekly Movie Goal outcomes by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_2a7b7c0948de82a9f5b674bdfed8ef9371974ae357ea68b2b353ae638c93f910",
+  "cache_target_age": "2026-09-18T20:24:40.227779Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n    if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL) AS outcome,\n    count() AS updates,\n    uniq(events.distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_4)s), toIntervalDay(14))), equals(events.event, %(hogql_val_5)s))\nGROUP BY\n    app_version,\n    build_number,\n    outcome\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    updates DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "outcome",
+    "updates",
+    "unique_users"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.app_version AS app_version,\n    properties.build_number AS build_number,\n    properties.outcome AS outcome,\n    count() AS updates,\n    uniq(distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), equals(event, 'daily_puzzle_weekly_goal_updated'))\nGROUP BY\n    app_version,\n    build_number,\n    outcome\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    updates DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:40.227779Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:40.227779Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:40.582612Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "outcome",
+      "Nullable(String)"
+    ],
+    [
+      "updates",
+      "UInt64"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Contextual rewarded-hint funnel by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_d03826f12174cd19919f4eb5c86eaa7e1f56ac011d31ca5d59e00f862e5a221b",
+  "cache_target_age": "2026-09-18T20:24:40.795531Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    app_version AS app_version,\n    build_number AS build_number,\n    countIf(has_offer) AS offered_puzzles,\n    countIf(and(has_offer, has_tap)) AS tapped_puzzles,\n    countIf(and(has_offer, has_tap, has_reward)) AS rewarded_puzzles,\n    countIf(and(has_offer, has_tap, has_reward, has_solve)) AS rewarded_solved_puzzles,\n    if(equals(offered_puzzles, 0), 0.0, multiply(divide(tapped_puzzles, offered_puzzles), 100)) AS offer_tap_pct,\n    if(equals(tapped_puzzles, 0), 0.0, multiply(divide(rewarded_puzzles, tapped_puzzles), 100)) AS reward_delivery_pct,\n    if(equals(rewarded_puzzles, 0), 0.0, multiply(divide(rewarded_solved_puzzles, rewarded_puzzles), 100)) AS reward_assisted_solve_pct\nFROM\n    (SELECT\n        nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n        if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n        events.distinct_id AS distinct_id,\n        toString(if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL)) AS puzzle_id,\n        greater(countIf(equals(events.event, %(hogql_val_4)s)), 0) AS has_offer,\n        greater(countIf(equals(events.event, %(hogql_val_5)s)), 0) AS has_tap,\n        greater(countIf(equals(events.event, %(hogql_val_6)s)), 0) AS has_reward,\n        greater(countIf(equals(events.event, %(hogql_val_7)s)), 0) AS has_solve\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_8)s), toIntervalDay(14))), in(events.event, tuple(%(hogql_val_9)s, %(hogql_val_10)s, %(hogql_val_11)s, %(hogql_val_12)s)), has(events.properties_group_custom, %(hogql_val_13)s))\n    GROUP BY\n        app_version,\n        build_number,\n        events.distinct_id,\n        puzzle_id)\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "offered_puzzles",
+    "tapped_puzzles",
+    "rewarded_puzzles",
+    "rewarded_solved_puzzles",
+    "offer_tap_pct",
+    "reward_delivery_pct",
+    "reward_assisted_solve_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    app_version,\n    build_number,\n    countIf(has_offer) AS offered_puzzles,\n    countIf(and(has_offer, has_tap)) AS tapped_puzzles,\n    countIf(and(has_offer, has_tap, has_reward)) AS rewarded_puzzles,\n    countIf(and(has_offer, has_tap, has_reward, has_solve)) AS rewarded_solved_puzzles,\n    if(equals(offered_puzzles, 0), 0.0, multiply(divide(tapped_puzzles, offered_puzzles), 100)) AS offer_tap_pct,\n    if(equals(tapped_puzzles, 0), 0.0, multiply(divide(rewarded_puzzles, tapped_puzzles), 100)) AS reward_delivery_pct,\n    if(equals(rewarded_puzzles, 0), 0.0, multiply(divide(rewarded_solved_puzzles, rewarded_puzzles), 100)) AS reward_assisted_solve_pct\nFROM\n    (SELECT\n        properties.app_version AS app_version,\n        properties.build_number AS build_number,\n        distinct_id,\n        toString(properties.puzzle_id) AS puzzle_id,\n        greater(countIf(equals(event, 'daily_puzzle_hint_offer_shown')), 0) AS has_offer,\n        greater(countIf(equals(event, 'daily_puzzle_hint_offer_tapped')), 0) AS has_tap,\n        greater(countIf(equals(event, 'daily_puzzle_hint_reward_granted')), 0) AS has_reward,\n        greater(countIf(equals(event, 'daily_puzzle_solved')), 0) AS has_solve\n    FROM\n        events\n    WHERE\n        and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), in(event, tuple('daily_puzzle_hint_offer_shown', 'daily_puzzle_hint_offer_tapped', 'daily_puzzle_hint_reward_granted', 'daily_puzzle_solved')), notEquals(properties.puzzle_id, NULL))\n    GROUP BY\n        app_version,\n        build_number,\n        distinct_id,\n        puzzle_id)\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:40.795531Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:40.795531Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:41.313074Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      6,
+      5,
+      3,
+      0,
+      83.33333333333334,
+      60.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "offered_puzzles",
+      "UInt64"
+    ],
+    [
+      "tapped_puzzles",
+      "UInt64"
+    ],
+    [
+      "rewarded_puzzles",
+      "UInt64"
+    ],
+    [
+      "rewarded_solved_puzzles",
+      "UInt64"
+    ],
+    [
+      "offer_tap_pct",
+      "Float64"
+    ],
+    [
+      "reward_delivery_pct",
+      "Float64"
+    ],
+    [
+      "reward_assisted_solve_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Prompt engagement funnel (last 14 days) ==
+{
+  "cache_key": "cache_560852_788c6b04bf81bc98c61cda1aedaeedba6cb0cee462c56db6ce1414e63f6c7a3f",
+  "cache_target_age": "2026-09-18T20:24:41.645026Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    opened AS opened,\n    prompt_shown AS prompt_shown,\n    prompt_response AS prompt_response,\n    if(equals(opened, 0), 0.0, multiply(divide(prompt_shown, opened), 100)) AS prompt_show_rate_pct,\n    if(equals(prompt_shown, 0), 0.0, multiply(divide(prompt_response, prompt_shown), 100)) AS prompt_response_rate_pct\nFROM\n    (SELECT\n        countIf(equals(events.event, %(hogql_val_0)s)) AS opened,\n        countIf(equals(events.event, %(hogql_val_1)s)) AS prompt_shown,\n        countIf(equals(events.event, %(hogql_val_2)s)) AS prompt_response\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_3)s), toIntervalDay(14)))))\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "opened",
+    "prompt_shown",
+    "prompt_response",
+    "prompt_show_rate_pct",
+    "prompt_response_rate_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    opened,\n    prompt_shown,\n    prompt_response,\n    if(equals(opened, 0), 0.0, multiply(divide(prompt_shown, opened), 100)) AS prompt_show_rate_pct,\n    if(equals(prompt_shown, 0), 0.0, multiply(divide(prompt_response, prompt_shown), 100)) AS prompt_response_rate_pct\nFROM\n    (SELECT\n        countIf(equals(event, 'daily_puzzle_opened')) AS opened,\n        countIf(equals(event, 'daily_puzzle_prompt_shown')) AS prompt_shown,\n        countIf(equals(event, 'daily_puzzle_prompt_response')) AS prompt_response\n    FROM\n        events\n    WHERE\n        greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))))\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:41.645026Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:41.645026Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:42.414822Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      109,
+      0,
+      0,
+      0.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "opened",
+      "UInt64"
+    ],
+    [
+      "prompt_shown",
+      "UInt64"
+    ],
+    [
+      "prompt_response",
+      "UInt64"
+    ],
+    [
+      "prompt_show_rate_pct",
+      "Float64"
+    ],
+    [
+      "prompt_response_rate_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Interstitial ad conversion health (last 14 days) ==
+{
+  "cache_key": "cache_560852_69c9135da4efddbfa62321af3a708a7b10fbe74c052e35b86e1cb1c5bd37cc0d",
+  "cache_target_age": "2026-09-18T20:24:42.678588Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    interstitial_load_requested AS interstitial_load_requested,\n    interstitial_load_loaded AS interstitial_load_loaded,\n    interstitial_present_attempted AS interstitial_present_attempted,\n    interstitial_present_presented AS interstitial_present_presented,\n    interstitial_impression AS interstitial_impression,\n    interstitial_click AS interstitial_click,\n    if(equals(interstitial_load_requested, 0), 0.0, multiply(divide(interstitial_load_loaded, interstitial_load_requested), 100)) AS fill_rate_pct,\n    if(equals(interstitial_load_loaded, 0), 0.0, multiply(divide(interstitial_present_attempted, interstitial_load_loaded), 100)) AS present_attempt_per_load_pct,\n    if(equals(interstitial_present_presented, 0), 0.0, multiply(divide(interstitial_impression, interstitial_present_presented), 100)) AS impression_per_present_pct,\n    if(equals(interstitial_impression, 0), 0.0, multiply(divide(interstitial_click, interstitial_impression), 100)) AS click_per_impression_pct\nFROM\n    (SELECT\n        countIf(and(equals(events.event, %(hogql_val_0)s), equals(events.properties_group_custom[%(hogql_val_1)s], %(hogql_val_2)s))) AS interstitial_load_requested,\n        countIf(and(equals(events.event, %(hogql_val_3)s), equals(events.properties_group_custom[%(hogql_val_4)s], %(hogql_val_5)s))) AS interstitial_load_loaded,\n        countIf(and(equals(events.event, %(hogql_val_6)s), equals(events.properties_group_custom[%(hogql_val_7)s], %(hogql_val_8)s))) AS interstitial_present_attempted,\n        countIf(and(equals(events.event, %(hogql_val_9)s), equals(events.properties_group_custom[%(hogql_val_10)s], %(hogql_val_11)s))) AS interstitial_present_presented,\n        countIf(and(equals(events.event, %(hogql_val_12)s), equals(events.properties_group_custom[%(hogql_val_13)s], %(hogql_val_14)s))) AS interstitial_impression,\n        countIf(and(equals(events.event, %(hogql_val_15)s), equals(events.properties_group_custom[%(hogql_val_16)s], %(hogql_val_17)s))) AS interstitial_click\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_18)s), toIntervalDay(14)))))\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "interstitial_load_requested",
+    "interstitial_load_loaded",
+    "interstitial_present_attempted",
+    "interstitial_present_presented",
+    "interstitial_impression",
+    "interstitial_click",
+    "fill_rate_pct",
+    "present_attempt_per_load_pct",
+    "impression_per_present_pct",
+    "click_per_impression_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    interstitial_load_requested,\n    interstitial_load_loaded,\n    interstitial_present_attempted,\n    interstitial_present_presented,\n    interstitial_impression,\n    interstitial_click,\n    if(equals(interstitial_load_requested, 0), 0.0, multiply(divide(interstitial_load_loaded, interstitial_load_requested), 100)) AS fill_rate_pct,\n    if(equals(interstitial_load_loaded, 0), 0.0, multiply(divide(interstitial_present_attempted, interstitial_load_loaded), 100)) AS present_attempt_per_load_pct,\n    if(equals(interstitial_present_presented, 0), 0.0, multiply(divide(interstitial_impression, interstitial_present_presented), 100)) AS impression_per_present_pct,\n    if(equals(interstitial_impression, 0), 0.0, multiply(divide(interstitial_click, interstitial_impression), 100)) AS click_per_impression_pct\nFROM\n    (SELECT\n        countIf(and(equals(event, 'ad_interstitial_load'), equals(properties.outcome, 'requested'))) AS interstitial_load_requested,\n        countIf(and(equals(event, 'ad_interstitial_load'), equals(properties.outcome, 'loaded'))) AS interstitial_load_loaded,\n        countIf(and(equals(event, 'ad_interstitial_present'), equals(properties.outcome, 'attempted'))) AS interstitial_present_attempted,\n        countIf(and(equals(event, 'ad_interstitial_present'), equals(properties.outcome, 'presented'))) AS interstitial_present_presented,\n        countIf(and(equals(event, 'ad_interstitial_impression'), equals(properties.outcome, 'recorded'))) AS interstitial_impression,\n        countIf(and(equals(event, 'ad_interstitial_click'), equals(properties.outcome, 'recorded'))) AS interstitial_click\n    FROM\n        events\n    WHERE\n        greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))))\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:42.678588Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:42.678588Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:43.095026Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      129,
+      106,
+      55,
+      9,
+      9,
+      0,
+      82.17054263565892,
+      51.886792452830186,
+      100.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "interstitial_load_requested",
+      "UInt64"
+    ],
+    [
+      "interstitial_load_loaded",
+      "UInt64"
+    ],
+    [
+      "interstitial_present_attempted",
+      "UInt64"
+    ],
+    [
+      "interstitial_present_presented",
+      "UInt64"
+    ],
+    [
+      "interstitial_impression",
+      "UInt64"
+    ],
+    [
+      "interstitial_click",
+      "UInt64"
+    ],
+    [
+      "fill_rate_pct",
+      "Float64"
+    ],
+    [
+      "present_attempt_per_load_pct",
+      "Float64"
+    ],
+    [
+      "impression_per_present_pct",
+      "Float64"
+    ],
+    [
+      "click_per_impression_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Rewarded ad conversion health (last 14 days) ==
+{
+  "cache_key": "cache_560852_1bb0f56c578b8b118d343656bdae9f5d18bdfeb15123faee700104346c383b67",
+  "cache_target_age": "2026-09-18T20:24:43.337882Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    rewarded_load_requested AS rewarded_load_requested,\n    rewarded_load_loaded AS rewarded_load_loaded,\n    rewarded_present_attempted AS rewarded_present_attempted,\n    rewarded_present_presented AS rewarded_present_presented,\n    rewarded_impression AS rewarded_impression,\n    rewarded_click AS rewarded_click,\n    rewarded_dismiss AS rewarded_dismiss,\n    if(equals(rewarded_load_requested, 0), 0.0, multiply(divide(rewarded_load_loaded, rewarded_load_requested), 100)) AS fill_rate_pct,\n    if(equals(rewarded_load_loaded, 0), 0.0, multiply(divide(rewarded_present_attempted, rewarded_load_loaded), 100)) AS present_attempt_per_load_pct,\n    if(equals(rewarded_present_presented, 0), 0.0, multiply(divide(rewarded_impression, rewarded_present_presented), 100)) AS impression_per_present_pct,\n    if(equals(rewarded_impression, 0), 0.0, multiply(divide(rewarded_click, rewarded_impression), 100)) AS click_per_impression_pct\nFROM\n    (SELECT\n        countIf(and(equals(events.event, %(hogql_val_0)s), equals(events.properties_group_custom[%(hogql_val_1)s], %(hogql_val_2)s))) AS rewarded_load_requested,\n        countIf(and(equals(events.event, %(hogql_val_3)s), equals(events.properties_group_custom[%(hogql_val_4)s], %(hogql_val_5)s))) AS rewarded_load_loaded,\n        countIf(and(equals(events.event, %(hogql_val_6)s), equals(events.properties_group_custom[%(hogql_val_7)s], %(hogql_val_8)s))) AS rewarded_present_attempted,\n        countIf(and(equals(events.event, %(hogql_val_9)s), equals(events.properties_group_custom[%(hogql_val_10)s], %(hogql_val_11)s))) AS rewarded_present_presented,\n        countIf(and(equals(events.event, %(hogql_val_12)s), equals(events.properties_group_custom[%(hogql_val_13)s], %(hogql_val_14)s))) AS rewarded_impression,\n        countIf(and(equals(events.event, %(hogql_val_15)s), equals(events.properties_group_custom[%(hogql_val_16)s], %(hogql_val_17)s))) AS rewarded_click,\n        countIf(and(equals(events.event, %(hogql_val_18)s), equals(events.properties_group_custom[%(hogql_val_19)s], %(hogql_val_20)s))) AS rewarded_dismiss\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_21)s), toIntervalDay(14)))))\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "rewarded_load_requested",
+    "rewarded_load_loaded",
+    "rewarded_present_attempted",
+    "rewarded_present_presented",
+    "rewarded_impression",
+    "rewarded_click",
+    "rewarded_dismiss",
+    "fill_rate_pct",
+    "present_attempt_per_load_pct",
+    "impression_per_present_pct",
+    "click_per_impression_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    rewarded_load_requested,\n    rewarded_load_loaded,\n    rewarded_present_attempted,\n    rewarded_present_presented,\n    rewarded_impression,\n    rewarded_click,\n    rewarded_dismiss,\n    if(equals(rewarded_load_requested, 0), 0.0, multiply(divide(rewarded_load_loaded, rewarded_load_requested), 100)) AS fill_rate_pct,\n    if(equals(rewarded_load_loaded, 0), 0.0, multiply(divide(rewarded_present_attempted, rewarded_load_loaded), 100)) AS present_attempt_per_load_pct,\n    if(equals(rewarded_present_presented, 0), 0.0, multiply(divide(rewarded_impression, rewarded_present_presented), 100)) AS impression_per_present_pct,\n    if(equals(rewarded_impression, 0), 0.0, multiply(divide(rewarded_click, rewarded_impression), 100)) AS click_per_impression_pct\nFROM\n    (SELECT\n        countIf(and(equals(event, 'ad_rewarded_load'), equals(properties.outcome, 'requested'))) AS rewarded_load_requested,\n        countIf(and(equals(event, 'ad_rewarded_load'), equals(properties.outcome, 'loaded'))) AS rewarded_load_loaded,\n        countIf(and(equals(event, 'ad_rewarded_present'), equals(properties.outcome, 'attempted'))) AS rewarded_present_attempted,\n        countIf(and(equals(event, 'ad_rewarded_present'), equals(properties.outcome, 'presented'))) AS rewarded_present_presented,\n        countIf(and(equals(event, 'ad_rewarded_impression'), equals(properties.outcome, 'recorded'))) AS rewarded_impression,\n        countIf(and(equals(event, 'ad_rewarded_click'), equals(properties.outcome, 'recorded'))) AS rewarded_click,\n        countIf(and(equals(event, 'ad_rewarded_dismiss'), equals(properties.outcome, 'dismissed'))) AS rewarded_dismiss\n    FROM\n        events\n    WHERE\n        greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))))\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:43.337882Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:43.337882Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:43.732510Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      27,
+      25,
+      11,
+      11,
+      11,
+      1,
+      9,
+      92.5925925925926,
+      44.0,
+      100.0,
+      9.090909090909092
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "rewarded_load_requested",
+      "UInt64"
+    ],
+    [
+      "rewarded_load_loaded",
+      "UInt64"
+    ],
+    [
+      "rewarded_present_attempted",
+      "UInt64"
+    ],
+    [
+      "rewarded_present_presented",
+      "UInt64"
+    ],
+    [
+      "rewarded_impression",
+      "UInt64"
+    ],
+    [
+      "rewarded_click",
+      "UInt64"
+    ],
+    [
+      "rewarded_dismiss",
+      "UInt64"
+    ],
+    [
+      "fill_rate_pct",
+      "Float64"
+    ],
+    [
+      "present_attempt_per_load_pct",
+      "Float64"
+    ],
+    [
+      "impression_per_present_pct",
+      "Float64"
+    ],
+    [
+      "click_per_impression_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Hint flow telemetry split (last 14 days) ==
+{
+  "cache_key": "cache_560852_8e8837ef1ca3c85c0584216e6eabce1af42b3f4be7090977a11eb8023425632a",
+  "cache_target_age": "2026-09-18T20:24:44.009408Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    hint_present_attempted AS hint_present_attempted,\n    hint_present_rewarded AS hint_present_rewarded,\n    hint_present_interstitial AS hint_present_interstitial,\n    hint_waiting_for_inventory AS hint_waiting_for_inventory,\n    hint_dismiss_interstitial AS hint_dismiss_interstitial,\n    hint_interstitial_presented AS hint_interstitial_presented,\n    hint_rewarded_presented AS hint_rewarded_presented,\n    hint_dismiss_total AS hint_dismiss_total\nFROM\n    (SELECT\n        countIf(and(equals(events.event, %(hogql_val_0)s), equals(events.properties_group_custom[%(hogql_val_1)s], %(hogql_val_2)s))) AS hint_present_attempted,\n        countIf(and(equals(events.event, %(hogql_val_3)s), equals(events.properties_group_custom[%(hogql_val_4)s], %(hogql_val_5)s))) AS hint_present_rewarded,\n        countIf(and(equals(events.event, %(hogql_val_6)s), equals(events.properties_group_custom[%(hogql_val_7)s], %(hogql_val_8)s))) AS hint_present_interstitial,\n        countIf(and(equals(events.event, %(hogql_val_9)s), equals(events.properties_group_custom[%(hogql_val_10)s], %(hogql_val_11)s))) AS hint_waiting_for_inventory,\n        countIf(and(equals(events.event, %(hogql_val_12)s), equals(events.properties_group_custom[%(hogql_val_13)s], %(hogql_val_14)s))) AS hint_dismiss_interstitial,\n        countIf(and(equals(events.event, %(hogql_val_15)s), equals(events.properties_group_custom[%(hogql_val_16)s], %(hogql_val_17)s))) AS hint_interstitial_presented,\n        countIf(and(equals(events.event, %(hogql_val_18)s), equals(events.properties_group_custom[%(hogql_val_19)s], %(hogql_val_20)s))) AS hint_rewarded_presented,\n        countIf(and(equals(events.event, %(hogql_val_21)s), equals(events.properties_group_custom[%(hogql_val_22)s], %(hogql_val_23)s))) AS hint_dismiss_total\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_24)s), toIntervalDay(14)))))\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "hint_present_attempted",
+    "hint_present_rewarded",
+    "hint_present_interstitial",
+    "hint_waiting_for_inventory",
+    "hint_dismiss_interstitial",
+    "hint_interstitial_presented",
+    "hint_rewarded_presented",
+    "hint_dismiss_total"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    hint_present_attempted,\n    hint_present_rewarded,\n    hint_present_interstitial,\n    hint_waiting_for_inventory,\n    hint_dismiss_interstitial,\n    hint_interstitial_presented,\n    hint_rewarded_presented,\n    hint_dismiss_total\nFROM\n    (SELECT\n        countIf(and(equals(event, 'ad_hint_present'), equals(properties.outcome, 'attempted'))) AS hint_present_attempted,\n        countIf(and(equals(event, 'ad_hint_present'), equals(properties.outcome, 'rewarded_presented'))) AS hint_present_rewarded,\n        countIf(and(equals(event, 'ad_hint_present'), equals(properties.outcome, 'interstitial_presented'))) AS hint_present_interstitial,\n        countIf(and(equals(event, 'ad_hint_waiting_for_inventory'), equals(properties.outcome, 'waiting_for_inventory'))) AS hint_waiting_for_inventory,\n        countIf(and(equals(event, 'ad_hint_dismiss'), equals(properties.outcome, 'interstitial_dismissed'))) AS hint_dismiss_interstitial,\n        countIf(and(equals(event, 'ad_hint_interstitial_presented'), equals(properties.outcome, 'interstitial_presented'))) AS hint_interstitial_presented,\n        countIf(and(equals(event, 'ad_hint_rewarded_presented'), equals(properties.outcome, 'rewarded_presented'))) AS hint_rewarded_presented,\n        countIf(and(equals(event, 'ad_hint_dismiss'), equals(properties.outcome, 'interstitial_dismissed'))) AS hint_dismiss_total\n    FROM\n        events\n    WHERE\n        greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))))\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:44.009408Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:44.009408Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:44.448853Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      15,
+      11,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "hint_present_attempted",
+      "UInt64"
+    ],
+    [
+      "hint_present_rewarded",
+      "UInt64"
+    ],
+    [
+      "hint_present_interstitial",
+      "UInt64"
+    ],
+    [
+      "hint_waiting_for_inventory",
+      "UInt64"
+    ],
+    [
+      "hint_dismiss_interstitial",
+      "UInt64"
+    ],
+    [
+      "hint_interstitial_presented",
+      "UInt64"
+    ],
+    [
+      "hint_rewarded_presented",
+      "UInt64"
+    ],
+    [
+      "hint_dismiss_total",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== App-open presentation efficiency (last 14 days) ==
+{
+  "cache_key": "cache_560852_a4ff23aa14673170cc62daf138fac103cb127e8621a5d39fff136b2189239e04",
+  "cache_target_age": "2026-09-18T20:24:45.448795Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    present_attempted AS present_attempted,\n    present_presented AS present_presented,\n    blocked_cooldown AS blocked_cooldown,\n    blocked_session_limit AS blocked_session_limit,\n    no_inventory AS no_inventory,\n    impressions AS impressions,\n    clicks AS clicks,\n    if(equals(present_attempted, 0), 0.0, multiply(divide(impressions, present_attempted), 100)) AS impression_per_attempt_pct,\n    if(equals(impressions, 0), 0.0, multiply(divide(clicks, impressions), 100)) AS click_per_impression_pct\nFROM\n    (SELECT\n        countIf(and(equals(events.event, %(hogql_val_0)s), equals(events.properties_group_custom[%(hogql_val_1)s], %(hogql_val_2)s))) AS present_attempted,\n        countIf(and(equals(events.event, %(hogql_val_3)s), equals(events.properties_group_custom[%(hogql_val_4)s], %(hogql_val_5)s))) AS present_presented,\n        countIf(and(equals(events.event, %(hogql_val_6)s), equals(events.properties_group_custom[%(hogql_val_7)s], %(hogql_val_8)s))) AS blocked_cooldown,\n        countIf(and(equals(events.event, %(hogql_val_9)s), equals(events.properties_group_custom[%(hogql_val_10)s], %(hogql_val_11)s))) AS blocked_session_limit,\n        countIf(and(equals(events.event, %(hogql_val_12)s), equals(events.properties_group_custom[%(hogql_val_13)s], %(hogql_val_14)s))) AS no_inventory,\n        countIf(and(equals(events.event, %(hogql_val_15)s), equals(events.properties_group_custom[%(hogql_val_16)s], %(hogql_val_17)s))) AS impressions,\n        countIf(and(equals(events.event, %(hogql_val_18)s), equals(events.properties_group_custom[%(hogql_val_19)s], %(hogql_val_20)s))) AS clicks\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_21)s), toIntervalDay(14)))))\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "present_attempted",
+    "present_presented",
+    "blocked_cooldown",
+    "blocked_session_limit",
+    "no_inventory",
+    "impressions",
+    "clicks",
+    "impression_per_attempt_pct",
+    "click_per_impression_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    present_attempted,\n    present_presented,\n    blocked_cooldown,\n    blocked_session_limit,\n    no_inventory,\n    impressions,\n    clicks,\n    if(equals(present_attempted, 0), 0.0, multiply(divide(impressions, present_attempted), 100)) AS impression_per_attempt_pct,\n    if(equals(impressions, 0), 0.0, multiply(divide(clicks, impressions), 100)) AS click_per_impression_pct\nFROM\n    (SELECT\n        countIf(and(equals(event, 'ad_app_open_present'), equals(properties.outcome, 'attempted'))) AS present_attempted,\n        countIf(and(equals(event, 'ad_app_open_present'), equals(properties.outcome, 'presented'))) AS present_presented,\n        countIf(and(equals(event, 'ad_app_open_present'), equals(properties.outcome, 'cooldown'))) AS blocked_cooldown,\n        countIf(and(equals(event, 'ad_app_open_present'), equals(properties.outcome, 'session_limit_reached'))) AS blocked_session_limit,\n        countIf(and(equals(event, 'ad_app_open_present'), equals(properties.outcome, 'no_inventory'))) AS no_inventory,\n        countIf(and(equals(event, 'ad_app_open_impression'), equals(properties.outcome, 'recorded'))) AS impressions,\n        countIf(and(equals(event, 'ad_app_open_click'), equals(properties.outcome, 'recorded'))) AS clicks\n    FROM\n        events\n    WHERE\n        greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))))\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:45.448795Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:45.448795Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:45.811720Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      762,
+      458,
+      105,
+      48,
+      586,
+      409,
+      52,
+      53.674540682414694,
+      12.71393643031785
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "present_attempted",
+      "UInt64"
+    ],
+    [
+      "present_presented",
+      "UInt64"
+    ],
+    [
+      "blocked_cooldown",
+      "UInt64"
+    ],
+    [
+      "blocked_session_limit",
+      "UInt64"
+    ],
+    [
+      "no_inventory",
+      "UInt64"
+    ],
+    [
+      "impressions",
+      "UInt64"
+    ],
+    [
+      "clicks",
+      "UInt64"
+    ],
+    [
+      "impression_per_attempt_pct",
+      "Float64"
+    ],
+    [
+      "click_per_impression_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== App-open outcomes by source and block reason (last 14 days) ==
+{
+  "cache_key": "cache_560852_23f61b004aace8c5642d2a30c754159b12d6faa81ad0cd6047c3b2f04c451f74",
+  "cache_target_age": "2026-09-18T20:24:46.096834Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_source, ''), 'null') AS source,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS outcome,\n    if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL) AS block_reason,\n    count() AS total\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_4)s), toIntervalDay(14))), equals(events.event, %(hogql_val_5)s))\nGROUP BY\n    source,\n    outcome,\n    block_reason\nORDER BY\n    total DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "source",
+    "outcome",
+    "block_reason",
+    "total"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.source AS source,\n    properties.outcome AS outcome,\n    properties.block_reason AS block_reason,\n    count() AS total\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), equals(event, 'ad_app_open_present'))\nGROUP BY\n    source,\n    outcome,\n    block_reason\nORDER BY\n    total DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:46.096834Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:46.096834Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:46.543353Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "foreground",
+      "attempted",
+      null,
+      753
+    ],
+    [
+      "app",
+      "no_inventory",
+      null,
+      586
+    ],
+    [
+      "app",
+      "presented",
+      null,
+      458
+    ],
+    [
+      "app",
+      "already_presenting",
+      null,
+      130
+    ],
+    [
+      "foreground",
+      "cooldown",
+      "cooldown",
+      105
+    ],
+    [
+      "foreground",
+      "session_limit_reached",
+      "session_limit_reached",
+      48
+    ],
+    [
+      "app",
+      "attempted",
+      null,
+      9
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "source",
+      "Nullable(String)"
+    ],
+    [
+      "outcome",
+      "Nullable(String)"
+    ],
+    [
+      "block_reason",
+      "Nullable(String)"
+    ],
+    [
+      "total",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Interstitial outcomes by placement context (last 14 days) ==
+{
+  "cache_key": "cache_560852_d94c08e4ec46f3f921d6cb04fb045793905910896035390a7e94ee02f6dac822",
+  "cache_target_age": "2026-09-18T20:24:46.790088Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_source, ''), 'null') AS source,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS trigger,\n    if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL) AS flow,\n    if(has(events.properties_group_custom, %(hogql_val_4)s), events.properties_group_custom[%(hogql_val_5)s], NULL) AS outcome,\n    if(has(events.properties_group_custom, %(hogql_val_6)s), events.properties_group_custom[%(hogql_val_7)s], NULL) AS block_reason,\n    count() AS total\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_8)s), toIntervalDay(14))), equals(events.event, %(hogql_val_9)s))\nGROUP BY\n    source,\n    trigger,\n    flow,\n    outcome,\n    block_reason\nORDER BY\n    total DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "source",
+    "trigger",
+    "flow",
+    "outcome",
+    "block_reason",
+    "total"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.source AS source,\n    properties.trigger AS trigger,\n    properties.flow AS flow,\n    properties.outcome AS outcome,\n    properties.block_reason AS block_reason,\n    count() AS total\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), equals(event, 'ad_interstitial_present'))\nGROUP BY\n    source,\n    trigger,\n    flow,\n    outcome,\n    block_reason\nORDER BY\n    total DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:46.790088Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:46.790088Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:47.627837Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "app",
+      null,
+      null,
+      "attempted",
+      null,
+      55
+    ],
+    [
+      "app",
+      null,
+      null,
+      "no_inventory",
+      null,
+      45
+    ],
+    [
+      "app",
+      null,
+      null,
+      "presented",
+      null,
+      9
+    ],
+    [
+      "app",
+      null,
+      null,
+      "session_limit_reached",
+      "session_limit_reached",
+      1
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "source",
+      "Nullable(String)"
+    ],
+    [
+      "trigger",
+      "Nullable(String)"
+    ],
+    [
+      "flow",
+      "Nullable(String)"
+    ],
+    [
+      "outcome",
+      "Nullable(String)"
+    ],
+    [
+      "block_reason",
+      "Nullable(String)"
+    ],
+    [
+      "total",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Release health by app version and build (last 14 days) ==
+{
+  "cache_key": "cache_560852_29047c75f35b009d3553b0d01cdc6bde4f3af8ae7c972a4be30a27fe57518f76",
+  "cache_target_age": "2026-09-18T20:24:47.912328Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n    uniq(events.distinct_id) AS unique_users,\n    countIf(in(events.event, tuple(%(hogql_val_2)s, %(hogql_val_3)s))) AS launches,\n    countIf(equals(events.event, %(hogql_val_4)s)) AS puzzle_opens,\n    countIf(equals(events.event, %(hogql_val_5)s)) AS puzzle_solves,\n    countIf(in(events.event, tuple(%(hogql_val_6)s, %(hogql_val_7)s, %(hogql_val_8)s))) AS ad_impressions\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_9)s), toIntervalDay(14))))\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "unique_users",
+    "launches",
+    "puzzle_opens",
+    "puzzle_solves",
+    "ad_impressions"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.app_version AS app_version,\n    properties.build_number AS build_number,\n    uniq(distinct_id) AS unique_users,\n    countIf(in(event, tuple('Application Opened', 'app_launched'))) AS launches,\n    countIf(equals(event, 'daily_puzzle_opened')) AS puzzle_opens,\n    countIf(equals(event, 'daily_puzzle_solved')) AS puzzle_solves,\n    countIf(in(event, tuple('ad_interstitial_impression', 'ad_rewarded_impression', 'ad_app_open_impression'))) AS ad_impressions\nFROM\n    events\nWHERE\n    greaterOrEquals(timestamp, minus(now(), toIntervalDay(14)))\nGROUP BY\n    app_version,\n    build_number\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:47.912328Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:47.912328Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:49.214071Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      541,
+      1137,
+      106,
+      22,
+      418
+    ],
+    [
+      "4.25.39",
+      "9",
+      1,
+      25,
+      1,
+      0,
+      1
+    ],
+    [
+      "4.25.39",
+      "8",
+      7,
+      0,
+      2,
+      0,
+      8
+    ],
+    [
+      "4.25.38",
+      "6",
+      9,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      null,
+      null,
+      985,
+      1492,
+      0,
+      0,
+      0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ],
+    [
+      "launches",
+      "UInt64"
+    ],
+    [
+      "puzzle_opens",
+      "UInt64"
+    ],
+    [
+      "puzzle_solves",
+      "UInt64"
+    ],
+    [
+      "ad_impressions",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Consent eligibility by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_f2c9339057723500f471bbb2905e0e74fdcf92537b2fb9fa3499893e0593f126",
+  "cache_target_age": "2026-09-18T20:24:49.477395Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n    if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL) AS outcome,\n    count() AS total,\n    uniq(events.distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_4)s), toIntervalDay(14))), equals(events.event, %(hogql_val_5)s))\nGROUP BY\n    app_version,\n    build_number,\n    outcome\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "outcome",
+    "total",
+    "unique_users"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.app_version AS app_version,\n    properties.build_number AS build_number,\n    properties.outcome AS outcome,\n    count() AS total,\n    uniq(distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), equals(event, 'ad_startup_eligibility_evaluated'))\nGROUP BY\n    app_version,\n    build_number,\n    outcome\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:49.477395Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:49.477395Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:50.340455Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      "allowed",
+      872,
+      351
+    ],
+    [
+      "4.25.40",
+      "11",
+      "denied",
+      83,
+      62
+    ],
+    [
+      "4.25.39",
+      "9",
+      "allowed",
+      25,
+      1
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "outcome",
+      "Nullable(String)"
+    ],
+    [
+      "total",
+      "UInt64"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Puzzle depth and monetization by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_711394d4c74eefc073fba55e0a902faef5061070607a645af5dc6d9ab55caf79",
+  "cache_target_age": "2026-09-18T20:24:50.548507Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    app_version AS app_version,\n    build_number AS build_number,\n    unique_users AS unique_users,\n    puzzle_sessions AS puzzle_sessions,\n    completed_rounds AS completed_rounds,\n    next_taps AS next_taps,\n    next_loads AS next_loads,\n    native_opportunities AS native_opportunities,\n    puzzle_interstitial_opportunities AS puzzle_interstitial_opportunities,\n    puzzle_interstitial_impressions AS puzzle_interstitial_impressions,\n    if(equals(puzzle_sessions, 0), 0.0, divide(completed_rounds, puzzle_sessions)) AS rounds_per_session,\n    if(equals(completed_rounds, 0), 0.0, multiply(divide(next_taps, completed_rounds), 100)) AS continuation_rate_pct,\n    if(equals(next_taps, 0), 0.0, multiply(divide(next_loads, next_taps), 100)) AS continuation_load_rate_pct,\n    if(equals(puzzle_sessions, 0), 0.0, divide(puzzle_interstitial_impressions, puzzle_sessions)) AS interstitial_impressions_per_puzzle_session\nFROM\n    (SELECT\n        nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n        if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n        uniq(events.distinct_id) AS unique_users,\n        uniqIf(if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL), equals(events.event, %(hogql_val_4)s)) AS puzzle_sessions,\n        countIf(in(events.event, tuple(%(hogql_val_5)s, %(hogql_val_6)s))) AS completed_rounds,\n        countIf(equals(events.event, %(hogql_val_7)s)) AS next_taps,\n        countIf(equals(events.event, %(hogql_val_8)s)) AS next_loads,\n        countIf(and(equals(events.event, %(hogql_val_9)s), equals(events.properties_group_custom[%(hogql_val_10)s], %(hogql_val_11)s))) AS native_opportunities,\n        countIf(and(equals(events.event, %(hogql_val_12)s), equals(events.properties_group_custom[%(hogql_val_13)s], %(hogql_val_14)s), equals(events.properties_group_custom[%(hogql_val_15)s], %(hogql_val_16)s))) AS puzzle_interstitial_opportunities,\n        countIf(and(equals(events.event, %(hogql_val_17)s), equals(events.properties_group_custom[%(hogql_val_18)s], %(hogql_val_19)s))) AS puzzle_interstitial_impressions\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_20)s), toIntervalDay(14))))\n    GROUP BY\n        app_version,\n        build_number)\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "unique_users",
+    "puzzle_sessions",
+    "completed_rounds",
+    "next_taps",
+    "next_loads",
+    "native_opportunities",
+    "puzzle_interstitial_opportunities",
+    "puzzle_interstitial_impressions",
+    "rounds_per_session",
+    "continuation_rate_pct",
+    "continuation_load_rate_pct",
+    "interstitial_impressions_per_puzzle_session"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    app_version,\n    build_number,\n    unique_users,\n    puzzle_sessions,\n    completed_rounds,\n    next_taps,\n    next_loads,\n    native_opportunities,\n    puzzle_interstitial_opportunities,\n    puzzle_interstitial_impressions,\n    if(equals(puzzle_sessions, 0), 0.0, divide(completed_rounds, puzzle_sessions)) AS rounds_per_session,\n    if(equals(completed_rounds, 0), 0.0, multiply(divide(next_taps, completed_rounds), 100)) AS continuation_rate_pct,\n    if(equals(next_taps, 0), 0.0, multiply(divide(next_loads, next_taps), 100)) AS continuation_load_rate_pct,\n    if(equals(puzzle_sessions, 0), 0.0, divide(puzzle_interstitial_impressions, puzzle_sessions)) AS interstitial_impressions_per_puzzle_session\nFROM\n    (SELECT\n        properties.app_version AS app_version,\n        properties.build_number AS build_number,\n        uniq(distinct_id) AS unique_users,\n        uniqIf(properties.runtime_session_id, equals(event, 'daily_puzzle_session_started')) AS puzzle_sessions,\n        countIf(in(event, tuple('daily_puzzle_solved', 'daily_puzzle_failed'))) AS completed_rounds,\n        countIf(equals(event, 'daily_puzzle_next_tapped')) AS next_taps,\n        countIf(equals(event, 'daily_puzzle_next_loaded')) AS next_loads,\n        countIf(and(equals(event, 'daily_puzzle_ad_opportunity'), equals(properties.placement, 'native_puzzle'))) AS native_opportunities,\n        countIf(and(equals(event, 'ad_interstitial_engagement'), equals(properties.trigger, 'puzzle_completed'), equals(properties.outcome, 'presenting'))) AS puzzle_interstitial_opportunities,\n        countIf(and(equals(event, 'ad_interstitial_impression'), equals(properties.trigger, 'puzzle_completed'))) AS puzzle_interstitial_impressions\n    FROM\n        events\n    WHERE\n        greaterOrEquals(timestamp, minus(now(), toIntervalDay(14)))\n    GROUP BY\n        app_version,\n        build_number)\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:50.548507Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:50.548507Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:51.355550Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      541,
+      50,
+      23,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.46,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "4.25.39",
+      "9",
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "4.25.39",
+      "8",
+      7,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "4.25.38",
+      "6",
+      9,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      null,
+      null,
+      985,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ],
+    [
+      "puzzle_sessions",
+      "UInt64"
+    ],
+    [
+      "completed_rounds",
+      "UInt64"
+    ],
+    [
+      "next_taps",
+      "UInt64"
+    ],
+    [
+      "next_loads",
+      "UInt64"
+    ],
+    [
+      "native_opportunities",
+      "UInt64"
+    ],
+    [
+      "puzzle_interstitial_opportunities",
+      "UInt64"
+    ],
+    [
+      "puzzle_interstitial_impressions",
+      "UInt64"
+    ],
+    [
+      "rounds_per_session",
+      "Float64"
+    ],
+    [
+      "continuation_rate_pct",
+      "Float64"
+    ],
+    [
+      "continuation_load_rate_pct",
+      "Float64"
+    ],
+    [
+      "interstitial_impressions_per_puzzle_session",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Puzzle interstitial decisions by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_4c64f84d9b79cc063d237fe60a82c98fb8ed71e929ff9c28a83259e6861b23ac",
+  "cache_target_age": "2026-09-18T20:24:51.520434Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n    events.event AS event,\n    if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL) AS outcome,\n    if(has(events.properties_group_custom, %(hogql_val_4)s), events.properties_group_custom[%(hogql_val_5)s], NULL) AS block_reason,\n    count() AS total,\n    uniq(events.distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_6)s), toIntervalDay(14))), equals(events.properties_group_custom[%(hogql_val_7)s], %(hogql_val_8)s), in(events.event, tuple(%(hogql_val_9)s, %(hogql_val_10)s, %(hogql_val_11)s, %(hogql_val_12)s)))\nGROUP BY\n    app_version,\n    build_number,\n    events.event,\n    outcome,\n    block_reason\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "event",
+    "outcome",
+    "block_reason",
+    "total",
+    "unique_users"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.app_version AS app_version,\n    properties.build_number AS build_number,\n    event,\n    properties.outcome AS outcome,\n    properties.block_reason AS block_reason,\n    count() AS total,\n    uniq(distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), equals(properties.trigger, 'puzzle_completed'), in(event, tuple('ad_interstitial_engagement', 'ad_interstitial_present', 'ad_interstitial_impression', 'ad_interstitial_dismiss')))\nGROUP BY\n    app_version,\n    build_number,\n    event,\n    outcome,\n    block_reason\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:51.520434Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:51.520434Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:52.415296Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "event",
+      "String"
+    ],
+    [
+      "outcome",
+      "Nullable(String)"
+    ],
+    [
+      "block_reason",
+      "Nullable(String)"
+    ],
+    [
+      "total",
+      "UInt64"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== International telemetry property coverage by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_46275e49ea0236694b479a81fe4cb8f0c9462385ba7f8d5fdc055c90713657e0",
+  "cache_target_age": "2026-09-18T20:24:52.603473Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    app_version AS app_version,\n    build_number AS build_number,\n    total_events AS total_events,\n    app_locale_events AS app_locale_events,\n    device_region_events AS device_region_events,\n    content_region_events AS content_region_events,\n    if(equals(total_events, 0), 0.0, multiply(divide(app_locale_events, total_events), 100)) AS app_locale_coverage_pct,\n    if(equals(total_events, 0), 0.0, multiply(divide(device_region_events, total_events), 100)) AS device_region_coverage_pct,\n    if(equals(total_events, 0), 0.0, multiply(divide(content_region_events, total_events), 100)) AS content_region_coverage_pct\nFROM\n    (SELECT\n        nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n        if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n        count() AS total_events,\n        countIf(and(has(events.properties_group_custom, %(hogql_val_2)s), ifNull(notEquals(toString(if(has(events.properties_group_custom, %(hogql_val_3)s), events.properties_group_custom[%(hogql_val_4)s], NULL)), %(hogql_val_5)s), 1))) AS app_locale_events,\n        countIf(and(has(events.properties_group_custom, %(hogql_val_6)s), ifNull(notEquals(toString(if(has(events.properties_group_custom, %(hogql_val_7)s), events.properties_group_custom[%(hogql_val_8)s], NULL)), %(hogql_val_9)s), 1))) AS device_region_events,\n        countIf(and(has(events.properties_group_custom, %(hogql_val_10)s), ifNull(notEquals(toString(if(has(events.properties_group_custom, %(hogql_val_11)s), events.properties_group_custom[%(hogql_val_12)s], NULL)), %(hogql_val_13)s), 1))) AS content_region_events\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_14)s), toIntervalDay(14))), isNotNull(nullIf(nullIf(events.mat_app_version, ''), 'null')))\n    GROUP BY\n        app_version,\n        build_number)\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "total_events",
+    "app_locale_events",
+    "device_region_events",
+    "content_region_events",
+    "app_locale_coverage_pct",
+    "device_region_coverage_pct",
+    "content_region_coverage_pct"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    app_version,\n    build_number,\n    total_events,\n    app_locale_events,\n    device_region_events,\n    content_region_events,\n    if(equals(total_events, 0), 0.0, multiply(divide(app_locale_events, total_events), 100)) AS app_locale_coverage_pct,\n    if(equals(total_events, 0), 0.0, multiply(divide(device_region_events, total_events), 100)) AS device_region_coverage_pct,\n    if(equals(total_events, 0), 0.0, multiply(divide(content_region_events, total_events), 100)) AS content_region_coverage_pct\nFROM\n    (SELECT\n        properties.app_version AS app_version,\n        properties.build_number AS build_number,\n        count() AS total_events,\n        countIf(and(notEquals(properties.app_locale, NULL), notEquals(toString(properties.app_locale), ''))) AS app_locale_events,\n        countIf(and(notEquals(properties.device_region, NULL), notEquals(toString(properties.device_region), ''))) AS device_region_events,\n        countIf(and(notEquals(properties.content_region, NULL), notEquals(toString(properties.content_region), ''))) AS content_region_events\n    FROM\n        events\n    WHERE\n        and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), notEquals(properties.app_version, NULL))\n    GROUP BY\n        app_version,\n        build_number)\nORDER BY\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:52.603473Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:52.603473Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:53.306515Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      12280,
+      12280,
+      12280,
+      12280,
+      100.0,
+      100.0,
+      100.0
+    ],
+    [
+      "4.25.39",
+      "9",
+      183,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "4.25.39",
+      "8",
+      180,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "4.25.38",
+      "6",
+      118,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "total_events",
+      "UInt64"
+    ],
+    [
+      "app_locale_events",
+      "UInt64"
+    ],
+    [
+      "device_region_events",
+      "UInt64"
+    ],
+    [
+      "content_region_events",
+      "UInt64"
+    ],
+    [
+      "app_locale_coverage_pct",
+      "Float64"
+    ],
+    [
+      "device_region_coverage_pct",
+      "Float64"
+    ],
+    [
+      "content_region_coverage_pct",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Target-territory activation and monetization signals (last 14 days) ==
+{
+  "cache_key": "cache_560852_b4e0bb47668188a7815ffbd63c958cc61b3edfbab22c1d319eb6ed25df8d9394",
+  "cache_target_age": "2026-09-18T20:24:53.516005Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    territory AS territory,\n    app_version AS app_version,\n    build_number AS build_number,\n    uniq(distinct_id) AS unique_users,\n    uniqIf(distinct_id, in(event, tuple(%(hogql_val_8)s, %(hogql_val_9)s))) AS launched_users,\n    uniqIf(distinct_id, equals(event, %(hogql_val_10)s)) AS puzzle_opened_users,\n    uniqIf(distinct_id, equals(event, %(hogql_val_11)s)) AS puzzle_activated_users,\n    uniqIf(distinct_id, equals(event, %(hogql_val_12)s)) AS puzzle_solved_users,\n    countIf(in(event, tuple(%(hogql_val_13)s, %(hogql_val_14)s, %(hogql_val_15)s))) AS ad_impressions,\n    if(equals(launched_users, 0), 0.0, multiply(divide(puzzle_opened_users, launched_users), 100)) AS launch_to_puzzle_open_pct,\n    if(equals(puzzle_opened_users, 0), 0.0, multiply(divide(puzzle_activated_users, puzzle_opened_users), 100)) AS puzzle_activation_pct,\n    if(equals(puzzle_activated_users, 0), 0.0, multiply(divide(puzzle_solved_users, puzzle_activated_users), 100)) AS activated_to_solved_pct,\n    if(equals(unique_users, 0), 0.0, divide(ad_impressions, unique_users)) AS ad_impressions_per_user\nFROM\n    (SELECT\n        upper(coalesce(nullIf(toString(if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL)), %(hogql_val_2)s), nullIf(toString(nullIf(nullIf(events.`mat_$geoip_country_code`, ''), 'null')), %(hogql_val_3)s), %(hogql_val_4)s)) AS territory,\n        nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n        if(has(events.properties_group_custom, %(hogql_val_5)s), events.properties_group_custom[%(hogql_val_6)s], NULL) AS build_number,\n        events.distinct_id AS distinct_id,\n        events.event AS event\n    FROM\n        events\n    WHERE\n        and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_7)s), toIntervalDay(14)))))\nWHERE\n    in(territory, tuple(%(hogql_val_16)s, %(hogql_val_17)s, %(hogql_val_18)s, %(hogql_val_19)s, %(hogql_val_20)s, %(hogql_val_21)s))\nGROUP BY\n    territory,\n    app_version,\n    build_number\nORDER BY\n    territory ASC,\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "territory",
+    "app_version",
+    "build_number",
+    "unique_users",
+    "launched_users",
+    "puzzle_opened_users",
+    "puzzle_activated_users",
+    "puzzle_solved_users",
+    "ad_impressions",
+    "launch_to_puzzle_open_pct",
+    "puzzle_activation_pct",
+    "activated_to_solved_pct",
+    "ad_impressions_per_user"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    territory,\n    app_version,\n    build_number,\n    uniq(distinct_id) AS unique_users,\n    uniqIf(distinct_id, in(event, tuple('Application Opened', 'app_launched'))) AS launched_users,\n    uniqIf(distinct_id, equals(event, 'daily_puzzle_opened')) AS puzzle_opened_users,\n    uniqIf(distinct_id, equals(event, 'daily_puzzle_guess_submitted')) AS puzzle_activated_users,\n    uniqIf(distinct_id, equals(event, 'daily_puzzle_solved')) AS puzzle_solved_users,\n    countIf(in(event, tuple('ad_interstitial_impression', 'ad_rewarded_impression', 'ad_app_open_impression'))) AS ad_impressions,\n    if(equals(launched_users, 0), 0.0, multiply(divide(puzzle_opened_users, launched_users), 100)) AS launch_to_puzzle_open_pct,\n    if(equals(puzzle_opened_users, 0), 0.0, multiply(divide(puzzle_activated_users, puzzle_opened_users), 100)) AS puzzle_activation_pct,\n    if(equals(puzzle_activated_users, 0), 0.0, multiply(divide(puzzle_solved_users, puzzle_activated_users), 100)) AS activated_to_solved_pct,\n    if(equals(unique_users, 0), 0.0, divide(ad_impressions, unique_users)) AS ad_impressions_per_user\nFROM\n    (SELECT\n        upper(coalesce(nullIf(toString(properties.device_region), ''), nullIf(toString(properties.$geoip_country_code), ''), 'UNKNOWN')) AS territory,\n        properties.app_version AS app_version,\n        properties.build_number AS build_number,\n        distinct_id,\n        event\n    FROM\n        events\n    WHERE\n        greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))))\nWHERE\n    in(territory, tuple('FR', 'ES', 'MX', 'BR', 'US', 'CN'))\nGROUP BY\n    territory,\n    app_version,\n    build_number\nORDER BY\n    territory ASC,\n    app_version DESC,\n    build_number DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:53.516005Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:53.516005Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:54.230598Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "BR",
+      "4.25.40",
+      "11",
+      14,
+      13,
+      1,
+      0,
+      0,
+      11,
+      7.6923076923076925,
+      0.0,
+      0.0,
+      0.7857142857142857
+    ],
+    [
+      "BR",
+      null,
+      null,
+      19,
+      18,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "CN",
+      "4.25.40",
+      "11",
+      90,
+      37,
+      1,
+      0,
+      0,
+      21,
+      2.7027027027027026,
+      0.0,
+      0.0,
+      0.23333333333333334
+    ],
+    [
+      "CN",
+      "4.25.39",
+      "8",
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      "CN",
+      "4.25.38",
+      "6",
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "CN",
+      null,
+      null,
+      119,
+      112,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "ES",
+      "4.25.40",
+      "11",
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "ES",
+      null,
+      null,
+      16,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "FR",
+      "4.25.40",
+      "11",
+      12,
+      11,
+      0,
+      0,
+      0,
+      7,
+      0.0,
+      0.0,
+      0.0,
+      0.5833333333333334
+    ],
+    [
+      "FR",
+      null,
+      null,
+      20,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "MX",
+      "4.25.40",
+      "11",
+      4,
+      3,
+      0,
+      0,
+      0,
+      2,
+      0.0,
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      "MX",
+      "4.25.39",
+      "8",
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      "MX",
+      null,
+      null,
+      17,
+      15,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "US",
+      "4.25.40",
+      "11",
+      184,
+      157,
+      19,
+      2,
+      1,
+      151,
+      12.101910828025478,
+      10.526315789473683,
+      50.0,
+      0.8206521739130435
+    ],
+    [
+      "US",
+      "4.25.39",
+      "9",
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      100.0,
+      100.0,
+      0.0,
+      1.0
+    ],
+    [
+      "US",
+      "4.25.39",
+      "8",
+      1,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0.0,
+      0.0,
+      0.0,
+      2.0
+    ],
+    [
+      "US",
+      "4.25.38",
+      "6",
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      "US",
+      null,
+      null,
+      402,
+      370,
+      0,
+      0,
+      0,
+      0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "territory",
+      "String"
+    ],
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ],
+    [
+      "launched_users",
+      "UInt64"
+    ],
+    [
+      "puzzle_opened_users",
+      "UInt64"
+    ],
+    [
+      "puzzle_activated_users",
+      "UInt64"
+    ],
+    [
+      "puzzle_solved_users",
+      "UInt64"
+    ],
+    [
+      "ad_impressions",
+      "UInt64"
+    ],
+    [
+      "launch_to_puzzle_open_pct",
+      "Float64"
+    ],
+    [
+      "puzzle_activation_pct",
+      "Float64"
+    ],
+    [
+      "activated_to_solved_pct",
+      "Float64"
+    ],
+    [
+      "ad_impressions_per_user",
+      "Float64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Target-territory locale and content-region alignment (last 14 days) ==
+{
+  "cache_key": "cache_560852_a49dd9f87782d5902c9bca13121163f0ef801530378164181b3af46bbc751453",
+  "cache_target_age": "2026-09-18T20:24:54.393374Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    upper(toString(if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL))) AS device_region,\n    toString(if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL)) AS app_locale,\n    upper(toString(if(has(events.properties_group_custom, %(hogql_val_4)s), events.properties_group_custom[%(hogql_val_5)s], NULL))) AS content_region,\n    count() AS total_events,\n    uniq(events.distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_6)s), toIntervalDay(14))), in(upper(toString(if(has(events.properties_group_custom, %(hogql_val_7)s), events.properties_group_custom[%(hogql_val_8)s], NULL))), tuple(%(hogql_val_9)s, %(hogql_val_10)s, %(hogql_val_11)s, %(hogql_val_12)s, %(hogql_val_13)s, %(hogql_val_14)s)), has(events.properties_group_custom, %(hogql_val_15)s), has(events.properties_group_custom, %(hogql_val_16)s))\nGROUP BY\n    device_region,\n    app_locale,\n    content_region\nORDER BY\n    device_region ASC,\n    unique_users DESC,\n    total_events DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "device_region",
+    "app_locale",
+    "content_region",
+    "total_events",
+    "unique_users"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    upper(toString(properties.device_region)) AS device_region,\n    toString(properties.app_locale) AS app_locale,\n    upper(toString(properties.content_region)) AS content_region,\n    count() AS total_events,\n    uniq(distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), in(upper(toString(properties.device_region)), tuple('FR', 'ES', 'MX', 'BR', 'US', 'CN')), notEquals(properties.app_locale, NULL), notEquals(properties.content_region, NULL))\nGROUP BY\n    device_region,\n    app_locale,\n    content_region\nORDER BY\n    device_region ASC,\n    unique_users DESC,\n    total_events DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:54.393374Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:54.393374Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:55.055883Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "BR",
+      "pt-BR",
+      "BR",
+      319,
+      13
+    ],
+    [
+      "BR",
+      "en",
+      "US",
+      1,
+      1
+    ],
+    [
+      "CN",
+      "en",
+      "US",
+      192,
+      55
+    ],
+    [
+      "CN",
+      "zh",
+      "US",
+      941,
+      35
+    ],
+    [
+      "CN",
+      "zh",
+      "HK",
+      5,
+      1
+    ],
+    [
+      "ES",
+      "es",
+      "ES",
+      35,
+      2
+    ],
+    [
+      "FR",
+      "fr",
+      "FR",
+      190,
+      11
+    ],
+    [
+      "FR",
+      "en",
+      "US",
+      1,
+      1
+    ],
+    [
+      "MX",
+      "es-MX",
+      "MX",
+      52,
+      3
+    ],
+    [
+      "MX",
+      "en",
+      "US",
+      1,
+      1
+    ],
+    [
+      "US",
+      "en",
+      "US",
+      4162,
+      177
+    ],
+    [
+      "US",
+      "es",
+      "US",
+      222,
+      6
+    ],
+    [
+      "US",
+      "fr",
+      "US",
+      86,
+      1
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "device_region",
+      "Nullable(String)"
+    ],
+    [
+      "app_locale",
+      "Nullable(String)"
+    ],
+    [
+      "content_region",
+      "Nullable(String)"
+    ],
+    [
+      "total_events",
+      "UInt64"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}
+
+== Daily Puzzle localization coverage by build (last 14 days) ==
+{
+  "cache_key": "cache_560852_703815415ede1606f29462989dfd068933194a7c82f8f0dfb5ecd89694e67c14",
+  "cache_target_age": "2026-09-18T20:24:55.201553Z",
+  "calculation_trigger": null,
+  "clickhouse": "SELECT\n    nullIf(nullIf(events.mat_app_version, ''), 'null') AS app_version,\n    if(has(events.properties_group_custom, %(hogql_val_0)s), events.properties_group_custom[%(hogql_val_1)s], NULL) AS build_number,\n    if(has(events.properties_group_custom, %(hogql_val_2)s), events.properties_group_custom[%(hogql_val_3)s], NULL) AS puzzle_locale,\n    if(has(events.properties_group_custom, %(hogql_val_4)s), events.properties_group_custom[%(hogql_val_5)s], NULL) AS puzzle_localization_source,\n    count() AS total_events,\n    uniq(events.distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(equals(events.team_id, 560852), greaterOrEquals(events.timestamp, minus(now64(6, %(hogql_val_6)s), toIntervalDay(14))), like(events.event, %(hogql_val_7)s))\nGROUP BY\n    app_version,\n    build_number,\n    puzzle_locale,\n    puzzle_localization_source\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total_events DESC\nLIMIT 101\nOFFSET 0 SETTINGS readonly=2, max_execution_time=10, max_threads=60, allow_experimental_object_type=1, max_ast_elements=4000000, max_expanded_ast_elements=4000000, max_bytes_before_external_group_by=0, transform_null_in=1, optimize_min_equality_disjunction_chain_length=4294967295, optimize_rewrite_aggregate_function_with_if=0, optimize_min_inequality_conjunction_chain_length=4294967295, allow_experimental_join_condition=1, use_hive_partitioning=0",
+  "columns": [
+    "app_version",
+    "build_number",
+    "puzzle_locale",
+    "puzzle_localization_source",
+    "total_events",
+    "unique_users"
+  ],
+  "error": null,
+  "explain": null,
+  "hasMore": false,
+  "hogql": "SELECT\n    properties.app_version AS app_version,\n    properties.build_number AS build_number,\n    properties.puzzle_locale AS puzzle_locale,\n    properties.puzzle_localization_source AS puzzle_localization_source,\n    count() AS total_events,\n    uniq(distinct_id) AS unique_users\nFROM\n    events\nWHERE\n    and(greaterOrEquals(timestamp, minus(now(), toIntervalDay(14))), like(event, 'daily_puzzle_%'))\nGROUP BY\n    app_version,\n    build_number,\n    puzzle_locale,\n    puzzle_localization_source\nORDER BY\n    app_version DESC,\n    build_number DESC,\n    total_events DESC\nLIMIT 101\nOFFSET 0",
+  "is_cached": false,
+  "last_refresh": "2026-09-18T14:24:55.201553Z",
+  "limit": 100,
+  "metadata": null,
+  "modifiers": {
+    "bounceRateDurationSeconds": null,
+    "bounceRatePageViewMode": "count_pageviews",
+    "convertToProjectTimezone": true,
+    "cookielessTrafficIsRegular": null,
+    "customBotDefinitions": null,
+    "customChannelTypeRules": null,
+    "dataWarehouseEventsModifiers": null,
+    "debug": null,
+    "forceClickhouseDataSkippingIndexes": null,
+    "formatCsvAllowDoubleQuotes": null,
+    "inCohortVia": "subquery",
+    "inlineCohortCalculation": "auto",
+    "materializationMode": "legacy_null_as_null",
+    "materializedColumnsOptimizationMode": null,
+    "mergeFederatedAggregateJoins": null,
+    "optimizeJoinedFilters": false,
+    "optimizeProjections": true,
+    "parserMode": null,
+    "personsArgMaxVersion": "auto",
+    "personsJoinMode": null,
+    "personsOnEventsMode": "person_id_override_properties_on_events",
+    "propertyGroupsMode": "optimized",
+    "pushDownPredicates": null,
+    "s3TableUseInvalidColumns": null,
+    "sessionIdPushdown": false,
+    "sessionPropertyPreAggregation": false,
+    "sessionTableVersion": "auto",
+    "sessionsV2JoinMode": "uuid",
+    "timings": null,
+    "typeAwareCastSimplification": null,
+    "useMaterializedViews": true,
+    "usePreaggregatedIntermediateResults": null,
+    "usePreaggregatedTableTransforms": null,
+    "useWebAnalyticsPreAggregatedTables": null,
+    "webAnalyticsFirstPageviewFilters": null
+  },
+  "next_allowed_client_refresh": "2026-09-18T14:25:55.201553Z",
+  "offset": 0,
+  "query": null,
+  "query_metadata": {
+    "events": [],
+    "updated_at": "2026-09-18T14:24:55.747826Z"
+  },
+  "query_scan": null,
+  "query_status": null,
+  "resolved_compare_date_range": null,
+  "resolved_date_range": null,
+  "results": [
+    [
+      "4.25.40",
+      "11",
+      null,
+      null,
+      231,
+      31
+    ],
+    [
+      "4.25.40",
+      "11",
+      "en",
+      "canonical",
+      219,
+      39
+    ],
+    [
+      "4.25.39",
+      "9",
+      null,
+      null,
+      4,
+      1
+    ],
+    [
+      "4.25.39",
+      "8",
+      null,
+      null,
+      4,
+      1
+    ]
+  ],
+  "timezone": "UTC",
+  "timings": null,
+  "types": [
+    [
+      "app_version",
+      "Nullable(String)"
+    ],
+    [
+      "build_number",
+      "Nullable(String)"
+    ],
+    [
+      "puzzle_locale",
+      "Nullable(String)"
+    ],
+    [
+      "puzzle_localization_source",
+      "Nullable(String)"
+    ],
+    [
+      "total_events",
+      "UInt64"
+    ],
+    [
+      "unique_users",
+      "UInt64"
+    ]
+  ],
+  "used_data_warehouse_sources": null,
+  "warnings": null
+}

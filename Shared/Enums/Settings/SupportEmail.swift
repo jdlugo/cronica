@@ -1,15 +1,8 @@
-//
-//  SupportEmail.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 22/01/23.
-//
-
 import SwiftUI
 
 struct SupportEmail {
-    let toAddress: String = "support@eggerco.com"
-    let subject: String = "Support Email (Cronica App)"
+    let toAddress: String = "contact@streamingnowapp.com"
+    let subject: String = "Support Email"
     let messageHeader: String = "Feedback:"
     var body: String {"""
         \(messageHeader)

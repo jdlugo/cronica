@@ -1,10 +1,3 @@
-//
-//  AppThemeModifier.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 03/01/23.
-//
-
 import SwiftUI
 
 struct AppThemeModifier: ViewModifier {

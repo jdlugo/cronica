@@ -1,10 +1,3 @@
-//
-//  Int-Extensions.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 03/02/23.
-//
-
 import Foundation
 
 extension Int {

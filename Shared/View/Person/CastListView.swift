@@ -1,10 +1,3 @@
-//
-//  CastListView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 29/01/22.
-//
-
 import SwiftUI
 
 /// A horizontal list that displays a limited number of
@@ -19,7 +12,7 @@ struct CastListView: View {
                     .padding(.leading, 64)
 #else
                 NavigationLink(value: credits) {
-                    TitleView(title: NSLocalizedString("Cast & Crew", comment: ""), showChevron: true)
+                    TitleView(title: "Cast & Crew", showChevron: true)
                 }
                 .buttonStyle(.plain)
 #endif
@@ -63,6 +56,7 @@ private struct DrawingConstants {
     static let profileWidth: CGFloat = 140
     static let profileHeight: CGFloat = 200
     static let shadowRadius: CGFloat = 2
-    static let profileRadius: CGFloat = 12
+    static let profileRadius: CGFloat = 8
     static let lineLimit: Int = 1
+    static let padding: CGFloat = 16
 }

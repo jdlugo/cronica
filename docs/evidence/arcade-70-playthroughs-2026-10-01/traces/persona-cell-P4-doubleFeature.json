@@ -1,0 +1,143 @@
+{
+  "accepted_action_count" : 2,
+  "action_count" : 2,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs|||arcade.card.2:Inception:Selected",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs||",
+      "displayed_label" : "Inception",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.2",
+      "type" : "selection",
+      "visible_feedback" : ""
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 3 points|arcade.pairs:1 of 3 pairs|||arcade.card.2:Inception:Matched|arcade.card.4:Titanic:Matched",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:0 of 3 pairs|||arcade.card.2:Inception:Selected",
+      "displayed_label" : "Titanic",
+      "points" : "Up to 3 points",
+      "target" : "arcade.card.4",
+      "type" : "attempt",
+      "visible_feedback" : "Connected by Leonardo DiCaprio!"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:0\/3 points|||",
+      "before_feedback" : "Connected by Leonardo DiCaprio!",
+      "before_signature" : "arcade.points:Up to 3 points|arcade.pairs:1 of 3 pairs|||arcade.card.2:Inception:Matched|arcade.card.4:Titanic:Matched",
+      "displayed_label" : "Reveal & move on · 0 points",
+      "points" : "0\/3 points",
+      "target" : "arcade.skip",
+      "type" : "administrative_reveal",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Clayface",
+        "Close",
+        "Colony",
+        "Coyote vs. Acme",
+        "Daily Puzzle, New Today, Recognize the movie from the image., 4 movies. Four choices. Just tap., Play Puzzle",
+        "Digger",
+        "East of Eden",
+        "Explore",
+        "Games",
+        "Home",
+        "La bola negra",
+        "Latest Movies, Recently Released",
+        "Movie Arcade, A daily mix. Three great places to start.",
+        "Notifications",
+        "Other Mommy",
+        "Pan's Labyrinth",
+        "Play another",
+        "Resident Evil",
+        "Runner",
+        "Search",
+        "Settings",
+        "Street Fighter",
+        "The Fix",
+        "The Uprising",
+        "Trending, Today",
+        "Try a different game",
+        "Up Coming, Coming Soon To Theaters",
+        "Verity",
+        "Watchlist"
+      ],
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 45.660790920257568,
+  "attempt_count" : 1,
+  "declared_prior_facts" : [
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "ocean liner",
+      "title" : "Titanic",
+      "year" : "1997"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "simulation",
+      "title" : "The Matrix",
+      "year" : "1999"
+    },
+    {
+      "actors" : "Sam Neill",
+      "plot_words" : "dinosaurs",
+      "title" : "Jurassic Park",
+      "year" : "1993"
+    },
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "dreams",
+      "title" : "Inception",
+      "year" : "2010"
+    },
+    {
+      "actors" : "Tom Hanks",
+      "plot_words" : "cowboy toy, space-ranger",
+      "title" : "Toy Story",
+      "year" : "1995"
+    }
+  ],
+  "declared_prior_titles" : [
+    "Titanic",
+    "The Matrix",
+    "Jurassic Park",
+    "Inception",
+    "Toy Story"
+  ],
+  "game" : "doubleFeature",
+  "help_count" : 0,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "revealed_after_stop",
+  "payment_gate_found" : false,
+  "persona" : "P4",
+  "points_label" : "0\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n0\/3 points\nDouble Feature\nNow you know!\nA fresh round is waiting.\nTitanic + Inception · Leonardo DiCaprio\nThe Matrix + John Wick · Keanu Reeves\nBarbie + La La Land · Ryan Gosling\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : false,
+  "resumed" : false,
+  "runtime_seconds" : 45.660790920257568,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "Remaining connection outside declared actor knowledge",
+  "utility_action_found" : true,
+  "vision_wait_seconds" : 0
+}

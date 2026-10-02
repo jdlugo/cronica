@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://streaming-now.app/contracts/daily-reel/v1/experience-config.schema.json",
+  "title": "Daily Reel Experience Configuration v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "configVersion",
+    "configId",
+    "scoringVersion",
+    "maxIncorrectAttemptsPerAct",
+    "actOrder",
+    "assistance",
+    "results",
+    "festival"
+  ],
+  "properties": {
+    "configVersion": { "const": "daily-reel-experience.v1" },
+    "configId": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "scoringVersion": { "const": "daily-reel-score.v1" },
+    "maxIncorrectAttemptsPerAct": { "const": 3 },
+    "actOrder": {
+      "type": "array",
+      "prefixItems": [
+        { "const": "decode" },
+        { "const": "connect" },
+        { "const": "arrange" }
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "assistance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["titleLength", "standardHint"],
+      "properties": {
+        "titleLength": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enabled", "scoreImpact"],
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "scoreImpact": { "const": 0 }
+          }
+        },
+        "standardHint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enabled", "scoreImpact"],
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "scoreImpact": { "const": 1 }
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rematchProminence", "pickTonightEnabled"],
+      "properties": {
+        "rematchProminence": { "const": "primary" },
+        "pickTonightEnabled": { "type": "boolean" }
+      }
+    },
+    "festival": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetDistinctReels", "encoreRewardCount"],
+      "properties": {
+        "targetDistinctReels": { "const": 5 },
+        "encoreRewardCount": { "const": 1 }
+      }
+    }
+  }
+}

@@ -1,12 +1,12 @@
 //
 //  UpcomingListView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 18/07/23.
 //
 
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct UpcomingListView: View {
     static let tag: Screens? = .upcoming
@@ -28,7 +28,7 @@ struct UpcomingListView: View {
     var items: FetchedResults<WatchlistItem>
     var body: some View {
         NavigationStack {
-            list(items: items.filter { $0.backCompatibleCardImage != nil && $0.itemUpcomingReleaseDate > Date() && !$0.isArchive }.sorted(by: { $0.itemUpcomingReleaseDate < $1.itemUpcomingReleaseDate}))
+			list(items: items.filter { $0.backCompatibleCardImage != nil && $0.itemUpcomingReleaseDate > Date() && !$0.isArchive }.sorted(by: { $0.itemUpcomingReleaseDate < $1.itemUpcomingReleaseDate}))
         }
     }
     
@@ -59,24 +59,21 @@ struct UpcomingListView: View {
     
     private func itemRow(_ item: WatchlistItem) -> some View {
         HStack {
-            LazyImage(url: item.backCompatibleCardImage) { state in
-                if let image = state.image {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } else {
-                    ZStack {
-                        Rectangle().fill(.gray.gradient)
-                        Image(systemName: "popcorn")
-                            .fontWidth(.expanded)
-                            .foregroundColor(.white.opacity(0.8))
-                            .padding([.horizontal, .bottom])
-                    }
-                    .unredacted()
-                    .frame(width: DrawingConstants.imageWidth,
-                           height: DrawingConstants.imageHeight)
+            WebImage(url: item.backCompatibleCardImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "popcorn.fill")
+                        .fontWidth(.expanded)
+                        .foregroundColor(.white.opacity(0.8))
+                        .padding([.horizontal, .bottom])
                 }
+                .unredacted()
+                .frame(width: DrawingConstants.imageWidth,
+                       height: DrawingConstants.imageHeight)
             }
+            .aspectRatio(contentMode: .fill)
             .transition(.opacity)
             .frame(width: DrawingConstants.imageWidth,
                    height: DrawingConstants.imageHeight)
@@ -104,6 +101,6 @@ struct UpcomingListView: View {
 private struct DrawingConstants {
     static let imageWidth: CGFloat = 70
     static let imageHeight: CGFloat = 50
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let textLimit: Int = 1
 }

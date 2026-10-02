@@ -1,10 +1,3 @@
-//
-//  WatchProviders.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 14/01/23.
-//
-
 import Foundation
 
 struct WatchProviders: Codable, Hashable {
@@ -28,7 +21,7 @@ struct Results: Codable, Hashable {
     var fi, fr, gb: ProviderItem?
     var gf: ProviderItem?
     var gr, gt, hk, hn: ProviderItem?
-    var hr, hu, id, ie, il: ProviderItem?
+    var hr, hu, id, ie: ProviderItem?
     var resultsIN: ProviderItem?
     var iq: ProviderItem?
     var resultsIS, it, jm, jo: ProviderItem?
@@ -93,7 +86,6 @@ struct Results: Codable, Hashable {
         case hu = "HU"
         case id = "ID"
         case ie = "IE"
-        case il = "IL"
         case resultsIN = "IN"
         case iq = "IQ"
         case resultsIS = "IS"

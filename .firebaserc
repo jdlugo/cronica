@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "admob-app-id-9658087638"
+  },
+  "targets": {
+    "admob-app-id-9658087638": {
+      "hosting": {
+        "daily-reel": [
+          "streaming-now-daily-reel"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

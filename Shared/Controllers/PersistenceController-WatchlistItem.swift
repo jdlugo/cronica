@@ -1,10 +1,3 @@
-//
-//  PersistenceController-WatchlistItem.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 14/02/23.
-//
-
 import Foundation
 import CoreData
 
@@ -12,7 +5,11 @@ extension PersistenceController {
     // MARK: Basic CRUD
     /// Creates a new WatchlistItem and saves it.
     /// - Parameter content: The content that is used to populate the new WatchlistItem.
-    func save(_ content: ItemContent) {
+    @discardableResult
+    func save(_ content: ItemContent) -> Bool {
+        // Core Data raises an Objective-C exception when saving without a
+        // loaded store; a Swift catch cannot recover from that startup failure.
+        guard !container.persistentStoreCoordinator.persistentStores.isEmpty else { return false }
         if !self.isItemSaved(id: content.itemContentID) {
             let item = WatchlistItem(context: container.viewContext)
             item.contentType = content.itemContentMedia.toInt
@@ -52,8 +49,26 @@ extension PersistenceController {
                 item.nextSeasonNumber = Int64(content.nextEpisodeToAir?.seasonNumber ?? 0)
 			}
             item.formattedDate = content.itemTheatricalString
-            save()
+            do {
+                try container.viewContext.save()
+            } catch {
+                // Remove only this failed insertion, preserving other edits.
+                container.viewContext.delete(item)
+                return false
+            }
+#if os(iOS)
+            let milestoneRequest: NSFetchRequest<WatchlistItem> = WatchlistItem.fetchRequest()
+            let watchlistCount = (try? container.viewContext.count(for: milestoneRequest)) ?? 0
+            if watchlistCount >= 5 {
+                ReviewPromptCoordinator.shared.recordMilestone(.fifthWatchlistItem)
+                NotificationCenter.default.post(
+                    name: .reviewPromptMilestoneEarned,
+                    object: ReviewPromptMilestone.fifthWatchlistItem
+                )
+            }
+#endif
         }
+        return true
     }
     
     func fetch(for id: String) -> WatchlistItem? {
@@ -194,14 +209,6 @@ extension PersistenceController {
             item.displayOnUpNext.toggle()
         }
         save()
-        if !item.isArchive {
-            Task {
-                let newValues = try? await NetworkService.shared.fetchItem(id: item.itemId,
-                                                                     type: item.itemMedia)
-                guard let newValues else { return }
-                self.update(item: newValues)
-            }
-        }
     }
     
     func updateReview(for item: WatchlistItem, rating: Int, notes: String) {

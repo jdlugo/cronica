@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://streaming-now.app/contracts/daily-reel/v1/published-reel.schema.json",
+  "title": "Daily Reel Published Projection v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contractVersion",
+    "publicationId",
+    "contentVersion",
+    "scoringVersion",
+    "publicationWindow",
+    "defaultLocale",
+    "supportedLocales",
+    "scoring",
+    "localized"
+  ],
+  "properties": {
+    "contractVersion": { "const": "daily-reel.v1" },
+    "publicationId": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "contentVersion": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "scoringVersion": { "const": "daily-reel-score.v1" },
+    "publicationWindow": { "$ref": "#/$defs/publicationWindow" },
+    "defaultLocale": { "const": "en" },
+    "supportedLocales": {
+      "type": "array",
+      "prefixItems": [
+        { "const": "en" },
+        { "const": "fr-FR" },
+        { "const": "es-ES" },
+        { "const": "es-MX" },
+        { "const": "pt-BR" }
+      ],
+      "items": false,
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "scoring": { "$ref": "#/$defs/scoring" },
+    "localized": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "fr-FR", "es-ES", "es-MX", "pt-BR"],
+      "properties": {
+        "en": { "$ref": "#/$defs/localizedContent" },
+        "fr-FR": { "$ref": "#/$defs/localizedContent" },
+        "es-ES": { "$ref": "#/$defs/localizedContent" },
+        "es-MX": { "$ref": "#/$defs/localizedContent" },
+        "pt-BR": { "$ref": "#/$defs/localizedContent" }
+      }
+    }
+  },
+  "$defs": {
+    "publicationWindow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["availableAt", "expiresAt"],
+      "properties": {
+        "availableAt": { "type": "string", "format": "date-time" },
+        "expiresAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maxScore", "perActMax", "maxIncorrectAttemptsPerAct"],
+      "properties": {
+        "maxScore": { "const": 300 },
+        "perActMax": { "const": 100 },
+        "maxIncorrectAttemptsPerAct": { "const": 3 }
+      }
+    },
+    "assistOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "label", "scoreImpact"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "kind": { "enum": ["titleLength", "hint"] },
+        "label": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "scoreImpact": { "enum": [0, 1] }
+      }
+    },
+    "film": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "posterPath"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "posterPath": { "type": ["string", "null"], "maxLength": 240 }
+      }
+    },
+    "choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "label": { "type": "string", "minLength": 1, "maxLength": 120 }
+      }
+    },
+    "decodeAct": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role", "prompt", "emoji", "assistOptions"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "role": { "const": "decode" },
+        "prompt": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "emoji": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 24 },
+          "minItems": 2,
+          "maxItems": 8
+        },
+        "assistOptions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/assistOption" },
+          "minItems": 1,
+          "maxItems": 3
+        }
+      }
+    },
+    "connectAct": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role", "prompt", "films", "choices", "assistOptions"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "role": { "const": "connect" },
+        "prompt": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "films": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/film" },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "choices": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/choice" },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "assistOptions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/assistOption" },
+          "minItems": 1,
+          "maxItems": 2
+        }
+      }
+    },
+    "arrangeAct": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role", "prompt", "films", "assistOptions"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "role": { "const": "arrange" },
+        "prompt": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "films": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/film" },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "assistOptions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/assistOption" },
+          "minItems": 1,
+          "maxItems": 2
+        }
+      }
+    },
+    "localizedContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["theme", "shareText", "acts"],
+      "properties": {
+        "theme": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "shareText": { "type": "string", "minLength": 1, "maxLength": 180 },
+        "acts": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/decodeAct" },
+            { "$ref": "#/$defs/connectAct" },
+            { "$ref": "#/$defs/arrangeAct" }
+          ],
+          "items": false,
+          "minItems": 3,
+          "maxItems": 3
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,742 @@
+/*
+  Localizable.strings
+  Story
+
+  Created by Alexandre Madeira on 03/03/22.
+  
+*/
+
+// MARK: Settings
+// MARK: General
+"settingsBehaviorTitle" = "動作";
+"settingsAppearanceTitle" = "外観";
+"settingsGeneralTitle" = "一般";
+"settingsSyncTitle" = "同期";
+"settingsReviewCronica" = "App StoreでStreaming Nowをレビュー";
+"settingsPrivacyPolicy" = "プライバシーポリシー";
+"settingsDisableTelemetryTitle" = "クラッシュレポートの無効化";
+"settingsDisableTelemetrySubtitle" = "Streaming Nowは最小限のデータを収集してアプリのクラッシュを最小限に抑えます。このデータは匿名です。詳細についてはプライバシーポリシーをご覧ください。";
+"settingsFeedbackTitle" = "フィードバックを送信";
+"settingsPrivacySupportTitle" = "プライバシーとサポート";
+"settingsDeveloperOptions" = "開発者向け設定";
+
+// MARK: BehaviorSetting
+"behaviorDoubleTapTitle" = "カバー画像のダブルタップ";
+"behaviorDoubleTapSubtitle" = "カバー画像をダブルタップしたときに実行する機能を選択します。";
+"behaviorGestureTitle" = "ジェスチャー";
+"behaviorYouTubeTitle" = "YouTubeで予告編を開く";
+"behaviorLinkTitle" = "リンク";
+"behaviorTitle" = "動作";
+"behaviorEpisodeTitle" = "エピソードを視聴済みとしてマークするにはタップ";
+"hapticFeedbackTitle" = "触覚フィードバック";
+"behaviorSwipeTitle" = "スワイプジェスチャー";
+"behaviorAllowFullSwipeTitle" = "フルスワイプを許可";
+"behaviorAllowFullSwipeSubtitle" = "フルスワイプで主要なアクションを実行します";
+"behaviorPrimaryLeftGesture" = "プライマリ左ジェスチャー";
+"behaviorSecondaryLeftGesture" = "セカンダリ左ジェスチャー";
+"behaviorPrimaryRightGesture" = "プライマリ右ジェスチャー";
+"behaviorSecondaryRightGesture" = "セカンダリ右ジェスチャー";
+"resetToDefault" = "デフォルトにリセット";
+
+// MARK: AppearanceSetting
+"appearanceRowTypeTitle" = "ウォッチリストの情報";
+"appearanceRowTypeSubtitle" = "表示する情報のタイプを選択します。";
+"appearanceWatchlist" = "ウォッチリスト";
+"appearanceSendFeedback" = "フィードバックを送信";
+"appearanceTitle" = "外観";
+"appearanceThemeTitle" = "アプリの色調";
+"appearanceTheme" = "テーマ";
+"appearanceRowStyleTitle" = "ウォッチリストのアイテムスタイル";
+"appearanceRowStyleSubtitle" = "ウォッチリストの表示方法を選択します。";
+"appearanceAppThemeTitle" = "アプリのテーマ";
+"disableTranslucentTitle" = "半透明背景を無効にする";
+"appearanceExploreDisplayType" = "探索の表示設定";
+"appearanceExplore" = "探索";
+"appearanceListsDisplayType" = "リストの表示設定";
+"appearanceLists" = "リスト";
+
+// MARK: SyncSetting
+"syncSettingsUpdateWatchlistTitle" = "アイテムの更新";
+"syncSettingsUpdateWatchlistSubtitle" = "新しい情報でアイテムを更新します（TMDbで利用可能な場合）。";
+"syncSettingsWatchlistTitle" = "ウォッチリスト";
+"syncSettingsTitle" = "同期";
+
+// MARK: AcknowledgementsSettings
+"acknowledgmentsAppIconTitle" = "アイコンデザイナー";
+"acknowledgmentsAppIconSubtitle" = "Akhmad";
+"acknowledgmentsContentProviderTitle" = "コンテンツ提供元";
+"acknowledgmentsContentProviderSubtitle" = "TMDb";
+"acknowledgmentsSDWebImage" = "SDWebImageSwiftUI";
+"settingsAcknowledgments" = "謝辞";
+"settingsAcknowledgmentsFooter" = "Streaming Nowを可能にしたすべての方々に感謝します。";
+"acknowledgmentsTitle" = "謝辞";
+"acknowledgmentsUserTitle" = "フィードバックとサポート、ありがとうございます！";
+
+
+// MARK: TipJarSetting
+"tipJarTitle" = "広告を削除";
+"tipJarFooter" = "任意の一度のお支払いでStreaming Now全体の広告を削除し、アプリの開発を応援できます。";
+"restorePurchases" = "購入を復元";
+
+// MARK: AppThemeColors
+"appThemeColorsBlue" = "ブルー";
+"appThemeColorsRed" = "レッド";
+"appThemeColorsGreen" = "グリーン";
+"appThemeColorsBrown" = "ブラウン";
+"appThemeColorsCyan" = "シアン";
+"appThemeColorsGray" = "グレー";
+"appThemeColorsIndigo" = "インディゴ";
+"appThemeColorsMint" = "ミント";
+"appThemeColorsOrange" = "オレンジ";
+"appThemeColorsPink" = "ピンク";
+"appThemeColorsPurple" = "パープル";
+"appThemeColorsTeal" = "ティール";
+"appThemeColorsYellow" = "イエロー";
+
+// MARK: WatchlistItemType
+"watchlistItemTypeList" = "リスト";
+"watchlistItemTypePoster" = "ポスター";
+"watchlistItemTypeCard" = "カード";
+
+// MARK: AppTheme
+"appThemeSystem" = "システム";
+"appThemeLight" = "ライト";
+"appThemeDark" = "ダーク";
+
+// MARK: WatchProviderOption
+"watchProviderBr" = "ブラジル";
+"watchProviderUs" = "アメリカ合衆国";
+"watchProviderAe" = "アラブ首長国連邦";
+"watchProviderAr" = "アルゼンチン";
+"watchProviderAt" = "オーストリア";
+"watchProviderAu" = "オーストラリア";
+"watchProviderBe" = "ベルギー";
+"watchProviderBg" = "ブルガリア";
+"watchProviderCa" = "カナダ";
+"watchProviderCh" = "スイス";
+"watchProviderCz" = "チェコ共和国";
+"watchProviderDe" = "ドイツ";
+"watchProviderDk" = "デンマーク";
+"watchProviderEe" = "エストニア";
+"watchProviderEs" = "スペイン";
+"watchProviderFi" = "フィンランド";
+"watchProviderFr" = "フランス";
+"watchProviderGb" = "イギリス";
+"watchProviderHk" = "香港";
+"watchProviderHr" = "クロアチア";
+"watchProviderHu" = "ハンガリー";
+"watchProviderId" = "インドネシア";
+"watchProviderIe" = "アイルランド";
+"watchProviderIndia" = "インド";
+"watchProviderIt" = "イタリア";
+"watchProviderJp" = "日本";
+"watchProviderKr" = "韓国";
+"watchProviderLt" = "リトアニア";
+"watchProviderMx" = "メキシコ";
+"watchProviderNl" = "オランダ";
+"watchProviderNo" = "ノルウェー";
+"watchProviderNz" = "ニュージーランド";
+"watchProviderPh" = "フィリピン";
+"watchProviderPl" = "ポーランド";
+"watchProviderPt" = "ポルトガル";
+"watchProviderRs" = "セルビア";
+"watchProviderSk" = "スロバキア";
+"watchProviderTr" = "トルコ";
+"watchProviderSe" = "スウェーデン";
+"watchProviderZa" = "南アフリカ";
+
+// MARK: Notification content
+"The next episode is set to arrive today." = "次のエピソードは今日到着予定です。";
+"Next episode arrives today." = "次のエピソードが今日到着します。";
+"The movie will be released today." = "今日、映画が公開されます。";
+
+
+//MARK: Common
+"Done" = "完了";
+"No details available." = "詳細情報はありません。";
+"Not Available" = "利用不可";
+"No information available" = "情報なし";
+"No title available" = "タイトルなし";
+"Up Coming" = "近日公開";
+"Upcoming Episodes" = "次回エピソード";
+"Arriving Soon" = "間もなく到着";
+"Latest Movies" = "最新の映画";
+"Latest Shows" = "最新の番組";
+"Upcoming Movies" = "公開予定の映画";
+"TV Show" = "テレビ番組";
+"Movie" = "映画";
+"People" = "人物";
+"Popular Movies" = "人気の映画";
+"Movies" = "映画";
+"TV Shows" = "テレビ番組";
+"Sort" = "並べ替え";
+"Media Type" = "メディアタイプ";
+"Default" = "デフォルト";
+"Favorites" = "お気に入り";
+"To Watch" = "視聴予定";
+"Unwatched" = "未視聴";
+"Watched" = "視聴済み";
+"Upcoming Movies" = "公開予定の映画";
+"Upcoming Seasons" = "次回シーズン";
+"Renewed Series" = "更新済みのシリーズ";
+"Releasing Soon" = "まもなく公開";
+"Recently Released" = "最近公開された";
+"Remove" = "削除";
+"Added to watchlist" = "ウォッチリストに追加されました";
+"Mark as" = "マーク";
+"Add to Favorites" = "お気に入りに追加";
+"Share" = "共有";
+"Mark this and previous episodes as watched" = "このエピソードと前のエピソードを視聴済みとしてマーク";
+"No Episode Available" = "エピソードが利用できません";
+"Season Marked as Watched" = "シーズンが視聴済みとしてマークされました";
+"No biography available." = "伝記情報はありません。";
+"No information available." = "情報なし";
+"No title available" = "タイトルなし";
+"No Name Found" = "名前が見つかりません";
+"Not Available" = "利用不可";
+"Remove Selected" = "選択したものを削除";
+"Mark selected as watched" = "選択したものを視聴済みとしてマーク";
+"Mark selected as unwatched" = "選択したものを未視聴としてマーク";
+"Open in" = "開く";
+"IMDb" = "IMDb";
+"TMDb" = "TMDb";
+"Coming Soon To Theaters" = "劇場に近日公開";
+"Pins" = "ピン";
+"Email (optional)" = "メール（オプション）";
+"Open in YouTube" = "YouTubeで開く";
+"List Filters" = "リストのフィルター";
+"Add to List" = "リストに追加";
+"Remove from List" = "リストから削除";
+"Pinned Items" = "ピン留めされたアイテム";
+"Show Details" = "詳細を表示";
+"Archive" = "アーカイブ";
+"Archive Item" = "アーカイブアイテム";
+"Remove from Archive" = "アーカイブから削除";
+"Be reminded of upcoming Movies & TV Shows." = "公開予定の映画とテレビ番組のリマインダーを設定します。";
+"Your smart Watchlist" = "スマートウォッチリスト";
+"addAndMarkWatchedButton" = "追加して視聴済みとしてマーク";
+"markedAsWatched" = "視聴済みとしてマーク済み";
+"removedFromWatched" = "視聴済みから削除済み";
+"markedAsFavorite" = "お気に入りとしてマーク済み";
+"removedFromFavorites" = "お気に入りから削除済み";
+
+//MARK: AttributionView.swift
+"This product uses the TMDb API but is not endorsed or certified by TMDb." = "この製品はTMDb APIを使用していますが、TMDbの公式な認証は受けていません。";
+
+//MARK: ContentDetailsView.swift
+"Add to watchlist" = "ウォッチリストに追加";
+"Remove from watchlist" = "ウォッチリストから削除";
+"About" = "詳細";
+"Trailers" = "予告編";
+"Seasons" = "シーズン";
+"Recommendations" = "おすすめ";
+"You may like" = "あなたにオススメ";
+"Mark as Watched" = "視聴済みとしてマーク";
+"Remove from Watched" = "視聴済みから削除";
+"Mark as Favorite" = "お気に入りとしてマーク";
+"Remove from Favorites" = "お気に入りから削除";
+"Ratings Score" = "評価スコア";
+
+
+//MARK: ExploreView.swift
+"Explore" = "探索";
+"Action" = "アクション";
+"Adventure" = "アドベンチャー";
+"Animation" = "アニメーション";
+"Comedy" = "コメディ";
+"Crime" = "犯罪";
+"Documentary" = "ドキュメンタリー";
+"Drama" = "ドラマ";
+"Family" = "ファミリー";
+"Fantasy" = "ファンタジー";
+"History" = "歴史";
+"Horror" = "ホラー";
+"Music" = "音楽";
+"Mystery" = "ミステリー";
+"Romance" = "ロマンス";
+"Science Fiction" = "SF";
+"Thriller" = "スリラー";
+"War" = "戦争";
+"Action & Adventure" = "アクション＆アドベンチャー";
+"Kids" = "キッズ";
+"Reality" = "リアリティ";
+"Sci-Fi & Fantasy" = "SF＆ファンタジー";
+"Genres" = "ジャンル";
+"Popular Movies by Genre" = "ジャンル別人気映画";
+"Popular TV Shows by Genre" = "ジャンル別人気テレビ番組";
+
+//MARK: InformationSectionView.swift
+"Run Time" = "再生時間";
+"Release Date" = "公開日";
+"Status" = "ステータス";
+"Genre" = "ジャンル";
+"Region of Origin" = "制作地域";
+"Production Company" = "制作会社";
+"Information" = "情報";
+
+//MARK: ContentView.swift
+"Home" = "ホーム";
+"Watchlist" = "ウォッチリスト";
+"Search" = "検索";
+"Cronica" = "Streaming Now";
+
+//MARK: SettingsView.swift
+"Support" = "サポート";
+"Send feedback" = "フィードバックを送信";
+"Privacy Policy" = "プライバシーポリシー";
+"Gesture" = "ジェスチャー";
+"Double Tap Gesture" = "ダブルタップジェスチャー";
+"The function is performed when double-tap the cover image." = "カバー画像をダブルタップした際に実行される機能です。";
+"Settings" = "設定";
+"Review Cronica" = "Streaming Nowをレビュー";
+"Send Feedback" = "フィードバックを送信";
+"Feedback" = "フィードバック";
+"Send" = "送信";
+"Cancel" = "キャンセル";
+"Send your suggestions to help improve Cronica." = "Streaming Nowの改善に役立つご意見を送信してください。";
+"Feedback sent" = "フィードバックを送信しました。";
+"Sync" = "同期";
+"Update Items" = "アイテムの更新";
+"'Update Items' will update your items with new information available on TMDb, if available." = "「アイテムの更新」は、利用可能な場合にTMDbの新しい情報でアイテムを更新します。";
+"Privacy" = "プライバシー";
+"Open Trailers in YouTube App" = "予告編をYouTubeアプリで開く";
+
+//MARK: HomeView.swift
+"Trending" = "トレンド中";
+"This week" = "今週";
+"Today" = "今日";
+"My Pins" = "マイピン";
+"Your pinned items" = "ピン留めしたアイテム";
+"Remove Pin" = "ピン留めを解除";
+
+//MARK: WatchlistSectionView.swift
+"Coming Soon" = "間もなく公開";
+"From Watchlist" = "ウォッチリストから";
+
+//MARK: CastDetailsView.swift
+"Biography" = "伝記";
+"Cast & Crew" = "キャスト＆クルー";
+
+//MARK: SeasonListView.swift
+"Seasons" = "シーズン";
+"Season %lld" = "シーズン %lld";
+"Episode %lld" = "エピソード %lld";
+"Mark Season as Watched" = "シーズンを視聴済みとしてマーク";
+
+//MARK: FilmographyView.swift
+"Filmography" = "フィルモグラフィー";
+"Know for" = "出演作品";
+
+//MARK: SearchView.swift
+"Search" = "検索";
+"Movies, Shows, People" = "映画、番組、人物";
+"Searching" = "検索中";
+"No Results" = "結果なし";
+"All" = "全て";
+"Shows" = "番組";
+
+
+//MARK: WatchlistView.swift
+"Your list is empty." = "リストは空です。";
+"Coming Soon" = "近日公開";
+"Now Available" = "今すぐ利用可能";
+"Released" = "リリース済み";
+"Watchlist" = "ウォッチリスト";
+"Search watchlist" = "ウォッチリストを検索";
+"In Production" = "製作中";
+"Production" = "製作";
+"Cancelled" = "キャンセル";
+"Unknown" = "不明";
+"Released Movies" = "公開済みの映画";
+"Released Shows" = "公開済みの番組";
+"Releases" = "公開";
+"Upcoming" = "公開予定";
+"No results" = "結果なし";
+"Search results" = "検索結果";
+"This list is empty." = "このリストは空です。";
+"Sort List" = "リストを並べ替え";
+"Results from Watchlist" = "ウォッチリストからの結果";
+"No results from Watchlist" = "ウォッチリストからの結果はありません";
+"Results from TMDb" = "TMDbからの結果";
+"No results from TMDb" = "TMDbからの結果はありません";
+"Pin Item" = "アイテムをピン留め";
+"Unpin Item" = "アイテムのピン留めを解除";
+"Pin Items" = "アイテムをピン留め";
+
+// MARK: Error
+"Invalid Response" = "無効な応答です。";
+"Invalid Request" = "無効なリクエストです。";
+"Invalid Endpoint" = "無効なエンドポイントです。";
+"Error reading this title" = "このタイトルを読み取る際にエラーが発生しました。";
+"Invalid API key: You must be granted a valid key." = "無効なAPIキーです。有効なキーを取得する必要があります。";
+"Internal error: Something went wrong, contact TMDB." = "内部エラー：何かがうまくいかなかったため、TMDbに連絡してください。";
+"The API is undergoing maintenance. Try again later." = "APIはメンテナンス中です。後でもう一度試してください。";
+"Error" = "エラー";
+"Cancel" = "キャンセル";
+"Retry" = "リトライ";
+
+// MARK: watchOS
+"Search TMDb" = "TMDbを検索";
+"For more details, open the companion app." = "詳細は、連携アプリを開いてください。";
+
+// MARK: Widget
+"Shows movies and TV Shows trending from TMDb." = "TMDbからトレンドのある映画とテレビ番組を表示します。";
+
+// MARK: NotificationListView
+"Notifications" = "通知";
+"Upcoming Notifications" = "今後の通知";
+"Recent Notifications" = "最近の通知";
+"No notifications" = "通知はありません";
+"Remove Notification" = "通知を削除";
+"Loading" = "読み込み中";
+"%lld upcoming notifications." = "今後 %lld 件の通知。";
+
+// MARK: WatchlistSubtitleRow
+"watchlistSubtitleRowNone" = "デフォルト";
+"watchlistSubtitleRowGenre" = "ジャンル";
+"watchlistSubtitleRowDate" = "公開日";
+
+// MARK: DoubleTapGesture
+"Watched" = "視聴済み";
+"Favorite" = "お気に入り";
+
+// MARK: WatchlistButtonView
+"removeDialogTitle" = "よろしいですか？";
+"confirmDialogAction" = "確認";
+"cancelConfirmDialogAction" = "キャンセル";
+
+
+//MARK: WelcomeView.swift
+"Welcome to" = "ようこそ";
+" Cronica" = " Streaming Now";
+"Continue" = "続ける";
+"Find" = "探す";
+"Search for upcoming movies and tv shows." = "公開予定の映画とTV番組を検索します。";
+"Never miss out" = "見逃さないでください";
+"Get notifications about the newest releases." = "最新のリリースに関する通知を受け取ります。";
+"Organize" = "整理";
+"Keep everything organized inside the Watchlist." = "ウォッチリスト内ですべてを整理します。";
+"Your Watchlist" = "ウォッチリスト";
+"Add everything you want, the Watchlist automatically organizes it for you." = "すべてを追加してください。ウォッチリストが自動的に整理します。";
+"Discover what's next" = "次に何を見つけるか";
+"The Discover will help you find your next favorite title." = "Discoverが次のお気に入りのタイトルを見つけるのを手助けします。";
+"Track your episodes" = "エピソードを追跡";
+"Keep track of every episode you've watched." = "視聴したすべてのエピソードを追跡します。";
+"Always Synced" = "常に同期済み";
+"Your Watchlist is always in sync with your Apple Watch, iPad, Mac, and Apple TV." = "ウォッチリストは常にApple Watch、iPad、Mac、Apple TVと同期されます。";
+
+//MARK: WatchProviders
+"justWatchSubtitle" = "JustWatch提供";
+"openWatchProviderTitle" = "これにより、TMDbのウェブサイトが開き、各サービスへのリンクが表示されます。";
+"confirmOpenWatchProvider" = "確認";
+"confirmOpenDontAskAgainProvider" = "確認して次回以降は表示しない";
+"cancelOpenWatchProvider" = "キャンセル";
+"watchProviderTitleList" = "視聴方法";
+"behaviorWatchProvidersTitle" = "視聴方法";
+"behaviorWatchProvidersSubtitle" = "コンテンツが利用可能なプラットフォームを確認します。";
+"watchRegionTitle" = "視聴方法の地域";
+"watchRegionSubtitle" = "視聴方法が選択された地域に適応します。";
+"contentRegionTitle" = "地域";
+"sendEmail" = "メールを送信";
+"sendEmailFooter" = "希望する場合は、迅速な対応のためにメールを送信できます。";
+"mediaTypeDiscoverFilterTitle" = "メディアタイプ";
+"genreDiscoverFilterTitle" = "ジャンル";
+"filterDiscoverTitle" = "フィルター";
+"hideAddedItemsDiscoverFilter" = "追加済みアイテムを非表示";
+"whereToWatchDiscoverFilter" = "視聴方法";
+"watchProviderToggleDiscover" = "Watch Providerのみ表示";
+"swipeGestureWatch" = "視聴";
+"swipeGestureFavorite" = "お気に入り";
+"swipeGesturePin" = "ピン留め";
+"swipeGestureArchive" = "アーカイブ";
+"swipeGestureDelete" = "削除";
+"swipeGestureShare" = "共有";
+"listName" = "リスト名";
+"shareList" = "リストを共有";
+"listBasicHeader" = "基本";
+"newCustomListTitle" = "新しいリスト";
+"listDescription" = "リストの説明";
+"createList" = "保存";
+"newList" = "新しいリスト";
+"createList" = "新しいリストを作成";
+"yourLists" = "あなたのリスト";
+"Lists" = "リスト";
+"listItemsToAdd" = "アイテムを選択";
+"cantSendFeedback" = "アプリ内でフィードバックを送信するには、'クラッシュレポートの無効化'を無効にする必要があります。";
+"addToList" = "リストに追加...";
+"companiesTitle" = "企業";
+"allCustomWatchListFilters" = "すべて";
+"moviesCustomWatchListFilters" = "映画";
+"showsCustomWatchListFilters" = "TV番組";
+"editListRemoveItems" = "アイテムを削除";
+"%lld items • %@" = "%lld 件 • %@";
+"Untitled List" = "無題のリスト";
+"%llditems" = "%lld 件";
+"Default List" = "デフォルトリスト";
+"Title" = "タイトル";
+"Media" = "メディア";
+"Person" = "人物";
+"Save" = "保存";
+"featureRoadmap" = "今後の機能";
+"featureRoadmapHeader" = "最初に表示したい次の機能に投票してください。";
+"featureRoadmapSubtitle" = "新しい機能を提案するには、'プラス'アイコンを使用します。";
+"importTitle" = "インポート";
+"exportTitle" = "エクスポート";
+"syncSettingsItemsTitle" = "アイテム";
+"generatingExportFile" =  "JSONファイルを生成しています。お待ちください。";
+"allowNotification" =  "通知を許可";
+"movieNotificationTitle" =  "映画のリリースを通知";
+"movieNotificationSubtitle" =  "ウォッチリストに追加された映画が公開された場合に通知します。";
+"episodeNotificationTitle" = "新エピソードを通知";
+"episodeNotificationSubtitle" = "ウォッチリストに追加されたTV番組の新エピソードが公開された場合に通知します。";
+"settingsNotificationTitle" = "通知";
+"changelogViewTitle" = "新着情報";
+"tipJar" = "広告を削除";
+"tipJarDescription" = "広告を削除して、Streaming Nowを応援できます。";
+"featureOneTitle" = "次に何が来るか";
+"featureOneDescription" = "お気に入りのTV番組の次のエピソードをチェックし、簡単に視聴済みにマークします。";
+"featureTwoTitle" = "パーソナライズされたおすすめ";
+"featureTwoDescription" = "Streaming Nowで視聴したコンテンツに基づいて、カスタマイズされた映画やTV番組のおすすめを受け取ります。";
+"featureThreeTitle" = "体験を調整";
+"featureThreeDescription" = "より多くの設定と改善されたUIで、Streaming Nowをお好みにカスタマイズします。";
+"thankYouTipJarMessage" = "ご購入いただき、ありがとうございます！サポートを心より感謝しております。 😁";
+"notificationsSettingsFeedbackCall" = "提案がありますか？ フィードバックを送信";
+"openNotificationInSettings" = "設定アプリで通知を編集";
+"defaultWatchlistShowAllItems" = "すべてのアイテムを表示";
+"defaultWatchlistSmartFilters" = "スマートフィルター";
+"defaultWatchlistFilters" = "フィルター";
+"More Options" = "その他のオプション";
+"addToCustomList" = "リストに追加...";
+"behaviorMarkPreviouslyEpisodes" = "新しいエピソードが視聴済みにマークされた場合、以前のすべてのエピソードもマークする";
+"changeLanguage" = "アプリ言語を変更";
+"sendEmailFooterBackup" = "メールクライアントを使用して、contact@streamingnowapp.com にメールを送信することもできます。";
+"addedToWatchlist" = "ウォッチリストに追加されました";
+"upNext" = "次に表示";
+"markAsWatched" = "視聴済みにマーク";
+"recommendationsTitle" = "おすすめ";
+"recommendationsSubtitle" = "視聴したコンテンツに基づく";
+"allItems" = "すべてのアイテム";
+"mediaTypeFiltersNoFilter" = "すべて";
+"mediaTypeFiltersMovies" = "映画";
+"mediaTypeFiltersTvShows" = "TV番組";
+"mediaTypeFilter" = "メディアでフィルタリング";
+"allItemsMovies" = "すべての映画";
+"allItemsTVShows" = "すべてのTV番組";
+"importedSucceeded" = "正常にインポートされました";
+"appearanceAppIcon" = "アプリアイコン";
+"Classical" = "クラシカル";
+"Ticket" = "チケット";
+"explorePreferredDisplayTypeCard" = "カード";
+"explorePreferredDisplayTypePoster" = "ポスター";
+"itemContentListPreferredDisplayTypeStandard" = "デフォルト";
+"itemContentListPreferredDisplayTypeCard" = "カード";
+"itemContentListPreferredDisplayTypePoster" = "ポスター";
+"appIconFeedbackTitle" = "アイコンのアイデアがありますか？ フィードバックを送信";
+"exploreDisplayTypePicker" = "表示スタイル";
+"watchlistDisplayTypePicker" = "表示スタイル";
+"cronicaGitHub" = "Streaming Now GitHub リポジトリ";
+"appearanceCompactUI" = "コンパクトなUI";
+"appearanceCompactUISubtitle" = "一部のUI要素のサイズを縮小して、画面により多くのアイテムを収めます。";
+"selectedWatchProvider" = "ストリーミングサービス";
+"selectedWatchProviderTitle" = "お気に入りのストリーミングサービス";
+"selectedWatchProviderSubtitle" = "指定したサービスのいずれかでタイトルが利用可能な場合にのみ '視聴方法' を表示します。";
+"importExportWarning" = "エクスポート/インポートはベータ版です。データのエクスポートまたはiCloudアカウントを切り替える場合にのみ使用し、重複を回避するためのロジックは現時点ではありません。将来のアップデートでより良いエクスペリエンスを提供します。";
+"tvShowDetails" = "TV番組の詳細";
+
+
+// MARK: TMDb Sync
+"AccountSettingsViewFooterHeader" = "TMDbアカウントを連携";
+"AccountSettingsViewFooter" = "TMDbアカウントを連携して、ウォッチリストとリストをインポートおよび同期します。";
+"AccountSettingsViewSignOut" = "切断";
+"AccountSettingsViewSignIn" = "連携";
+"AccountSettingsViewListsManager" = "TMDbのリスト";
+"AccountSettingsViewHeaderSignIn" = "TMDbのリストを管理";
+"removeTMDBAccount" = "TMDbアカウントを切断しますか？";
+"Confirm" = "確認";
+"tmdbLists" = "TMDbのリスト";
+"syncTMDBList" = "このリストを同期";
+"importTMDBList" = "このリストをインポート";
+"tmdbListSyncConfig" = "設定";
+"importTMDBWatchlist" = "TMDbからウォッチリストをインポート";
+"syncNow" = "TMDbと同期する";
+"Loading" = "読み込み中";
+"AccountSettingsViewWatchlist" = "TMDbウォッチリスト";
+"importingTMDB" = "ウォッチリストをインポート中です。お待ちください。";
+"needToSync %lld" = "同期可能なアイテムが%lld件あります";
+"itemsTMDB" = "ウォッチリストのアイテム";
+"syncingWatchlistTMDB" = "ウォッチリストを同期中です。お待ちください。";
+"syncWatchlist" = "ウォッチリストを同期";
+"deleteList" = "リストを削除";
+"listDeleted" = "このリストは正常に削除されました。";
+"areYouSure" = "よろしいですか？";
+"deleteConfirmationMessage" = "この操作は元に戻すことはできません。\nこれはローカルのリストは削除されませんが、TMDb上のリストは削除されます。";
+"emptyLists" = "空";
+"publishListToTMDB" = "TMDbにリストを公開";
+"publishPublic" = "公開";
+"publishPrivate" = "非公開";
+"publishTMDBMessage" = "これにより、TMDbにタイトルとアイテムが同じ名前の新しいリストが作成されます。\n希望のプライバシーレベルを選択してください:";
+
+"editNotes" = "ノートを編集";
+"createNote" = "ノートを追加";
+"reviewTitle" = "レビュー";
+"reviewOf %@" = "%@のレビュー";
+"Season" = "シーズン";
+"Rating" = "評価";
+"Notes" = "ノート";
+"enablePreferredLaunchScreen" = "優先される起動画面を有効にする";
+"preferredLaunchScreen" = "優先される起動画面";
+
+"syncInProgress" = "同期中";
+"upNextSubtitle" = "次のエピソード";
+"pinnedList" = "ピン留めリスト";
+"markThisSeasonAsWatched" = "このシーズンを視聴済みにする";
+"pinOnHome" = "このリストをホームにピン留めする";
+"markThisAndPreviously" = "このエピソードとそれ以前のすべてを視聴済みにする";
+"publishOnTMDB" = "TMDbに公開";
+"shareEpisode" = "エピソードを共有";
+"shareShow" = "TV番組を共有";
+"accentColor" = "アクセントカラー";
+"showDetails" = "詳細を表示";
+"removedFromPin" = "ピンから削除";
+"markedAsPin" = "ピン留めされました";
+"removedFromArchive" = "アーカイブから削除";
+"markedAsArchive" = "アーカイブ済み";
+
+"aboutTitle" = "について";
+"Version %@" = "バージョン %@";
+"TelemetryDeck" = "TelemetryDeck";
+"Roadmap" = "ロードマップ";
+"Developed by Alexandre Madeira" = "開発者：Alexandre Madeira";
+"Official Website" = "公式ウェブサイト";
+"%lld/10" = "%lld/10";
+"First Air Date" = "初放送日";
+"%lld Seasons • %lld Episodes" = "%lld シーズン • %lld エピソード";
+"Overview" = "概要";
+"Original Title" = "原題";
+"What's New" = "新着情報";
+
+
+"settingsRegionContentTitle" = "コンテンツと地域";
+"appRegionTitle" = "地域";
+"appRegionSubtitle" = "アプリは地域に基づいてウォッチプロバイダを適応します。";
+"Translation" = "翻訳";
+"German" = "ドイツ語";
+"Libraries" = "ライブラリ";
+"Source Code" = "ソースコード";
+"Show More" = "さらに表示";
+"Collapse" = "折りたたむ";
+"Watching" = "視聴中";
+"connectedAccounts" = "連携済みアカウント";
+"connectedAccountTMDB" = "The Movie Database";
+"importingWatchlistTMDB" = "インポート中です。お待ちください。";
+"importTMDBWatchlist" = "ウォッチリストをインポート";
+"Account" = "アカウント";
+"Ended Series" = "終了したシリーズ";
+"Create" = "作成";
+"Production Companies" = "制作会社";
+"releaseDates" = "リリース日";
+"removeFromPinOnWatchedTitle" = "アイテムを視聴済みにマークするとピンから削除";
+"Remove" = "削除";
+"openCustomListSelectorWhenAdding" = "アイテムを追加する際にリストセレクタを開く";
+"showConfirmationOnRemovingItem" = "削除確認を表示する";
+"S%d, E%d" = "シーズン%d, エピソード%d";
+"Premiere" = "初演";
+"Theatrical Limited" = "劇場限定";
+"Theatrical" = "劇場公開";
+"Digital" = "デジタル";
+"Physical" = "物理メディア";
+"TV" = "テレビ";
+"addedWatchlist" = "ウォッチリストに追加されました";
+"removedWatchlist" = "ウォッチリストから削除されました";
+"markedWatched" = "視聴済みとしてマークされました";
+"removedWatched" = "視聴済みから削除されました";
+"markedFavorite" = "お気に入りとしてマークされました";
+"removedFavorite" = "お気に入りから削除されました";
+"markedArchive" = "アーカイブ済みとしてマークされました";
+"removedArchive" = "アーカイブから削除されました";
+"markedPin" = "ピン留めされました";
+"removedPin" = "ピン留めから削除されました";
+"S%d, E%d" = "シーズン%d, エピソード%d";
+"Mark some episodes as watched to use Up Next." = "Up Nextを使用するには、いくつかのエピソードを視聴済みにマークしてください。";
+"Your upcoming items will appear here." = "ここにあなたの予定されたアイテムが表示されます。";
+"Prefer Poster in Details Page" = "詳細ページではポスターを優先";
+"Details Page" = "詳細ページ";
+"moreInfoShow" = "詳細情報";
+"markedEpisodeWatched" = "エピソードを視聴済みとしてマークしました";
+"removedEpisodeWatched" = "エピソードを視聴済みから削除しました";
+"confirmAndDeleteItems" = "確認して削除";
+"tmdbSyncFeatures" = "リストを表示し、コンテンツを管理できます。";
+"callToReviewTitle" = "Streaming Nowを楽しんでいますか？";
+"callToReviewSubtitle" = "App Storeでレビューを残してください！";
+"reviewInTheAppStore" = "アプリをレビュー";
+"dismissReviewCall" = "閉じる";
+"feedbackSent" = "フィードバックを送信しました。ありがとうございます！";
+"titleAsc" = "タイトル（昇順）";
+"titleDesc" = "タイトル（降順）";
+"dateAsc" = "日付（昇順）";
+"dateDesc" = "日付（降順）";
+"ratingAsc" = "評価（昇順）";
+"ratingDesc" = "評価（降順）";
+"Not Watched" = "未視聴";
+"Spanish" = "スペイン語";
+"emptyList" = "選択したフィルタに一致するものが見つかりませんでした。\nフィルタを変更してみてください。";
+"appearanceStyle" = "スタイルの設定";
+"appearanceSectionDetailsTitle" = "セクションの詳細スタイル";
+"appearanceHorizontalListsTitle" = "水平リストのスタイル";
+"List" = "リスト";
+"noResultsFound" = "クエリに一致するものは見つかりませんでした。\n別のクエリを試すか、タイトルがアーカイブにないか確認してみてください。";
+"shareLinkPreference" = "リンクを共有する方法を選択してください";
+"shareLinkPreferenceSubtitle" = "Streaming Nowリンクを使用して共有することを選択できます。これによりアプリケーションを開くことができます。\nすべてのコンテンツがStreaming Nowリンクで共有できるわけではないことに注意してください。アプリケーションは必要に応じて常にTMDBリンクを使用します。";
+"Edit" = "編集";
+"Delete" = "削除";
+"Swipe to Edit your list" = "リストを編集するにはスワイプ";
+"Details Page" = "詳細ページ";
+"Prefer Poster in Details Page" = "詳細ページでポスターを優先";
+"Design" = "デザイン";
+"Pin" = "ピン留め";
+
+"appearanceUpNextTitle" = "次に表示される詳細スタイル";
+"quitWhenClosingApp" = "アプリを閉じる際に終了";
+"noListFoundMessage" = "クエリに該当するリストが見つかりませんでした。別のクエリを試してください。";
+"Trending Keywords" = "トレンドキーワード";
+"Popularity" = "人気度";
+"Release Date (Descending)" = "公開日（降順）";
+"Release Date (Ascending)" = "公開日（昇順）";
+"Anime" = "アニメ";
+"Based on Video-Game" = "ビデオゲームに基づく";
+"Superhero" = "スーパーヒーロー";
+"Romantic Comedy" = "ロマンティックコメディ";
+"Based on true story" = "実話に基づく";
+"Supernatural Horror" = "超自然的ホラー";
+"Survival" = "サバイバル";
+"Space" = "宇宙";
+"Based on novel or book" = "小説に基づく";
+"Alien" = "エイリアン";
+"Crime Investigation" = "犯罪捜査";
+"Reboot" = "Reboot";
+"Spin off" = "スピンオフ";
+
+"Prefer Series Cover instead of Episode Thumbnail on Up Next" = "Up Nextでシリーズカバーを選択";
+"Hide Titles from Unwatched Episodes" = "未視聴のエピソードからタイトルを非表示";
+"To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes." = "潜在的なスポイラーを防ぐため、未視聴のエピソードからタイトルと要約を非表示にできます。";
+"Hide Thumbnails from Unwatched Episodes" = "未視聴のエピソードからサムネイルを非表示";
+"To avoid potential spoilers, you can hide thumbnails from unwatched episodes." = "潜在的なスポイラーを防ぐため、未視聴のエピソードからサムネイルを非表示にできます。";
+"Add" = "追加";
+"upNextSkipThisEpisode" = "このエピソードをスキップ";
+
+"MARK_EPISODE_WATCHED" = "シーズン%2$dのエピソード%1$dを視聴済みにしますか？";
+"Confirm Watched Episode" = "視聴済みのエピソードを確認";
+
+// MARK: Screenshot Section Headers
+"Now Playing" = "上映中";
+"Top Rated" = "高評価";
+"Popular" = "人気";
+"Similar" = "類似作品";
+
+//MARK: Puzzle Archive
+"puzzleArchiveTitle" = "パズルアーカイブ";
+"puzzleArchiveSubtitle" = "いつでも遊べるクラシック映画パズル。連続記録のプレッシャーなし！";
+"puzzleArchiveSolvedLabel" = "解決済み";
+"puzzleArchiveStarsLabel" = "スター";
+"puzzleArchiveViewArchive" = "パズルアーカイブ";
+"puzzleArchiveUnsolved" = "未解決";

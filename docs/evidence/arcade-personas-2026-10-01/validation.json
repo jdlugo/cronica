@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-01",
+  "baseline_commit": "6b249b89",
+  "reference_profiles": 7,
+  "real_participants": 0,
+  "review_agents": 3,
+  "agent_handoff_deadline_utc": "13:05",
+  "all_initial_reviews_before_deadline": true,
+  "final_adversarial_review_limit_seconds": 90,
+  "new_model_probe": {
+    "command": "bash scripts/test_arcade_personas.sh",
+    "status": "passed",
+    "asserted_checks": 70,
+    "daily_dates": 7,
+    "daily_rounds": 28,
+    "forced_practice_rounds": 36,
+    "known_answer_state_used": true,
+    "result": "model-probes.json"
+  },
+  "new_ui_test": {
+    "test": "testArcadeMemoryLargeTextCanFinishWithoutTrivia",
+    "device": "iPhone 17 Pro",
+    "runtime": "iOS 26.3",
+    "content_size": "UICTContentSizeCategoryAccessibilityXXXL",
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 92.3,
+    "result_bundle": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/result-bundles/test_sim_2026-10-01T13-05-25-057Z_pid91666_df637737.xcresult",
+    "build_log": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/logs/test_sim_2026-10-01T13-05-25-057Z_pid91666_c5561702.log",
+    "screenshots": [
+      "memory-large-text-result.png",
+      "memory-large-text-replay.png"
+    ],
+    "images_inspected": true
+  },
+  "question_status": {
+    "Q1_replay": "Human voluntary continuation unanswered; local routes and trivia gate identified.",
+    "Q2_tomorrow": "Sampled catalog exposure/repetition measured; perceived novelty/return unanswered.",
+    "Q3_funnel": "Local contract/source evidence only; current real-device ingestion/drop-off unanswered.",
+    "Q4_game_investment": "Candidate mechanics and constraints; no human preference winner.",
+    "Q5_ad_tradeoff": "Source/historical ad evidence; causal retention/revenue effect unanswered.",
+    "Q6_purchase": "Static configuration/copy and source risks; real transaction/restore/suppression unanswered.",
+    "Q7_movie_utility": "No direct result-to-film action in source; impact on discovery/retention unanswered.",
+    "Q8_small_release": "Scoped local build and focused check; remaining device/accessibility/transaction/release gates listed."
+  },
+  "not_performed": [
+    "human recruitment/interviews",
+    "VoiceOver device test",
+    "iPad validation",
+    "live purchase",
+    "new PostHog/AdMob query",
+    "production deployment",
+    "App Store upload/submission"
+  ],
+  "behavioral_metrics_measured": false
+}

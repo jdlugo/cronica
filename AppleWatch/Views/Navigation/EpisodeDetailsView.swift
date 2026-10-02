@@ -1,6 +1,6 @@
 //
 //  EpisodeDetailsView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 27/09/22.
 //
@@ -58,7 +58,6 @@ struct EpisodeDetailsView: View {
                 if let url = URL(string: "https://www.themoviedb.org/tv/\(show)/season/\(season)/episode/\(episode.itemEpisodeNumberDisplay)") {
                     ShareLink(item: url)
                         .labelStyle(.iconOnly)
-						.padding(.horizontal)
                         .padding([.bottom, .horizontal])
                 }
                 
@@ -80,8 +79,9 @@ struct EpisodeDetailsView: View {
 }
 
 private struct DrawingConstants {
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let imageWidth: CGFloat = 324
     static let imageHeight: CGFloat = 163
     static let lineLimit: Int = 1
 }
+

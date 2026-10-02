@@ -1,48 +1,42 @@
-//
-//  UpNextViewModel.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 17/07/23.
-//
-
 import SwiftUI
 
 @MainActor
-class UpNextViewModel: ObservableObject {
+@Observable
+class UpNextViewModel {
     static let shared = UpNextViewModel()
-    @Published var isLoaded = false
-    @Published var episodes = [UpNextEpisode]()
-    @Published var isWatched = false
-    @Published var scrollToInitial = false
+    var isLoaded = false
+    var episodes = [UpNextEpisode]()
+    var isWatched = false
+    var scrollToInitial = false
     private let network = NetworkService.shared
     private let persistence = PersistenceController.shared
-    private let helper = EpisodeHelper()
+    
     private init() { }
     
     func load(_ items: FetchedResults<WatchlistItem>) async {
         if !isLoaded {
             let sortedItems = items.sorted(by: { $0.itemLastUpdateDate > $1.itemLastUpdateDate}).filter { $0.firstAirDate != nil }
-            var content = [UpNextEpisode]()
-			for item in sortedItems {
-                let item = await fetchUpNextEpisode(for: item)
-                if let item, !content.contains(item) {
-                    content.append(item)
-                }
+            for item in sortedItems {
+                await fetchUpNextEpisode(for: item)
             }
-            self.episodes = content.sorted { $0.sortedDate > $1.sortedDate }
-            await MainActor.run {
-                withAnimation(.easeInOut)  {
-                    self.isLoaded = true
-                }
+            // Already on MainActor - no need for MainActor.run
+            withAnimation(.easeInOut) {
+                self.isLoaded = true
             }
         }
     }
     
-    private func fetchUpNextEpisode(for item: WatchlistItem) async -> UpNextEpisode? {
+    private func fetchUpNextEpisode(for item: WatchlistItem) async {
         let result = try? await network.fetchEpisode(tvID: item.id,
                                                      season: item.itemNextUpNextSeason,
                                                      episodeNumber: item.itemNextUpNextEpisode)
-        guard let result else { return nil }
+        guard let result else {
+//            CronicaTelemetry.shared.handleMessage(
+//                "Failed to fetch episode: \(item.itemNextUpNextEpisode) from season: \(item.itemNextUpNextSeason) for show: \(item.id)",
+//                for: "UpNextViewModel.fetchUpNextEpisode"
+//            )
+            return
+        }
         let seasonNumber = result.seasonNumber ?? 0
         let isWatched = persistence.isEpisodeSaved(show: item.itemId,
                                                    season: seasonNumber,
@@ -59,8 +53,11 @@ class UpNextViewModel: ObservableObject {
                                         backupImage: item.backCompatibleCardImage,
                                         episode: result,
                                         sortedDate: item.itemLastUpdateDate)
-            if !self.episodes.contains(where: { $0.episode.id == content.episode.id }) {
-                return content
+            if !self.episodes.contains(content) {
+                // Already on MainActor - no need for MainActor.run
+                withAnimation(.easeInOut) {
+                    self.episodes.append(content)
+                }
             }
         } else if isWatched {
             let nextSeasonNumber = item.seasonNumberUpNext + 1
@@ -68,7 +65,7 @@ class UpNextViewModel: ObservableObject {
                                                               season: nextSeasonNumber,
                                                               episodeNumber: 1)
             guard let nextEpisode else {
-                return nil
+                return
             }
             let isNextEpisodeWatched = persistence.isEpisodeSaved(show: item.itemId,
                                                                   season: Int(nextSeasonNumber),
@@ -82,22 +79,27 @@ class UpNextViewModel: ObservableObject {
                                             backupImage: item.backCompatibleCardImage,
                                             episode: nextEpisode,
                                             sortedDate: item.itemLastUpdateDate)
-                if !self.episodes.contains(where: { $0.episode.id == content.episode.id })  {
-                    return content
+                if !self.episodes.contains(content) {
+                    await MainActor.run {
+                        withAnimation(.easeInOut) {
+                            self.episodes.append(content)
+                        }
+                    }
                 }
             }
         }
-        return nil
     }
     
-    func skipEpisode(for item: UpNextEpisode) async {
-        let nextEpisode = await helper.fetchNextEpisode(for: item.episode, show: item.showID)
-        let persistence = PersistenceController()
-        guard let nextEpisode, let show = persistence.fetch(for: "\(item.showID)@\(MediaType.tvShow.toInt)") else {
-            return
+    func skipEpisode(for item: UpNextEpisode) {
+        Task {
+            let nextEpisode = await EpisodeHelper().fetchNextEpisode(for: item.episode, show: item.showID)
+            let persistence = PersistenceController()
+            guard let nextEpisode, let show = persistence.fetch(for: "\(item.showID)@\(MediaType.tvShow.toInt)") else {
+                return
+            }
+            persistence.updateUpNext(show, episode: nextEpisode)
+            await handleWatched(item)
         }
-        persistence.updateUpNext(show, episode: nextEpisode)
-        await handleWatched(item)
     }
     
     func reload(_ items: FetchedResults<WatchlistItem>) async {
@@ -117,7 +119,7 @@ class UpNextViewModel: ObservableObject {
                 self.episodes.removeAll(where: { $0.episode.id == content.episode.id })
             }
         }
-        
+        let helper = EpisodeHelper()
         let nextEpisode = await helper.fetchNextEpisode(for: content.episode, show: content.showID)
         guard let nextEpisode else {
             return

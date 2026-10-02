@@ -1,10 +1,3 @@
-//
-//  WatchlistPosterSection.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 20/12/22.
-//
-
 import SwiftUI
 
 struct WatchlistPosterSection: View {
@@ -30,25 +23,32 @@ struct WatchlistPosterSection: View {
                         .onDelete(perform: delete)
                     } header: {
 #if !os(tvOS)
-                        HStack(alignment: .firstTextBaseline) {
-                            Text(NSLocalizedString(title, comment: ""))
-                                .foregroundColor(.secondary)
-                                .font(.footnote)
-                                .textCase(.uppercase)
-                            Spacer()
-                            Text("\(items.count) items")
-                                .foregroundColor(.secondary)
-                                .font(.footnote)
-                                .textCase(.uppercase)
-                        }
-                        .padding(.horizontal)
+                        headerView
 #endif
                     }
                 }.padding(.all, settings.isCompactUI ? 10 : nil)
             }
         } else {
-            EmptyListView()
+            ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
+                .padding()
         }
+    }
+    
+    private var headerView: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(NSLocalizedString(title, comment: ""))
+                .foregroundColor(.secondary)
+                .font(.footnote)
+                .textCase(.uppercase)
+            Spacer()
+            let formatString = NSLocalizedString("items count", comment: "")
+            let result = String(format: formatString, items.count)
+            Text(result)
+                .foregroundColor(.secondary)
+                .font(.footnote)
+                .textCase(.uppercase)
+        }
+        .padding(.horizontal)
     }
     
     private func delete(offsets: IndexSet) {

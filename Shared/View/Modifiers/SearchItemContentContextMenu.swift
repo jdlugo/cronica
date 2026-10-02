@@ -1,10 +1,3 @@
-//
-//  SearchItemContentContextMenu.swift
-//  Story
-//
-//  Created by Alexandre Madeira on 29/10/23.
-//
-
 import SwiftUI
 
 struct SearchItemContentContextMenu: ViewModifier {
@@ -17,7 +10,6 @@ struct SearchItemContentContextMenu: ViewModifier {
     @Binding var showCustomListView: Bool
     @Binding var popupType: ActionPopupItems?
     @StateObject private var settings = SettingsStore.shared
-    @State private var showRemoveConfirmation = false
     func body(content: Content) -> some View {
 #if !os(watchOS)
         return content
@@ -35,8 +27,11 @@ struct SearchItemContentContextMenu: ViewModifier {
                     Button {
                         showNote.toggle()
                     } label: {
-                        Label("Review", systemImage: "note.text")
+                        Label("reviewTitle", systemImage: "note.text")
                     }
+#endif
+#if DEBUG
+                    printButton
 #endif
                 }
                 Divider()
@@ -54,7 +49,7 @@ struct SearchItemContentContextMenu: ViewModifier {
     
     private var addAndMarkWatchedButton: some View {
         Button(action: addAndMarkAsWatched) {
-            Label("Add & Mark Watched", systemImage: "rectangle.badge.checkmark.fill")
+            Label("addAndMarkWatchedButton", systemImage: "rectangle.badge.checkmark.fill")
         }
     }
     
@@ -82,7 +77,7 @@ struct SearchItemContentContextMenu: ViewModifier {
         let encodedTitle = item.itemTitle.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let posterPath = item.posterPath ?? String()
         let encodedPoster = posterPath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        return URL(string: "https://www.oncronica.com/details?id=\(item.itemContentID)&img=\(encodedPoster ?? String())&title=\(encodedTitle ?? String())")
+        return URL(string: "https://streamingnowapp.com/details?id=\(item.itemContentID)&img=\(encodedPoster ?? String())&title=\(encodedTitle ?? String())")
     }
     
     private var watchedButton: some View {
@@ -97,8 +92,18 @@ struct SearchItemContentContextMenu: ViewModifier {
                         isInWatchlist: $isInWatchlist,
                         showPopup: $showPopup,
                         showListSelector: $showCustomListView,
-                        popupType: $popupType,
-                        showRemoveConfirmation: $showRemoveConfirmation)
+                        popupType: $popupType)
+    }
+    
+    @ViewBuilder
+    private var printButton: some View {
+#if DEBUG
+        Button {
+            print(item)
+        } label: {
+            Label("Print", systemImage: "hammer.fill")
+        }
+#endif
     }
     
     @ViewBuilder

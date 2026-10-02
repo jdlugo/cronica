@@ -1,11 +1,5 @@
-//
-//  OverviewBoxView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 25/04/22.
-//
-
 import SwiftUI
+
 #if !os(tvOS)
 /// Displays the overview of a movie, tv show, or episode.
 /// It can also display biography.
@@ -19,6 +13,7 @@ struct OverviewBoxView: View {
     @State private var showTextOptions = true
     @State private var isTruncated = false
     @StateObject private var settings = SettingsStore.shared
+    
     var body: some View {
         if let overview {
             if !overview.isEmpty {
@@ -60,13 +55,14 @@ struct OverviewBoxView: View {
 #if os(iOS)
                         if isTruncated {
                             Text(showFullText ? "Collapse" : "Show More")
-                                .fontDesign(.rounded)
+                                .fontDesign(.default)
                                 .textCase(.uppercase)
                                 .font(.caption)
                                 .foregroundStyle(settings.appTheme.color)
                                 .padding(.top, 4)
                             
                         }
+                        
 #endif
                     }
                 } label: {

@@ -1,10 +1,3 @@
-//
-//  ArchiveButton.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 04/05/23.
-//
-
 import SwiftUI
 
 struct ArchiveButton: View {
@@ -14,7 +7,7 @@ struct ArchiveButton: View {
     @Binding var showPopup: Bool
     private let persistence = PersistenceController.shared
     var body: some View {
-        Button(isArchive ? "Unarchive" : "Archive",
+        Button(isArchive ? "Remove from Archive" : "Archive Item",
                systemImage: isArchive ? "archivebox.fill" : "archivebox",
                action: updateArchive)
     }

@@ -1,10 +1,3 @@
-//
-//  HorizontalPinnedLists.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 26/06/23.
-//
-
 import SwiftUI
 
 struct HorizontalPinnedList: View {

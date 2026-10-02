@@ -1,12 +1,5 @@
-//
-//  PersonDetailsView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 29/01/22.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct PersonDetailsView: View {
     let name: String
@@ -31,7 +24,7 @@ struct PersonDetailsView: View {
                         if let overview = person?.biography {
                             OverviewBoxView(
                                 overview: overview,
-                                title: NSLocalizedString("Biography", comment: ""),
+                                title: "Biography",
                                 type: .person,
                                 showAsPopover: true
                             )
@@ -66,7 +59,7 @@ struct PersonDetailsView: View {
             }
         }
         .actionPopup(isShowing: $showPopup, for: popupType)
-        .task { load() }
+        .task { await load() }
         .redacted(reason: isLoaded ? [] : .placeholder)
 #if os(iOS)
         .overlay(search)
@@ -81,8 +74,8 @@ struct PersonDetailsView: View {
         .navigationTitle(name)
 #endif
         .toolbar {
-#if os(iOS) || os(visionOS)
-            ToolbarItem(placement: .topBarTrailing) {
+#if os(iOS)
+            ToolbarItem {
                 shareButton
             }
 #elseif os(macOS)
@@ -91,11 +84,9 @@ struct PersonDetailsView: View {
             }
 #endif
         }
-#if !os(visionOS)
         .background {
             TranslucentBackground(image: person?.personImage)
         }
-#endif
 #if os(iOS)
         .searchable(text: $query,
                     placement: UIDevice.isIPhone ? .navigationBarDrawer(displayMode: .always) : .toolbar)
@@ -104,14 +95,10 @@ struct PersonDetailsView: View {
                 ZStack {
                     Rectangle().fill(.black).ignoresSafeArea(.all)
                     VStack {
-                        LazyImage(url: person?.originalPersonImage) { state in
-                            if let image = state.image {
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding()
-                            }
-                        }
+                        WebImage(url: person?.originalPersonImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
                     }
                 }
                 .toolbar {
@@ -180,14 +167,30 @@ struct PersonDetailsView: View {
 #endif
     
     private var imageProfile: some View {
-        Button {
-#if os(iOS)
-            showImageFullscreen.toggle()
-#endif
-        } label: {
-            PersonImageProfileView(person: person)
+        WebImage(url: person?.personImage) { image in
+            image.resizable()
+        } placeholder: {
+            ZStack {
+                Circle().fill(.gray.gradient)
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .foregroundColor(.white.opacity(0.8))
+                    .frame(width: 50, height: 50, alignment: .center)
+                    .unredacted()
+            }
+            .clipShape(Circle())
         }
-        .buttonStyle(.plain)
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
+        .clipShape(Circle())
+        .frame(width: DrawingConstants.imageWidth, height: DrawingConstants.imageHeight)
+        .shadow(radius: DrawingConstants.imageShadow)
+        .accessibilityHidden(true)
+            .onTapGesture {
+#if os(iOS)
+                showImageFullscreen.toggle()
+#endif
+            }
     }
 }
 
@@ -203,7 +206,7 @@ private struct DrawingConstants {
 #elseif os(iOS)
     static let imageWidth: CGFloat = UIDevice.isIPad ? 250 : 150
     static let imageHeight: CGFloat = UIDevice.isIPad ? 250 : 150
-#else
+    #else
     static let imageWidth: CGFloat = 100
     static let imageHeight: CGFloat = 100
 #endif
@@ -211,61 +214,29 @@ private struct DrawingConstants {
 }
 
 private extension PersonDetailsView {
-    func load() {
-        Task {
-            if Task.isCancelled { return }
-            if person == nil {
-                do {
-                    person = try await self.service.fetchPerson(id: self.id)
-                    if let person {
-                        let cast = person.combinedCredits?.cast?.filter { $0.itemIsAdult == false } ?? []
-                        let crew = person.combinedCredits?.crew?.filter { $0.itemIsAdult == false } ?? []
-                        let combinedCredits = cast + crew
-                        if !combinedCredits.isEmpty {
-                            let combined = Array(Set(combinedCredits))
-                            credits = combined.sorted(by: { $0.itemPopularity > $1.itemPopularity })
-                        }
+    func load() async {
+        if Task.isCancelled { return }
+        if person == nil {
+            do {
+                person = try await self.service.fetchPerson(id: self.id)
+                if let person {
+                    let cast = person.combinedCredits?.cast?.filter { $0.itemIsAdult == false } ?? []
+                    let crew = person.combinedCredits?.crew?.filter { $0.itemIsAdult == false } ?? []
+                    let combinedCredits = cast + crew
+                    if !combinedCredits.isEmpty {
+                        let combined = Array(Set(combinedCredits))
+                        credits = combined.sorted(by: { $0.itemPopularity > $1.itemPopularity })
                     }
-                    await MainActor.run {
-                        withAnimation {
-                            self.isLoaded = true
-                        }
-                    }
-                } catch {
-                    if Task.isCancelled { return }
-                    person = nil
-                    let message = "Can't load the id \(id), with error message: \(error.localizedDescription)"
-                    CronicaTelemetry.shared.handleMessage(message, for: "PersonDetailsViewModel.load()")
                 }
+                withAnimation {
+                    isLoaded = true
+                }
+            } catch {
+                if Task.isCancelled { return }
+                person = nil
+                let message = "Can't load the id \(id), with error message: \(error.localizedDescription)"
+                CronicaTelemetry.shared.handleMessage(message, for: "PersonDetailsViewModel.load()")
             }
         }
-    }
-}
-
-private struct PersonImageProfileView: View {
-    let person: Person?
-    var body: some View {
-        LazyImage(url: person?.personImage) { state in
-            if let image = state.image {
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } else {
-                ZStack {
-                    Circle().fill(.gray.gradient)
-                    Image(systemName: "person.fill")
-                        .resizable()
-                        .foregroundColor(.white.opacity(0.8))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .unredacted()
-                }
-                .clipShape(Circle())
-            }
-        }
-        .transition(.opacity)
-        .clipShape(Circle())
-        .frame(width: DrawingConstants.imageWidth, height: DrawingConstants.imageHeight)
-        .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
-        .accessibilityHidden(true)
     }
 }

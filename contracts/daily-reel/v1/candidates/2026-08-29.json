@@ -1,0 +1,201 @@
+{
+  "generationKey": "daily-reel-2026-08-29-extraordinary-journeys-launch-v1",
+  "intendedPublicationId": "2026-08-29",
+  "themeSeed": "Extraordinary journeys",
+  "publicReelTemplate": "../fixtures/published-reel.json",
+  "contentVersion": "daily-reel-2026-08-29.1",
+  "publicationWindow": {
+    "availableAt": "2026-08-29T05:00:00Z",
+    "expiresAt": "2026-08-30T05:00:00Z"
+  },
+  "posterPaths": {
+    "tmdb:329": "/63viWuPfYQjRYLSZSZNq7dglJP5.jpg",
+    "tmdb:578": "/lxM6kqilAdpdhqUl2biYp5frUxE.jpg",
+    "tmdb:601": "/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg",
+    "tmdb:218": "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg",
+    "tmdb:603": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+    "tmdb:27205": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg"
+  },
+  "answers": {
+    "en": {
+      "decode": {
+        "acceptedAnswers": ["Back to the Future"],
+        "titleLength": 15,
+        "hint": "A time-traveling car is central to the story.",
+        "revealTitle": "Back to the Future",
+        "explanation": "The emojis point to reversing time, a car, and the lightning that powers the trip."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Think about the person behind the camera.",
+        "explanation": "Steven Spielberg directed Jurassic Park, Jaws, and E.T. the Extra-Terrestrial."
+      },
+      "arrange": {
+        "correctOrder": ["tmdb:218", "tmdb:603", "tmdb:27205"],
+        "hint": "One movie arrived in the 1980s, one in the 1990s, and one in the 2010s.",
+        "explanation": "The Terminator opened in 1984, The Matrix in 1999, and Inception in 2010."
+      }
+    },
+    "fr-FR": {
+      "decode": {
+        "acceptedAnswers": ["Retour vers le futur"],
+        "titleLength": 17,
+        "hint": "Une voiture qui voyage dans le temps est au cœur de l'histoire.",
+        "revealTitle": "Retour vers le futur",
+        "explanation": "Les émojis évoquent le retour dans le temps, une voiture et l'éclair qui alimente le voyage."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Pense à la personne derrière la caméra.",
+        "explanation": "Steven Spielberg a réalisé Jurassic Park, Les Dents de la mer et E.T. l'extra-terrestre."
+      },
+      "arrange": {
+        "correctOrder": ["tmdb:218", "tmdb:603", "tmdb:27205"],
+        "hint": "Un film date des années 1980, un des années 1990 et un des années 2010.",
+        "explanation": "Terminator est sorti en 1984, Matrix en 1999 et Inception en 2010."
+      }
+    },
+    "es-ES": {
+      "decode": {
+        "acceptedAnswers": ["Regreso al futuro"],
+        "titleLength": 15,
+        "hint": "Un coche que viaja en el tiempo es clave en la historia.",
+        "revealTitle": "Regreso al futuro",
+        "explanation": "Los emojis representan volver en el tiempo, un coche y el rayo que impulsa el viaje."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Piensa en la persona que estaba detrás de la cámara.",
+        "explanation": "Steven Spielberg dirigió Parque Jurásico, Tiburón y E.T., el extraterrestre."
+      },
+      "arrange": {
+        "correctOrder": ["tmdb:218", "tmdb:603", "tmdb:27205"],
+        "hint": "Hay una película de los 80, una de los 90 y una de la década de 2010.",
+        "explanation": "Terminator se estrenó en 1984, Matrix en 1999 y Origen en 2010."
+      }
+    },
+    "es-MX": {
+      "decode": {
+        "acceptedAnswers": ["Volver al futuro"],
+        "titleLength": 14,
+        "hint": "Un auto que viaja en el tiempo es clave en la historia.",
+        "revealTitle": "Volver al futuro",
+        "explanation": "Los emojis representan volver en el tiempo, un auto y el rayo que activa el viaje."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Piensa en la persona detrás de la cámara.",
+        "explanation": "Steven Spielberg dirigió Jurassic Park, Tiburón y E.T., el extraterrestre."
+      },
+      "arrange": {
+        "correctOrder": ["tmdb:218", "tmdb:603", "tmdb:27205"],
+        "hint": "Hay una película de los 80, una de los 90 y una de la década de 2010.",
+        "explanation": "El exterminador se estrenó en 1984, Matrix en 1999 y El origen en 2010."
+      }
+    },
+    "pt-BR": {
+      "decode": {
+        "acceptedAnswers": ["De Volta para o Futuro"],
+        "titleLength": 18,
+        "hint": "Um carro que viaja no tempo é essencial para a história.",
+        "revealTitle": "De Volta para o Futuro",
+        "explanation": "Os emojis representam voltar no tempo, um carro e o raio que ativa a viagem."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Pense na pessoa que estava atrás da câmera.",
+        "explanation": "Steven Spielberg dirigiu Jurassic Park, Tubarão e E.T. - O Extraterrestre."
+      },
+      "arrange": {
+        "correctOrder": ["tmdb:218", "tmdb:603", "tmdb:27205"],
+        "hint": "Há um filme dos anos 1980, um dos anos 1990 e um da década de 2010.",
+        "explanation": "O Exterminador do Futuro estreou em 1984, Matrix em 1999 e A Origem em 2010."
+      }
+    }
+  },
+  "movieFacts": [
+    {
+      "movieId": "tmdb:329",
+      "tmdbId": 329,
+      "releaseDate": "1993-06-11",
+      "directorIds": ["person:488"],
+      "actorIds": ["person:4783", "person:4784", "person:4785", "person:4786", "person:4789"],
+      "genreIds": [12, 878],
+      "franchiseId": "collection:328"
+    },
+    {
+      "movieId": "tmdb:578",
+      "tmdbId": 578,
+      "releaseDate": "1975-06-20",
+      "directorIds": ["person:488"],
+      "actorIds": ["person:6355", "person:8606", "person:3037", "person:8607", "person:8608"],
+      "genreIds": [27, 53, 12],
+      "franchiseId": "collection:2366"
+    },
+    {
+      "movieId": "tmdb:601",
+      "tmdbId": 601,
+      "releaseDate": "1982-06-11",
+      "directorIds": ["person:488"],
+      "actorIds": ["person:9976", "person:69597", "person:9978", "person:9979", "person:62001"],
+      "genreIds": [12, 878, 10751],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:218",
+      "tmdbId": 218,
+      "releaseDate": "1984-10-26",
+      "directorIds": ["person:2710"],
+      "actorIds": ["person:1100", "person:2712", "person:2713", "person:1818", "person:2714"],
+      "genreIds": [28, 53, 878],
+      "franchiseId": "collection:528"
+    },
+    {
+      "movieId": "tmdb:603",
+      "tmdbId": 603,
+      "releaseDate": "1999-03-31",
+      "directorIds": ["person:9340", "person:9339"],
+      "actorIds": ["person:6384", "person:2975", "person:530", "person:1331", "person:9364"],
+      "genreIds": [28, 878],
+      "franchiseId": "collection:2344"
+    },
+    {
+      "movieId": "tmdb:27205",
+      "tmdbId": 27205,
+      "releaseDate": "2010-07-15",
+      "directorIds": ["person:525"],
+      "actorIds": ["person:6193", "person:24045", "person:3899", "person:2524", "person:27578"],
+      "genreIds": [28, 878, 12],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:105",
+      "tmdbId": 105,
+      "releaseDate": "1985-07-03",
+      "directorIds": ["person:24"],
+      "actorIds": ["person:521", "person:1062", "person:1064", "person:1063", "person:1066"],
+      "genreIds": [12, 35, 878],
+      "franchiseId": "collection:264"
+    }
+  ],
+  "connection": {
+    "kind": "director",
+    "key": "person:488",
+    "evidenceByMovieId": {
+      "tmdb:329": "TMDb credits Steven Spielberg as director of Jurassic Park.",
+      "tmdb:578": "TMDb credits Steven Spielberg as director of Jaws.",
+      "tmdb:601": "TMDb credits Steven Spielberg as director of E.T. the Extra-Terrestrial."
+    }
+  },
+  "difficulty": {
+    "decode": "easy",
+    "connect": "easy",
+    "arrange": "medium"
+  },
+  "safety": {
+    "isSafe": true,
+    "categories": []
+  },
+  "recentMovieIds": [],
+  "recentThemeKeys": []
+}

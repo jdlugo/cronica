@@ -1,56 +1,33 @@
-//
-//  HorizontalUpNextListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 19/03/23.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct HorizontalUpNextListView: View {
     @Binding var shouldReload: Bool
     @State private var selectedEpisode: UpNextEpisode?
     @StateObject private var settings = SettingsStore.shared
-    @StateObject private var viewModel = UpNextViewModel.shared
+    @State private var viewModel = UpNextViewModel.shared
     @FetchRequest(
-        entity: WatchlistItem.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \WatchlistItem.title, ascending: true)],
         predicate: NSCompoundPredicate(type: .and, subpredicates: [ NSPredicate(format: "displayOnUpNext == %d", true),
                                                                     NSPredicate(format: "isArchive == %d", false),
                                                                     NSPredicate(format: "watched == %d", false)])
     ) private var items: FetchedResults<WatchlistItem>
-    @Environment(\.scenePhase) private var scene
     var body: some View {
         if !items.isEmpty {
             VStack(alignment: .leading) {
                 if !viewModel.episodes.isEmpty {
-#if os(tvOS) || os(visionOS)
-                    TitleView(title: String(localized: "Up Next"),
-                              subtitle: String(localized: "Your Next Episodes"),
-                              showChevron: false)
-#if os(tvOS)
-                    .padding(.leading, 64)
-#endif
-#else
-                    
-                    if viewModel.episodes.count > 4 {
-                        NavigationLink(value: viewModel.episodes) {
-                            TitleView(title: String(localized: "Up Next"),
-                                      subtitle: String(localized: "Your Next Episodes"),
-                                      showChevron: true)
+#if !os(tvOS)
+                    NavigationLink(value: viewModel.episodes) {
+                        TitleView(title: "upNext", subtitle: "upNextSubtitle", showChevron: true)
                             .unredacted()
-                        }
-                        .disabled(!viewModel.isLoaded)
-                        .buttonStyle(.plain)
-                    } else {
-                        TitleView(title: String(localized: "Up Next"),
-                                  subtitle: String(localized: "Your Next Episodes"),
-                                  showChevron: false)
-                        .unredacted()
                     }
-                    
+                    .disabled(!viewModel.isLoaded)
+                    .buttonStyle(.plain)
+#else
+                    TitleView(title: "upNext", subtitle: "upNextSubtitle", showChevron: false)
+                        .padding(.leading, 64)
 #endif
+                    
                     ScrollViewReader { proxy in
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
@@ -63,27 +40,40 @@ struct HorizontalUpNextListView: View {
                                         .padding(.top, 8)
                                         .padding(.bottom)
                                         .buttonStyle(.card)
-                                        .environmentObject(viewModel)
+                                        .environment(viewModel)
 #else
-                                    
-                                    
-                                    VStack(alignment: .leading) {
-                                        UpNextCard(item: item, selectedEpisode: $selectedEpisode)
-                                            .buttonStyle(.plain)
-                                            .environmentObject(viewModel)
-                                            .frame(width: settings.isCompactUI ? DrawingConstants.compactImageWidth : DrawingConstants.imageWidth,
-                                                   height: settings.isCompactUI ? DrawingConstants.compactImageHeight : DrawingConstants.imageHeight)
-                                            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
-                                            .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 5)
-                                            .accessibilityLabel("Episode: \(item.episode.itemEpisodeNumber), of the show: \(item.showTitle).")
-                                            .accessibilityAddTraits(.isButton)
+                                    if !settings.isCompactUI {
+                                        upNextCard(item)
                                             .applyHoverEffect()
+                                            .contextMenu {
+                                                Button("showDetails") {
+                                                    selectedEpisode = item
+                                                }
+                                                Button("upNextSkipThisEpisode") {
+                                                    viewModel.skipEpisode(for: item)
+                                                }
+                                            }
                                             .padding([.leading, .trailing], 4)
                                             .padding(.leading, item.id == viewModel.episodes.first?.id ? 16 : 0)
                                             .padding(.trailing, item.id == viewModel.episodes.last?.id ? 16 : 0)
                                             .padding(.top, 8)
-                                            .padding(.bottom, settings.isCompactUI ? .zero : nil)
-                                        if settings.isCompactUI {
+                                            .padding(.bottom)
+                                            .onTapGesture {
+                                                if SettingsStore.shared.markEpisodeWatchedOnTap {
+                                                    Task {
+														await viewModel.markAsWatched(item)
+														guard let first = viewModel.episodes.first else { return }
+														withAnimation {
+															proxy.scrollTo(first.id, anchor: .topLeading)
+														}
+													}
+                                                } else {
+                                                    selectedEpisode = item
+                                                }
+                                            }
+                                    } else {
+                                        VStack {
+                                            upNextCard(item)
                                             HStack {
                                                 VStack(alignment: .leading) {
                                                     Text(item.showTitle)
@@ -98,9 +88,33 @@ struct HorizontalUpNextListView: View {
                                                 }
                                                 Spacer()
                                             }
-                                            .padding(.leading, item.id == viewModel.episodes.first?.id ? 16 : .zero)
-                                            .padding(.trailing, item.id == viewModel.episodes.last?.id ? 16 : .zero)
-                                            .frame(width: 140)
+                                        }
+                                        .frame(width: DrawingConstants.compactImageWidth)
+                                        .contextMenu {
+                                            Button("showDetails") {
+                                                selectedEpisode = item
+                                            }
+                                            Button("upNextSkipThisEpisode") {
+                                                viewModel.skipEpisode(for: item)
+                                            }
+                                        }
+                                        .padding([.leading, .trailing], 4)
+                                        .padding(.leading, item.id == viewModel.episodes.first?.id ? 16 : 0)
+                                        .padding(.trailing, item.id == viewModel.episodes.last?.id ? 16 : 0)
+                                        .padding(.top, 8)
+                                        .padding(.bottom)
+                                        .onTapGesture {
+                                            if SettingsStore.shared.markEpisodeWatchedOnTap {
+                                                Task {
+													await viewModel.markAsWatched(item)
+													guard let first = viewModel.episodes.first else { return }
+													withAnimation {
+														proxy.scrollTo(first.id, anchor: .topLeading)
+													}
+												}
+                                            } else {
+                                                selectedEpisode = item
+                                            }
                                         }
                                     }
 #endif
@@ -115,8 +129,8 @@ struct HorizontalUpNextListView: View {
                                 }
                             }
                         }
-                        .onChange(of: shouldReload) { _, reload in
-                            if reload {
+                        .onChange(of: shouldReload) {
+                            if shouldReload {
                                 if let firstItem = viewModel.episodes.first {
                                     withAnimation {
                                         proxy.scrollTo(firstItem.id, anchor: .topLeading)
@@ -137,7 +151,7 @@ struct HorizontalUpNextListView: View {
             }
             .redacted(reason: viewModel.isLoaded ? [] : .placeholder)
             .navigationDestination(for: [UpNextEpisode].self) { _ in
-                VerticalUpNextListView().environmentObject(viewModel)
+                VerticalUpNextListView().environment(viewModel)
             }
             .task(id: viewModel.isWatched) {
                 if viewModel.isWatched {
@@ -149,13 +163,6 @@ struct HorizontalUpNextListView: View {
                 await viewModel.load(items)
                 await viewModel.checkForNewEpisodes(items)
             }
-            .onChange(of: scene) { _, value in
-                if scene == .active {
-                    Task {
-                        await viewModel.checkForNewEpisodes(items)
-                    }
-                }
-            }
             .sheet(item: $selectedEpisode) { item in
                 NavigationStack {
                     EpisodeDetailsView(episode: item.episode,
@@ -164,10 +171,8 @@ struct HorizontalUpNextListView: View {
                                        showTitle: item.showTitle,
                                        isWatched: $viewModel.isWatched,
                                        isUpNext: true)
-#if os(macOS)
-                    .toolbar { ToolbarItem { Button("Done") { self.selectedEpisode = nil } } }
-#elseif os(iOS) || os(visionOS)
-                    .toolbar { ToolbarItem(placement: .topBarLeading) { RoundedCloseButton { self.selectedEpisode = nil } } }
+#if os(macOS) || os(iOS)
+                    .toolbar { Button("Done") { self.selectedEpisode = nil } }
 #endif
                     .navigationDestination(for: ItemContent.self) { item in
                         ItemContentDetails(title: item.itemTitle, id: item.id, type: item.itemContentMedia)
@@ -193,8 +198,6 @@ struct HorizontalUpNextListView: View {
                 .appTheme()
                 .appTint()
                 .presentationDetents([.large])
-                .presentationDragIndicator(.visible)
-                .presentationCornerRadius(12)
 #if os(tvOS)
                 .ignoresSafeArea()
 #endif
@@ -204,128 +207,130 @@ struct HorizontalUpNextListView: View {
             }
         }
     }
+    
+    private func upNextCard(_ item: UpNextEpisode) -> some View {
+        ZStack {
+            WebImage(url: settings.preferCoverOnUpNext ? item.backupImage : item.episode.itemImageMedium ?? item.backupImage) { image in
+                image.resizable()
+            } placeholder: {
+                ZStack {
+                    Rectangle().fill(.gray.gradient)
+                    Image(systemName: "popcorn.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white.opacity(0.8))
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .unredacted()
+                }
+            }
+            .aspectRatio(contentMode: .fill)
+                .frame(width: settings.isCompactUI ? DrawingConstants.compactImageWidth : DrawingConstants.imageWidth,
+                       height: settings.isCompactUI ? DrawingConstants.compactImageHeight : DrawingConstants.imageHeight)
+                .transition(.opacity)
+            if !settings.isCompactUI {
+                VStack(alignment: .leading) {
+                    Spacer()
+                    ZStack(alignment: .bottom) {
+                        Color.black.opacity(0.4)
+                            .frame(height: 50)
+                            .mask {
+                                LinearGradient(colors: [Color.black,
+                                                        Color.black.opacity(0.924),
+                                                        Color.black.opacity(0.707),
+                                                        Color.black.opacity(0.383),
+                                                        Color.black.opacity(0)],
+                                               startPoint: .bottom,
+                                               endPoint: .top)
+                            }
+                        Rectangle()
+                            .fill(.ultraThinMaterial)
+                            .frame(height: 70)
+                            .mask {
+                                VStack(spacing: 0) {
+                                    LinearGradient(colors: [Color.black.opacity(0),
+                                                            Color.black.opacity(0.383),
+                                                            Color.black.opacity(0.707),
+                                                            Color.black.opacity(0.924),
+                                                            Color.black],
+                                                   startPoint: .top,
+                                                   endPoint: .bottom)
+                                    .frame(height: 50)
+                                    Rectangle()
+                                }
+                            }
+                        
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.showTitle)
+                                    .font(.callout)
+                                    .foregroundColor(.white)
+                                    .fontWeight(.semibold)
+                                    .lineLimit(1)
+                                Text(String(format: NSLocalizedString("S%d, E%d", comment: ""), item.episode.itemSeasonNumber, item.episode.itemEpisodeNumber))
+                                    .font(.caption)
+                                    .textCase(.uppercase)
+                                    .foregroundColor(.white.opacity(0.8))
+                                    .lineLimit(1)
+                            }
+                            Spacer()
+                        }
+                        .padding(.bottom, 8)
+                        .padding(.leading)
+                    }
+                }
+            }
+        }
+        .frame(width: settings.isCompactUI ? DrawingConstants.compactImageWidth : DrawingConstants.imageWidth,
+               height: settings.isCompactUI ? DrawingConstants.compactImageHeight : DrawingConstants.imageHeight)
+        .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+        .shadow(radius: 2.5)
+        .accessibilityLabel("Episode: \(item.episode.itemEpisodeNumber), of the show: \(item.showTitle).")
+        .accessibilityAddTraits(.isButton)
+    }
+    
 }
 
+#if os(tvOS)
 private struct UpNextCard: View {
     let item: UpNextEpisode
     @FocusState var isFocused
     @Binding var selectedEpisode: UpNextEpisode?
     @StateObject private var settings = SettingsStore.shared
-    @EnvironmentObject var viewModel: UpNextViewModel
+    @Environment(UpNextViewModel.self) var viewModel
     @State private var showConfirmation = false
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
             Button {
-                if settings.markEpisodeWatchedOnTap, settings.askConfirmationToMarkEpisodeWatched {
-                    showConfirmation.toggle()
-                } else if settings.markEpisodeWatchedOnTap, !settings.askConfirmationToMarkEpisodeWatched {
-                    Task {
-                        await viewModel.markAsWatched(item)
-                    }
-                } else {
-                    selectedEpisode = item
-                }
-            } label: {
-                ZStack {
-                    LazyImage(url: settings.preferCoverOnUpNext ? item.backupImage : item.episode.itemImageLarge ?? item.backupImage) { state in
-                        if let image = state.image {
-                            image
+                showConfirmation.toggle()
+                            } label: {
+                WebImage(url: settings.preferCoverOnUpNext ? item.backupImage : item.episode.itemImageLarge ?? item.backupImage)
+                    .resizable()
+                    .placeholder {
+                        ZStack {
+                            Rectangle().fill(.gray.gradient)
+                            Image(systemName: "sparkles.tv")
                                 .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        } else {
-                            ZStack {
-                                Rectangle().fill(.gray.gradient)
-                                Image(systemName: "sparkles.tv")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(.white.opacity(0.8))
-                                    .frame(width: 40, height: 40, alignment: .center)
-                                    .padding()
-                            }
-                            .frame(width: settings.isCompactUI ? DrawingConstants.compactImageWidth : DrawingConstants.imageWidth,
-                                   height: settings.isCompactUI ? DrawingConstants.compactImageHeight : DrawingConstants.imageHeight)
-                            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.white.opacity(0.8))
+                                .frame(width: 40, height: 40, alignment: .center)
+                                .padding()
                         }
+                        .frame(width: DrawingConstants.imageWidth,
+                               height: DrawingConstants.imageHeight)
+                        .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius, style: .continuous))
                     }
+                    .aspectRatio(contentMode: .fill)
                     .transition(.opacity)
-                    .frame(width: settings.isCompactUI ? DrawingConstants.compactImageWidth : DrawingConstants.imageWidth,
-                           height: settings.isCompactUI ? DrawingConstants.compactImageHeight : DrawingConstants.imageHeight)
+                    .frame(width: DrawingConstants.imageWidth,
+                           height: DrawingConstants.imageHeight)
                     .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
                                                 style: .continuous))
-                    .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                    .shadow(radius: DrawingConstants.imageShadow)
                     .applyHoverEffect()
-#if !os(tvOS)
-                    if !settings.isCompactUI {
-                        VStack(alignment: .leading) {
-                            Spacer()
-                            ZStack(alignment: .bottom) {
-                                Color.black.opacity(0.4)
-                                    .frame(height: 50)
-                                    .mask {
-                                        LinearGradient(colors: [Color.black,
-                                                                Color.black.opacity(0.924),
-                                                                Color.black.opacity(0.707),
-                                                                Color.black.opacity(0.383),
-                                                                Color.black.opacity(0)],
-                                                       startPoint: .bottom,
-                                                       endPoint: .top)
-                                    }
-                                Rectangle()
-                                    .fill(.ultraThinMaterial)
-                                    .frame(height: 70)
-                                    .mask {
-                                        VStack(spacing: 0) {
-                                            LinearGradient(colors: [Color.black.opacity(0),
-                                                                    Color.black.opacity(0.383),
-                                                                    Color.black.opacity(0.707),
-                                                                    Color.black.opacity(0.924),
-                                                                    Color.black],
-                                                           startPoint: .top,
-                                                           endPoint: .bottom)
-                                            .frame(height: 50)
-                                            Rectangle()
-                                        }
-                                    }
-                                
-                                HStack {
-                                    VStack(alignment: .leading) {
-                                        Text(item.showTitle)
-                                            .font(.callout)
-                                            .foregroundColor(.white)
-                                            .fontWeight(.semibold)
-                                            .lineLimit(1)
-                                        Text(String(format: NSLocalizedString("S%d, E%d", comment: ""), item.episode.itemSeasonNumber, item.episode.itemEpisodeNumber))
-                                            .font(.caption)
-                                            .textCase(.uppercase)
-                                            .fontWeight(.medium)
-                                            .foregroundColor(.white.opacity(0.8))
-                                            .lineLimit(1)
-                                    }
-                                    .padding(.bottom, 8)
-                                    Spacer()
-                                }
-                                .padding(.bottom, 8)
-                                .padding(.leading)
-                            }
-                        }
-                    }
-#endif
-                }
             }
-            .contextMenu {
-                Button("Show Details") {
-                    selectedEpisode = item
-                }
-                Button("Skip this episode") {
-                    Task { await viewModel.skipEpisode(for: item) }
-                }
-            }
-#if os(tvOS)
             .buttonStyle(.card)
             .focused($isFocused)
-#endif
-            
-#if os(tvOS)
             HStack {
                 Text(item.showTitle)
                     .font(.caption)
@@ -344,11 +349,10 @@ private struct UpNextCard: View {
                 Spacer()
             }
             Spacer()
-#endif
         }
         .padding(.top)
-        .confirmationDialog("Confirm Watched Episode",
-                            isPresented: $showConfirmation, titleVisibility: .visible) {
+        .alert("Confirm Watched Episode",
+               isPresented: $showConfirmation) {
             Button("Confirm") {
                 Task {
                     await viewModel.markAsWatched(item)
@@ -358,7 +362,8 @@ private struct UpNextCard: View {
                 showConfirmation = false
             }
         } message: {
-            Text("Mark Episode \(item.episode.itemEpisodeNumber) from season \(item.episode.itemSeasonNumber) of \(item.showTitle) as Watched?")
+            let localizedString = String.localizedStringWithFormat(NSLocalizedString("MARK_EPISODE_WATCHED", comment: ""), item.episode.itemEpisodeNumber, item.episode.itemSeasonNumber, item.showTitle)
+            Text(localizedString)
         }
         .contextMenu {
             Button("Details") {
@@ -367,6 +372,7 @@ private struct UpNextCard: View {
         }
     }
 }
+#endif
 
 private struct DrawingConstants {
 #if !os(tvOS)
@@ -378,7 +384,7 @@ private struct DrawingConstants {
 #endif
     static let compactImageWidth: CGFloat = 160
     static let compactImageHeight: CGFloat = 100
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let titleLineLimit: Int = 1
     static let imageShadow: CGFloat = 2.5
 }

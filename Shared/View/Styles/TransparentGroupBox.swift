@@ -1,21 +1,13 @@
-//
-//  TransparentGroupBox.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 05/05/23.
-//
-
 import SwiftUI
-#if os(iOS) || os(macOS) || os(visionOS)
+#if os(iOS) || os(macOS)
 struct TransparentGroupBox: GroupBoxStyle {
     func makeBody(configuration: Configuration) -> some View {
         VStack {
             HStack {
                 configuration.label
-                    .fontDesign(.rounded)
+                    .fontDesign(.default)
                     .font(.headline)
                     .foregroundColor(.primary)
-                    .fontWeight(.medium)
                 Spacer()
             }
             
@@ -27,7 +19,7 @@ struct TransparentGroupBox: GroupBoxStyle {
             ZStack {
                 Rectangle().fill(.background)
             }
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             .shadow(radius: 1)
         }
     }

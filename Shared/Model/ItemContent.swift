@@ -1,10 +1,3 @@
-//
-//  ItemContent.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 17/02/22.
-//
-
 import Foundation
 
 /// A model that represents a movie or tv show.

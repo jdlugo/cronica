@@ -1,12 +1,5 @@
-//
-//  PersonSearchImage.swift
-//  CronicaMac
-//
-//  Created by Alexandre Madeira on 20/11/22.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 /// A rectangular shape for displaying Person images in Search, it is currently used
 /// for displaying people in Search for macOS. This is a simpler view from the Cast List.
@@ -18,7 +11,7 @@ struct PersonSearchImage: View {
 #endif
     var body: some View {
         VStack(alignment: .leading) {
-            PersonSearchImageView(item: item)
+            image
 #if os(tvOS) || os(macOS)
             HStack {
                 Text(item.itemTitle)
@@ -46,46 +39,25 @@ struct PersonSearchImage: View {
 #endif
     }
     
-    
-}
-
-private struct DrawingConstants {
-#if os(tvOS)
-    static let posterWidth: CGFloat = 260
-    static let posterHeight: CGFloat = 380
-    static let posterRadius: CGFloat = 12
-#else
-    static let posterWidth: CGFloat = 160
-    static let posterHeight: CGFloat = 240
-    static let posterRadius: CGFloat = 12
-#endif
-    static let shadowRadius: CGFloat = 2.5
-}
-
-private struct PersonSearchImageView: View {
-    let item: SearchItemContent
-    var body: some View {
+    private var image: some View {
         NavigationLink(value: item) {
-            LazyImage(url: item.itemImage) { state in
-                if let image = state.image {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } else {
-                    placeholder
-                }
+            WebImage(url: item.itemImage, options: .highPriority) { image in
+                image.resizable()
+            } placeholder: {
+                placeholder
             }
+            .aspectRatio(contentMode: .fill)
             .transition(.opacity)
-            .frame(width: DrawingConstants.posterWidth,
-                   height: DrawingConstants.posterHeight)
-            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.posterRadius,
-                                        style: .continuous))
-            .shadow(radius: DrawingConstants.shadowRadius)
-            .padding(.zero)
+                .frame(width: DrawingConstants.posterWidth,
+                       height: DrawingConstants.posterHeight)
+                .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.posterRadius,
+                                            style: .continuous))
+                .shadow(radius: DrawingConstants.shadowRadius)
+                .padding(.zero)
 #if os(macOS) || os(iOS)
-            .contextMenu { ShareLink(item: item.itemSearchURL) }
+                .contextMenu { ShareLink(item: item.itemSearchURL) }
 #elseif os(tvOS)
-            .buttonStyle(.card)
+                .buttonStyle(.card)
 #endif
         }
     }
@@ -104,4 +76,16 @@ private struct PersonSearchImageView: View {
         .shadow(radius: DrawingConstants.shadowRadius)
         .padding(.zero)
     }
+}
+
+private struct DrawingConstants {
+#if os(tvOS)
+    static let posterWidth: CGFloat = 260
+    static let posterHeight: CGFloat = 380
+#else
+    static let posterWidth: CGFloat = 160
+    static let posterHeight: CGFloat = 240
+#endif
+    static let posterRadius: CGFloat = 8
+    static let shadowRadius: CGFloat = 2.5
 }

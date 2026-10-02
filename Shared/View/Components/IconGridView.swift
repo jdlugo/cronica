@@ -1,10 +1,3 @@
-//
-//  IconGridView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 08/08/23.
-//
-
 import SwiftUI
 
 struct IconGridView: View {

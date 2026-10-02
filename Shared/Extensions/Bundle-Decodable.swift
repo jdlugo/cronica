@@ -1,10 +1,3 @@
-//
-//  Bundle-Decodable.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 17/01/22.
-//
-
 import Foundation
 
 extension Bundle {
@@ -23,7 +16,7 @@ extension Bundle {
     
     func decode<T: Decodable>(from file: String) throws -> T? {
         guard let url = self.url(forResource: file, withExtension: "json") else {
-            fatalError("Failed to locate \(file) from bundle.")
+            return nil
         }
         let data = try Data(contentsOf: url)
         let result = try Bundle.decoder.decode(T.self, from: data)

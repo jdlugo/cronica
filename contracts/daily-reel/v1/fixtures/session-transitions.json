@@ -1,0 +1,114 @@
+{
+  "version": "daily-reel-transition-fixtures.v1",
+  "maxIncorrectAttemptsPerAct": 3,
+  "scenarios": [
+    {
+      "name": "free clue is idempotent and first try stays perfect",
+      "initial": {
+        "status": "playing",
+        "incorrectAttempts": 0,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": null
+      },
+      "events": [
+        { "type": "requestClue", "clueId": "title-length", "affectsScore": false },
+        { "type": "requestClue", "clueId": "title-length", "affectsScore": false },
+        { "type": "correct" }
+      ],
+      "expected": {
+        "status": "solved",
+        "incorrectAttempts": 0,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": ["title-length"],
+        "score": 100
+      }
+    },
+    {
+      "name": "one incorrect answer then correct",
+      "initial": {
+        "status": "playing",
+        "incorrectAttempts": 0,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": null
+      },
+      "events": [
+        { "type": "incorrect" },
+        { "type": "correct" }
+      ],
+      "expected": {
+        "status": "solved",
+        "incorrectAttempts": 1,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": 75
+      }
+    },
+    {
+      "name": "incorrect answer and clue solve for fifty",
+      "initial": {
+        "status": "playing",
+        "incorrectAttempts": 0,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": null
+      },
+      "events": [
+        { "type": "incorrect" },
+        { "type": "requestClue", "clueId": "standard-hint", "affectsScore": true },
+        { "type": "correct" }
+      ],
+      "expected": {
+        "status": "solved",
+        "incorrectAttempts": 1,
+        "scoreAffectingClues": 1,
+        "requestedClueIds": ["standard-hint"],
+        "score": 50
+      }
+    },
+    {
+      "name": "third incorrect answer exhausts the act",
+      "initial": {
+        "status": "playing",
+        "incorrectAttempts": 0,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": null
+      },
+      "events": [
+        { "type": "incorrect" },
+        { "type": "incorrect" },
+        { "type": "incorrect" }
+      ],
+      "expected": {
+        "status": "exhausted",
+        "incorrectAttempts": 3,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": 0
+      }
+    },
+    {
+      "name": "reveal immediately ends the act",
+      "initial": {
+        "status": "playing",
+        "incorrectAttempts": 0,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": null
+      },
+      "events": [
+        { "type": "reveal" },
+        { "type": "correct" }
+      ],
+      "expected": {
+        "status": "revealed",
+        "incorrectAttempts": 0,
+        "scoreAffectingClues": 0,
+        "requestedClueIds": [],
+        "score": 0
+      }
+    }
+  ]
+}

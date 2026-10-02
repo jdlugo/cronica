@@ -1,88 +1,22 @@
-//
-//  TabBarView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 01/05/22.
-//
-
 import SwiftUI
-#if !os(macOS)
+
+#if os(iOS) || os(tvOS)
 /// A TabBar for switching views, only used on iPhone.
 struct TabBarView: View {
-    @AppStorage("lastTabSelected") private var tabSelection: Screens?
+    @AppStorage("selectedView") var selectedView: Screens?
     var persistence = PersistenceController.shared
-    private var selectedTab: Binding<Screens> {
-        return .init {
-            return tabSelection ?? .home
-        } set: { newValue in
-            if newValue == tabSelection {
-                switch newValue {
-                case .home:
-                    if !homePath.isEmpty {
-                        homePath = .init()
-                    }
-                case .explore:
-                    if !explorePath.isEmpty {
-                        explorePath = .init()
-                    }
-                case .watchlist:
-                    if !watchlistPath.isEmpty {
-                        watchlistPath = .init()
-                    }
-                case .search:
-                    if !searchPath.isEmpty {
-                        searchPath = .init()
-                    } else {
-                        shouldOpenOnSearchField = true
-                    }
-                default: return
-                }
-            }
-            tabSelection = newValue
-        }
-    }
-    @State private var homePath: NavigationPath = .init()
-    @State private var explorePath: NavigationPath = .init()
-    @State private var watchlistPath: NavigationPath = .init()
-    @State private var searchPath: NavigationPath = .init()
-    @State private var shouldOpenOnSearchField = false
     var body: some View {
-#if os(iOS)
-        if UIDevice.isIPad {
-            if #available(iOS 18, *) {
-                newTabView
-                    .onAppear {
-                        let settings = SettingsStore.shared
-                        if settings.isPreferredLaunchScreenEnabled {
-                            tabSelection = settings.preferredLaunchScreen
-                        }
-                    }
-                    .appTint()
-                    .appTheme()
-            } else {
-                details
-                    .onAppear {
-                        let settings = SettingsStore.shared
-                        if settings.isPreferredLaunchScreenEnabled {
-                            tabSelection = settings.preferredLaunchScreen
-                        }
-                    }
-                    .appTint()
-                    .appTheme()
-            }
-        } else {
-            details
-                .onAppear {
-                    let settings = SettingsStore.shared
-                    if settings.isPreferredLaunchScreenEnabled {
-                        tabSelection = settings.preferredLaunchScreen
-                    }
-                }
-                .appTint()
-                .appTheme()
-        }
-#else
         details
+#if os(iOS)
+            .onAppear {
+                let settings = SettingsStore.shared
+                if settings.isPreferredLaunchScreenEnabled {
+                    selectedView = settings.preferredLaunchScreen
+                }
+
+            }
+            .appTint()
+            .appTheme()
 #endif
     }
     
@@ -115,65 +49,33 @@ struct TabBarView: View {
     }
 #endif
     
-    @available(iOS 18, *)
-    private var newTabView: some View {
-        TabView(selection: selectedTab) {
-            Tab("Home", systemImage: "house", value: .home) {
-                NavigationStack(path: $homePath) {
-                    HomeView()
-                }
-            }
-            
-            Tab("Discover", systemImage: "popcorn", value: .explore) {
-                NavigationStack(path: $explorePath) {
-                    ExploreView()
-                }
-            }
-            
-            Tab("Watchlist", systemImage: "rectangle.on.rectangle", value: .watchlist) {
-                NavigationStack(path: $watchlistPath) {
-                    WatchlistView()
-                        .environment(\.managedObjectContext, persistence.container.viewContext)
-                }
-            }
-            
-            Tab("Search", systemImage: "magnifyingglass", value: .search, role: .search) {
-                NavigationStack(path: $searchPath) {
-                    SearchView(shouldFocusOnSearchField: $shouldOpenOnSearchField)
-                }
-            }
-        }
-        .tabViewStyle(.sidebarAdaptable)
-        .appTheme()
-    }
-    
-#if os(iOS) || os(visionOS)
+#if os(iOS)
     private var details: some View {
-        TabView(selection: selectedTab) {
-            NavigationStack(path: $homePath) {
-                HomeView()
-            }
-            .tag(Screens.home)
-            .tabItem { Label("Home", systemImage: "house") }
+        TabView(selection: $selectedView) {
+            NavigationStack { HomeView() }
+                .tag(HomeView.tag)
+                .tabItem { Label("Home", systemImage: "house") }
             
-            NavigationStack(path: $explorePath) {
-                ExploreView()
-            }
-            .tag(Screens.explore)
-            .tabItem { Label("Discover", systemImage: "popcorn") }
+            NavigationStack { ExploreView() }
+                .tag(ExploreView.tag)
+                .tabItem { Label("Explore", systemImage: "popcorn") }
             
-            NavigationStack(path: $watchlistPath) {
+            NavigationStack {
                 WatchlistView()
                     .environment(\.managedObjectContext, persistence.container.viewContext)
             }
-            .tabItem { Label("Watchlist", systemImage: "rectangle.on.rectangle") }
-            .tag(Screens.watchlist)
+            .tag(WatchlistView.tag)
+            .tabItem { Label("Watchlist", systemImage: "square.stack") }
             
-            NavigationStack(path: $searchPath) {
-                SearchView(shouldFocusOnSearchField: $shouldOpenOnSearchField)
+            NavigationStack { SearchView() }
+                .tag(SearchView.tag)
+                .tabItem { Label("Search", systemImage: "magnifyingglass") }
+            
+            if UIDevice.isIPhone {
+                SettingsView()
+                    .tag(SettingsView.tag)
+                    .tabItem { Label("Settings", systemImage: "gearshape") }
             }
-            .tag(Screens.search)
-            .tabItem { Label("Search", systemImage: "magnifyingglass") }
         }
         .appTheme()
     }

@@ -1,60 +1,90 @@
-//
-//  FeedbackSettingsView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 16/11/22.
-//
-
 import SwiftUI
 
-struct FeedbackComposerView: View {
-    @Environment(\.openURL) var openURL
-    @StateObject private var settings = SettingsStore.shared
-    @State private var supportEmail = SupportEmail()
+struct FeedbackSettingsView: View {
+    @State private var showFeedbackForm = false
     var body: some View {
-        Form {
-#if !os(tvOS)
-            Section {
-                Button("Send Email") { supportEmail.send(openURL: openURL) }
-            } footer: {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("If you prefer, you can send an email for a faster follow-up.")
-                    }
-                    Spacer()
-                }
+        Section {
+            Button("Send Feedback") {
+                showFeedbackForm.toggle()
             }
 #if os(macOS)
             .buttonStyle(.link)
 #endif
-            
-            Section {
-                Button("X (Twitter)") {
-                    guard let url = URL(string: "https://x.com/CronicaApp") else { return }
-#if os(iOS)
-                    UIApplication.shared.open(url)
-#elseif os(macOS)
-                    NSWorkspace.shared.open(url)
+            .sheet(isPresented: $showFeedbackForm) {
+                FeedbackComposerView(showFeedbackForm: $showFeedbackForm)
+                    .presentationDetents([.medium, .large])
+                    .appTheme()
+                    .appTint()
+#if os(macOS)
+                    .frame(width: 400, height: 400, alignment: .center)
 #endif
+            }
+        }
+    }
+    
+    
+}
+
+#Preview {
+    FeedbackSettingsView()
+}
+
+struct FeedbackComposerView: View {
+    @State private var feedback = ""
+    @Environment(\.openURL) var openURL
+    @StateObject private var settings = SettingsStore.shared
+    @State private var supportEmail = SupportEmail()
+    @Binding var showFeedbackForm: Bool
+    @State private var feedbackSent = false
+    @State private var showPopup = false
+    @State private var popupType: ActionPopupItems?
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    TextField("Feedback", text: $feedback)
+                        .lineLimit(4)
+                    Button("Send", action: send)
+#if os(macOS)
+                        .buttonStyle(.link)
+#endif
+                }
+#if !os(tvOS)
+                Section {
+                    Button("sendEmail") { supportEmail.send(openURL: openURL) }
+                } footer: {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("sendEmailFooter")
+                            Text("sendEmailFooterBackup")
+                                .textSelection(.enabled)
+                        }
+                        Spacer()
+                    }
                 }
 #if os(macOS)
                 .buttonStyle(.link)
 #endif
-            } header: {
-                Text("Social Media")
-            } footer: {
-                Text("Follow Cronica on X (Twitter) to stay updated about new features.")
+#endif
             }
+            .navigationTitle("Send Feedback")
+            .toolbar {
+                Button("Cancel", role: .cancel) { showFeedbackForm.toggle() }
+            }
+            .actionPopup(isShowing: $showPopup, for: popupType)
+#if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+#elseif os(macOS)
+            .formStyle(.grouped)
 #endif
         }
-        .navigationTitle("Feedback")
-        .scrollBounceBehavior(.basedOnSize)
-#if os(macOS)
-        .formStyle(.grouped)
-#endif
     }
-}
-
-#Preview {
-    FeedbackComposerView()
+    
+    private func send() {
+        if feedback.isEmpty { return }
+        CronicaTelemetry.shared.handleMessage("Feedback: \(feedback)", for: "Feedback")
+        popupType = .feedbackSent
+        withAnimation { showPopup = true }
+        feedback = ""
+    }
 }

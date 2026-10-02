@@ -1,10 +1,3 @@
-//
-//  ItemContentSectionDetails.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 30/11/22.
-//
-
 import SwiftUI
 
 struct ItemContentSectionDetails: View {
@@ -25,13 +18,36 @@ struct ItemContentSectionDetails: View {
 			}
 #endif
 		}
-		.navigationTitle(title)
-        .scrollBounceBehavior(.basedOnSize)
+		.navigationTitle(LocalizedStringKey(title))
+		.toolbar {
+#if os(iOS)
+			ToolbarItem(placement: .navigationBarTrailing) {
+				styleOptions
+			}
+#endif
+		}
 		.actionPopup(isShowing: $showPopup, for: popupType)
 #if os(iOS)
 		.navigationBarTitleDisplayMode(.large)
 #endif
 	}
+	
+#if os(iOS) || os(macOS)
+	private var styleOptions: some View {
+		Menu {
+			Picker(selection: $settings.sectionStyleType) {
+				ForEach(SectionDetailsPreferredStyle.allCases) { item in
+					Text(item.title).tag(item)
+				}
+			} label: {
+				Label("Section Style", systemImage: "circle.grid.2x2")
+			}
+		} label: {
+			Label("Section Style", systemImage: "circle.grid.2x2")
+				.labelStyle(.iconOnly)
+		}
+	}
+#endif
 	
 	private var listStyle: some View {
 		Form {
@@ -70,7 +86,7 @@ struct ItemContentSectionDetails: View {
                     .buttonStyle(.plain)
             }
 		}.padding(.all, settings.isCompactUI ? 10 : nil)
-#elseif os(macOS) || os(visionOS)
+#elseif os(macOS)
 		LazyVGrid(columns: DrawingConstants.posterColumns, spacing: 20) {
 			ForEach(items) { item in
 				ItemContentPosterView(item: item, showPopup: $showPopup, popupType: $popupType)
@@ -89,13 +105,13 @@ struct ItemContentSectionDetails: View {
 }
 
 private struct DrawingConstants {
-#if os(macOS) || os(tvOS) || os(visionOS)
+#if os(macOS) || os(tvOS)
 	static let columns = [GridItem(.adaptive(minimum: 240))]
 #else
 	static let columns: [GridItem] = [GridItem(.adaptive(minimum: UIDevice.isIPad ? 240 : 160 ))]
 #endif
 	static let compactColumns: [GridItem] = [GridItem(.adaptive(minimum: 80))]
-#if os(macOS) || os(visionOS)
+#if os(macOS)
 	static let posterColumns = [GridItem(.adaptive(minimum: 160))]
 	static let cardColumns = [GridItem(.adaptive(minimum: 240))]
 #endif

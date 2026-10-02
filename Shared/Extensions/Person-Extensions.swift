@@ -1,10 +1,3 @@
-//
-//  Person-Extensions.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 24/03/22.
-//
-
 import Foundation
 
 extension Person {

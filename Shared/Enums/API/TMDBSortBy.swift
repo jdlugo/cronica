@@ -1,10 +1,3 @@
-//
-//  TMDBSortBy.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 27/01/23.
-//
-
 import SwiftUI
 
 enum TMDBSortBy: String, Identifiable, CaseIterable {
@@ -16,10 +9,14 @@ enum TMDBSortBy: String, Identifiable, CaseIterable {
 	
 	var localizedString: LocalizedStringKey {
 		switch self {
-		case .popularity: LocalizedStringKey("Popularity")
-		case .rating: LocalizedStringKey("Rating")
-		case .releaseDateDesc: LocalizedStringKey("Release Date (Descending)")
-		case .releaseDateAsc: LocalizedStringKey("Release Date (Ascending)")
+		case .popularity:
+			return LocalizedStringKey("Popularity")
+		case .rating:
+			return LocalizedStringKey("Rating")
+		case .releaseDateDesc:
+			return LocalizedStringKey("Release Date (Descending)")
+		case .releaseDateAsc:
+			return LocalizedStringKey("Release Date (Ascending)")
 		}
 	}
 }

@@ -1,0 +1,45 @@
+{
+  "version": "daily-reel-scoring-fixtures.v1",
+  "cases": [
+    {
+      "name": "first try with a free clue",
+      "input": { "outcome": "solved", "incorrectAttempts": 0, "scoreAffectingClues": 0, "freeClues": 1 },
+      "expectedScore": 100
+    },
+    {
+      "name": "one incorrect answer",
+      "input": { "outcome": "solved", "incorrectAttempts": 1, "scoreAffectingClues": 0, "freeClues": 0 },
+      "expectedScore": 75
+    },
+    {
+      "name": "one score affecting clue",
+      "input": { "outcome": "solved", "incorrectAttempts": 0, "scoreAffectingClues": 1, "freeClues": 0 },
+      "expectedScore": 75
+    },
+    {
+      "name": "one incorrect answer and one clue",
+      "input": { "outcome": "solved", "incorrectAttempts": 1, "scoreAffectingClues": 1, "freeClues": 0 },
+      "expectedScore": 50
+    },
+    {
+      "name": "two incorrect answers",
+      "input": { "outcome": "solved", "incorrectAttempts": 2, "scoreAffectingClues": 0, "freeClues": 0 },
+      "expectedScore": 50
+    },
+    {
+      "name": "many assistance events still solve for fifty",
+      "input": { "outcome": "solved", "incorrectAttempts": 2, "scoreAffectingClues": 2, "freeClues": 3 },
+      "expectedScore": 50
+    },
+    {
+      "name": "explicit reveal",
+      "input": { "outcome": "revealed", "incorrectAttempts": 0, "scoreAffectingClues": 0, "freeClues": 0 },
+      "expectedScore": 0
+    },
+    {
+      "name": "attempts exhausted",
+      "input": { "outcome": "exhausted", "incorrectAttempts": 3, "scoreAffectingClues": 0, "freeClues": 0 },
+      "expectedScore": 0
+    }
+  ]
+}

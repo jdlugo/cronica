@@ -1,10 +1,3 @@
-//
-//  Content-Helpers.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 06/03/22.
-//  swiftlint:disable trailing_whitespace
-
 import Foundation
 
 extension ItemContent {
@@ -86,10 +79,7 @@ extension ItemContent {
     }
     var itemTheatricalString: String? {
         if let dates = releaseDates?.results {
-			var productionRegion = "US"
-			if let country = productionCountries?.first {
-				productionRegion = country.iso31661
-			}
+            let productionRegion = productionCountries?.first?.iso31661
             return DatesManager.getDetailedReleaseDateFormatted(results: dates, productionRegion: productionRegion)
         }
 		if let itemFirstAirDate {
@@ -203,11 +193,7 @@ extension ItemContent {
     
     // MARK: URL
     var posterImageMedium: URL? {
-#if os(tvOS)
-        return NetworkService.urlBuilder(size: .w780, path: posterPath)
-#else
-        return NetworkService.urlBuilder(size: .w500, path: posterPath)
-#endif
+        return NetworkService.urlBuilder(size: .medium, path: posterPath)
     }
     var posterImageLarge: URL? {
         return NetworkService.urlBuilder(size: .w500, path: posterPath)
@@ -336,6 +322,13 @@ extension ItemContent {
         return nil
     }
     
+    var itemInfoTVShow: String? {
+        if let numberOfSeasons, let numberOfEpisodes {
+            return NSLocalizedString("\(numberOfSeasons) Seasons • \(numberOfEpisodes) Episodes", comment: "")
+        }
+        return nil
+    }
+    
     // MARK: Int
     var itemSeasons: [Int]? {
         guard let numberOfSeasons else { return nil }
@@ -396,11 +389,70 @@ extension ItemContent {
 	}
     
     // MARK: Preview
+    #if DEBUG
+    /// Set by screenshot tests to load locale-specific content JSON (e.g. "de", "ja").
+    static var contentLocaleOverride: String?
+    #endif
+
     static var examples: [ItemContent] {
-        let data: ItemContentResponse? = try? Bundle.main.decode(from: "content")
-        return data!.results
+        #if DEBUG
+        if let locale = contentLocaleOverride,
+           let data: ItemContentResponse = try? Bundle.main.decode(from: "content_\(locale)") {
+            return data.results
+        }
+        #endif
+        if let data: ItemContentResponse = try? Bundle.main.decode(from: "content") {
+            return data.results
+        }
+        // Fallback for previews when bundle resources aren't available
+        return [ItemContent.previewMock]
     }
     static var example: ItemContent {
         examples[0]
     }
+    
+    /// A hardcoded mock for SwiftUI previews when bundle loading fails
+    static let previewMock = ItemContent(
+        adult: false,
+        id: 791373,
+        title: "Zack Snyder's Justice League",
+        name: nil,
+        overview: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+        originalTitle: "Zack Snyder's Justice League",
+        posterPath: "/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+        backdropPath: "/pcDc2WJAYGJTTvRSEIpRZwM3Ola.jpg",
+        profilePath: nil,
+        releaseDate: "2021-03-18",
+        status: "Released",
+        imdbId: "tt12361974",
+        runtime: 242,
+        numberOfEpisodes: nil,
+        numberOfSeasons: nil,
+        voteCount: 8500,
+        popularity: 150.0,
+        voteAverage: 8.1,
+        productionCompanies: [
+            ProductionCompany(name: "Warner Bros. Pictures", id: 174, logoPath: "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png", originCountry: "US", description: nil),
+            ProductionCompany(name: "DC Films", id: 128064, logoPath: "/13F3Jf7EFAcREU0xzZqJnVnyGXu.png", originCountry: "US", description: nil)
+        ],
+        productionCountries: [ProductionCountry(iso31661: "US", name: "United States of America")],
+        seasons: nil,
+        genres: [
+            Genre(id: 28, name: "Action"),
+            Genre(id: 12, name: "Adventure"),
+            Genre(id: 14, name: "Fantasy"),
+            Genre(id: 878, name: "Science Fiction")
+        ],
+        credits: nil,
+        recommendations: nil,
+        releaseDates: nil,
+        mediaType: "movie",
+        videos: nil,
+        nextEpisodeToAir: nil,
+        lastEpisodeToAir: nil,
+        originalName: nil,
+        firstAirDate: nil,
+        homepage: "https://www.hbomax.com/zacksnydersjusticeleague",
+        episodeRunTime: nil
+    )
 }

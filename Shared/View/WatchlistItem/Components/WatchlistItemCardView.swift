@@ -1,12 +1,5 @@
-//
-//  WatchlistItemCardView.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 20/12/22.
-//
-
 import SwiftUI
-import NukeUI
+import SDWebImageSwiftUI
 
 struct WatchlistItemCardView: View {
     let content: WatchlistItem
@@ -26,84 +19,16 @@ struct WatchlistItemCardView: View {
     var body: some View {
         VStack {
             NavigationLink(value: content) {
-                LazyImage(url: content.backCompatibleCardImage) { state in
-                    if let image = state.image {
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    } else {
-                        placeholder
-                    }
-                }
-                .transition(.opacity)
-                .overlay {
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            if isFavorite {
-                                Image(systemName: "suit.heart")
-                                    .imageScale(.small)
-                                    .foregroundColor(.white.opacity(0.9))
-                                    .padding([.vertical])
-                                    .padding(.horizontal)
-#if os(tvOS)
-                                    .font(.caption)
-#endif
-                            }
-                            if !isFavorite, isWatched {
-                                Image(systemName: "rectangle.badge.checkmark")
-                                    .imageScale(.small)
-                                    .foregroundColor(.white.opacity(0.9))
-                                    .padding([.vertical])
-                                    .padding(.horizontal)
-#if os(tvOS)
-                                    .font(.caption)
-#endif
-                            }
-                            if !isFavorite, !isWatched {
-                                Image(systemName: "square.stack")
-                                    .imageScale(.small)
-                                    .foregroundColor(.white.opacity(0.9))
-                                    .padding([.vertical, .trailing])
-#if os(tvOS)
-                                    .font(.caption)
-#endif
-                            }
-                            
-                        }
-                        .background {
-                            if content.backCompatibleCardImage != nil {
-                                Color.black.opacity(0.6)
-                                    .mask {
-                                        LinearGradient(colors:
-                                                        [Color.black,
-                                                         Color.black.opacity(0.924),
-                                                         Color.black.opacity(0.707),
-                                                         Color.black.opacity(0.383),
-                                                         Color.black.opacity(0)],
-                                                       startPoint: .bottom,
-                                                       endPoint: .top)
-                                    }
-                            }
-                        }
-                    }
-                }
-                .frame(width: DrawingConstants.imageWidth,
-                       height: DrawingConstants.imageHeight)
-                .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
-                                            style: .continuous))
-                .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
-                .applyHoverEffect()
-                .watchlistContextMenu(item: content,
-                                      isWatched: $isWatched,
-                                      isFavorite: $isFavorite,
-                                      isPin: $isPin,
-                                      isArchive: $isArchive,
-                                      showNote: $showNote,
-                                      showCustomList: $showCustomListView,
-                                      popupType: $popupType,
-                                      showPopup: $showPopup)
+                image
+                    .watchlistContextMenu(item: content,
+                                          isWatched: $isWatched,
+                                          isFavorite: $isFavorite,
+                                          isPin: $isPin,
+                                          isArchive: $isArchive,
+                                          showNote: $showNote,
+                                          showCustomList: $showCustomListView,
+                                          popupType: $popupType,
+                                          showPopup: $showPopup)
             }
             HStack {
                 Text(content.itemTitle)
@@ -138,15 +63,96 @@ struct WatchlistItemCardView: View {
         .focused($isStackFocused)
 #endif
         .sheet(isPresented: $showNote) {
-            ReviewView(id: content.itemContentID, showView: $showNote)
+            NavigationStack {
+                ReviewView(id: content.itemContentID, showView: $showNote)
+            }
+            .presentationDetents([.large])
+#if os(macOS)
+            .frame(width: 400, height: 400, alignment: .center)
+#elseif os(iOS)
+            .appTheme()
+            .appTint()
+#endif
         }
         .sheet(isPresented: $showCustomListView) {
-            ItemContentCustomListSelector(contentID: content.itemContentID,
-                                          showView: $showCustomListView,
-                                          title: content.itemTitle,
-                                          image: content.mediumPosterImage)
+            NavigationStack {
+                ItemContentCustomListSelector(contentID: content.itemContentID,
+                                              showView: $showCustomListView,
+                                              title: content.itemTitle, image: content.backCompatibleCardImage)
+            }
+            .presentationDetents([.large])
+#if os(macOS)
+            .frame(width: 500, height: 600, alignment: .center)
+#else
+            .appTheme()
+            .appTint()
+#endif
         }
     }
+    private var image: some View {
+        WebImage(url: content.backCompatibleCardImage) { image in
+            image.resizable()
+        } placeholder: {
+            placeholder
+        }
+        .aspectRatio(contentMode: .fill)
+        .transition(.opacity)
+            .overlay {
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        if isPin {
+                            Image(systemName: "pin.fill")
+                                .imageScale(.small)
+                                .foregroundColor(.white.opacity(0.9))
+                                .padding([.vertical])
+                                .padding(.trailing, 4)
+                        }
+                        if isFavorite {
+                            Image(systemName: "suit.heart.fill")
+                                .imageScale(.small)
+                                .foregroundColor(.white.opacity(0.9))
+                                .padding([.vertical])
+                                .padding(.trailing, 4)
+                        }
+                        if isWatched {
+                            Image(systemName: "rectangle.badge.checkmark.fill")
+                                .imageScale(.small)
+                                .foregroundColor(.white.opacity(0.9))
+                                .padding([.vertical])
+                                .padding(.trailing, 4)
+                        }
+                        Image(systemName: "square.stack.fill")
+                            .imageScale(.small)
+                            .foregroundColor(.white.opacity(0.9))
+                            .padding([.vertical, .trailing])
+                    }
+                    .background {
+                        if content.backCompatibleCardImage != nil {
+                            Color.black.opacity(0.6)
+                                .mask {
+                                    LinearGradient(colors:
+                                                    [Color.black,
+                                                     Color.black.opacity(0.924),
+                                                     Color.black.opacity(0.707),
+                                                     Color.black.opacity(0.383),
+                                                     Color.black.opacity(0)],
+                                                   startPoint: .bottom,
+                                                   endPoint: .top)
+                                }
+                        }
+                    }
+                }
+            }
+            .frame(width: DrawingConstants.imageWidth,
+                   height: DrawingConstants.imageHeight)
+            .clipShape(RoundedRectangle(cornerRadius: DrawingConstants.imageRadius,
+                                        style: .continuous))
+            .shadow(radius: DrawingConstants.imageShadow)
+            .applyHoverEffect()
+    }
+    
     private var tvOSOverlay: some View {
         ZStack(alignment: .bottom) {
             VStack {
@@ -197,7 +203,7 @@ struct WatchlistItemCardView: View {
         ZStack {
             Rectangle().fill(.gray.gradient)
             VStack {
-                Image(systemName: "popcorn")
+                Image(systemName: "popcorn.fill")
                     .font(.title)
                     .fontWidth(.expanded)
                     .foregroundColor(.white.opacity(0.8))
@@ -216,7 +222,7 @@ struct WatchlistItemCardView: View {
 }
 
 private struct DrawingConstants {
-#if os(macOS) || os(visionOS)
+#if os(macOS)
     static let imageWidth: CGFloat = 240
     static let imageHeight: CGFloat = 140
 #elseif os(iOS)
@@ -226,7 +232,7 @@ private struct DrawingConstants {
     static let imageWidth: CGFloat = 420
     static let imageHeight: CGFloat = 240
 #endif
-    static let imageRadius: CGFloat = 12
+    static let imageRadius: CGFloat = 8
     static let titleLineLimit: Int = 2
     static let imageShadow: CGFloat = 2.5
     static let placeholderForegroundColor: Color = .white.opacity(0.8)

@@ -1,0 +1,361 @@
+{
+  "catalog" : {
+    "earliest_year" : 1985,
+    "film_count" : 12,
+    "latest_year" : 2023
+  },
+  "checks" : 70,
+  "core_signature_definition" : "Memory ignores optional year\/anchor and card shuffle; Double Feature preserves actor\/movie pair groups; visual identification modes use target film; remaining modes preserve meaningful configured content.",
+  "evidence_type" : "deterministic model probe",
+  "limits" : "Known state supplies answers. No participant, enjoyment, pacing, voluntary replay, conversion or retention result. Signatures are defined mechanical proxies, not proven perceived novelty. Generated practice is forced, not organic replay.",
+  "memory" : {
+    "correct_bonus_adds_points" : false,
+    "matching_only_finish" : true,
+    "wrong_bonus_preserves_points" : true
+  },
+  "practice" : [
+    {
+      "distinct_core_signatures" : 9,
+      "first_repeated_core_round" : 7,
+      "first_three_core_signatures" : [
+        "scramble:245891",
+        "scramble:313369",
+        "scramble:603"
+      ],
+      "generated_rounds" : 12,
+      "mode" : "scramble"
+    },
+    {
+      "distinct_core_signatures" : 12,
+      "first_repeated_core_round" : null,
+      "first_three_core_signatures" : [
+        "memory:105,157336,245891",
+        "memory:597,157336,313369",
+        "memory:597,603,19995"
+      ],
+      "generated_rounds" : 12,
+      "mode" : "memory"
+    },
+    {
+      "distinct_core_signatures" : 7,
+      "first_repeated_core_round" : 8,
+      "first_three_core_signatures" : [
+        "doubleFeature:30614:313369,346698;3895:27205,157336;6384:603,245891",
+        "doubleFeature:2231:329,299534;30614:313369,346698;6193:597,27205",
+        "doubleFeature:3895:27205,157336;6384:603,245891;8691:19995,299534"
+      ],
+      "generated_rounds" : 12,
+      "mode" : "doubleFeature"
+    }
+  ],
+  "recovery" : {
+    "next_day_previous_daily_available" : false,
+    "practice_selection_reloaded" : true,
+    "same_day_daily_state" : true
+  },
+  "schema" : 1,
+  "scramble" : {
+    "assembled_board_finishes_round" : false,
+    "no_title_reveal_points" : 0
+  },
+  "seven_day_daily" : {
+    "all_catalog_films_seen_by" : "2026-10-04",
+    "distinct_core_signatures" : 26,
+    "distinct_films" : 12,
+    "repeated_core_rounds" : 2,
+    "rounds" : 28,
+    "rows" : [
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scene:329",
+        "day" : "2026-10-01",
+        "films" : [
+          "Jurassic Park"
+        ],
+        "mode" : "scene"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "detective:157336",
+        "day" : "2026-10-01",
+        "films" : [
+          "Interstellar"
+        ],
+        "mode" : "detective"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "memory:105,597,862",
+        "day" : "2026-10-01",
+        "films" : [
+          "Back to the Future",
+          "Titanic",
+          "Toy Story"
+        ],
+        "mode" : "memory"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scramble:313369",
+        "day" : "2026-10-01",
+        "films" : [
+          "La La Land"
+        ],
+        "mode" : "scramble"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scene:597",
+        "day" : "2026-10-02",
+        "films" : [
+          "Titanic"
+        ],
+        "mode" : "scene"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "detective:862",
+        "day" : "2026-10-02",
+        "films" : [
+          "Toy Story"
+        ],
+        "mode" : "detective"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "memory:19995,157336,346698",
+        "day" : "2026-10-02",
+        "films" : [
+          "Avatar",
+          "Interstellar",
+          "Barbie"
+        ],
+        "mode" : "memory"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scramble:329",
+        "day" : "2026-10-02",
+        "films" : [
+          "Jurassic Park"
+        ],
+        "mode" : "scramble"
+      },
+      {
+        "core_seen_before" : true,
+        "core_signature" : "scene:597",
+        "day" : "2026-10-03",
+        "films" : [
+          "Titanic"
+        ],
+        "mode" : "scene"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scramble:245891",
+        "day" : "2026-10-03",
+        "films" : [
+          "John Wick"
+        ],
+        "mode" : "scramble"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "casting:603:6384",
+        "day" : "2026-10-03",
+        "films" : [
+          "The Matrix"
+        ],
+        "mode" : "casting"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "5fc8b9dc811b0be9",
+        "day" : "2026-10-03",
+        "films" : [
+          "Back to the Future",
+          "Avengers: Endgame",
+          "Avatar",
+          "Toy Story"
+        ],
+        "mode" : "timeline"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scene:603",
+        "day" : "2026-10-04",
+        "films" : [
+          "The Matrix"
+        ],
+        "mode" : "scene"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scramble:27205",
+        "day" : "2026-10-04",
+        "films" : [
+          "Inception"
+        ],
+        "mode" : "scramble"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "casting:313369:30614",
+        "day" : "2026-10-04",
+        "films" : [
+          "La La Land"
+        ],
+        "mode" : "casting"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "d8de835b5e76b837",
+        "day" : "2026-10-04",
+        "films" : [
+          "Avatar",
+          "John Wick",
+          "Avengers: Endgame",
+          "Titanic"
+        ],
+        "mode" : "timeline"
+      },
+      {
+        "core_seen_before" : true,
+        "core_signature" : "scene:603",
+        "day" : "2026-10-05",
+        "films" : [
+          "The Matrix"
+        ],
+        "mode" : "scene"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "cc004ed8db1d5c03",
+        "day" : "2026-10-05",
+        "films" : [
+          "Inception",
+          "Back to the Future",
+          "La La Land",
+          "Avengers: Endgame"
+        ],
+        "mode" : "timeline"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "oddOneOut:3:19995,157336,245891,346698",
+        "day" : "2026-10-05",
+        "films" : [
+          "Avatar",
+          "Barbie",
+          "Interstellar",
+          "John Wick"
+        ],
+        "mode" : "oddOneOut"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "doubleFeature:2231:329,299534;30614:313369,346698;6193:597,27205",
+        "day" : "2026-10-05",
+        "films" : [
+          "Titanic",
+          "Inception",
+          "Jurassic Park",
+          "Avengers: Endgame",
+          "Barbie",
+          "La La Land"
+        ],
+        "mode" : "doubleFeature"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scene:313369",
+        "day" : "2026-10-06",
+        "films" : [
+          "La La Land"
+        ],
+        "mode" : "scene"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "4455f6886877f400",
+        "day" : "2026-10-06",
+        "films" : [
+          "Avengers: Endgame",
+          "The Matrix",
+          "Avatar",
+          "Toy Story"
+        ],
+        "mode" : "timeline"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "oddOneOut:2:597,27205,157336,346698",
+        "day" : "2026-10-06",
+        "films" : [
+          "Titanic",
+          "Interstellar",
+          "Barbie",
+          "Inception"
+        ],
+        "mode" : "oddOneOut"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "doubleFeature:6193:597,27205;6384:603,245891;8691:19995,299534",
+        "day" : "2026-10-06",
+        "films" : [
+          "Titanic",
+          "Inception",
+          "Avatar",
+          "Avengers: Endgame",
+          "The Matrix",
+          "John Wick"
+        ],
+        "mode" : "doubleFeature"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "scene:19995",
+        "day" : "2026-10-07",
+        "films" : [
+          "Avatar"
+        ],
+        "mode" : "scene"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "doubleFeature:2231:329,299534;30614:313369,346698;3895:27205,157336",
+        "day" : "2026-10-07",
+        "films" : [
+          "Inception",
+          "Interstellar",
+          "Jurassic Park",
+          "Avengers: Endgame",
+          "Barbie",
+          "La La Land"
+        ],
+        "mode" : "doubleFeature"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "detective:597",
+        "day" : "2026-10-07",
+        "films" : [
+          "Titanic"
+        ],
+        "mode" : "detective"
+      },
+      {
+        "core_seen_before" : false,
+        "core_signature" : "memory:603,245891,299534",
+        "day" : "2026-10-07",
+        "films" : [
+          "Avengers: Endgame",
+          "John Wick",
+          "The Matrix"
+        ],
+        "mode" : "memory"
+      }
+    ]
+  }
+}

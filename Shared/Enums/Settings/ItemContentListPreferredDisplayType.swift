@@ -1,10 +1,3 @@
-//
-//  ItemContentListPreferredDisplayType.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 07/04/23.
-//
-
 import Foundation
 
 enum ItemContentListPreferredDisplayType: String, CaseIterable, Identifiable {
@@ -13,9 +6,9 @@ enum ItemContentListPreferredDisplayType: String, CaseIterable, Identifiable {
     
     var title: String {
         switch self {
-        case .card: return NSLocalizedString("Card", comment: "")
-        case .poster: return NSLocalizedString("Poster", comment: "")
-        default: return NSLocalizedString("Standard", comment: "")
+        case .card: return NSLocalizedString("itemContentListPreferredDisplayTypeCard", comment: "")
+        case .poster: return NSLocalizedString("itemContentListPreferredDisplayTypePoster", comment: "")
+        default: return NSLocalizedString("itemContentListPreferredDisplayTypeStandard", comment: "")
         }
     }
 }
@@ -29,7 +22,7 @@ enum ShareLinkPreference: String, CaseIterable, Identifiable {
         case .tmdb:
             return "TMDB"
         case .cronica:
-            return "Cronica"
+            return "Streaming Now"
         }
     }
 }

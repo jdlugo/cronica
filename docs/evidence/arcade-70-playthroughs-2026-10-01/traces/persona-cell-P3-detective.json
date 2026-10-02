@@ -1,0 +1,118 @@
+{
+  "accepted_action_count" : 2,
+  "action_count" : 2,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Open the plot file, −1 point",
+      "points" : "Up to 2 points",
+      "target" : "arcade.clue.plot",
+      "type" : "help",
+      "visible_feedback" : ""
+    },
+    {
+      "after" : "arcade.points:Up to 2 points|||",
+      "before" : "arcade.points:Up to 2 points|||",
+      "resume_verified" : true,
+      "terminal_before_interruption" : false,
+      "type" : "terminate_relaunch"
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:2\/3 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 2 points|||",
+      "displayed_label" : "Toy Story",
+      "points" : "2\/3 points",
+      "target" : "arcade.choice.862",
+      "type" : "attempt",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Close",
+        "Games",
+        "Play another",
+        "Try a different game"
+      ],
+      "scope" : "arcade_sheet",
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 42.248697996139526,
+  "attempt_count" : 1,
+  "declared_prior_facts" : [
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "ocean liner",
+      "title" : "Titanic",
+      "year" : "1997"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "simulation",
+      "title" : "The Matrix",
+      "year" : "1999"
+    },
+    {
+      "actors" : "Sam Neill",
+      "plot_words" : "dinosaurs",
+      "title" : "Jurassic Park",
+      "year" : "1993"
+    },
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "dreams",
+      "title" : "Inception",
+      "year" : "2010"
+    },
+    {
+      "actors" : "Tom Hanks",
+      "plot_words" : "cowboy toy, space-ranger",
+      "title" : "Toy Story",
+      "year" : "1995"
+    }
+  ],
+  "declared_prior_titles" : [
+    "Titanic",
+    "The Matrix",
+    "Jurassic Park",
+    "Inception",
+    "Toy Story"
+  ],
+  "game" : "detective",
+  "harness_revision" : "live-vision-retained-v3",
+  "help_count" : 1,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization.",
+    "Recovery comparison covers points, selected\/matched cards and progress labels; it does not prove all clues, feedback or board state persisted."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "earned_with_help",
+  "payment_gate_found" : false,
+  "persona" : "P3",
+  "points_label" : "2\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_inspection_scope" : "arcade_sheet",
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n2\/3 points\nMovie Detective\nNicely played.\n2 of 3 points earned\nToy Story (1995)\nA cowboy toy feels threatened by a new space-ranger toy.\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nToy Story (1995)\nA cowboy toy feels threatened by a new space-ranger toy.",
+  "resume_verified" : true,
+  "resumed" : true,
+  "runtime_seconds" : 42.248697996139526,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "",
+  "utility_action_found" : false,
+  "vision_wait_seconds" : 0
+}

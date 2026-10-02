@@ -1,10 +1,3 @@
-//
-//  Date-Extensions.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 04/11/22.
-//
-
 import Foundation
 
 extension Date {

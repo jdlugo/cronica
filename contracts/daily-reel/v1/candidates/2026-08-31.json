@@ -1,0 +1,336 @@
+{
+  "generationKey": "daily-reel-2026-08-31-multiverse-yeoh-v1",
+  "intendedPublicationId": "2026-08-31",
+  "themeSeed": "A thousand possible lives",
+  "publicReelTemplate": "../fixtures/published-reel-2026-08-31.json",
+  "contentVersion": "daily-reel-2026-08-31.1",
+  "publicationWindow": {
+    "availableAt": "2026-08-31T05:00:00Z",
+    "expiresAt": "2026-09-01T05:00:00Z"
+  },
+  "posterPaths": {
+    "tmdb:284052": "/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+    "tmdb:714": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg",
+    "tmdb:146": "/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg",
+    "tmdb:455207": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg",
+    "tmdb:508947": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
+    "tmdb:696806": "/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg",
+    "tmdb:545611": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+  },
+  "answers": {
+    "en": {
+      "decode": {
+        "acceptedAnswers": [
+          "Doctor Strange",
+          "Dr Strange",
+          "Dr. Strange"
+        ],
+        "titleLength": 13,
+        "hint": "A surgeon trades his scalpel for sorcery.",
+        "revealTitle": "Doctor Strange",
+        "explanation": "The doctor, portal, and magic point to Marvel's master of the mystic arts."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "She moves from Bond agent to warrior to formidable matriarch.",
+        "explanation": "Michelle Yeoh plays Wai Lin, Yu Shu Lien, and Eleanor Young."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:508947",
+          "tmdb:696806",
+          "tmdb:545611"
+        ],
+        "hint": "All three arrived in March 2022.",
+        "explanation": "Turning Red arrived March 10, The Adam Project March 11, and Everything Everywhere All at Once March 24, 2022."
+      },
+      "threadReveal": {
+        "title": "The multiverse chose Michelle Yeoh",
+        "explanation": "Doctor Strange opened the portal; Tomorrow Never Dies showed Michelle Yeoh crossing worlds long before Everything Everywhere All at Once capped a 14-day run of reality-bending March 2022 releases."
+      }
+    },
+    "fr-FR": {
+      "decode": {
+        "acceptedAnswers": [
+          "Doctor Strange",
+          "Docteur Strange"
+        ],
+        "titleLength": 13,
+        "hint": "Un chirurgien échange son scalpel contre la magie.",
+        "revealTitle": "Doctor Strange",
+        "explanation": "Le médecin, le portail et la magie désignent le maître des arts mystiques de Marvel."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Elle passe d'agente de Bond à guerrière puis matriarche redoutable.",
+        "explanation": "Michelle Yeoh incarne Wai Lin, Yu Shu Lien et Eleanor Young."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:508947",
+          "tmdb:696806",
+          "tmdb:545611"
+        ],
+        "hint": "Les trois sont sortis en mars 2022.",
+        "explanation": "Alerte rouge est arrivé le 10 mars, Adam à travers le temps le 11 mars et Everything Everywhere All at Once le 24 mars 2022."
+      },
+      "threadReveal": {
+        "title": "Le multivers a choisi Michelle Yeoh",
+        "explanation": "Doctor Strange a ouvert le portail ; Demain ne meurt jamais montrait déjà Michelle Yeoh traversant les mondes avant qu'Everything Everywhere All at Once ne conclue 14 jours de réalités bouleversées en mars 2022."
+      }
+    },
+    "es-ES": {
+      "decode": {
+        "acceptedAnswers": [
+          "Doctor Strange",
+          "Doctor Extraño"
+        ],
+        "titleLength": 13,
+        "hint": "Un cirujano cambia el bisturí por la magia.",
+        "revealTitle": "Doctor Strange",
+        "explanation": "El médico, el portal y la magia señalan al maestro de las artes místicas de Marvel."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Pasa de agente de Bond a guerrera y a matriarca formidable.",
+        "explanation": "Michelle Yeoh interpreta a Wai Lin, Yu Shu Lien y Eleanor Young."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:508947",
+          "tmdb:696806",
+          "tmdb:545611"
+        ],
+        "hint": "Las tres llegaron en marzo de 2022.",
+        "explanation": "Red llegó el 10 de marzo, El proyecto Adam el 11 y Todo a la vez en todas partes el 24 de marzo de 2022."
+      },
+      "threadReveal": {
+        "title": "El multiverso eligió a Michelle Yeoh",
+        "explanation": "Doctor Strange abrió el portal; El mañana nunca muere ya mostraba a Michelle Yeoh cruzando mundos antes de que Todo a la vez en todas partes cerrara 14 días de realidades alteradas en marzo de 2022."
+      }
+    },
+    "es-MX": {
+      "decode": {
+        "acceptedAnswers": [
+          "Doctor Strange: Hechicero supremo",
+          "Doctor Strange",
+          "Doctor Extraño"
+        ],
+        "titleLength": 29,
+        "hint": "Un cirujano cambia el bisturí por la magia.",
+        "revealTitle": "Doctor Strange: Hechicero supremo",
+        "explanation": "El médico, el portal y la magia señalan al maestro de las artes místicas de Marvel."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Pasa de agente de Bond a guerrera y a matriarca formidable.",
+        "explanation": "Michelle Yeoh interpreta a Wai Lin, Yu Shu Lien y Eleanor Young."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:508947",
+          "tmdb:696806",
+          "tmdb:545611"
+        ],
+        "hint": "Las tres llegaron en marzo de 2022.",
+        "explanation": "Red llegó el 10 de marzo, El proyecto Adam el 11 y Todo en Todas Partes al Mismo Tiempo el 24 de marzo de 2022."
+      },
+      "threadReveal": {
+        "title": "El multiverso eligió a Michelle Yeoh",
+        "explanation": "Doctor Strange: Hechicero supremo abrió el portal; 007: El mañana nunca muere ya mostraba a Michelle Yeoh cruzando mundos antes de que Todo en Todas Partes al Mismo Tiempo cerrara 14 días de realidades alteradas en marzo de 2022."
+      }
+    },
+    "pt-BR": {
+      "decode": {
+        "acceptedAnswers": [
+          "Doutor Estranho",
+          "Doctor Strange"
+        ],
+        "titleLength": 14,
+        "hint": "Um cirurgião troca o bisturi pela magia.",
+        "revealTitle": "Doutor Estranho",
+        "explanation": "O médico, o portal e a magia apontam para o mestre das artes místicas da Marvel."
+      },
+      "connect": {
+        "correctChoiceId": "c1",
+        "hint": "Ela vai de agente de Bond a guerreira e matriarca formidável.",
+        "explanation": "Michelle Yeoh interpreta Wai Lin, Yu Shu Lien e Eleanor Young."
+      },
+      "arrange": {
+        "correctOrder": [
+          "tmdb:508947",
+          "tmdb:696806",
+          "tmdb:545611"
+        ],
+        "hint": "Os três chegaram em março de 2022.",
+        "explanation": "Red chegou em 10 de março, O Projeto Adam em 11 de março e Tudo em Todo o Lugar ao Mesmo Tempo em 24 de março de 2022."
+      },
+      "threadReveal": {
+        "title": "O multiverso escolheu Michelle Yeoh",
+        "explanation": "Doutor Estranho abriu o portal; 007: O Amanhã Nunca Morre já mostrava Michelle Yeoh cruzando mundos antes de Tudo em Todo o Lugar ao Mesmo Tempo fechar 14 dias de realidades alteradas em março de 2022."
+      }
+    }
+  },
+  "movieFacts": [
+    {
+      "movieId": "tmdb:284052",
+      "tmdbId": 284052,
+      "releaseDate": "2016-10-25",
+      "directorIds": [
+        "person:55499"
+      ],
+      "actorIds": [
+        "actor:284052"
+      ],
+      "genreIds": [
+        14,
+        12,
+        28
+      ],
+      "franchiseId": "tmdb:618529"
+    },
+    {
+      "movieId": "tmdb:714",
+      "tmdbId": 714,
+      "releaseDate": "1997-12-11",
+      "directorIds": [
+        "person:1724"
+      ],
+      "actorIds": [
+        "person:1620"
+      ],
+      "genreIds": [
+        12,
+        28,
+        53
+      ],
+      "franchiseId": "tmdb:645"
+    },
+    {
+      "movieId": "tmdb:146",
+      "tmdbId": 146,
+      "releaseDate": "2000-07-06",
+      "directorIds": [
+        "person:1614"
+      ],
+      "actorIds": [
+        "person:1620"
+      ],
+      "genreIds": [
+        12,
+        18,
+        28,
+        10749,
+        14
+      ],
+      "franchiseId": "tmdb:290973"
+    },
+    {
+      "movieId": "tmdb:455207",
+      "tmdbId": 455207,
+      "releaseDate": "2018-08-15",
+      "directorIds": [
+        "person:54507"
+      ],
+      "actorIds": [
+        "person:1620"
+      ],
+      "genreIds": [
+        35,
+        10749
+      ],
+      "franchiseId": "tmdb:1702891"
+    },
+    {
+      "movieId": "tmdb:508947",
+      "tmdbId": 508947,
+      "releaseDate": "2022-03-10",
+      "directorIds": [
+        "person:2009739"
+      ],
+      "actorIds": [
+        "actor:508947"
+      ],
+      "genreIds": [
+        16,
+        10751,
+        35,
+        14
+      ],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:696806",
+      "tmdbId": 696806,
+      "releaseDate": "2022-03-11",
+      "directorIds": [
+        "person:17825"
+      ],
+      "actorIds": [
+        "actor:696806"
+      ],
+      "genreIds": [
+        12,
+        878,
+        35
+      ],
+      "franchiseId": null
+    },
+    {
+      "movieId": "tmdb:545611",
+      "tmdbId": 545611,
+      "releaseDate": "2022-03-24",
+      "directorIds": [
+        "person:1317730",
+        "person:1383612"
+      ],
+      "actorIds": [
+        "person:1620"
+      ],
+      "genreIds": [
+        28,
+        12,
+        878
+      ],
+      "franchiseId": null
+    }
+  ],
+  "connection": {
+    "kind": "actor",
+    "key": "person:1620",
+    "evidenceByMovieId": {
+      "tmdb:714": "TMDb credits Michelle Yeoh as Wai Lin.",
+      "tmdb:146": "TMDb credits Michelle Yeoh as Yu Shu Lien.",
+      "tmdb:455207": "TMDb credits Michelle Yeoh as Eleanor Young."
+    }
+  },
+  "difficulty": {
+    "decode": "medium",
+    "connect": "medium",
+    "arrange": "hard"
+  },
+  "safety": {
+    "isSafe": true,
+    "categories": []
+  },
+  "recentMovieIds": [
+    "tmdb:329",
+    "tmdb:578",
+    "tmdb:601",
+    "tmdb:218",
+    "tmdb:603",
+    "tmdb:27205",
+    "tmdb:105",
+    "tmdb:155",
+    "tmdb:77",
+    "tmdb:374720",
+    "tmdb:872585",
+    "tmdb:268",
+    "tmdb:272",
+    "tmdb:414906"
+  ],
+  "recentThemeKeys": [
+    "Extraordinary journeys",
+    "Shadows, memory, and masks"
+  ]
+}

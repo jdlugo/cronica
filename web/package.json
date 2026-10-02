@@ -1,0 +1,12 @@
+{
+  "name": "streaming-now-daily-reel-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

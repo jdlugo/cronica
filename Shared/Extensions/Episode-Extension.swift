@@ -1,10 +1,3 @@
-//
-//  Episode-Extension.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 06/04/22.
-//
-
 import Foundation
 
 extension Episode {
@@ -26,12 +19,12 @@ extension Episode {
 		return nil
 	}
 	var itemInfo: String? {
-        let localizedString = NSLocalizedString("Episode", comment: "")
 		if let itemDate, let episodeNumber {
+			let localizedString = NSLocalizedString("Episode", comment: "")
 			return "\(localizedString) \(episodeNumber) • \(itemDate)"
 		}
 		if let episodeNumber {
-			return "\(localizedString) \(episodeNumber)"
+			return NSLocalizedString("Episode \(episodeNumber)", comment: "")
 		}
 		return nil
 	}
@@ -64,7 +57,7 @@ extension Episode {
 #if os(tvOS)
 		return NetworkService.urlBuilder(size: .w780, path: stillPath)
 #else
-		return NetworkService.urlBuilder(size: .w500, path: stillPath)
+		return NetworkService.urlBuilder(size: .medium, path: stillPath)
 #endif
 	}
 	var itemImageLarge: URL? {

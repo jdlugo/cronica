@@ -1,6 +1,6 @@
 //
 //  WatchlistSelectorView.swift
-//  Cronica Watch App
+//  CronicaWatch Watch App
 //
 //  Created by Alexandre Madeira on 21/04/23.
 //
@@ -17,7 +17,6 @@ struct WatchlistSelectorView: View {
         animation: .default)
     private var lists: FetchedResults<CustomList>
     @State private var item: WatchlistItem?
-    @Binding var sortOrder: WatchlistSortOrder
     var body: some View {
         NavigationStack {
             Form {
@@ -31,14 +30,14 @@ struct WatchlistSelectorView: View {
                             } label: {
                                 HStack {
                                     if selectedList == list {
-                                        Image(systemName: "checkmark.circle")
+                                        Image(systemName: "checkmark.circle.fill")
                                     }
                                     Text(list.title)
                                 }
                             }
                         }
                     } header: {
-                        Text("Smart List Filters")
+                        Text("defaultWatchlistSmartFilters")
                     }
                     
                     if !lists.isEmpty {
@@ -51,27 +50,17 @@ struct WatchlistSelectorView: View {
                                 } label: {
                                     HStack {
                                         if selectedCustomList == list {
-                                            Image(systemName: "checkmark.circle")
+                                            Image(systemName: "checkmark.circle.fill")
                                         }
                                         Text(list.itemTitle)
                                     }
                                 }
                             }
                         } header: {
-                            Text("Your Lists")
+                            Text("yourLists")
                         }
                     }
                     
-                    Section("Sort Order") {
-                        Picker(selection: $sortOrder) {
-                            ForEach(WatchlistSortOrder.allCases) { item in
-                                Text(item.localizableName).tag(item)
-                            }
-                        } label: {
-                            EmptyView()
-                        }
-                        .pickerStyle(.inline)
-                    }
                 }
             }
         }

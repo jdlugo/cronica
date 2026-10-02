@@ -1,16 +1,9 @@
-//
-//  AppearanceSetting.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 13/12/22.
-//
-
 import SwiftUI
 
 struct AppearanceSetting: View {
     @StateObject private var store = SettingsStore.shared
 #if os(iOS)
-    @StateObject private var icons = IconModel()
+    @State private var icons = IconModel()
 #endif
     var body: some View {
         Form {
@@ -21,56 +14,86 @@ struct AppearanceSetting: View {
                 }
             }
 #endif
-            
+            Section {
+                Picker(selection: $store.watchlistStyle) {
+                    ForEach(SectionDetailsPreferredStyle.allCases) { item in
+#if os(tvOS)
+                        if item != SectionDetailsPreferredStyle.list {
+                            Text(item.title).tag(item)
+                        }
+#else
+                        Text(item.title).tag(item)
+#endif
+                    }
+                } label: {
+                    Text("appearanceRowStyleTitle")
+                }
+                .tint(.secondary)
 #if !os(tvOS)
-            Section("Style Preferences") {
                 Picker(selection: $store.sectionStyleType) {
                     ForEach(SectionDetailsPreferredStyle.allCases) { item in
                         Text(item.title).tag(item)
                     }
                 } label: {
-                    Text("Section's Details Style")
+                    Text("appearanceSectionDetailsTitle")
                 }
+                .tint(.secondary)
                 Picker(selection: $store.listsDisplayType) {
                     ForEach(ItemContentListPreferredDisplayType.allCases) { item in
                         Text(item.title).tag(item)
                     }
                 } label: {
-                    Text("Horizontal List Style")
+                    Text("appearanceHorizontalListsTitle")
                 }
-
-            }
+                .tint(.secondary)
+                Picker(selection: $store.upNextStyle) {
+                    ForEach(UpNextDetailsPreferredStyle.allCases) { item in
+                        Text(item.title).tag(item)
+                    }
+                } label: {
+                    Text("appearanceUpNextTitle")
+                }
+                .tint(.secondary)
 #endif
+            } header: {
+                Text("appearanceStyle")
+            }
+            
 #if os(iOS)
             if UIDevice.isIPhone {
                 Section {
                     Toggle(isOn: $store.isCompactUI) {
-                        Text("Compact UI")
-                        Text("Reduce some UI elements size to accommodate more items on the screen")
+                        Text("appearanceCompactUI")
+                        Text("appearanceCompactUISubtitle")
                     }
                 }
             }
 #endif
             
+#if !os(tvOS)
+            Section {
+                Toggle("Show Date in Watchlist", isOn: $store.showDateOnWatchlist)
+            }
+#endif
+            
 #if os(iOS)
-            Section("App Theme") {
+            Section("appearanceAppThemeTitle") {
                 Picker(selection: $store.currentTheme) {
                     ForEach(AppTheme.allCases) { item in
                         Text(item.localizableName).tag(item)
                     }
                 } label: {
-                    Text("Theme")
+                    Text("appearanceAppThemeTitle")
                 }
-                .pickerStyle(.menu)
+                .pickerStyle(.segmented)
+                .padding(.vertical, 6)
+                .tint(.secondary)
             }
             
-            Section("Accent Color") {
-                accentColor
-            }
-            .listRowInsets(EdgeInsets())
+            Section("accentColor") { accentColor }
             
             if UIDevice.isIPhone {
-                Section("App Icon") {
+                Section("appearanceAppIcon") {
                     iconsGrid
                 }
             }
@@ -78,11 +101,11 @@ struct AppearanceSetting: View {
             
             Section {
                 Toggle(isOn: $store.disableTranslucent) {
-                    Text("Disable Translucent Background")
+                    Text("disableTranslucentTitle")
                 }
             }
         }
-        .navigationTitle("Appearance")
+        .navigationTitle("appearanceTitle")
 #if os(macOS)
         .formStyle(.grouped)
 #endif
@@ -93,12 +116,7 @@ struct AppearanceSetting: View {
             ScrollViewReader { proxy in
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(AppThemeColors.allCases) { item in
-                            colorButton(for: item)
-                                .padding(.leading, item == AppThemeColors.allCases.first ? 16 : 0)
-                                .padding(.trailing, item == AppThemeColors.allCases.last ? 16 : 0)
-                                .padding(.horizontal, 4)
-                        }
+                        ForEach(AppThemeColors.allCases, content: colorButton)
                     }
                     .padding(.vertical, 6)
                     .onAppear {
@@ -110,51 +128,48 @@ struct AppearanceSetting: View {
     }
     
     private func colorButton(for item: AppThemeColors) -> some View {
-        Button {
+        ZStack {
+            Circle()
+                .fill(item.color)
+            if store.appTheme == item {
+                Image(systemName: "checkmark.circle.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .imageScale(.large)
+                    .foregroundColor(.white.opacity(0.6))
+                    .fontWeight(.black)
+                
+            }
+        }
+        .frame(width: 30)
+        .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(item == store.appTheme ? [.isButton, .isSelected] : .isButton )
+        .accessibilityLabel(item.localizableName)
+        .padding(.horizontal, 4)
+        .onTapGesture {
             withAnimation {
                 store.appTheme = item
             }
-        } label: {
-            ZStack {
-                Circle()
-                    .fill(item.color)
-                if store.appTheme == item {
-                    Image(systemName: "checkmark.circle.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .imageScale(.large)
-                        .foregroundColor(.white.opacity(0.6))
-                        .fontWeight(.black)
-                    
-                }
-            }
-            .frame(width: 30)
         }
-        .buttonStyle(.plain)
-        .accessibilityElement(children: .ignore)
-        .accessibilityAddTraits(item == store.appTheme ? [.isButton, .isSelected] : .isButton )
-        .padding(.horizontal, 4)
     }
     
 #if os(iOS)
     private var iconsGrid: some View {
         HStack {
             ForEach(Icon.allCases) { icon in
-                Button {
-                    withAnimation { icons.updateAppIcon(to: icon) }
-                } label: {
-                    Image(uiImage: icon.preview)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(store.appTheme.color, lineWidth: icons.selectedAppIcon == icon ? 6 : 0)
-                        )
-                        .frame(width: 60, height: 60)
-                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                        .padding(.trailing)
-                }
-                .buttonStyle(.plain)
+                Image(uiImage: icon.preview)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(store.appTheme.color, lineWidth: icons.selectedAppIcon == icon ? 6 : 0)
+                    )
+                    .frame(width: 60, height: 60)
+                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    .padding(.trailing)
+                    .onTapGesture {
+                        withAnimation { icons.updateAppIcon(to: icon) }
+                    }
             }
         }
         .padding(.vertical, 4)

@@ -1,10 +1,3 @@
-//
-//  WatchListSection.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 24/04/22.
-//
-
 import SwiftUI
 
 struct WatchListSection: View {
@@ -43,15 +36,17 @@ struct WatchListSection: View {
                 HStack {
                     Text(NSLocalizedString(title, comment: ""))
                     Spacer()
-                    Text("\(items.count) items")
+                    let formatString = NSLocalizedString("items count", comment: "")
+                    let result = String(format: formatString, items.count)
+                    Text(result)
                 }
             } 
         }
     }
     
-    @ViewBuilder
     private var empty: some View {
-        EmptyListView()
+        ContentUnavailableView("emptyList", systemImage: "rectangle.on.rectangle")
+            .padding()
     }
     
     private func fetchDroppedItems(_ items: [ItemContent]) {

@@ -1,10 +1,3 @@
-//
-//  FilmographyListView.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 13/07/22.
-//
-
 import SwiftUI
 
 struct FilmographyListView: View {
@@ -25,7 +18,7 @@ struct FilmographyListView: View {
             if !filmography.isEmpty {
 #if os(watchOS)
                 VStack {
-                    TitleView(title: NSLocalizedString("Filmography", comment: ""))
+                    TitleView(title: "Filmography")
                     LazyVStack {
                         ForEach(filmography) { item in
                             NavigationLink(value: item) {
@@ -90,7 +83,7 @@ struct FilmographyListView: View {
 }
 
 private struct DrawingConstants {
-#if os(macOS) || os(visionOS)
+#if os(macOS)
     static let posterColumns: CGFloat = 160
     static let columns: CGFloat = 240
     static let spacing: CGFloat = 20

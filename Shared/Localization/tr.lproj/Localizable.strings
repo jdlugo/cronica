@@ -1,0 +1,2016 @@
+/* (No Comment) */
+" Cronica" = "Streaming Now";
+
+/* (No Comment) */
+"'Update Items' will update your items with new information available on TMDb, if available." = "'Gönderileri Güncelle' TMDb'de mevcut olan yeni bilgilerle öğelerinizi günceller, mevcut ise.";
+
+/* No comment provided by engineer. */
+"(numberOfSeasons) Seasons • (numberOfEpisodes) Episodes" = "(numberOfSeasons) Sezonlar • (numberOfEpisodes) Bölümler";
+
+/* No comment provided by engineer. */
+"(voteAverage.rounded(.down))/10" = "(voteAverage.rounded(.down))/10";
+
+/* No comment provided by engineer. */
+"(voteAverage.rounded())/10" = "(voteAverage.rounded())/10";
+
+/* No comment provided by engineer. */
+"%@, tap to open list options." = "%@, liste seçeneklerini açmak için dokunun.";
+
+/* No comment provided by engineer. */
+"%lld Items" = "%lld Öğe";
+
+/* (No Comment) */
+"%lld items • %@" = "%lld öğe • %@";
+
+/* (No Comment) */
+"%lld Seasons • %lld Episodes" = "%lld Sezon • %lld Bölüm";
+
+/* (No Comment) */
+"%lld upcoming notifications." = "%lld yaklaşan bildirim.";
+
+/* (No Comment) */
+"%lld/10" = "%lld/10";
+
+/* (No Comment) */
+"%llditems" = "%lld öğe";
+
+/* No comment provided by engineer. */
+"🛠️" = "🛠️";
+
+/* (No Comment) */
+"About" = "Hakkında";
+
+/* (No Comment) */
+"aboutTitle" = "Hakkında";
+
+/* (No Comment) */
+"accentColor" = "Vurgu Rengi";
+
+/* (No Comment) */
+"Account" = "Hesap";
+
+/* (No Comment) */
+"AccountSettingsViewFooter" = "TMDb hesabınızı bağlayarak izleme listelerinizi ve listelerinizi içe aktarın ve senkronize edin.";
+
+/* MARK: TMDb Sync */
+"AccountSettingsViewFooterHeader" = "TMDb hesabınızı bağlayın";
+
+/* (No Comment) */
+"AccountSettingsViewHeaderSignIn" = "TMDb'nin listelerini yönet";
+
+/* (No Comment) */
+"AccountSettingsViewListsManager" = "TMDB listeleriniz";
+
+/* (No Comment) */
+"AccountSettingsViewSignIn" = "Bağlan";
+
+/* (No Comment) */
+"AccountSettingsViewSignOut" = "Bağlantıyı kes";
+
+/* (No Comment) */
+"AccountSettingsViewWatchlist" = "TMDB İzleme Listesi";
+
+/* (No Comment) */
+"acknowledgmentsAppIconSubtitle" = "Akhmad";
+
+/* MARK: AcknowledgementsSettings */
+"acknowledgmentsAppIconTitle" = "Simge Tasarımcısı";
+
+/* (No Comment) */
+"acknowledgmentsContentProviderSubtitle" = "TMDb";
+
+/* (No Comment) */
+"acknowledgmentsContentProviderTitle" = "İçerik Sağlayıcı";
+
+/* (No Comment) */
+"acknowledgmentsSDWebImage" = "SDWebImageSwiftUI";
+
+/* (No Comment) */
+"acknowledgmentsTitle" = "Teşekkürler";
+
+/* (No Comment) */
+"acknowledgmentsUserTitle" = "Geri bildiriminiz ve desteğiniz için teşekkür ederiz!";
+
+/* (No Comment) */
+"Action" = "Aksiyon";
+
+/* (No Comment) */
+"Action & Adventure" = "Aksiyon ve Macera";
+
+/* (No Comment) */
+"Add everything you want, the Watchlist automatically organizes it for you." = "Her şeyi ekleyin istediğiniz gibi, İzleme Listesi otomatik olarak sizin için düzenler.";
+
+/* (No Comment) */
+"Add to Favorites" = "Favorilere ekle";
+
+/* (No Comment) */
+"Add to List" = "Listeye ekle";
+
+/* MARK: ContentDetailsView.swift */
+"Add to watchlist" = "İzleme Listesine Ekle";
+
+/* (No Comment) */
+"addAndMarkWatchedButton" = "Ekle ve İzlendi Olarak İşaretle";
+
+/* (No Comment) */
+"Added to watchlist" = "Izleme Listesine Eklendi";
+
+/* (No Comment) */
+"addedToWatchlist" = "İzleme Listesine Eklendi";
+
+/* (No Comment) */
+"addedWatchlist" = "İzleme Listesine Eklendi";
+
+/* (No Comment) */
+"addToCustomList" = "Listeye ekle...";
+
+/* (No Comment) */
+"addToList" = "Listeye Ekle...";
+
+/* (No Comment) */
+"Adventure" = "Macera";
+
+/* (No Comment) */
+"Alien" = "Yaratık";
+
+/* (No Comment) */
+"All" = "Tüm";
+
+/* (No Comment) */
+"allCustomWatchListFilters" = "Hepsi";
+
+/* (No Comment) */
+"allItems" = "Tüm Öğeler";
+
+/* (No Comment) */
+"allItemsMovies" = "Tüm Filmler";
+
+/* (No Comment) */
+"allItemsTVShows" = "Tüm TV Şovları";
+
+/* (No Comment) */
+"allowNotification" = "Bildirimlere izin ver";
+
+/* (No Comment) */
+"Always Synced" = "Her zaman senkronize";
+
+/* (No Comment) */
+"Animation" = "Animasyon";
+
+/* (No Comment) */
+"Anime" = "Anime";
+
+/* (No Comment) */
+"appearanceAppIcon" = "Uygulama İkonu";
+
+/* (No Comment) */
+"appearanceAppThemeTitle" = "Uygulama Teması";
+
+/* (No Comment) */
+"appearanceCompactUI" = "Kompakt Kullanıcı Arayüzü";
+
+/* (No Comment) */
+"appearanceCompactUISubtitle" = "Ekranın üzerinde daha fazla öğe sığdırmak için bazı UI öğelerinin boyutunu küçültün.";
+
+/* (No Comment) */
+"appearanceExplore" = "Keşfet";
+
+/* (No Comment) */
+"appearanceExploreDisplayType" = "Keşfetme Tercihleri";
+
+/* (No Comment) */
+"appearanceHorizontalListsTitle" = "Yatay Liste Stil";
+
+/* (No Comment) */
+"appearanceLists" = "Listeler";
+
+/* (No Comment) */
+"appearanceListsDisplayType" = "Listelerin Görüntüleme Tercihi";
+
+/* (No Comment) */
+"appearanceRowStyleSubtitle" = "İzleme Listesini nasıl görüntülemek istediğinizi seçin";
+
+/* (No Comment) */
+"appearanceRowStyleTitle" = "İzleme Listesi Öğe Stili";
+
+/* (No Comment) */
+"appearanceRowTypeSubtitle" = "Göstermek istediğiniz bilgi türünü seçin.";
+
+/* MARK: AppearanceSetting */
+"appearanceRowTypeTitle" = "İzleme Listesi Öğesinin Bilgileri";
+
+/* (No Comment) */
+"appearanceSectionDetailsTitle" = "Bölüm Detayları Stili";
+
+/* (No Comment) */
+"appearanceSendFeedback" = "Geribildirim Gönder";
+
+/* (No Comment) */
+"appearanceStyle" = "Stil Tercihleri";
+
+/* (No Comment) */
+"appearanceTheme" = "Temalar";
+
+/* (No Comment) */
+"appearanceThemeTitle" = "App Renk Tonu";
+
+/* (No Comment) */
+"appearanceTitle" = "Görünüm";
+
+/* (No Comment) */
+"appearanceUpNextTitle" = "Sonraki Detaylar Stili";
+
+/* (No Comment) */
+"appearanceWatchlist" = "İzlenecekler";
+
+/* (No Comment) */
+"appIconFeedbackTitle" = "Bir simge için bir fikrin mi var? Geri bildirim gönder";
+
+/* (No Comment) */
+"appRegionSubtitle" = "Uygulama, bölgenize bağlı olarak saat sağlayıcılarını uyum sağlayacaktır.";
+
+/* (No Comment) */
+"appRegionTitle" = "Bölge";
+
+/* MARK: AppThemeColors */
+"appThemeColorsBlue" = "Mavi";
+
+/* (No Comment) */
+"appThemeColorsBrown" = "Kahverengi";
+
+/* (No Comment) */
+"appThemeColorsCyan" = "Turkuaz";
+
+/* (No Comment) */
+"appThemeColorsGray" = "Gri";
+
+/* (No Comment) */
+"appThemeColorsGreen" = "Yeşil";
+
+/* (No Comment) */
+"appThemeColorsIndigo" = "Macenta";
+
+/* (No Comment) */
+"appThemeColorsMint" = "Nane";
+
+/* (No Comment) */
+"appThemeColorsOrange" = "Turuncu";
+
+/* (No Comment) */
+"appThemeColorsPink" = "Pembe";
+
+/* (No Comment) */
+"appThemeColorsPurple" = "Mor";
+
+/* (No Comment) */
+"appThemeColorsRed" = "Kırmızı";
+
+/* (No Comment) */
+"appThemeColorsTeal" = "Teal";
+
+/* (No Comment) */
+"appThemeColorsYellow" = "Sarı";
+
+/* (No Comment) */
+"appThemeDark" = "Koyu";
+
+/* (No Comment) */
+"appThemeLight" = "Işık";
+
+/* MARK: AppTheme */
+"appThemeSystem" = "Sistem";
+
+/* (No Comment) */
+"Archive" = "Arşiv";
+
+/* (No Comment) */
+"Archive Item" = "Arşiv Öğesi";
+
+/* (No Comment) */
+"areYouSure" = "Emin misin?";
+
+/* (No Comment) */
+"Arriving Soon" = "Yakında Geliyor";
+
+/* No comment provided by engineer. */
+"Asked for review: %@" = "İnceleme istendi: %@";
+
+/* No comment provided by engineer. */
+"Back" = "Geri";
+
+/* (No Comment) */
+"Based on novel or book" = "Roman veya kitaba dayalı";
+
+/* (No Comment) */
+"Based on true story" = "Gerçek bir hikayeden alınmış";
+
+/* (No Comment) */
+"Based on Video-Game" = "Video Oyununa Dayalı";
+
+/* (No Comment) */
+"Be reminded of upcoming Movies & TV Shows." = "Yaklaşan Filmler ve TV Programlarını hatırlatın.";
+
+/* (No Comment) */
+"behaviorAllowFullSwipeSubtitle" = "Tam Sürükleyicinin işlemi etkinleştireceği";
+
+/* (No Comment) */
+"behaviorAllowFullSwipeTitle" = "Tam Kaydırma İzni Ver";
+
+/* (No Comment) */
+"behaviorDoubleTapSubtitle" = "Kapak resmi çift tıklandığında hangi işlevin gerçekleştirileceğini seçin.";
+
+/* MARK: BehaviorSetting */
+"behaviorDoubleTapTitle" = "Kapak Üzerinde Çift Dokunma";
+
+/* (No Comment) */
+"behaviorEpisodeTitle" = "Bölümü İzlendi Olarak İşaretle";
+
+/* (No Comment) */
+"behaviorGestureTitle" = "El hareketleri";
+
+/* (No Comment) */
+"behaviorLinkTitle" = "Bağlantılar";
+
+/* (No Comment) */
+"behaviorMarkPreviouslyEpisodes" = "Yeni bir bölüm izlediğinde öncesindeki tüm bölümleri işaretle.";
+
+/* (No Comment) */
+"behaviorPrimaryLeftGesture" = "Birincil Sol Jest";
+
+/* (No Comment) */
+"behaviorPrimaryRightGesture" = "Birincil Sağ İşlem";
+
+/* (No Comment) */
+"behaviorSecondaryLeftGesture" = "İkincil Sol Jest";
+
+/* (No Comment) */
+"behaviorSecondaryRightGesture" = "İkincil Sağ Jest";
+
+/* (No Comment) */
+"behaviorSwipeTitle" = "Kaydırma Hareketleri";
+
+/* (No Comment) */
+"behaviorTitle" = "Davranış";
+
+/* (No Comment) */
+"behaviorWatchProvidersSubtitle" = "İçeriğin hangi platformlarda mevcut olduğunu görün.";
+
+/* (No Comment) */
+"behaviorWatchProvidersTitle" = "Izleyici Sağlayıcıları";
+
+/* (No Comment) */
+"behaviorYouTubeTitle" = "YouTube'da Açık Treylerler";
+
+/* No comment provided by engineer. */
+"Beta" = "Beta";
+
+/* MARK: CastDetailsView.swift */
+"Biography" = "Biyografi";
+
+/* (No Comment) */
+"callToReviewSubtitle" = "App Store'da bir değerlendirme yapın!";
+
+/* (No Comment) */
+"callToReviewTitle" = "Streaming Now'dan keyif alıyor musunuz?";
+
+/* (No Comment) */
+"Cancel" = "İptal";
+
+/* (No Comment) */
+"cancelConfirmDialogAction" = "İptal";
+
+/* (No Comment) */
+"Cancelled" = "İptal Edildi";
+
+/* (No Comment) */
+"cancelOpenWatchProvider" = "İptal";
+
+/* (No Comment) */
+"cantSendFeedback" = "Uygulama içinden geri bildirim göndermek için 'Çökme Raporlarını Devre Dışı Bırak' seçeneğini devre dışı bırakmanız gerekmektedir.";
+
+/* (No Comment) */
+"Cast & Crew" = "Oyuncular ve Ekip";
+
+/* (No Comment) */
+"changeLanguage" = "Uygulama dilini değiştir";
+
+/* (No Comment) */
+"changelogViewTitle" = "Yenilikler";
+
+/* (No Comment) */
+"Classical" = "Klasik";
+
+/* (No Comment) */
+"Collapse" = "Daralt";
+
+/* (No Comment) */
+"Comedy" = "Komedi";
+
+/* MARK: WatchlistSectionView.swift */
+"Coming Soon" = "Yakında";
+
+/* (No Comment) */
+"Coming Soon To Theaters" = "Yakında Sinemalarda";
+
+/* (No Comment) */
+"companiesTitle" = "Şirketler";
+
+/* (No Comment) */
+"Confirm" = "Onayla";
+
+/* (No Comment) */
+"confirmAndDeleteItems" = "Öğeleri onayla ve sil";
+
+/* (No Comment) */
+"confirmDialogAction" = "Onayla";
+
+/* (No Comment) */
+"confirmOpenDontAskAgainProvider" = "Onayla ve bir daha sorma";
+
+/* (No Comment) */
+"confirmOpenWatchProvider" = "Onayla";
+
+/* (No Comment) */
+"connectedAccounts" = "Bağlı Hesaplar";
+
+/* (No Comment) */
+"connectedAccountTMDB" = "Film Veritabanı";
+
+/* (No Comment) */
+"contentRegionTitle" = "Bölge";
+
+/* (No Comment) */
+"Continue" = "Devam et";
+
+/* (No Comment) */
+"Create" = "Oluştur";
+
+/* (No Comment) */
+"createList" = "Yeni Liste Oluştur";
+
+/* (No Comment) */
+"createNote" = "Not Ekle";
+
+/* (No Comment) */
+"Crime" = "Suç";
+
+/* (No Comment) */
+"Crime Investigation" = "Suç İncelemesi";
+
+/* (No Comment) */
+"Cronica" = "Streaming Now";
+
+/* (No Comment) */
+"cronicaGitHub" = "Streaming Now GitHub Depo";
+
+/* (No Comment) */
+"dateAsc" = "Tarih (Artan)";
+
+/* (No Comment) */
+"dateDesc" = "Tarih (Azalan)";
+
+/* (No Comment) */
+"Default" = "Optimize Edildi";
+
+/* (No Comment) */
+"Default List" = "Varsayılan Liste";
+
+/* (No Comment) */
+"defaultWatchlistFilters" = "Filtreler";
+
+/* (No Comment) */
+"defaultWatchlistShowAllItems" = "Tüm Öğeleri Göster";
+
+/* (No Comment) */
+"defaultWatchlistSmartFilters" = "Akıllı Filtreler";
+
+/* (No Comment) */
+"Delete" = "Sil";
+
+/* (No Comment) */
+"deleteConfirmationMessage" = "Bu eylem geri alınamaz.\nBu işlem yerel listedeki verileri silmeyecek, yalnızca TMDb'deki veriyi siler.";
+
+/* (No Comment) */
+"deleteList" = "Listeyi Sil";
+
+/* (No Comment) */
+"Design" = "Tasarım";
+
+/* (No Comment) */
+"Details Page" = "Detaylar Sayfası";
+
+/* (No Comment) */
+"Developed by Alexandre Madeira" = "Alexandre Madeira tarafından geliştirildi";
+
+/* No comment provided by engineer. */
+"Developer Options" = "Geliştirici Seçenekleri";
+
+/* (No Comment) */
+"Digital" = "Dijital";
+
+/* (No Comment) */
+"disableTranslucentTitle" = "Şeffaf Arkaplanı Devre Dışı Bırak";
+
+/* (No Comment) */
+"Discover what's next" = "Keşfedin, neler olduğunu öğrenin";
+
+/* No comment provided by engineer. */
+"Dismiss" = "Kapat";
+
+/* (No Comment) */
+"dismissReviewCall" = "Kapat";
+
+/* (No Comment) */
+"Documentary" = "Belgesel";
+
+/* MARK: Common */
+"Done" = "Tamamlandı";
+
+/* (No Comment) */
+"Double Tap Gesture" = "Çift Dokunma Jest";
+
+/* (No Comment) */
+"Drama" = "Drama";
+
+/* No comment provided by engineer. */
+"E%lld" = "E%lld";
+
+/* (No Comment) */
+"Edit" = "Düzenle";
+
+/* (No Comment) */
+"editListRemoveItems" = "Öğeleri kaldır";
+
+/* (No Comment) */
+"editNotes" = "Notları Düzenle";
+
+/* (No Comment) */
+"Email (optional)" = "E-posta (isteğe bağlı)";
+
+/* No comment provided by engineer. */
+"Empty" = "Boş";
+
+/* No comment provided by engineer. */
+"Empty List" = "Boş Liste";
+
+/* (No Comment) */
+"emptyList" = "Seçili filtreye uygun bir şey bulunamadı.\nFiltreleri değiştirmeyi deneyin.";
+
+/* (No Comment) */
+"emptyLists" = "Boş";
+
+/* (No Comment) */
+"enablePreferredLaunchScreen" = "Tercih Edilen Başlangıç Ekranını etkinleştir";
+
+/* (No Comment) */
+"Ended Series" = "Bitmiş Seriler";
+
+/* No comment provided by engineer. */
+"Episode" = "Bölüm";
+
+/* No comment provided by engineer. */
+"Episode (episodeNumber)" = "Bölüm (episodeNumber)";
+
+/* (No Comment) */
+"Episode %lld" = "BÖLÜM %lld";
+
+/* No comment provided by engineer. */
+"Episode: %lld, of the show: %@." = "Bölüm: %lld, gösterinin: %@.";
+
+/* (No Comment) */
+"episodeNotificationSubtitle" = "İzleme listenizdeki bir TV programının yeni bir bölümü yayınlandığında bildirim alın.";
+
+/* (No Comment) */
+"episodeNotificationTitle" = "Yeni Bölümleri Bildir";
+
+/* (No Comment) */
+"Error" = "Hata";
+
+/* (No Comment) */
+"Error reading this title" = "Bu başlığı okurken bir hata oluştu.";
+
+/* MARK: ExploreView.swift */
+"Explore" = "Keşfet";
+
+/* (No Comment) */
+"exploreDisplayTypePicker" = "Görüntüleme Stili";
+
+/* (No Comment) */
+"explorePreferredDisplayTypeCard" = "Kart";
+
+/* (No Comment) */
+"explorePreferredDisplayTypePoster" = "Poster";
+
+/* (No Comment) */
+"exportTitle" = "Dışa Aktar";
+
+/* (No Comment) */
+"Family" = "Aile";
+
+/* (No Comment) */
+"Fantasy" = "Hayal";
+
+/* (No Comment) */
+"Favorite" = "Favori";
+
+/* (No Comment) */
+"Favorites" = "Favoriler";
+
+/* (No Comment) */
+"featureOneDescription" = "Favori TV dizinizin bir sonraki bölümünü kontrol edin ve anında izlendi olarak işaretleyin.";
+
+/* (No Comment) */
+"featureOneTitle" = "Sonraki";
+
+/* (No Comment) */
+"featureRoadmap" = "Yaklaşan Özellikler";
+
+/* (No Comment) */
+"featureRoadmapHeader" = "İlk görmek istediğiniz özellikler için oy verin.";
+
+/* (No Comment) */
+"featureRoadmapSubtitle" = "Yeni bir özellik önermek için 'artı' simgesini kullanın.";
+
+/* (No Comment) */
+"featureThreeDescription" = "Streaming Now'yı istediğiniz gibi özelleştirmek için daha fazla ayar ve iyileştirilmiş kullanıcı arayüzü.";
+
+/* (No Comment) */
+"featureThreeTitle" = "Deneyiminizi Hafifleştirin";
+
+/* (No Comment) */
+"featureTwoDescription" = "Streaming Now'da izlediğiniz şeye dayalı olarak kişiselleştirilmiş film ve TV şovu önerileri alın.";
+
+/* (No Comment) */
+"featureTwoTitle" = "Kişiselleştirilmiş Öneriler";
+
+/* (No Comment) */
+"Feedback" = "Geribildirim";
+
+/* (No Comment) */
+"Feedback sent" = "Geri bildiriminiz için teşekkür ederiz.";
+
+/* (No Comment) */
+"feedbackSent" = "Geribildirim Gönderildi. Teşekkür ederim!";
+
+/* No comment provided by engineer. */
+"Fetch" = "Getir";
+
+/* MARK: FilmographyView.swift */
+"Filmography" = "Filmografi";
+
+/* (No Comment) */
+"filterDiscoverTitle" = "Filtreler";
+
+/* No comment provided by engineer. */
+"Filters" = "Filtreler";
+
+/* (No Comment) */
+"Find" = "Bul";
+
+/* (No Comment) */
+"First Air Date" = "İlk Yayın Tarihi";
+
+/* (No Comment) */
+"For more details, open the companion app." = "Daha fazla ayrıntı için iPhone uygulamasını açın.";
+
+/* (No Comment) */
+"From Watchlist" = "İzleme Listesi'nden";
+
+/* (No Comment) */
+"generatingExportFile" = "JSON dosyası oluşturuluyor, lütfen bekleyin.";
+
+/* (No Comment) */
+"Genre" = "Tür";
+
+/* (No Comment) */
+"genreDiscoverFilterTitle" = "Tür";
+
+/* (No Comment) */
+"Genres" = "Türler";
+
+/* (No Comment) */
+"German" = "Almanca";
+
+/* (No Comment) */
+"Gesture" = "Dokunuş";
+
+/* (No Comment) */
+"Get notifications about the newest releases." = "En yeni çıkışlara ilişkin bildirimleri alın.";
+
+/* (No Comment) */
+"hapticFeedbackTitle" = "Dokunsal Geri Bildirim";
+
+/* (No Comment) */
+"hideAddedItemsDiscoverFilter" = "Eklenen Öğeleri Gizle";
+
+/* (No Comment) */
+"History" = "Tarih";
+
+/* MARK: ContentView.swift */
+"Home" = "Ana Sayfa";
+
+/* (No Comment) */
+"Horror" = "Korku";
+
+/* (No Comment) */
+"IMDb" = "IMDb";
+
+/* (No Comment) */
+"importedSucceeded" = "Başarıyla İçe Aktarıldı";
+
+/* (No Comment) */
+"importExportWarning" = "Export/Import beta aşamasındadır, yalnızca verilerinizi dışa aktarmak veya iCloud hesabınızı değiştiriyorsanız içe aktarmak için kullanın, şu anda çoğaltmayı önlemek için hiçbir mantık yoktur. Gelecekteki bir güncelleme tüm kullanıcılar için daha iyi bir deneyim sağlayacak.";
+
+/* (No Comment) */
+"importingTMDB" = "İzleme Listesi içe aktarılıyor, lütfen bekleyin.";
+
+/* (No Comment) */
+"importingWatchlistTMDB" = "Alınıyor, lütfen bekleyin.";
+
+/* (No Comment) */
+"importTitle" = "İçe Aktar";
+
+/* (No Comment) */
+"importTMDBList" = "Bu listeyi içe aktar";
+
+/* (No Comment) */
+"importTMDBWatchlist" = "İzleme Listesini İçeri Aktar";
+
+/* (No Comment) */
+"In Production" = "Üretimde";
+
+/* (No Comment) */
+"Information" = "Bilgi";
+
+/* (No Comment) */
+"Internal error: Something went wrong, contact TMDB." = "Dahili hata: Bir şeyler yanlış gitti, TMDb ile iletişime geçin.";
+
+/* (No Comment) */
+"Invalid API key: You must be granted a valid key." = "Geçersiz API anahtarı.";
+
+/* (No Comment) */
+"Invalid Endpoint" = "Geçersiz uç nokta.";
+
+/* (No Comment) */
+"Invalid Request" = "Geçersiz İstek.";
+
+/* MARK: Error */
+"Invalid Response" = "Geçersiz Yanıt.";
+
+/* No comment provided by engineer. */
+"Is TelemetryDeck Initialized: %@" = "Is TelemetryDeck Başlatıldı: %@";
+
+/* No comment provided by engineer. */
+"Is User Signed In With TMDB: %@" = "Kullanıcı TMDB ile oturum açtı mı: %@";
+
+/* No comment provided by engineer. */
+"Item ID" = "Öğe Kimliği";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypeCard" = "Kart";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypePoster" = "Poster";
+
+/* (No Comment) */
+"itemContentListPreferredDisplayTypeStandard" = "Varsayılan";
+
+/* No comment provided by engineer. */
+"items count" = "öğe sayısı";
+
+/* (No Comment) */
+"itemsTMDB" = "İzleme Listesi Öğeleriniz";
+
+/* MARK: WatchProviders */
+"justWatchSubtitle" = "JustWatch tarafından sağlanır";
+
+/* (No Comment) */
+"Keep everything organized inside the Watchlist." = "İzleme Listesi içinde her şeyi düzenli tutun.";
+
+/* (No Comment) */
+"Keep track of every episode you've watched." = "İzlediğiniz her bölümü takip edin.";
+
+/* (No Comment) */
+"Kids" = "Çocuklar";
+
+/* (No Comment) */
+"Know for" = "Bilgi sahibi ol";
+
+/* No comment provided by engineer. */
+"Last maintenance: %@" = "Son bakım: %@";
+
+/* No comment provided by engineer. */
+"Last upcoming refresh: %@" = "Sonraki güncelleme: %@";
+
+/* No comment provided by engineer. */
+"Last update on (itemLastUpdateFormatted)" = "Son güncelleme (itemLastUpdateFormatted) tarihinde";
+
+/* No comment provided by engineer. */
+"Last watching refresh: %@" = "Son izleyen güncellemesi: %@";
+
+/* (No Comment) */
+"Latest Movies" = "Son Filmler";
+
+/* (No Comment) */
+"Latest Shows" = "En Son Gösteriler";
+
+/* (No Comment) */
+"Libraries" = "Kütüphaneler";
+
+/* (No Comment) */
+"List" = "Liste";
+
+/* (No Comment) */
+"List Filters" = "Liste Filtreleri";
+
+/* (No Comment) */
+"listBasicHeader" = "Temel";
+
+/* (No Comment) */
+"listDeleted" = "Bu liste başarıyla silindi.";
+
+/* (No Comment) */
+"listDescription" = "Liste Açıklaması";
+
+/* (No Comment) */
+"listItemsToAdd" = "Öğeleri Seç";
+
+/* (No Comment) */
+"listName" = "Liste Adı";
+
+/* (No Comment) */
+"Lists" = "Listeler";
+
+/* (No Comment) */
+"Loading" = "Yükleniyor";
+
+/* (No Comment) */
+"Mark as" = "İşaretle";
+
+/* (No Comment) */
+"Mark as Favorite" = "Favori olarak işaretle";
+
+/* (No Comment) */
+"Mark as Watched" = "İzlenmiş Olarak İşaretle";
+
+/* (No Comment) */
+"Mark Season as Watched" = "Sezonu İzlenmiş Olarak İşaretle";
+
+/* (No Comment) */
+"Mark selected as unwatched" = "Seçilen işaretlendi olarak işaretle";
+
+/* (No Comment) */
+"Mark selected as watched" = "Seçilen işaretlendi olarak işaretlendi";
+
+/* (No Comment) */
+"Mark some episodes as watched to use Up Next." = "Up Next kullanmak için bazı bölümleri izle olarak işaretle.";
+
+/* (No Comment) */
+"Mark this and previous episodes as watched" = "Bu bölümü ve önceki bölümleri izlenmiş olarak işaretle";
+
+/* (No Comment) */
+"markAsWatched" = "İzlenmiş Olarak İşaretle";
+
+/* (No Comment) */
+"markedArchive" = "Arşivlendi olarak işaretlendi";
+
+/* (No Comment) */
+"markedAsArchive" = "Arşivlendi olarak işaretlendi";
+
+/* (No Comment) */
+"markedAsFavorite" = "Favori olarak işaretlendi";
+
+/* (No Comment) */
+"markedAsPin" = "Sabitlendi olarak işaretlendi.";
+
+/* (No Comment) */
+"markedAsWatched" = "İzlenmiş olarak işaretlendi";
+
+/* (No Comment) */
+"markedEpisodeWatched" = "Bölüm İzlenmiş olarak işaretlendi";
+
+/* (No Comment) */
+"markedFavorite" = "Favorilere Eklendi";
+
+/* (No Comment) */
+"markedPin" = "Sabitle";
+
+/* (No Comment) */
+"markedWatched" = "İzlenmiş olarak işaretlendi";
+
+/* (No Comment) */
+"markThisAndPreviously" = "Bu Bölümü ve Önceki Tüm Bölümleri İzlenmiş Olarak İşaretle";
+
+/* (No Comment) */
+"markThisSeasonAsWatched" = "Bu Sezonu İzlendi Olarak İşaretle";
+
+/* (No Comment) */
+"Media" = "Medya";
+
+/* (No Comment) */
+"Media Type" = "Ortam Türü";
+
+/* (No Comment) */
+"mediaTypeDiscoverFilterTitle" = "Ortam Türü";
+
+/* (No Comment) */
+"mediaTypeFilter" = "Medyaya göre filtrele";
+
+/* (No Comment) */
+"mediaTypeFiltersMovies" = "Filmler";
+
+/* (No Comment) */
+"mediaTypeFiltersNoFilter" = "Tüm";
+
+/* (No Comment) */
+"mediaTypeFiltersTvShows" = "TV Programları";
+
+/* No comment provided by engineer. */
+"More" = "Daha Fazla";
+
+/* (No Comment) */
+"More Options" = "Daha Fazla Seçenek";
+
+/* (No Comment) */
+"moreInfoShow" = "Daha Fazla Bilgi";
+
+/* (No Comment) */
+"Movie" = "Film";
+
+/* (No Comment) */
+"movieNotificationSubtitle" = "İzleme listendeki bir film yayınlandığında bildirim al.";
+
+/* (No Comment) */
+"movieNotificationTitle" = "Film Yayınlarını Bildir";
+
+/* (No Comment) */
+"Movies" = "Filmler";
+
+/* (No Comment) */
+"Movies, Shows, People" = "Filmler, Diziler, İnsanlar";
+
+/* (No Comment) */
+"moviesCustomWatchListFilters" = "Filmler";
+
+/* (No Comment) */
+"Music" = "Müzik";
+
+/* (No Comment) */
+"My Pins" = "Benim Pinlerim";
+
+/* (No Comment) */
+"Mystery" = "Gizem";
+
+/* (No Comment) */
+"needToSync %lld" = "%lld senkronize edilebilir öğe mevcut";
+
+/* No comment provided by engineer. */
+"Network" = "Ağ";
+
+/* (No Comment) */
+"Never miss out" = "Asla kaçırmayın";
+
+/* (No Comment) */
+"newCustomListTitle" = "Yeni Liste";
+
+/* (No Comment) */
+"newList" = "Yeni Liste";
+
+/* (No Comment) */
+"Next episode arrives today." = "Bir sonraki bölüm bugün geliyor.";
+
+/* (No Comment) */
+"No biography available." = "Biografi mevcut değil.";
+
+/* (No Comment) */
+"No details available." = "Ayrıntılar mevcut değil.";
+
+/* (No Comment) */
+"No Episode Available" = "Bölüm Mevcut Değil";
+
+/* (No Comment) */
+"No information available" = "Bilgi mevcut değil";
+
+/* (No Comment) */
+"No information available." = "Bilgi mevcut değil.";
+
+/* (No Comment) */
+"No Name Found" = "İsim bulunamadı";
+
+/* (No Comment) */
+"No notifications" = "Bildirim yok";
+
+/* (No Comment) */
+"No results" = "Sonuç bulunamadı";
+
+/* (No Comment) */
+"No Results" = "Sonuç bulunamadı";
+
+/* (No Comment) */
+"No results from TMDb" = "TMDb'den sonuç bulunamadı";
+
+/* (No Comment) */
+"No results from Watchlist" = "İzleme Listesinden sonuç bulunamadı";
+
+/* (No Comment) */
+"No title available" = "Başlık mevcut değil";
+
+/* (No Comment) */
+"noListFoundMessage" = "Sorgunuzla eşleşen bir liste bulunamadı, başka bir tane deneyin.";
+
+/* (No Comment) */
+"noResultsFound" = "Sorgunuzla ilgili bir sonuç bulunamadı. Başka bir tane deneyin veya başlığın arşivde olmadığını kontrol edin.";
+
+/* (No Comment) */
+"Not Available" = "Mevcut Değil";
+
+/* No comment provided by engineer. */
+"Not Found" = "Bulunamadı";
+
+/* (No Comment) */
+"Not Watched" = "İzlenmedi";
+
+/* (No Comment) */
+"Notes" = "Notlar";
+
+/* MARK: NotificationListView */
+"Notifications" = "Bildirimler";
+
+/* (No Comment) */
+"notificationsSettingsFeedbackCall" = "Bir öneriniz var mı? Geri bildirim gönderin";
+
+/* (No Comment) */
+"Now Available" = "Şimdi Mevcut";
+
+/* (No Comment) */
+"Official Website" = "Resmi Websitesi";
+
+/* (No Comment) */
+"Open in" = "Aç";
+
+/* (No Comment) */
+"Open in YouTube" = "YouTube'da aç";
+
+/* (No Comment) */
+"Open Trailers in YouTube App" = "YouTube Uygulamasında Fragmanları Açın";
+
+/* (No Comment) */
+"openCustomListSelectorWhenAdding" = "Bir öğe eklerken Liste Seçiciyi Aç";
+
+/* (No Comment) */
+"openNotificationInSettings" = "Ayarlar uygulamasında Bildirimleri Düzenle";
+
+/* (No Comment) */
+"openWatchProviderTitle" = "Bu, her hizmetin bağlantılarını içeren TMDb web sitesini açacak.";
+
+/* (No Comment) */
+"Organize" = "Düzenle";
+
+/* (No Comment) */
+"Original Title" = "Orijinal Başlık";
+
+/* (No Comment) */
+"Overview" = "Genel Bakış";
+
+/* (No Comment) */
+"People" = "İnsanlar";
+
+/* (No Comment) */
+"Person" = "Kişi";
+
+/* (No Comment) */
+"Physical" = "Fiziksel";
+
+/* (No Comment) */
+"Pin" = "Rozet";
+
+/* (No Comment) */
+"Pin Item" = "Öğeyi Bağla";
+
+/* (No Comment) */
+"Pin Items" = "Öğeleri Sabitle";
+
+/* (No Comment) */
+"Pinned Items" = "Sabitlenmiş Öğeler";
+
+/* (No Comment) */
+"pinnedList" = "Sabitleme Listesi";
+
+/* (No Comment) */
+"pinOnHome" = "Bu Listeyi Ana Sayfada Tut";
+
+/* (No Comment) */
+"Pins" = "Pinler";
+
+/* (No Comment) */
+"Popular Movies" = "Popüler Filmler";
+
+/* (No Comment) */
+"Popular Movies by Genre" = "Türüne Göre Popüler Filmler";
+
+/* (No Comment) */
+"Popular TV Shows by Genre" = "Türlerine göre Popüler TV Dizileri";
+
+/* (No Comment) */
+"Popularity" = "Popülerlik";
+
+/* (No Comment) */
+"Prefer Poster in Details Page" = "Detay Sayfasında Poster Tercih Edin";
+
+/* (No Comment) */
+"preferredLaunchScreen" = "Tercih Edilen Başlangıç Ekranı";
+
+/* (No Comment) */
+"Premiere" = "Başlangıç";
+
+/* No comment provided by engineer. */
+"Presentation" = "Sunum";
+
+/* No comment provided by engineer. */
+"Preview" = "Önizleme";
+
+/* (No Comment) */
+"Privacy" = "Gizlilik";
+
+/* (No Comment) */
+"Privacy Policy" = "Gizlilik Politikası";
+
+/* (No Comment) */
+"Production" = "Üretim";
+
+/* (No Comment) */
+"Production Companies" = "Yapım Şirketleri";
+
+/* (No Comment) */
+"Production Company" = "Yapım Şirketi";
+
+/* (No Comment) */
+"publishListToTMDB" = "TMDb üzerinde Liste Yayınla";
+
+/* (No Comment) */
+"publishOnTMDB" = "TMDb'de Yayınla";
+
+/* (No Comment) */
+"publishPrivate" = "Özel";
+
+/* (No Comment) */
+"publishPublic" = "Genel";
+
+/* (No Comment) */
+"publishTMDBMessage" = "Bu, TMDb'deki yerel listedeki aynı başlık ve öğelerle yeni bir liste oluşturacak.\nİstediğiniz gizlilik düzeyini seçin:";
+
+/* (No Comment) */
+"quitWhenClosingApp" = "Uygulama kapatıldığında çıkın";
+
+/* (No Comment) */
+"Rating" = "Oylama";
+
+/* (No Comment) */
+"ratingAsc" = "Derecelendirme (Artan)";
+
+/* (No Comment) */
+"ratingDesc" = "Puan (Azalan)";
+
+/* (No Comment) */
+"Ratings Score" = "Puanlama Skoru";
+
+/* (No Comment) */
+"Reality" = "Gerçeklik";
+
+/* (No Comment) */
+"Reboot" = "Yeniden başlat";
+
+/* (No Comment) */
+"Recent Notifications" = "Son Bildirimler";
+
+/* (No Comment) */
+"Recently Released" = "Son zamanlarda yayınlandı";
+
+/* (No Comment) */
+"Recommendations" = "Öneriler";
+
+/* (No Comment) */
+"recommendationsSubtitle" = "İzlediğiniz içeriklere dayanarak";
+
+/* (No Comment) */
+"recommendationsTitle" = "Öneriler";
+
+/* (No Comment) */
+"Region of Origin" = "Kaynak Bölgesi";
+
+/* (No Comment) */
+"Release Date" = "Yayın Tarihi";
+
+/* (No Comment) */
+"Release Date (Ascending)" = "Yayın Tarihi (Artan)";
+
+/* (No Comment) */
+"Release Date (Descending)" = "Yayın Tarihi (Azalan)";
+
+/* (No Comment) */
+"Released" = "Yayınlandı";
+
+/* (No Comment) */
+"Released Movies" = "Vizyona Giren Filmler";
+
+/* (No Comment) */
+"Released Shows" = "Yayınlanan Programlar";
+
+/* (No Comment) */
+"releaseDates" = "Yayın Tarihleri";
+
+/* (No Comment) */
+"Releases" = "Yayınlar";
+
+/* (No Comment) */
+"Releasing Soon" = "Yakında Yayınlanacak";
+
+/* No comment provided by engineer. */
+"Reload" = "Yeniden yükle";
+
+/* (No Comment) */
+"Remove" = "Kaldır";
+
+/* (No Comment) */
+"Remove from Archive" = "Arşivden Kaldır";
+
+/* (No Comment) */
+"Remove from Favorites" = "Favorilerden kaldır";
+
+/* (No Comment) */
+"Remove from List" = "Listeden kaldır";
+
+/* (No Comment) */
+"Remove from Watched" = "İzlenenlerden Kaldır";
+
+/* (No Comment) */
+"Remove from watchlist" = "İzleme Listesinden Kaldır";
+
+/* (No Comment) */
+"Remove Notification" = "Bildirimi kaldır";
+
+/* (No Comment) */
+"Remove Pin" = "Pin'i Kaldır";
+
+/* (No Comment) */
+"Remove Selected" = "Seçileni Kaldır";
+
+/* (No Comment) */
+"removedArchive" = "Arşivden kaldırıldı";
+
+/* (No Comment) */
+"removedEpisodeWatched" = "İzlenenlerden Bölüm Kaldırıldı";
+
+/* (No Comment) */
+"removedFavorite" = "Favorilerden çıkarıldı";
+
+/* (No Comment) */
+"removedFromArchive" = "Arşivden kaldırıldı";
+
+/* (No Comment) */
+"removedFromFavorites" = "Favorilerden kaldırıldı";
+
+/* (No Comment) */
+"removedFromPin" = "Pindan kaldırıldı";
+
+/* (No Comment) */
+"removedFromWatched" = "İzlenenlerden kaldırıldı";
+
+/* MARK: WatchlistButtonView */
+"removeDialogTitle" = "Emin misin?";
+
+/* (No Comment) */
+"removedPin" = "Düzenlenmemiş";
+
+/* (No Comment) */
+"removedWatched" = "İzlenenler listesinden kaldırıldı";
+
+/* (No Comment) */
+"removedWatchlist" = "İzleme Listesinden Kaldırıldı";
+
+/* (No Comment) */
+"removeFromPinOnWatchedTitle" = "İzleme işareti konulduğunda Pin'den Kaldır";
+
+/* (No Comment) */
+"removeTMDBAccount" = "TMDB Hesabını Bağlantısını Kesmek İstiyor musunuz?";
+
+/* (No Comment) */
+"Renewed Series" = "Yenilenen Dizi";
+
+/* No comment provided by engineer. */
+"Reset asked for review" = "İnceleme için sıfırlama istendi";
+
+/* (No Comment) */
+"resetToDefault" = "Varsayılana Sıfırla";
+
+/* (No Comment) */
+"restorePurchases" = "Satın Alımları Geri Yükle";
+
+/* (No Comment) */
+"Results from TMDb" = "TMDb'den Sonuçlar";
+
+/* (No Comment) */
+"Results from Watchlist" = "İzleme Listesinden Sonuçlar";
+
+/* (No Comment) */
+"Retry" = "Yeniden dene";
+
+/* (No Comment) */
+"Review Cronica" = "Streaming Now Gözden Geçirme";
+
+/* (No Comment) */
+"reviewInTheAppStore" = "Uygulamayı İncele";
+
+/* (No Comment) */
+"reviewOf %@" = "İnceleme: %@";
+
+/* (No Comment) */
+"reviewTitle" = "İncele";
+
+/* (No Comment) */
+"Roadmap" = "Yol Haritası";
+
+/* (No Comment) */
+"Romance" = "Romantizm";
+
+/* (No Comment) */
+"Romantic Comedy" = "Romantik Komedi";
+
+/* MARK: InformationSectionView.swift */
+"Run Time" = "Çalışma Zamanı";
+
+/* (No Comment) */
+"S%d, E%d" = "S%d, E%d";
+
+/* No comment provided by engineer. */
+"S%lld, E%lld" = "S%lld, E%lld";
+
+/* (No Comment) */
+"Save" = "Kaydet";
+
+/* (No Comment) */
+"Sci-Fi & Fantasy" = "Bilim Kurgu ve Fantezi";
+
+/* (No Comment) */
+"Science Fiction" = "Bilim Kurgu";
+
+/* MARK: SearchView.swift */
+"Search" = "Ara";
+
+/* No comment provided by engineer. */
+"Search %@" = "Arama %@";
+
+/* No comment provided by engineer. */
+"Search failed, try again later." = "Arama başarısız oldu, daha sonra tekrar deneyin.";
+
+/* (No Comment) */
+"Search for upcoming movies and tv shows." = "Yaklaşan filmler ve TV programları için ara.";
+
+/* (No Comment) */
+"Search results" = "Arama sonuçları";
+
+/* MARK: watchOS */
+"Search TMDb" = "TMDb'yi Ara";
+
+/* (No Comment) */
+"Search watchlist" = "İzleme Listesi Ara";
+
+/* (No Comment) */
+"Searching" = "Arama yapılıyor";
+
+/* (No Comment) */
+"Season" = "Sezon";
+
+/* No comment provided by engineer. */
+"Season (nextSeasonNumber)" = "Sezon (nextSeasonNumber)";
+
+/* (No Comment) */
+"Season %lld" = "Sezon %lld";
+
+/* (No Comment) */
+"Season Marked as Watched" = "Sezon İzlenmiş Olarak İşaretlendi";
+
+/* MARK: SeasonListView.swift */
+"Seasons" = "Sezonlar";
+
+/* No comment provided by engineer. */
+"sectionStyleTypePicker" = "bölümStilTipiSeçici";
+
+/* No comment provided by engineer. */
+"Select the Media Type" = "Ortam Türünü Seçin";
+
+/* (No Comment) */
+"selectedWatchProvider" = "Akış Hizmetleri";
+
+/* (No Comment) */
+"selectedWatchProviderSubtitle" = "Sadece tercih ettiğiniz hizmetlerden birinde başlık mevcutsa 'İzleme Sağlayıcısı'nı gösterin.";
+
+/* (No Comment) */
+"selectedWatchProviderTitle" = "Tercih Edilen Akış Hizmetleri";
+
+/* (No Comment) */
+"Send" = "Gönder";
+
+/* (No Comment) */
+"Send feedback" = "Geri Bildirim Gönder";
+
+/* (No Comment) */
+"Send Feedback" = "Geri Bildirim Gönder";
+
+/* No comment provided by engineer. */
+"Send Object to Developer" = "Geliştiriciye Nesne Gönder";
+
+/* (No Comment) */
+"Send your suggestions to help improve Cronica." = "Streaming Now'yı iyileştirmek için önerilerinizi gönderin.";
+
+/* (No Comment) */
+"sendEmail" = "E-posta Gönder";
+
+/* (No Comment) */
+"sendEmailFooter" = "Eğer tercih ederseniz, daha hızlı bir takip için bir e-posta gönderebilirsiniz.";
+
+/* (No Comment) */
+"sendEmailFooterBackup" = "E-posta istemcinizi kullanarak contact@streamingnowapp.com adresine e-posta gönderebilirsiniz.";
+
+/* (No Comment) */
+"Settings" = "Ayarlar";
+
+/* (No Comment) */
+"settingsAcknowledgments" = "Teşekkürler";
+
+/* (No Comment) */
+"settingsAcknowledgmentsFooter" = "Streaming Now'nın mümkün olmasını sağlayan herkese teşekkürler.";
+
+/* (No Comment) */
+"settingsAppearanceTitle" = "Görünüm";
+
+/* MARK: Settings */
+"settingsBehaviorTitle" = "Davranış";
+
+/* (No Comment) */
+"settingsDeveloperOptions" = "Geliştirici Ayarları";
+
+/* (No Comment) */
+"settingsDisableTelemetrySubtitle" = "Streaming Now, uygulama çökmelerini en aza indirmek için minimal veri toplar ve bu veri anonimdir. Daha fazla bilgi için Gizlilik Politikasını görüntüleyin.";
+
+/* (No Comment) */
+"settingsDisableTelemetryTitle" = "Çökme Raporlarını Devre Dışı Bırak";
+
+/* (No Comment) */
+"settingsFeedbackTitle" = "Geri Bildirim Gönder";
+
+/* (No Comment) */
+"settingsGeneralTitle" = "Genel";
+
+/* (No Comment) */
+"settingsNotificationTitle" = "Bildirimler";
+
+/* (No Comment) */
+"settingsPrivacyPolicy" = "Gizlilik Politikası";
+
+/* (No Comment) */
+"settingsPrivacySupportTitle" = "Gizlilik ve Destek";
+
+/* (No Comment) */
+"settingsRegionContentTitle" = "İçerik ve Bölge";
+
+/* (No Comment) */
+"settingsReviewCronica" = "App Store'da Streaming Now'yı değerlendirin";
+
+/* (No Comment) */
+"settingsSyncTitle" = "Senkronizasyon";
+
+/* (No Comment) */
+"Share" = "Paylaş";
+
+/* (No Comment) */
+"shareEpisode" = "Bölümü Paylaş";
+
+/* (No Comment) */
+"shareLinkPreference" = "Link paylaşmanın tercih ettiğiniz yolunu seçin";
+
+/* (No Comment) */
+"shareLinkPreferenceSubtitle" = "Uygulamayı açmanıza izin veren bir Streaming Now bağlantısı kullanarak paylaşmayı seçebilirsiniz.\nLütfen unutmayın ki tüm içerikler bir Streaming Now bağlantısıyla paylaşılamaz, uygulama her zaman gerektiğinde TMDB bağlantıları kullanır.";
+
+/* (No Comment) */
+"shareList" = "Paylaş Listesi";
+
+/* (No Comment) */
+"shareShow" = "TV Gösterisini Paylaş";
+
+/* (No Comment) */
+"Show Details" = "Detayları Göster";
+
+/* (No Comment) */
+"Show More" = "Daha Fazla Göster";
+
+/* No comment provided by engineer. */
+"Show Onboarding" = "Eğitimde Göster";
+
+/* (No Comment) */
+"showConfirmationOnRemovingItem" = "Kaldırma Onayını Göster";
+
+/* (No Comment) */
+"showDetails" = "Ayrıntıları Göster";
+
+/* (No Comment) */
+"Shows" = "Gösteriler";
+
+/* MARK: Widget */
+"Shows movies and TV Shows trending from TMDb." = "TMDb'den trend olan filmler ve TV şovları gösterir.";
+
+/* (No Comment) */
+"showsCustomWatchListFilters" = "TV Şovları";
+
+/* (No Comment) */
+"Sort" = "Sırala";
+
+/* No comment provided by engineer. */
+"Sort By" = "Sırala";
+
+/* (No Comment) */
+"Sort List" = "Listeyi Sırala";
+
+/* (No Comment) */
+"Source Code" = "Kaynak Kodu";
+
+/* (No Comment) */
+"Space" = "Uzay";
+
+/* (No Comment) */
+"Spanish" = "İspanyolca";
+
+/* (No Comment) */
+"Spin off" = "Yan ürün";
+
+/* (No Comment) */
+"Status" = "Durum";
+
+/* (No Comment) */
+"Superhero" = "Süper kahraman";
+
+/* (No Comment) */
+"Supernatural Horror" = "Doğaüstü Korku";
+
+/* MARK: SettingsView.swift */
+"Support" = "Destek";
+
+/* (No Comment) */
+"Survival" = "Hayatta kalma";
+
+/* (No Comment) */
+"Swipe to Edit your list" = "Listeyi Düzenlemek için Kaydır";
+
+/* (No Comment) */
+"swipeGestureArchive" = "Arşivle";
+
+/* (No Comment) */
+"swipeGestureDelete" = "Sil";
+
+/* (No Comment) */
+"swipeGestureFavorite" = "Favori";
+
+/* (No Comment) */
+"swipeGesturePin" = "Pin";
+
+/* (No Comment) */
+"swipeGestureShare" = "Paylaş";
+
+/* (No Comment) */
+"swipeGestureWatch" = "İzle";
+
+/* (No Comment) */
+"Sync" = "Senkronize Et";
+
+/* (No Comment) */
+"syncingWatchlistTMDB" = "İzleme listesi senkronize ediliyor, lütfen bekleyin.";
+
+/* (No Comment) */
+"syncInProgress" = "Senkronizasyon Sürüyor";
+
+/* (No Comment) */
+"syncNow" = "TMDB ile Şimdi Senkronize Et";
+
+/* (No Comment) */
+"syncSettingsItemsTitle" = "Öğeler";
+
+/* (No Comment) */
+"syncSettingsTitle" = "Senkronizasyon";
+
+/* (No Comment) */
+"syncSettingsUpdateWatchlistSubtitle" = "Yeni bilgiler varsa, TMDb üzerinde mevcut olan maddeleri güncelleyin.";
+
+/* MARK: SyncSetting */
+"syncSettingsUpdateWatchlistTitle" = "Öğeleri Güncelle";
+
+/* (No Comment) */
+"syncSettingsWatchlistTitle" = "İzleme Listesi";
+
+/* (No Comment) */
+"syncTMDBList" = "Bu listeyi senkronize edin";
+
+/* (No Comment) */
+"syncWatchlist" = "İzleme Listesini Senkronize Et";
+
+/* (No Comment) */
+"TelemetryDeck" = "TelemetriDeck";
+
+/* (No Comment) */
+"thankYouTipJarMessage" = "Satın alma işleminiz için teşekkür ederiz! Desteğiniz çok değerlidir. 😁";
+
+/* (No Comment) */
+"The API is undergoing maintenance. Try again later." = "API bakım çalışması yapılıyor. Daha sonra tekrar deneyin.";
+
+/* (No Comment) */
+"The Discover will help you find your next favorite title." = "Discover, bir sonraki favori başlığınızı bulmanıza yardımcı olacak.";
+
+/* (No Comment) */
+"The function is performed when double-tap the cover image." = "Kapak resmine iki kez dokunulduğunda işlev gerçekleştirilir.";
+
+/* (No Comment) */
+"The movie will be released today." = "Film bugün yayınlanacak.";
+
+/* MARK: Notification content */
+"The next episode is set to arrive today." = "Bir sonraki bölümün bugün gelmesi planlanıyor.";
+
+/* (No Comment) */
+"Theatrical" = "Tiyatral";
+
+/* (No Comment) */
+"Theatrical Limited" = "Tiyatro Sınırlı";
+
+/* No comment provided by engineer. */
+"This content has been removed from TMDB, you can delete it." = "Bu içerik TMDB'den kaldırılmıştır, silebilirsiniz.";
+
+/* No comment provided by engineer. */
+"This is a preview" = "Bu bir önizlemedir";
+
+/* No comment provided by engineer. */
+"This list has been deleted." = "Bu liste silindi.";
+
+/* (No Comment) */
+"This list is empty." = "Bu liste boş.";
+
+/* MARK: AttributionView.swift */
+"This product uses the TMDb API but is not endorsed or certified by TMDb." = "Bu ürün TMDb API'sını kullanır ancak TMDb tarafından desteklenmez veya onaylanmaz.";
+
+/* (No Comment) */
+"This week" = "Bu hafta";
+
+/* (No Comment) */
+"Thriller" = "Gerilim";
+
+/* (No Comment) */
+"Ticket" = "Bilet";
+
+/* (No Comment) */
+"tipJar" = "Reklamları kaldır";
+
+/* (No Comment) */
+"tipJarDescription" = "Reklamları kaldırın ve Streaming Now uygulamasını destekleyin.";
+
+/* (No Comment) */
+"tipJarFooter" = "İsteğe bağlı tek seferlik satın alma, Streaming Now genelindeki reklamları kaldırır ve uygulamanın geliştirilmesini destekler.";
+
+/* MARK: TipJarSetting */
+"tipJarTitle" = "Reklamları kaldır";
+
+/* (No Comment) */
+"Title" = "Başlık";
+
+/* (No Comment) */
+"titleAsc" = "Başlık (Artan)";
+
+/* (No Comment) */
+"titleDesc" = "Başlık (Azalan)";
+
+/* (No Comment) */
+"TMDb" = "TMDb";
+
+/* No comment provided by engineer. */
+"TMDB" = "TMDB";
+
+/* (No Comment) */
+"tmdbLists" = "TMDB Listeleriniz";
+
+/* (No Comment) */
+"tmdbListSyncConfig" = "Yapılandırma";
+
+/* (No Comment) */
+"tmdbSyncFeatures" = "Listelerinizi görebilecek ve içeriklerini yönetebileceksiniz.";
+
+/* (No Comment) */
+"To Watch" = "İzlemek için";
+
+/* (No Comment) */
+"Today" = "Bugün";
+
+/* (No Comment) */
+"Track your episodes" = "Bölümlerinizi takip edin";
+
+/* (No Comment) */
+"Trailers" = "Fragmanlar";
+
+/* (No Comment) */
+"Translation" = "Çeviri";
+
+/* MARK: HomeView.swift */
+"Trending" = "Gündem";
+
+/* (No Comment) */
+"Trending Keywords" = "Trend Anahtar Kelimeler";
+
+/* No comment provided by engineer. */
+"Trending service ins't available right now." = "Trend hizmeti şu anda mevcut değil.";
+
+/* (No Comment) */
+"TV" = "TV";
+
+/* (No Comment) */
+"TV Show" = "TV Şovu";
+
+/* (No Comment) */
+"TV Shows" = "TV Serileri";
+
+/* (No Comment) */
+"tvShowDetails" = "TV Programı Detayları";
+
+/* (No Comment) */
+"Unknown" = "Bilinmiyor";
+
+/* (No Comment) */
+"Unpin Item" = "Öğeyi Sabitle";
+
+/* (No Comment) */
+"Untitled List" = "Başlıksız Liste";
+
+/* (No Comment) */
+"Unwatched" = "İzlenmeyen";
+
+/* (No Comment) */
+"Up Coming" = "Yakında";
+
+/* No comment provided by engineer. */
+"Up Next" = "Sonraki";
+
+/* (No Comment) */
+"Upcoming" = "Yaklaşan";
+
+/* (No Comment) */
+"Upcoming Episodes" = "Yaklaşan Bölümler";
+
+/* (No Comment) */
+"Upcoming Movies" = "Yaklaşan Filmler";
+
+/* (No Comment) */
+"Upcoming Notifications" = "Yaklaşan Bildirimler";
+
+/* (No Comment) */
+"Upcoming Seasons" = "Yaklaşan Sezonlar";
+
+/* (No Comment) */
+"Update Items" = "Öğeleri Güncelle";
+
+/* (No Comment) */
+"upNext" = "Sonraki";
+
+/* (No Comment) */
+"upNextSubtitle" = "Sonraki Bölümleriniz";
+
+/* No comment provided by engineer. */
+"User Lang: %@" = "Kullanıcı Dili: %@";
+
+/* No comment provided by engineer. */
+"User Region: %@" = "Kullanıcı Bölgesi: %@";
+
+/* (No Comment) */
+"Version %@" = "Versiyon %@";
+
+/* No comment provided by engineer. */
+"Version %@ • %@" = "Sürüm %@ • %@";
+
+/* (No Comment) */
+"War" = "Savaş";
+
+/* MARK: DoubleTapGesture */
+"Watched" = "İzledi";
+
+/* (No Comment) */
+"Watching" = "İzliyor";
+
+/* (No Comment) */
+"Watchlist" = "İzlenecekler Listesi";
+
+/* (No Comment) */
+"watchlistDisplayTypePicker" = "Görüntüleme Stili";
+
+/* (No Comment) */
+"watchlistItemTypeCard" = "Kart";
+
+/* MARK: WatchlistItemType */
+"watchlistItemTypeList" = "Liste";
+
+/* (No Comment) */
+"watchlistItemTypePoster" = "Poster";
+
+/* No comment provided by engineer. */
+"watchlistSortORder" = "izleme listesi sıralama düzeni";
+
+/* (No Comment) */
+"watchlistSubtitleRowDate" = "Yayın Tarihi";
+
+/* (No Comment) */
+"watchlistSubtitleRowGenre" = "Tür";
+
+/* MARK: WatchlistSubtitleRow */
+"watchlistSubtitleRowNone" = "Varsayılan";
+
+/* (No Comment) */
+"watchProviderAe" = "Birleşik Arap Emirlikleri";
+
+/* (No Comment) */
+"watchProviderAr" = "Arjantin";
+
+/* (No Comment) */
+"watchProviderAt" = "Avusturya";
+
+/* (No Comment) */
+"watchProviderAu" = "Avustralya";
+
+/* (No Comment) */
+"watchProviderBe" = "Belçika";
+
+/* (No Comment) */
+"watchProviderBg" = "Bulgaristan";
+
+/* MARK: WatchProviderOption */
+"watchProviderBr" = "Brezilya";
+
+/* (No Comment) */
+"watchProviderCa" = "Kanada";
+
+/* (No Comment) */
+"watchProviderCh" = "İsviçre";
+
+/* (No Comment) */
+"watchProviderCz" = "Çek Cumhuriyeti";
+
+/* (No Comment) */
+"watchProviderDe" = "Almanya";
+
+/* (No Comment) */
+"watchProviderDk" = "Danimarka";
+
+/* (No Comment) */
+"watchProviderEe" = "Estonya";
+
+/* (No Comment) */
+"watchProviderEs" = "İspanya";
+
+/* (No Comment) */
+"watchProviderFi" = "Finlandiya";
+
+/* (No Comment) */
+"watchProviderFr" = "Fransa";
+
+/* (No Comment) */
+"watchProviderGb" = "Birleşik Krallık";
+
+/* (No Comment) */
+"watchProviderHk" = "Hong Kong";
+
+/* (No Comment) */
+"watchProviderHr" = "Hırvatistan";
+
+/* (No Comment) */
+"watchProviderHu" = "Macaristan";
+
+/* (No Comment) */
+"watchProviderId" = "Endonezya";
+
+/* (No Comment) */
+"watchProviderIe" = "İrlanda";
+
+/* (No Comment) */
+"watchProviderIndia" = "Hindistan";
+
+/* (No Comment) */
+"watchProviderIt" = "İtalya";
+
+/* (No Comment) */
+"watchProviderJp" = "Japonya";
+
+/* (No Comment) */
+"watchProviderKr" = "Güney Kore";
+
+/* (No Comment) */
+"watchProviderLt" = "Litvanya";
+
+/* (No Comment) */
+"watchProviderMx" = "Meksika";
+
+/* (No Comment) */
+"watchProviderNl" = "Hollanda";
+
+/* (No Comment) */
+"watchProviderNo" = "Norveç";
+
+/* (No Comment) */
+"watchProviderNz" = "Yeni Zelanda";
+
+/* (No Comment) */
+"watchProviderPh" = "Filipinler";
+
+/* (No Comment) */
+"watchProviderPl" = "Polonya";
+
+/* (No Comment) */
+"watchProviderPt" = "Portekiz";
+
+/* (No Comment) */
+"watchProviderRs" = "Sırbistan";
+
+/* (No Comment) */
+"watchProviderSe" = "İsveç";
+
+/* (No Comment) */
+"watchProviderSk" = "Slovakya";
+
+/* (No Comment) */
+"watchProviderTitleList" = "Nasıl İzlenir";
+
+/* (No Comment) */
+"watchProviderToggleDiscover" = "Sadece İzleme Sağlayıcısından Göster";
+
+/* (No Comment) */
+"watchProviderTr" = "Türkiye";
+
+/* (No Comment) */
+"watchProviderUs" = "Amerika Birleşik Devletleri";
+
+/* (No Comment) */
+"watchProviderZa" = "Güney Afrika";
+
+/* (No Comment) */
+"watchRegionSubtitle" = "İzleme Sağlayıcıları, seçilen bölgeye uyum sağlayacak.";
+
+/* (No Comment) */
+"watchRegionTitle" = "İzleme Sağlayıcı Bölgesi";
+
+/* MARK: WelcomeView.swift */
+"Welcome to" = "Hoş Geldiniz";
+
+/* (No Comment) */
+"What's New" = "Yenilikler";
+
+/* (No Comment) */
+"whereToWatchDiscoverFilter" = "Nereden İzleyebilirsiniz";
+
+/* (No Comment) */
+"You may like" = "Beğenebilirsiniz";
+
+/* MARK: WatchlistView.swift */
+"Your list is empty." = "Liste boş.";
+
+/* (No Comment) */
+"Your pinned items" = "Sabitlediğiniz öğeleriniz";
+
+/* (No Comment) */
+"Your smart Watchlist" = "Akıllı İzleme Listesi";
+
+/* (No Comment) */
+"Your upcoming items will appear here." = "Yaklaşan öğeleriniz burada görünecektir.";
+
+/* (No Comment) */
+"Your Watchlist" = "İzleme Listesi";
+
+/* (No Comment) */
+"Your Watchlist is always in sync with your Apple Watch, iPad, Mac, and Apple TV." = "Watchlistiniz her zaman Apple Watch, iPad, Mac ve Apple TV'nizle senkronize olur.";
+
+/* (No Comment) */
+"yourLists" = "Listeleriniz";
+
+"Prefer Series Cover instead of Episode Thumbnail on Up Next" = "Prefer Cover on Up Next";
+"Hide Titles from Unwatched Episodes" = "Hide Titles from Unwatched Episodes";
+"To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes." = "To avoid potential spoilers, you can hide titles and synopsis from unwatched episodes.";
+"Hide Thumbnails from Unwatched Episodes" = "Hide Thumbnails from Unwatched Episodes";
+"To avoid potential spoilers, you can hide thumbnails from unwatched episodes." = "To avoid potential spoilers, you can hide thumbnails from unwatched episodes.";
+"Add" = "Add";
+"upNextSkipThisEpisode" = "Skip this episode";
+
+"MARK_EPISODE_WATCHED" = "Bölüm %1$d'i %2$d. Sezondan %3$@ izlendi olarak işaretle?";
+"Confirm Watched Episode" = "İzlendi Olarak Onayla";
+
+// MARK: Screenshot Section Headers
+"Now Playing" = "Vizyonda";
+"Top Rated" = "En çok beğenilen";
+"Popular" = "Popüler";
+"Similar" = "Benzer";
+
+//MARK: Puzzle Archive
+"puzzleArchiveTitle" = "Bulmaca Arşivi";
+"puzzleArchiveSubtitle" = "İstediğiniz zaman oynayabileceğiniz klasik film bulmacaları. Seri baskısı yok!";
+"puzzleArchiveSolvedLabel" = "Çözülenler";
+"puzzleArchiveStarsLabel" = "Yıldızlar";
+"puzzleArchiveViewArchive" = "Bulmaca Arşivi";
+"puzzleArchiveUnsolved" = "Çözülmedi";

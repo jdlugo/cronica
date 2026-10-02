@@ -1,9 +1,3 @@
-//
-//  SmartFiltersTypes.swift
-//  Cronica (iOS)
-//
-//  Created by Alexandre Madeira on 10/08/22.
-//
 import Foundation
 
 /// The type of lists supported by WatchlistView.
@@ -17,7 +11,7 @@ enum SmartFiltersTypes: String, Identifiable, Hashable, CaseIterable {
         case .released:
             return NSLocalizedString("Released", comment: "")
         case .production:
-            return NSLocalizedString("Upcoming", comment: "")
+            return NSLocalizedString("In Production", comment: "")
         case .watched:
             return NSLocalizedString("Watched", comment: "")
         case .favorites:
@@ -29,7 +23,7 @@ enum SmartFiltersTypes: String, Identifiable, Hashable, CaseIterable {
         case .watching:
             return NSLocalizedString("Watching", comment: "")
         case .notWatched:
-            return NSLocalizedString("Unwatched", comment: "")
+            return NSLocalizedString("Not Watched", comment: "")
         }
     }
 }

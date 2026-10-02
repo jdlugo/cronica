@@ -1,0 +1,148 @@
+{
+  "accepted_action_count" : 2,
+  "action_count" : 2,
+  "action_count_definition" : "Attempted UI gameplay taps; separate accepted_action_count requires visible state or feedback change",
+  "actions" : [
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:Up to 2 points|||",
+      "before_feedback" : "",
+      "before_signature" : "arcade.points:Up to 3 points|||",
+      "displayed_label" : "Assemble for me · −1 point",
+      "points" : "Up to 2 points",
+      "target" : "arcade.assemble",
+      "type" : "help",
+      "visible_feedback" : "Scene restored. Which movie is it?"
+    },
+    {
+      "after" : "arcade.points:Up to 2 points|||",
+      "before" : "arcade.points:Up to 2 points|||",
+      "resume_verified" : true,
+      "terminal_before_interruption" : false,
+      "type" : "terminate_relaunch"
+    },
+    {
+      "displayed_title" : "Toy Story",
+      "request_id" : "persona-cell-P3-scramble-image-43EA07C9-0EA1-4769-A8A9-D2D009700358",
+      "screenshot_path" : "\/Users\/johndlugokecki\/Library\/Developer\/CoreSimulator\/Devices\/54589BE9-B7F0-4E11-890E-E437D7D446EB\/data\/Containers\/Data\/Application\/A089C2F4-191C-44EF-9DE0-FEDA33BE7662\/tmp\/arcade-persona-live\/persona-cell-P3-scramble-image-43EA07C9-0EA1-4769-A8A9-D2D009700358.png",
+      "type" : "live_visual_judgment",
+      "vision_basis" : "Current post-relaunch restored board still visibly assembles Buzz's white-green suit and Woody's cowboy hat\/yellow shirt. P3 recognizes Toy Story within declared familiar titles after assistance."
+    },
+    {
+      "accepted_state_change" : true,
+      "after_signature" : "arcade.points:2\/3 points|||",
+      "before_feedback" : "Scene restored. Which movie is it?",
+      "before_signature" : "arcade.points:Up to 2 points|||",
+      "displayed_label" : "Toy Story",
+      "points" : "2\/3 points",
+      "target" : "arcade.choice.862",
+      "type" : "attempt",
+      "visible_feedback" : ""
+    },
+    {
+      "displayed_buttons" : [
+        "Clayface",
+        "Close",
+        "Colony",
+        "Coyote vs. Acme",
+        "Daily Puzzle, New Today, Recognize the movie from the image., 4 movies. Four choices. Just tap., Play Puzzle",
+        "Digger",
+        "East of Eden",
+        "Explore",
+        "Games",
+        "Home",
+        "La bola negra",
+        "Latest Movies, Recently Released",
+        "Movie Arcade, A daily mix. Three great places to start.",
+        "Notifications",
+        "Other Mommy",
+        "Pan's Labyrinth",
+        "Play another",
+        "Resident Evil",
+        "Runner",
+        "Search",
+        "Settings",
+        "Street Fighter",
+        "The Fix",
+        "The Uprising",
+        "Trending, Today",
+        "Try a different game",
+        "Up Coming, Coming Soon To Theaters",
+        "Verity",
+        "Watchlist"
+      ],
+      "type" : "result_inspection"
+    }
+  ],
+  "active_automation_seconds" : 34.877280950546265,
+  "attempt_count" : 1,
+  "declared_prior_facts" : [
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "ocean liner",
+      "title" : "Titanic",
+      "year" : "1997"
+    },
+    {
+      "actors" : "Keanu Reeves",
+      "plot_words" : "simulation",
+      "title" : "The Matrix",
+      "year" : "1999"
+    },
+    {
+      "actors" : "Sam Neill",
+      "plot_words" : "dinosaurs",
+      "title" : "Jurassic Park",
+      "year" : "1993"
+    },
+    {
+      "actors" : "Leonardo DiCaprio",
+      "plot_words" : "dreams",
+      "title" : "Inception",
+      "year" : "2010"
+    },
+    {
+      "actors" : "Tom Hanks",
+      "plot_words" : "cowboy toy, space-ranger",
+      "title" : "Toy Story",
+      "year" : "1995"
+    }
+  ],
+  "declared_prior_titles" : [
+    "Titanic",
+    "The Matrix",
+    "Jurassic Park",
+    "Inception",
+    "Toy Story"
+  ],
+  "game" : "scramble",
+  "help_count" : 1,
+  "large_text" : false,
+  "limitations" : [
+    "Assigned scripted persona; no human enjoyment or voluntary replay evidence.",
+    "Fresh seed-0 fixture; ads and onboarding disabled.",
+    "Image decisions use the current screenshot and a bounded live root-agent vision judgment; declared facts and visible feedback guide other choices.",
+    "Fixture purchase entitlement enabled; this run does not validate ordinary free-user monetization.",
+    "Used Assemble for Me: assisted restoration, not autonomous visual reconstruction.",
+    "Recovery comparison covers points, selected\/matched cards and progress labels; it does not prove all clues, feedback or board state persisted."
+  ],
+  "locale" : "en_US",
+  "mistake_evidence" : [
+
+  ],
+  "outcome" : "earned_with_help",
+  "payment_gate_found" : false,
+  "persona" : "P3",
+  "points_label" : "2\/3 points",
+  "replay_started" : false,
+  "result_controls_inspected" : true,
+  "result_text" : "Movie Arcade\nHome\nFREE PLAY\n2\/3 points\nMovie Scramble\nNicely played.\n2 of 3 points earned\nToy Story (1995)\nA cowboy toy feels threatened by a new space-ranger toy.\nThis product uses the TMDb API but is not endorsed or certified by TMDb.\nDaily Puzzle\nNew Today\nRecognize the movie from the image.\n4 movies. Four choices. Just tap.\nPlay Puzzle\nMovie Arcade\nA daily mix. Three great places to start.\nTrending\nToday\nUp Coming\nComing Soon To Theaters\nLatest Movies\nRecently Released\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+  "resume_verified" : true,
+  "resumed" : true,
+  "runtime_seconds" : 104.06088900566101,
+  "schema" : 1,
+  "seed" : 0,
+  "stop_reason" : "",
+  "utility_action_found" : true,
+  "vision_wait_seconds" : 69.183608055114746
+}

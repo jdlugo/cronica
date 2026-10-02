@@ -1,10 +1,3 @@
-//
-//  AppThemeColors.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 18/12/22.
-//
-
 import SwiftUI
 
 enum AppThemeColors: Int, Identifiable, CaseIterable {
@@ -26,47 +19,46 @@ enum AppThemeColors: Int, Identifiable, CaseIterable {
     case roseGold = 14
     case turquoise = 15
     case lavender = 16
-    case cherry = 17
-    case skyBlue = 18
-    case goldenrod = 19
-    case coral = 20
-    case turquoiseBlue = 21
-    case rubyRed = 22
-    case mahoganyBrown = 23
-    case burntOrange = 24
-    case fireballRed = 25
-    case mysticTeal = 26
-    case electricBlue = 27
+    var localizableName: String {
+        switch self {
+        case .blue: return NSLocalizedString("appThemeColorsRed", comment: "")
+        case .red: return NSLocalizedString("appThemeColorsRed", comment: "")
+        case .green: return NSLocalizedString("appThemeColorsGreen", comment: "")
+        case .brown: return NSLocalizedString("appThemeColorsBrown", comment: "")
+        case .cyan: return NSLocalizedString("appThemeColorsCyan", comment: "")
+        case .gray: return NSLocalizedString("appThemeColorsGray", comment: "")
+        case .indigo: return NSLocalizedString("appThemeColorsIndigo", comment: "")
+        case .mint: return NSLocalizedString("appThemeColorsMint", comment: "")
+        case .orange: return NSLocalizedString("appThemeColorsOrange", comment: "")
+        case .pink: return NSLocalizedString("appThemeColorsPink", comment: "")
+        case .purple: return NSLocalizedString("appThemeColorsPurple", comment: "")
+        case .teal: return NSLocalizedString("appThemeColorsTeal", comment: "")
+        case .yellow: return NSLocalizedString("appThemeColorsYellow", comment: "")
+        case .steel: return NSLocalizedString("appThemeColorSteel", comment: "")
+        case .roseGold: return NSLocalizedString("appThemeColorRoseGold", comment: "")
+        case .turquoise: return NSLocalizedString("appThemeColorTurquoise", comment: "")
+        case .lavender: return NSLocalizedString("appThemeColorLavender", comment: "")
+        }
+    }
     var color: Color {
         switch self {
-        case .blue: .blue
-        case .red: .red
-        case .green: .green
-        case .brown: .brown
-        case .cyan: .cyan
-        case .gray: .gray
-        case .indigo: .indigo
-        case .mint: .mint
-        case .orange: .orange
-        case .pink: .pink
-        case .purple: .purple
-        case .teal: .teal
-        case .yellow: .yellow
-        case .steel: Color(red: 0.57, green: 0.64, blue: 0.69)
-        case .roseGold: Color(red: 0.91, green: 0.71, blue: 0.71)
-        case .turquoise: Color(red: 0.0, green: 0.78, blue: 0.67)
-        case .lavender: Color(red: 0.69, green: 0.49, blue: 0.86)
-        case .cherry: Color(red: 0.8, green: 0.12, blue: 0.24)
-        case .skyBlue: Color(red: 0.53, green: 0.81, blue: 0.98)
-        case .goldenrod: Color(red: 0.85, green: 0.65, blue: 0.13)
-        case .coral: Color(red: 1.0, green: 0.5, blue: 0.31)
-        case .turquoiseBlue: Color(red: 0.0, green: 0.73, blue: 0.83)
-        case .rubyRed: Color(red: 0.69, green: 0.09, blue: 0.19)
-        case .mahoganyBrown: Color(red: 0.54, green: 0.27, blue: 0.07)
-        case .burntOrange: Color(red: 0.8, green: 0.33, blue: 0.0)
-        case .fireballRed: Color(red: 0.93, green: 0.16, blue: 0.16)
-        case .mysticTeal: Color(red: 0.0, green: 0.6, blue: 0.6)
-        case .electricBlue: Color(red: 0.0, green: 0.69, blue: 0.96)
+        case .blue: return .red
+        case .red: return .red
+        case .green: return .green
+        case .brown: return .brown
+        case .cyan: return .cyan
+        case .gray: return .gray
+        case .indigo: return .indigo
+        case .mint: return .mint
+        case .orange: return .orange
+        case .pink: return .pink
+        case .purple: return .purple
+        case .teal: return .teal
+        case .yellow: return .yellow
+        case .steel: return Color(red: 0.57, green: 0.64, blue: 0.69)
+        case .roseGold: return Color(red: 0.91, green: 0.71, blue: 0.71)
+        case .turquoise: return Color(red: 0.0, green: 0.78, blue: 0.67)
+        case .lavender: return Color(red: 0.69, green: 0.49, blue: 0.86)
         }
     }
 }

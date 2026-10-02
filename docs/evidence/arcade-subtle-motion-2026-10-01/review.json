@@ -1,0 +1,19 @@
+{
+  "reviewer": "adversarial",
+  "findings": [],
+  "checked_scenarios": [
+    "Animated Scramble reordering keeps scene sections as stable view identities; action closures reject stale boards and retain slot-based accessibility labels.",
+    "Memory card fades preserve face-down privacy in the accessibility tree and do not change matched-pair, score or bonus state.",
+    "Game, replay and summary transitions update saved state immediately; animation completion never controls progress or enables input.",
+    "Reduce Motion disables explicit action, navigation, card and press-scale animations; the result symbol no longer bounces.",
+    "Outgoing round views remain subject to model guards and existing analytics deduplication during brief fades."
+  ],
+  "residual_risks": [
+    "Physical-device motion comfort and VoiceOver user evaluation remain untested."
+  ],
+  "validation_pending": [],
+  "verified_in_recording": [
+    "Stable Memory card faces crossfade through intermediate frames.",
+    "Scramble scene sections move between positions over a brief interval."
+  ]
+}

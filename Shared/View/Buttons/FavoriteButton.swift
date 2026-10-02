@@ -1,10 +1,3 @@
-//
-//  FavoriteButton.swift
-//  Cronica
-//
-//  Created by Alexandre Madeira on 04/05/23.
-//
-
 import SwiftUI
 
 struct FavoriteButton: View {
@@ -13,7 +6,7 @@ struct FavoriteButton: View {
     @Binding var popupType: ActionPopupItems?
     @Binding var showPopup: Bool
     var body: some View {
-        Button(isFavorite ? "Unfavorite" : "Favorite",
+        Button(isFavorite ? "Remove from Favorites" : "Mark as Favorite",
                systemImage: isFavorite ? "heart.slash.fill" : "heart",
                action: updateFavorite)
     }

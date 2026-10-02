@@ -1,0 +1,34 @@
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testClueRecovery]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testClueRecovery] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testClueRecovery]' skipped (0.065 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP1]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP1] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP1]' skipped (0.050 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP2]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP2] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP2]' skipped (0.051 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP3]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP3] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP3]' skipped (0.050 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP4]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP4] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP4]' skipped (0.050 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP5] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5]' skipped (0.051 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5EvidenceRecovery]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP5EvidenceRecovery] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5EvidenceRecovery]' skipped (0.049 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5Recovery]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP5Recovery] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP5Recovery]' skipped (0.048 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP6] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6]' skipped (0.051 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6EvidenceRecovery]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP6EvidenceRecovery] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP6EvidenceRecovery]' skipped (0.048 seconds).
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP7]' started.
+/Users/johndlugokecki/.codex/worktrees/86e4/Cronica/CronicaUITests/ArcadePersonaPlaythroughTests.swift:52: -[CronicaUITests.ArcadePersonaPlaythroughTests testP7] : Test skipped - Manual persona suite: set TEST_RUNNER_ARCADE_PERSONA_PLAYTHROUGH=1 and provide live screenshot judgments.
+Test Case '-[CronicaUITests.ArcadePersonaPlaythroughTests testP7]' skipped (0.051 seconds).
+** TEST SUCCEEDED **

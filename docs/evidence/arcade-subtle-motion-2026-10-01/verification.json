@@ -1,0 +1,23 @@
+{
+  "base_commit": "b71e274a",
+  "source_sha256": {
+    "Shared/View/Navigation/MovieArcadeView.swift": "f579e57195e12c7b43b9fe7c6736eb05f2ab1c4d8882f6b1e3172664980c9918",
+    "CronicaUITests/CronicaUITests.swift": "515ffdefd350d0890e1e22beba01236f3f9f23dd6712013df35cc551b4d1154a"
+  },
+  "final_passed": 4,
+  "final_failed": 0,
+  "final_skipped": 0,
+  "bundles": [
+    "/private/tmp/arcade-motion-final-standard-2026-10-01.xcresult",
+    "/private/tmp/arcade-motion-final-reduced-2026-10-01.xcresult",
+    "/private/tmp/arcade-motion-final-ipad-2026-10-01.xcresult"
+  ],
+  "prepared_test_package": "/Users/johndlugokecki/Library/Developer/XcodeBuildMCP/workspaces/Cronica-094c1a77ecc3/test-products/test_sim_2026-10-02T00-20-03-093Z_pid54636_1ebcc03d.xctestproducts",
+  "compiled_with": "XcodeBuildMCP",
+  "final_runner": "xcodebuild test-without-building after MCP transport closed",
+  "maximum_seconds_per_test": 150,
+  "production_upload": false,
+  "committed": false,
+  "test_simulators_shutdown": true,
+  "initial_reduce_motion_setting_restored": true
+}

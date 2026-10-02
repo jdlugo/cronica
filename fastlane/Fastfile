@@ -1,0 +1,193 @@
+require "shellwords"
+
+default_platform(:ios)
+
+platform :ios do
+  auth_key_path = File.expand_path("~/.appstoreconnect/private_keys/AuthKey_439479CNWQ.p8")
+  export_auth_xcargs = [
+    "-allowProvisioningUpdates",
+    "-authenticationKeyPath #{Shellwords.escape(auth_key_path)}",
+    "-authenticationKeyID 439479CNWQ",
+    "-authenticationKeyIssuerID 69a6de7b-b570-47e3-e053-5b8c7c11a4d1",
+  ].join(" ")
+
+  private_lane :verify_release_ad_units do
+    script_path = File.expand_path("../scripts/verify_release_ad_units.sh", __dir__)
+    sh("bash #{Shellwords.escape(script_path)}")
+  end
+
+  private_lane :upload_crashlytics_symbols do
+    dsym_path = Actions.lane_context[SharedValues::DSYM_OUTPUT_PATH]
+    UI.user_error!("Missing DSYM_OUTPUT_PATH from build_app") if dsym_path.to_s.empty?
+
+    google_service_plist = File.expand_path("../Shared/Configuration/GoogleService-Info.plist", __dir__)
+    UI.user_error!("GoogleService-Info.plist not found at #{google_service_plist}") unless File.exist?(google_service_plist)
+
+    upload_symbols_path = Dir[File.expand_path("~/Library/Developer/Xcode/DerivedData/**/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/upload-symbols")]
+      .select { |path| File.file?(path) }
+      .max_by { |path| File.mtime(path) }
+
+    UI.user_error!("Could not locate Firebase Crashlytics upload-symbols tool in DerivedData") if upload_symbols_path.to_s.empty?
+
+    UI.message("Uploading Crashlytics symbols from #{dsym_path}")
+    sh(
+      Shellwords.join([
+        upload_symbols_path,
+        "-gsp", google_service_plist,
+        "-p", "ios",
+        "--",
+        dsym_path,
+      ]),
+    )
+  end
+
+  desc "Build and upload to TestFlight without changing App Store metadata"
+  lane :beta do
+    verify_release_ad_units
+    api_key = app_store_connect_api_key(
+      key_id: "439479CNWQ",
+      issuer_id: "69a6de7b-b570-47e3-e053-5b8c7c11a4d1",
+      key_filepath: auth_key_path,
+    )
+
+    version = get_version_number(target: "Story (iOS)")
+    project_build = get_build_number(xcodeproj: "Story.xcodeproj").to_i
+    latest_build = latest_testflight_build_number(
+      api_key: api_key,
+      app_identifier: "com.dlugokecki.qscanlite",
+      version: version,
+      initial_build_number: 0,
+    ).to_i
+    next_build = [project_build, latest_build + 1].max
+
+    if next_build > project_build
+      increment_build_number(
+        build_number: next_build,
+        xcodeproj: "Story.xcodeproj",
+      )
+    end
+
+    build_app(
+      scheme: "Story (iOS)",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      export_xcargs: export_auth_xcargs,
+      export_options: {
+        signingStyle: "automatic",
+        teamID: "LCU85X35W5",
+        uploadSymbols: true,
+        manageAppVersionAndBuildNumber: true,
+      },
+    )
+    upload_crashlytics_symbols
+    upload_to_testflight(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true,
+    )
+  end
+
+  desc "Build and upload to App Store Connect"
+  lane :release do
+    verify_release_ad_units
+    api_key = app_store_connect_api_key(
+      key_id: "439479CNWQ",
+      issuer_id: "69a6de7b-b570-47e3-e053-5b8c7c11a4d1",
+      key_filepath: auth_key_path,
+    )
+    build_app(
+      scheme: "Story (iOS)",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      export_xcargs: export_auth_xcargs,
+      export_options: {
+        signingStyle: "automatic",
+        teamID: "LCU85X35W5",
+        uploadSymbols: true,
+        manageAppVersionAndBuildNumber: true,
+      },
+    )
+    upload_crashlytics_symbols
+    upload_to_app_store(
+      api_key: api_key,
+      skip_metadata: false,
+      skip_screenshots: true,
+      force: true,
+      precheck_include_in_app_purchases: false,
+    )
+  end
+
+  desc "Submit the latest build for App Store review"
+  lane :submit do |options|
+    verify_release_ad_units
+    api_key = app_store_connect_api_key(
+      key_id: "439479CNWQ",
+      issuer_id: "69a6de7b-b570-47e3-e053-5b8c7c11a4d1",
+      key_filepath: File.expand_path("~/.appstoreconnect/private_keys/AuthKey_439479CNWQ.p8"),
+    )
+
+    version = options[:version] || get_version_number(target: "Story (iOS)")
+
+    # Wait for build processing to complete
+    UI.message("Waiting for build #{version} to finish processing...")
+    latest_build = latest_testflight_build_number(
+      api_key: api_key,
+      app_identifier: "com.dlugokecki.qscanlite",
+      version: version,
+    )
+    UI.success("Build #{latest_build} is ready for version #{version}")
+
+    deliver(
+      api_key: api_key,
+      app_version: version,
+      skip_binary_upload: true,
+      skip_metadata: false,
+      skip_screenshots: true,
+      submit_for_review: true,
+      reject_if_possible: true,
+      automatic_release: true,
+      force: true,
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        add_id_info_uses_idfa: true,
+        add_id_info_serves_ads: true,
+        add_id_info_tracks_action: true,
+        add_id_info_tracks_install: true,
+        add_id_info_limits_tracking: true,
+      },
+    )
+  end
+
+  desc "Build only (no upload)"
+  lane :build do
+    verify_release_ad_units
+    build_app(
+      scheme: "Story (iOS)",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      export_xcargs: export_auth_xcargs,
+      export_options: {
+        signingStyle: "automatic",
+        teamID: "LCU85X35W5",
+        uploadSymbols: true,
+        manageAppVersionAndBuildNumber: true,
+      },
+    )
+    upload_crashlytics_symbols
+  end
+
+  desc "Generate iOS preview videos from automated simulator scenarios"
+  lane :preview_videos do |options|
+    script_path = File.expand_path("../scripts/record_preview_videos.py", __dir__)
+    output_dir = options[:output_dir] || File.expand_path("preview_videos", __dir__)
+
+    command = ["python3", script_path, "--output-dir", output_dir]
+    command += ["--udid", options[:udid]] if options[:udid]
+    command << "--keep-raw" if options[:keep_raw]
+
+    Array(options[:scenario]).compact.each do |scenario_id|
+      command += ["--scenario", scenario_id]
+    end
+
+    sh(Shellwords.join(command))
+  end
+end

@@ -7,7 +7,7 @@
 
 import XCTest
 import CoreData
-@testable import Cronica
+@testable import StreamingNow
 
 final class CronicaTests: XCTestCase {
     var persistence: PersistenceController!
